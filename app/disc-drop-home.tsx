@@ -534,8 +534,24 @@ export function DiscDropHome() {
         <UpcomingSection />
         <BrowseGrid tab={tab} onTab={setTab} />
       </main>
-      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] py-8 text-center text-xs text-[#666]">
-        <p>DiscDrop — price comparison for disc golf in Norway</p>
+      <footer className="bg-[#1E3D2F] px-6 py-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 text-[13px] sm:flex-row sm:justify-between">
+          <span className="text-[#9DC08B]">© 2026 DiscDrop — Kviist Studio</span>
+          <span className="text-[#7a9a82] italic">
+            Vi tjener provisjon på kjøp via lenker på siden
+          </span>
+          <div className="flex items-center gap-4 text-[#9DC08B]">
+            <Link href="/personvern" className="hover:text-[#F5F2EB] transition-colors">
+              Personvern
+            </Link>
+            <a
+              href="mailto:kontakt@discdrop.net"
+              className="hover:text-[#F5F2EB] transition-colors"
+            >
+              kontakt@discdrop.net
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
