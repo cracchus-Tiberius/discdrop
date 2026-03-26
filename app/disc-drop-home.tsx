@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DiscImage } from "@/components/DiscImage";
 import {
   discs,
@@ -11,8 +11,6 @@ import {
 } from "@/data/discs.js";
 
 // ── Types ──────────────────────────────────────────────────────────────────
-type Tab = "all" | "drivers" | "midrange" | "putters" | "onsale";
-
 type Disc = (typeof discs)[number];
 
 function bestPriceFromStores(stores: Disc["stores"]): number | null {
@@ -23,49 +21,6 @@ function bestPriceFromStores(stores: Disc["stores"]): number | null {
 function bestPriceNOK(disc: Disc) {
   return bestPriceFromStores(disc.stores);
 }
-
-function bestPriceForCompare(disc: Disc): number | null {
-  const pool = disc.stores.filter((s) => s.inStock);
-  const useStores = pool.length ? pool : disc.stores;
-  const prices = useStores.map((s) => s.price);
-  return prices.length ? Math.min(...prices) : null;
-}
-
-function isOnSale(disc: Disc): boolean {
-  const best = bestPriceForCompare(disc);
-  if (best == null) return false;
-  let peak = 0;
-  for (const p of disc.priceHistory) {
-    if (typeof p === "number" && p > peak) peak = p;
-  }
-  if (peak === 0) return false;
-  return best < peak;
-}
-
-function filterByTab(tab: Tab): Disc[] {
-  switch (tab) {
-    case "all":
-      return discs;
-    case "drivers":
-      return discs.filter((d) => d.type === "driver");
-    case "midrange":
-      return discs.filter((d) => d.type === "midrange");
-    case "putters":
-      return discs.filter((d) => d.type === "putter");
-    case "onsale":
-      return discs.filter(isOnSale);
-    default:
-      return discs;
-  }
-}
-
-const TAB_PILLS: { id: Tab; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "drivers", label: "Drivers" },
-  { id: "midrange", label: "Mid-range" },
-  { id: "putters", label: "Putters" },
-  { id: "onsale", label: "On Sale" },
-];
 
 // ── Badge ──────────────────────────────────────────────────────────────────
 const BADGE_STYLES: Record<string, string> = {
@@ -127,6 +82,7 @@ type HotDropRow = {
   id: string;
   name: string;
   brand: string;
+  type: string;
   flight: Flight;
   tags: string[];
   stores: Disc["stores"];
@@ -139,6 +95,7 @@ function buildHotDropRows(): HotDropRow[] {
     id: d.id,
     name: d.name,
     brand: d.brand,
+    type: d.type,
     flight: d.flight,
     tags: d.tags as string[],
     stores: d.stores,
@@ -174,9 +131,15 @@ function hotDropCta(row: HotDropRow): {
 }
 
 // ── Navbar ─────────────────────────────────────────────────────────────────
-function Navbar() {
+function Navbar({
+  showMobileSearch,
+  onSearchClick,
+}: {
+  showMobileSearch: boolean;
+  onSearchClick: () => void;
+}) {
   return (
-    <nav className="flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4">
+    <nav className="sticky top-0 z-50 flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4 shadow-sm">
       <Link
         href="/"
         className="flex shrink-0 items-center transition-opacity hover:opacity-85"
@@ -201,9 +164,9 @@ function Navbar() {
         <a href="#" className="transition-colors hover:text-[#1a1a1a]">
           Hot Drops
         </a>
-        <a href="#" className="transition-colors hover:text-[#1a1a1a]">
+        <Link href="/browse" className="transition-colors hover:text-[#1a1a1a]">
           Browse
-        </a>
+        </Link>
         <Link
           href="/bag/build"
           className="flex items-center gap-1.5 rounded-full bg-[#2D6A4F] px-3 py-1.5 text-xs font-semibold text-[#B8E04A] transition-all hover:brightness-110"
@@ -216,11 +179,21 @@ function Navbar() {
           Build My Bag
         </Link>
       </div>
+      {/* Mobile search icon — fades in when hero search scrolls out of view */}
       <button
         type="button"
-        className="rounded-lg bg-[#2D6A4F] px-5 py-2.5 text-sm font-medium text-white transition-all duration-150 ease-out hover:scale-[1.02] hover:brightness-110"
+        onClick={onSearchClick}
+        aria-label="Søk etter discer"
+        className={`flex h-10 w-10 items-center justify-center rounded-full text-[#2D6A4F] transition-all duration-200 md:hidden ${
+          showMobileSearch
+            ? "scale-100 opacity-100"
+            : "pointer-events-none scale-90 opacity-0"
+        }`}
       >
-        Find a disc
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
       </button>
     </nav>
   );
@@ -250,11 +223,11 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
   };
 
   return (
-    <section className="w-full bg-[#F5F2EB] px-8 pb-20 pt-16 text-center">
-      <h1 className="mb-5 font-serif text-[72px] leading-none tracking-tight text-[#1a1a1a]">
+    <section className="w-full bg-[#1E3D2F] px-8 pb-20 pt-16 text-center">
+      <h1 className="mb-5 font-serif text-[72px] leading-none tracking-tight text-[#F5F2EB]">
         Find your flight.
       </h1>
-      <p className="mb-10 text-lg leading-relaxed text-[#666]">
+      <p className="mb-10 text-lg leading-relaxed text-[#9DC08B]">
         The smartest way to shop disc golf in Norway.
         <br />
         Real prices. Real stock. Real landed cost.
@@ -275,7 +248,7 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
       </div>
 
       <div className="relative mx-auto max-w-2xl">
-        <div className="flex origin-center items-center gap-3 rounded-xl border-2 border-[#2D6A4F]/40 bg-white px-5 py-4 shadow-sm transition-all duration-200 ease-out focus-within:scale-[1.01] focus-within:border-[#2D6A4F] focus-within:shadow-md">
+        <div className="flex origin-center items-center gap-3 rounded-xl border-2 border-[#4CAF82]/40 bg-white px-5 py-4 shadow-sm transition-all duration-200 ease-out focus-within:scale-[1.01] focus-within:border-[#4CAF82] focus-within:shadow-md">
           <svg
             className="shrink-0 text-[#888]"
             width="18"
@@ -290,6 +263,7 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
             <path d="m21 21-4.35-4.35" />
           </svg>
           <input
+            id="hero-search-input"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search discs, brands, players..."
@@ -356,11 +330,9 @@ function HotDrops() {
                   href={`/disc/${row.id}`}
                   className="flex min-h-[22rem] w-[min(100%,300px)] shrink-0 flex-col rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-5 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-[#2D6A4F]/30 hover:shadow-lg"
                 >
-                  {row.image && (
-                    <div className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 120 }}>
-                      <DiscImage src={row.image} name={row.name} brand={row.brand} containerStyle={{ height: 120 }} />
-                    </div>
-                  )}
+                  <div className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 120 }}>
+                    <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} containerStyle={{ height: 120 }} />
+                  </div>
                   <div className="flex flex-wrap items-center gap-2">
                     {row.tags.map((tag) => (
                       <Badge key={tag} tag={tag} />
@@ -438,83 +410,72 @@ function UpcomingSection() {
   );
 }
 
-// ── Browse grid ────────────────────────────────────────────────────────────
-function BrowseGrid({ tab, onTab }: { tab: Tab; onTab: (t: Tab) => void }) {
-  const list = useMemo(() => filterByTab(tab), [tab]);
+// ── Popular discs ───────────────────────────────────────────────────────────
+const POPULAR_IDS = [
+  "innova-destroyer",
+  "discraft-buzzz",
+  "kastaplast-berg",
+  "innova-aviar",
+  "dynamic-judge",
+  "latitude-river",
+];
 
-  const typeLabel: Record<string, string> = {
-    driver: "Driver",
-    midrange: "Mid-range",
-    putter: "Putter",
-  };
+function PopularDiscs() {
+  const popularDiscs = POPULAR_IDS.map((id) =>
+    discs.find((d) => d.id === id)
+  ).filter(Boolean) as Disc[];
 
   return (
-    <section className="w-full bg-white px-8 pb-20 pt-4">
+    <section className="w-full bg-white px-8 py-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
-          Browse
+          Popular discs
         </h2>
-        <p className="mb-6 text-[#666]">
-          {list.length} disc{list.length === 1 ? "" : "s"} ·{" "}
-          {TAB_PILLS.find((t) => t.id === tab)?.label}
+        <p className="mb-8 text-[#666]">
+          Well-known classics to start your search.
         </p>
-        <div className="mb-10 flex flex-wrap justify-center gap-2">
-          {TAB_PILLS.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              onClick={() => onTab(t.id)}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
-                tab === t.id
-                  ? "bg-[#2D6A4F] text-white shadow-md"
-                  : "bg-[#f0f0ee] text-[#555] hover:bg-[#e5e5e0]"
-              }`}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {list.map((d) => {
+
+        {/* Horizontal scroll on mobile, grid on desktop */}
+        <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-6">
+          {popularDiscs.map((d) => {
             const price = bestPriceNOK(d);
-            const f = d.flight;
             return (
               <Link
                 key={d.id}
                 href={`/disc/${d.id}`}
-                className="rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-5 transition-shadow hover:shadow-md"
+                className="min-w-[160px] shrink-0 rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-4 transition-all hover:-translate-y-0.5 hover:shadow-md sm:min-w-0"
               >
-                {d.image && (
-                  <div className="mb-4 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 120 }}>
-                    <DiscImage src={d.image} name={d.name} brand={d.brand} containerStyle={{ height: 120 }} />
-                  </div>
-                )}
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <h3 className="font-serif text-lg font-semibold text-[#1a1a1a]">
-                      {d.name}
-                    </h3>
-                    <p className="text-sm text-[#666]">{d.brand}</p>
-                  </div>
-                  <span className="shrink-0 rounded-md bg-[#f0f0ee] px-2 py-1 text-xs text-[#666]">
-                    {typeLabel[d.type] ?? d.type}
-                  </span>
+                <div
+                  className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]"
+                  style={{ height: 90 }}
+                >
+                  <DiscImage
+                    src={"image" in d ? (d.image as string) : ""}
+                    name={d.name}
+                    brand={d.brand}
+                    type={d.type}
+                    containerStyle={{ height: 90 }}
+                  />
                 </div>
-                <FlightBoxes flight={f} />
-                <div className="mt-4 flex items-end justify-between border-t border-[#e8e8e4] pt-4">
-                  <div>
-                    <p className="text-xs text-[#888]">From</p>
-                    <p className="font-serif text-xl font-semibold text-[#2D6A4F]">
-                      {price != null ? `${price} kr` : "—"}
-                    </p>
-                  </div>
-                  <p className="text-sm text-[#888]">
-                    {d.stores.length} store{d.stores.length === 1 ? "" : "s"}
-                  </p>
-                </div>
+                <h3 className="font-serif text-base font-semibold text-[#1a1a1a]">
+                  {d.name}
+                </h3>
+                <p className="text-xs text-[#666]">{d.brand}</p>
+                <p className="mt-2 font-serif text-lg font-semibold text-[#2D6A4F]">
+                  {price != null ? `${price} kr` : "—"}
+                </p>
               </Link>
             );
           })}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/browse"
+            className="inline-block rounded-xl border border-[#2D6A4F] px-7 py-3 text-sm font-medium text-[#2D6A4F] transition-all hover:bg-[#2D6A4F]/5"
+          >
+            Browse all {discs.length} discs →
+          </Link>
         </div>
       </div>
     </section>
@@ -523,16 +484,39 @@ function BrowseGrid({ tab, onTab }: { tab: Tab; onTab: (t: Tab) => void }) {
 
 // ── Page ───────────────────────────────────────────────────────────────────
 export function DiscDropHome() {
-  const [tab, setTab] = useState<Tab>("all");
+  const [heroSearchVisible, setHeroSearchVisible] = useState(true);
+
+  useEffect(() => {
+    const el = document.getElementById("hero-search-input");
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroSearchVisible(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  function scrollToSearch() {
+    const input = document.getElementById(
+      "hero-search-input"
+    ) as HTMLInputElement | null;
+    if (!input) return;
+    input.scrollIntoView({ behavior: "smooth", block: "center" });
+    setTimeout(() => input.focus(), 400);
+  }
 
   return (
     <div className="min-h-screen bg-[#F5F2EB]">
-      <Navbar />
+      <Navbar
+        showMobileSearch={!heroSearchVisible}
+        onSearchClick={scrollToSearch}
+      />
       <main>
         <Hero discs={discs} />
         <HotDrops />
         <UpcomingSection />
-        <BrowseGrid tab={tab} onTab={setTab} />
+        <PopularDiscs />
       </main>
       <footer className="bg-[#1E3D2F] px-6 py-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 text-[13px] sm:flex-row sm:justify-between">

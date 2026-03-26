@@ -34,6 +34,8 @@ export type StoredBag = {
   answers: WizardAnswers;
   discs: GeneratedDisc[];
   generatedAt: number;
+  summary?: string;
+  bagTips?: string;
 };
 
 // ── Constants ──────────────────────────────────────────────────────────────
@@ -173,11 +175,9 @@ function DiscCard({ disc }: { disc: GeneratedDisc }) {
         </span>
       )}
 
-      {disc.image && (
-        <div className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 96 }}>
-          <DiscImage src={disc.image} name={disc.name} brand={disc.brand} containerStyle={{ height: 96 }} />
-        </div>
-      )}
+      <div className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 96 }}>
+        <DiscImage src={disc.image ?? ""} name={disc.name} brand={disc.brand} type={disc.category} containerStyle={{ height: 96 }} />
+      </div>
 
       <div className="flex items-start justify-between gap-2">
         <div>
@@ -377,7 +377,7 @@ export function BagPageClient() {
 
   if (bagData === null) return <BagNotFound />;
 
-  const { answers, discs } = bagData;
+  const { answers, discs, summary, bagTips } = bagData;
 
   function handleShare() {
     navigator.clipboard.writeText(window.location.href).then(() => {
@@ -453,6 +453,12 @@ export function BagPageClient() {
                 </span>
               ))}
             </div>
+
+            {summary && (
+              <div className="mt-6 rounded-xl bg-white/10 px-5 py-4">
+                <p className="text-sm leading-relaxed text-[#F5F2EB]">{summary}</p>
+              </div>
+            )}
 
             <div className="mt-8 flex flex-wrap items-end justify-between gap-6">
               <div className="flex flex-wrap gap-6">
@@ -551,6 +557,27 @@ export function BagPageClient() {
             </div>
           </div>
         </section>
+
+        {/* ── Bag tip ── */}
+        {bagTips && (
+          <section className="w-full bg-[#F5F2EB] px-4 py-8 sm:px-8">
+            <div className="mx-auto max-w-6xl">
+              <div className="flex items-start gap-4 rounded-2xl border border-[#2D6A4F]/20 bg-white px-6 py-5">
+                <div className="mt-0.5 shrink-0 rounded-xl bg-[#f0f9e8] p-2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2" aria-hidden>
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#2D6A4F]">Caddie-tips</p>
+                  <p className="mt-1 text-sm leading-relaxed text-[#444]">{bagTips}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── Equipment upsell ── */}
         <section className="w-full bg-white px-4 py-12 sm:px-8">

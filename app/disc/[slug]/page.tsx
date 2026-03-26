@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { discs } from "@/data/discs.js";
+import { getMergedStores, scrapedLastUpdated } from "@/lib/disc-utils";
+import { DiscImage } from "@/components/DiscImage";
 import {
   PriceTable,
   LandedCostCalculator,
@@ -169,16 +171,15 @@ function Hero({ disc }: { disc: Disc }) {
               </div>
             ))}
           </div>
-          {"image" in disc && disc.image && (
-            <div className="flex shrink-0 items-center justify-center self-center rounded-2xl bg-white/8 border border-white/10 p-4 sm:w-52">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={disc.image as string}
-                alt={disc.name}
-                style={{ maxHeight: 200, maxWidth: "100%", objectFit: "contain" }}
-              />
-            </div>
-          )}
+          <div className="flex shrink-0 items-center justify-center self-center rounded-2xl bg-white/8 border border-white/10 p-4 sm:w-52" style={{ height: 180 }}>
+            <DiscImage
+              src={"image" in disc ? (disc.image as string) : ""}
+              name={disc.name}
+              brand={disc.brand}
+              type={disc.type}
+              containerStyle={{ height: 180 }}
+            />
+          </div>
         </div>
 
         {/* Best price + back link */}
@@ -247,7 +248,7 @@ export default async function DiscDetailPage({
       <main>
         <Hero disc={disc} />
         <FlightPathChart flight={disc.flight} />
-        <PriceTable stores={disc.stores} />
+        <PriceTable stores={getMergedStores(disc)} lastUpdated={scrapedLastUpdated} />
         <LandedCostCalculator />
         <PriceHistoryChart priceHistory={disc.priceHistory} />
         <PriceAlertSignup discName={disc.name} />

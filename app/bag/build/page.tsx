@@ -4,203 +4,37 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { discs as allDiscs } from "@/data/discs.js";
 import type { StoredBag, GeneratedDisc, WizardAnswers } from "@/app/bag/[id]/BagPageClient";
 
-// ── Bag generation ─────────────────────────────────────────────────────────
+// ── API types ──────────────────────────────────────────────────────────────
 
-type DiscFromCatalog = (typeof allDiscs)[number];
+type ApiDisc = {
+  name: string;
+  brand: string;
+  type: string;
+  plastic: string;
+  speed: number;
+  glide: number;
+  turn: number;
+  fade: number;
+  priceNOK: number;
+  reason: string;
+  slug: string;
+};
 
-function getDiscCategory(disc: DiscFromCatalog): GeneratedDisc["category"] {
-  if (disc.type === "putter") return "putter";
-  if (disc.type === "midrange") return "midrange";
-  if (disc.flight.speed >= 11) return "driver";
-  return "fairway";
-}
+type BagApiResponse = {
+  summary: string;
+  discs: ApiDisc[];
+  bagTips: string;
+};
 
-function getBestNOK(disc: DiscFromCatalog): number | undefined {
-  const pool = disc.stores.filter((s) => s.inStock);
-  const source = pool.length ? pool : disc.stores;
-  if (!source.length) return undefined;
-  return Math.min(...source.map((s) => s.price));
-}
-
-function generateReason(
-  disc: DiscFromCatalog,
-  cat: GeneratedDisc["category"],
-  answers: WizardAnswers
-): string {
-  const { turn, fade, speed } = disc.flight;
-  const skill = answers.skillLevel;
-  const arm = answers.armSpeed;
-  const armStr = arm === "slow" ? "slower arm" : arm === "medium" ? "medium arm" : "fast arm";
-
-  if (cat === "putter") {
-    if (fade >= 3)
-      return `Overstable utility putter — dependable in wind and tight approach lines, great for ${skill} play.`;
-    return `Straight-flying putter ideal for a ${skill} building a consistent short game.`;
-  }
-  if (cat === "midrange") {
-    if (fade >= 3)
-      return `Overstable midrange for reliable fades and headwind shots — an essential tool at the ${skill} level.`;
-    if (turn <= -1)
-      return `Understable midrange with a gentle turn — versatile all-around disc for ${skill} players.`;
-    return `Neutral midrange for accurate placement — a core workhorse disc at any skill level.`;
-  }
-  if (cat === "fairway") {
-    if (arm === "slow" && turn <= -2)
-      return `Understable fairway driver that maximises distance for a ${armStr} — will turn and glide for you.`;
-    if (turn <= -2)
-      return `Understable fairway driver that turns gently and adds easy distance — great for your ${armStr}.`;
-    if (speed <= 7)
-      return `Beginner-friendly fairway driver with predictable flight — a great first step up from a midrange.`;
-    return `Accurate control fairway for tight lines and precise placement — suits your ${armStr} well.`;
-  }
-  // driver
-  if (arm === "fast" && turn >= 0)
-    return `Overstable distance driver that stays reliable under your ${armStr} — a trusted workhorse for open shots.`;
-  if (arm === "fast")
-    return `Distance driver that rewards your ${armStr} with maximum glide and distance.`;
-  if (turn <= -1)
-    return `Distance driver with slight turn — ${skill} players with a ${armStr} can get great distance from this.`;
-  return `Distance driver for open field shots — best once your arm speed builds further.`;
-}
-
-function scoreDisc(disc: DiscFromCatalog, answers: WizardAnswers): number {
-  const { skillLevel, armSpeed, courseTypes } = answers;
-  const cat = getDiscCategory(disc);
-  const { speed, turn, fade } = disc.flight;
-  let score = 10;
-
-  // Skill level
-  if (skillLevel === "beginner") {
-    if (cat === "driver") return -999; // exclude distance drivers entirely
-    if (speed > 8) score -= 10;
-    if (fade > 3) score -= 5;
-    if (turn <= -2) score += 5;
-  } else if (skillLevel === "intermediate") {
-    if (cat === "driver" && fade >= 5) score -= 10;
-    if (speed >= 12 && fade >= 4) score -= 4;
-    if (turn <= -2) score += 2;
-  } else {
-    // advanced / pro — like overstable options too
-    if (turn >= 0 && fade >= 3) score += 2;
-  }
-
-  // Arm speed for drivers/fairways
-  if (cat === "driver" || cat === "fairway") {
-    if (armSpeed === "slow") {
-      if (turn >= 0) score -= 18;
-      if (turn >= 1) score -= 30;
-      if (turn <= -2) score += 8;
-      if (speed >= 12) score -= 8;
-    } else if (armSpeed === "medium") {
-      if (turn >= 1) score -= 8;
-      if (turn <= -3) score -= 3;
-      if (turn === -1 || turn === -2) score += 3;
-    } else {
-      // fast arm
-      if (turn >= 0 && fade >= 3) score += 4;
-      if (turn <= -3 && cat === "driver") score -= 5;
-    }
-  }
-
-  // Course type
-  if (courseTypes.includes("wooded")) {
-    if (cat === "driver") score -= 3;
-    if (cat === "midrange") score += 4;
-    if (cat === "putter") score += 2;
-  }
-  if (courseTypes.includes("open")) {
-    if (cat === "driver" || cat === "fairway") score += 3;
-  }
-
-  return score;
-}
-
-function generateBag(answers: WizardAnswers): GeneratedDisc[] {
-  const { skillLevel, discTypes, budget } = answers;
-
-  const budgetMaxDiscs: Record<string, number> = {
-    "under-500": 4,
-    "500-1500": 8,
-    "1500-3000": 11,
-    "no-limit": 14,
-  };
-  const maxDiscs = budgetMaxDiscs[budget] ?? 8;
-
-  const wantsAll =
-    discTypes.length === 0 || discTypes.includes("full-bag");
-  const wantsDrivers = wantsAll || discTypes.includes("drivers");
-  const wantsMids = wantsAll || discTypes.includes("midrange");
-  const wantsPutters = wantsAll || discTypes.includes("putters");
-
-  type CatKey = GeneratedDisc["category"];
-
-  let targets: Record<CatKey, number> = { driver: 0, fairway: 0, midrange: 0, putter: 0 };
-
-  if (wantsAll) {
-    targets = { driver: 2, fairway: 2, midrange: 3, putter: 3 };
-  } else {
-    if (wantsDrivers) { targets.driver = 2; targets.fairway = 2; }
-    if (wantsMids) targets.midrange = 3;
-    if (wantsPutters) targets.putter = 4;
-    if (targets.putter === 0) targets.putter = 2;
-    if (targets.midrange === 0 && wantsDrivers) targets.midrange = 1;
-  }
-
-  // Beginners don't use distance drivers
-  if (skillLevel === "beginner") {
-    targets.driver = 0;
-    targets.fairway = Math.max(targets.fairway, 2);
-    targets.midrange = Math.max(targets.midrange, 2);
-    targets.putter = Math.max(targets.putter, 2);
-  }
-
-  // Scale to budget
-  const totalTargets = Object.values(targets).reduce((a, b) => a + b, 0);
-  if (totalTargets > maxDiscs) {
-    const scale = maxDiscs / totalTargets;
-    targets.driver = Math.floor(targets.driver * scale);
-    targets.fairway = Math.max(skillLevel === "beginner" ? 1 : 0, Math.floor(targets.fairway * scale));
-    targets.midrange = Math.max(1, Math.floor(targets.midrange * scale));
-    targets.putter = Math.max(1, Math.floor(targets.putter * scale));
-  }
-
-  const result: GeneratedDisc[] = [];
-  const catOrder: CatKey[] = ["driver", "fairway", "midrange", "putter"];
-
-  for (const cat of catOrder) {
-    const n = targets[cat];
-    if (n === 0) continue;
-
-    const candidates = allDiscs
-      .filter((d) => getDiscCategory(d) === cat)
-      .map((d) => ({ disc: d, score: scoreDisc(d, answers) }))
-      .filter((c) => c.score > -999)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, n);
-
-    for (let i = 0; i < candidates.length; i++) {
-      const { disc } = candidates[i];
-      // Primary disc in category gets ×2 rotation if we want ≥2 of this cat
-      const isWorkhorse = i === 0 && n >= 2 && (cat === "midrange" || cat === "putter");
-      result.push({
-        id: disc.id,
-        name: disc.name,
-        brand: disc.brand,
-        type: disc.type,
-        flight: disc.flight,
-        image: "image" in disc ? (disc.image as string | undefined) : undefined,
-        category: cat,
-        quantity: isWorkhorse ? 2 : 1,
-        reason: generateReason(disc, cat, answers),
-        priceNOK: getBestNOK(disc),
-      });
-    }
-  }
-
-  return result;
+function apiTypeToCategory(type: string, speed: number): GeneratedDisc["category"] {
+  const t = type.toLowerCase();
+  if (t.includes("putter")) return "putter";
+  if (t.includes("midrange") || t.includes("mid")) return "midrange";
+  if (speed >= 9) return "driver";
+  if (speed >= 6) return "fairway";
+  return "midrange";
 }
 
 function randomId(): string {
@@ -480,6 +314,8 @@ export default function BuildBagPage() {
   const [budget, setBudget] = useState<BudgetOption | null>(null);
   const [ownedDiscs, setOwnedDiscs] = useState("");
   const [courseTypes, setCourseTypes] = useState<CourseType[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [buildError, setBuildError] = useState<string | null>(null);
 
   const TOTAL_STEPS = 7;
 
@@ -511,7 +347,7 @@ export default function BuildBagPage() {
     );
   }
 
-  function handleBuild() {
+  async function handleBuild() {
     if (!skillLevel || !armSpeed || !budget) return;
 
     const answers: WizardAnswers = {
@@ -523,11 +359,49 @@ export default function BuildBagPage() {
       courseTypes,
     };
 
-    const generated = generateBag(answers);
-    const id = randomId();
-    const stored: StoredBag = { answers, discs: generated, generatedAt: Date.now() };
-    localStorage.setItem(`discdrop_bag_${id}`, JSON.stringify(stored));
-    router.push(`/bag?id=${id}`);
+    setIsLoading(true);
+    setBuildError(null);
+
+    try {
+      const res = await fetch("/api/bag/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(answers),
+      });
+
+      if (!res.ok) {
+        throw new Error("API error");
+      }
+
+      const data: BagApiResponse = await res.json();
+
+      const generated: GeneratedDisc[] = data.discs.map((d) => ({
+        id: d.slug,
+        name: d.name,
+        brand: d.brand,
+        type: d.type,
+        flight: { speed: d.speed, glide: d.glide, turn: d.turn, fade: d.fade },
+        category: apiTypeToCategory(d.type, d.speed),
+        quantity: 1 as const,
+        reason: d.reason,
+        priceNOK: d.priceNOK,
+      }));
+
+      const id = randomId();
+      const stored: StoredBag = {
+        answers,
+        discs: generated,
+        generatedAt: Date.now(),
+        summary: data.summary,
+        bagTips: data.bagTips,
+      };
+      localStorage.setItem(`discdrop_bag_${id}`, JSON.stringify(stored));
+      router.push(`/bag?id=${id}`);
+    } catch {
+      setBuildError("Noe gikk galt. Prøv igjen.");
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   // Labels for review
@@ -560,6 +434,22 @@ export default function BuildBagPage() {
     mixed: "Mixed",
     all: "All types",
   };
+
+  if (isLoading) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center bg-[#F5F2EB]">
+        <div className="flex flex-col items-center gap-6">
+          <svg width="64" height="64" viewBox="0 0 24 24" className="animate-spin" aria-hidden fill="none">
+            <ellipse cx="12" cy="14" rx="10" ry="4.5" fill="#2D6A4F" />
+            <ellipse cx="12" cy="12" rx="5" ry="2.5" fill="#B8E04A" />
+            <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#F5F2EB" opacity="0.7" />
+          </svg>
+          <p className="font-serif text-2xl font-semibold text-[#2D6A4F]">Bygger din bag...</p>
+          <p className="text-sm text-[#888]">Dette tar noen sekunder</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-[#F5F2EB]">
@@ -841,6 +731,18 @@ export default function BuildBagPage() {
                   <p className="mt-2 text-center text-xs text-[#E8704A]">
                     Go back and complete all required steps first.
                   </p>
+                )}
+                {buildError && (
+                  <div className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-[#E8704A]/30 bg-[#fdf4f1] px-4 py-3">
+                    <p className="text-sm text-[#E8704A]">{buildError}</p>
+                    <button
+                      type="button"
+                      onClick={handleBuild}
+                      className="shrink-0 text-sm font-medium text-[#E8704A] underline"
+                    >
+                      Prøv igjen
+                    </button>
+                  </div>
                 )}
               </div>
             </div>

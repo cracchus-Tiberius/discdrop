@@ -24,7 +24,17 @@ const MONTHS = [
 
 // ── Price Comparison Table ───────────────────────────────────────────────────
 
-export function PriceTable({ stores }: { stores: Store[] }) {
+function formatLastUpdated(iso: string): string {
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const hours = Math.floor(diffMs / (1000 * 60 * 60));
+  if (hours < 1) return "just now";
+  if (hours === 1) return "1 hour ago";
+  if (hours < 24) return `${hours} hours ago`;
+  const days = Math.floor(hours / 24);
+  return days === 1 ? "1 day ago" : `${days} days ago`;
+}
+
+export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdated?: string | null }) {
   const rows: StoreRow[] = stores
     .map((s) => {
       const shippingNOK = s.price >= s.freeShippingOver ? 0 : s.shipping;
@@ -44,9 +54,17 @@ export function PriceTable({ stores }: { stores: Store[] }) {
         <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
           Where to buy
         </h2>
-        <p className="mb-6 text-sm text-[#666]">
+        <p className="mb-3 text-sm text-[#666]">
           All prices in NOK, including VAT. Sorted by total price with shipping.
         </p>
+        <p className="mb-3 text-[12px] italic text-[#888]">
+          Prislenker er affiliate-lenker — vi tjener provisjon på kjøp. Dette påvirker ikke prisene du ser.
+        </p>
+        {lastUpdated && (
+          <p className="mb-5 text-[11px] text-[#aaa]">
+            Prices last updated: {formatLastUpdated(lastUpdated)}
+          </p>
+        )}
 
         {/* Desktop table */}
         <div className="hidden overflow-hidden rounded-2xl border border-[#e0ddd4] bg-white shadow-sm md:block">
@@ -619,11 +637,12 @@ function LegendDot({ color, label }: { color: string; label: string }) {
 export function PriceAlertSignup({ discName }: { discName: string }) {
   const [email, setEmail] = useState("");
   const [targetPrice, setTargetPrice] = useState("");
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email) return;
+    if (!email || !consent) return;
     setSubmitted(true);
   }
 
@@ -679,11 +698,31 @@ export function PriceAlertSignup({ discName }: { discName: string }) {
                 <div className="flex items-end sm:col-span-1">
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-[#B8E04A] px-5 py-3 text-sm font-semibold text-[#1E3D2F] transition-all hover:brightness-110"
+                    disabled={!consent}
+                    className="w-full rounded-xl bg-[#B8E04A] px-5 py-3 text-sm font-semibold text-[#1E3D2F] transition-all hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed"
                   >
                     Notify me when price drops
                   </button>
                 </div>
+                <label className="flex cursor-pointer items-start gap-2.5 sm:col-span-3">
+                  <input
+                    type="checkbox"
+                    required
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 shrink-0 accent-[#B8E04A]"
+                  />
+                  <span className="text-xs leading-relaxed text-[#9DC08B]/80">
+                    Jeg godtar at DiscDrop lagrer e-postadressen min for å sende prisvarsler. Se vår{" "}
+                    <a
+                      href="/personvern"
+                      className="underline underline-offset-2 hover:text-[#B8E04A] transition-colors"
+                    >
+                      personvernserklæring
+                    </a>
+                    .
+                  </span>
+                </label>
               </form>
               <p className="mt-4 text-xs text-[#9DC08B]/70">
                 We&apos;ll only email you when the price drops. No spam, ever.
