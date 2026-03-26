@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-26T07:05:48.102Z",
+  "lastUpdated": "2026-03-26T10:09:05.415Z",
   "stores": {
     "wearediscgolf": {
       "name": "We Are Disc Golf",
@@ -51,21 +51,21 @@
         "price": 159,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/electron-proxy-soft/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/cosmic-electron-firm-proxy",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 269,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/axiom-proxy",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-pa3-lizotte": [
@@ -74,7 +74,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/400-pa-3-red-170/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-rhyno": [
@@ -83,7 +83,7 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-rhyno-pink-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "westside-harp": [
@@ -92,7 +92,7 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/bt-hard-harp-blue-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-aviar": [
@@ -101,14 +101,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-aviar-pink/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-dx-proto-glow-aviar",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-roach": [
@@ -117,7 +117,7 @@
         "price": 70,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/jawbreaker-roach-blue-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "kastaplast-berg": [
@@ -126,21 +126,21 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/k1-berg-blue-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 215,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/k1-berg",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/k1-soft-berg",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-a3": [
@@ -149,7 +149,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/500-a3-mix-174g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-a4": [
@@ -158,7 +158,7 @@
         "price": 160,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/500-a4-yellow-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-pig": [
@@ -167,14 +167,14 @@
         "price": 169,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/r-pro-pig/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 299,
         "inStock": false,
         "url": "https://kvamdgs.no/products/color-glow-pro-pig-bradley-williams-team-championship-series-2023",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-zone": [
@@ -183,21 +183,21 @@
         "price": 149,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/putter-line-zone/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 204,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/z-zone-ss",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/discraft-putter-line-zone",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-envy": [
@@ -206,21 +206,21 @@
         "price": 155,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/electron-envy-soft-james-conrad/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/cosmic-electron-envy",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 269,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/axiom-envy",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-a2": [
@@ -229,14 +229,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/300-fractal-a2-white/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 239,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/a2-special-blend-isaac-robinson-1x",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-flow": [
@@ -245,7 +245,7 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/light-edition-flow-motion-yellow-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-p2": [
@@ -254,21 +254,21 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/d-line-flex-2-p2-pink-173g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 245,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/s-line-p2",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/d-line-p2-flex-1",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-active": [
@@ -277,7 +277,7 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/active-shogun-blue-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-luna": [
@@ -286,21 +286,21 @@
         "price": 169,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/putter-line-luna-hard/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 275,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/z-confetti-luna-paul-mcbeth-gmc-2025",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 239,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/big-z-luna-paul-mcbeth",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-tactic": [
@@ -309,14 +309,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/exo-soft-tactic-white-176g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 279,
         "inStock": false,
         "url": "https://kvamdgs.no/products/meta-tactic-razor-claw-3-eagle-mcmahon-signature-series",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-gauntlet": [
@@ -325,14 +325,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/zero-hard-gauntlet-white/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 159,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/zero-hard-gauntlet",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-a1": [
@@ -341,7 +341,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/400-a1-blue-173g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-judge": [
@@ -350,7 +350,7 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/classic-hybrid-judge-black-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-keystone": [
@@ -359,14 +359,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/zero-medium-keystone-blue-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 149,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/retro-keystone",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-guard": [
@@ -375,7 +375,7 @@
         "price": 70,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/prime-burst-guard-x-out-blue-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-p1": [
@@ -384,7 +384,7 @@
         "price": 70,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/d-line-p1-flex-2-pink-173g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-pa1": [
@@ -393,7 +393,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/400-pa-1-purple/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-d1": [
@@ -402,7 +402,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/500-glimmer-d1-grey-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-banger-gt": [
@@ -411,7 +411,7 @@
         "price": 149,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/putter-line-banger-gt/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-zone-os": [
@@ -420,14 +420,14 @@
         "price": 149,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/putter-line-zone-os/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 279,
         "inStock": false,
         "url": "https://kvamdgs.no/products/esp-zone-os-brodie-smith-tour-series-2023",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "mvp-atom": [
@@ -436,7 +436,7 @@
         "price": 155,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/electron-firm-atom/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-xt-nova": [
@@ -445,7 +445,7 @@
         "price": 219,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/xt-nova/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-thunderbird": [
@@ -454,21 +454,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-thunderbird-red-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/halo-star-thunderbird",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 279,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-halo-star-thunderbird-distance",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "westside-swan-1": [
@@ -477,7 +477,7 @@
         "price": 145,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/bt-burst-swan-1-reborn-hard/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-hex": [
@@ -486,21 +486,21 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-hex-blank/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/fission-hex-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/axiom-discs-neutron-hex",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-mako3": [
@@ -509,7 +509,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-mako3-red-180g-4/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-buzzz": [
@@ -518,21 +518,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-buzzz-ss-pink/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 235,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/esp-supercolor-buzzz-2025-halloween-special-edition",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 329,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/cryztal-cealr-ghost-buzzz-ledgestone-2025",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-trust": [
@@ -541,21 +541,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/grand-trust-purple-177g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 259,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/grand-trust",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 289,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/grand-orbit-trust-albert-tamm-team-series",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-malta": [
@@ -564,7 +564,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-malta-blue-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-anchor": [
@@ -573,14 +573,14 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/opto-glimmer-anchor-white-177g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/gold-ice-anchor",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-m4": [
@@ -589,7 +589,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/400g-m4-red/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-roc3": [
@@ -598,14 +598,14 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-roc3/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-champion-roc3",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-hornet": [
@@ -614,7 +614,7 @@
         "price": 309,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/cryztal-hornet-ledgestone-2026/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-fuse": [
@@ -623,14 +623,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/retro-fuse-orange-176g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/zero-gravity-fuse",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-md3": [
@@ -639,14 +639,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-md3-green-177g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 235,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/c-line-md3",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-jay": [
@@ -655,7 +655,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-jay-red-180g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-wolf": [
@@ -664,7 +664,7 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-wolf-yellow/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "westside-tursas": [
@@ -673,7 +673,7 @@
         "price": 70,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/origo-burst-tursas-pink-177g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-truth": [
@@ -682,7 +682,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/lucid-emac-truth-yellow-177g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-lion": [
@@ -691,7 +691,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/star-lion-orange-180g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "westside-warship": [
@@ -700,7 +700,7 @@
         "price": 70,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/origio-burst-warship-orange-177g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-claymore": [
@@ -709,14 +709,14 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/gold-claymore-pink/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/gold-claymore",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "kastaplast-gote": [
@@ -725,21 +725,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/k1-gote-yellow-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/k1-gote",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 279,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/k1-hard-g-te-dallas-garber-2025",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-comet": [
@@ -748,7 +748,7 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-comet/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-md5": [
@@ -757,21 +757,21 @@
         "price": 229,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-md5/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 245,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/s-line-md5",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/c-line-md5",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-roc": [
@@ -780,21 +780,21 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-roc-lettvekt/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 329,
         "inStock": false,
         "url": "https://kvamdgs.no/products/star-roc-kristofer-hivju",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 329,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/champion-glow-grapple-roc-usdgc",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-stratus": [
@@ -803,7 +803,7 @@
         "price": 149,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/x-stratus/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-wasp": [
@@ -812,7 +812,7 @@
         "price": 269,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-jawbreaker-wasp-dglo-2024/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-buzzz-os": [
@@ -821,14 +821,14 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-buzzz-os/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 219,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/esp-buzzz-os",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-sol": [
@@ -837,7 +837,7 @@
         "price": 209,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-sol/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-rancho": [
@@ -846,7 +846,7 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/star-roc-rancho/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-verdict": [
@@ -855,7 +855,7 @@
         "price": 229,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/fuzion-x-verdict-chris-clemons-2021/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-teebird3": [
@@ -864,7 +864,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-teebird3-green/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-ghost": [
@@ -873,7 +873,7 @@
         "price": 119,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/excel-ghost/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-stingray": [
@@ -882,7 +882,7 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-stingray/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-leopard3": [
@@ -891,7 +891,7 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-leopard3/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-maverick": [
@@ -900,7 +900,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/lucid-air-maverick-yellow-159g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "mvp-servo": [
@@ -909,14 +909,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-servo-white-170g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
         "inStock": false,
         "url": "https://kvamdgs.no/products/neutron-servo-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-fd3": [
@@ -925,21 +925,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-fd3-blue-173g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 245,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/s-line-fd3",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/c-line-fd3-jackal-stamp",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-crave": [
@@ -948,21 +948,21 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-crave-red-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/fission-crave-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 219,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/axiom-crave",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-f3": [
@@ -971,7 +971,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/500-spectrum-f3-orange-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-fd": [
@@ -980,21 +980,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-fd-green-170g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 235,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/c-line-metal-flake-fd",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/s-line-fd",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-teebird": [
@@ -1003,21 +1003,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/star-teebird-orange-175g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 219,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/champion-teebird",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-star-teebird-fairway",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "westside-stag": [
@@ -1026,7 +1026,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/revive-burst-stag-green-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "kastaplast-lots": [
@@ -1035,21 +1035,21 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/k1-glow-lots-white-173g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 225,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/k1-lots-moominmamma",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 279,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/k1-hard-lots-joseph-anderson-tour-series",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-insanity": [
@@ -1058,21 +1058,21 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-cosmic-insanity-purple/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/proton-insanity-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 279,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/prism-proton-insanity-otb-open-2026",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-m3": [
@@ -1081,7 +1081,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/et-m3-0-blue/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "mvp-tesla": [
@@ -1090,21 +1090,21 @@
         "price": 160,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/plasma-tesla-grey-163g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/fission-tesla-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/proton-tesla-white-rim",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-destroyer": [
@@ -1113,21 +1113,21 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/g-star-destroyer-red-168g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/halo-star-destroyer",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-star-destroyer-distance",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-explorer": [
@@ -1136,14 +1136,14 @@
         "price": 209,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/opto-ice-glimmer-explorer-we-are-disc-golf/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/opto-x-explorer-linus-carlsson-team-series-2025",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-diamond": [
@@ -1152,14 +1152,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/opto-diamond-white-153g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 169,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/recycled-diamond",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-volt": [
@@ -1168,21 +1168,21 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-volt-blank/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/plasma-volt-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/fission-volt",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-leopard": [
@@ -1191,7 +1191,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/g-star-leopard-green/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-saint": [
@@ -1200,14 +1200,14 @@
         "price": 60,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/retro-saint-blue-174g-3/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/gold-saint",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-saint-pro": [
@@ -1216,14 +1216,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/gold-saint-pro-purple-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/opto-saint-pro",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-f5": [
@@ -1232,7 +1232,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/air-f5-pink-164g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-river": [
@@ -1241,14 +1241,14 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/opto-river-white-174g-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/opto-air-river",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-mantis": [
@@ -1257,7 +1257,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-jawbreaker-mantis-white-171g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-sapphire": [
@@ -1266,7 +1266,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/opto-sapphire-red-157g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-escape": [
@@ -1275,7 +1275,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/fuzion-escape-blue-170g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "mvp-relay": [
@@ -1284,14 +1284,14 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-cosmic-relay/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/neutron-relay",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "kastaplast-falk": [
@@ -1300,21 +1300,21 @@
         "price": 189,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/k1-grind-falk/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 225,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/k1-falk-moomin-snorkmaiden",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/k1-falk-moomin-snorkmaiden",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-defy": [
@@ -1323,14 +1323,14 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/fission-defy-grey-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
         "inStock": false,
         "url": "https://kvamdgs.no/products/neutron-defy-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-valkyrie": [
@@ -1339,7 +1339,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-valkyrie-green-3/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-rhythm": [
@@ -1348,14 +1348,14 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-rhythm-blank/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 179,
         "inStock": false,
         "url": "https://kvamdgs.no/products/neutron-rhythm-lab-second",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-firebird": [
@@ -1364,21 +1364,21 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-firebird/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/halo-star-firebird-1",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-champion-firebird-distance",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-predator": [
@@ -1387,14 +1387,14 @@
         "price": 209,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/big-z-predator/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 319,
         "inStock": false,
         "url": "https://kvamdgs.no/products/jawbreaker-z-flx-predator-chris-dickerson",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-dd3": [
@@ -1403,21 +1403,21 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/s-line-dd3-white-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 235,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/c-line-dd3",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 329,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/horizon-dd3-nordic-phenom-iii-niklas-anttila",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-sidewinder": [
@@ -1426,7 +1426,7 @@
         "price": 70,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-sidewinder-orange-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-stalker": [
@@ -1435,7 +1435,7 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-stalker/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-nuke-os": [
@@ -1444,7 +1444,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-nuke-os-blue-174/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-undertaker": [
@@ -1453,7 +1453,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-undertaker-pink-2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-scorch": [
@@ -1462,14 +1462,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-scorch-purple-3/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 259,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/fuzed-line-scorch",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-shryke": [
@@ -1478,14 +1478,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-shryke-green-176g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-star-shryke-distance",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-d3": [
@@ -1494,7 +1494,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/400-d3-max-green-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-d4": [
@@ -1503,7 +1503,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/400-d4-pink-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-boss": [
@@ -1512,14 +1512,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/star-boss-orange/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 289,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/halo-star-boss",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-pd": [
@@ -1528,14 +1528,14 @@
         "price": 160,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-pd-yellow-176/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 235,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/c-line-pd",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-surge": [
@@ -1544,7 +1544,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-swirl-surge-blue/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-wraith": [
@@ -1553,21 +1553,21 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-wraith/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/halo-star-wraith",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 229,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/innova-star-wraith-distance",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-tern": [
@@ -1576,7 +1576,7 @@
         "price": 169,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/pro-tern/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-raptor": [
@@ -1585,21 +1585,21 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-raptor-paige-pierce/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 289,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/jawbreaker-z-flx-raptor-aaron-gossage-2024",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 299,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/z-confetti-captains-raptor",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-crush": [
@@ -1608,7 +1608,7 @@
         "price": 309,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/big-z-swirl-crush-ledgestone-2026/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-trespass": [
@@ -1617,7 +1617,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/lucid-trespass-pink-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-pd2": [
@@ -1626,14 +1626,14 @@
         "price": 239,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/s-line-pd2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 289,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/s-line-swirls-pd2-sky-stone",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-anax": [
@@ -1642,14 +1642,14 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/big-z-anax-purple/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 235,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/esp-anax-paul-mcbeth",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-enigma": [
@@ -1658,14 +1658,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neo-enigma-yellow-172g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 225,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/neo-enigma",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-thrasher": [
@@ -1674,7 +1674,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-thrasher-yellow/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-katana": [
@@ -1683,7 +1683,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/champion-katana-mix/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-nuke": [
@@ -1692,21 +1692,21 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-nuke-ricky-wysocki/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 225,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/esp-nuke-paige-pierce",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 269,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/esp-nuke-page-pierce",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-force": [
@@ -1715,7 +1715,7 @@
         "price": 159,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/esp-recycled-force/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-grace": [
@@ -1724,21 +1724,21 @@
         "price": 249,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/project-grip-grace/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 259,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/grand-grace",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 269,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/grand-royal-grace",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-ballista-pro": [
@@ -1747,14 +1747,14 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/opto-ballista-pro-yellow-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 249,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/gold-extreme-burst-ballista-pro-albert-tamm-team-series-2025",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "westside-sword": [
@@ -1763,7 +1763,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/tournament-sword-blue-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-daedalus": [
@@ -1772,7 +1772,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/star-daedalus-yellow-175g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-sheriff": [
@@ -1781,7 +1781,7 @@
         "price": 140,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/lucid-sheriff-blue-174g/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-crank": [
@@ -1790,7 +1790,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/big-z-crank-green/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "mvp-octane": [
@@ -1799,7 +1799,7 @@
         "price": 90,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/neutron-octane-orange/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-dd2": [
@@ -1808,7 +1808,7 @@
         "price": 269,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-horizon-glow-dd2-special-edition/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-dd": [
@@ -1817,14 +1817,14 @@
         "price": 229,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/c-line-dd/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 245,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/s-line-dd",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discraft-flick": [
@@ -1833,7 +1833,7 @@
         "price": 199,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/z-flick/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "dynamic-felon": [
@@ -1842,14 +1842,14 @@
         "price": 209,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/lucid-air-felon/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "kvamdgs",
         "price": 259,
         "inStock": false,
         "url": "https://kvamdgs.no/products/supreme-orbit-sockibomb-felon-first-run",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "prodigy-h1": [
@@ -1858,7 +1858,7 @@
         "price": 195,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/500-h1-v2/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-corvette": [
@@ -1867,7 +1867,7 @@
         "price": 189,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/g-star-corvette/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "latitude-jade": [
@@ -1876,14 +1876,14 @@
         "price": 209,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/gold-jade/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 209,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/gold-jade",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "innova-orc": [
@@ -1892,7 +1892,7 @@
         "price": 139,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/dx-orc/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "kastaplast-rask": [
@@ -1901,48 +1901,48 @@
         "price": 219,
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/k1-rask/",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "axiom-bokeh-lizotte": [
       {
         "store": "kvamdgs",
         "price": 275,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/neutron-bokeh-simon-lizotte-team-series-2026",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 279,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/neutron-bokeh-simon-lizotte-team-series",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-fd2": [
       {
         "store": "kvamdgs",
         "price": 259,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/s-line-fd2-sky-walker-3-casey-white",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ],
     "discmania-cloudbreaker": [
       {
         "store": "kvamdgs",
         "price": 389,
-        "inStock": false,
+        "inStock": true,
         "url": "https://kvamdgs.no/products/c-line-horizon-cloud-breaker-gannon-buhr",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       },
       {
         "store": "arcticdisc",
         "price": 389,
-        "inStock": false,
+        "inStock": true,
         "url": "https://arcticdisc.no/products/c-line-horizon-cloud-breaker-gannon-buhr",
-        "lastScraped": "2026-03-26T07:05:48.102Z"
+        "lastScraped": "2026-03-26T10:09:05.415Z"
       }
     ]
   }

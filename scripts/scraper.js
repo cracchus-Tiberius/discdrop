@@ -483,7 +483,7 @@ async function scrapeShopifyStore(store) {
       if (prices.length === 0) continue;
 
       const price = Math.round(Math.min(...prices));
-      const inStock = product.available === true;
+      const inStock = availableVariants.length > 0;
       const productUrl = `${store.baseUrl}/products/${product.handle}`;
 
       allProducts.push({ rawName, price, productUrl, inStock });
