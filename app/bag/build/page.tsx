@@ -54,7 +54,7 @@ type CourseType = "wooded" | "open" | "mixed" | "all";
 
 function ProgressBar({ step, total }: { step: number; total: number }) {
   const fillPct = Math.round((step / total) * 100);
-  const discPct = Math.round(((step - 1) / (total - 1)) * 100);
+  const discPct = Math.round((step / total) * 100);
   return (
     <div className="relative mb-8 pt-3">
       <div className="h-1.5 w-full overflow-hidden rounded-full bg-[#e8e8e4]">
@@ -76,7 +76,7 @@ function ProgressBar({ step, total }: { step: number; total: number }) {
         </svg>
       </div>
       <div className="mt-2 flex items-center justify-between text-xs text-[#aaa]">
-        <span>Step {step} of {total}</span>
+        <span>Steg {step} av {total}</span>
         <span>{fillPct}%</span>
       </div>
     </div>
@@ -152,14 +152,14 @@ function BackBtn({ onClick }: { onClick: () => void }) {
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
         <path d="M19 12H5M12 5l-7 7 7 7" />
       </svg>
-      Back
+      Tilbake
     </button>
   );
 }
 
 // ── Continue button ────────────────────────────────────────────────────────
 
-function ContinueBtn({ onClick, disabled, label = "Continue" }: { onClick: () => void; disabled?: boolean; label?: string }) {
+function ContinueBtn({ onClick, disabled, label = "Fortsett" }: { onClick: () => void; disabled?: boolean; label?: string }) {
   return (
     <button
       type="button"
@@ -178,7 +178,7 @@ function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
   const arcs: { speed: ArmSpeed; label: string; color: string; d: string }[] = [
     {
       speed: "slow",
-      label: "Slow",
+      label: "Sakte",
       color: "#3B82F6",
       d: "M 10 65 C 30 20 80 5 120 35 C 150 55 160 85 160 90",
     },
@@ -190,7 +190,7 @@ function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
     },
     {
       speed: "fast",
-      label: "Fast",
+      label: "Rask",
       color: "#E8704A",
       d: "M 10 65 C 35 5 105 20 145 55 C 165 75 185 90 190 90",
     },
@@ -212,7 +212,7 @@ function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
         ))}
         {/* Throw start */}
         <circle cx="10" cy="65" r="4" fill="#888" />
-        <text x="4" y="82" fontSize="7" fill="#888" fontFamily="system-ui,sans-serif">Release</text>
+        <text x="4" y="82" fontSize="7" fill="#888" fontFamily="system-ui,sans-serif">Slipp</text>
         {/* Labels */}
         {arcs.map(({ speed, label, color, d }) => {
           const endX = speed === "slow" ? 162 : speed === "medium" ? 177 : 192;
@@ -233,7 +233,7 @@ function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
         })}
       </svg>
       <p className="mt-1 text-center text-[10px] text-[#aaa]">
-        Arm speed affects which discs will fly as intended for you
+        Armhastigheten avgjør hvilke disker som vil fly som tiltenkt for deg
       </p>
     </div>
   );
@@ -243,7 +243,7 @@ function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
 
 function Navbar() {
   return (
-    <nav className="flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4">
+    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#F5F2EB] px-8 py-4 shadow-sm">
       <Link href="/" className="flex shrink-0 items-center transition-opacity hover:opacity-85" style={{ gap: 10 }}>
         <Image src="/logo.svg" alt="DiscDrop" width={84} height={90} style={{ borderRadius: 4 }} />
         <span style={{ fontSize: 24, fontWeight: 700, lineHeight: 1 }}>
@@ -251,25 +251,14 @@ function Navbar() {
           <span style={{ color: "#B8E04A" }}>Drop</span>
         </span>
       </Link>
-      <div className="hidden items-center gap-8 text-sm text-[#444] md:flex">
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">Home</Link>
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">Hot Drops</Link>
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">Browse</Link>
-        <span className="flex items-center gap-1.5 rounded-full bg-[#2D6A4F] px-3 py-1.5 text-xs font-semibold text-[#B8E04A]">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <path d="M16 10a4 4 0 0 1-8 0" />
-          </svg>
-          Build My Bag
-        </span>
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
+        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hjem</Link>
+        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hot Drops</a>
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Bla gjennom</Link>
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 bg-[rgba(45,106,79,0.15)] font-medium text-[#2D6A4F]">
+          Bygg min bag
+        </Link>
       </div>
-      <Link
-        href="/"
-        className="rounded-lg bg-[#2D6A4F] px-5 py-2.5 text-sm font-medium text-white transition-all duration-150 ease-out hover:scale-[1.02] hover:brightness-110"
-      >
-        Find a disc
-      </Link>
     </nav>
   );
 }
@@ -296,7 +285,7 @@ function SummaryRow({
         onClick={onEdit}
         className="shrink-0 text-sm font-medium text-[#2D6A4F] transition-colors hover:text-[#1E4D3A]"
       >
-        Edit
+        Rediger
       </button>
     </div>
   );
@@ -406,15 +395,15 @@ export default function BuildBagPage() {
 
   // Labels for review
   const skillLabels: Record<SkillLevel, string> = {
-    beginner: "Beginner",
-    intermediate: "Intermediate",
-    advanced: "Advanced",
+    beginner: "Nybegynner",
+    intermediate: "Middels",
+    advanced: "Avansert",
     pro: "Pro / Elite",
   };
   const armLabels: Record<ArmSpeed, string> = {
-    slow: "Slow — under 70 km/h",
+    slow: "Sakte — under 70 km/h",
     medium: "Medium — 70–90 km/h",
-    fast: "Fast — 90+ km/h",
+    fast: "Rask — 90+ km/h",
   };
   const discTypeLabels: Record<DiscType, string> = {
     drivers: "Drivers",
@@ -426,13 +415,13 @@ export default function BuildBagPage() {
     "under-500": "Under kr 500",
     "500-1500": "kr 500–1 500",
     "1500-3000": "kr 1 500–3 000",
-    "no-limit": "No limit",
+    "no-limit": "Ingen grense",
   };
   const courseLabels: Record<CourseType, string> = {
-    wooded: "Wooded",
-    open: "Open field",
+    wooded: "Skog",
+    open: "Åpen bane",
     mixed: "Mixed",
-    all: "All types",
+    all: "Alle typer",
   };
 
   if (isLoading) {
@@ -462,18 +451,18 @@ export default function BuildBagPage() {
           {step === 1 && (
             <div key={1} style={{ animation: "slideInRight 300ms ease forwards" }}>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                What&apos;s your skill level?
+                Hva er ferdighetsnivået ditt?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                Be honest — the right discs at your level make a huge difference.
+                Vær ærlig — riktige disker for ditt nivå utgjør en enorm forskjell.
               </p>
               <div className="flex flex-col gap-3">
                 {(
                   [
-                    { value: "beginner" as const, label: "Beginner", desc: "Just started, still learning to throw consistently" },
-                    { value: "intermediate" as const, label: "Intermediate", desc: "Can throw 60–80m, know the fundamentals" },
-                    { value: "advanced" as const, label: "Advanced", desc: "Plays competitively, shapes shots regularly" },
-                    { value: "pro" as const, label: "Pro / Elite", desc: "Tournament player, touring or sponsored" },
+                    { value: "beginner" as const, label: "Nybegynner", desc: "Akkurat begynt, lærer fortsatt å kaste konsekvent" },
+                    { value: "intermediate" as const, label: "Middels", desc: "Kan kaste 60–80m, kjenner de grunnleggende teknikkene" },
+                    { value: "advanced" as const, label: "Avansert", desc: "Spiller konkurranser, former kast jevnlig" },
+                    { value: "pro" as const, label: "Pro / Elite", desc: "Turneringsspiller, tourer eller sponset" },
                   ]
                 ).map(({ value, label, desc }) => (
                   <OptionCard
@@ -496,18 +485,18 @@ export default function BuildBagPage() {
                 <BackBtn onClick={back} />
               </div>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                How fast is your arm?
+                Hvor rask er armen din?
               </h2>
               <p className="mb-4 text-sm text-[#666]">
-                Arm speed determines which discs will fly as intended for you.
+                Armhastigheten avgjør hvilke disker som vil fly som tiltenkt for deg.
               </p>
               <ArmSpeedVisual selected={armSpeed} />
               <div className="flex flex-col gap-3">
                 {(
                   [
-                    { value: "slow" as const, label: "Slow — under 70 km/h", desc: "Understable discs fly straight; overstable discs go right immediately" },
-                    { value: "medium" as const, label: "Medium — 70–90 km/h", desc: "Most discs fly close to their rated flight path" },
-                    { value: "fast" as const, label: "Fast — 90+ km/h", desc: "Can handle overstable discs; understable discs will hyzer-flip" },
+                    { value: "slow" as const, label: "Sakte — under 70 km/h", desc: "Understabile disker flyr rett; overstabile disker bukter seg til høyre umiddelbart" },
+                    { value: "medium" as const, label: "Medium — 70–90 km/h", desc: "De fleste disker flyr nær sin oppgitte flybane" },
+                    { value: "fast" as const, label: "Rask — 90+ km/h", desc: "Tåler overstabile disker; understabile disker vil hyzer-flippe" },
                   ]
                 ).map(({ value, label, desc }) => (
                   <OptionCard
@@ -530,18 +519,18 @@ export default function BuildBagPage() {
                 <BackBtn onClick={back} />
               </div>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                What discs do you want?
+                Hvilke disker vil du ha?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                Select all that apply, or choose full bag for a balanced recommendation.
+                Velg alle som passer, eller velg full bag for en balansert anbefaling.
               </p>
               <div className="flex flex-col gap-3">
                 {(
                   [
-                    { value: "drivers" as const, label: "Drivers", desc: "Distance and fairway drivers for longer shots" },
-                    { value: "midrange" as const, label: "Mid-range", desc: "Versatile discs for approach and mid-distance" },
-                    { value: "putters" as const, label: "Putters", desc: "Approach putters and putting discs" },
-                    { value: "full-bag" as const, label: "Full bag mix", desc: "A balanced bag covering all distances" },
+                    { value: "drivers" as const, label: "Drivers", desc: "Distance- og fairway-drivere for lengre kast" },
+                    { value: "midrange" as const, label: "Mid-range", desc: "Allsidige disker for approach og mellomdistanse" },
+                    { value: "putters" as const, label: "Putters", desc: "Approach-puttere og puttedisker" },
+                    { value: "full-bag" as const, label: "Full bag mix", desc: "En balansert bag som dekker alle distanser" },
                   ]
                 ).map(({ value, label, desc }) => (
                   <MultiCard
@@ -567,18 +556,18 @@ export default function BuildBagPage() {
                 <BackBtn onClick={back} />
               </div>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                What&apos;s your budget?
+                Hva er budsjettet ditt?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                We&apos;ll size your bag to fit within your range.
+                Vi tilpasser baggen din til budsjettet ditt.
               </p>
               <div className="flex flex-col gap-3">
                 {(
                   [
-                    { value: "under-500" as const, label: "Under kr 500", desc: "3–4 discs — a starter set to get going" },
-                    { value: "500-1500" as const, label: "kr 500–1 500", desc: "7–9 discs — a solid beginner or practice bag" },
-                    { value: "1500-3000" as const, label: "kr 1 500–3 000", desc: "10–12 discs — a well-rounded playing bag" },
-                    { value: "no-limit" as const, label: "No limit", desc: "Full bag — 13–15 discs for every situation" },
+                    { value: "under-500" as const, label: "Under kr 500", desc: "3–4 disker — et startsett for å komme i gang" },
+                    { value: "500-1500" as const, label: "kr 500–1 500", desc: "7–9 disker — en solid nybegynner- eller treningsbag" },
+                    { value: "1500-3000" as const, label: "kr 1 500–3 000", desc: "10–12 disker — en godt avrundet spillebag" },
+                    { value: "no-limit" as const, label: "Ingen grense", desc: "Full bag — 13–15 disker for enhver situasjon" },
                   ]
                 ).map(({ value, label, desc }) => (
                   <OptionCard
@@ -601,11 +590,10 @@ export default function BuildBagPage() {
                 <BackBtn onClick={back} />
               </div>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Discs you already own
+                Disker du allerede eier
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                Optional — list discs you already have so we can note them. This will be used to
-                avoid duplicates in a future version.
+                Valgfritt — list opp disker du allerede har, så vi kan notere dem. Dette vil bli brukt til å unngå duplikater i en fremtidig versjon.
               </p>
               <textarea
                 value={ownedDiscs}
@@ -620,7 +608,7 @@ export default function BuildBagPage() {
                   onClick={next}
                   className="flex-1 rounded-xl border border-[#ddd] bg-white px-6 py-3 text-sm font-medium text-[#666] transition-all hover:border-[#2D6A4F]/40"
                 >
-                  Skip
+                  Hopp over
                 </button>
                 <ContinueBtn onClick={next} />
               </div>
@@ -634,18 +622,18 @@ export default function BuildBagPage() {
                 <BackBtn onClick={back} />
               </div>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                What courses do you play?
+                Hvilke baner spiller du på?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                Course type influences whether you need more mids and putters or more drivers.
+                Banetype påvirker om du trenger flere midrangers og puttere eller flere drivere.
               </p>
               <div className="flex flex-col gap-3">
                 {(
                   [
-                    { value: "wooded" as const, label: "Wooded / Tight", desc: "Short holes with lots of trees — accuracy over distance" },
-                    { value: "open" as const, label: "Open / Links", desc: "Wide fairways where distance and wind resistance matter" },
-                    { value: "mixed" as const, label: "Mixed", desc: "A bit of both — typical tournament layout" },
-                    { value: "all" as const, label: "All types", desc: "I play a variety of different courses" },
+                    { value: "wooded" as const, label: "Skog / Tett", desc: "Korte hull med mye trær — presisjon over distanse" },
+                    { value: "open" as const, label: "Åpen / Links", desc: "Brede fairways der distanse og vindmotstand teller" },
+                    { value: "mixed" as const, label: "Mixed", desc: "Litt av begge — typisk turneringsbane" },
+                    { value: "all" as const, label: "Alle typer", desc: "Jeg spiller på ulike typer baner" },
                   ]
                 ).map(({ value, label, desc }) => (
                   <MultiCard
@@ -671,25 +659,25 @@ export default function BuildBagPage() {
                 <BackBtn onClick={back} />
               </div>
               <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Ready to build your bag?
+                Klar til å bygge baggen din?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                Review your answers below. Click Edit to go back and change anything.
+                Se gjennom svarene dine nedenfor. Klikk Rediger for å gå tilbake og endre noe.
               </p>
 
               <div className="flex flex-col gap-3">
                 <SummaryRow
-                  label="Skill level"
+                  label="Ferdighetsnivå"
                   value={skillLevel ? skillLabels[skillLevel] : "—"}
                   onEdit={() => goTo(1)}
                 />
                 <SummaryRow
-                  label="Arm speed"
+                  label="Armhastighet"
                   value={armSpeed ? armLabels[armSpeed] : "—"}
                   onEdit={() => goTo(2)}
                 />
                 <SummaryRow
-                  label="Disc types"
+                  label="Disktyper"
                   value={
                     discTypes.length > 0
                       ? discTypes.map((t) => discTypeLabels[t]).join(", ")
@@ -698,21 +686,21 @@ export default function BuildBagPage() {
                   onEdit={() => goTo(3)}
                 />
                 <SummaryRow
-                  label="Budget"
+                  label="Budsjett"
                   value={budget ? budgetLabels[budget] : "—"}
                   onEdit={() => goTo(4)}
                 />
                 <SummaryRow
-                  label="Discs owned"
-                  value={ownedDiscs.trim() || "None listed"}
+                  label="Disker du eier"
+                  value={ownedDiscs.trim() || "Ingen oppgitt"}
                   onEdit={() => goTo(5)}
                 />
                 <SummaryRow
-                  label="Course types"
+                  label="Banetyper"
                   value={
                     courseTypes.length > 0
                       ? courseTypes.map((t) => courseLabels[t]).join(", ")
-                      : "Not specified"
+                      : "Ikke oppgitt"
                   }
                   onEdit={() => goTo(6)}
                 />
@@ -725,11 +713,11 @@ export default function BuildBagPage() {
                   disabled={!skillLevel || !armSpeed || !budget}
                   className="w-full rounded-xl bg-[#B8E04A] px-6 py-4 text-base font-semibold text-[#1E3D2F] transition-all duration-150 ease-out hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
                 >
-                  Build my bag →
+                  Bygg min bag →
                 </button>
                 {(!skillLevel || !armSpeed || !budget) && (
                   <p className="mt-2 text-center text-xs text-[#E8704A]">
-                    Go back and complete all required steps first.
+                    Gå tilbake og fullfør alle obligatoriske steg først.
                   </p>
                 )}
                 {buildError && (
@@ -750,8 +738,21 @@ export default function BuildBagPage() {
         </div>
       </main>
 
-      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] py-6 text-center text-xs text-[#888]">
-        DiscDrop — disc golf prices in Norway
+      <footer className="bg-[#1E3D2F] px-6 py-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 text-[13px] sm:flex-row sm:justify-between">
+          <span className="text-[#9DC08B]">© 2026 DiscDrop — Kviist Studio</span>
+          <span className="text-[#7a9a82] italic">
+            Vi tjener provisjon på kjøp via lenker på siden
+          </span>
+          <div className="flex items-center gap-4 text-[#9DC08B]">
+            <Link href="/personvern" className="hover:text-[#F5F2EB] transition-colors">
+              Personvern
+            </Link>
+            <a href="mailto:kontakt@discdrop.net" className="hover:text-[#F5F2EB] transition-colors">
+              kontakt@discdrop.net
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );

@@ -9,17 +9,13 @@ import {
   hotDrops,
   upcoming,
 } from "@/data/discs.js";
+import { getScrapedPrice } from "@/lib/disc-utils";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
 
-function bestPriceFromStores(stores: Disc["stores"]): number | null {
-  const prices = stores.filter((s) => s.inStock).map((s) => s.price);
-  return prices.length ? Math.min(...prices) : null;
-}
-
-function bestPriceNOK(disc: Disc) {
-  return bestPriceFromStores(disc.stores);
+function bestPriceNOK(disc: Disc): number | null {
+  return getScrapedPrice(disc.id).price;
 }
 
 // ── Badge ──────────────────────────────────────────────────────────────────
@@ -35,12 +31,12 @@ const BADGE_STYLES: Record<string, string> = {
 
 const BADGE_LABELS: Record<string, string> = {
   hot: "HOT",
-  new: "NEW DROP",
-  "new-drop": "NEW DROP",
-  limited: "LIMITED",
+  new: "NY DROP",
+  "new-drop": "NY DROP",
+  limited: "BEGRENSET",
   "tour-series": "TOUR SERIES",
-  "sold-out": "SOLD OUT",
-  upcoming: "UPCOMING",
+  "sold-out": "UTSOLGT",
+  upcoming: "KOMMENDE",
 };
 
 function Badge({ tag }: { tag: string }) {
@@ -109,22 +105,22 @@ function hotDropCta(row: HotDropRow): {
   label: string;
   className: string;
 } {
-  if (row.stores.some((s) => s.inStock)) {
+  if (getScrapedPrice(row.id).inStockCount > 0) {
     return {
-      label: "Find it",
+      label: "Finn disken",
       className:
         "rounded-lg bg-[#2D6A4F] px-4 py-2.5 text-sm font-medium text-white transition-all duration-150 ease-out hover:scale-[1.02] hover:brightness-110",
     };
   }
   if (row.tags.includes("upcoming")) {
     return {
-      label: "Alert me",
+      label: "Varsle meg",
       className:
         "rounded-lg border border-[#ddd] bg-white px-4 py-2.5 text-sm font-medium text-[#444] transition-all duration-150 ease-out hover:border-[#2D6A4F] hover:text-[#2D6A4F]",
     };
   }
   return {
-    label: "Notify me",
+    label: "Varsle meg",
     className:
       "rounded-lg border border-[#ddd] bg-white px-4 py-2.5 text-sm font-medium text-[#444] transition-all duration-150 ease-out hover:border-[#2D6A4F] hover:text-[#2D6A4F]",
   };
@@ -139,7 +135,7 @@ function Navbar({
   onSearchClick: () => void;
 }) {
   return (
-    <nav className="sticky top-0 z-50 flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4 shadow-sm">
+    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#F5F2EB] px-8 py-4 shadow-sm">
       <Link
         href="/"
         className="flex shrink-0 items-center transition-opacity hover:opacity-85"
@@ -157,33 +153,29 @@ function Navbar({
           <span style={{ color: "#B8E04A" }}>Drop</span>
         </span>
       </Link>
-      <div className="hidden items-center gap-8 text-sm text-[#444] md:flex">
-        <a href="#" className="transition-colors hover:text-[#1a1a1a]">
-          Home
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
+        <a
+          href="#"
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+          className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]"
+        >
+          Hjem
         </a>
-        <a href="#" className="transition-colors hover:text-[#1a1a1a]">
+        <a href="#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
           Hot Drops
         </a>
-        <Link href="/browse" className="transition-colors hover:text-[#1a1a1a]">
-          Browse
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+          Bla gjennom
         </Link>
-        <Link
-          href="/bag/build"
-          className="flex items-center gap-1.5 rounded-full bg-[#2D6A4F] px-3 py-1.5 text-xs font-semibold text-[#B8E04A] transition-all hover:brightness-110"
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <path d="M16 10a4 4 0 0 1-8 0" />
-          </svg>
-          Build My Bag
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+          Bygg min bag
         </Link>
       </div>
       {/* Mobile search icon — fades in when hero search scrolls out of view */}
       <button
         type="button"
         onClick={onSearchClick}
-        aria-label="Søk etter discer"
+        aria-label="Søk etter disker"
         className={`flex h-10 w-10 items-center justify-center rounded-full text-[#2D6A4F] transition-all duration-200 md:hidden ${
           showMobileSearch
             ? "scale-100 opacity-100"
@@ -225,12 +217,12 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
   return (
     <section className="w-full bg-[#1E3D2F] px-8 pb-20 pt-16 text-center">
       <h1 className="mb-5 font-serif text-[72px] leading-none tracking-tight text-[#F5F2EB]">
-        Find your flight.
+        Finn din disk.
       </h1>
       <p className="mb-10 text-lg leading-relaxed text-[#9DC08B]">
-        The smartest way to shop disc golf in Norway.
+        Den smarteste måten å finne disken din på i Norge.
         <br />
-        Real prices. Real stock. Real landed cost.
+        Oppdaterte priser. Lageroversikt. Totalpris på disk.
       </p>
 
       <div className="mb-6 flex justify-center">
@@ -243,7 +235,7 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
             <line x1="3" y1="6" x2="21" y2="6" />
             <path d="M16 10a4 4 0 0 1-8 0" />
           </svg>
-          Build My Bag
+          Bygg min bag
         </Link>
       </div>
 
@@ -266,7 +258,7 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
             id="hero-search-input"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search discs, brands, players..."
+            placeholder="Søk etter disker, merker, spillere..."
             className="w-full bg-transparent text-base text-[#1a1a1a] outline-none placeholder:text-[#aaa]"
           />
         </div>
@@ -292,7 +284,7 @@ function Hero({ discs: allDiscs }: { discs: Disc[] }) {
                     </span>
                     {price != null && (
                       <span className="text-sm font-medium text-[#1a1a1a]">
-                        from kr {price}
+                        fra kr {price}
                       </span>
                     )}
                   </div>
@@ -311,18 +303,18 @@ function HotDrops() {
   const rows = useMemo(() => buildHotDropRows(), []);
 
   return (
-    <section className="w-full bg-white px-8 py-16">
+    <section id="hot-drops" className="w-full bg-white px-8 py-16" style={{ scrollMarginTop: "80px" }}>
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
           Hot Drops
         </h2>
         <p className="mb-8 max-w-xl text-[#666]">
-          Limited runs and tour plastic worth watching.
+          Limitede runs og tour-plast verdt å følge med på.
         </p>
         <div className="overflow-visible pt-2 pb-2">
           <div className="-mx-4 flex gap-4 overflow-x-auto px-4 [scrollbar-width:thin] sm:mx-0 sm:px-0">
             {rows.map((row) => {
-              const price = bestPriceFromStores(row.stores);
+              const price = getScrapedPrice(row.id).price;
               const cta = hotDropCta(row);
               return (
                 <Link
@@ -348,7 +340,7 @@ function HotDrops() {
                   <FlightBoxes flight={row.flight} />
                   <div className="mt-auto border-t border-[#e8e8e4] pt-4">
                     <p className="text-xs uppercase tracking-wider text-[#888]">
-                      Best price
+                      Beste pris
                     </p>
                     <p className="font-serif text-2xl font-semibold text-[#2D6A4F]">
                       {price != null ? `${price} kr` : "—"}
@@ -373,10 +365,10 @@ function UpcomingSection() {
     <section className="w-full bg-[#F5F2EB] px-8 py-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
-          Upcoming
+          Kommende
         </h2>
         <p className="mb-8 text-[#666]">
-          Drops we&apos;re tracking before they hit the shelves.
+          Slipp vi følger med på før de treffer hyllene.
         </p>
         <ul className="grid gap-4 sm:grid-cols-2">
           {upcoming.map((item) => (
@@ -400,7 +392,7 @@ function UpcomingSection() {
                 {item.description}
               </p>
               <p className="mt-4 text-xs font-medium uppercase tracking-wider text-[#2D6A4F]">
-                Expected {item.expectedDate}
+                Forventet {item.expectedDate}
               </p>
             </li>
           ))}
@@ -429,10 +421,10 @@ function PopularDiscs() {
     <section className="w-full bg-white px-8 py-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
-          Popular discs
+          Populære disker
         </h2>
         <p className="mb-8 text-[#666]">
-          Well-known classics to start your search.
+          Velkjente klassikere å starte søket med.
         </p>
 
         {/* Horizontal scroll on mobile, grid on desktop */}
@@ -474,7 +466,7 @@ function PopularDiscs() {
             href="/browse"
             className="inline-block rounded-xl border border-[#2D6A4F] px-7 py-3 text-sm font-medium text-[#2D6A4F] transition-all hover:bg-[#2D6A4F]/5"
           >
-            Browse all {discs.length} discs →
+            Se alle {discs.length} disker →
           </Link>
         </div>
       </div>

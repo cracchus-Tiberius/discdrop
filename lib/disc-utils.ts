@@ -20,38 +20,53 @@ type StoreMeta = {
   shipping: number;
 };
 
-// Maps the display name in discs.js → store key in scraped-prices.json
-const STORE_KEY_MAP: Record<string, string> = {
-  "We Are Disc Golf": "wearediscgolf",
-  "Aceshop": "aceshop",
-  "Frisbee Sør": "frisbeesor",
-  "GolfDiscer": "golfdiscer",
-  "Frisbeebutikken": "frisbeebutikken",
-};
+/**
+ * Returns price/stock data from scraped-prices.json for a disc ID.
+ * Returns nulls/zeros if no scraped data exists for that disc.
+ */
+export function getScrapedPrice(discId: string): {
+  price: number | null;
+  inStockCount: number;
+  storeCount: number;
+} {
+  const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
+  if (!scraped || scraped.length === 0) {
+    return { price: null, inStockCount: 0, storeCount: 0 };
+  }
+  const inStock = scraped.filter((s) => s.inStock);
+  return {
+    price: inStock.length ? Math.min(...inStock.map((s) => s.price)) : null,
+    inStockCount: inStock.length,
+    storeCount: scraped.length,
+  };
+}
 
 /**
- * Returns the stores array for a disc, with real scraped prices merged in.
- * Scraped price/inStock/url take priority over mock data when available.
+ * Returns ONLY real scraped stores for a disc, shaped for the PriceTable.
+ * Returns empty array if no scraped data exists — do NOT fall back to mock data.
  */
-export function getMergedStores(disc: Disc): Disc["stores"] {
+export function getMergedStores(disc: Disc): Array<{
+  name: string;
+  url: string;
+  price: number;
+  inStock: boolean;
+  shipping: number;
+  freeShippingOver: number;
+}> {
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[disc.id];
-  if (!scraped || scraped.length === 0) return disc.stores;
+  if (!scraped || scraped.length === 0) return [];
 
-  const byStoreKey = new Map(scraped.map((e) => [e.store, e]));
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
 
-  return disc.stores.map((mockStore) => {
-    const key = STORE_KEY_MAP[mockStore.name];
-    const entry = key ? byStoreKey.get(key) : undefined;
-    if (!entry) return mockStore;
-    const meta = key ? storeMeta[key] : undefined;
+  return scraped.map((entry) => {
+    const meta = storeMeta[entry.store];
     return {
-      ...mockStore,
+      name: meta?.name ?? entry.store,
+      url: entry.url,
       price: entry.price,
       inStock: entry.inStock,
-      url: entry.url || mockStore.url,
-      shipping: meta?.shipping ?? mockStore.shipping,
-      freeShippingOver: meta?.freeShippingOver ?? mockStore.freeShippingOver,
+      shipping: meta?.shipping ?? 99,
+      freeShippingOver: meta?.freeShippingOver ?? 999,
     };
   });
 }
@@ -60,26 +75,17 @@ export function getMergedStores(disc: Disc): Disc["stores"] {
 export const scrapedLastUpdated: string | null = scrapedPrices.lastUpdated as string | null;
 
 export function getBestInStockNOK(disc: Disc): {
-  best: number;
+  best: number | null;
   storeCount: number;
   inStockCount: number;
 } {
-  const inStock = disc.stores.filter((s) => s.inStock);
-  const pool = inStock.length ? inStock : disc.stores;
-  let best = Infinity;
-  for (const s of pool) {
-    if (s.price < best) best = s.price;
-  }
-  if (best === Infinity) best = 0;
-  return {
-    best,
-    storeCount: disc.stores.length,
-    inStockCount: inStock.length,
-  };
+  const { price, storeCount, inStockCount } = getScrapedPrice(disc.id);
+  return { best: price, storeCount, inStockCount };
 }
 
 export function isOnSale(disc: Disc): boolean {
   const { best } = getBestInStockNOK(disc);
+  if (best == null) return false;
   let peak = 0;
   for (const p of disc.priceHistory) {
     if (typeof p === "number" && p > peak) peak = p;
@@ -105,9 +111,9 @@ export function matchesSearch(disc: Disc, q: string): boolean {
 export function releaseBadge(
   disc: Disc
 ): "New Drop" | "Hot" | "Limited" | "Sold Out" {
-  const hasStock = disc.stores.some((x) => x.inStock);
+  const { inStockCount } = getScrapedPrice(disc.id);
   const tags = disc.tags as string[];
-  if (tags.includes("sold-out") || !hasStock) return "Sold Out";
+  if (tags.includes("sold-out") || inStockCount === 0) return "Sold Out";
   if (tags.includes("limited")) return "Limited";
   if (tags.includes("hot")) return "Hot";
   if (tags.includes("new")) return "New Drop";

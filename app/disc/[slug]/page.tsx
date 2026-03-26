@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { discs } from "@/data/discs.js";
-import { getMergedStores, scrapedLastUpdated } from "@/lib/disc-utils";
+import { getMergedStores, scrapedLastUpdated, getScrapedPrice } from "@/lib/disc-utils";
 import { DiscImage } from "@/components/DiscImage";
 import {
   PriceTable,
@@ -26,61 +27,44 @@ const TYPE_LABELS: Record<string, string> = {
 
 const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
   hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
-  new: { bg: "#4CAF82", text: "#fff", label: "NEW DROP" },
-  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NEW DROP" },
-  limited: { bg: "#9B59B6", text: "#fff", label: "LIMITED" },
+  new: { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
+  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
+  limited: { bg: "#9B59B6", text: "#fff", label: "BEGRENSET" },
   "tour-series": { bg: "#6B5B95", text: "#fff", label: "TOUR SERIES" },
-  "sold-out": { bg: "#888", text: "#fff", label: "SOLD OUT" },
-  upcoming: { bg: "#3B82F6", text: "#fff", label: "UPCOMING" },
+  "sold-out": { bg: "#888", text: "#fff", label: "UTSOLGT" },
+  upcoming: { bg: "#3B82F6", text: "#fff", label: "KOMMENDE" },
 };
-
-function bestPriceNOK(disc: Disc): number | null {
-  const inStock = disc.stores.filter((s) => s.inStock);
-  const pool = inStock.length ? inStock : disc.stores;
-  const prices = pool.map((s) => s.price);
-  return prices.length ? Math.min(...prices) : null;
-}
 
 // ── Navbar ───────────────────────────────────────────────────────────────────
 
 function Navbar() {
   return (
-    <nav className="flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4">
+    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#F5F2EB] px-8 py-4 shadow-sm">
       <Link
         href="/"
-        className="flex shrink-0 items-center gap-2 text-[#1a1a1a] transition-opacity hover:opacity-85"
+        className="flex shrink-0 items-center transition-opacity hover:opacity-85"
+        style={{ gap: 10 }}
       >
-        <svg width="28" height="28" viewBox="0 0 44 44" fill="none" aria-hidden>
-          <circle cx="22" cy="22" r="20" stroke="#2D6A4F" strokeWidth="1.5" opacity="0.4" />
-          <circle cx="22" cy="22" r="13" stroke="#2D6A4F" strokeWidth="1.5" />
-          <ellipse cx="22" cy="22" rx="20" ry="6" stroke="#2D6A4F" strokeWidth="1" opacity="0.5" />
-          <circle cx="22" cy="22" r="3.5" fill="#2D6A4F" />
-        </svg>
-        <span className="text-lg font-semibold tracking-tight">DiscDrop</span>
+        <Image src="/logo.svg" alt="DiscDrop" width={84} height={90} style={{ borderRadius: 4 }} />
+        <span style={{ fontSize: 24, fontWeight: 700, lineHeight: 1 }}>
+          <span style={{ color: "#2D6A4F" }}>Disc</span>
+          <span style={{ color: "#B8E04A" }}>Drop</span>
+        </span>
       </Link>
-      <div className="hidden items-center gap-8 text-sm text-[#444] md:flex">
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">
-          Home
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
+        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+          Hjem
         </Link>
-        <a href="#" className="transition-colors hover:text-[#1a1a1a]">
+        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
           Hot Drops
         </a>
-        <a href="#" className="transition-colors hover:text-[#1a1a1a]">
-          Browse
-        </a>
-        <Link
-          href="/bag/build"
-          className="font-medium text-[#2D6A4F] transition-colors hover:text-[#1E4D3A]"
-        >
-          Build My Bag
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+          Bla gjennom
+        </Link>
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+          Bygg min bag
         </Link>
       </div>
-      <Link
-        href="/"
-        className="rounded-lg bg-[#2D6A4F] px-5 py-2.5 text-sm font-medium text-white transition-all duration-150 ease-out hover:scale-[1.02] hover:brightness-110"
-      >
-        Find a disc
-      </Link>
     </nav>
   );
 }
@@ -88,7 +72,7 @@ function Navbar() {
 // ── Hero ─────────────────────────────────────────────────────────────────────
 
 function Hero({ disc }: { disc: Disc }) {
-  const bestPrice = bestPriceNOK(disc);
+  const bestPrice = getScrapedPrice(disc.id).price;
   const tags = disc.tags as string[];
   const player = "player" in disc ? disc.player : undefined;
 
@@ -109,8 +93,17 @@ function Hero({ disc }: { disc: Disc }) {
             DiscDrop
           </Link>
           <span className="opacity-40">/</span>
-          <Link href="/" className="transition-colors hover:text-[#B8E04A]">
-            {TYPE_LABELS[disc.type] ?? disc.type}s
+          <Link
+            href={
+              disc.type === "driver"
+                ? disc.flight.speed >= 10 ? "/browse?type=distance" : "/browse?type=fairway"
+                : `/browse?type=${disc.type}`
+            }
+            className="transition-colors hover:text-[#B8E04A]"
+          >
+            {disc.type === "driver"
+              ? disc.flight.speed >= 10 ? "Distance Drivers" : "Fairway Drivers"
+              : (TYPE_LABELS[disc.type] ?? disc.type) + "s"}
           </Link>
           <span className="opacity-40">/</span>
           <span className="text-[#F5F2EB]">{disc.name}</span>
@@ -182,29 +175,18 @@ function Hero({ disc }: { disc: Disc }) {
           </div>
         </div>
 
-        {/* Best price + back link */}
-        <div className="mt-8 flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-wider text-[#9DC08B]">
-              Best price
-            </div>
-            {bestPrice != null ? (
-              <div className="font-serif text-[2.5rem] font-bold leading-none text-[#B8E04A]">
-                kr {bestPrice}
-              </div>
-            ) : (
-              <div className="text-lg text-[#9DC08B]">Not available</div>
-            )}
+        {/* Best price */}
+        <div className="mt-8">
+          <div className="text-xs font-semibold uppercase tracking-wider text-[#9DC08B]">
+            Beste pris
           </div>
-          <Link
-            href="/"
-            className="flex items-center gap-1.5 rounded-xl border border-white/15 px-5 py-3 text-sm font-medium text-[#9DC08B] transition-all hover:border-white/30 hover:text-[#F5F2EB]"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-              <path d="M19 12H5M12 5l-7 7 7 7" />
-            </svg>
-            Back to search
-          </Link>
+          {bestPrice != null ? (
+            <div className="font-serif text-[2.5rem] font-bold leading-none text-[#B8E04A]">
+              kr {bestPrice}
+            </div>
+          ) : (
+            <div className="text-lg text-[#9DC08B]">Ikke tilgjengelig</div>
+          )}
         </div>
       </div>
     </section>
@@ -225,7 +207,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const disc = discs.find((d) => d.id === slug);
   if (!disc) return {};
-  const storeCount = disc.stores.filter((s) => s.inStock).length;
+  const storeCount = getScrapedPrice(disc.id).storeCount;
   return {
     title: `${disc.name} — Beste pris i Norge | DiscDrop`,
     description: `Finn beste pris på ${disc.name} fra ${disc.brand}. Sammenlign ${storeCount} norske butikker inkludert frakt og MVA.`,
@@ -245,6 +227,17 @@ export default async function DiscDetailPage({
   return (
     <div className="min-h-screen bg-[#F5F2EB]">
       <Navbar />
+      <div className="bg-[#F5F2EB] px-8 py-3">
+        <Link
+          href="/browse"
+          className="inline-flex items-center gap-1.5 text-sm text-[#9DC08B] transition-colors hover:text-[#2D6A4F]"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+            <path d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Tilbake til søk
+        </Link>
+      </div>
       <main>
         <Hero disc={disc} />
         <FlightPathChart flight={disc.flight} />

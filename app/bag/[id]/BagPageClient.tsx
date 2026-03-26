@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { DiscImage } from "@/components/DiscImage";
+import { discs as discCatalog } from "@/data/discs.js";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -43,10 +44,10 @@ export type StoredBag = {
 const CATEGORY_ORDER: GeneratedDisc["category"][] = ["driver", "fairway", "midrange", "putter"];
 
 const CATEGORY_LABELS: Record<GeneratedDisc["category"], string> = {
-  driver: "Distance Drivers",
-  fairway: "Fairway Drivers",
+  driver: "Distance Drivere",
+  fairway: "Fairway Drivere",
   midrange: "Midrange",
-  putter: "Putters",
+  putter: "Puttere",
 };
 
 const CATEGORY_COLORS: Record<GeneratedDisc["category"], string> = {
@@ -57,16 +58,16 @@ const CATEGORY_COLORS: Record<GeneratedDisc["category"], string> = {
 };
 
 const SKILL_LABELS: Record<WizardAnswers["skillLevel"], string> = {
-  beginner: "Beginner",
-  intermediate: "Intermediate",
-  advanced: "Advanced",
+  beginner: "Nybegynner",
+  intermediate: "Middels",
+  advanced: "Avansert",
   pro: "Pro / Elite",
 };
 
 const ARM_LABELS: Record<WizardAnswers["armSpeed"], string> = {
-  slow: "Slow arm",
+  slow: "Sakte arm",
   medium: "Medium arm",
-  fast: "Fast arm",
+  fast: "Rask arm",
 };
 
 const BAG_GEAR = [
@@ -93,11 +94,20 @@ const BAG_GEAR = [
   },
 ];
 
+const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
+  hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
+  new: { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
+  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
+  limited: { bg: "#9B59B6", text: "#fff", label: "BEGRENSET" },
+  "tour-series": { bg: "#6B5B95", text: "#fff", label: "TOUR SERIES" },
+  "sold-out": { bg: "#888", text: "#fff", label: "UTSOLGT" },
+};
+
 // ── Navbar ─────────────────────────────────────────────────────────────────
 
 function Navbar() {
   return (
-    <nav className="flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4">
+    <nav className="relative flex w-full items-center bg-[#F5F2EB] px-8 py-4">
       <Link
         href="/"
         className="flex shrink-0 items-center transition-opacity hover:opacity-85"
@@ -109,21 +119,11 @@ function Navbar() {
           <span style={{ color: "#B8E04A" }}>Drop</span>
         </span>
       </Link>
-      <div className="hidden items-center gap-8 text-sm text-[#444] md:flex">
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">Home</Link>
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">Hot Drops</Link>
-        <Link href="/" className="transition-colors hover:text-[#1a1a1a]">Browse</Link>
-        <Link
-          href="/bag/build"
-          className="flex items-center gap-1.5 rounded-full bg-[#2D6A4F] px-3 py-1.5 text-xs font-semibold text-[#B8E04A] transition-all hover:brightness-110"
-        >
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <path d="M16 10a4 4 0 0 1-8 0" />
-          </svg>
-          Build My Bag
-        </Link>
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
+        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hjem</Link>
+        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hot Drops</a>
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Bla gjennom</Link>
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Bygg min bag</Link>
       </div>
     </nav>
   );
@@ -139,7 +139,7 @@ function ReasonTooltip({ reason }: { reason: string }) {
         type="button"
         onClick={() => setOpen((o) => !o)}
         className="flex h-5 w-5 items-center justify-center rounded-full bg-[#e8e8e4] text-xs text-[#888] transition-colors hover:bg-[#2D6A4F] hover:text-white"
-        aria-label="Why this disc"
+        aria-label="Hvorfor denne disken"
       >
         ?
       </button>
@@ -164,6 +164,7 @@ function ReasonTooltip({ reason }: { reason: string }) {
 
 function DiscCard({ disc }: { disc: GeneratedDisc }) {
   const f = disc.flight;
+  const catalogTags = (discCatalog.find((d) => d.id === disc.id)?.tags as string[] | undefined) ?? [];
   return (
     <Link
       href={`/disc/${disc.id}`}
@@ -175,8 +176,27 @@ function DiscCard({ disc }: { disc: GeneratedDisc }) {
         </span>
       )}
 
-      <div className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 96 }}>
+      <div className="relative mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 96 }}>
         <DiscImage src={disc.image ?? ""} name={disc.name} brand={disc.brand} type={disc.category} containerStyle={{ height: 96 }} />
+        {catalogTags.some((t) => BADGE_STYLES[t]) && (
+          <div className="absolute left-2 top-2 flex flex-col gap-1">
+            {catalogTags
+              .filter((t) => BADGE_STYLES[t])
+              .slice(0, 2)
+              .map((tag) => {
+                const s = BADGE_STYLES[tag];
+                return (
+                  <span
+                    key={tag}
+                    className="rounded-full px-2 py-0.5 text-[9px] font-bold tracking-wide"
+                    style={{ background: s.bg, color: s.text }}
+                  >
+                    {s.label}
+                  </span>
+                );
+              })}
+          </div>
+        )}
       </div>
 
       <div className="flex items-start justify-between gap-2">
@@ -215,7 +235,7 @@ function DiscCard({ disc }: { disc: GeneratedDisc }) {
         ) : (
           <span className="text-sm text-[#aaa]">—</span>
         )}
-        <span className="text-xs text-[#2D6A4F]">Find best price →</span>
+        <span className="text-xs text-[#2D6A4F]">Finn beste pris →</span>
       </div>
     </Link>
   );
@@ -254,10 +274,10 @@ function FlightCoverageChart({ discs }: { discs: GeneratedDisc[] }) {
     <section className="w-full bg-white px-4 py-12 sm:px-8">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-          Flight Coverage
+          Flydekning
         </h2>
         <p className="mb-6 text-sm text-[#666]">
-          Your bag plotted by speed and stability. A well-rounded bag covers all zones.
+          Baggen din plottet etter hastighet og stabilitet. En godt avrundet bag dekker alle soner.
         </p>
 
         <div className="mb-4 flex flex-wrap gap-4">
@@ -303,7 +323,7 @@ function FlightCoverageChart({ discs }: { discs: GeneratedDisc[] }) {
 
             <text x={padL - 8} y={padT - 8} fontSize="9" fill="#bbb" fontFamily="system-ui,sans-serif">Speed</text>
             <text x={padL + chartW / 2} y={H - 2} textAnchor="middle" fontSize="9" fill="#bbb" fontFamily="system-ui,sans-serif">
-              Stability (understable ← 0 → overstable)
+              Stabilitet (understabil ← 0 → overstabil)
             </text>
 
             {plotted.map(({ disc, x, y, color }, i) => (
@@ -331,15 +351,15 @@ function BagNotFound() {
     <div className="flex min-h-screen flex-col bg-[#F5F2EB]">
       <Navbar />
       <div className="flex flex-1 flex-col items-center justify-center px-4 text-center">
-        <h1 className="font-serif text-3xl font-semibold text-[#1a1a1a]">Bag not found</h1>
+        <h1 className="font-serif text-3xl font-semibold text-[#1a1a1a]">Bag ikke funnet</h1>
         <p className="mt-3 max-w-sm text-[#666]">
-          This bag link is invalid or was cleared from your browser. Build a new bag to get started.
+          Denne baglenken er ugyldig eller ble slettet fra nettleseren din. Bygg en ny bag for å komme i gang.
         </p>
         <Link
           href="/bag/build"
           className="mt-6 rounded-xl bg-[#2D6A4F] px-6 py-3 text-sm font-medium text-white transition-all hover:brightness-110"
         >
-          Build My Bag →
+          Bygg min bag →
         </Link>
       </div>
     </div>
@@ -402,17 +422,17 @@ export function BagPageClient() {
   };
 
   const courseTypeLabels: Record<string, string> = {
-    wooded: "Wooded",
-    open: "Open field",
+    wooded: "Skog",
+    open: "Åpen bane",
     mixed: "Mixed",
-    all: "All types",
+    all: "Alle typer",
   };
 
   const budgetLabels: Record<string, string> = {
     "under-500": "Under kr 500",
     "500-1500": "kr 500–1 500",
     "1500-3000": "kr 1 500–3 000",
-    "no-limit": "No limit",
+    "no-limit": "Ingen grense",
   };
 
   return (
@@ -424,13 +444,13 @@ export function BagPageClient() {
         <section className="w-full bg-[#1E3D2F] px-4 py-14 sm:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="mb-2 text-sm text-[#9DC08B]">
-              <Link href="/bag/build" className="hover:text-[#B8E04A]">Build My Bag</Link>
+              <Link href="/bag/build" className="hover:text-[#B8E04A]">Bygg min bag</Link>
               {" / "}
-              <span className="text-[#F5F2EB]">Your Bag</span>
+              <span className="text-[#F5F2EB]">Din bag</span>
             </div>
 
             <h1 className="font-serif text-[clamp(2rem,6vw,3.5rem)] font-semibold leading-none tracking-tight text-[#F5F2EB]">
-              Your DiscDrop Bag
+              Din DiscDrop-bag
             </h1>
 
             <div className="mt-5 flex flex-wrap gap-2">
@@ -464,7 +484,7 @@ export function BagPageClient() {
               <div className="flex flex-wrap gap-6">
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-[#9DC08B]">
-                    Bag value
+                    Bagverdi
                   </div>
                   <div className="font-serif text-4xl font-bold text-[#B8E04A]">
                     {totalValue > 0 ? `kr ${totalValue.toLocaleString("nb-NO")}` : "—"}
@@ -472,7 +492,7 @@ export function BagPageClient() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider text-[#9DC08B]">
-                    Discs
+                    Disker
                   </div>
                   <div className="font-serif text-4xl font-bold text-[#F5F2EB]">{discCount}</div>
                 </div>
@@ -491,13 +511,13 @@ export function BagPageClient() {
                     <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
                     <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
                   </svg>
-                  {copied ? "Copied!" : "Copy link"}
+                  {copied ? "Kopiert!" : "Kopier lenke"}
                 </button>
                 <Link
                   href="/bag/build"
                   className="rounded-xl bg-[#B8E04A] px-5 py-2.5 text-sm font-semibold text-[#1E3D2F] transition-all hover:brightness-110"
                 >
-                  Rebuild →
+                  Bygg på nytt →
                 </Link>
               </div>
             </div>
@@ -515,7 +535,7 @@ export function BagPageClient() {
                     {CATEGORY_LABELS[cat]}
                   </h2>
                   <span className="rounded-full bg-[#f0f0ee] px-2.5 py-0.5 text-xs text-[#666]">
-                    {items.reduce((s, d) => s + d.quantity, 0)} discs
+                    {items.reduce((s, d) => s + d.quantity, 0)} disker
                   </span>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -545,13 +565,13 @@ export function BagPageClient() {
               </div>
               <div>
                 <h3 className="font-serif text-lg font-semibold text-[#B8E04A]">
-                  Rotate your discs
+                  Roter diskene dine
                 </h3>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#9DC08B]">
-                  Discs wear in over time and become more understable. Rotate new discs into your bag
-                  every 6–12 months to maintain consistency. The discs marked{" "}
-                  <strong className="text-[#F5F2EB]">×2 rotation</strong> are your most-thrown
-                  workhorse discs — keeping a fresh backup means you always have a reliable flight.
+                  Disker slites inn over tid og blir mer understabile. Roter inn nye disker i baggen
+                  din hvert 6.–12. måned for å opprettholde konsistens. Diskene merket{" "}
+                  <strong className="text-[#F5F2EB]">×2 rotasjon</strong> er dine mest brukte
+                  arbeidshester — en fersk reserve betyr at du alltid har en pålitelig flybane.
                 </p>
               </div>
             </div>
@@ -584,14 +604,14 @@ export function BagPageClient() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-1 flex items-center gap-3">
               <h2 className="font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-                Now you need something to carry it in
+                Nå trenger du noe å bære det i
               </h2>
             </div>
             <p className="mb-2 text-xs text-[#B8A87A]">
               Affiliate links — update hrefs when live
             </p>
             <p className="mb-8 text-sm text-[#666]">
-              A great bag setup keeps discs organised and your game sharp on the course.
+              Et godt bagoppsett holder diskene organisert og spillet ditt skarpt på banen.
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               {BAG_GEAR.map((gear) => (
@@ -613,7 +633,7 @@ export function BagPageClient() {
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-[#555]">{gear.desc}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-[#2D6A4F]">
-                    View deal →
+                    Se tilbud →
                   </span>
                 </a>
               ))}
@@ -623,10 +643,10 @@ export function BagPageClient() {
       </main>
 
       <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] py-8 text-center text-xs text-[#666]">
-        <p>DiscDrop — price comparison for disc golf in Norway</p>
+        <p>DiscDrop — prissammenligning for discgolf i Norge</p>
         <p className="mt-2">
           <Link href="/bag/build" className="text-[#2D6A4F] hover:underline">
-            ← Start over / Build a new bag
+            ← Start på nytt / Bygg en ny bag
           </Link>
         </p>
       </footer>

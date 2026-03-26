@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 // ── Types ───────────────────────────────────────────────────────────────────
 
 type Store = {
@@ -17,24 +17,34 @@ type StoreRow = Store & {
   total: number;
 };
 
-const MONTHS = [
-  "Mar", "Apr", "May", "Jun", "Jul", "Aug",
-  "Sep", "Oct", "Nov", "Dec", "Jan", "Feb",
-];
-
 // ── Price Comparison Table ───────────────────────────────────────────────────
 
 function formatLastUpdated(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
   const hours = Math.floor(diffMs / (1000 * 60 * 60));
-  if (hours < 1) return "just now";
-  if (hours === 1) return "1 hour ago";
-  if (hours < 24) return `${hours} hours ago`;
+  if (hours < 1) return "akkurat nå";
+  if (hours === 1) return "for 1 time siden";
+  if (hours < 24) return `for ${hours} timer siden`;
   const days = Math.floor(hours / 24);
-  return days === 1 ? "1 day ago" : `${days} days ago`;
+  return days === 1 ? "for 1 dag siden" : `for ${days} dager siden`;
 }
 
 export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdated?: string | null }) {
+  if (stores.length === 0) {
+    return (
+      <section className="w-full bg-[#F5F2EB] px-4 py-10 sm:px-8">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
+            Hvor kan du kjøpe
+          </h2>
+          <p className="mt-6 rounded-2xl border border-[#e0ddd4] bg-white px-6 py-8 text-center text-sm text-[#aaa]">
+            Ingen priser funnet ennå. Vi oppdaterer prisene daglig.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   const rows: StoreRow[] = stores
     .map((s) => {
       const shippingNOK = s.price >= s.freeShippingOver ? 0 : s.shipping;
@@ -52,17 +62,17 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
     <section className="w-full bg-[#F5F2EB] px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-          Where to buy
+          Hvor kan du kjøpe
         </h2>
         <p className="mb-3 text-sm text-[#666]">
-          All prices in NOK, including VAT. Sorted by total price with shipping.
+          Alle priser i NOK, inkl. MVA. Sortert etter totalpris inkl. frakt.
         </p>
         <p className="mb-3 text-[12px] italic text-[#888]">
           Prislenker er affiliate-lenker — vi tjener provisjon på kjøp. Dette påvirker ikke prisene du ser.
         </p>
         {lastUpdated && (
           <p className="mb-5 text-[11px] text-[#aaa]">
-            Prices last updated: {formatLastUpdated(lastUpdated)}
+            Priser sist oppdatert: {formatLastUpdated(lastUpdated)}
           </p>
         )}
 
@@ -97,7 +107,7 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
                         </span>
                         {isBest && (
                           <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
-                            Best deal
+                            Beste deal
                           </span>
                         )}
                       </div>
@@ -110,7 +120,7 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
                     </td>
                     <td className="px-4 py-4 text-[#444]">
                       {row.shippingNOK > 0 ? `kr ${row.shippingNOK}` : (
-                        <span className="text-[#2D6A4F] font-medium">Free</span>
+                        <span className="text-[#2D6A4F] font-medium">Gratis</span>
                       )}
                     </td>
                     <td className="px-4 py-4">
@@ -125,7 +135,7 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
                         aria-disabled={!row.inStock}
                         tabIndex={row.inStock ? 0 : -1}
                       >
-                        Go to store
+                        Gå til butikk
                       </a>
                     </td>
                   </tr>
@@ -154,7 +164,7 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
                     <span className="font-semibold text-[#1a1a1a]">{row.name}</span>
                     {isBest && (
                       <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
-                        Best deal
+                        Beste deal
                       </span>
                     )}
                   </div>
@@ -162,13 +172,13 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
                 </div>
                 <div className="mb-3 grid grid-cols-3 gap-2 text-xs text-[#666]">
                   <div>
-                    <div className="uppercase tracking-wider">Price</div>
+                    <div className="uppercase tracking-wider">Pris</div>
                     <div className="font-medium text-[#1a1a1a]">kr {row.price}</div>
                   </div>
                   <div>
-                    <div className="uppercase tracking-wider">Shipping</div>
+                    <div className="uppercase tracking-wider">Frakt</div>
                     <div className="font-medium text-[#1a1a1a]">
-                      {row.shippingNOK > 0 ? `kr ${row.shippingNOK}` : "Free"}
+                      {row.shippingNOK > 0 ? `kr ${row.shippingNOK}` : "Gratis"}
                     </div>
                   </div>
                   <div>
@@ -180,7 +190,7 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
                   href={row.url}
                   className="block w-full rounded-lg bg-[#2D6A4F] py-2.5 text-center text-sm font-medium text-white transition-all hover:brightness-110"
                 >
-                  Go to store
+                  Gå til butikk
                 </a>
               </div>
             );
@@ -188,7 +198,7 @@ export function PriceTable({ stores, lastUpdated }: { stores: Store[]; lastUpdat
         </div>
 
         <p className="mt-4 text-xs text-[#888]">
-          Free shipping thresholds vary by store. Prices include 25% MVA.
+          Fraktgrenser varierer per butikk. Prisene inkluderer 25% MVA.
         </p>
       </div>
     </section>
@@ -203,7 +213,7 @@ function StockDot({ inStock }: { inStock: boolean }) {
           inStock ? "bg-[#4CAF82]" : "bg-[#E8704A]"
         }`}
       />
-      <span className="text-xs text-[#666]">{inStock ? "In stock" : "Out of stock"}</span>
+      <span className="text-xs text-[#666]">{inStock ? "På lager" : "Utsolgt"}</span>
     </div>
   );
 }
@@ -222,10 +232,10 @@ export function LandedCostCalculator() {
     <section className="w-full bg-white px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-          Shipping calculator
+          Fraktskalkulator
         </h2>
         <p className="mb-6 text-sm text-[#666]">
-          Calculate total cost including shipping from any Norwegian disc golf store.
+          Beregn totalkostnad inkl. frakt fra hvilken som helst norsk discgolf-butikk.
         </p>
 
         <div className="rounded-2xl border border-[#e0ddd4] bg-[#F5F2EB] p-5 sm:p-6">
@@ -233,12 +243,12 @@ export function LandedCostCalculator() {
             {/* Disc price */}
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#666]">
-                Disc price (NOK)
+                Diskpris (NOK)
               </label>
               <input
                 type="number"
                 min="0"
-                placeholder="e.g. 249"
+                placeholder="f.eks. 249"
                 value={discPrice}
                 onChange={(e) => setDiscPrice(e.target.value)}
                 className="w-full rounded-xl border border-[#ddd] bg-white px-4 py-3 text-sm text-[#1a1a1a] outline-none focus:border-[#2D6A4F]"
@@ -248,12 +258,12 @@ export function LandedCostCalculator() {
             {/* Shipping */}
             <div>
               <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#666]">
-                Shipping (NOK)
+                Frakt (NOK)
               </label>
               <input
                 type="number"
                 min="0"
-                placeholder="e.g. 99"
+                placeholder="f.eks. 99"
                 value={shipping}
                 onChange={(e) => setShipping(e.target.value)}
                 className="w-full rounded-xl border border-[#ddd] bg-white px-4 py-3 text-sm text-[#1a1a1a] outline-none focus:border-[#2D6A4F]"
@@ -265,10 +275,10 @@ export function LandedCostCalculator() {
           {total != null ? (
             <div className="mt-6 rounded-xl bg-white p-5 shadow-sm">
               <div className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-3">
-                <CalcLine label="Disc price" value={`kr ${discNum}`} />
+                <CalcLine label="Diskpris" value={`kr ${discNum}`} />
                 <CalcLine
-                  label="Shipping"
-                  value={shipNum > 0 ? `kr ${shipNum}` : "Free"}
+                  label="Frakt"
+                  value={shipNum > 0 ? `kr ${shipNum}` : "Gratis"}
                 />
                 <CalcLine label="Total" value={`kr ${total}`} highlight />
               </div>
@@ -283,7 +293,7 @@ export function LandedCostCalculator() {
             </div>
           ) : (
             <div className="mt-6 rounded-xl border-2 border-dashed border-[#d8d4c8] p-8 text-center text-sm text-[#aaa]">
-              Enter a disc price above to calculate total with shipping
+              Skriv inn en diskpris over for å beregne totalkostnad inkl. frakt
             </div>
           )}
         </div>
@@ -323,141 +333,17 @@ function CalcLine({
 
 // ── Price History Chart ──────────────────────────────────────────────────────
 
-export function PriceHistoryChart({
-  priceHistory,
-}: {
-  priceHistory: (number | null)[];
-}) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const chartRef = useRef<import("chart.js").Chart | null>(null);
-
-  useEffect(() => {
-    let mounted = true;
-
-    async function initChart() {
-      const { Chart, BarController, BarElement, CategoryScale, LinearScale, Tooltip, Legend } =
-        await import("chart.js");
-
-      Chart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip, Legend);
-
-      if (!mounted || !canvasRef.current) return;
-
-      // Destroy existing chart
-      if (chartRef.current) {
-        chartRef.current.destroy();
-        chartRef.current = null;
-      }
-
-      const values = priceHistory.map((v) => v ?? null);
-      const defined = values.filter((v): v is number => v !== null);
-      const minVal = defined.length ? Math.min(...defined) : 0;
-      const maxVal = defined.length ? Math.max(...defined) : 0;
-
-      chartRef.current = new Chart(canvasRef.current, {
-        type: "bar",
-        data: {
-          labels: MONTHS,
-          datasets: [
-            {
-              data: values,
-              backgroundColor: values.map((v) => {
-                if (v === null) return "rgba(0,0,0,0.05)";
-                if (v === minVal) return "#B8E04A";
-                if (v === maxVal) return "#E8704A";
-                return "#2D6A4F";
-              }),
-              borderRadius: 6,
-              borderSkipped: false,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                label: (ctx) =>
-                  ctx.parsed.y != null ? `kr ${ctx.parsed.y}` : "No data",
-              },
-            },
-          },
-          scales: {
-            x: {
-              grid: { display: false },
-              ticks: { color: "#888", font: { size: 11 } },
-            },
-            y: {
-              grid: { color: "rgba(0,0,0,0.05)" },
-              ticks: {
-                color: "#888",
-                font: { size: 11 },
-                callback: (v) => `kr ${v}`,
-              },
-              suggestedMin: minVal > 0 ? Math.floor(minVal * 0.9) : 0,
-            },
-          },
-        },
-      });
-    }
-
-    initChart();
-    return () => {
-      mounted = false;
-      chartRef.current?.destroy();
-    };
-  }, [priceHistory]);
-
-  const defined = priceHistory.filter((v): v is number => v !== null);
-  const minPrice = defined.length ? Math.min(...defined) : null;
-  const maxPrice = defined.length ? Math.max(...defined) : null;
-  const currentPrice = defined.at(-1) ?? null;
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function PriceHistoryChart({ priceHistory: _ }: { priceHistory: (number | null)[] }) {
   return (
     <section className="w-full bg-[#F5F2EB] px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-          Price history
+          Prishistorikk
         </h2>
-        <p className="mb-6 text-sm text-[#666]">
-          Price history (NOK) — last 12 months
+        <p className="mt-4 rounded-2xl border border-[#e0ddd4] bg-white px-6 py-8 text-center text-sm text-[#aaa]">
+          Prishistorikk kommer snart — vi samler inn data daglig.
         </p>
-
-        {/* Stat strip */}
-        <div className="mb-5 flex flex-wrap gap-4">
-          {[
-            { label: "Current", value: currentPrice, color: "#2D6A4F" },
-            { label: "12-month low", value: minPrice, color: "#4CAF82" },
-            { label: "12-month high", value: maxPrice, color: "#E8704A" },
-          ].map(({ label, value, color }) => (
-            <div
-              key={label}
-              className="rounded-xl border border-[#e0ddd4] bg-white px-5 py-3"
-            >
-              <div className="text-xs uppercase tracking-wider text-[#888]">
-                {label}
-              </div>
-              <div
-                className="font-serif text-xl font-semibold"
-                style={{ color }}
-              >
-                {value != null ? `kr ${value}` : "—"}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="rounded-2xl border border-[#e0ddd4] bg-white p-5">
-          <div className="mb-3 flex flex-wrap items-center gap-4 text-xs text-[#888]">
-            <LegendDot color="#B8E04A" label="Lowest" />
-            <LegendDot color="#2D6A4F" label="Regular" />
-            <LegendDot color="#E8704A" label="Highest" />
-          </div>
-          <div style={{ height: 220 }}>
-            <canvas ref={canvasRef} />
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -481,9 +367,9 @@ export function FlightPathChart({ flight }: { flight: FlightNumbers }) {
   const baseM = 25 + flight.speed * 6 + flight.glide * 8;
 
   const arms = [
-    { id: "slow",   label: "Slow arm",   sub: "< 60 km/h",  color: "#4CAF82", distF: 0.46, turnF: 0.15, fadeF: 0.75 },
+    { id: "slow",   label: "Sakte arm",  sub: "< 60 km/h",  color: "#4CAF82", distF: 0.46, turnF: 0.15, fadeF: 0.75 },
     { id: "medium", label: "Medium arm", sub: "60–80 km/h", color: "#E8A838", distF: 0.68, turnF: 0.60, fadeF: 0.90 },
-    { id: "fast",   label: "Fast arm",   sub: "80+ km/h",   color: "#E8704A", distF: 1.00, turnF: 1.00, fadeF: 1.00 },
+    { id: "fast",   label: "Rask arm",   sub: "80+ km/h",   color: "#E8704A", distF: 1.00, turnF: 1.00, fadeF: 1.00 },
   ] as const;
 
   function calcCurve(arm: (typeof arms)[number]) {
@@ -513,10 +399,10 @@ export function FlightPathChart({ flight }: { flight: FlightNumbers }) {
     <section className="w-full bg-white px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-          Flight path by arm speed
+          Flybane etter armhastighet
         </h2>
         <p className="mb-6 text-sm text-[#666]">
-          Simulated RHBH top-down flight paths. Turn activates more at higher arm speeds.
+          Simulerte RHBH-flybaner sett ovenfra. Turn aktiveres mer ved høyere armhastighet.
         </p>
         <div className="flex justify-center">
           <svg
@@ -570,11 +456,11 @@ export function FlightPathChart({ flight }: { flight: FlightNumbers }) {
             {/* Directional hints */}
             <text x={padL + 5} y={padT + 15} fontSize="8" fill="#2D6A4F"
               fontFamily="system-ui,sans-serif" opacity="0.55">
-              ← Fade (left)
+              ← Fade (venstre)
             </text>
             <text x={padL + chartW - 5} y={padT + 15} fontSize="8" fill="#2D6A4F"
               fontFamily="system-ui,sans-serif" opacity="0.55" textAnchor="end">
-              Turn (right) →
+              Turn (høyre) →
             </text>
 
             {/* Flight path curves — slow first so fast renders on top */}
@@ -620,18 +506,6 @@ export function FlightPathChart({ flight }: { flight: FlightNumbers }) {
   );
 }
 
-function LegendDot({ color, label }: { color: string; label: string }) {
-  return (
-    <div className="flex items-center gap-1.5">
-      <span
-        className="inline-block h-2.5 w-2.5 rounded-sm"
-        style={{ background: color }}
-      />
-      {label}
-    </div>
-  );
-}
-
 // ── Price Alert Signup ───────────────────────────────────────────────────────
 
 export function PriceAlertSignup({ discName }: { discName: string }) {
@@ -654,29 +528,29 @@ export function PriceAlertSignup({ discName }: { discName: string }) {
             <div className="text-center">
               <div className="mb-3 text-4xl">✓</div>
               <h3 className="font-serif text-2xl font-semibold text-[#F5F2EB]">
-                Alert set!
+                Varsel opprettet!
               </h3>
               <p className="mt-2 text-sm text-[#9DC08B]">
-                We&apos;ll email you when {discName} drops below your target price.
+                Vi sender deg en e-post når {discName} går under ønsket pris.
               </p>
             </div>
           ) : (
             <>
               <h2 className="mb-1 font-serif text-2xl font-semibold text-[#F5F2EB]">
-                Get notified
+                Bli varslet
               </h2>
               <p className="mb-6 text-sm text-[#9DC08B]">
-                We&apos;ll email you when this disc drops below your target price.
+                Vi sender deg en e-post når denne disken går under ønsket pris.
               </p>
               <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-3">
                 <div className="sm:col-span-1">
                   <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#9DC08B]">
-                    Target price (kr)
+                    Ønsket pris (kr)
                   </label>
                   <input
                     type="number"
                     min="1"
-                    placeholder="e.g. 200"
+                    placeholder="f.eks. 200"
                     value={targetPrice}
                     onChange={(e) => setTargetPrice(e.target.value)}
                     className="w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#F5F2EB] placeholder:text-[#9DC08B]/60 outline-none focus:border-[#B8E04A]/60"
@@ -684,7 +558,7 @@ export function PriceAlertSignup({ discName }: { discName: string }) {
                 </div>
                 <div className="sm:col-span-1">
                   <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-[#9DC08B]">
-                    Email address
+                    E-postadresse
                   </label>
                   <input
                     type="email"
@@ -701,7 +575,7 @@ export function PriceAlertSignup({ discName }: { discName: string }) {
                     disabled={!consent}
                     className="w-full rounded-xl bg-[#B8E04A] px-5 py-3 text-sm font-semibold text-[#1E3D2F] transition-all hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed"
                   >
-                    Notify me when price drops
+                    Varsle meg når prisen synker
                   </button>
                 </div>
                 <label className="flex cursor-pointer items-start gap-2.5 sm:col-span-3">
@@ -725,7 +599,7 @@ export function PriceAlertSignup({ discName }: { discName: string }) {
                 </label>
               </form>
               <p className="mt-4 text-xs text-[#9DC08B]/70">
-                We&apos;ll only email you when the price drops. No spam, ever.
+                Vi sender bare e-post når prisen synker. Aldri spam.
               </p>
             </>
           )}
