@@ -36,9 +36,10 @@ Package manager: pnpm (always use pnpm, never npm).
 ## Scraper
 - scripts/scraper.js — scrapes WeAreDiscGolf (WooCommerce) +
   Kvam DGS + Arctic Disc (Shopify JSON API)
-- Run with: pnpm scrape
+- Scraping is automated via GitHub Actions (.github/workflows/daily-scrape.yml)
+  Runs daily at 06:00 UTC (08:00 Norway). Manual runs only needed for testing.
+- Run manually with: pnpm scrape:all
 - Output: data/scraped-prices.json + data/unmatched-products.json
-- Add --commit-dirty=true to wrangler deploy to suppress git warning
 
 ## API Route
 - /api/bag/generate — Anthropic API, server-side only
@@ -47,4 +48,5 @@ Package manager: pnpm (always use pnpm, never npm).
 
 ## Deploy
 npx wrangler pages deploy out --project-name=discdrop --commit-dirty=true
-GitHub auto-deploy not working — always use manual Wrangler deploy.
+Automated via GitHub Actions after each daily scrape.
+Manual deploy still works for hotfixes.

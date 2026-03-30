@@ -1,0 +1,54 @@
+name: Daily Scrape & Deploy
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 06:00 UTC = 08:00 Norway time
+  workflow_dispatch:
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run scrape:all
+        run: pnpm scrape:all
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+
+      - name: Commit updated data
+        run: |
+          git config user.name "DiscDrop Bot"
+          git config user.email "bot@discdrop.net"
+          git add data/scraped-prices.json data/disc-images.json data/discs.js
+          git diff --staged --quiet || git commit -m "Daily scrape $(date +%Y-%m-%d)"
+          git push
+
+      - name: Build
+        run: pnpm build
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy out --project-name=discdrop --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
