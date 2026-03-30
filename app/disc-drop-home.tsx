@@ -4,12 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { DiscImage } from "@/components/DiscImage";
-import {
-  discs,
-  hotDrops,
-  upcoming,
-} from "@/data/discs.js";
-import { getScrapedPrice } from "@/lib/disc-utils";
+import { SearchInput } from "@/components/SearchInput";
+import { discs } from "@/data/discs.js";
+import scrapedPrices from "@/data/scraped-prices.json";
+import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -26,7 +24,6 @@ const BADGE_STYLES: Record<string, string> = {
   limited: "bg-[#9B59B6] text-white",
   "tour-series": "bg-[#6B5B95] text-white",
   "sold-out": "bg-[#888] text-white",
-  upcoming: "bg-[#3B82F6] text-white",
 };
 
 const BADGE_LABELS: Record<string, string> = {
@@ -36,7 +33,6 @@ const BADGE_LABELS: Record<string, string> = {
   limited: "BEGRENSET",
   "tour-series": "TOUR SERIES",
   "sold-out": "UTSOLGT",
-  upcoming: "KOMMENDE",
 };
 
 function Badge({ tag }: { tag: string }) {
@@ -74,56 +70,126 @@ function FlightBoxes({ flight }: { flight: Flight }) {
   );
 }
 
+// Keywords that classify a hot-drop badge type
+const TOUR_SERIES_KEYWORDS = [
+  'Tour Series', 'Team Series', 'Team Championship Series', 'Signature Series', 'Mold Team',
+];
+const LIMITED_KEYWORDS = [
+  'Limited Edition', 'Special Edition', 'Prototype', 'First Run', 'Primal Run',
+  'Project Lab Coat', 'Lab Coat',
+];
+const HOT_PLAYER_NAMES = [
+  'Eagle McMahon', 'Calvin Heimburg', 'Ricky Wysocki', 'Simon Lizotte',
+  'Paige Pierce', 'Brodie Smith', 'Paul McBeth', 'Niklas Anttila',
+  'Bradley Williams', 'Gannon Buhr', 'Clay Edwards', 'Casey White',
+  'Nate Sexton', 'Anthony Barela', 'Catrina Allen', 'Henna Blomroos',
+  'Eveliina Salonen', 'Vaino Makela', 'Kristofer Hivju', 'Albert Tamm',
+  'Kristin Lätt', 'Kristin Tattar', 'JohnE McCray', 'Dallas Garber',
+  'Joseph Anderson', 'Silva Saarinen', 'Sockibomb',
+  'Jeremy Koling', 'James Conrad', 'Kona Montgomery',
+  'Ida Emilie Nesse', 'Anniken Steen', 'Julia Fors', 'Juliana Korver',
+  'Josef Berg', 'Cadence Burge', 'Kyle Klein', 'Aaron Gossage',
+  'Holyn Handley', 'Ella Hansen', 'Isaac Robinson',
+];
+
+// All edition keywords that qualify a disc as a hot drop
+const ALL_HOT_EDITION_KEYWORDS = new Set([
+  ...TOUR_SERIES_KEYWORDS, ...LIMITED_KEYWORDS, ...HOT_PLAYER_NAMES,
+  'Ledgestone', 'OTB Open', 'Gyropalooza', 'MVP Open', 'USDGC', 'EDGF',
+  'World Championship', 'Nordic Phenom', 'Sky Stone', 'Solar Flare', 'Get Freaky', 'Show Stopper',
+]);
+
+/** Return the badge tag that best describes an edition string */
+function editionToBadge(edition: string | null, inStock: boolean, lastScraped?: string): string {
+  if (!edition) return inStock ? 'hot' : 'sold-out';
+  if (!inStock) return 'sold-out';
+
+  // Check if newly scraped (within last 7 days)
+  if (lastScraped) {
+    const scrapedDate = new Date(lastScraped);
+    const ageMs = Date.now() - scrapedDate.getTime();
+    if (ageMs < 7 * 24 * 60 * 60 * 1000) return 'new-drop';
+  }
+
+  const ed = edition.toLowerCase();
+  if (TOUR_SERIES_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'tour-series';
+  if (LIMITED_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'limited';
+  if (HOT_PLAYER_NAMES.some((p) => ed.includes(p.toLowerCase()))) return 'tour-series';
+  return 'hot';
+}
+
 type HotDropRow = {
   id: string;
   name: string;
   brand: string;
   type: string;
   flight: Flight;
-  tags: string[];
-  stores: Disc["stores"];
-  player?: string;
-  image?: string;
+  badge: string;
+  edition: string | null;
+  price: number | null;
+  inStock: boolean;
+  image: string;
+  lastScraped: string | null;
 };
 
 function buildHotDropRows(): HotDropRow[] {
-  const fromData: HotDropRow[] = hotDrops.map((d) => ({
-    id: d.id,
-    name: d.name,
-    brand: d.brand,
-    type: d.type,
-    flight: d.flight,
-    tags: d.tags as string[],
-    stores: d.stores,
-    player: "player" in d ? d.player : undefined,
-    image: "image" in d ? (d.image as string) : undefined,
-  }));
-  return fromData;
-}
+  type ScrapedEntry = { price: number; inStock: boolean; edition?: string | null; lastScraped?: string };
+  const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
 
-function hotDropCta(row: HotDropRow): {
-  label: string;
-  className: string;
-} {
-  if (getScrapedPrice(row.id).inStockCount > 0) {
-    return {
-      label: "Finn disken",
-      className:
-        "rounded-lg bg-[#2D6A4F] px-4 py-2.5 text-sm font-medium text-white transition-all duration-150 ease-out hover:scale-[1.02] hover:brightness-110",
-    };
+  const rows: HotDropRow[] = [];
+
+  for (const disc of discs as Disc[]) {
+    const entries = prices[disc.id] ?? [];
+    if (entries.length === 0) continue;
+
+    // Find best edition — prefer entries with a matching hot-drop keyword
+    const hotEntry = entries.find((e) => {
+      if (!e.edition) return false;
+      const ed = e.edition.toLowerCase();
+      return [...ALL_HOT_EDITION_KEYWORDS].some((kw) => ed.includes(kw.toLowerCase()));
+    });
+    const anyEditionEntry = entries.find((e) => e.edition);
+    const bestEditionEntry = hotEntry ?? anyEditionEntry ?? null;
+    const edition = bestEditionEntry?.edition ?? null;
+    const lastScraped = bestEditionEntry?.lastScraped ?? null;
+
+    const inStockEntries = entries.filter((e) => e.inStock);
+    const price = inStockEntries.length
+      ? Math.min(...inStockEntries.map((e) => e.price))
+      : null;
+    const inStock = inStockEntries.length > 0;
+
+    // Only include discs that have an edition (real hot drops only)
+    if (!edition) continue;
+
+    const badge = editionToBadge(edition, inStock, lastScraped ?? undefined);
+
+    rows.push({
+      id: disc.id,
+      name: disc.name,
+      brand: disc.brand,
+      type: disc.type,
+      flight: disc.flight,
+      badge,
+      edition,
+      price,
+      inStock,
+      image: getDiscImage(disc),
+      lastScraped,
+    });
   }
-  if (row.tags.includes("upcoming")) {
-    return {
-      label: "Varsle meg",
-      className:
-        "rounded-lg border border-[#ddd] bg-white px-4 py-2.5 text-sm font-medium text-[#444] transition-all duration-150 ease-out hover:border-[#2D6A4F] hover:text-[#2D6A4F]",
-    };
-  }
-  return {
-    label: "Varsle meg",
-    className:
-      "rounded-lg border border-[#ddd] bg-white px-4 py-2.5 text-sm font-medium text-[#444] transition-all duration-150 ease-out hover:border-[#2D6A4F] hover:text-[#2D6A4F]",
-  };
+
+  // Sort: 1) in-stock above out-of-stock  2) newest scraped first  3) tour/team series above generic
+  const badgeRank: Record<string, number> = { 'tour-series': 3, limited: 2, 'new-drop': 2, hot: 1, 'sold-out': 0 };
+  rows.sort((a, b) => {
+    if (a.inStock !== b.inStock) return a.inStock ? -1 : 1;
+    const da = a.lastScraped ?? '';
+    const db = b.lastScraped ?? '';
+    if (da !== db) return db.localeCompare(da);
+    return (badgeRank[b.badge] ?? 0) - (badgeRank[a.badge] ?? 0);
+  });
+
+  return rows.slice(0, 6);
 }
 
 // ── Navbar ─────────────────────────────────────────────────────────────────
@@ -135,39 +201,35 @@ function Navbar({
   onSearchClick: () => void;
 }) {
   return (
-    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#F5F2EB] px-8 py-4 shadow-sm">
+    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#1E3D2F] px-8 py-4 shadow-sm">
       <Link
         href="/"
         className="flex shrink-0 items-center transition-opacity hover:opacity-85"
         style={{ gap: 10 }}
       >
         <Image
-          src="/logo.svg"
+          src="/discdrop-logo-dark.svg"
           alt="DiscDrop"
-          width={84}
-          height={90}
-          style={{ borderRadius: 4 }}
+          width={170}
+          height={36}
+          className="h-[28px] w-auto md:h-[36px]"
         />
-        <span style={{ fontSize: 24, fontWeight: 700, lineHeight: 1 }}>
-          <span style={{ color: "#2D6A4F" }}>Disc</span>
-          <span style={{ color: "#B8E04A" }}>Drop</span>
-        </span>
       </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
         <a
           href="#"
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-          className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]"
+          className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white"
         >
           Hjem
         </a>
-        <a href="#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+        <a href="#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
           Hot Drops
         </a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
-          Bla gjennom
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
+          Alle disker
         </Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
           Bygg min bag
         </Link>
       </div>
@@ -176,7 +238,7 @@ function Navbar({
         type="button"
         onClick={onSearchClick}
         aria-label="Søk etter disker"
-        className={`flex h-10 w-10 items-center justify-center rounded-full text-[#2D6A4F] transition-all duration-200 md:hidden ${
+        className={`flex h-10 w-10 items-center justify-center rounded-full text-[#9DC08B] transition-all duration-200 md:hidden ${
           showMobileSearch
             ? "scale-100 opacity-100"
             : "pointer-events-none scale-90 opacity-0"
@@ -192,108 +254,34 @@ function Navbar({
 }
 
 // ── Hero ───────────────────────────────────────────────────────────────────
-function Hero({ discs: allDiscs }: { discs: Disc[] }) {
+function Hero() {
   const [query, setQuery] = useState("");
-
-  const results = useMemo(() => {
-    if (!query.trim()) return [];
-    const q = query.toLowerCase();
-    return allDiscs
-      .filter(
-        (d) =>
-          d.name.toLowerCase().includes(q) ||
-          d.brand.toLowerCase().includes(q) ||
-          ("player" in d && d.player?.toLowerCase().includes(q))
-      )
-      .slice(0, 6);
-  }, [query, allDiscs]);
-
-  const typeLabel: Record<string, string> = {
-    driver: "Distance Driver",
-    midrange: "Midrange",
-    putter: "Putter",
-  };
 
   return (
     <section className="w-full bg-[#1E3D2F] px-8 pb-20 pt-16 text-center">
-      <h1 className="mb-5 font-serif text-[72px] leading-none tracking-tight text-[#F5F2EB]">
+      <h1 className="mb-2 font-serif text-[72px] leading-none tracking-tight text-[#F5F2EB]">
         Finn din disk.
       </h1>
+      <p className="mb-8 text-sm tracking-[0.2em] text-[#9DC08B]/60">
+        Sammenlign · Spar · Spill
+      </p>
       <p className="mb-10 text-lg leading-relaxed text-[#9DC08B]">
         Den smarteste måten å finne disken din på i Norge.
         <br />
         Oppdaterte priser. Lageroversikt. Totalpris på disk.
       </p>
 
-      <div className="mb-6 flex justify-center">
-        <Link
-          href="/bag/build"
-          className="inline-flex items-center gap-2 rounded-xl bg-[#2D6A4F] px-6 py-3 text-sm font-medium text-white transition-all duration-150 ease-out hover:scale-[1.02] hover:brightness-110"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <path d="M16 10a4 4 0 0 1-8 0" />
-          </svg>
-          Bygg min bag
-        </Link>
-      </div>
+      <SearchInput
+        value={query}
+        onChange={setQuery}
+        placeholder="Søk etter disker, merker, spillere..."
+        className="mx-auto max-w-2xl text-left"
+        inputId="hero-search-input"
+      />
 
-      <div className="relative mx-auto max-w-2xl">
-        <div className="flex origin-center items-center gap-3 rounded-xl border-2 border-[#4CAF82]/40 bg-white px-5 py-4 shadow-sm transition-all duration-200 ease-out focus-within:scale-[1.01] focus-within:border-[#4CAF82] focus-within:shadow-md">
-          <svg
-            className="shrink-0 text-[#888]"
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden
-          >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
-          <input
-            id="hero-search-input"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Søk etter disker, merker, spillere..."
-            className="w-full bg-transparent text-base text-[#1a1a1a] outline-none placeholder:text-[#aaa]"
-          />
-        </div>
-
-        {results.length > 0 && (
-          <div className="absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-xl border border-[#e5e5e5] bg-white shadow-lg">
-            {results.map((d) => {
-              const price = bestPriceNOK(d);
-              return (
-                <Link
-                  key={d.id}
-                  href={`/disc/${d.id}`}
-                  onClick={() => setQuery("")}
-                  className="flex cursor-pointer items-center justify-between border-b border-[#f0f0f0] px-5 py-3.5 transition-colors last:border-0 hover:bg-[#f9f9f7]"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="font-medium text-[#1a1a1a]">{d.name}</span>
-                    <span className="text-sm text-[#888]">{d.brand}</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="rounded-full bg-[#f0f0ee] px-2.5 py-1 text-xs text-[#888]">
-                      {typeLabel[d.type] ?? d.type}
-                    </span>
-                    {price != null && (
-                      <span className="text-sm font-medium text-[#1a1a1a]">
-                        fra kr {price}
-                      </span>
-                    )}
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        )}
-      </div>
+      <p className="mt-5 text-sm text-[#9DC08B]/70">
+        {discs.length} disker · 7 norske butikker · Oppdatert daglig
+      </p>
     </section>
   );
 }
@@ -311,96 +299,123 @@ function HotDrops() {
         <p className="mb-8 max-w-xl text-[#666]">
           Limitede runs og tour-plast verdt å følge med på.
         </p>
-        <div className="overflow-visible pt-2 pb-2">
-          <div className="-mx-4 flex gap-4 overflow-x-auto px-4 [scrollbar-width:thin] sm:mx-0 sm:px-0">
-            {rows.map((row) => {
-              const price = getScrapedPrice(row.id).price;
-              const cta = hotDropCta(row);
-              return (
-                <Link
-                  key={row.id}
-                  href={`/disc/${row.id}`}
-                  className="flex min-h-[22rem] w-[min(100%,300px)] shrink-0 flex-col rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-5 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-[#2D6A4F]/30 hover:shadow-lg"
-                >
-                  <div className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 120 }}>
-                    <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} containerStyle={{ height: 120 }} />
-                  </div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    {row.tags.map((tag) => (
-                      <Badge key={tag} tag={tag} />
-                    ))}
-                  </div>
-                  <h3 className="mt-4 font-serif text-xl font-semibold text-[#1a1a1a]">
-                    {row.name}
-                  </h3>
-                  <p className="text-sm text-[#666]">{row.brand}</p>
-                  {row.player ? (
-                    <p className="mt-1 text-sm text-[#444]">{row.player}</p>
-                  ) : null}
-                  <FlightBoxes flight={row.flight} />
-                  <div className="mt-auto border-t border-[#e8e8e4] pt-4">
-                    <p className="text-xs uppercase tracking-wider text-[#888]">
-                      Beste pris
-                    </p>
-                    <p className="font-serif text-2xl font-semibold text-[#2D6A4F]">
-                      {price != null ? `${price} kr` : "—"}
-                    </p>
-                    <div className={`mt-4 w-full text-center ${cta.className}`}>
-                      {cta.label}
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {rows.map((row) => (
+            <Link
+              key={row.id}
+              href={`/disc/${row.id}`}
+              className="flex flex-col rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-5 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-[#2D6A4F]/30 hover:shadow-lg"
+            >
+              {/* Disc image */}
+              <div className="mb-4 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 140 }}>
+                <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} containerStyle={{ height: 140 }} />
+              </div>
+
+              {/* Badge */}
+              <div className="mb-3">
+                <Badge tag={row.badge} />
+              </div>
+
+              {/* Name + brand */}
+              <h3 className="font-serif text-xl font-semibold leading-tight text-[#1a1a1a]">
+                {row.name}
+              </h3>
+              <p className="mt-0.5 text-sm text-[#666]">{row.brand}</p>
+
+              {/* Edition label */}
+              {row.edition && (
+                <p className="mt-1.5 text-sm font-medium text-[#2D6A4F]">{row.edition}</p>
+              )}
+
+              {/* Flight numbers */}
+              <FlightBoxes flight={row.flight} />
+
+              {/* Price + CTA */}
+              <div className="mt-auto border-t border-[#e8e8e4] pt-4">
+                <p className="text-xs uppercase tracking-wider text-[#888]">Beste pris</p>
+                <p className="font-serif text-2xl font-semibold text-[#2D6A4F]">
+                  {row.price != null ? `${row.price} kr` : "—"}
+                </p>
+                <div className="mt-4 w-full rounded-xl bg-[#2D6A4F] py-2.5 text-center text-sm font-medium text-white">
+                  Finn disken →
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-// ── Upcoming ───────────────────────────────────────────────────────────────
-function UpcomingSection() {
+// ── Hvorfor DiscDrop ───────────────────────────────────────────────────────
+function WhyDiscDrop() {
+  const props = [
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          <line x1="8" y1="11" x2="14" y2="11" />
+          <line x1="11" y1="8" x2="11" y2="14" />
+        </svg>
+      ),
+      heading: "Sammenlign priser",
+      text: "Se priser fra alle norske diskgolfbutikker på ett sted. Finn den beste dealen uten å sjekke hver butikk manuelt.",
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <rect x="2" y="5" width="20" height="14" rx="2" />
+          <line x1="2" y1="10" x2="22" y2="10" />
+          <line x1="7" y1="15" x2="7.01" y2="15" />
+          <line x1="11" y1="15" x2="13" y2="15" />
+        </svg>
+      ),
+      heading: "Reell totalpris",
+      text: "Vi viser diskpris pluss frakt — så du alltid vet hva du faktisk betaler. Ingen overraskelser.",
+    },
+    {
+      icon: (
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+        </svg>
+      ),
+      heading: "Prisvarsler",
+      text: "Sett ønsket pris og få varsel når disken din dropper i pris eller kommer på lager igjen.",
+    },
+  ];
+
   return (
-    <section className="w-full bg-[#F5F2EB] px-8 py-16">
+    <section className="w-full px-8 py-16">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
-          Kommende
+          Hvorfor DiscDrop?
         </h2>
-        <p className="mb-8 text-[#666]">
-          Slipp vi følger med på før de treffer hyllene.
+        <p className="mb-12 text-[#666]">
+          Vi gjør det enkelt å finne riktig disk til riktig pris.
         </p>
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {upcoming.map((item) => (
-            <li
-              key={item.id}
-              className="rounded-2xl border border-[#e0ddd4] bg-white p-5 shadow-sm"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <div>
-                  <h3 className="font-serif text-lg font-semibold text-[#1a1a1a]">
-                    {item.name}
-                  </h3>
-                  <p className="text-sm text-[#666]">{item.brand}</p>
-                </div>
-                <Badge tag="upcoming" />
+        <div className="grid gap-10 sm:grid-cols-3">
+          {props.map(({ icon, heading, text }) => (
+            <div key={heading} className="flex flex-col gap-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#2D6A4F]/8">
+                {icon}
               </div>
-              {"player" in item && item.player ? (
-                <p className="mt-2 text-sm text-[#444]">{item.player}</p>
-              ) : null}
-              <p className="mt-3 text-sm leading-relaxed text-[#555]">
-                {item.description}
-              </p>
-              <p className="mt-4 text-xs font-medium uppercase tracking-wider text-[#2D6A4F]">
-                Forventet {item.expectedDate}
-              </p>
-            </li>
+              <div>
+                <h3 className="mb-1.5 font-serif text-lg font-semibold text-[#1a1a1a]">
+                  {heading}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#666]">{text}</p>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
 }
+
 
 // ── Popular discs ───────────────────────────────────────────────────────────
 const POPULAR_IDS = [
@@ -505,27 +520,18 @@ export function DiscDropHome() {
         onSearchClick={scrollToSearch}
       />
       <main>
-        <Hero discs={discs} />
+        <Hero />
         <HotDrops />
-        <UpcomingSection />
+        <WhyDiscDrop />
         <PopularDiscs />
       </main>
-      <footer className="bg-[#1E3D2F] px-6 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 text-[13px] sm:flex-row sm:justify-between">
-          <span className="text-[#9DC08B]">© 2026 DiscDrop — Kviist Studio</span>
-          <span className="text-[#7a9a82] italic">
-            Vi tjener provisjon på kjøp via lenker på siden
-          </span>
-          <div className="flex items-center gap-4 text-[#9DC08B]">
-            <Link href="/personvern" className="hover:text-[#F5F2EB] transition-colors">
-              Personvern
-            </Link>
-            <a
-              href="mailto:kontakt@discdrop.net"
-              className="hover:text-[#F5F2EB] transition-colors"
-            >
-              kontakt@discdrop.net
-            </a>
+      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
+          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+          <div className="flex gap-4">
+            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>

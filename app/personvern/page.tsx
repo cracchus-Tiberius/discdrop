@@ -75,10 +75,15 @@ export default function PersonvernPage() {
 
           <Section heading="Informasjonskapsler (cookies)">
             <p>
-              Vi bruker kun <strong>nødvendige cookies</strong> for at
-              nettsiden skal fungere korrekt. Vi bruker ingen sporings- eller
-              reklamecookies, og vi setter ikke opp tredjeparts analyseverktøy
-              som samler inn data om deg.
+              DiscDrop bruker <strong>Cloudflare Web Analytics</strong> for å
+              se anonyme besøkstall og sidevisninger. Dette verktøyet bruker{" "}
+              <strong>ingen informasjonskapsler</strong>, samler ikke inn
+              personlig identifiserbar informasjon, og krever ikke samtykke.
+              Dataene behandles anonymt og deles ikke videre.
+            </p>
+            <p className="mt-3">
+              Vi bruker ingen sporings- eller reklamecookies, og vi setter ikke
+              opp tredjeparts analyseverktøy som samler inn data om deg.
             </p>
           </Section>
 

@@ -2,6 +2,7 @@ import {
   discs,
 } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
+import discImages from "@/data/disc-images.json";
 
 export type Disc = (typeof discs)[number];
 
@@ -10,7 +11,10 @@ type ScrapedEntry = {
   price: number;
   inStock: boolean;
   url: string;
+  image?: string | null;
   lastScraped: string;
+  plastic?: string | null;
+  edition?: string | null;
 };
 
 type StoreMeta = {
@@ -36,8 +40,8 @@ export function getScrapedPrice(discId: string): {
   const inStock = scraped.filter((s) => s.inStock);
   return {
     price: inStock.length ? Math.min(...inStock.map((s) => s.price)) : null,
-    inStockCount: inStock.length,
-    storeCount: scraped.length,
+    inStockCount: new Set(inStock.map((s) => s.store)).size,
+    storeCount: new Set(scraped.map((s) => s.store)).size,
   };
 }
 
@@ -65,7 +69,7 @@ export function getMergedStores(disc: Disc): Array<{
       url: entry.url,
       price: entry.price,
       inStock: entry.inStock,
-      shipping: meta?.shipping ?? 99,
+      shipping: meta?.shipping ?? 45,
       freeShippingOver: meta?.freeShippingOver ?? 999,
     };
   });
@@ -73,6 +77,73 @@ export function getMergedStores(disc: Disc): Array<{
 
 /** ISO timestamp of last scrape, or null if never scraped */
 export const scrapedLastUpdated: string | null = scrapedPrices.lastUpdated as string | null;
+
+/** Most recent lastScraped ISO string for a disc, or null if no scrape data */
+export function getDiscLastScraped(discId: string): string | null {
+  const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
+  if (!scraped || scraped.length === 0) return null;
+  const dates = scraped.map((e) => e.lastScraped).filter(Boolean) as string[];
+  if (dates.length === 0) return null;
+  return dates.sort().at(-1) ?? null;
+}
+
+export type RichStoreEntry = {
+  storeName: string;
+  storeKey: string;
+  price: number;
+  inStock: boolean;
+  url: string;
+  shipping: number;
+  freeShippingOver: number;
+  plastic: string | null;
+  edition: string | null;
+  image?: string | null;
+};
+
+/**
+ * Returns all scraped entries for a disc, enriched with store meta + variant info.
+ * Used by the variant-aware price section on the disc detail page.
+ */
+export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
+  const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
+  if (!scraped || scraped.length === 0) return [];
+  const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
+  return scraped.map((entry) => {
+    const meta = storeMeta[entry.store];
+    return {
+      storeName: meta?.name ?? entry.store,
+      storeKey: entry.store,
+      price: entry.price,
+      inStock: entry.inStock,
+      url: entry.url,
+      shipping: meta?.shipping ?? 45,
+      freeShippingOver: meta?.freeShippingOver ?? 999,
+      plastic: entry.plastic ?? null,
+      edition: entry.edition ?? null,
+      image: entry.image,
+    };
+  });
+}
+
+/**
+ * Resolves the best available image for a disc using this priority:
+ * 1. disc.image from discs.js
+ * 2. disc-images.json (Infinite Discs enrichment)
+ * 3. image from scraped-prices.json (Norwegian store scrape)
+ * 4. /disc-placeholder.svg
+ */
+export function getDiscImage(disc: Disc): string {
+  if ("image" in disc && disc.image) return disc.image as string;
+  const enriched = (discImages as Record<string, string>)[disc.id];
+  if (enriched) return enriched;
+  const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[disc.id];
+  if (scraped) {
+    for (const entry of scraped) {
+      if (entry.image) return entry.image;
+    }
+  }
+  return "/disc-placeholder.svg";
+}
 
 export function getBestInStockNOK(disc: Disc): {
   best: number | null;

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { DiscImage } from "@/components/DiscImage";
 import { discs as discCatalog } from "@/data/discs.js";
+import { getDiscImage } from "@/lib/disc-utils";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -23,12 +24,12 @@ export type GeneratedDisc = {
 };
 
 export type WizardAnswers = {
-  skillLevel: "beginner" | "intermediate" | "advanced" | "pro";
-  armSpeed: "slow" | "medium" | "fast";
-  discTypes: string[];
-  budget: string;
-  ownedDiscs: string;
-  courseTypes: string[];
+  level: "beginner" | "intermediate" | "advanced" | "pro";
+  throwingStyle: "rhbh" | "lhbh" | "forehand" | "both";
+  needs: string[];
+  budget: string | null;
+  brands: string[];
+  discCount: string | null;
 };
 
 export type StoredBag = {
@@ -57,38 +58,39 @@ const CATEGORY_COLORS: Record<GeneratedDisc["category"], string> = {
   putter: "#3B82F6",
 };
 
-const SKILL_LABELS: Record<WizardAnswers["skillLevel"], string> = {
+const LEVEL_LABELS: Record<WizardAnswers["level"], string> = {
   beginner: "Nybegynner",
   intermediate: "Middels",
   advanced: "Avansert",
   pro: "Pro / Elite",
 };
 
-const ARM_LABELS: Record<WizardAnswers["armSpeed"], string> = {
-  slow: "Sakte arm",
-  medium: "Medium arm",
-  fast: "Rask arm",
+const THROWING_LABELS: Record<WizardAnswers["throwingStyle"], string> = {
+  rhbh: "RHBH",
+  lhbh: "LHBH",
+  forehand: "Forehand",
+  both: "Begge hender",
 };
 
 const BAG_GEAR = [
   {
     name: "GRIP EQ BX3",
     brand: "GRIP Equipment",
-    desc: "15L backpack built for competitive play. Holds 18+ discs with ergonomic harness.",
+    desc: "15L ryggsekkbag for seriøse spillere. Plass til 18+ disker med ergonomisk bæresystem.",
     price: "kr 1 099",
     url: "#",
   },
   {
     name: "Terrex Swift R3",
     brand: "Adidas",
-    desc: "Trail shoes with superior grip on wet grass and soft ground. Game changer on dewy mornings.",
+    desc: "Tursko med utmerket grep på vått gress og mykt underlag. Gjør underverker på duggrøte morgener.",
     price: "kr 1 299",
     url: "#",
   },
   {
     name: "Bag Wax",
     brand: "GRIP EQ",
-    desc: "All-weather disc grip enhancer. A small puck that keeps grip consistent in any conditions.",
+    desc: "Gripforsterker for alle forhold. En liten puck som holder grepskonsiistensen stabil uansett vær.",
     price: "kr 149",
     url: "#",
   },
@@ -107,23 +109,19 @@ const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> 
 
 function Navbar() {
   return (
-    <nav className="relative flex w-full items-center bg-[#F5F2EB] px-8 py-4">
+    <nav className="relative flex w-full items-center bg-[#1E3D2F] px-8 py-4">
       <Link
         href="/"
         className="flex shrink-0 items-center transition-opacity hover:opacity-85"
         style={{ gap: 10 }}
       >
-        <Image src="/logo.svg" alt="DiscDrop" width={84} height={90} style={{ borderRadius: 4 }} />
-        <span style={{ fontSize: 24, fontWeight: 700, lineHeight: 1 }}>
-          <span style={{ color: "#2D6A4F" }}>Disc</span>
-          <span style={{ color: "#B8E04A" }}>Drop</span>
-        </span>
+        <Image src="/discdrop-logo-dark.svg" alt="DiscDrop" width={170} height={36} className="h-[28px] w-auto md:h-[36px]" />
       </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
-        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hjem</Link>
-        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hot Drops</a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Bla gjennom</Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Bygg min bag</Link>
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
+        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hjem</Link>
+        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hot Drops</a>
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Alle disker</Link>
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Bygg min bag</Link>
       </div>
     </nav>
   );
@@ -164,7 +162,9 @@ function ReasonTooltip({ reason }: { reason: string }) {
 
 function DiscCard({ disc }: { disc: GeneratedDisc }) {
   const f = disc.flight;
-  const catalogTags = (discCatalog.find((d) => d.id === disc.id)?.tags as string[] | undefined) ?? [];
+  const catalogDisc = discCatalog.find((d) => d.id === disc.id);
+  const catalogTags = (catalogDisc?.tags as string[] | undefined) ?? [];
+  const imageUrl = catalogDisc ? getDiscImage(catalogDisc) : "";
   return (
     <Link
       href={`/disc/${disc.id}`}
@@ -172,12 +172,12 @@ function DiscCard({ disc }: { disc: GeneratedDisc }) {
     >
       {disc.quantity === 2 && (
         <span className="absolute right-3 top-3 z-10 rounded-full bg-[#1E3D2F] px-2 py-0.5 text-[10px] font-semibold text-[#B8E04A]">
-          ×2 rotation
+          ×2 rotasjon
         </span>
       )}
 
       <div className="relative mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 96 }}>
-        <DiscImage src={disc.image ?? ""} name={disc.name} brand={disc.brand} type={disc.category} containerStyle={{ height: 96 }} />
+        <DiscImage src={imageUrl} name={disc.name} brand={disc.brand} type={disc.category} containerStyle={{ height: 96 }} />
         {catalogTags.some((t) => BADGE_STYLES[t]) && (
           <div className="absolute left-2 top-2 flex flex-col gap-1">
             {catalogTags
@@ -414,25 +414,20 @@ export function BagPageClient() {
     items: discs.filter((d) => d.category === cat),
   })).filter((g) => g.items.length > 0);
 
-  const discTypeLabels: Record<string, string> = {
-    drivers: "Drivers",
-    midrange: "Mid-range",
-    putters: "Putters",
-    "full-bag": "Full bag",
-  };
-
-  const courseTypeLabels: Record<string, string> = {
-    wooded: "Skog",
-    open: "Åpen bane",
-    mixed: "Mixed",
-    all: "Alle typer",
+  const needsLabels: Record<string, string> = {
+    distance: "Mer distanse",
+    precision: "Bedre presisjon",
+    approach: "Sterkere innspill",
+    putting: "Sikrere putting",
+    wind: "Disker for vind",
+    "full-bag": "Komplett bag",
   };
 
   const budgetLabels: Record<string, string> = {
     "under-500": "Under kr 500",
-    "500-1500": "kr 500–1 500",
-    "1500-3000": "kr 1 500–3 000",
-    "no-limit": "Ingen grense",
+    "500-1000": "kr 500–1000",
+    "1000+": "kr 1000+",
+    "doesnt-matter": "Fri pris",
   };
 
   return (
@@ -455,16 +450,14 @@ export function BagPageClient() {
 
             <div className="mt-5 flex flex-wrap gap-2">
               {[
-                SKILL_LABELS[answers.skillLevel],
-                ARM_LABELS[answers.armSpeed],
-                ...(answers.discTypes.length > 0
-                  ? [answers.discTypes.map((t) => discTypeLabels[t] ?? t).join(" + ")]
-                  : ["Full bag"]),
-                budgetLabels[answers.budget] ?? answers.budget,
-                ...(answers.courseTypes.length > 0
-                  ? [answers.courseTypes.map((t) => courseTypeLabels[t] ?? t).join(" + ")]
+                LEVEL_LABELS[answers.level],
+                THROWING_LABELS[answers.throwingStyle],
+                ...(answers.needs.length > 0
+                  ? [answers.needs.map((n) => needsLabels[n] ?? n).join(", ")]
                   : []),
-              ].map((tag) => (
+                ...(answers.budget ? [budgetLabels[answers.budget] ?? answers.budget] : []),
+                ...(answers.discCount ? [`${answers.discCount} disker`] : []),
+              ].filter(Boolean).map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-[#9DC08B]"
@@ -571,7 +564,7 @@ export function BagPageClient() {
                   Disker slites inn over tid og blir mer understabile. Roter inn nye disker i baggen
                   din hvert 6.–12. måned for å opprettholde konsistens. Diskene merket{" "}
                   <strong className="text-[#F5F2EB]">×2 rotasjon</strong> er dine mest brukte
-                  arbeidshester — en fersk reserve betyr at du alltid har en pålitelig flybane.
+                  arbeidshester — en fersk reserve sikrer at du alltid har en pålitelig flybane.
                 </p>
               </div>
             </div>
@@ -608,7 +601,7 @@ export function BagPageClient() {
               </h2>
             </div>
             <p className="mb-2 text-xs text-[#B8A87A]">
-              Affiliate links — update hrefs when live
+              Affiliatelenker — oppdater hrefs når live
             </p>
             <p className="mb-8 text-sm text-[#666]">
               Et godt bagoppsett holder diskene organisert og spillet ditt skarpt på banen.
@@ -642,13 +635,15 @@ export function BagPageClient() {
         </section>
       </main>
 
-      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] py-8 text-center text-xs text-[#666]">
-        <p>DiscDrop — prissammenligning for discgolf i Norge</p>
-        <p className="mt-2">
-          <Link href="/bag/build" className="text-[#2D6A4F] hover:underline">
-            ← Start på nytt / Bygg en ny bag
-          </Link>
-        </p>
+      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
+          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+          <div className="flex gap-4">
+            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
+          </div>
+        </div>
       </footer>
     </div>
   );

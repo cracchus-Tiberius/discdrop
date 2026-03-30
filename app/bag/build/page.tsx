@@ -42,50 +42,67 @@ function randomId(): string {
   return Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
 }
 
-// ── Types ──────────────────────────────────────────────────────────────────
+// ── Step indicator ─────────────────────────────────────────────────────────
 
-type SkillLevel = WizardAnswers["skillLevel"];
-type ArmSpeed = WizardAnswers["armSpeed"];
-type DiscType = "drivers" | "midrange" | "putters" | "full-bag";
-type BudgetOption = "under-500" | "500-1500" | "1500-3000" | "no-limit";
-type CourseType = "wooded" | "open" | "mixed" | "all";
+function StepIndicator({ step }: { step: number }) {
+  const steps = [
+    { num: 1, label: "Nivå" },
+    { num: 2, label: "Kasteteknikk" },
+    { num: 3, label: "Behov" },
+    { num: 4, label: "Preferanser" },
+  ];
 
-// ── Progress bar ───────────────────────────────────────────────────────────
-
-function ProgressBar({ step, total }: { step: number; total: number }) {
-  const fillPct = Math.round((step / total) * 100);
-  const discPct = Math.round((step / total) * 100);
   return (
-    <div className="relative mb-8 pt-3">
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-[#e8e8e4]">
+    <div className="relative mb-8">
+      {/* Track */}
+      <div className="absolute left-4 right-4 top-4 h-0.5 bg-[#e8e8e4]">
         <div
-          className="h-full rounded-full bg-[#2D6A4F] transition-all duration-500 ease-out"
-          style={{ width: `${fillPct}%` }}
+          className="h-full bg-[#2D6A4F] transition-all duration-500 ease-out"
+          style={{ width: `${((step - 1) / 3) * 100}%` }}
         />
       </div>
-      {/* Flying disc */}
-      <div
-        className="absolute -top-0.5 transition-all duration-500 ease-out"
-        style={{ left: `calc(${discPct}% - 8px)` }}
-        aria-hidden
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-          <ellipse cx="12" cy="13" rx="10" ry="4.5" fill="#2D6A4F" />
-          <ellipse cx="12" cy="11.5" rx="5" ry="2.5" fill="#B8E04A" />
-          <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#F5F2EB" opacity="0.7" />
-        </svg>
-      </div>
-      <div className="mt-2 flex items-center justify-between text-xs text-[#aaa]">
-        <span>Steg {step} av {total}</span>
-        <span>{fillPct}%</span>
+      {/* Circles + labels */}
+      <div className="relative flex justify-between">
+        {steps.map((s) => {
+          const done = step > s.num;
+          const active = step === s.num;
+          return (
+            <div key={s.num} className="flex flex-col items-center gap-1.5">
+              <div
+                className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 ${
+                  done
+                    ? "bg-[#2D6A4F] text-white"
+                    : active
+                    ? "bg-[#2D6A4F] text-white shadow-[0_0_0_4px_rgba(45,106,79,0.15)]"
+                    : "border-2 border-[#ddd] bg-white text-[#bbb]"
+                }`}
+              >
+                {done ? (
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                ) : (
+                  s.num
+                )}
+              </div>
+              <span
+                className={`text-[10px] font-medium leading-none ${
+                  step >= s.num ? "text-[#2D6A4F]" : "text-[#bbb]"
+                }`}
+              >
+                {s.label}
+              </span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-// ── Option card ────────────────────────────────────────────────────────────
+// ── Selection card (single-select) ─────────────────────────────────────────
 
-function OptionCard({
+function SelectCard({
   selected,
   onClick,
   children,
@@ -98,9 +115,9 @@ function OptionCard({
     <button
       type="button"
       onClick={onClick}
-      className={`w-full rounded-xl border-2 px-5 py-4 text-left transition-all duration-150 ease-out ${
+      className={`min-h-[80px] w-full rounded-xl border-2 px-4 py-4 text-left transition-all duration-150 ${
         selected
-          ? "border-[#2D6A4F] bg-[#f0f9e8] shadow-sm"
+          ? "border-[#2D6A4F] bg-[#f0f9e8]"
           : "border-[#e8e8e4] bg-white hover:border-[#2D6A4F]/40 hover:bg-[#fafaf8]"
       }`}
     >
@@ -109,9 +126,9 @@ function OptionCard({
   );
 }
 
-// ── Multi-select card ──────────────────────────────────────────────────────
+// ── Pill button ─────────────────────────────────────────────────────────────
 
-function MultiCard({
+function Pill({
   selected,
   onClick,
   children,
@@ -124,23 +141,18 @@ function MultiCard({
     <button
       type="button"
       onClick={onClick}
-      className={`relative w-full rounded-xl border-2 px-5 py-4 text-left transition-all duration-150 ease-out ${
+      className={`min-h-[44px] rounded-full border-2 px-4 py-2 text-sm font-medium transition-all duration-150 ${
         selected
-          ? "border-[#2D6A4F] bg-[#f0f9e8] shadow-sm"
-          : "border-[#e8e8e4] bg-white hover:border-[#2D6A4F]/40 hover:bg-[#fafaf8]"
+          ? "border-[#2D6A4F] bg-[#2D6A4F] text-white"
+          : "border-[#e8e8e4] bg-white text-[#444] hover:border-[#2D6A4F]/40"
       }`}
     >
-      {selected && (
-        <span className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full bg-[#2D6A4F] text-white text-[10px]">
-          ✓
-        </span>
-      )}
       {children}
     </button>
   );
 }
 
-// ── Back button ────────────────────────────────────────────────────────────
+// ── Nav buttons ─────────────────────────────────────────────────────────────
 
 function BackBtn({ onClick }: { onClick: () => void }) {
   return (
@@ -157,85 +169,24 @@ function BackBtn({ onClick }: { onClick: () => void }) {
   );
 }
 
-// ── Continue button ────────────────────────────────────────────────────────
-
-function ContinueBtn({ onClick, disabled, label = "Fortsett" }: { onClick: () => void; disabled?: boolean; label?: string }) {
+function NextBtn({
+  onClick,
+  disabled,
+  label = "Neste →",
+}: {
+  onClick: () => void;
+  disabled?: boolean;
+  label?: string;
+}) {
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="w-full rounded-xl bg-[#2D6A4F] px-6 py-3.5 text-base font-medium text-white transition-all duration-150 ease-out hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
+      className="w-full rounded-xl bg-[#2D6A4F] px-6 py-3.5 text-base font-medium text-white transition-all duration-150 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
     >
       {label}
     </button>
-  );
-}
-
-// ── Arm speed flight arc visual ────────────────────────────────────────────
-
-function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
-  const arcs: { speed: ArmSpeed; label: string; color: string; d: string }[] = [
-    {
-      speed: "slow",
-      label: "Sakte",
-      color: "#3B82F6",
-      d: "M 10 65 C 30 20 80 5 120 35 C 150 55 160 85 160 90",
-    },
-    {
-      speed: "medium",
-      label: "Medium",
-      color: "#2D6A4F",
-      d: "M 10 65 C 30 10 90 15 130 45 C 155 65 170 90 175 90",
-    },
-    {
-      speed: "fast",
-      label: "Rask",
-      color: "#E8704A",
-      d: "M 10 65 C 35 5 105 20 145 55 C 165 75 185 90 190 90",
-    },
-  ];
-
-  return (
-    <div className="mb-6 rounded-xl bg-[#f5f5f3] p-4">
-      <svg viewBox="0 0 200 100" className="w-full" aria-hidden>
-        {arcs.map(({ speed, color, d }) => (
-          <path
-            key={speed}
-            d={d}
-            fill="none"
-            stroke={color}
-            strokeWidth={selected === speed ? 3 : 1.5}
-            strokeDasharray={selected && selected !== speed ? "4 3" : undefined}
-            opacity={selected && selected !== speed ? 0.35 : 1}
-          />
-        ))}
-        {/* Throw start */}
-        <circle cx="10" cy="65" r="4" fill="#888" />
-        <text x="4" y="82" fontSize="7" fill="#888" fontFamily="system-ui,sans-serif">Slipp</text>
-        {/* Labels */}
-        {arcs.map(({ speed, label, color, d }) => {
-          const endX = speed === "slow" ? 162 : speed === "medium" ? 177 : 192;
-          return (
-            <text
-              key={speed}
-              x={endX}
-              y={92}
-              fontSize="8"
-              fill={selected === speed ? color : "#bbb"}
-              fontFamily="system-ui,sans-serif"
-              textAnchor="end"
-              fontWeight={selected === speed ? "600" : "400"}
-            >
-              {label}
-            </text>
-          );
-        })}
-      </svg>
-      <p className="mt-1 text-center text-[10px] text-[#aaa]">
-        Armhastigheten avgjør hvilke disker som vil fly som tiltenkt for deg
-      </p>
-    </div>
   );
 }
 
@@ -243,51 +194,19 @@ function ArmSpeedVisual({ selected }: { selected: ArmSpeed | null }) {
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#F5F2EB] px-8 py-4 shadow-sm">
+    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#1E3D2F] px-8 py-4 shadow-sm">
       <Link href="/" className="flex shrink-0 items-center transition-opacity hover:opacity-85" style={{ gap: 10 }}>
-        <Image src="/logo.svg" alt="DiscDrop" width={84} height={90} style={{ borderRadius: 4 }} />
-        <span style={{ fontSize: 24, fontWeight: 700, lineHeight: 1 }}>
-          <span style={{ color: "#2D6A4F" }}>Disc</span>
-          <span style={{ color: "#B8E04A" }}>Drop</span>
-        </span>
+        <Image src="/discdrop-logo-dark.svg" alt="DiscDrop" width={170} height={36} className="h-[28px] w-auto md:h-[36px]" />
       </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
-        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hjem</Link>
-        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Hot Drops</a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">Bla gjennom</Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 bg-[rgba(45,106,79,0.15)] font-medium text-[#2D6A4F]">
+      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
+        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hjem</Link>
+        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hot Drops</a>
+        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Alle disker</Link>
+        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 bg-white/15 font-medium text-white">
           Bygg min bag
         </Link>
       </div>
     </nav>
-  );
-}
-
-// ── Summary row for review ─────────────────────────────────────────────────
-
-function SummaryRow({
-  label,
-  value,
-  onEdit,
-}: {
-  label: string;
-  value: string;
-  onEdit: () => void;
-}) {
-  return (
-    <div className="flex items-center justify-between gap-4 rounded-xl border border-[#e8e8e4] bg-white px-5 py-4">
-      <div>
-        <div className="text-xs font-semibold uppercase tracking-wider text-[#aaa]">{label}</div>
-        <div className="mt-0.5 text-sm font-medium text-[#1a1a1a]">{value}</div>
-      </div>
-      <button
-        type="button"
-        onClick={onEdit}
-        className="shrink-0 text-sm font-medium text-[#2D6A4F] transition-colors hover:text-[#1E4D3A]"
-      >
-        Rediger
-      </button>
-    </div>
   );
 }
 
@@ -297,55 +216,53 @@ export default function BuildBagPage() {
   const router = useRouter();
 
   const [step, setStep] = useState(1);
-  const [skillLevel, setSkillLevel] = useState<SkillLevel | null>(null);
-  const [armSpeed, setArmSpeed] = useState<ArmSpeed | null>(null);
-  const [discTypes, setDiscTypes] = useState<DiscType[]>([]);
-  const [budget, setBudget] = useState<BudgetOption | null>(null);
-  const [ownedDiscs, setOwnedDiscs] = useState("");
-  const [courseTypes, setCourseTypes] = useState<CourseType[]>([]);
+
+  // Step 1 — Nivå
+  const [level, setLevel] = useState<WizardAnswers["level"] | null>(null);
+
+  // Step 2 — Kasteteknikk
+  const [throwingStyle, setThrowingStyle] = useState<WizardAnswers["throwingStyle"] | null>(null);
+
+  // Step 3 — Behov (multi)
+  const [needs, setNeeds] = useState<string[]>([]);
+
+  // Step 4 — Preferanser
+  const [budget, setBudget] = useState<string | null>(null);
+  const [brands, setBrands] = useState<string[]>([]);
+  const [discCount, setDiscCount] = useState<string | null>(null);
+
   const [isLoading, setIsLoading] = useState(false);
   const [buildError, setBuildError] = useState<string | null>(null);
 
-  const TOTAL_STEPS = 7;
-
   function next() { setStep((s) => s + 1); }
   function back() { setStep((s) => Math.max(1, s - 1)); }
-  function goTo(n: number) { setStep(n); }
 
-  function toggleDiscType(t: DiscType) {
-    if (t === "full-bag") {
-      setDiscTypes((prev) => prev.includes("full-bag") ? [] : ["full-bag"]);
-      return;
-    }
-    setDiscTypes((prev) =>
-      prev.includes(t)
-        ? prev.filter((x) => x !== t && x !== "full-bag")
-        : [...prev.filter((x) => x !== "full-bag"), t]
-    );
+  function toggleNeed(n: string) {
+    setNeeds((prev) => (prev.includes(n) ? prev.filter((x) => x !== n) : [...prev, n]));
   }
 
-  function toggleCourseType(t: CourseType) {
-    if (t === "all") {
-      setCourseTypes((prev) => prev.includes("all") ? [] : ["all"]);
+  function toggleBrand(b: string) {
+    if (b === "no-preference") {
+      setBrands((prev) => (prev.includes("no-preference") ? [] : ["no-preference"]));
       return;
     }
-    setCourseTypes((prev) =>
-      prev.includes(t)
-        ? prev.filter((x) => x !== t && x !== "all")
-        : [...prev.filter((x) => x !== "all"), t]
+    setBrands((prev) =>
+      prev.includes(b)
+        ? prev.filter((x) => x !== b && x !== "no-preference")
+        : [...prev.filter((x) => x !== "no-preference"), b]
     );
   }
 
   async function handleBuild() {
-    if (!skillLevel || !armSpeed || !budget) return;
+    if (!level || !throwingStyle) return;
 
     const answers: WizardAnswers = {
-      skillLevel,
-      armSpeed,
-      discTypes,
+      level,
+      throwingStyle,
+      needs,
       budget,
-      ownedDiscs,
-      courseTypes,
+      brands,
+      discCount,
     };
 
     setIsLoading(true);
@@ -358,9 +275,7 @@ export default function BuildBagPage() {
         body: JSON.stringify(answers),
       });
 
-      if (!res.ok) {
-        throw new Error("API error");
-      }
+      if (!res.ok) throw new Error("API error");
 
       const data: BagApiResponse = await res.json();
 
@@ -393,36 +308,7 @@ export default function BuildBagPage() {
     }
   }
 
-  // Labels for review
-  const skillLabels: Record<SkillLevel, string> = {
-    beginner: "Nybegynner",
-    intermediate: "Middels",
-    advanced: "Avansert",
-    pro: "Pro / Elite",
-  };
-  const armLabels: Record<ArmSpeed, string> = {
-    slow: "Sakte — under 70 km/h",
-    medium: "Medium — 70–90 km/h",
-    fast: "Rask — 90+ km/h",
-  };
-  const discTypeLabels: Record<DiscType, string> = {
-    drivers: "Drivers",
-    midrange: "Mid-range",
-    putters: "Putters",
-    "full-bag": "Full bag mix",
-  };
-  const budgetLabels: Record<BudgetOption, string> = {
-    "under-500": "Under kr 500",
-    "500-1500": "kr 500–1 500",
-    "1500-3000": "kr 1 500–3 000",
-    "no-limit": "Ingen grense",
-  };
-  const courseLabels: Record<CourseType, string> = {
-    wooded: "Skog",
-    open: "Åpen bane",
-    mixed: "Mixed",
-    all: "Alle typer",
-  };
+  // ── Loading state ────────────────────────────────────────────────────────
 
   if (isLoading) {
     return (
@@ -445,315 +331,233 @@ export default function BuildBagPage() {
       <Navbar />
       <main className="flex flex-1 items-start justify-center px-4 py-12">
         <div className="w-full max-w-xl rounded-2xl border border-[#e0ddd4] bg-white p-8 shadow-sm">
-          <ProgressBar step={step} total={TOTAL_STEPS} />
+          <StepIndicator step={step} />
 
-          {/* ── Step 1: Skill level ── */}
+          {/* ── Step 1: Nivå ── */}
           {step === 1 && (
-            <div key={1} style={{ animation: "slideInRight 300ms ease forwards" }}>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Hva er ferdighetsnivået ditt?
+            <div key={1} style={{ animation: "fadeIn 250ms ease forwards" }}>
+              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+                Hva er ditt spillnivå?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
                 Vær ærlig — riktige disker for ditt nivå utgjør en enorm forskjell.
               </p>
-              <div className="flex flex-col gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {(
                   [
-                    { value: "beginner" as const, label: "Nybegynner", desc: "Akkurat begynt, lærer fortsatt å kaste konsekvent" },
-                    { value: "intermediate" as const, label: "Middels", desc: "Kan kaste 60–80m, kjenner de grunnleggende teknikkene" },
-                    { value: "advanced" as const, label: "Avansert", desc: "Spiller konkurranser, former kast jevnlig" },
+                    { value: "beginner" as const, label: "Nybegynner", desc: "Under 1 år med erfaring" },
+                    { value: "intermediate" as const, label: "Middels", desc: "1–3 år, kaster ca. 60–80m" },
+                    { value: "advanced" as const, label: "Avansert", desc: "3+ år, kaster 80m+" },
                     { value: "pro" as const, label: "Pro / Elite", desc: "Turneringsspiller, tourer eller sponset" },
                   ]
                 ).map(({ value, label, desc }) => (
-                  <OptionCard
+                  <SelectCard
                     key={value}
-                    selected={skillLevel === value}
-                    onClick={() => { setSkillLevel(value); setTimeout(next, 180); }}
+                    selected={level === value}
+                    onClick={() => setLevel(value)}
                   >
-                    <div className="font-medium text-[#1a1a1a]">{label}</div>
-                    <div className="mt-0.5 text-sm text-[#888]">{desc}</div>
-                  </OptionCard>
+                    <div className="font-semibold text-[#1a1a1a]">{label}</div>
+                    <div className="mt-1 text-xs leading-snug text-[#888]">{desc}</div>
+                  </SelectCard>
                 ))}
+              </div>
+              <div className="mt-6">
+                <NextBtn onClick={next} disabled={!level} />
               </div>
             </div>
           )}
 
-          {/* ── Step 2: Arm speed ── */}
+          {/* ── Step 2: Kasteteknikk ── */}
           {step === 2 && (
-            <div key={2} style={{ animation: "slideInRight 300ms ease forwards" }}>
+            <div key={2} style={{ animation: "fadeIn 250ms ease forwards" }}>
               <div className="mb-5">
                 <BackBtn onClick={back} />
               </div>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Hvor rask er armen din?
+              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+                Hva er din kastestil?
               </h2>
-              <p className="mb-4 text-sm text-[#666]">
-                Armhastigheten avgjør hvilke disker som vil fly som tiltenkt for deg.
+              <p className="mb-6 text-sm text-[#666]">
+                Dette påvirker hvilke disker som passer din teknikk.
               </p>
-              <ArmSpeedVisual selected={armSpeed} />
-              <div className="flex flex-col gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {(
                   [
-                    { value: "slow" as const, label: "Sakte — under 70 km/h", desc: "Understabile disker flyr rett; overstabile disker bukter seg til høyre umiddelbart" },
-                    { value: "medium" as const, label: "Medium — 70–90 km/h", desc: "De fleste disker flyr nær sin oppgitte flybane" },
-                    { value: "fast" as const, label: "Rask — 90+ km/h", desc: "Tåler overstabile disker; understabile disker vil hyzer-flippe" },
+                    { value: "rhbh" as const, label: "Høyre backhand", sub: "RHBH", desc: "Vanligst" },
+                    { value: "lhbh" as const, label: "Venstre backhand", sub: "LHBH", desc: "Speilvendt" },
+                    { value: "forehand" as const, label: "Primært forehand", sub: "Flick / sidearm", desc: "" },
+                    { value: "both" as const, label: "Begge", sub: "Allsidig", desc: "Bruker begge" },
                   ]
-                ).map(({ value, label, desc }) => (
-                  <OptionCard
+                ).map(({ value, label, sub, desc }) => (
+                  <SelectCard
                     key={value}
-                    selected={armSpeed === value}
-                    onClick={() => { setArmSpeed(value); setTimeout(next, 180); }}
+                    selected={throwingStyle === value}
+                    onClick={() => setThrowingStyle(value)}
                   >
-                    <div className="font-medium text-[#1a1a1a]">{label}</div>
-                    <div className="mt-0.5 text-sm text-[#888]">{desc}</div>
-                  </OptionCard>
+                    <div className="font-semibold text-[#1a1a1a]">{label}</div>
+                    <div className="mt-1 text-xs leading-snug text-[#888]">
+                      {sub}{desc ? ` — ${desc}` : ""}
+                    </div>
+                  </SelectCard>
                 ))}
+              </div>
+              <div className="mt-6">
+                <NextBtn onClick={next} disabled={!throwingStyle} />
               </div>
             </div>
           )}
 
-          {/* ── Step 3: Disc types ── */}
+          {/* ── Step 3: Behov ── */}
           {step === 3 && (
-            <div key={3} style={{ animation: "slideInRight 300ms ease forwards" }}>
+            <div key={3} style={{ animation: "fadeIn 250ms ease forwards" }}>
               <div className="mb-5">
                 <BackBtn onClick={back} />
               </div>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Hvilke disker vil du ha?
+              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+                Hva trenger du?
               </h2>
               <p className="mb-6 text-sm text-[#666]">
-                Velg alle som passer, eller velg full bag for en balansert anbefaling.
+                Velg ett eller flere områder du vil forbedre.
               </p>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap gap-2">
                 {(
                   [
-                    { value: "drivers" as const, label: "Drivers", desc: "Distance- og fairway-drivere for lengre kast" },
-                    { value: "midrange" as const, label: "Mid-range", desc: "Allsidige disker for approach og mellomdistanse" },
-                    { value: "putters" as const, label: "Putters", desc: "Approach-puttere og puttedisker" },
-                    { value: "full-bag" as const, label: "Full bag mix", desc: "En balansert bag som dekker alle distanser" },
+                    { value: "distance", label: "Mer distanse" },
+                    { value: "precision", label: "Bedre presisjon" },
+                    { value: "approach", label: "Sterkere innspill" },
+                    { value: "putting", label: "Sikrere putting" },
+                    { value: "wind", label: "Disker for vind" },
+                    { value: "full-bag", label: "Komplett bag" },
                   ]
-                ).map(({ value, label, desc }) => (
-                  <MultiCard
+                ).map(({ value, label }) => (
+                  <Pill
                     key={value}
-                    selected={discTypes.includes(value)}
-                    onClick={() => toggleDiscType(value)}
+                    selected={needs.includes(value)}
+                    onClick={() => toggleNeed(value)}
                   >
-                    <div className="pr-6 font-medium text-[#1a1a1a]">{label}</div>
-                    <div className="mt-0.5 text-sm text-[#888]">{desc}</div>
-                  </MultiCard>
+                    {label}
+                  </Pill>
                 ))}
               </div>
-              <div className="mt-6">
-                <ContinueBtn onClick={next} />
-              </div>
-            </div>
-          )}
-
-          {/* ── Step 4: Budget ── */}
-          {step === 4 && (
-            <div key={4} style={{ animation: "slideInRight 300ms ease forwards" }}>
-              <div className="mb-5">
-                <BackBtn onClick={back} />
-              </div>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Hva er budsjettet ditt?
-              </h2>
-              <p className="mb-6 text-sm text-[#666]">
-                Vi tilpasser baggen din til budsjettet ditt.
-              </p>
-              <div className="flex flex-col gap-3">
-                {(
-                  [
-                    { value: "under-500" as const, label: "Under kr 500", desc: "3–4 disker — et startsett for å komme i gang" },
-                    { value: "500-1500" as const, label: "kr 500–1 500", desc: "7–9 disker — en solid nybegynner- eller treningsbag" },
-                    { value: "1500-3000" as const, label: "kr 1 500–3 000", desc: "10–12 disker — en godt avrundet spillebag" },
-                    { value: "no-limit" as const, label: "Ingen grense", desc: "Full bag — 13–15 disker for enhver situasjon" },
-                  ]
-                ).map(({ value, label, desc }) => (
-                  <OptionCard
-                    key={value}
-                    selected={budget === value}
-                    onClick={() => { setBudget(value); setTimeout(next, 180); }}
-                  >
-                    <div className="font-medium text-[#1a1a1a]">{label}</div>
-                    <div className="mt-0.5 text-sm text-[#888]">{desc}</div>
-                  </OptionCard>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* ── Step 5: Discs already owned ── */}
-          {step === 5 && (
-            <div key={5} style={{ animation: "slideInRight 300ms ease forwards" }}>
-              <div className="mb-5">
-                <BackBtn onClick={back} />
-              </div>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Disker du allerede eier
-              </h2>
-              <p className="mb-6 text-sm text-[#666]">
-                Valgfritt — list opp disker du allerede har, så vi kan notere dem. Dette vil bli brukt til å unngå duplikater i en fremtidig versjon.
-              </p>
-              <textarea
-                value={ownedDiscs}
-                onChange={(e) => setOwnedDiscs(e.target.value)}
-                placeholder="e.g. Innova Aviar, Discraft Buzzz, Innova Destroyer…"
-                rows={4}
-                className="w-full resize-none rounded-xl border border-[#ddd] bg-[#fafaf8] px-4 py-3 text-sm text-[#1a1a1a] outline-none transition-colors focus:border-[#2D6A4F]"
-              />
-              <div className="mt-6 flex gap-3">
-                <button
-                  type="button"
-                  onClick={next}
-                  className="flex-1 rounded-xl border border-[#ddd] bg-white px-6 py-3 text-sm font-medium text-[#666] transition-all hover:border-[#2D6A4F]/40"
-                >
-                  Hopp over
-                </button>
-                <ContinueBtn onClick={next} />
-              </div>
-            </div>
-          )}
-
-          {/* ── Step 6: Course types ── */}
-          {step === 6 && (
-            <div key={6} style={{ animation: "slideInRight 300ms ease forwards" }}>
-              <div className="mb-5">
-                <BackBtn onClick={back} />
-              </div>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Hvilke baner spiller du på?
-              </h2>
-              <p className="mb-6 text-sm text-[#666]">
-                Banetype påvirker om du trenger flere midrangers og puttere eller flere drivere.
-              </p>
-              <div className="flex flex-col gap-3">
-                {(
-                  [
-                    { value: "wooded" as const, label: "Skog / Tett", desc: "Korte hull med mye trær — presisjon over distanse" },
-                    { value: "open" as const, label: "Åpen / Links", desc: "Brede fairways der distanse og vindmotstand teller" },
-                    { value: "mixed" as const, label: "Mixed", desc: "Litt av begge — typisk turneringsbane" },
-                    { value: "all" as const, label: "Alle typer", desc: "Jeg spiller på ulike typer baner" },
-                  ]
-                ).map(({ value, label, desc }) => (
-                  <MultiCard
-                    key={value}
-                    selected={courseTypes.includes(value)}
-                    onClick={() => toggleCourseType(value)}
-                  >
-                    <div className="pr-6 font-medium text-[#1a1a1a]">{label}</div>
-                    <div className="mt-0.5 text-sm text-[#888]">{desc}</div>
-                  </MultiCard>
-                ))}
-              </div>
-              <div className="mt-6">
-                <ContinueBtn onClick={next} />
-              </div>
-            </div>
-          )}
-
-          {/* ── Step 7: Review ── */}
-          {step === 7 && (
-            <div key={7} style={{ animation: "slideInRight 300ms ease forwards" }}>
-              <div className="mb-5">
-                <BackBtn onClick={back} />
-              </div>
-              <h2 className="mb-2 font-serif text-2xl font-semibold text-[#1a1a1a]">
-                Klar til å bygge baggen din?
-              </h2>
-              <p className="mb-6 text-sm text-[#666]">
-                Se gjennom svarene dine nedenfor. Klikk Rediger for å gå tilbake og endre noe.
-              </p>
-
-              <div className="flex flex-col gap-3">
-                <SummaryRow
-                  label="Ferdighetsnivå"
-                  value={skillLevel ? skillLabels[skillLevel] : "—"}
-                  onEdit={() => goTo(1)}
-                />
-                <SummaryRow
-                  label="Armhastighet"
-                  value={armSpeed ? armLabels[armSpeed] : "—"}
-                  onEdit={() => goTo(2)}
-                />
-                <SummaryRow
-                  label="Disktyper"
-                  value={
-                    discTypes.length > 0
-                      ? discTypes.map((t) => discTypeLabels[t]).join(", ")
-                      : "Full bag mix"
-                  }
-                  onEdit={() => goTo(3)}
-                />
-                <SummaryRow
-                  label="Budsjett"
-                  value={budget ? budgetLabels[budget] : "—"}
-                  onEdit={() => goTo(4)}
-                />
-                <SummaryRow
-                  label="Disker du eier"
-                  value={ownedDiscs.trim() || "Ingen oppgitt"}
-                  onEdit={() => goTo(5)}
-                />
-                <SummaryRow
-                  label="Banetyper"
-                  value={
-                    courseTypes.length > 0
-                      ? courseTypes.map((t) => courseLabels[t]).join(", ")
-                      : "Ikke oppgitt"
-                  }
-                  onEdit={() => goTo(6)}
-                />
-              </div>
-
               <div className="mt-8">
-                <button
-                  type="button"
-                  onClick={handleBuild}
-                  disabled={!skillLevel || !armSpeed || !budget}
-                  className="w-full rounded-xl bg-[#B8E04A] px-6 py-4 text-base font-semibold text-[#1E3D2F] transition-all duration-150 ease-out hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
-                >
-                  Bygg min bag →
-                </button>
-                {(!skillLevel || !armSpeed || !budget) && (
-                  <p className="mt-2 text-center text-xs text-[#E8704A]">
-                    Gå tilbake og fullfør alle obligatoriske steg først.
-                  </p>
-                )}
-                {buildError && (
-                  <div className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-[#E8704A]/30 bg-[#fdf4f1] px-4 py-3">
-                    <p className="text-sm text-[#E8704A]">{buildError}</p>
-                    <button
-                      type="button"
-                      onClick={handleBuild}
-                      className="shrink-0 text-sm font-medium text-[#E8704A] underline"
-                    >
-                      Prøv igjen
-                    </button>
-                  </div>
-                )}
+                <NextBtn onClick={next} disabled={needs.length === 0} />
               </div>
+            </div>
+          )}
+
+          {/* ── Step 4: Preferanser ── */}
+          {step === 4 && (
+            <div key={4} style={{ animation: "fadeIn 250ms ease forwards" }}>
+              <div className="mb-5">
+                <BackBtn onClick={back} />
+              </div>
+              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+                Noen siste preferanser?
+              </h2>
+              <p className="mb-6 text-sm text-[#666]">
+                Valgfritt — hjelper oss å gi bedre forslag.
+              </p>
+
+              {/* Budget */}
+              <div className="mb-6">
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#aaa]">Budsjett</p>
+                <div className="flex flex-wrap gap-2">
+                  {(
+                    [
+                      { value: "under-500", label: "Under kr 500" },
+                      { value: "500-1000", label: "kr 500–1000" },
+                      { value: "1000+", label: "kr 1000+" },
+                      { value: "doesnt-matter", label: "Spiller ingen rolle" },
+                    ]
+                  ).map(({ value, label }) => (
+                    <Pill key={value} selected={budget === value} onClick={() => setBudget(budget === value ? null : value)}>
+                      {label}
+                    </Pill>
+                  ))}
+                </div>
+              </div>
+
+              {/* Favorittmerke */}
+              <div className="mb-6">
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#aaa]">Favorittmerke</p>
+                <div className="flex flex-wrap gap-2">
+                  {(
+                    [
+                      { value: "innova", label: "Innova" },
+                      { value: "discmania", label: "Discmania" },
+                      { value: "kastaplast", label: "Kastaplast" },
+                      { value: "mvp", label: "MVP" },
+                      { value: "discraft", label: "Discraft" },
+                      { value: "latitude64", label: "Latitude 64" },
+                      { value: "no-preference", label: "Ingen preferanse" },
+                    ]
+                  ).map(({ value, label }) => (
+                    <Pill key={value} selected={brands.includes(value)} onClick={() => toggleBrand(value)}>
+                      {label}
+                    </Pill>
+                  ))}
+                </div>
+              </div>
+
+              {/* Antall disker */}
+              <div className="mb-8">
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#aaa]">Antall disker</p>
+                <div className="flex flex-wrap gap-2">
+                  {(
+                    [
+                      { value: "3-5", label: "3–5 starter" },
+                      { value: "6-10", label: "6–10 standard" },
+                      { value: "10+", label: "10+ turneringsbag" },
+                    ]
+                  ).map(({ value, label }) => (
+                    <Pill key={value} selected={discCount === value} onClick={() => setDiscCount(discCount === value ? null : value)}>
+                      {label}
+                    </Pill>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleBuild}
+                className="w-full rounded-xl bg-[#B8E04A] px-6 py-4 text-base font-semibold text-[#1E3D2F] transition-all duration-150 hover:brightness-110"
+              >
+                Vis forslag →
+              </button>
+
+              {buildError && (
+                <div className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-[#E8704A]/30 bg-[#fdf4f1] px-4 py-3">
+                  <p className="text-sm text-[#E8704A]">{buildError}</p>
+                  <button
+                    type="button"
+                    onClick={handleBuild}
+                    className="shrink-0 text-sm font-medium text-[#E8704A] underline"
+                  >
+                    Prøv igjen
+                  </button>
+                </div>
+              )}
             </div>
           )}
         </div>
       </main>
 
-      <footer className="bg-[#1E3D2F] px-6 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 text-[13px] sm:flex-row sm:justify-between">
-          <span className="text-[#9DC08B]">© 2026 DiscDrop — Kviist Studio</span>
-          <span className="text-[#7a9a82] italic">
-            Vi tjener provisjon på kjøp via lenker på siden
-          </span>
-          <div className="flex items-center gap-4 text-[#9DC08B]">
-            <Link href="/personvern" className="hover:text-[#F5F2EB] transition-colors">
-              Personvern
-            </Link>
-            <a href="mailto:kontakt@discdrop.net" className="hover:text-[#F5F2EB] transition-colors">
-              kontakt@discdrop.net
-            </a>
+      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
+          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+          <div className="flex gap-4">
+            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>
+
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }

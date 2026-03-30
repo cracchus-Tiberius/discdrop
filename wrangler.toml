@@ -1,0 +1,8 @@
+name = "discdrop"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "out"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "discdrop-alerts"
+database_id = "7885a271-f037-463d-9284-8f9be6c477f8"

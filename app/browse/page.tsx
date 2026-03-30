@@ -6,13 +6,14 @@ import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
-import { getScrapedPrice } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, getDiscLastScraped } from "@/lib/disc-utils";
 import { discs } from "@/data/discs.js";
 
 type Disc = (typeof discs)[number];
 type TypeFilter = "all" | "distance" | "fairway" | "midrange" | "putter";
-type SortBy = "price" | "stores" | "speed-asc" | "speed-desc" | "az";
+type SortBy = "newest" | "price" | "stores" | "speed-asc" | "speed-desc" | "fade-desc" | "turn-asc" | "az";
 type ChipId =
+  | "available"
   | "beginner"
   | "distance"
   | "overstable"
@@ -43,12 +44,21 @@ const TYPE_OPTIONS: { id: TypeFilter; label: string }[] = [
 ];
 
 const SORT_OPTIONS: { id: SortBy; label: string }[] = [
+  { id: "newest", label: "Nyeste" },
   { id: "price", label: "Beste pris" },
   { id: "stores", label: "Flest butikker" },
   { id: "speed-asc", label: "Hastighet ↑" },
   { id: "speed-desc", label: "Hastighet ↓" },
   { id: "az", label: "Navn A–Å" },
 ];
+
+// Chip-implied sort overrides (active when user hasn't manually set sort)
+const CHIP_IMPLIED_SORT: Partial<Record<ChipId, SortBy>> = {
+  distance: "speed-desc",
+  overstable: "fade-desc",
+  understable: "turn-asc",
+  "most-stores": "stores",
+};
 
 const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
   hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
@@ -65,6 +75,12 @@ const CHIPS: {
   label: string;
   fn?: (d: Disc) => boolean;
 }[] = [
+  {
+    id: "available",
+    emoji: "🛒",
+    label: "Tilgjengelig nå",
+    fn: (d) => bestPriceNOK(d) !== null,
+  },
   {
     id: "hot",
     emoji: "🔥",
@@ -155,39 +171,58 @@ function FlightBoxes({ flight }: { flight: Disc["flight"] }) {
 }
 
 function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
-    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#F5F2EB] px-8 py-4 shadow-sm">
-      <Link
-        href="/"
-        className="flex shrink-0 items-center transition-opacity hover:opacity-85"
-        style={{ gap: 10 }}
-      >
-        <Image
-          src="/logo.svg"
-          alt="DiscDrop"
-          width={84}
-          height={90}
-          style={{ borderRadius: 4 }}
-        />
-        <span style={{ fontSize: 24, fontWeight: 700, lineHeight: 1 }}>
-          <span style={{ color: "#2D6A4F" }}>Disc</span>
-          <span style={{ color: "#B8E04A" }}>Drop</span>
-        </span>
-      </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#444] md:flex">
-        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
-          Hjem
+    <nav className="sticky top-0 z-50 bg-[#1E3D2F] shadow-sm">
+      <div className="relative flex w-full items-center px-4 py-2 md:px-8 md:py-4">
+        <Link
+          href="/"
+          className="flex shrink-0 items-center transition-opacity hover:opacity-85"
+          style={{ gap: 8 }}
+        >
+          <Image
+            src="/discdrop-logo-dark.svg"
+            alt="DiscDrop"
+            width={170}
+            height={36}
+            className="h-[28px] w-auto md:h-[36px]"
+          />
         </Link>
-        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
-          Hot Drops
-        </a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 bg-[rgba(45,106,79,0.15)] font-medium text-[#2D6A4F]">
-          Bla gjennom
-        </Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-[rgba(45,106,79,0.08)] hover:text-[#1a1a1a]">
-          Bygg min bag
-        </Link>
+
+        {/* Desktop nav */}
+        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
+          <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hjem</Link>
+          <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hot Drops</a>
+          <Link href="/browse" className="rounded-full px-3.5 py-1.5 bg-white/15 font-medium text-white">Alle disker</Link>
+          <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Bygg min bag</Link>
+        </div>
+
+        {/* Hamburger — mobile only */}
+        <button
+          type="button"
+          onClick={() => setMobileOpen((o) => !o)}
+          className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-[#9DC08B] transition-colors hover:bg-white/10 md:hidden"
+          aria-label="Meny"
+        >
+          {mobileOpen ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
+          )}
+        </button>
       </div>
+
+      {/* Mobile menu panel */}
+      {mobileOpen && (
+        <div className="border-t border-white/10 bg-[#1E3D2F] px-4 pb-3 pt-2 md:hidden">
+          <div className="flex flex-col gap-1 text-sm text-[#9DC08B]">
+            <Link href="/" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-white/10 hover:text-white">Hjem</Link>
+            <a href="/#hot-drops" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-white/10 hover:text-white">Hot Drops</a>
+            <Link href="/browse" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 font-medium text-white">Alle disker</Link>
+            <Link href="/bag/build" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-white/10 hover:text-white">Bygg min bag</Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
@@ -208,10 +243,11 @@ function BrowseContent() {
     () => searchParams.get("brand") ?? "Alle merker"
   );
   const [sort, setSort] = useState<SortBy>(
-    () => (searchParams.get("sort") as SortBy) ?? "price"
+    () => (searchParams.get("sort") as SortBy) ?? "newest"
   );
+  const [sortManuallySet, setSortManuallySet] = useState(() => searchParams.has("sort"));
   const [activeChip, setActiveChip] = useState<ChipId | null>(
-    () => (searchParams.get("chip") as ChipId) ?? null
+    () => (searchParams.get("chip") as ChipId) ?? "available"
   );
 
   // Push filter changes to URL (replace so Back works naturally)
@@ -219,7 +255,7 @@ function BrowseContent() {
     (updates: Record<string, string | null>) => {
       const params = new URLSearchParams(searchParams.toString());
       for (const [k, v] of Object.entries(updates)) {
-        if (!v || v === "all" || v === "Alle merker" || v === "price") {
+        if (!v || v === "all" || v === "Alle merker" || v === "newest" || v === "available") {
           params.delete(k);
         } else {
           params.set(k, v);
@@ -248,6 +284,7 @@ function BrowseContent() {
 
   function handleSort(v: SortBy) {
     setSort(v);
+    setSortManuallySet(true);
     pushUrl({ sort: v });
   }
 
@@ -261,13 +298,17 @@ function BrowseContent() {
     setQuery("");
     setTypeFilter("all");
     setBrand("Alle merker");
-    setSort("price");
-    setActiveChip(null);
+    setSort("newest");
+    setSortManuallySet(false);
+    setActiveChip("available");
     router.replace(pathname, { scroll: false });
   }
 
-  // Effective sort: "most-stores" chip overrides
-  const effectiveSort: SortBy = activeChip === "most-stores" ? "stores" : sort;
+  // Effective sort: chip-implied sort overrides default when user hasn't manually set sort
+  const effectiveSort: SortBy =
+    !sortManuallySet && activeChip && CHIP_IMPLIED_SORT[activeChip]
+      ? CHIP_IMPLIED_SORT[activeChip]!
+      : sort;
 
   const filtered = useMemo(() => {
     let list = discs as Disc[];
@@ -307,7 +348,16 @@ function BrowseContent() {
 
     // Sort
     list = [...list];
-    if (effectiveSort === "price") {
+    if (effectiveSort === "newest") {
+      list.sort((a, b) => {
+        const da = getDiscLastScraped(a.id);
+        const db = getDiscLastScraped(b.id);
+        if (!da && !db) return 0;
+        if (!da) return 1;
+        if (!db) return -1;
+        return db.localeCompare(da);
+      });
+    } else if (effectiveSort === "price") {
       list.sort((a, b) => {
         const pa = bestPriceNOK(a) ?? Infinity;
         const pb = bestPriceNOK(b) ?? Infinity;
@@ -319,6 +369,10 @@ function BrowseContent() {
       list.sort((a, b) => a.flight.speed - b.flight.speed);
     } else if (effectiveSort === "speed-desc") {
       list.sort((a, b) => b.flight.speed - a.flight.speed);
+    } else if (effectiveSort === "fade-desc") {
+      list.sort((a, b) => b.flight.fade - a.flight.fade);
+    } else if (effectiveSort === "turn-asc") {
+      list.sort((a, b) => a.flight.turn - b.flight.turn);
     } else if (effectiveSort === "az") {
       list.sort((a, b) => a.name.localeCompare(b.name));
     }
@@ -330,8 +384,8 @@ function BrowseContent() {
     query !== "" ||
     typeFilter !== "all" ||
     brand !== "Alle merker" ||
-    sort !== "price" ||
-    activeChip !== null;
+    sort !== "newest" ||
+    activeChip !== "available";
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
@@ -345,14 +399,16 @@ function BrowseContent() {
       <Navbar />
 
       {/* Hero banner */}
-      <section className="w-full bg-[#1E3D2F] px-4 py-12 sm:px-8">
+      <section className="w-full bg-[#1E3D2F] px-4 py-6 sm:px-8 sm:py-12">
         <div className="mx-auto max-w-6xl">
-          <h1 className="font-serif text-4xl font-semibold tracking-tight text-[#F5F2EB] sm:text-5xl">
-            Bla gjennom disker
-          </h1>
-          <p className="mt-2 text-[#9DC08B]">
-            {discs.length} disker fra {BRAND_COUNT} merker
-          </p>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <h1 className="font-serif text-2xl font-semibold tracking-tight text-[#F5F2EB] sm:text-5xl">
+              Alle disker
+            </h1>
+            <p className="text-sm text-[#9DC08B] sm:text-base">
+              · {discs.length} disker fra {BRAND_COUNT} merker
+            </p>
+          </div>
           <div className="mt-6">
             <SearchInput
               value={query}
@@ -448,18 +504,23 @@ function BrowseContent() {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {filtered.map((d) => {
               const price = bestPriceNOK(d);
+              const unavailable = price === null;
               return (
                 <Link
                   key={d.id}
                   href={`/disc/${d.id}`}
-                  className="rounded-2xl border border-[#e8e8e4] bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  className={`rounded-2xl border bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-md ${
+                    unavailable
+                      ? "border-[#ece9e1] opacity-60"
+                      : "border-[#e8e8e4]"
+                  }`}
                 >
                   <div
                     className="relative mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]"
                     style={{ height: 100 }}
                   >
                     <DiscImage
-                      src={"image" in d ? (d.image as string) : ""}
+                      src={getDiscImage(d)}
                       name={d.name}
                       brand={d.brand}
                       type={d.type}
@@ -514,14 +575,22 @@ function BrowseContent() {
                   </div>
                   <FlightBoxes flight={d.flight} />
                   <div className="mt-3 border-t border-[#f0ede6] pt-3">
-                    <p className="font-serif text-lg font-semibold text-[#2D6A4F]">
-                      {price != null ? `${price} kr` : "—"}
-                    </p>
-                    {storeCount(d) > 0 && (
-                      <p className="text-xs text-[#888]">
-                        {storeCount(d)} butikk
-                        {storeCount(d) === 1 ? "" : "er"}
-                      </p>
+                    {unavailable ? (
+                      <span className="inline-flex items-center rounded-full bg-[#f0ede6] px-2.5 py-1 text-xs font-medium text-[#aaa]">
+                        Ikke i butikk
+                      </span>
+                    ) : (
+                      <>
+                        <p className="font-serif text-lg font-semibold text-[#2D6A4F]">
+                          fra kr {price}
+                        </p>
+                        {storeCount(d) > 0 && (
+                          <p className="text-xs text-[#888]">
+                            {storeCount(d)} butikk
+                            {storeCount(d) === 1 ? "" : "er"}
+                          </p>
+                        )}
+                      </>
                     )}
                   </div>
                 </Link>
@@ -531,22 +600,13 @@ function BrowseContent() {
         )}
       </main>
 
-      <footer className="mt-16 bg-[#1E3D2F] px-6 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 text-[13px] sm:flex-row sm:justify-between">
-          <span className="text-[#9DC08B]">© 2026 DiscDrop — Kviist Studio</span>
-          <div className="flex items-center gap-4 text-[#9DC08B]">
-            <Link
-              href="/personvern"
-              className="transition-colors hover:text-[#F5F2EB]"
-            >
-              Personvern
-            </Link>
-            <a
-              href="mailto:kontakt@discdrop.net"
-              className="transition-colors hover:text-[#F5F2EB]"
-            >
-              kontakt@discdrop.net
-            </a>
+      <footer className="mt-16 border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
+          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+          <div className="flex gap-4">
+            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>

@@ -24,8 +24,11 @@ Package manager: pnpm (always use pnpm, never npm).
 - Font: Playfair Display (serif headlines) + DM Sans (body)
 - Navbar: logo left, links centered, pill hover effect
 
+## Reference Docs
+- docs/DiscDrop_Knowledge_Base.md — disc brands, plastic types, player sponsorships, naming conventions, regex patterns for scraper matching. Read when building or updating scraper logic.
+
 ## Data
-- discs.js — source of truth for disc catalogue (172 discs)
+- discs.js — source of truth for disc catalogue (557 discs, 20 brands)
 - scraped-prices.json — real store prices, updated by pnpm scrape
 - Only show prices from scraped-prices.json, never mock store data
 - Run pnpm scrape to update prices from Norwegian stores

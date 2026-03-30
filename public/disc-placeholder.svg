@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -30 200 60" role="img" aria-label="Disc placeholder">
+  <ellipse cx="0" cy="0" rx="90" ry="22" fill="#ccc"/>
+  <ellipse cx="0" cy="0" rx="84" ry="17" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="4"/>
+  <ellipse cx="0" cy="-6" rx="36" ry="9" fill="rgba(255,255,255,0.2)"/>
+</svg>

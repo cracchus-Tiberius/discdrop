@@ -7,7 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "scrape": "node scripts/scraper.js"
+    "scrape": "node scripts/scraper.js",
+    "fetch-images": "node scripts/fetch-images.js",
+    "scrape:ace": "node scripts/scrape-aceshop.js",
+    "scrape:frisbeebutikken": "node scripts/scrape-frisbeebutikken.js",
+    "scrape:golfdiscer": "node scripts/scrape-golfdiscer.js",
+    "scrape:frisbeesor": "node scripts/scrape-frisbeesor.js",
+    "scrape:all": "pnpm scrape && pnpm scrape:ace && pnpm scrape:frisbeebutikken && pnpm scrape:golfdiscer && pnpm scrape:frisbeesor && pnpm fetch-images && pnpm scrape:enrich && pnpm check-alerts",
+    "scrape:enrich": "node scripts/enrich-variants.js",
+    "scrape:audit": "node scripts/scrape-audit.js",
+    "check-alerts": "node scripts/check-alerts.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.80.0",
@@ -27,6 +36,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "node-fetch": "^2.7.0",
+    "playwright": "^1.58.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

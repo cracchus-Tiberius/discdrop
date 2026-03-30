@@ -15,36 +15,39 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "DiscDrop — Find your flight. Skip the legwork.",
+  title: "DiscDrop — Sammenlign diskgolfpriser i Norge",
   description:
-    "Compare disc golf prices across Norwegian stores. See real landed cost including shipping and 25% MVA before you buy.",
+    "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus. Oppdatert daglig.",
   keywords: [
+    "diskgolf",
+    "diskgolf norge",
+    "kjøp diskgolfdisker",
+    "diskgolf pris",
+    "sammenlign diskgolfpriser",
     "disc golf",
-    "disker",
-    "discgolf norge",
-    "kjøp disker",
-    "discgolf pris",
-    "sammenlign disker",
   ],
   icons: { icon: "/logo.svg" },
   metadataBase: new URL("https://discdrop.net"),
   alternates: {
     canonical: "https://discdrop.net",
+    languages: {
+      "nb": "https://discdrop.net",
+    },
   },
   openGraph: {
-    title: "DiscDrop — Disc golf prissammenligning for Norge",
+    title: "DiscDrop — Sammenlign diskgolfpriser i Norge",
     description:
-      "Se hvilke butikker som har disken du vil ha, til hvilken pris — inkludert frakt og MVA.",
+      "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus.",
     url: "https://discdrop.net",
     type: "website",
-    images: [{ url: "/og-image.png" }],
+    images: [{ url: "/discdrop-logo-clean.svg" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DiscDrop — Disc golf prissammenligning for Norge",
+    title: "DiscDrop — Sammenlign diskgolfpriser i Norge",
     description:
-      "Se hvilke butikker som har disken du vil ha, til hvilken pris — inkludert frakt og MVA.",
-    images: ["/og-image.png"],
+      "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus.",
+    images: ["/discdrop-logo-clean.svg"],
   },
 };
 
@@ -55,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="nb"
       className={`${syne.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body

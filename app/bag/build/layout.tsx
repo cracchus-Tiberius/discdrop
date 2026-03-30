@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bygg din disc golf bag — AI bag builder | DiscDrop",
+  title: "Bygg din bag — Få personlige diskgolfanbefalinger | DiscDrop",
   description:
-    "Få personlige disc-anbefalinger basert på ferdighetsnivå, armhastighet og spillestil.",
+    "Svar på 4 spørsmål og få AI-drevne anbefalinger for din diskgolfbag. Tilpasset ditt nivå og kastestil.",
+  alternates: {
+    canonical: "https://discdrop.net/bag/build",
+  },
+  openGraph: {
+    title: "Bygg din bag — Få personlige diskgolfanbefalinger | DiscDrop",
+    description:
+      "Svar på 4 spørsmål og få AI-drevne anbefalinger for din diskgolfbag. Tilpasset ditt nivå og kastestil.",
+    url: "https://discdrop.net/bag/build",
+  },
 };
 
 export default function BagBuildLayout({
