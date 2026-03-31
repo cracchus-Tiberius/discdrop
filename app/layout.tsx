@@ -40,14 +40,14 @@ export const metadata: Metadata = {
       "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus.",
     url: "https://discdrop.net",
     type: "website",
-    images: [{ url: "/discdrop-logo-clean.svg" }],
+    images: [{ url: "https://discdrop.net/og.png", width: 1200, height: 630, alt: "DiscDrop — Sammenlign diskgolfpriser i Norge" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "DiscDrop — Sammenlign diskgolfpriser i Norge",
     description:
       "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus.",
-    images: ["/discdrop-logo-clean.svg"],
+    images: ["https://discdrop.net/og.png"],
   },
 };
 

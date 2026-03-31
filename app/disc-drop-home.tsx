@@ -513,8 +513,24 @@ export function DiscDropHome() {
     setTimeout(() => input.focus(), 400);
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DiscDrop",
+    "url": "https://discdrop.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://discdrop.net/og.png",
+    },
+    "description": "Sammenlign diskgolfpriser fra norske butikker. Oppdatert daglig.",
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F2EB]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar
         showMobileSearch={!heroSearchVisible}
         onSearchClick={scrollToSearch}
