@@ -7,6 +7,7 @@ import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
+import topSellers from "@/data/top-sellers.json";
 import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -427,14 +428,10 @@ function WhyDiscDrop() {
 
 
 // ── Popular discs ───────────────────────────────────────────────────────────
-const POPULAR_IDS = [
-  "innova-destroyer",
-  "discraft-buzzz",
-  "kastaplast-berg",
-  "innova-aviar",
-  "dynamic-judge",
-  "latitude-river",
-];
+const POPULAR_IDS = topSellers.discs
+  .filter((d) => d.catalogId !== null)
+  .slice(0, 8)
+  .map((d) => d.catalogId as string);
 
 function PopularDiscs() {
   const popularDiscs = POPULAR_IDS.map((id) =>
