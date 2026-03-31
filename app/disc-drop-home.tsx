@@ -19,18 +19,20 @@ function bestPriceNOK(disc: Disc): number | null {
 // ── Badge ──────────────────────────────────────────────────────────────────
 const BADGE_STYLES: Record<string, string> = {
   hot: "bg-[#E8704A] text-white",
-  new: "bg-[#4CAF82] text-white",
-  "new-drop": "bg-[#4CAF82] text-white",
-  limited: "bg-[#9B59B6] text-white",
-  "tour-series": "bg-[#6B5B95] text-white",
+  new: "bg-[#2D6A4F] text-white",
+  "new-drop": "bg-[#2D6A4F] text-white",
+  limited: "bg-[#E8704A] text-white",
+  "first-run": "bg-[#C0392B] text-white",
+  "tour-series": "bg-[#B8E04A] text-[#1E3D2F]",
   "sold-out": "bg-[#888] text-white",
 };
 
 const BADGE_LABELS: Record<string, string> = {
   hot: "HOT",
-  new: "NY DROP",
-  "new-drop": "NY DROP",
-  limited: "BEGRENSET",
+  new: "NY",
+  "new-drop": "NY",
+  limited: "LIMITED",
+  "first-run": "FIRST RUN",
   "tour-series": "TOUR SERIES",
   "sold-out": "UTSOLGT",
 };
@@ -101,20 +103,21 @@ const ALL_HOT_EDITION_KEYWORDS = new Set([
 
 /** Return the badge tag that best describes an edition string */
 function editionToBadge(edition: string | null, inStock: boolean, lastScraped?: string): string {
-  if (!edition) return inStock ? 'hot' : 'sold-out';
   if (!inStock) return 'sold-out';
+  if (!edition) return 'hot';
 
-  // Check if newly scraped (within last 7 days)
-  if (lastScraped) {
-    const scrapedDate = new Date(lastScraped);
-    const ageMs = Date.now() - scrapedDate.getTime();
-    if (ageMs < 7 * 24 * 60 * 60 * 1000) return 'new-drop';
-  }
-
+  // Edition type takes priority over recency — classify first
   const ed = edition.toLowerCase();
   if (TOUR_SERIES_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'tour-series';
-  if (LIMITED_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'limited';
   if (HOT_PLAYER_NAMES.some((p) => ed.includes(p.toLowerCase()))) return 'tour-series';
+  if (['first run', 'primal run'].some((kw) => ed.includes(kw))) return 'first-run';
+  if (LIMITED_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'limited';
+
+  // Generic edition — show "NY" only if recently scraped (past 14 days)
+  if (lastScraped) {
+    const ageMs = Date.now() - new Date(lastScraped).getTime();
+    if (ageMs < 14 * 24 * 60 * 60 * 1000) return 'new-drop';
+  }
   return 'hot';
 }
 
@@ -128,12 +131,13 @@ type HotDropRow = {
   edition: string | null;
   price: number | null;
   inStock: boolean;
+  storeCount: number;
   image: string;
   lastScraped: string | null;
 };
 
 function buildHotDropRows(): HotDropRow[] {
-  type ScrapedEntry = { price: number; inStock: boolean; edition?: string | null; lastScraped?: string };
+  type ScrapedEntry = { store: string; price: number; inStock: boolean; edition?: string | null; lastScraped?: string };
   const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
 
   const rows: HotDropRow[] = [];
@@ -142,25 +146,25 @@ function buildHotDropRows(): HotDropRow[] {
     const entries = prices[disc.id] ?? [];
     if (entries.length === 0) continue;
 
-    // Find best edition — prefer entries with a matching hot-drop keyword
+    // Prefer entries with a hot-drop keyword (tour/player/limited) — these are the interesting ones
     const hotEntry = entries.find((e) => {
       if (!e.edition) return false;
       const ed = e.edition.toLowerCase();
       return [...ALL_HOT_EDITION_KEYWORDS].some((kw) => ed.includes(kw.toLowerCase()));
     });
-    const anyEditionEntry = entries.find((e) => e.edition);
-    const bestEditionEntry = hotEntry ?? anyEditionEntry ?? null;
-    const edition = bestEditionEntry?.edition ?? null;
-    const lastScraped = bestEditionEntry?.lastScraped ?? null;
+    // Only fall back to any edition if no hot entry exists
+    const bestEditionEntry = hotEntry ?? null;
+    if (!bestEditionEntry) continue;
+
+    const edition = bestEditionEntry.edition ?? null;
+    const lastScraped = bestEditionEntry.lastScraped ?? null;
 
     const inStockEntries = entries.filter((e) => e.inStock);
     const price = inStockEntries.length
       ? Math.min(...inStockEntries.map((e) => e.price))
       : null;
     const inStock = inStockEntries.length > 0;
-
-    // Only include discs that have an edition (real hot drops only)
-    if (!edition) continue;
+    const storeCount = new Set(inStockEntries.map((e) => e.store)).size;
 
     const badge = editionToBadge(edition, inStock, lastScraped ?? undefined);
 
@@ -174,19 +178,24 @@ function buildHotDropRows(): HotDropRow[] {
       edition,
       price,
       inStock,
+      storeCount,
       image: getDiscImage(disc),
       lastScraped,
     });
   }
 
-  // Sort: 1) in-stock above out-of-stock  2) newest scraped first  3) tour/team series above generic
-  const badgeRank: Record<string, number> = { 'tour-series': 3, limited: 2, 'new-drop': 2, hot: 1, 'sold-out': 0 };
+  // Sort: 1) in-stock first  2) badge rank (tour > limited > new > hot)
+  //       3) scarcity (fewer stores = more exclusive)  4) recency
+  const badgeRank: Record<string, number> = {
+    'tour-series': 5, 'first-run': 4, limited: 3, 'new-drop': 2, hot: 1, 'sold-out': 0,
+  };
   rows.sort((a, b) => {
     if (a.inStock !== b.inStock) return a.inStock ? -1 : 1;
-    const da = a.lastScraped ?? '';
-    const db = b.lastScraped ?? '';
-    if (da !== db) return db.localeCompare(da);
-    return (badgeRank[b.badge] ?? 0) - (badgeRank[a.badge] ?? 0);
+    const rankDiff = (badgeRank[b.badge] ?? 0) - (badgeRank[a.badge] ?? 0);
+    if (rankDiff !== 0) return rankDiff;
+    // Within same badge: prefer exclusive (fewer stores), then newer
+    if (a.storeCount !== b.storeCount) return a.storeCount - b.storeCount;
+    return (b.lastScraped ?? '').localeCompare(a.lastScraped ?? '');
   });
 
   return rows.slice(0, 6);
