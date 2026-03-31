@@ -463,7 +463,7 @@ function PopularDiscs() {
                   style={{ height: 90 }}
                 >
                   <DiscImage
-                    src={"image" in d ? (d.image as string) : ""}
+                    src={getDiscImage(d)}
                     name={d.name}
                     brand={d.brand}
                     type={d.type}
