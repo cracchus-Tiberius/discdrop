@@ -531,6 +531,7 @@ export function DiscDropHome() {
           <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
           <div className="flex gap-4">
             <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
+            <Link href="/kontakt" className="transition-colors hover:text-[#444]">Kontakt</Link>
             <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
           </div>
         </div>
