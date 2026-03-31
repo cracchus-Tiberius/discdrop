@@ -76,6 +76,7 @@ const DISC_CATALOG = [
   { id: 'discraft-nuke-os', name: 'Nuke OS', brand: 'Discraft' },
   { id: 'discraft-predator', name: 'Predator', brand: 'Discraft' },
   { id: 'discraft-captains-raptor', name: "Captain's Raptor", brand: 'Discraft' },
+  { id: 'discraft-captains-raptor', name: 'Captains Raptor', brand: 'Discraft' },
   { id: 'discraft-raptor', name: 'Raptor', brand: 'Discraft' },
   { id: 'discraft-roach', name: 'Roach', brand: 'Discraft' },
   { id: 'discraft-scorch', name: 'Scorch', brand: 'Discraft' },
