@@ -13,7 +13,9 @@
     "scrape:frisbeebutikken": "node scripts/scrape-frisbeebutikken.js",
     "scrape:golfdiscer": "node scripts/scrape-golfdiscer.js",
     "scrape:frisbeesor": "node scripts/scrape-frisbeesor.js",
-    "scrape:all": "pnpm scrape && pnpm scrape:ace && pnpm scrape:frisbeebutikken && pnpm scrape:golfdiscer && pnpm scrape:frisbeesor && pnpm fetch-images && pnpm scrape:enrich && pnpm check-alerts",
+    "scrape:discexpress": "node scripts/scrape-discexpress.js",
+    "scrape:rocketdiscs": "node scripts/scrape-rocketdiscs.js",
+    "scrape:all": "node scripts/scrape-all.js",
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",
     "check-alerts": "node scripts/check-alerts.js"

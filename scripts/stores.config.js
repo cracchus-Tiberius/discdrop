@@ -87,7 +87,12 @@ const DISC_CATALOG = [
   { id: 'discraft-undertaker', name: 'Undertaker', brand: 'Discraft' },
   { id: 'discraft-viper', name: 'Viper', brand: 'Discraft' },
   { id: 'discraft-wasp', name: 'Wasp', brand: 'Discraft' },
-  { id: 'discraft-zone-os', name: 'Zone OS', brand: 'Discraft' },
+  { id: 'discraft-zone-os',   name: 'Zone OS',   brand: 'Discraft' },
+  { id: 'discraft-zone-ss',   name: 'Zone SS',   brand: 'Discraft' },
+  { id: 'discraft-buzzz-ss',  name: 'Buzzz SS',  brand: 'Discraft' },
+  { id: 'discraft-nuke-ss',   name: 'Nuke SS',   brand: 'Discraft' },
+  { id: 'discraft-force-ss',  name: 'Force SS',  brand: 'Discraft' },
+  { id: 'discraft-fierce-ss', name: 'Fierce SS', brand: 'Discraft' },
   { id: 'dynamic-evidence', name: 'Evidence', brand: 'Dynamic Discs' },
   { id: 'dynamic-felon', name: 'Felon', brand: 'Dynamic Discs' },
   { id: 'dynamic-freedom', name: 'Freedom', brand: 'Dynamic Discs' },
@@ -220,7 +225,18 @@ const DISC_CATALOG = [
   { id: 'discmania-td', name: 'TD', brand: 'Discmania' },
   { id: 'discmania-talisman', name: 'Talisman', brand: 'Discmania' },
   { id: 'discmania-theios', name: 'Theios', brand: 'Discmania' },
-  { id: 'discmania-vanguard', name: 'Vanguard', brand: 'Discmania' },
+  { id: 'discmania-vanguard',   name: 'Vanguard',   brand: 'Discmania' },
+  { id: 'discmania-d-model',    name: 'D Model',    brand: 'Discmania' },
+  { id: 'discmania-d-model-os', name: 'D Model OS', brand: 'Discmania' },
+  { id: 'discmania-d-model-s',  name: 'D Model S',  brand: 'Discmania' },
+  { id: 'discmania-f-model',    name: 'F Model',    brand: 'Discmania' },
+  { id: 'discmania-f-model-os', name: 'F Model OS', brand: 'Discmania' },
+  { id: 'discmania-f-model-s',  name: 'F Model S',  brand: 'Discmania' },
+  { id: 'discmania-m-model',    name: 'M Model',    brand: 'Discmania' },
+  { id: 'discmania-m-model-os', name: 'M Model OS', brand: 'Discmania' },
+  { id: 'discmania-m-model-s',  name: 'M Model S',  brand: 'Discmania' },
+  { id: 'discmania-p-model',    name: 'P Model',    brand: 'Discmania' },
+  { id: 'discmania-p-model-s',  name: 'P Model S',  brand: 'Discmania' },
   { id: 'discraft-ares', name: 'Ares', brand: 'Discraft' },
   { id: 'discraft-athena', name: 'Athena', brand: 'Discraft' },
   { id: 'discraft-avenger-ss', name: 'Avenger SS', brand: 'Discraft' },
@@ -264,6 +280,11 @@ const DISC_CATALOG = [
   { id: 'dynamic-suspect', name: 'Suspect', brand: 'Dynamic Discs' },
   { id: 'dynamic-vandal', name: 'Vandal', brand: 'Dynamic Discs' },
   { id: 'dynamic-warden', name: 'Warden', brand: 'Dynamic Discs' },
+  { id: 'dynamic-valor', name: 'Valor', brand: 'Dynamic Discs' },
+  { id: 'dynamic-gauge', name: 'Gauge', brand: 'Dynamic Discs' },
+  { id: 'dynamic-patriot', name: 'Patriot', brand: 'Dynamic Discs' },
+  { id: 'dynamic-phenom', name: 'Phenom', brand: 'Dynamic Discs' },
+  { id: 'dynamic-rampage', name: 'Rampage', brand: 'Dynamic Discs' },
   { id: 'infinite-alpaca', name: 'Alpaca', brand: 'Infinite Discs' },
   { id: 'infinite-anubis', name: 'Anubis', brand: 'Infinite Discs' },
   { id: 'infinite-artifact', name: 'Artifact', brand: 'Infinite Discs' },
@@ -326,6 +347,9 @@ const DISC_CATALOG = [
   { id: 'innova-wedge', name: 'Wedge', brand: 'Innova' },
   { id: 'innova-wombat3', name: 'Wombat3', brand: 'Innova' },
   { id: 'innova-xcaliber', name: 'XCaliber', brand: 'Innova' },
+  { id: 'innova-xd', name: 'XD', brand: 'Innova' },
+  { id: 'innova-rhynox', name: 'RhynoX', brand: 'Innova' },
+  { id: 'innova-aero', name: 'Aero', brand: 'Innova' },
   { id: 'kastaplast-lva', name: 'Älva', brand: 'Kastaplast' },
   { id: 'kastaplast-guld', name: 'Guld', brand: 'Kastaplast' },
   { id: 'kastaplast-hydrogen', name: 'Hydrogen', brand: 'Kastaplast' },
@@ -392,6 +416,19 @@ const DISC_CATALOG = [
   { id: 'latitude-sweep', name: 'Sweep', brand: 'Latitude 64' },
   { id: 'latitude-trident', name: 'Trident', brand: 'Latitude 64' },
   { id: 'latitude-vision', name: 'Vision', brand: 'Latitude 64' },
+  { id: 'latitude-hunter', name: 'Hunter', brand: 'Latitude 64' },
+  { id: 'latitude-clozer', name: 'Clozer', brand: 'Latitude 64' },
+  { id: 'latitude-clutch', name: 'Clutch', brand: 'Latitude 64' },
+  { id: 'latitude-prowler', name: 'Prowler', brand: 'Latitude 64' },
+  { id: 'latitude-enemy', name: 'Enemy', brand: 'Latitude 64' },
+  { id: 'latitude-fighter', name: 'Fighter', brand: 'Latitude 64' },
+  { id: 'latitude-cannon', name: 'Cannon', brand: 'Latitude 64' },
+  { id: 'latitude-rival', name: 'Rival', brand: 'Latitude 64' },
+  { id: 'latitude-baron', name: 'Baron', brand: 'Latitude 64' },
+  { id: 'latitude-code', name: 'Code', brand: 'Latitude 64' },
+  { id: 'latitude-code-x', name: 'Code-X', brand: 'Latitude 64' },
+  { id: 'latitude-duchess', name: 'Duchess', brand: 'Latitude 64' },
+  { id: 'latitude-lander', name: 'Lander', brand: 'Latitude 64' },
   { id: 'millennium-jls', name: 'JLS', brand: 'Millennium' },
   { id: 'millennium-orion-lf', name: 'Orion LF', brand: 'Millennium' },
   { id: 'millennium-polaris-ls', name: 'Polaris LS', brand: 'Millennium' },
@@ -503,6 +540,7 @@ const DISC_CATALOG = [
   { id: 'westside-tide', name: 'Tide', brand: 'Westside Discs' },
   { id: 'westside-underworld', name: 'Underworld', brand: 'Westside Discs' },
   { id: 'westside-world', name: 'World', brand: 'Westside Discs' },
+  { id: 'westside-the-count', name: 'The Count', brand: 'Westside Discs' },
   { id: 'axiom-eclipse-vanity', name: 'Eclipse Vanity', brand: 'Axiom' },
   { id: 'discmania-meta-dagger', name: 'Meta Dagger', brand: 'Discmania' },
   // RPM Discs (additional)
@@ -615,6 +653,24 @@ const STORE_CONFIGS = {
     ],
     skipCategorySlugs: SKIP_CATEGORY_SLUGS,
   },
+  discexpress: {
+    key: 'discexpress',
+    name: 'Discexpress',
+    url: 'https://www.discexpress.se',
+    country: 'SE',
+    currency: 'SEK',
+    shipping: 41,
+    voec: true,
+  },
+  rocketdiscs: {
+    key: 'rocketdiscs',
+    name: 'Rocketdiscs',
+    url: 'https://rocketdiscs.com',
+    country: 'SE',
+    currency: 'EUR',
+    shipping: 67,
+    voec: true,
+  },
 };
 
 // ── Variant extraction (delegates to plastic-types.js) ───────────────────────
@@ -661,12 +717,19 @@ function isDiscProduct(rawName) {
 function matchDisc(rawProductName) {
   if (!isDiscProduct(rawProductName)) return null;
 
-  const normalised = norm(rawProductName);
+  // Normalise: lowercase, collapse specials to spaces
+  let normalised = norm(rawProductName);
+  // Strip year prefix e.g. "2024 Chris Dickerson Tour Series Buzzz"
+  normalised = normalised.replace(/^20\d{2}\s+/, '');
+  // Insert space before digit suffix to handle "Swan2" → "swan 2", "Aviar3" → "aviar 3"
+  normalised = normalised.replace(/([a-z])(\d)/g, '$1 $2');
+
   let bestMatch = null;
   let bestScore = 0;
 
   for (const disc of DISC_CATALOG) {
-    const discName = norm(disc.name);
+    let discName = norm(disc.name);
+    discName = discName.replace(/([a-z])(\d)/g, '$1 $2');
     const pattern = new RegExp(
       '(?:^|\\s)' + discName.replace(/\s+/g, '\\s+') + '(?:\\s|$)',
       'i'
@@ -678,8 +741,10 @@ function matchDisc(rawProductName) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
         const hasDiscmaniaPlastic = disc.brand === 'Discmania' &&
-          /\b(?:c-line|s-line|d-line|p-line|q-line)\b/i.test(normalised);
-        if (!hasDiscmaniaPlastic && !brandPattern.test(normalised)) continue;
+          /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line)\b/i.test(normalised);
+        const hasInnovaPlastic = disc.brand === 'Innova' &&
+          /\b(?:champion|star|gstar|blizzard|halo|pro|xt|dx|r-pro|jstar)\b/i.test(normalised);
+        if (!hasDiscmaniaPlastic && !hasInnovaPlastic && !brandPattern.test(normalised)) continue;
       }
       const score = discName.length;
       if (score > bestScore) {

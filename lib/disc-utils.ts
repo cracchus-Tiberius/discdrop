@@ -20,8 +20,11 @@ type ScrapedEntry = {
 type StoreMeta = {
   name: string;
   url: string;
-  freeShippingOver: number;
+  freeShippingOver?: number;
   shipping: number;
+  country?: string;
+  currency?: string;
+  voec?: boolean;
 };
 
 /**
