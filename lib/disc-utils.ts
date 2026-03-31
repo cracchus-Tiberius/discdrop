@@ -28,7 +28,20 @@ type StoreMeta = {
 };
 
 /**
+ * For international (non-Norwegian) stores, shipping is always required — no free-shipping
+ * threshold. Returns disc price + shipping. For Norwegian stores returns disc price only
+ * (shipping is conditional on basket total, MVA already included in listed price).
+ */
+function entryLandedNOK(entry: ScrapedEntry, meta: StoreMeta | undefined): number {
+  if (meta?.country && meta.country !== "NO") {
+    return entry.price + (meta.shipping ?? 0);
+  }
+  return entry.price;
+}
+
+/**
  * Returns price/stock data from scraped-prices.json for a disc ID.
+ * Price is landed cost in NOK: disc + mandatory shipping for international stores.
  * Returns nulls/zeros if no scraped data exists for that disc.
  */
 export function getScrapedPrice(discId: string): {
@@ -40,9 +53,12 @@ export function getScrapedPrice(discId: string): {
   if (!scraped || scraped.length === 0) {
     return { price: null, inStockCount: 0, storeCount: 0 };
   }
+  const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
   const inStock = scraped.filter((s) => s.inStock);
   return {
-    price: inStock.length ? Math.min(...inStock.map((s) => s.price)) : null,
+    price: inStock.length
+      ? Math.min(...inStock.map((s) => entryLandedNOK(s, storeMeta[s.store])))
+      : null,
     inStockCount: new Set(inStock.map((s) => s.store)).size,
     storeCount: new Set(scraped.map((s) => s.store)).size,
   };
@@ -101,6 +117,8 @@ export type RichStoreEntry = {
   plastic: string | null;
   edition: string | null;
   image?: string | null;
+  country?: string;
+  voec?: boolean;
 };
 
 /**
@@ -124,6 +142,8 @@ export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
       plastic: entry.plastic ?? null,
       edition: entry.edition ?? null,
       image: entry.image,
+      country: meta?.country,
+      voec: meta?.voec,
     };
   });
 }

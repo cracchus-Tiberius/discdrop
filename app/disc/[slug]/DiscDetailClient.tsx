@@ -14,6 +14,8 @@ type Store = {
   url: string;
   shipping: number;
   freeShippingOver: number;
+  country?: string;
+  voec?: boolean;
 };
 
 type StoreRow = Store & {
@@ -163,7 +165,8 @@ export function PriceTable({
                         } ${!row.inStock && inline ? "opacity-60" : ""}`}
                       >
                         <td className={inline ? "px-3 py-2" : "px-5 py-4"}>
-                          <div className="flex items-center gap-2">
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            {row.country === "SE" && <span title="Svensk butikk">🇸🇪</span>}
                             <span className="font-medium text-[#1a1a1a]">{row.name}</span>
                             {isBest && (
                               <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
@@ -174,6 +177,9 @@ export function PriceTable({
                               <span className="text-[11px] text-[#E8704A]">Utsolgt</span>
                             )}
                           </div>
+                          {row.country === "SE" && row.voec && !inline && (
+                            <div className="mt-0.5 text-[11px] text-[#888]">inkl. frakt og MVA</div>
+                          )}
                         </td>
                         {!inline && (
                           <td className="px-4 py-4">
@@ -222,12 +228,18 @@ export function PriceTable({
                     }`}
                   >
                     <div className="mb-3 flex items-start justify-between gap-2">
-                      <div className="flex flex-wrap items-center gap-1.5">
-                        <span className="font-semibold text-[#1a1a1a]">{row.name}</span>
-                        {isBest && (
-                          <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
-                            Beste deal
-                          </span>
+                      <div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          {row.country === "SE" && <span title="Svensk butikk">🇸🇪</span>}
+                          <span className="font-semibold text-[#1a1a1a]">{row.name}</span>
+                          {isBest && (
+                            <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
+                              Beste deal
+                            </span>
+                          )}
+                        </div>
+                        {row.country === "SE" && row.voec && (
+                          <div className="mt-0.5 text-[11px] text-[#888]">inkl. frakt og MVA</div>
                         )}
                       </div>
                       <StockDot inStock={row.inStock} />
@@ -843,6 +855,8 @@ export function VariantPriceSection({
     url: e.url,
     shipping: e.shipping,
     freeShippingOver: e.freeShippingOver,
+    country: e.country,
+    voec: e.voec,
   }));
 
   // Best in-stock entry for sticky mobile CTA
@@ -932,7 +946,7 @@ export function VariantPriceSection({
             className="flex w-full items-center justify-between rounded-xl bg-[#2D6A4F] px-5 py-3.5 text-white transition-all hover:brightness-110 active:scale-95"
           >
             <span className="text-sm font-medium opacity-90">
-              Beste pris: <span className="font-bold">kr {bestEntry.price}</span> hos {bestEntry.storeName}
+              Beste pris: <span className="font-bold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
             </span>
             <span className="flex items-center gap-1 text-sm font-semibold text-[#B8E04A]">
               Kjøp
@@ -1063,6 +1077,8 @@ export function DiscHeroSection({
     url: e.url,
     shipping: e.shipping,
     freeShippingOver: e.freeShippingOver,
+    country: e.country,
+    voec: e.voec,
   }));
 
   const bestEntry = useMemo(() => {
@@ -1252,7 +1268,7 @@ export function DiscHeroSection({
             className="flex w-full items-center justify-between rounded-xl bg-[#2D6A4F] px-5 py-3.5 text-white transition-all hover:brightness-110 active:scale-95"
           >
             <span className="text-sm font-medium opacity-90">
-              Beste pris: <span className="font-bold">kr {bestEntry.price}</span> hos {bestEntry.storeName}
+              Beste pris: <span className="font-bold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
             </span>
             <span className="flex items-center gap-1 text-sm font-semibold text-[#B8E04A]">
               Kjøp
