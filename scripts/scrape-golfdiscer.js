@@ -7,7 +7,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const { matchDisc, extractVariant, isUsedDisc } = require('./stores.config.js');
+const { matchDisc, extractVariant, isUsedDisc, isMiniDisc } = require('./stores.config.js');
 
 const STORE = {
   key: 'golfdiscer',
@@ -71,7 +71,7 @@ async function scrapeWithApi() {
       const productUrl = `${STORE.baseUrl}/products/${product.handle}`;
       const image = product.images?.[0]?.src || null;
 
-      if (!isUsedDisc(rawName)) allProducts.push({ rawName, price, productUrl, inStock, image });
+      if (!isUsedDisc(rawName) && !isMiniDisc(rawName)) allProducts.push({ rawName, price, productUrl, inStock, image });
     }
 
     await new Promise(r => setTimeout(r, 1000 + Math.random() * 500));

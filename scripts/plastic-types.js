@@ -415,6 +415,11 @@ function isUsedDisc(rawName) {
   return USED_KEYWORDS.some((kw) => lower.includes(kw));
 }
 
+function isMiniDisc(rawName) {
+  const lower = rawName.toLowerCase();
+  return /\bmini\b/.test(lower) || lower.includes('mini-marker') || lower.includes('mini marker');
+}
+
 module.exports = {
   PLASTIC_TYPES,
   PLAYER_NAMES,
@@ -423,4 +428,5 @@ module.exports = {
   normalizeProductName,
   parseProductName,
   isUsedDisc,
+  isMiniDisc,
 };

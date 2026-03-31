@@ -7,7 +7,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const { STORE_CONFIGS, SKIP_CATEGORY_SLUGS, matchDisc, extractVariant, isUsedDisc } = require('./stores.config.js');
+const { STORE_CONFIGS, SKIP_CATEGORY_SLUGS, matchDisc, extractVariant, isUsedDisc, isMiniDisc } = require('./stores.config.js');
 
 const STORE = {
   ...STORE_CONFIGS.frisbeesor,
@@ -61,8 +61,8 @@ async function scrapeWithApi() {
       const rawName = item.name;
       if (!rawName) continue;
 
-      // Skip used/second-hand products by name
-      if (isUsedDisc(rawName)) continue;
+      // Skip used/second-hand and mini marker products
+      if (isUsedDisc(rawName) || isMiniDisc(rawName)) continue;
 
       // Skip products in excluded categories (WooCommerce REST API provides category slugs)
       const categorySlugs = (item.categories || []).map((c) => c.slug);
@@ -161,7 +161,7 @@ async function scrapeWithPlaywright() {
           });
 
           for (const p of products) {
-            if (p.productUrl && !seenUrls.has(p.productUrl) && !isUsedDisc(p.rawName)) {
+            if (p.productUrl && !seenUrls.has(p.productUrl) && !isUsedDisc(p.rawName) && !isMiniDisc(p.rawName)) {
               seenUrls.add(p.productUrl);
               allProducts.push(p);
             }

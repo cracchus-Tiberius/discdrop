@@ -5,7 +5,7 @@
 // All scrapers must import from './stores.config.js', NOT './plastic-types.js'
 'use strict';
 
-const { PLASTIC_TYPES, PLAYER_NAMES, EDITION_KEYWORDS, parseProductName, isUsedDisc } = require('./plastic-types.js');
+const { PLASTIC_TYPES, PLAYER_NAMES, EDITION_KEYWORDS, parseProductName, isUsedDisc, isMiniDisc } = require('./plastic-types.js');
 
 // ── Disc catalog (mirrors data/discs.js — keep in sync) ─────────────────────
 const DISC_CATALOG = [
@@ -75,6 +75,7 @@ const DISC_CATALOG = [
   { id: 'discraft-nuke', name: 'Nuke', brand: 'Discraft' },
   { id: 'discraft-nuke-os', name: 'Nuke OS', brand: 'Discraft' },
   { id: 'discraft-predator', name: 'Predator', brand: 'Discraft' },
+  { id: 'discraft-captains-raptor', name: "Captain's Raptor", brand: 'Discraft' },
   { id: 'discraft-raptor', name: 'Raptor', brand: 'Discraft' },
   { id: 'discraft-roach', name: 'Roach', brand: 'Discraft' },
   { id: 'discraft-scorch', name: 'Scorch', brand: 'Discraft' },
@@ -841,4 +842,4 @@ function matchDisc(rawProductName) {
   return bestMatch;
 }
 
-module.exports = { DISC_CATALOG, STORE_CONFIGS, SKIP_CATEGORY_SLUGS, norm, matchDisc, isDiscProduct, NON_DISC_KEYWORDS, extractVariant, PLASTIC_TYPES, parseProductName, isUsedDisc, isUsedProductMeta };
+module.exports = { DISC_CATALOG, STORE_CONFIGS, SKIP_CATEGORY_SLUGS, norm, matchDisc, isDiscProduct, NON_DISC_KEYWORDS, extractVariant, PLASTIC_TYPES, parseProductName, isUsedDisc, isMiniDisc, isUsedProductMeta };

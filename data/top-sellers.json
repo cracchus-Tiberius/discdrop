@@ -5,6 +5,7 @@
     "https://foundationdiscs.com/blogs/store-insights-and-updates/the-best-selling-disc-golf-discs-of-2025"
   ],
   "discs": [
+    { "name": "Berg", "brand": "Kastaplast", "score": 55, "catalogId": "kastaplast-berg", "note": "Most popular disc in Norway/Scandinavia — manually added" },
     { "name": "Destroyer", "brand": "Innova", "score": 58, "catalogId": "innova-destroyer" },
     { "name": "Trail", "brand": "MVP", "score": 57, "catalogId": "mvp-trail" },
     { "name": "Buzzz SS", "brand": "Discraft", "score": 50, "catalogId": "discraft-buzzz-ss" },
