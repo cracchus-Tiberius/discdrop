@@ -2320,16 +2320,6 @@
       },
       {
         "store": "discexpress",
-        "price": 106,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/zone-mini-jawbreaker",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Zone-Jawbreaker-Discraft-24.png?v=1728985197",
-        "plastic": "Jawbreaker",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
         "price": 255,
         "inStock": false,
         "url": "https://www.discexpress.se/products/zone-esp-flx",
@@ -2345,16 +2335,6 @@
         "url": "https://www.discexpress.se/products/zone-putter-line",
         "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Zone-Putter-Line-Discraft.png?v=1692120547",
         "plastic": "Putter Line",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 128,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/zone-mini-cryztal-flx-brodie-smith",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Zone-Crystal-Flx-Discraft.png?v=1690910955",
-        "plastic": "CryZtal FLX",
         "edition": null,
         "lastScraped": "2026-03-31T11:58:33.348Z"
       },
@@ -3830,16 +3810,6 @@
       },
       {
         "store": "frisbeebutikken",
-        "price": 69,
-        "inStock": true,
-        "url": "https://frisbeebutikken.no/products/kastaplast-berg-glow-mini",
-        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/wMqNk_Kastaplast_Kastaplast_Berg_Glow_Mini_1.webp/w600h600.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:00.006Z"
-      },
-      {
-        "store": "frisbeebutikken",
         "price": 219,
         "inStock": true,
         "url": "https://frisbeebutikken.no/products/k1-berg",
@@ -3985,16 +3955,6 @@
         "url": "https://www.discexpress.se/products/berg-k3-hard",
         "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Berg-K3-Hard-Kastaplast.png?v=1623424836",
         "plastic": "K3 Hard",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 53,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/kastaplast-berg-mini",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Kastaplast-Mini-Berg.png?v=1614710071",
-        "plastic": null,
         "edition": null,
         "lastScraped": "2026-03-31T11:58:33.348Z"
       },
@@ -5154,16 +5114,6 @@
       },
       {
         "store": "discexpress",
-        "price": 128,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/luna-mini-paul-mcbeth",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Battlepack.jpg?v=1762639645",
-        "plastic": null,
-        "edition": "Paul McBeth",
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
         "price": 223,
         "inStock": false,
         "url": "https://www.discexpress.se/products/luna-z-lite-paul-mcbeth-collection-copy",
@@ -5490,16 +5440,6 @@
       },
       {
         "store": "frisbeebutikken",
-        "price": 69,
-        "inStock": true,
-        "url": "https://frisbeebutikken.no/products/kastaplast-reko-glow-mini",
-        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/BCp8v_Kastaplast_Kastaplast_Reko_Glow_Mini_1.webp/w600h600.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:00.006Z"
-      },
-      {
-        "store": "frisbeebutikken",
         "price": 279,
         "inStock": true,
         "url": "https://frisbeebutikken.no/products/k1-glow-reko-braeden-sides",
@@ -5635,16 +5575,6 @@
         "url": "https://www.discexpress.se/products/reko-k1-soft",
         "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Reko-K1-Soft-Kastaplast.png?v=1634662440",
         "plastic": "K1 Soft",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 63,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/kastaplast-reko-mini",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Discexpress-Kastaplast-Reko-Mini.png?v=1614709374",
-        "plastic": null,
         "edition": null,
         "lastScraped": "2026-03-31T11:58:33.348Z"
       },
@@ -7146,16 +7076,6 @@
       },
       {
         "store": "discexpress",
-        "price": 106,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/challenger-mini-jawbreaker",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Challenger-Jawbreaker-Discraft.png?v=1728986113",
-        "plastic": "Jawbreaker",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
         "price": 148,
         "inStock": true,
         "url": "https://www.discexpress.se/products/challenger-ss",
@@ -8339,16 +8259,6 @@
         "plastic": "CryZtal Sparkle",
         "edition": null,
         "lastScraped": "2026-03-31T11:58:20.727Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 128,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/fierce-mini-paige-pierce",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Fierce-Hard-Discraft.png?v=1728982640",
-        "plastic": null,
-        "edition": "Paige Pierce",
-        "lastScraped": "2026-03-31T11:58:33.348Z"
       },
       {
         "store": "aceshop",
@@ -16302,16 +16212,6 @@
       },
       {
         "store": "discexpress",
-        "price": 106,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/buzzz-mini-big-z",
-        "image": null,
-        "plastic": "Big Z",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
         "price": 255,
         "inStock": false,
         "url": "https://www.discexpress.se/products/buzzz-esp-blank",
@@ -16337,16 +16237,6 @@
         "url": "https://www.discexpress.se/products/buzzz-esp-flx",
         "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Buzzz-ESP-Flex-Discraft.png?v=1681803192",
         "plastic": "ESP FLX",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 106,
-        "inStock": false,
-        "url": "https://www.discexpress.se/products/buzzz-mini-z",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Buzz-Mini-Disc-Discraft.png?v=1680289910",
-        "plastic": "Z",
         "edition": null,
         "lastScraped": "2026-03-31T11:58:33.348Z"
       },
@@ -39802,16 +39692,6 @@
       },
       {
         "store": "discexpress",
-        "price": 106,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/crank-mini-big-z",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Crank-Mini-Disc-DIscraft.png?v=1680291847",
-        "plastic": "Big Z",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:58:33.348Z"
-      },
-      {
-        "store": "discexpress",
         "price": 223,
         "inStock": true,
         "url": "https://www.discexpress.se/products/crank-ss-z-line",
@@ -47751,16 +47631,6 @@
         "url": "https://kvamdgs.no/products/neo-splice",
         "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_1222.png?v=1773768720",
         "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-03-31T11:36:34.137Z"
-      },
-      {
-        "store": "arcticdisc",
-        "price": 229,
-        "inStock": true,
-        "url": "https://arcticdisc.no/products/lux-vapor-splice-mini-shield",
-        "image": "https://cdn.shopify.com/s/files/1/0932/8050/2130/files/Splice-heart_480x480_ff55627d-536c-4f10-bfde-156d7b371150.webp?v=1767965418",
-        "plastic": "Lux Vapor",
         "edition": null,
         "lastScraped": "2026-03-31T11:36:34.137Z"
       },
