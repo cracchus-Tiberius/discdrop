@@ -5,7 +5,7 @@
 // All scrapers must import from './stores.config.js', NOT './plastic-types.js'
 'use strict';
 
-const { PLASTIC_TYPES, PLAYER_NAMES, EDITION_KEYWORDS, parseProductName, isUsedDisc, isMiniDisc } = require('./plastic-types.js');
+const { PLASTIC_TYPES, PLAYER_NAMES, EDITION_KEYWORDS, parseProductName, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./plastic-types.js');
 
 // ── Disc catalog (mirrors data/discs.js — keep in sync) ─────────────────────
 const DISC_CATALOG = [
@@ -843,4 +843,4 @@ function matchDisc(rawProductName) {
   return bestMatch;
 }
 
-module.exports = { DISC_CATALOG, STORE_CONFIGS, SKIP_CATEGORY_SLUGS, norm, matchDisc, isDiscProduct, NON_DISC_KEYWORDS, extractVariant, PLASTIC_TYPES, parseProductName, isUsedDisc, isMiniDisc, isUsedProductMeta };
+module.exports = { DISC_CATALOG, STORE_CONFIGS, SKIP_CATEGORY_SLUGS, norm, matchDisc, isDiscProduct, NON_DISC_KEYWORDS, extractVariant, PLASTIC_TYPES, parseProductName, isUsedDisc, isMiniDisc, isNonDiscProduct, isUsedProductMeta };

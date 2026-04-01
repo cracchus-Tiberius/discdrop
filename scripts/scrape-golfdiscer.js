@@ -7,7 +7,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const { matchDisc, extractVariant, isUsedDisc, isMiniDisc } = require('./stores.config.js');
+const { matchDisc, extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./stores.config.js');
 
 const STORE = {
   key: 'golfdiscer',
@@ -71,7 +71,7 @@ async function scrapeWithApi() {
       const productUrl = `${STORE.baseUrl}/products/${product.handle}`;
       const image = product.images?.[0]?.src || null;
 
-      if (!isUsedDisc(rawName) && !isMiniDisc(rawName)) allProducts.push({ rawName, price, productUrl, inStock, image });
+      if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) allProducts.push({ rawName, price, productUrl, inStock, image });
     }
 
     await new Promise(r => setTimeout(r, 1000 + Math.random() * 500));
@@ -122,7 +122,7 @@ async function scrapeWithPlaywright() {
           const pool = avail.length ? avail : variants;
           const prices = pool.map(v => parseFloat(v.price)).filter(p => !isNaN(p) && p > 0);
           if (!prices.length) continue;
-          if (!isUsedDisc(rawName)) allProducts.push({
+          if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) allProducts.push({
             rawName,
             price: Math.round(Math.min(...prices)),
             productUrl: `${STORE.baseUrl}/products/${product.handle}`,

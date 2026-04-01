@@ -8,7 +8,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const { matchDisc, extractVariant, isUsedDisc, isMiniDisc } = require('./stores.config.js');
+const { matchDisc, extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./stores.config.js');
 
 const STORE = {
   key: 'discexpress',
@@ -78,7 +78,7 @@ async function scrapeWithApi(sekToNok) {
     for (const product of products) {
       const rawName = product.title;
       if (!rawName) continue;
-      if (isUsedDisc(rawName) || isMiniDisc(rawName)) continue;
+      if (isUsedDisc(rawName) || isMiniDisc(rawName) || isNonDiscProduct(rawName)) continue;
 
       const variants = product.variants || [];
       if (variants.length === 0) continue;
@@ -140,7 +140,7 @@ async function scrapeWithPlaywright(sekToNok) {
 
         for (const product of products) {
           const rawName = product.title;
-          if (!rawName || isUsedDisc(rawName) || isMiniDisc(rawName)) continue;
+          if (!rawName || isUsedDisc(rawName) || isMiniDisc(rawName) || isNonDiscProduct(rawName)) continue;
           const variants = product.variants || [];
           const avail = variants.filter(v => v.available);
           const pool = avail.length ? avail : variants;

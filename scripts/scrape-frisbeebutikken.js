@@ -15,7 +15,7 @@ const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
-const { extractVariant, isUsedDisc, isMiniDisc, matchDisc } = require('./stores.config.js');
+const { extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct, matchDisc } = require('./stores.config.js');
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -70,7 +70,7 @@ function parseProductsFromHtml(html) {
 
     const image = card.find('div.image img').first().attr('src') || null;
 
-    if (!isUsedDisc(rawName) && !isMiniDisc(rawName)) products.push({ rawName, price, productUrl, inStock, image });
+    if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) products.push({ rawName, price, productUrl, inStock, image });
   });
 
   // Pagination: look for a.next-page or numbered links in ?&page=N format
@@ -313,7 +313,7 @@ async function scrapeWithPlaywright() {
       }, STORE.baseUrl);
 
       for (const prod of products) {
-        if (!seenUrls.has(prod.productUrl) && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName)) {
+        if (!seenUrls.has(prod.productUrl) && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName) && !isNonDiscProduct(prod.rawName)) {
           seenUrls.add(prod.productUrl);
           allProducts.push(prod);
         }

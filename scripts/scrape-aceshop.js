@@ -11,7 +11,7 @@ const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
-const { extractVariant, isUsedDisc, isMiniDisc, matchDisc } = require('./stores.config.js');
+const { extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct, matchDisc } = require('./stores.config.js');
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -80,7 +80,7 @@ function parseProductsFromHtml(html) {
     const imgEl = card.find(SEL.image).first();
     const image = imgEl.attr('src') || imgEl.attr('data-src') || null;
 
-    if (!isUsedDisc(rawName) && !isMiniDisc(rawName)) products.push({ rawName, price, productUrl, inStock, image });
+    if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) products.push({ rawName, price, productUrl, inStock, image });
   });
 
   const nextPage = $(SEL.nextPage).first().attr('href') || null;
@@ -333,7 +333,7 @@ async function scrapeWithPlaywright() {
             seenUrls.add(prod.productUrl);
             // Parse price here where we have the helper
             const price = parseNOKPrice(prod.rawPrice);
-            if (price && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName)) {
+            if (price && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName) && !isNonDiscProduct(prod.rawName)) {
               allProducts.push({
                 rawName:    prod.rawName,
                 price,

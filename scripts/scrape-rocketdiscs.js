@@ -10,7 +10,7 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
-const { matchDisc, extractVariant, isUsedDisc, isMiniDisc } = require('./stores.config.js');
+const { matchDisc, extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./stores.config.js');
 
 const STORE = {
   key: 'rocketdiscs',
@@ -169,7 +169,7 @@ async function scrape(eurToNok) {
 
       for (const v of variants) {
         if (!v.StockAvailable) continue;
-        if (isUsedDisc(v.ModelName) || isMiniDisc(v.ModelName)) continue;
+        if (isUsedDisc(v.ModelName) || isMiniDisc(v.ModelName) || isNonDiscProduct(v.ModelName)) continue;
         if (v.ItemConditionScale !== null && v.ItemConditionScale !== undefined) continue; // pre-owned
 
         const price = Math.round((v.StockPrice || 0) * eurToNok);

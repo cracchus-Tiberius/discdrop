@@ -10,7 +10,7 @@ const fetch = require('node-fetch');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
-const { isUsedDisc, isMiniDisc, extractVariant, matchDisc } = require('./stores.config.js');
+const { isUsedDisc, isMiniDisc, isNonDiscProduct, extractVariant, matchDisc } = require('./stores.config.js');
 
 // ── Store configs ─────────────────────────────────────────────────────────────
 const STORES = [
@@ -136,7 +136,7 @@ function scrapeProductsFromHtml(html, store) {
     const imgEl = card.find('a.woocommerce-LoopProduct-link img').first();
     const image = imgEl.attr('src') || imgEl.attr('data-src') || null;
 
-    if (!isUsedDisc(rawName) && !isMiniDisc(rawName)) products.push({ rawName, price, productUrl, inStock, image });
+    if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) products.push({ rawName, price, productUrl, inStock, image });
   });
 
   // Next page URL
@@ -178,7 +178,7 @@ async function scrapeShopifyStore(store) {
       if (!rawName) continue;
 
       // Skip used/second-hand and mini marker products
-      if (isUsedDisc(rawName) || isMiniDisc(rawName)) continue;
+      if (isUsedDisc(rawName) || isMiniDisc(rawName) || isNonDiscProduct(rawName)) continue;
 
       // Also check product_type and tags for used/second-hand indicators
       const typeAndTags = [product.product_type || '', ...(product.tags || [])].join(' ').toLowerCase();

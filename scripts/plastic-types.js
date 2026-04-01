@@ -417,7 +417,13 @@ function isUsedDisc(rawName) {
 
 function isMiniDisc(rawName) {
   const lower = rawName.toLowerCase();
-  return /\bmini\b/.test(lower) || lower.includes('mini-marker') || lower.includes('mini marker');
+  // "Macro" is MVP's brand name for mini-marker discs
+  return /\bmini\b/.test(lower) || lower.includes('mini-marker') || lower.includes('mini marker') || /\bmacro\b/.test(lower);
+}
+
+function isNonDiscProduct(rawName) {
+  const lower = rawName.toLowerCase();
+  return lower.includes('sticker') || lower.includes('pin badge') || lower.includes('keychain');
 }
 
 module.exports = {
@@ -429,4 +435,5 @@ module.exports = {
   parseProductName,
   isUsedDisc,
   isMiniDisc,
+  isNonDiscProduct,
 };
