@@ -124,12 +124,14 @@ export function DiscImage({
   }
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={name}
-      onError={() => setFailed(true)}
-      style={{ display: "block", width: "100%", height: "100%", objectFit: "contain" }}
-    />
+    <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", ...containerStyle }}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={name}
+        onError={() => setFailed(true)}
+        style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
+      />
+    </div>
   );
 }
