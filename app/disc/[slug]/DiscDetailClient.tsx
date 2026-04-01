@@ -5,6 +5,13 @@ import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import type { RichStoreEntry } from "@/lib/disc-utils";
 
+// ── Plastic normalization ────────────────────────────────────────────────────
+// Scrapers sometimes emit word-swapped names (e.g. "Horizon C-Line" vs "C-Line Horizon").
+// Sort words alphabetically so both map to the same canonical display name.
+function normalizePlastic(p: string): string {
+  return p.trim().split(/\s+/).sort((a, b) => a.localeCompare(b, "nb")).join(" ");
+}
+
 // ── Types ───────────────────────────────────────────────────────────────────
 
 type Store = {
@@ -777,9 +784,9 @@ export function VariantPriceSection({
     const seen = new Set<string>();
     const out: string[] = [];
     for (const e of allEntries) {
-      if (e.plastic && !seen.has(e.plastic)) {
-        seen.add(e.plastic);
-        out.push(e.plastic);
+      if (e.plastic) {
+        const norm = normalizePlastic(e.plastic);
+        if (!seen.has(norm)) { seen.add(norm); out.push(norm); }
       }
     }
     return out;
@@ -794,7 +801,7 @@ export function VariantPriceSection({
     let best: string | null = null;
     let bestPrice = Infinity;
     for (const p of plastics) {
-      const pEntries = allEntries.filter((e) => e.plastic === p && e.inStock);
+      const pEntries = allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === p && e.inStock);
       const min = pEntries.length ? Math.min(...pEntries.map((e) => e.price)) : Infinity;
       if (min < bestPrice) { bestPrice = min; best = p; }
     }
@@ -808,7 +815,7 @@ export function VariantPriceSection({
   // Entries for selected plastic (all entries if "Alle" or chips aren't shown)
   const plasticEntries = useMemo(() => {
     if (!showPlasticChips || selectedPlastic === null) return allEntries;
-    return allEntries.filter((e) => e.plastic === selectedPlastic);
+    return allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === selectedPlastic);
   }, [allEntries, selectedPlastic, showPlasticChips]);
 
   // Unique non-null editions within the selected plastic
@@ -1008,7 +1015,10 @@ export function DiscHeroSection({
     const seen = new Set<string>();
     const out: string[] = [];
     for (const e of allEntries) {
-      if (e.plastic && !seen.has(e.plastic)) { seen.add(e.plastic); out.push(e.plastic); }
+      if (e.plastic) {
+        const norm = normalizePlastic(e.plastic);
+        if (!seen.has(norm)) { seen.add(norm); out.push(norm); }
+      }
     }
     return out;
   }, [allEntries]);
@@ -1020,7 +1030,7 @@ export function DiscHeroSection({
     let best: string | null = null;
     let bestPrice = Infinity;
     for (const p of plastics) {
-      const min = allEntries.filter((e) => e.plastic === p && e.inStock)
+      const min = allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === p && e.inStock)
         .reduce((m, e) => Math.min(m, e.price), Infinity);
       if (min < bestPrice) { bestPrice = min; best = p; }
     }
@@ -1032,7 +1042,7 @@ export function DiscHeroSection({
   const [selectedEdition, setSelectedEdition] = useState<string | null>(null);
 
   const plasticEntries = useMemo(
-    () => (!showPlasticChips || selectedPlastic === null) ? allEntries : allEntries.filter((e) => e.plastic === selectedPlastic),
+    () => (!showPlasticChips || selectedPlastic === null) ? allEntries : allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === selectedPlastic),
     [allEntries, selectedPlastic, showPlasticChips]
   );
 
