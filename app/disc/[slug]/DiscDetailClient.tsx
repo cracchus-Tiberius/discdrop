@@ -994,11 +994,13 @@ export function DiscHeroSection({
   discId,
   allEntries,
   lastUpdated,
+  description,
 }: {
   disc: DiscInfo;
   discId: string;
   allEntries: RichStoreEntry[];
   lastUpdated?: string | null;
+  description?: string | null;
 }) {
   // ── Chip state ──────────────────────────────────────────────────────────────
 
@@ -1176,6 +1178,11 @@ export function DiscHeroSection({
               <h1 className="font-serif text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight tracking-tight text-[#1a1a1a]">
                 {disc.name}
               </h1>
+
+              {/* Description */}
+              {description && (
+                <p className="mt-3 text-sm leading-relaxed text-[#555]">{description}</p>
+              )}
 
               {/* Plastic chips */}
               {showPlasticChips && (

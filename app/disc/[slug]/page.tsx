@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { discs } from "@/data/discs.js";
 import { getAllScrapedEntries, scrapedLastUpdated, getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
+import discDescriptions from "@/data/disc-descriptions.json";
 import {
   DiscHeroSection,
 } from "./DiscDetailClient";
@@ -135,6 +136,7 @@ export default async function DiscDetailPage({
           discId={disc.id}
           allEntries={getAllScrapedEntries(disc.id)}
           lastUpdated={scrapedLastUpdated}
+          description={(discDescriptions as Record<string, string>)[disc.id] ?? null}
         />
       </main>
       <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
