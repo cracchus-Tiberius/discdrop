@@ -149,6 +149,7 @@ function buildHotDropRows(): HotDropRow[] {
   const rows: HotDropRow[] = [];
 
   for (const disc of discs as Disc[]) {
+    if (disc.brand === "Alfa") continue;
     const entries = prices[disc.id] ?? [];
     if (entries.length === 0) continue;
 

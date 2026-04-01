@@ -15,6 +15,7 @@
     "scrape:frisbeesor": "node scripts/scrape-frisbeesor.js",
     "scrape:discexpress": "node scripts/scrape-discexpress.js",
     "scrape:rocketdiscs": "node scripts/scrape-rocketdiscs.js",
+    "scrape:discsport": "node scripts/scrape-discsport.js",
     "scrape:all": "node scripts/scrape-all.js",
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",

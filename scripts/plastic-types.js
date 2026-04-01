@@ -418,12 +418,21 @@ function isUsedDisc(rawName) {
 function isMiniDisc(rawName) {
   const lower = rawName.toLowerCase();
   // "Macro" is MVP's brand name for mini-marker discs
+  // Also catch "mini" appearing anywhere in the name (e.g. "K1 Reko Mini", "Reko Mini disc")
   return /\bmini\b/.test(lower) || lower.includes('mini-marker') || lower.includes('mini marker') || /\bmacro\b/.test(lower);
 }
 
 function isNonDiscProduct(rawName) {
   const lower = rawName.toLowerCase();
-  return lower.includes('sticker') || lower.includes('pin badge') || lower.includes('keychain');
+  return (
+    lower.includes('sticker') ||
+    lower.includes('pin badge') ||
+    lower.includes('keychain') ||
+    lower.includes('face shield') ||
+    lower.includes('shield') ||
+    /\bclip\b/.test(lower) ||      // e.g. "Magnetic Quick Release Clip"
+    /\bpin\b/.test(lower)          // pin collectibles (not "pinnacle" — word boundary safe)
+  );
 }
 
 module.exports = {

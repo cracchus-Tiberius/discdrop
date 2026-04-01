@@ -968,6 +968,57 @@ export function VariantPriceSection({
   );
 }
 
+// ── Brand logo helpers ───────────────────────────────────────────────────────
+
+const BRAND_SLUG: Record<string, string> = {
+  "Kastaplast": "kastaplast",
+  "Innova": "innova",
+  "Discraft": "discraft",
+  "Discmania": "discmania",
+  "Latitude 64": "latitude-64",
+  "Dynamic Discs": "dynamic-discs",
+  "Westside Discs": "westside-discs",
+  "MVP Disc Sports": "mvp",
+  "MVP": "mvp",
+  "Axiom Discs": "axiom",
+  "Axiom": "axiom",
+  "Streamline Discs": "streamline",
+  "Streamline": "streamline",
+  "Prodigy": "prodigy",
+  "Viking Discs": "viking-discs",
+  "RPM Discs": "rpm",
+  "Thought Space Athletics": "thought-space-athletics",
+  "Alfa": "alfa",
+};
+
+const BRAND_EXT: Record<string, string> = {
+  "mvp": "svg",
+  "axiom": "svg",
+  "streamline": "svg",
+  "westside-discs": "avif",
+  "dynamic-discs": "svg",
+};
+
+function BrandLogo({ brand }: { brand: string }) {
+  const [failed, setFailed] = useState(false);
+  const slug = BRAND_SLUG[brand];
+  if (!slug || failed) return null;
+  const ext = BRAND_EXT[slug] ?? "png";
+  const jpgSlugs = new Set(["latitude-64", "discmania"]);
+  const filename = jpgSlugs.has(slug) ? `${slug}.jpg` : `${slug}.${ext}`;
+  const large = new Set(["mvp", "axiom", "streamline"]);
+  const height = large.has(slug) ? 79 : 53;
+  const maxWidth = large.has(slug) ? 225 : 150;
+  return (
+    <img
+      src={`/images/brands/${filename}`}
+      alt={brand}
+      onError={() => setFailed(true)}
+      style={{ height, width: "auto", maxWidth, objectFit: "contain", flexShrink: 0 }}
+    />
+  );
+}
+
 // ── Disc Hero Section ────────────────────────────────────────────────────────
 
 const TYPE_LABELS_CLIENT: Record<string, string> = {
@@ -1164,7 +1215,12 @@ export function DiscHeroSection({
 
               {/* Brand · type badge (+ HOT/TOUR tags) */}
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-sm font-medium text-[#888]">{disc.brand}</span>
+                <Link
+                  href={`/brand/${BRAND_SLUG[disc.brand] ?? disc.brand.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="text-sm font-medium text-[#888] transition-colors hover:text-[#2D6A4F]"
+                >
+                  {disc.brand}
+                </Link>
                 <span className="text-[#ccc]">·</span>
                 <span className="rounded-md bg-[#e8f5e9] px-2.5 py-1 text-xs font-medium text-[#2D6A4F]">
                   {TYPE_LABELS_CLIENT[disc.type] ?? disc.type}
@@ -1185,9 +1241,12 @@ export function DiscHeroSection({
               </div>
 
               {/* Disc name */}
-              <h1 className="font-serif text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight tracking-tight text-[#1a1a1a]">
-                {disc.name}
-              </h1>
+              <div className="flex items-center gap-2.5">
+                <BrandLogo brand={disc.brand} />
+                <h1 className="font-serif text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight tracking-tight text-[#1a1a1a]">
+                  {disc.name}
+                </h1>
+              </div>
 
               {/* Description */}
               {description && (

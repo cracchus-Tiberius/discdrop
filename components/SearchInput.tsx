@@ -4,7 +4,7 @@ import { useRef, useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { DiscImage } from "./DiscImage";
 import { discs } from "@/data/discs.js";
-import { getScrapedPrice } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 
 type Disc = (typeof discs)[number];
 
@@ -277,7 +277,7 @@ export function SearchInput({
                         style={{ width: 36, height: 36 }}
                       >
                         <DiscImage
-                          src={"image" in d ? (d.image as string) : ""}
+                          src={getDiscImage(d)}
                           name={d.name}
                           brand={d.brand}
                           type={d.type}
