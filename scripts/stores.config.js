@@ -786,7 +786,7 @@ const NON_DISC_KEYWORDS = [
   'gloves', 'warmers', 'patch', 'gavekort', 'startsett', 'zipchip',
   'retriever', 'sound barrier', 'probasket', 'traveler', 'target',
   'led', 'kurvlys', 'disc doctor', 'mikrofiber', 'pins', 'bagtag',
-  'claw', 'chalk bag', 'tripod', 'thro', 'dry bag', 'lens cap',
+  'chalk bag', 'tripod', 'thro', 'dry bag', 'lens cap',
   'mini metal', 'pvc', 'forcefield', 'frame', 'station',
 ];
 
