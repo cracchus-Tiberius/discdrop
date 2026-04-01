@@ -449,7 +449,7 @@ function WhyDiscDrop() {
 // ── Popular discs ───────────────────────────────────────────────────────────
 const POPULAR_IDS = topSellers.discs
   .filter((d) => d.catalogId !== null)
-  .slice(0, 6)
+  .slice(0, 12)
   .map((d) => d.catalogId as string);
 
 function PopularDiscs() {
@@ -468,32 +468,32 @@ function PopularDiscs() {
         </p>
 
         {/* Horizontal scroll on mobile, grid on desktop */}
-        <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
+        <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-6">
           {popularDiscs.map((d) => {
             const price = bestPriceNOK(d);
             return (
               <Link
                 key={d.id}
                 href={`/disc/${d.id}`}
-                className="min-w-[160px] shrink-0 rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-4 transition-all hover:-translate-y-0.5 hover:shadow-md sm:min-w-0"
+                className="min-w-[130px] shrink-0 rounded-xl border border-[#e8e8e4] bg-[#fafaf8] p-3 transition-all hover:-translate-y-0.5 hover:shadow-md sm:min-w-0"
               >
                 <div
-                  className="mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]"
-                  style={{ height: 90 }}
+                  className="mb-2 flex items-center justify-center rounded-lg bg-[#F5F2EB]"
+                  style={{ height: 70 }}
                 >
                   <DiscImage
                     src={getDiscImage(d)}
                     name={d.name}
                     brand={d.brand}
                     type={d.type}
-                    containerStyle={{ height: 90 }}
+                    containerStyle={{ height: 70 }}
                   />
                 </div>
-                <h3 className="font-serif text-base font-semibold text-[#1a1a1a]">
+                <h3 className="font-serif text-sm font-semibold leading-tight text-[#1a1a1a]">
                   {d.name}
                 </h3>
-                <p className="text-xs text-[#666]">{d.brand}</p>
-                <p className="mt-2 font-serif text-lg font-semibold text-[#2D6A4F]">
+                <p className="text-[11px] text-[#666]">{d.brand}</p>
+                <p className="mt-1 font-serif text-base font-semibold text-[#2D6A4F]">
                   {price != null ? `${price} kr` : "—"}
                 </p>
               </Link>
