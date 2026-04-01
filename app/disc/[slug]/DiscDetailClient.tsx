@@ -173,8 +173,8 @@ export function PriceTable({
                       >
                         <td className={inline ? "px-3 py-2" : "px-5 py-4"}>
                           <div className="flex flex-wrap items-center gap-1.5">
-                            {row.country === "SE" && <span title="Svensk butikk">🇸🇪</span>}
                             <span className="font-medium text-[#1a1a1a]">{row.name}</span>
+                            {row.country === "SE" && <span title="Svensk butikk">🇸🇪</span>}
                             {isBest && (
                               <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
                                 Beste deal
@@ -237,8 +237,8 @@ export function PriceTable({
                     <div className="mb-3 flex items-start justify-between gap-2">
                       <div>
                         <div className="flex flex-wrap items-center gap-1.5">
-                          {row.country === "SE" && <span title="Svensk butikk">🇸🇪</span>}
                           <span className="font-semibold text-[#1a1a1a]">{row.name}</span>
+                          {row.country === "SE" && <span title="Svensk butikk">🇸🇪</span>}
                           {isBest && (
                             <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
                               Beste deal

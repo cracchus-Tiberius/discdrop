@@ -616,7 +616,6 @@ export const discs = [
   { id:"innova-gator", name:"Gator", brand:"Innova", type:"midrange", flight:{speed:6,glide:3,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-gorgon", name:"Gorgon", brand:"Innova", type:"driver", flight:{speed:10,glide:5,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-hawkeye", name:"Hawkeye", brand:"Innova", type:"driver", flight:{speed:10,glide:6,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"innova-it", name:"IT", brand:"Innova", type:"driver", flight:{speed:11,glide:5,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-invader", name:"Invader", brand:"Innova", type:"driver", flight:{speed:9,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-invictus", name:"Invictus", brand:"Innova", type:"driver", flight:{speed:12,glide:5,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-krait", name:"Krait", brand:"Innova", type:"driver", flight:{speed:10,glide:5,turn:-3,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
