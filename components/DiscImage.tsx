@@ -129,7 +129,7 @@ export function DiscImage({
       src={src}
       alt={name}
       onError={() => setFailed(true)}
-      style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
+      style={{ display: "block", width: "100%", height: "100%", objectFit: "contain" }}
     />
   );
 }

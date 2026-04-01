@@ -137,6 +137,11 @@ type HotDropRow = {
   lastScraped: string | null;
 };
 
+const BRAND_PRIORITY = [
+  'Kastaplast', 'Discmania', 'Innova', 'MVP', 'Axiom',
+  'Dynamic Discs', 'Latitude 64', 'Discraft', 'Prodigy',
+];
+
 function buildHotDropRows(): HotDropRow[] {
   type ScrapedEntry = { store: string; price: number; inStock: boolean; edition?: string | null; lastScraped?: string };
   const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
@@ -185,8 +190,8 @@ function buildHotDropRows(): HotDropRow[] {
     });
   }
 
-  // Sort: 1) in-stock first  2) badge rank (tour > limited > new > hot)
-  //       3) scarcity (fewer stores = more exclusive)  4) recency
+  // Sort: 1) in-stock first  2) badge rank (tour > first-run > limited > new > hot)
+  //       3) brand priority  4) scarcity (fewer stores = more exclusive)  5) recency
   const badgeRank: Record<string, number> = {
     'tour-series': 5, 'first-run': 4, limited: 3, 'new-drop': 2, hot: 1, 'sold-out': 0,
   };
@@ -194,12 +199,26 @@ function buildHotDropRows(): HotDropRow[] {
     if (a.inStock !== b.inStock) return a.inStock ? -1 : 1;
     const rankDiff = (badgeRank[b.badge] ?? 0) - (badgeRank[a.badge] ?? 0);
     if (rankDiff !== 0) return rankDiff;
-    // Within same badge: prefer exclusive (fewer stores), then newer
+    // Within same badge: brand priority
+    const aP = BRAND_PRIORITY.indexOf(a.brand); const bP = BRAND_PRIORITY.indexOf(b.brand);
+    const aBP = aP === -1 ? 999 : aP; const bBP = bP === -1 ? 999 : bP;
+    if (aBP !== bBP) return aBP - bBP;
     if (a.storeCount !== b.storeCount) return a.storeCount - b.storeCount;
     return (b.lastScraped ?? '').localeCompare(a.lastScraped ?? '');
   });
 
-  return rows.slice(0, 6);
+  // Brand diversity: max 2 per brand, greedy pick in badge+priority order
+  const brandCount: Record<string, number> = {};
+  const selected: HotDropRow[] = [];
+  for (const row of rows) {
+    if (selected.length >= 6) break;
+    const count = brandCount[row.brand] ?? 0;
+    if (count >= 2) continue;
+    brandCount[row.brand] = count + 1;
+    selected.push(row);
+  }
+
+  return selected;
 }
 
 // ── Navbar ─────────────────────────────────────────────────────────────────
@@ -430,7 +449,7 @@ function WhyDiscDrop() {
 // ── Popular discs ───────────────────────────────────────────────────────────
 const POPULAR_IDS = topSellers.discs
   .filter((d) => d.catalogId !== null)
-  .slice(0, 8)
+  .slice(0, 6)
   .map((d) => d.catalogId as string);
 
 function PopularDiscs() {
@@ -449,7 +468,7 @@ function PopularDiscs() {
         </p>
 
         {/* Horizontal scroll on mobile, grid on desktop */}
-        <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-6">
+        <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-3">
           {popularDiscs.map((d) => {
             const price = bestPriceNOK(d);
             return (
