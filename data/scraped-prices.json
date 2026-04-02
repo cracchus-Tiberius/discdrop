@@ -34700,102 +34700,6 @@
         "lastScraped": "2026-04-01T18:27:28.463Z"
       }
     ],
-    "viking-squall": [
-      {
-        "store": "wearediscgolf",
-        "price": 285,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/granite-blend-squall-jake-monn-2025/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/06/Squall-Jake-Monn-2025-300x300.jpg",
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-03-31T11:36:34.137Z"
-      },
-      {
-        "store": "aceshop",
-        "price": 289,
-        "inStock": true,
-        "url": "https://aceshop.no/product/granite-blend-squall-jake-monn-tour-series-2025/",
-        "image": null,
-        "plastic": null,
-        "edition": "Tour Series",
-        "lastScraped": "2026-03-31T11:47:20.671Z"
-      },
-      {
-        "store": "discsport",
-        "price": 234,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/squall",
-        "image": null,
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-04-01T18:27:28.463Z"
-      }
-    ],
-    "viking-pipeline": [
-      {
-        "store": "wearediscgolf",
-        "price": 219,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/atmos-pipeline/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/06/Pipeline-Cole-Redalen-2025-300x300.jpg",
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-03-31T11:36:34.137Z"
-      },
-      {
-        "store": "aceshop",
-        "price": 289,
-        "inStock": true,
-        "url": "https://aceshop.no/product/granite-blend-pipeline-cole-redalen-tour-series-2025/",
-        "image": null,
-        "plastic": null,
-        "edition": "Tour Series",
-        "lastScraped": "2026-03-31T11:47:20.671Z"
-      },
-      {
-        "store": "discsport",
-        "price": 234,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/pipeline",
-        "image": null,
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-04-01T18:27:28.463Z"
-      }
-    ],
-    "viking-avalanche": [
-      {
-        "store": "wearediscgolf",
-        "price": 285,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/granite-blend-avalanche-andrew-marwede-2025/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/06/Granite-Avalanche-Andrew-300x300.jpg",
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-03-31T11:36:34.137Z"
-      },
-      {
-        "store": "aceshop",
-        "price": 289,
-        "inStock": true,
-        "url": "https://aceshop.no/product/granite-blend-avalanche-andrew-marwede-tour-series-2025/",
-        "image": null,
-        "plastic": null,
-        "edition": "Tour Series",
-        "lastScraped": "2026-03-31T11:47:20.671Z"
-      },
-      {
-        "store": "discsport",
-        "price": 306,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/avalanche",
-        "image": null,
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-04-01T18:27:28.463Z"
-      }
-    ],
     "mvp-flare": [
       {
         "store": "wearediscgolf",
@@ -49738,60 +49642,6 @@
         "lastScraped": "2026-04-01T18:27:28.463Z"
       }
     ],
-    "viking-rogue": [
-      {
-        "store": "wearediscgolf",
-        "price": 199,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/proline-rogue/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/06/Rogue-Eliezra-Mi-300x300.jpg",
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-03-31T11:36:34.137Z"
-      },
-      {
-        "store": "aceshop",
-        "price": 289,
-        "inStock": true,
-        "url": "https://aceshop.no/product/granite-blend-rogue-eliezra-midtlyng-tour-series-2025/",
-        "image": null,
-        "plastic": null,
-        "edition": "Tour Series",
-        "lastScraped": "2026-03-31T11:47:20.671Z"
-      },
-      {
-        "store": "discsport",
-        "price": 306,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/rogue",
-        "image": null,
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-04-01T18:27:28.463Z"
-      }
-    ],
-    "viking-hurricane": [
-      {
-        "store": "wearediscgolf",
-        "price": 199,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/spark-hurricane/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/06/60007629-004-300x300.webp",
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-03-31T11:36:34.137Z"
-      },
-      {
-        "store": "discsport",
-        "price": 234,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/hurricane",
-        "image": null,
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-04-01T18:27:28.463Z"
-      }
-    ],
     "latitude-ballista-pro": [
       {
         "store": "wearediscgolf",
@@ -62338,28 +62188,6 @@
         "lastScraped": "2026-04-01T18:27:28.463Z"
       }
     ],
-    "viking-quake": [
-      {
-        "store": "aceshop",
-        "price": 289,
-        "inStock": true,
-        "url": "https://aceshop.no/product/granite-blend-quake-sullivan-tipton-tour-series-2025/",
-        "image": null,
-        "plastic": null,
-        "edition": "Tour Series",
-        "lastScraped": "2026-03-31T11:47:20.671Z"
-      },
-      {
-        "store": "discsport",
-        "price": 306,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/quake",
-        "image": null,
-        "plastic": null,
-        "edition": "2025",
-        "lastScraped": "2026-04-01T18:27:28.463Z"
-      }
-    ],
     "innova-dominator": [
       {
         "store": "aceshop",
@@ -63269,6 +63097,178 @@
         "image": null,
         "plastic": "Fuzion",
         "edition": null,
+        "lastScraped": "2026-04-01T18:27:28.463Z"
+      }
+    ],
+    "latitude-squall": [
+      {
+        "store": "wearediscgolf",
+        "price": 285,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/granite-blend-squall-jake-monn-2025/",
+        "image": "https://wearediscgolf.no/content/uploads/2025/06/Squall-Jake-Monn-2025-300x300.jpg",
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-03-31T11:36:34.137Z"
+      },
+      {
+        "store": "aceshop",
+        "price": 289,
+        "inStock": true,
+        "url": "https://aceshop.no/product/granite-blend-squall-jake-monn-tour-series-2025/",
+        "image": null,
+        "plastic": null,
+        "edition": "Tour Series",
+        "lastScraped": "2026-03-31T11:47:20.671Z"
+      },
+      {
+        "store": "discsport",
+        "price": 234,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/squall",
+        "image": null,
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-04-01T18:27:28.463Z"
+      }
+    ],
+    "latitude-pipeline": [
+      {
+        "store": "wearediscgolf",
+        "price": 219,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/atmos-pipeline/",
+        "image": "https://wearediscgolf.no/content/uploads/2025/06/Pipeline-Cole-Redalen-2025-300x300.jpg",
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-03-31T11:36:34.137Z"
+      },
+      {
+        "store": "aceshop",
+        "price": 289,
+        "inStock": true,
+        "url": "https://aceshop.no/product/granite-blend-pipeline-cole-redalen-tour-series-2025/",
+        "image": null,
+        "plastic": null,
+        "edition": "Tour Series",
+        "lastScraped": "2026-03-31T11:47:20.671Z"
+      },
+      {
+        "store": "discsport",
+        "price": 234,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/pipeline",
+        "image": null,
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-04-01T18:27:28.463Z"
+      }
+    ],
+    "latitude-avalanche": [
+      {
+        "store": "wearediscgolf",
+        "price": 285,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/granite-blend-avalanche-andrew-marwede-2025/",
+        "image": "https://wearediscgolf.no/content/uploads/2025/06/Granite-Avalanche-Andrew-300x300.jpg",
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-03-31T11:36:34.137Z"
+      },
+      {
+        "store": "aceshop",
+        "price": 289,
+        "inStock": true,
+        "url": "https://aceshop.no/product/granite-blend-avalanche-andrew-marwede-tour-series-2025/",
+        "image": null,
+        "plastic": null,
+        "edition": "Tour Series",
+        "lastScraped": "2026-03-31T11:47:20.671Z"
+      },
+      {
+        "store": "discsport",
+        "price": 306,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/avalanche",
+        "image": null,
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-04-01T18:27:28.463Z"
+      }
+    ],
+    "latitude-rogue": [
+      {
+        "store": "wearediscgolf",
+        "price": 199,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/proline-rogue/",
+        "image": "https://wearediscgolf.no/content/uploads/2025/06/Rogue-Eliezra-Mi-300x300.jpg",
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-03-31T11:36:34.137Z"
+      },
+      {
+        "store": "aceshop",
+        "price": 289,
+        "inStock": true,
+        "url": "https://aceshop.no/product/granite-blend-rogue-eliezra-midtlyng-tour-series-2025/",
+        "image": null,
+        "plastic": null,
+        "edition": "Tour Series",
+        "lastScraped": "2026-03-31T11:47:20.671Z"
+      },
+      {
+        "store": "discsport",
+        "price": 306,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/rogue",
+        "image": null,
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-04-01T18:27:28.463Z"
+      }
+    ],
+    "latitude-hurricane": [
+      {
+        "store": "wearediscgolf",
+        "price": 199,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/spark-hurricane/",
+        "image": "https://wearediscgolf.no/content/uploads/2025/06/60007629-004-300x300.webp",
+        "plastic": null,
+        "edition": "2025",
+        "lastScraped": "2026-03-31T11:36:34.137Z"
+      },
+      {
+        "store": "discsport",
+        "price": 234,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/hurricane",
+        "image": null,
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-04-01T18:27:28.463Z"
+      }
+    ],
+    "latitude-quake": [
+      {
+        "store": "aceshop",
+        "price": 289,
+        "inStock": true,
+        "url": "https://aceshop.no/product/granite-blend-quake-sullivan-tipton-tour-series-2025/",
+        "image": null,
+        "plastic": null,
+        "edition": "Tour Series",
+        "lastScraped": "2026-03-31T11:47:20.671Z"
+      },
+      {
+        "store": "discsport",
+        "price": 306,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/quake",
+        "image": null,
+        "plastic": null,
+        "edition": "2025",
         "lastScraped": "2026-04-01T18:27:28.463Z"
       }
     ]
