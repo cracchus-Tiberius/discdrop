@@ -989,6 +989,12 @@ const BRAND_SLUG: Record<string, string> = {
   "RPM Discs": "rpm",
   "Thought Space Athletics": "thought-space-athletics",
   "Alfa": "alfa",
+  "EggShell Discs": "eggshell-discs",
+  "Clash Discs": "clash-discs",
+  "Prodiscus": "prodiscus",
+  "Lone Star Discs": "lone-star-discs",
+  "Gateway": "gateway",
+  "Millennium": "millennium",
 };
 
 const BRAND_EXT: Record<string, string> = {

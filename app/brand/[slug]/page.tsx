@@ -19,6 +19,12 @@ export const SLUG_TO_BRAND: Record<string, string> = {
   "rpm": "RPM Discs",
   "thought-space-athletics": "Thought Space Athletics",
   "alfa": "Alfa",
+  "eggshell-discs": "EggShell Discs",
+  "clash-discs": "Clash Discs",
+  "prodiscus": "Prodiscus",
+  "lone-star-discs": "Lone Star Discs",
+  "gateway": "Gateway",
+  "millennium": "Millennium",
 };
 
 export const BRAND_TO_SLUG: Record<string, string> = Object.fromEntries(
