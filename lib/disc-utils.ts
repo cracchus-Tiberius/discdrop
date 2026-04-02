@@ -202,28 +202,65 @@ export function matchesSearch(disc: Disc, q: string): boolean {
   );
 }
 
-export function releaseBadge(
-  disc: Disc
-): "New Drop" | "Hot" | "Limited" | "Sold Out" {
-  const { inStockCount } = getScrapedPrice(disc.id);
-  const tags = disc.tags as string[];
-  if (tags.includes("sold-out") || inStockCount === 0) return "Sold Out";
-  if (tags.includes("limited")) return "Limited";
-  if (tags.includes("hot")) return "Hot";
-  if (tags.includes("new")) return "New Drop";
-  return "Hot";
+const TOUR_SERIES_KW = ['tour series', 'team series', 'team championship series', 'signature series', 'mold team'];
+const FIRST_RUN_KW = ['first run', 'primal run'];
+const LIMITED_KW = ['limited edition', 'special edition', 'prototype', 'project lab coat', 'lab coat'];
+const PLAYER_NAMES_KW = [
+  'eagle mcmahon', 'calvin heimburg', 'ricky wysocki', 'simon lizotte', 'paige pierce',
+  'brodie smith', 'paul mcbeth', 'niklas anttila', 'bradley williams', 'gannon buhr',
+  'clay edwards', 'casey white', 'nate sexton', 'anthony barela', 'catrina allen',
+  'henna blomroos', 'eveliina salonen', 'vaino makela', 'kristofer hivju', 'albert tamm',
+  'kristin lätt', 'kristin tattar', 'johne mccray', 'dallas garber', 'joseph anderson',
+  'silva saarinen', 'sockibomb', 'jeremy koling', 'james conrad', 'kona montgomery',
+  'ida emilie nesse', 'anniken steen', 'julia fors', 'juliana korver', 'josef berg',
+  'cadence burge', 'kyle klein', 'aaron gossage', 'holyn handley', 'ella hansen',
+  'isaac robinson', 'chris dickerson', 'adam hammes', 'silas schultz',
+];
+
+function editionToBadgeLabel(edition: string): string | null {
+  const ed = edition.toLowerCase();
+  if (TOUR_SERIES_KW.some((kw) => ed.includes(kw))) return "Tour Series";
+  if (PLAYER_NAMES_KW.some((p) => ed.includes(p))) return "Tour Series";
+  if (FIRST_RUN_KW.some((kw) => ed.includes(kw))) return "First Run";
+  if (LIMITED_KW.some((kw) => ed.includes(kw))) return "Limited";
+  return null;
 }
 
-export function badgeStyles(
-  kind: "New Drop" | "Hot" | "Limited" | "Sold Out"
-): string {
+export function releaseBadge(disc: Disc): string | null {
+  const { inStockCount } = getScrapedPrice(disc.id);
+  const tags = disc.tags as string[];
+
+  if (tags.includes("sold-out") || inStockCount === 0) return "Sold Out";
+
+  // Derive badge from scraped edition field
+  const entries = getAllScrapedEntries(disc.id);
+  for (const entry of entries) {
+    if (!entry.edition) continue;
+    const label = editionToBadgeLabel(entry.edition);
+    if (label) return label;
+  }
+
+  // Fall back to explicit manual tags
+  if (tags.includes("limited")) return "Limited";
+  if (tags.includes("first-run")) return "First Run";
+  if (tags.includes("tour-series")) return "Tour Series";
+  if (tags.includes("new") || tags.includes("new-drop")) return "New Drop";
+
+  return null;
+}
+
+export function badgeStyles(kind: string | null): string {
   switch (kind) {
     case "Sold Out":
       return "bg-white/10 text-muted";
     case "Limited":
       return "bg-alert/20 text-alert";
-    case "Hot":
-      return "bg-accent/15 text-accent";
+    case "First Run":
+      return "bg-red-700/20 text-red-400";
+    case "Tour Series":
+      return "bg-accent/20 text-accent";
+    case "New Drop":
+      return "bg-accent/10 text-accent";
     default:
       return "bg-accent/10 text-accent";
   }

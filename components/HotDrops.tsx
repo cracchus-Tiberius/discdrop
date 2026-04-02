@@ -25,23 +25,19 @@ export default function HotDrops({ items }: { items: Disc[] }) {
             const badge = releaseBadge(d);
             const { best, storeCount } = getBestInStockNOK(d);
             const hasStock = d.stores.some((s) => s.inStock);
-            const tags = d.tags as string[];
-            const isHotTagged = tags.includes("hot");
             return (
               <article
                 key={d.id}
-                className={`flex min-h-[26rem] w-[min(100%,340px)] shrink-0 snap-start flex-col rounded-2xl border bg-surface p-6 shadow-lg shadow-black/20 transition-[box-shadow,border-color] ${
-                  isHotTagged
-                    ? "border-accent/35 shadow-[0_0_52px_-14px_rgba(184,224,74,0.42),0_0_0_1px_rgba(184,224,74,0.22)] ring-1 ring-accent/30"
-                    : "border-white/10"
-                }`}
+                className="flex min-h-[26rem] w-[min(100%,340px)] shrink-0 snap-start flex-col rounded-2xl border border-white/10 bg-surface p-6 shadow-lg shadow-black/20"
               >
                 <div className="flex items-start justify-between gap-2">
-                  <span
-                    className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide ${badgeStyles(badge)}`}
-                  >
-                    {badge}
-                  </span>
+                  {badge ? (
+                    <span
+                      className={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide ${badgeStyles(badge)}`}
+                    >
+                      {badge}
+                    </span>
+                  ) : null}
                 </div>
                 <h3 className="mt-5 font-heading text-xl font-semibold leading-snug text-foreground">
                   {d.name}

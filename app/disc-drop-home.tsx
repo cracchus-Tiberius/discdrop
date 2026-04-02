@@ -105,21 +105,23 @@ const ALL_HOT_EDITION_KEYWORDS = new Set([
 /** Return the badge tag that best describes an edition string */
 function editionToBadge(edition: string | null, inStock: boolean, lastScraped?: string): string {
   if (!inStock) return 'sold-out';
-  if (!edition) return 'hot';
 
   // Edition type takes priority over recency — classify first
-  const ed = edition.toLowerCase();
-  if (TOUR_SERIES_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'tour-series';
-  if (HOT_PLAYER_NAMES.some((p) => ed.includes(p.toLowerCase()))) return 'tour-series';
-  if (['first run', 'primal run'].some((kw) => ed.includes(kw))) return 'first-run';
-  if (LIMITED_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'limited';
+  if (edition) {
+    const ed = edition.toLowerCase();
+    if (TOUR_SERIES_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'tour-series';
+    if (HOT_PLAYER_NAMES.some((p) => ed.includes(p.toLowerCase()))) return 'tour-series';
+    if (['first run', 'primal run'].some((kw) => ed.includes(kw))) return 'first-run';
+    if (LIMITED_KEYWORDS.some((kw) => ed.includes(kw.toLowerCase()))) return 'limited';
+  }
 
-  // Generic edition — show "NY" only if recently scraped (past 14 days)
+  // Event/tournament editions are limited runs — show as limited
+  // Generic edition seen recently → new-drop
   if (lastScraped) {
     const ageMs = Date.now() - new Date(lastScraped).getTime();
     if (ageMs < 14 * 24 * 60 * 60 * 1000) return 'new-drop';
   }
-  return 'hot';
+  return 'limited';
 }
 
 type HotDropRow = {
