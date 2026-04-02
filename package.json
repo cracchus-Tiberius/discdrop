@@ -9,6 +9,7 @@
     "lint": "eslint",
     "scrape": "node scripts/scraper.js",
     "fetch-images": "node scripts/fetch-images.js",
+    "fetch-images:westside": "node scripts/fetch-images-westsidediscs.js",
     "scrape:ace": "node scripts/scrape-aceshop.js",
     "scrape:frisbeebutikken": "node scripts/scrape-frisbeebutikken.js",
     "scrape:golfdiscer": "node scripts/scrape-golfdiscer.js",
