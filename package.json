@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/check-meta-lengths.mjs",
+    "check-meta-lengths": "node scripts/check-meta-lengths.mjs",
     "start": "next start",
     "lint": "eslint",
     "scrape": "node scripts/scraper.js",
