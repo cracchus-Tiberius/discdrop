@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { discs } from "@/data/discs.js";
 import { getAllScrapedEntries, scrapedLastUpdated, getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
+import { buildDiscMeta } from "@/lib/disc-meta.mjs";
 import discDescriptions from "@/data/disc-descriptions.json";
 import {
   DiscHeroSection,
@@ -53,16 +54,25 @@ export async function generateMetadata({
   const { slug } = await params;
   const disc = discs.find((d) => d.id === slug);
   if (!disc) return {};
-  const { storeCount } = getScrapedPrice(disc.id);
+
+  const { price, inStockCount } = getScrapedPrice(disc.id);
   const image = getDiscImage(disc);
   const canonical = `https://discdrop.net/disc/${slug}`;
+
+  const { title, description, ogTitle } = buildDiscMeta(disc, { price, inStockCount });
+
+  if (process.env.NODE_ENV !== "production") {
+    if (title.length > 65) console.warn(`[meta] /disc/${slug} title ${title.length} chars (>65): ${title}`);
+    if (description.length > 160) console.warn(`[meta] /disc/${slug} description ${description.length} chars (>160): ${description}`);
+  }
+
   return {
-    title: `${disc.name} | ${disc.brand} | DiscDrop`,
-    description: `Finn beste pris på ${disc.name} fra ${disc.brand} i Norge. Se priser fra ${storeCount > 0 ? storeCount : "norske"} butikker inkludert frakt og MVA.`,
+    title,
+    description,
     alternates: { canonical },
     openGraph: {
-      title: `${disc.name} | ${disc.brand} | DiscDrop`,
-      description: `Finn beste pris på ${disc.name} fra ${disc.brand} i Norge. Se priser fra norske butikker inkludert frakt og MVA.`,
+      title: ogTitle,
+      description,
       url: canonical,
       images: image !== "/disc-placeholder.svg" ? [{ url: image }] : [],
     },
