@@ -73,6 +73,34 @@ function deactivateAlert(alertId) {
   );
 }
 
+async function notifyOwner(subject, message) {
+  const ownerEmail = process.env.OWNER_EMAIL;
+  if (!ownerEmail) {
+    console.error("OWNER_EMAIL not set — skipping failure notification");
+    return;
+  }
+  try {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "DiscDrop <varsler@discdrop.net>",
+        to: [ownerEmail],
+        subject,
+        text: message,
+      }),
+    });
+    if (!res.ok) {
+      console.error(`Failed to send owner notification: ${res.status} ${await res.text()}`);
+    }
+  } catch (err) {
+    console.error("Failed to send owner notification:", err);
+  }
+}
+
 async function sendEmail(alert, currentPrice) {
   const { id, disc_id, email, target_price } = alert;
   const discUrl = `https://discdrop.net/disc/${disc_id}`;
@@ -149,7 +177,11 @@ async function main() {
   console.log(`Done. Triggered ${triggered} alert(s).`);
 }
 
-main().catch((e) => {
+main().catch(async (e) => {
   console.error(e);
+  await notifyOwner(
+    "DiscDrop: price alerts check FAILED",
+    `The daily check-alerts.js run failed.\n\nError:\n${e?.stack || e?.message || String(e)}\n\nSee GitHub Actions logs for the full output.`
+  );
   process.exit(1);
 });

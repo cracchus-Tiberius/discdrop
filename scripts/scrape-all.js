@@ -18,7 +18,6 @@ const STEPS = [
   { name: 'Rocketdiscs',                     cmd: 'node scripts/scrape-rocketdiscs.js' },
   { name: 'Fetch images',                    cmd: 'node scripts/fetch-images.js' },
   { name: 'Enrich variants',                 cmd: 'node scripts/enrich-variants.js' },
-  { name: 'Check alerts',                    cmd: 'node scripts/check-alerts.js' },
 ];
 
 const failed = [];
