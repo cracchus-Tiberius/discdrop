@@ -1,0 +1,17 @@
+# Cloudflare Pages _redirects file
+# This stack uses output: "export" — Next.js redirects() in next.config.ts
+# is ignored. Use this file for any 301/302 redirects.
+# Format: <source> <destination> <status>
+
+# Category A — slug changes from catalog cleanup (301 permanent)
+/disc/discmania-apollo      /disc/alfa-apollo/         301
+/disc/discmania-atlantis    /disc/alfa-atlantis/       301
+/disc/discmania-fjord       /disc/alfa-fjord/          301
+/disc/discmania-theios      /disc/alfa-theios/         301
+/disc/kastaplast-sled       /disc/discraft-sled/       301
+/disc/viking-hurricane      /disc/latitude-hurricane/  301
+/disc/viking-pipeline       /disc/latitude-pipeline/   301
+/disc/viking-avalanche      /disc/latitude-avalanche/  301
+/disc/viking-quake          /disc/latitude-quake/      301
+/disc/viking-rogue          /disc/latitude-rogue/      301
+/disc/viking-squall         /disc/latitude-squall/     301
