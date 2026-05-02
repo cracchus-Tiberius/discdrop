@@ -21,13 +21,19 @@ const PLASTIC_TYPES = {
   },
   Innova: {
     prefix: [
-      'Halo Star', 'Metal Flake Champion', 'Metal Flake',
-      'Halo Champion', 'Halo Nexus',
+      // Multi-word — longest first
+      'Metal Flake Halo Champion', 'Halo Champion Metal Flake',
+      'Halo Champion Moondust', 'Halo Champion Proto Glow',
+      'Halo Star Color Glow', 'Halo Star Proto Glow',
+      'Proto Glow Halo Star', 'Proto Glow Halo Champion', 'Proto Glow Champion',
+      'Halo Star', 'Halo Champion', 'Halo Nexus',
+      'Metal Flake Champion', 'Metal Flake',
       'KC Pro Glow', 'Star Glow', 'Proto Glow',
       'I-Dye Champion', 'I-Dye Star',
       'Champion Glow', 'Color Glow',
       'Blizzard Champion', 'Color Glow Pro', 'Color Glow Champion',
       'Gummy Champion', 'Gummy Star', 'Echo Star', 'Shimmer Star', 'Swirly Star',
+      'Classic Glow',
       'Champion', 'Blizzard', 'GStar', 'G-Star',
       'R-Pro', 'KC Pro', 'JK Pro',
       'Soft Pro',
@@ -67,9 +73,10 @@ const PLASTIC_TYPES = {
   'Latitude 64': {
     prefix: [
       'Opto-X Chameleon', 'Opto-X Glimmer', 'Opto Chameleon', 'Opto-X',
-      'Opto Glimmer', 'Opto Ice', 'Opto Air',
+      'Opto Glimmer', 'Opto Ice', 'Opto-Ice', 'Opto Air',
       'Gold Orbit', 'Gold Glimmer', 'Gold Ice', 'Gold Line',
-      'Grand Orbit', 'Retro Burst', 'Royal Grand',
+      'Grand Orbit', 'Retro Burst', 'Royal Grand', 'Royal Clear',
+      'Classic Supreme Orbit', 'Classic Supreme',
       'Zero Soft', 'Zero Medium', 'Zero Hard',
       'BioGold', 'Moonshine',
       'Royal', 'Opto', 'Gold', 'Grand', 'Sense', 'Frost',
@@ -80,10 +87,10 @@ const PLASTIC_TYPES = {
   'Westside Discs': {
     prefix: [
       'VIP X Moonshine', 'VIP Ice', 'VIP Air', 'VIP Glimmer', 'VIP Moonshine',
-      'BT Soft', 'BT Medium', 'BT Hard',
+      'BT Burst Swan Soft', 'BT Soft', 'BT Medium', 'BT Hard',
       'Magic Super Soft', 'Voodoo Super Soft', 'Stupid Soft',
       'Organic Hemp',
-      'Origio Burst', 'Moonshine VIP', 'Moonshine',
+      'Origio Burst', 'Moonshine VIP', 'Moonshine', 'Moondust',
       'Tournament', 'Origio', 'Elasto', 'Frost',
       'VIP', 'BT', 'Nylon',
     ],
@@ -91,12 +98,13 @@ const PLASTIC_TYPES = {
   },
   Discraft: {
     prefix: [
+      'Tour Series Swirly ESP', 'Tour Series Z Swirl', 'Tour Series ESP', 'Tour Series',
       'CryZtal FLX Sparkle', 'CryZtal Glo FLX', 'CryZtal Glo', 'CryZtal FLX',
       'CryZtal Sparkle', 'CryZtal', 'Cryztal',
       'Titanium FLX', 'Ti Colorshift', 'Ti Swirl', 'Ti FLX', 'Titanium',
       'Z Metallic FLX', 'Z Metallic', 'Z Glo FLX', 'Z Glo',
-      'Z Swirl', 'Z FLX', 'Z Lite',
-      'Big Z FLX', 'Big Z',
+      'Z Swirl', 'Z FLX', 'Z Lite', 'Z Sparkle',
+      'Big Z Swirl', 'Big Z Nebula', 'Big Z FLX', 'Big Z',
       'ESP Glo Sparkle', 'ESP Glo', 'ESP Swirl', 'ESP FLX', 'ESP',
       'Jawbreaker Z FLX', 'Jawbreaker Swirl', 'Jawbreaker Glo',
       'Jawbreaker Z', 'Jawbreaker',
@@ -113,9 +121,12 @@ const PLASTIC_TYPES = {
   },
   MVP: {
     prefix: [
+      'Particle Glow Proton Soft', 'Particle Glow Proton', 'Particle Glow Eclipse',
+      'Particle Proton Soft', 'Particle Proton', 'Particle Glow', 'Particle',
       'Cosmic Electron Soft', 'Cosmic Electron Firm', 'Cosmic Electron',
       'Cosmic Neutron', 'Prism Neutron', 'Prism Proton', 'Prism Plasma',
       'R2 Neutron', 'Soft Neutron', 'Neutron Soft', 'Proton Soft',
+      'Eclipse Soft SL', 'Eclipse Electron', 'Eclipse 2.0',
       'Total Eclipse', 'Eclipse',
       'Electron Soft', 'Electron Firm',
       'Electron', 'Fission', 'Plasma Soft', 'Plasma', 'Proton', 'Neutron',
@@ -124,9 +135,12 @@ const PLASTIC_TYPES = {
   },
   Axiom: {
     prefix: [
+      'Particle Glow Proton Soft', 'Particle Glow Proton', 'Particle Glow Eclipse',
+      'Particle Proton Soft', 'Particle Proton', 'Particle Glow', 'Particle',
       'Cosmic Electron Soft', 'Cosmic Electron Firm', 'Cosmic Electron',
       'Cosmic Neutron', 'Prism Neutron', 'Prism Proton', 'Prism Plasma',
       'R2 Neutron', 'Soft Neutron', 'Neutron Soft', 'Proton Soft',
+      'Eclipse Soft SL', 'Eclipse Electron', 'Eclipse 2.0',
       'Total Eclipse', 'Eclipse',
       'Electron Soft', 'Electron Firm',
       'Electron', 'Fission', 'Plasma Soft', 'Plasma', 'Proton', 'Neutron',
@@ -422,17 +436,78 @@ function isMiniDisc(rawName) {
   return /\bmini\b/.test(lower) || lower.includes('mini-marker') || lower.includes('mini marker') || /\bmacro\b/.test(lower);
 }
 
+// Multi-word phrases that mean the product is NOT a disc.
+// Substring match (lowercased). Conservative — avoid words that overlap
+// real disc names (Halo, Star, Particle, Eclipse, etc.).
+const NON_DISC_PHRASES = [
+  // Sets / bundles
+  'disc golf set', 'disc golf bag', 'starter set', 'starter bag', 'starter pack',
+  'mystery box', 'mystery disc', 'mystery pack', 'mysteri pack', 'distance set',
+  'komplett paket', '3-disc', '3 disc', '3-pack', '3 för',
+  'evolution disc golf', 'advanced startset', 'training set', 'träningspaket',
+  // Baskets / targets
+  'tävlingskorg', 'throwing net', 'kastnät', 'pro target', 'foldable target',
+  'lite basket', 'active target', 'pro basket', 'probasket', 'sten fot',
+  'portabel fot', 'tee sign', 'teesign', 'hålkartehållare',
+  'ground attachment', 'jordfeste', 'fjellfeste', 'banekurv', 'betongfeste',
+  'betong fundament',
+  // Bags
+  'grip eq', 'lilly eq', 'shuttle bag', 'shuttle sekk', 'sport bag', 'osmosis sport',
+  'core backpack', 'core pro', 'shoulder bag', 'arc backpack', 'drawstring bag',
+  'dry bag', 'chalk bag', 'tech towel', 'sound barrier',
+  // Accessories
+  'with cooler', 'w/cooler', 'w/ cooler', 'seat cushion', 'tool kit',
+  'pvc patch', 'birdie challange', 'birdie challenge',
+  'pro rainfly', 'slim rainfly', 'rain fly',
+  // Apparel
+  'hand warmers', 'hettegenser',
+];
+
+// Single words / regex tokens that mean the product is NOT a disc.
+// Word-boundary match to avoid false positives.
+const NON_DISC_WORDS = [
+  // Apparel
+  'hoodie', 'jacket', 'jersey', 'tröja', 't-shirt', 'tshirt',
+  'snapback', 'flexfit', 'keps', 'sock', 'strumpor',
+  // Books / media
+  'huvudbok', 'arbetsbok', 'kalender', 'ljudfiler', 'simulator',
+  // Equipment / sundries
+  'motståndsband', 'sugploppsboll', 'discställ', 'discstall',
+  'myggolf', 'kløstopp', 'myggspray', 'myggmelk',
+  'flashlight', 'rangefinder', 'retriever',
+  // Baskets / accessories (single-word)
+  'teepad', 'kastnät', 'cooler', 'umbrella', 'paraply', 'lykt', 'regntrekk',
+  'sportsack', 'whalesack', 'dirtbag', 'kalkpose',
+  // Sets (single-word)
+  'startset', 'startpakke', 'nybegynnersett', 'lettkastet', 'lettkast',
+  'startpakkett', 'gyropalooza',
+  // Ultimate frisbee — different sport
+  'ultrastar', 'umax', 'wham-o', 'whamo',
+];
+
 function isNonDiscProduct(rawName) {
   const lower = rawName.toLowerCase();
-  return (
+
+  if (
     lower.includes('sticker') ||
     lower.includes('pin badge') ||
     lower.includes('keychain') ||
     lower.includes('face shield') ||
     lower.includes('shield') ||
-    /\bclip\b/.test(lower) ||      // e.g. "Magnetic Quick Release Clip"
-    /\bpin\b/.test(lower)          // pin collectibles (not "pinnacle" — word boundary safe)
-  );
+    /\bclip\b/.test(lower) ||
+    /\bpin\b/.test(lower)
+  ) return true;
+
+  for (const phr of NON_DISC_PHRASES) {
+    if (lower.includes(phr)) return true;
+  }
+
+  for (const w of NON_DISC_WORDS) {
+    const re = new RegExp('(?:^|[\\s,/(\\-])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:[\\s,/)\\-]|$)', 'i');
+    if (re.test(rawName)) return true;
+  }
+
+  return false;
 }
 
 module.exports = {

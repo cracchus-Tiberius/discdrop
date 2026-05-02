@@ -99,7 +99,7 @@ function norm(s) {
 
 const NON_DISC_KEYWORDS = [
   'bag', 'sekk', 'ryggsekk', 'basket', 'kurv', 'armbånd', 'handledds',
-  'towel', 'håndkle', 'marker', 'kasse', 'mold',
+  'towel', 'håndkle', 'marker', 'kasse',
   // Accessories — added from scrape audit
   'rainfly', 'slim rainfly', 'backpack', 'flashlight', 'stool',
   'flaske', 'klut', 'paraply', 'genser', 'jersey', 'hoodie',
@@ -122,6 +122,33 @@ function isDiscProduct(rawName) {
 function matchDisc(rawProductName) {
   if (!isDiscProduct(rawProductName)) return null;
 
+  // Decode common HTML entities for separators (&#8211; = en dash, &#8212; = em dash)
+  const decoded = rawProductName
+    .replace(/&#8211;/g, '–')
+    .replace(/&#8212;/g, '—')
+    .replace(/&ndash;/g, '–')
+    .replace(/&mdash;/g, '—');
+
+  // Tour Series suffix retry: many Tour Series listings follow
+  //   "[Plastic] [Disc Name] - [Player Name] [Year] [Tour|Team Series]"
+  // Only split on space-separator-space (em/en dash or hyphen) to avoid
+  // breaking legitimate hyphenated names (Berg-X, Reko-X, P-Line, P4).
+  const sepMatch = decoded.match(/^(.+?)\s+[-–—]\s+/);
+  const candidates = [decoded];
+  if (sepMatch) {
+    const prefix = sepMatch[1].trim();
+    // Require ≥3 words in prefix to avoid bogus single-word matches
+    if (prefix.split(/\s+/).length >= 3) candidates.push(prefix);
+  }
+
+  for (const candidate of candidates) {
+    const result = matchDiscCandidate(candidate);
+    if (result) return result;
+  }
+  return null;
+}
+
+function matchDiscCandidate(rawProductName) {
   // Normalise: lowercase, collapse specials to spaces
   let normalised = norm(rawProductName);
   // Strip year prefix e.g. "2024 Chris Dickerson Tour Series Buzzz"
