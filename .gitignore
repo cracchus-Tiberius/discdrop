@@ -43,3 +43,7 @@ dist/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# matcher diagnostic snapshots — session-local, not source
+data/unmatched-baseline-*.json
+data/unmatched-after-*.json
