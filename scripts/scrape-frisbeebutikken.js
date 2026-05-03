@@ -55,7 +55,7 @@ function parseProductsFromHtml(html) {
     if (!rawName) return;
 
     const price = parseInt(card.attr('data-price-including-tax'), 10);
-    if (!price || isNaN(price) || price <= 0) return;
+    if (!price || isNaN(price) || price < 50) return; // skip suspiciously low prices (used/clearance/parsing error)
 
     // Prefer __product_url link, fall back to a.title href
     const linkEl = card.find('a.__product_url, a.title').first();

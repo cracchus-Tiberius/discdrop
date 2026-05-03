@@ -233,6 +233,7 @@ function mergeResults(products, sekToNok, now) {
       if (!existing.prices[disc.id]) existing.prices[disc.id] = [];
       const variant = extractVariant(product.rawName, disc.brand);
       const priceNOK = Math.round(product.price * sekToNok);
+      if (priceNOK < 50) continue; // sanity check on converted NOK (in case rate goes weird)
 
       const dupe = existing.prices[disc.id].find(e => e.store === STORE.key && e.plastic === variant.plastic);
       if (!dupe) {

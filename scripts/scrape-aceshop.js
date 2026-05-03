@@ -67,7 +67,7 @@ function parseProductsFromHtml(html) {
 
     const rawPrice = card.find(SEL.price).first().text().trim();
     const price = parseNOKPrice(rawPrice);
-    if (!price) return;
+    if (!price || price < 50) return; // skip suspiciously low prices (used/clearance/parsing error)
 
     const linkEl = card.find(SEL.link).first();
     const href = linkEl.attr('href') || '';
@@ -333,7 +333,7 @@ async function scrapeWithPlaywright() {
             seenUrls.add(prod.productUrl);
             // Parse price here where we have the helper
             const price = parseNOKPrice(prod.rawPrice);
-            if (price && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName) && !isNonDiscProduct(prod.rawName)) {
+            if (price && price >= 50 && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName) && !isNonDiscProduct(prod.rawName)) {
               allProducts.push({
                 rawName:    prod.rawName,
                 price,

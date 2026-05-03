@@ -67,6 +67,7 @@ async function scrapeWithApi() {
       if (prices.length === 0) continue;
 
       const price = Math.min(...prices);
+      if (price < 50) continue; // skip suspiciously low prices (used/clearance/parsing error)
       const inStock = availableVariants.length > 0;
       const productUrl = `${STORE.baseUrl}/products/${product.handle}`;
       const image = product.images?.[0]?.src || null;
@@ -122,9 +123,11 @@ async function scrapeWithPlaywright() {
           const pool = avail.length ? avail : variants;
           const prices = pool.map(v => parseFloat(v.price)).filter(p => !isNaN(p) && p > 0);
           if (!prices.length) continue;
+          const minPrice = Math.round(Math.min(...prices));
+          if (minPrice < 50) continue; // skip suspiciously low prices (used/clearance/parsing error)
           if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) allProducts.push({
             rawName,
-            price: Math.round(Math.min(...prices)),
+            price: minPrice,
             productUrl: `${STORE.baseUrl}/products/${product.handle}`,
             inStock: avail.length > 0,
             image: product.images?.[0]?.src || null,
