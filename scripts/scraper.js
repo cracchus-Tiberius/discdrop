@@ -358,20 +358,41 @@ async function main() {
   console.log(`  Total unmatched: ${totalUnmatched}`);
   console.log(`  Discs with scraped prices: ${Object.keys(prices).length}`);
 
-  // ── Write scraped-prices.json ──
-  const output = {
-    lastUpdated: now,
-    stores: storesMeta,
-    prices,
-  };
-
+  // ── Merge into scraped-prices.json (preserves other stores' entries) ──
+  // History: a from-scratch overwrite here caused a race condition where a
+  // late-completing zombie scraper.js (after scrape-all.js's 10-min SIGTERM
+  // failed to actually kill it) would wipe data freshly written by Aceshop.
+  // Match the pattern used by every per-store scraper: read existing, drop
+  // own stores' entries, push fresh ones, write.
+  const ownKeys = new Set(STORES.map((s) => s.key));
   const outPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
-  fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
+  let existing = { lastUpdated: now, stores: {}, prices: {} };
+  if (fs.existsSync(outPath)) {
+    try { existing = JSON.parse(fs.readFileSync(outPath, 'utf8')); } catch {}
+  }
+  Object.assign(existing.stores, storesMeta);
+  for (const discId of Object.keys(existing.prices)) {
+    existing.prices[discId] = existing.prices[discId].filter((e) => !ownKeys.has(e.store));
+    if (existing.prices[discId].length === 0) delete existing.prices[discId];
+  }
+  for (const [discId, entries] of Object.entries(prices)) {
+    if (!existing.prices[discId]) existing.prices[discId] = [];
+    existing.prices[discId].push(...entries);
+  }
+  existing.lastUpdated = now;
+  fs.writeFileSync(outPath, JSON.stringify(existing, null, 2));
   console.log(`\n✓ Wrote ${outPath}`);
 
-  // ── Write unmatched-products.json ──
+  // ── Merge into unmatched-products.json (preserves other stores' entries) ──
   const unmatchedPath = path.join(__dirname, '..', 'data', 'unmatched-products.json');
-  fs.writeFileSync(unmatchedPath, JSON.stringify({ lastUpdated: now, products: unmatched }, null, 2));
+  let unmatchedFile = { lastUpdated: now, products: [] };
+  if (fs.existsSync(unmatchedPath)) {
+    try { unmatchedFile = JSON.parse(fs.readFileSync(unmatchedPath, 'utf8')); } catch {}
+  }
+  unmatchedFile.products = unmatchedFile.products.filter((p) => !ownKeys.has(p.store));
+  unmatchedFile.products.push(...unmatched);
+  unmatchedFile.lastUpdated = now;
+  fs.writeFileSync(unmatchedPath, JSON.stringify(unmatchedFile, null, 2));
   console.log(`✓ Wrote ${unmatchedPath} (${unmatched.length} products for review)`);
 }
 
