@@ -313,7 +313,7 @@ function Hero() {
       />
 
       <p className="mt-5 text-sm text-[#9DC08B]/70">
-        {discs.length} disker · {Object.keys(scrapedPrices.stores).length} norske butikker · Oppdatert daglig
+        {discs.length} disker · {Object.keys(scrapedPrices.stores).length} butikker · Oppdatert daglig
       </p>
     </section>
   );
