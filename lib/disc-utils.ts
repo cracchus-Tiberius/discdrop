@@ -32,7 +32,7 @@ type StoreMeta = {
  * threshold. Returns disc price + shipping. For Norwegian stores returns disc price only
  * (shipping is conditional on basket total, MVA already included in listed price).
  */
-function entryLandedNOK(entry: ScrapedEntry, meta: StoreMeta | undefined): number {
+export function entryLandedNOK(entry: ScrapedEntry, meta: StoreMeta | undefined): number {
   if (meta?.country && meta.country !== "NO") {
     return entry.price + (meta.shipping ?? 0);
   }

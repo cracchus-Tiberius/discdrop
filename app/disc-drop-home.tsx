@@ -8,7 +8,7 @@ import { SearchInput } from "@/components/SearchInput";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
-import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, entryLandedNOK } from "@/lib/disc-utils";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -145,8 +145,9 @@ const BRAND_PRIORITY = [
 ];
 
 function buildHotDropRows(): HotDropRow[] {
-  type ScrapedEntry = { store: string; price: number; inStock: boolean; edition?: string | null; lastScraped?: string };
+  type ScrapedEntry = { store: string; price: number; inStock: boolean; url: string; edition?: string | null; lastScraped: string };
   const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
+  const storeMeta = scrapedPrices.stores as Record<string, Parameters<typeof entryLandedNOK>[1]>;
 
   const rows: HotDropRow[] = [];
 
@@ -155,26 +156,29 @@ function buildHotDropRows(): HotDropRow[] {
     const entries = prices[disc.id] ?? [];
     if (entries.length === 0) continue;
 
-    // Prefer entries with a hot-drop keyword (tour/player/limited) — these are the interesting ones
-    const hotEntry = entries.find((e) => {
+    // Find ALL entries matching a hot-drop edition keyword (tour/player/limited).
+    // The card's headline price must come from a hot entry, not from the
+    // cheapest-overall — otherwise the badge says "Tour Series" but the price
+    // belongs to the DX baseline plastic.
+    const hotEntries = entries.filter((e) => {
       if (!e.edition) return false;
       const ed = e.edition.toLowerCase();
       return [...ALL_HOT_EDITION_KEYWORDS].some((kw) => ed.includes(kw.toLowerCase()));
     });
-    // Only fall back to any edition if no hot entry exists
-    const bestEditionEntry = hotEntry ?? null;
-    if (!bestEditionEntry) continue;
+    if (hotEntries.length === 0) continue;
 
-    const edition = bestEditionEntry.edition ?? null;
-    const lastScraped = bestEditionEntry.lastScraped ?? null;
+    // Cheapest in-stock hot entry wins the card. Falls back to first hot
+    // entry (out-of-stock) just to keep the badge.
+    const inStockHot = hotEntries.filter((e) => e.inStock && e.price >= 50);
+    const winner = inStockHot.length > 0
+      ? inStockHot.reduce((a, b) => entryLandedNOK(a, storeMeta[a.store]) <= entryLandedNOK(b, storeMeta[b.store]) ? a : b)
+      : hotEntries[0];
 
-    // Landed price = store price + shipping for foreign stores. Match the
-    // disc detail page so headline doesn't mislead (kr 130 → kr 171 trust break).
-    // getScrapedPrice also applies the 50 NOK currency-bug floor.
-    const { price } = getScrapedPrice(disc.id);
-    const inStockEntries = entries.filter((e) => e.inStock && e.price >= 50);
-    const inStock = inStockEntries.length > 0;
-    const storeCount = new Set(inStockEntries.map((e) => e.store)).size;
+    const edition = winner.edition ?? null;
+    const lastScraped = winner.lastScraped ?? null;
+    const price = inStockHot.length > 0 ? entryLandedNOK(winner, storeMeta[winner.store]) : null;
+    const inStock = inStockHot.length > 0;
+    const storeCount = new Set(inStockHot.map((e) => e.store)).size;
 
     const badge = editionToBadge(edition, inStock, lastScraped ?? undefined);
 
