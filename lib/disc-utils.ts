@@ -39,6 +39,12 @@ function entryLandedNOK(entry: ScrapedEntry, meta: StoreMeta | undefined): numbe
   return entry.price;
 }
 
+// Defense against scraper currency bugs (e.g. Discexpress USD-as-SEK incident).
+// No legitimate new disc retails for under 50 NOK in any Norwegian or
+// VOEC-imported context. Filter at the data-access layer so HotDrops, the disc
+// detail price table, search ordering, etc. all share one floor.
+const MIN_VALID_PRICE_NOK = 50;
+
 /**
  * Returns price/stock data from scraped-prices.json for a disc ID.
  * Price is landed cost in NOK: disc + mandatory shipping for international stores.
@@ -54,7 +60,7 @@ export function getScrapedPrice(discId: string): {
     return { price: null, inStockCount: 0, storeCount: 0 };
   }
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
-  const inStock = scraped.filter((s) => s.inStock);
+  const inStock = scraped.filter((s) => s.inStock && s.price >= MIN_VALID_PRICE_NOK);
   return {
     price: inStock.length
       ? Math.min(...inStock.map((s) => entryLandedNOK(s, storeMeta[s.store])))
@@ -79,9 +85,12 @@ export function getMergedStores(disc: Disc): Array<{
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[disc.id];
   if (!scraped || scraped.length === 0) return [];
 
+  const valid = scraped.filter((e) => e.price >= MIN_VALID_PRICE_NOK);
+  if (valid.length === 0) return [];
+
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
 
-  return scraped.map((entry) => {
+  return valid.map((entry) => {
     const meta = storeMeta[entry.store];
     return {
       name: meta?.name ?? entry.store,
@@ -128,8 +137,10 @@ export type RichStoreEntry = {
 export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
   if (!scraped || scraped.length === 0) return [];
+  const valid = scraped.filter((e) => e.price >= MIN_VALID_PRICE_NOK);
+  if (valid.length === 0) return [];
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
-  return scraped.map((entry) => {
+  return valid.map((entry) => {
     const meta = storeMeta[entry.store];
     return {
       storeName: meta?.name ?? entry.store,

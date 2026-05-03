@@ -168,7 +168,9 @@ function buildHotDropRows(): HotDropRow[] {
     const edition = bestEditionEntry.edition ?? null;
     const lastScraped = bestEditionEntry.lastScraped ?? null;
 
-    const inStockEntries = entries.filter((e) => e.inStock);
+    // Defense against scraper currency bugs (Discexpress USD-as-SEK incident
+    // 2026-05-03). No legitimate new disc retails for under 50 NOK.
+    const inStockEntries = entries.filter((e) => e.inStock && e.price >= 50);
     const price = inStockEntries.length
       ? Math.min(...inStockEntries.map((e) => e.price))
       : null;
