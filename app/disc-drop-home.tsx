@@ -168,12 +168,11 @@ function buildHotDropRows(): HotDropRow[] {
     const edition = bestEditionEntry.edition ?? null;
     const lastScraped = bestEditionEntry.lastScraped ?? null;
 
-    // Defense against scraper currency bugs (Discexpress USD-as-SEK incident
-    // 2026-05-03). No legitimate new disc retails for under 50 NOK.
+    // Landed price = store price + shipping for foreign stores. Match the
+    // disc detail page so headline doesn't mislead (kr 130 → kr 171 trust break).
+    // getScrapedPrice also applies the 50 NOK currency-bug floor.
+    const { price } = getScrapedPrice(disc.id);
     const inStockEntries = entries.filter((e) => e.inStock && e.price >= 50);
-    const price = inStockEntries.length
-      ? Math.min(...inStockEntries.map((e) => e.price))
-      : null;
     const inStock = inStockEntries.length > 0;
     const storeCount = new Set(inStockEntries.map((e) => e.store)).size;
 
