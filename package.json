@@ -44,11 +44,5 @@
     "playwright": "^1.58.2",
     "tailwindcss": "^4",
     "typescript": "^5"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp",
-      "unrs-resolver"
-    ]
   }
 }
