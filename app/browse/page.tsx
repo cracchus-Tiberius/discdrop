@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
+import { SiteHeader } from "@/components/SiteHeader";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
@@ -156,74 +156,17 @@ function FlightBoxes({ flight }: { flight: Disc["flight"] }) {
     { label: "F", value: flight.fade },
   ];
   return (
-    <div className="mt-3 flex gap-1.5">
+    <div className="mt-3 flex gap-1">
       {cells.map(({ label, value }) => (
         <div
           key={label}
-          className="flex-1 rounded-lg bg-[#f5f5f3] py-1.5 text-center"
+          className="flex-1 rounded-lg bg-[#F1EFE6] py-1.5 text-center"
         >
-          <div className="text-[9px] tracking-wider text-[#999]">{label}</div>
-          <div className="text-sm font-semibold text-[#1a1a1a]">{value}</div>
+          <div className="text-sm font-extrabold text-[#101C14]">{value}</div>
+          <div className="text-[9px] font-semibold uppercase tracking-wider text-[#101C1488]">{label}</div>
         </div>
       ))}
     </div>
-  );
-}
-
-function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  return (
-    <nav className="sticky top-0 z-50 bg-[#1E3D2F] shadow-sm">
-      <div className="relative flex w-full items-center px-4 py-2 md:px-8 md:py-4">
-        <Link
-          href="/"
-          className="flex shrink-0 items-center transition-opacity hover:opacity-85"
-          style={{ gap: 8 }}
-        >
-          <Image
-            src="/discdrop-logo-dark.svg"
-            alt="DiscDrop"
-            width={170}
-            height={36}
-            className="h-[28px] w-auto md:h-[36px]"
-          />
-        </Link>
-
-        {/* Desktop nav */}
-        <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
-          <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hjem</Link>
-          <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hot Drops</a>
-          <Link href="/browse" className="rounded-full px-3.5 py-1.5 bg-white/15 font-medium text-white">Alle disker</Link>
-          <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Bygg min bag</Link>
-        </div>
-
-        {/* Hamburger — mobile only */}
-        <button
-          type="button"
-          onClick={() => setMobileOpen((o) => !o)}
-          className="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-[#9DC08B] transition-colors hover:bg-white/10 md:hidden"
-          aria-label="Meny"
-        >
-          {mobileOpen ? (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
-          ) : (
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
-          )}
-        </button>
-      </div>
-
-      {/* Mobile menu panel */}
-      {mobileOpen && (
-        <div className="border-t border-white/10 bg-[#1E3D2F] px-4 pb-3 pt-2 md:hidden">
-          <div className="flex flex-col gap-1 text-sm text-[#9DC08B]">
-            <Link href="/" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-white/10 hover:text-white">Hjem</Link>
-            <a href="/#hot-drops" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-white/10 hover:text-white">Hot Drops</a>
-            <Link href="/browse" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 font-medium text-white">Alle disker</Link>
-            <Link href="/bag/build" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2.5 transition-colors hover:bg-white/10 hover:text-white">Bygg min bag</Link>
-          </div>
-        </div>
-      )}
-    </nav>
   );
 }
 
@@ -395,18 +338,18 @@ function BrowseContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F5F2EB]">
-      <Navbar />
+    <div className="min-h-screen bg-[#FFFDF6]">
+      <SiteHeader />
 
       {/* Hero banner */}
-      <section className="w-full bg-[#1E3D2F] px-4 py-6 sm:px-8 sm:py-12">
+      <section className="w-full border-b-2 border-[#101C14] bg-[#FFFDF6] px-4 py-6 sm:px-8 sm:py-10">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <h1 className="font-serif text-2xl font-semibold tracking-tight text-[#F5F2EB] sm:text-5xl">
+            <h1 className="text-3xl font-extrabold tracking-tight text-[#101C14] sm:text-5xl">
               Alle disker
             </h1>
-            <p className="text-sm text-[#9DC08B] sm:text-base">
-              · {discs.length} disker fra {BRAND_COUNT} merker
+            <p className="text-sm text-[#101C1499] sm:text-base">
+              {discs.length} disker fra {BRAND_COUNT} merker
             </p>
           </div>
           <div className="mt-6">
@@ -431,10 +374,8 @@ function BrowseContent() {
                   key={chip.id}
                   type="button"
                   onClick={() => handleChip(chip.id)}
-                  className={`flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium transition ${
-                    active
-                      ? "bg-[#B8E04A] text-[#1a1a1a]"
-                      : "bg-white text-[#2D6A4F] ring-1 ring-[#2D6A4F] hover:bg-[#f0f9f4]"
+                  className={`dd-selectable flex shrink-0 items-center gap-1.5 rounded-full bg-[#F1EFE6] px-3.5 py-2 text-sm font-semibold text-[#101C14] min-h-[40px] ${
+                    active ? "dd-active" : ""
                   }`}
                 >
                   <span aria-hidden>{chip.emoji}</span>
@@ -450,7 +391,7 @@ function BrowseContent() {
           <select
             value={typeFilter}
             onChange={(e) => handleType(e.target.value as TypeFilter)}
-            className="rounded-lg border border-[#e0ddd4] bg-white px-3 py-2 text-sm text-[#444] outline-none focus:border-[#2D6A4F]"
+            className="rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
           >
             {TYPE_OPTIONS.map((o) => (
               <option key={o.id} value={o.id}>
@@ -462,7 +403,7 @@ function BrowseContent() {
           <select
             value={brand}
             onChange={(e) => handleBrand(e.target.value)}
-            className="rounded-lg border border-[#e0ddd4] bg-white px-3 py-2 text-sm text-[#444] outline-none focus:border-[#2D6A4F]"
+            className="rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
           >
             {BRANDS.map((b) => (
               <option key={b}>{b}</option>
@@ -472,7 +413,7 @@ function BrowseContent() {
           <select
             value={sort}
             onChange={(e) => handleSort(e.target.value as SortBy)}
-            className="rounded-lg border border-[#e0ddd4] bg-white px-3 py-2 text-sm text-[#444] outline-none focus:border-[#2D6A4F]"
+            className="rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
           >
             {SORT_OPTIONS.map((o) => (
               <option key={o.id} value={o.id}>
@@ -481,7 +422,7 @@ function BrowseContent() {
             ))}
           </select>
 
-          <span className="ml-auto text-sm text-[#888]">
+          <span className="ml-auto text-sm font-semibold text-[#101C1499]">
             Viser {filtered.length} disk{filtered.length === 1 ? "" : "er"}
           </span>
         </div>
@@ -489,12 +430,12 @@ function BrowseContent() {
         {/* Grid or empty state */}
         {filtered.length === 0 ? (
           <div className="mt-20 flex flex-col items-center gap-4 text-center">
-            <p className="text-lg text-[#888]">Ingen disker funnet</p>
+            <p className="text-lg text-[#101C1499]">Ingen disker funnet</p>
             {hasActiveFilters && (
               <button
                 type="button"
                 onClick={resetFilters}
-                className="rounded-full border border-[#2D6A4F] px-5 py-2 text-sm font-medium text-[#2D6A4F] transition-colors hover:bg-[#2D6A4F]/5"
+                className="dd-cta px-5 py-2.5 text-sm"
               >
                 Nullstill filter
               </button>
@@ -509,14 +450,12 @@ function BrowseContent() {
                 <Link
                   key={d.id}
                   href={`/disc/${d.id}`}
-                  className={`rounded-2xl border bg-white p-4 transition-all hover:-translate-y-0.5 hover:shadow-md ${
-                    unavailable
-                      ? "border-[#ece9e1] opacity-60"
-                      : "border-[#e8e8e4]"
+                  className={`rounded-2xl border-2 border-[#101C14] bg-white p-4 transition-transform duration-150 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0_#B8E04A] ${
+                    unavailable ? "opacity-60" : ""
                   }`}
                 >
                   <div
-                    className="relative mb-3 flex items-center justify-center rounded-xl bg-[#F5F2EB]"
+                    className="relative mb-3 flex items-center justify-center rounded-xl bg-[#F1EFE6]"
                     style={{ height: 100 }}
                   >
                     <DiscImage
@@ -544,16 +483,16 @@ function BrowseContent() {
                                 tabIndex={0}
                                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); handleChip(chipId); }}
                                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleChip(chipId); } }}
-                                className="cursor-pointer rounded-full px-2 py-0.5 text-[9px] font-bold tracking-wide"
-                                style={{ background: s.bg, color: s.text }}
+                                className="dd-sticker cursor-pointer text-[9px]"
+                                style={{ background: s.bg, color: s.text, boxShadow: "1.5px 1.5px 0 #101C14" }}
                               >
                                 {s.label}
                               </span>
                             ) : (
                               <span
                                 key={tag}
-                                className="rounded-full px-2 py-0.5 text-[9px] font-bold tracking-wide"
-                                style={{ background: s.bg, color: s.text }}
+                                className="dd-sticker text-[9px]"
+                                style={{ background: s.bg, color: s.text, boxShadow: "1.5px 1.5px 0 #101C14" }}
                               >
                                 {s.label}
                               </span>
@@ -564,28 +503,28 @@ function BrowseContent() {
                   </div>
                   <div className="flex items-start justify-between gap-1">
                     <div className="min-w-0">
-                      <h3 className="truncate font-serif text-base font-semibold text-[#1a1a1a]">
+                      <h3 className="truncate text-base font-extrabold text-[#101C14]">
                         {d.name}
                       </h3>
-                      <p className="truncate text-xs text-[#666]">{d.brand}</p>
+                      <p className="truncate text-xs text-[#101C1499]">{d.brand}</p>
                     </div>
-                    <span className="ml-1 shrink-0 rounded bg-[#f0f0ee] px-1.5 py-0.5 text-[10px] text-[#666]">
+                    <span className="ml-1 shrink-0 rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]">
                       {TYPE_LABEL[d.type] ?? d.type}
                     </span>
                   </div>
                   <FlightBoxes flight={d.flight} />
-                  <div className="mt-3 border-t border-[#f0ede6] pt-3">
+                  <div className="mt-3 border-t-2 border-[#F1EFE6] pt-3">
                     {unavailable ? (
-                      <span className="inline-flex items-center rounded-full bg-[#f0ede6] px-2.5 py-1 text-xs font-medium text-[#aaa]">
+                      <span className="inline-flex items-center rounded-full bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C1477]">
                         Ikke i butikk
                       </span>
                     ) : (
                       <>
-                        <p className="font-serif text-lg font-semibold text-[#2D6A4F]">
+                        <p className="text-lg font-extrabold text-[#101C14]">
                           fra kr {price}
                         </p>
                         {storeCount(d) > 0 && (
-                          <p className="text-xs text-[#888]">
+                          <p className="text-xs text-[#101C1499]">
                             {storeCount(d)} butikk
                             {storeCount(d) === 1 ? "" : "er"}
                           </p>
@@ -600,14 +539,14 @@ function BrowseContent() {
         )}
       </main>
 
-      <footer className="mt-16 border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
-          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+      <footer className="mt-16 border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
+          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
           <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
           <div className="flex gap-4">
-            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
-            <Link href="/kontakt" className="transition-colors hover:text-[#444]">Kontakt</Link>
-            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
+            <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
+            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>
@@ -617,7 +556,7 @@ function BrowseContent() {
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Scroll til toppen"
-        className={`fixed bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#2D6A4F] text-white shadow-lg transition-all duration-200 ${
+        className={`dd-cta fixed bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full transition-all duration-200 ${
           showScrollTop ? "opacity-100 scale-100" : "pointer-events-none scale-90 opacity-0"
         }`}
       >

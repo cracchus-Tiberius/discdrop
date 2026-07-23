@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Personvern | DiscDrop",
@@ -9,34 +10,14 @@ export const metadata: Metadata = {
 
 export default function PersonvernPage() {
   return (
-    <div className="min-h-screen bg-[#F5F2EB]">
-      {/* Minimal navbar */}
-      <nav className="flex w-full items-center justify-between bg-[#F5F2EB] px-8 py-4 border-b border-[#e0ddd4]">
-        <Link
-          href="/"
-          className="flex shrink-0 items-center gap-2 text-[#1a1a1a] transition-opacity hover:opacity-85"
-        >
-          <svg width="26" height="26" viewBox="0 0 44 44" fill="none" aria-hidden>
-            <circle cx="22" cy="22" r="20" stroke="#2D6A4F" strokeWidth="1.5" opacity="0.4" />
-            <circle cx="22" cy="22" r="13" stroke="#2D6A4F" strokeWidth="1.5" />
-            <ellipse cx="22" cy="22" rx="20" ry="6" stroke="#2D6A4F" strokeWidth="1" opacity="0.5" />
-            <circle cx="22" cy="22" r="3.5" fill="#2D6A4F" />
-          </svg>
-          <span className="text-lg font-semibold tracking-tight">DiscDrop</span>
-        </Link>
-        <Link
-          href="/"
-          className="text-sm text-[#444] transition-colors hover:text-[#1a1a1a]"
-        >
-          ← Tilbake til forsiden
-        </Link>
-      </nav>
+    <div className="min-h-screen bg-[#FFFDF6]">
+      <SiteHeader />
 
       <main className="mx-auto max-w-2xl px-6 py-14 sm:px-8">
-        <h1 className="mb-2 font-heading text-4xl font-semibold tracking-tight text-[#1E3D2F]">
+        <h1 className="mb-2 text-4xl font-extrabold tracking-tight text-[#101C14]">
           Personvern&shy;erklæring
         </h1>
-        <p className="mb-12 text-sm text-[#888]">Sist oppdatert: Mars 2026</p>
+        <p className="mb-12 text-sm text-[#101C1477]">Sist oppdatert: Mars 2026</p>
 
         <div className="space-y-10">
           <Section heading="Hvem vi er">
@@ -49,7 +30,7 @@ export default function PersonvernPage() {
               Kontakt:{" "}
               <a
                 href="mailto:kontakt@discdrop.net"
-                className="text-[#2D6A4F] underline underline-offset-2 hover:opacity-80"
+                className="text-[#101C14] underline underline-offset-2 hover:opacity-80"
               >
                 kontakt@discdrop.net
               </a>
@@ -101,7 +82,7 @@ export default function PersonvernPage() {
             <p>
               I henhold til personopplysningsloven og GDPR har du rett til:
             </p>
-            <ul className="mt-3 space-y-1.5 pl-5 list-disc text-[#444]">
+            <ul className="mt-3 space-y-1.5 pl-5 list-disc text-[#101C14CC]">
               <li>Innsyn i hvilke opplysninger vi har om deg</li>
               <li>Retting av uriktige opplysninger</li>
               <li>Sletting av opplysningene dine</li>
@@ -111,7 +92,7 @@ export default function PersonvernPage() {
               Ta kontakt på{" "}
               <a
                 href="mailto:kontakt@discdrop.net"
-                className="text-[#2D6A4F] underline underline-offset-2 hover:opacity-80"
+                className="text-[#101C14] underline underline-offset-2 hover:opacity-80"
               >
                 kontakt@discdrop.net
               </a>{" "}
@@ -121,15 +102,14 @@ export default function PersonvernPage() {
         </div>
       </main>
 
-      <footer className="border-t border-[#e0ddd4] bg-[#1E3D2F] px-6 py-6">
-        <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 text-[13px] text-[#9DC08B]">
-          <span>© 2026 DiscDrop — Kviist Studio</span>
-          <a
-            href="mailto:kontakt@discdrop.net"
-            className="hover:text-[#F5F2EB] transition-colors"
-          >
-            kontakt@discdrop.net
-          </a>
+      <footer className="mt-16 border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
+          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
+          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+          <div className="flex gap-4">
+            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
+          </div>
         </div>
       </footer>
     </div>
@@ -145,10 +125,10 @@ function Section({
 }) {
   return (
     <section>
-      <h2 className="mb-3 font-heading text-xl font-semibold text-[#2D6A4F]">
+      <h2 className="mb-3 text-xl font-extrabold text-[#101C14]">
         {heading}
       </h2>
-      <div className="text-[15px] leading-relaxed text-[#333]">{children}</div>
+      <div className="text-[15px] leading-relaxed text-[#101C14CC]">{children}</div>
     </section>
   );
 }

@@ -1,44 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { discs } from "@/data/discs.js";
 import { getAllScrapedEntries, scrapedLastUpdated, getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 import { buildDiscMeta } from "@/lib/disc-meta.mjs";
 import discDescriptions from "@/data/disc-descriptions.json";
+import { SiteHeader } from "@/components/SiteHeader";
 import {
   DiscHeroSection,
 } from "./DiscDetailClient";
-
-// ── Navbar ───────────────────────────────────────────────────────────────────
-
-function Navbar() {
-  return (
-    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#1E3D2F] px-8 py-4 shadow-sm">
-      <Link
-        href="/"
-        className="flex shrink-0 items-center transition-opacity hover:opacity-85"
-        style={{ gap: 10 }}
-      >
-        <Image src="/discdrop-logo-dark.svg" alt="DiscDrop" width={170} height={36} className="h-[28px] w-auto md:h-[36px]" />
-      </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
-        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Hjem
-        </Link>
-        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Hot Drops
-        </a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Alle disker
-        </Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Bygg min bag
-        </Link>
-      </div>
-    </nav>
-  );
-}
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
@@ -115,22 +85,20 @@ export default async function DiscDetailPage({
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F2EB]">
+    <div className="min-h-screen bg-[#FFFDF6]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
-      <div className="bg-[#F5F2EB] px-8 py-3">
-        <Link
-          href="/browse"
-          className="inline-flex items-center gap-1.5 text-sm text-[#9DC08B] transition-colors hover:text-[#2D6A4F]"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-            <path d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-          Tilbake til søk
-        </Link>
+      <SiteHeader />
+      <div className="mx-auto max-w-6xl px-5 py-4 md:px-10">
+        <span className="text-sm font-semibold text-[#101C1488]">
+          <Link href="/" className="hover:text-[#101C14]">Hjem</Link>
+          {" / "}
+          <Link href="/browse" className="hover:text-[#101C14]">Alle disker</Link>
+          {" / "}
+          <span className="text-[#101C14]">{disc.name}</span>
+        </span>
       </div>
       <main>
         <DiscHeroSection
@@ -149,14 +117,14 @@ export default async function DiscDetailPage({
           description={(discDescriptions as Record<string, string>)[disc.id] ?? null}
         />
       </main>
-      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
-          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+      <footer className="border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
+          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
           <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
           <div className="flex gap-4">
-            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
-            <Link href="/kontakt" className="transition-colors hover:text-[#444]">Kontakt</Link>
-            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
+            <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
+            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>

@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f1f17;
-  --foreground: #f2f5ee;
+  --background: #fffdf6;
+  --foreground: #101c14;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-surface: #162e1e;
+  --color-surface: #ffffff;
+  --color-muted-bg: #f1efe6;
   --color-accent: #b8e04a;
-  --color-muted: #7a9a82;
+  --color-ink: #101c14;
+  --color-muted: #101c1499;
   --color-alert: #e8704a;
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
@@ -31,4 +33,61 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* 1b "Pop" interaction system:
+   AV  (default)  = light bg, dark text — always, even on hover. Hover = lift + hard dark shadow.
+   PÅ  (selected)  = dark bg, light text — always, even on hover. Hover = lift + lime shadow instead of dark. */
+.dd-selectable {
+  border: 2px solid transparent;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  cursor: pointer;
+}
+.dd-selectable:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 #101c14;
+  border-color: #101c14;
+}
+.dd-selectable.dd-active {
+  background: #101c14;
+  color: #fffdf6;
+  border-color: #101c14;
+}
+.dd-selectable.dd-active:hover {
+  box-shadow: 3px 3px 0 #b8e04a;
+}
+
+.dd-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #b8e04a;
+  color: #101c14;
+  font-weight: 800;
+  border: 2px solid #101c14;
+  border-radius: 14px;
+  min-height: 44px;
+  box-shadow: 3px 3px 0 #101c14;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+}
+.dd-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #101c14;
+}
+.dd-cta:active {
+  transform: translate(0, 0);
+  box-shadow: 1px 1px 0 #101c14;
+}
+
+.dd-sticker {
+  display: inline-block;
+  background: #b8e04a;
+  color: #101c14;
+  font-weight: 800;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  transform: rotate(-3deg);
+  box-shadow: 2px 2px 0 #101c14;
 }

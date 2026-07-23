@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
+import { SiteHeader } from "@/components/SiteHeader";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
@@ -20,11 +20,11 @@ function bestPriceNOK(disc: Disc): number | null {
 // ── Badge ──────────────────────────────────────────────────────────────────
 const BADGE_STYLES: Record<string, string> = {
   hot: "bg-[#E8704A] text-white",
-  new: "bg-[#2D6A4F] text-white",
-  "new-drop": "bg-[#2D6A4F] text-white",
+  new: "bg-[#B8E04A] text-[#101C14]",
+  "new-drop": "bg-[#B8E04A] text-[#101C14]",
   limited: "bg-[#E8704A] text-white",
-  "first-run": "bg-[#C0392B] text-white",
-  "tour-series": "bg-[#B8E04A] text-[#1E3D2F]",
+  "first-run": "bg-[#101C14] text-[#B8E04A]",
+  "tour-series": "bg-[#B8E04A] text-[#101C14]",
   "sold-out": "bg-[#888] text-white",
 };
 
@@ -41,7 +41,7 @@ const BADGE_LABELS: Record<string, string> = {
 function Badge({ tag }: { tag: string }) {
   return (
     <span
-      className={`inline-flex w-fit items-center rounded-full px-2.5 py-1 text-[11px] font-semibold tracking-wide ${BADGE_STYLES[tag] ?? "bg-gray-200 text-gray-700"}`}
+      className={`inline-flex w-fit -rotate-2 items-center rounded-lg px-2.5 py-1 text-[11px] font-extrabold tracking-wide shadow-[2px_2px_0_#101C14] ${BADGE_STYLES[tag] ?? "bg-gray-200 text-gray-700"}`}
     >
       {BADGE_LABELS[tag] ?? tag.toUpperCase()}
     </span>
@@ -59,14 +59,14 @@ function FlightBoxes({ flight }: { flight: Flight }) {
     { label: "FADE", value: flight.fade },
   ];
   return (
-    <div className="mt-3 flex flex-wrap gap-2">
+    <div className="mt-3 flex gap-1.5">
       {cells.map(({ label, value }) => (
         <div
           key={label}
-          className="min-w-[3.25rem] rounded-lg bg-[#f5f5f3] px-3 py-2 text-center"
+          className="flex flex-1 flex-col items-center gap-0.5 rounded-xl bg-[#F1EFE6] py-2"
         >
-          <div className="text-[10px] tracking-wider text-[#999]">{label}</div>
-          <div className="text-lg font-semibold text-[#1a1a1a]">{value}</div>
+          <div className="text-lg font-extrabold text-[#101C14]">{value}</div>
+          <div className="text-[9px] font-semibold uppercase tracking-wider text-[#101C1488]">{label}</div>
         </div>
       ))}
     </div>
@@ -229,96 +229,56 @@ function buildHotDropRows(): HotDropRow[] {
   return selected;
 }
 
-// ── Navbar ─────────────────────────────────────────────────────────────────
-function Navbar({
-  showMobileSearch,
-  onSearchClick,
-}: {
-  showMobileSearch: boolean;
-  onSearchClick: () => void;
-}) {
-  return (
-    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#1E3D2F] px-8 py-4 shadow-sm">
-      <Link
-        href="/"
-        className="flex shrink-0 items-center transition-opacity hover:opacity-85"
-        style={{ gap: 10 }}
-      >
-        <Image
-          src="/discdrop-logo-dark.svg"
-          alt="DiscDrop"
-          width={170}
-          height={36}
-          className="h-[28px] w-auto md:h-[36px]"
-        />
-      </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
-        <a
-          href="#"
-          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-          className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white"
-        >
-          Hjem
-        </a>
-        <a href="#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Hot Drops
-        </a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Alle disker
-        </Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">
-          Bygg min bag
-        </Link>
-      </div>
-      {/* Mobile search icon — fades in when hero search scrolls out of view */}
-      <button
-        type="button"
-        onClick={onSearchClick}
-        aria-label="Søk etter disker"
-        className={`flex h-10 w-10 items-center justify-center rounded-full text-[#9DC08B] transition-all duration-200 md:hidden ${
-          showMobileSearch
-            ? "scale-100 opacity-100"
-            : "pointer-events-none scale-90 opacity-0"
-        }`}
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
-          <circle cx="11" cy="11" r="8" />
-          <path d="m21 21-4.35-4.35" />
-        </svg>
-      </button>
-    </nav>
-  );
-}
-
 // ── Hero ───────────────────────────────────────────────────────────────────
 function Hero() {
   const [query, setQuery] = useState("");
+  const storeCount = Object.keys(scrapedPrices.stores).length;
 
   return (
-    <section className="w-full bg-[#1E3D2F] px-8 pb-20 pt-16 text-center">
-      <h1 className="mb-2 font-serif text-[72px] leading-none tracking-tight text-[#F5F2EB]">
-        Finn din disk.
-      </h1>
-      <p className="mb-8 text-sm tracking-[0.2em] text-[#9DC08B]/60">
-        Sammenlign · Spar · Spill
-      </p>
-      <p className="mb-10 text-lg leading-relaxed text-[#9DC08B]">
-        Den smarteste måten å finne disken din på i Norge.
-        <br />
-        Oppdaterte priser. Lageroversikt. Totalpris på disk.
-      </p>
+    <section className="w-full bg-[#FFFDF6] px-5 pb-16 pt-10 md:px-10 md:pb-20 md:pt-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <span className="dd-sticker">{discs.length} disker sjekket i dag ✓</span>
+          <h1 className="mt-4 text-[44px] font-extrabold leading-[0.98] tracking-tight text-[#101C14] md:text-[72px]">
+            Riktig disk.
+            <br />
+            <span
+              style={{ backgroundImage: "linear-gradient(transparent 62%, #B8E04A 62%)" }}
+            >
+              Riktig pris.
+            </span>
+          </h1>
+          <p className="mb-8 mt-4 max-w-[46ch] text-base leading-relaxed text-[#101C14]/70 md:text-lg">
+            Norges prissammenligning for diskgolf. Vi sjekker prisene i {storeCount} butikker hver morgen — totalpris med frakt, alltid.
+          </p>
 
-      <SearchInput
-        value={query}
-        onChange={setQuery}
-        placeholder="Søk etter disker, merker, spillere..."
-        className="mx-auto max-w-2xl text-left"
-        inputId="hero-search-input"
-      />
+          <div className="flex flex-col gap-3 sm:flex-row sm:max-w-xl">
+            <SearchInput
+              value={query}
+              onChange={setQuery}
+              placeholder="Søk etter disker, merker, spillere …"
+              className="flex-1 text-left"
+              inputId="hero-search-input"
+            />
+          </div>
 
-      <p className="mt-5 text-sm text-[#9DC08B]/70">
-        {discs.length} disker · {Object.keys(scrapedPrices.stores).length} butikker · Oppdatert daglig
-      </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <span className="dd-sticker -rotate-1">{discs.length} disker</span>
+            <span className="-rotate-1 rounded-lg border-2 border-[#101C14] bg-white px-2.5 py-1.5 text-xs font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
+              {storeCount} butikker
+            </span>
+          </div>
+        </div>
+
+        <div className="relative hidden h-72 md:block">
+          <div className="absolute right-16 top-2 flex h-52 w-52 items-center justify-center rounded-full border-2 border-[#101C14] bg-[repeating-linear-gradient(45deg,#EEF3D8,#EEF3D8_8px,#F6F8EA_8px,#F6F8EA_16px)] shadow-[6px_6px_0_#B8E04A]">
+            <span className="font-mono text-[10px] text-[#8A9674]">disk</span>
+          </div>
+          <div className="absolute right-0 top-32 flex h-40 w-40 items-center justify-center rounded-full border-2 border-[#101C14] bg-[repeating-linear-gradient(45deg,#F1ECDC,#F1ECDC_8px,#F8F4E8_8px,#F8F4E8_16px)] shadow-[5px_5px_0_#101C14]">
+            <span className="font-mono text-[10px] text-[#8A9674]">disk</span>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -328,54 +288,49 @@ function HotDrops() {
   const rows = useMemo(() => buildHotDropRows(), []);
 
   return (
-    <section id="hot-drops" className="w-full bg-white px-8 py-16" style={{ scrollMarginTop: "80px" }}>
+    <section id="hot-drops" className="w-full border-y-2 border-[#101C14] bg-[#FFFDF6] px-5 py-14 md:px-10 md:py-16" style={{ scrollMarginTop: "72px" }}>
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
-          Hot Drops
-        </h2>
-        <p className="mb-8 max-w-xl text-[#666]">
-          Limitede runs og tour-plast verdt å følge med på.
-        </p>
+        <div className="mb-8 flex items-baseline justify-between">
+          <h2 className="text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">
+            Hot Drops
+          </h2>
+          <Link href="/browse" className="text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4">
+            Se alle disker →
+          </Link>
+        </div>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {rows.map((row) => (
             <Link
               key={row.id}
               href={`/disc/${row.id}`}
-              className="flex flex-col rounded-2xl border border-[#e8e8e4] bg-[#fafaf8] p-5 shadow-sm transition-all duration-200 ease-out hover:-translate-y-1 hover:border-[#2D6A4F]/30 hover:shadow-lg"
+              className="flex flex-col gap-3 rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#B8E04A] transition-transform duration-150 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[7px_7px_0_#B8E04A]"
             >
-              {/* Disc image */}
-              <div className="mb-4 flex items-center justify-center rounded-xl bg-[#F5F2EB]" style={{ height: 140 }}>
-                <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} containerStyle={{ height: 140 }} />
-              </div>
-
-              {/* Badge */}
-              <div className="mb-3">
+              <div className="flex items-start justify-between gap-2">
                 <Badge tag={row.badge} />
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#F1EFE6]">
+                  <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} containerStyle={{ height: 56 }} />
+                </div>
               </div>
 
-              {/* Name + brand */}
-              <h3 className="font-serif text-xl font-semibold leading-tight text-[#1a1a1a]">
-                {row.name}
-              </h3>
-              <p className="mt-0.5 text-sm text-[#666]">{row.brand}</p>
+              <div>
+                <h3 className="text-lg font-extrabold leading-tight text-[#101C14]">
+                  {row.name}
+                </h3>
+                <p className="text-sm text-[#101C1499]">
+                  {row.brand}{row.edition ? ` · ${row.edition}` : ""}
+                </p>
+              </div>
 
-              {/* Edition label */}
-              {row.edition && (
-                <p className="mt-1.5 text-sm font-medium text-[#2D6A4F]">{row.edition}</p>
-              )}
-
-              {/* Flight numbers */}
               <FlightBoxes flight={row.flight} />
 
-              {/* Price + CTA */}
-              <div className="mt-auto border-t border-[#e8e8e4] pt-4">
-                <p className="text-xs uppercase tracking-wider text-[#888]">Beste pris</p>
-                <p className="font-serif text-2xl font-semibold text-[#2D6A4F]">
-                  {row.price != null ? `${row.price} kr` : "—"}
-                </p>
-                <div className="mt-4 w-full rounded-xl bg-[#2D6A4F] py-2.5 text-center text-sm font-medium text-white">
-                  Finn disken →
+              <div className="mt-auto flex items-center justify-between gap-3 border-t-2 border-[#F1EFE6] pt-3">
+                <div>
+                  <p className="text-xl font-extrabold text-[#101C14]">
+                    {row.price != null ? `${row.price},-` : "—"}
+                  </p>
+                  <p className="text-[11px] text-[#101C1477]">inkl. frakt · {row.storeCount} {row.storeCount === 1 ? "butikk" : "butikker"}</p>
                 </div>
+                <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
               </div>
             </Link>
           ))}
@@ -390,7 +345,7 @@ function WhyDiscDrop() {
   const props = [
     {
       icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#101C14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
           <line x1="8" y1="11" x2="14" y2="11" />
@@ -402,7 +357,7 @@ function WhyDiscDrop() {
     },
     {
       icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#101C14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <rect x="2" y="5" width="20" height="14" rx="2" />
           <line x1="2" y1="10" x2="22" y2="10" />
           <line x1="7" y1="15" x2="7.01" y2="15" />
@@ -414,7 +369,7 @@ function WhyDiscDrop() {
     },
     {
       icon: (
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#101C14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
           <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
           <path d="M13.73 21a2 2 0 0 1-3.46 0" />
         </svg>
@@ -425,25 +380,25 @@ function WhyDiscDrop() {
   ];
 
   return (
-    <section className="w-full px-8 py-16">
+    <section className="w-full px-5 py-14 md:px-10 md:py-16">
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
+        <h2 className="mb-2 text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">
           Hvorfor DiscDrop?
         </h2>
-        <p className="mb-12 text-[#666]">
+        <p className="mb-10 text-[#101C1499]">
           Vi gjør det enkelt å finne riktig disk til riktig pris.
         </p>
-        <div className="grid gap-10 sm:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-3">
           {props.map(({ icon, heading, text }) => (
-            <div key={heading} className="flex flex-col gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#2D6A4F]/8">
+            <div key={heading} className="flex flex-col gap-3 rounded-2xl border-2 border-[#101C14] bg-white p-5 shadow-[3px_3px_0_#B8E04A]">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#F1EFE6]">
                 {icon}
               </div>
               <div>
-                <h3 className="mb-1.5 font-serif text-lg font-semibold text-[#1a1a1a]">
+                <h3 className="mb-1 text-base font-extrabold text-[#101C14]">
                   {heading}
                 </h3>
-                <p className="text-sm leading-relaxed text-[#666]">{text}</p>
+                <p className="text-sm leading-relaxed text-[#101C1499]">{text}</p>
               </div>
             </div>
           ))}
@@ -466,27 +421,27 @@ function PopularDiscs() {
   ).filter(Boolean) as Disc[];
 
   return (
-    <section className="w-full bg-white px-8 py-16">
+    <section className="w-full border-t-2 border-[#101C14] bg-[#FFFDF6] px-5 py-14 md:px-10 md:py-16">
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-2 font-serif text-3xl tracking-tight text-[#1a1a1a]">
+        <h2 className="mb-2 text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">
           Populære disker
         </h2>
-        <p className="mb-8 text-[#666]">
+        <p className="mb-8 text-[#101C1499]">
           Velkjente klassikere å starte søket med.
         </p>
 
         {/* Horizontal scroll on mobile, grid on desktop */}
-        <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-6">
+        <div className="-mx-5 flex gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:thin] sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-6">
           {popularDiscs.map((d) => {
             const price = bestPriceNOK(d);
             return (
               <Link
                 key={d.id}
                 href={`/disc/${d.id}`}
-                className="min-w-[130px] shrink-0 rounded-xl border border-[#e8e8e4] bg-[#fafaf8] p-3 transition-all hover:-translate-y-0.5 hover:shadow-md sm:min-w-0"
+                className="min-w-[130px] shrink-0 rounded-xl border-2 border-[#101C14] bg-white p-3 transition-transform duration-150 hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[3px_3px_0_#B8E04A] sm:min-w-0"
               >
                 <div
-                  className="mb-2 flex items-center justify-center rounded-lg bg-[#F5F2EB]"
+                  className="mb-2 flex items-center justify-center rounded-lg bg-[#F1EFE6]"
                   style={{ height: 70 }}
                 >
                   <DiscImage
@@ -497,11 +452,11 @@ function PopularDiscs() {
                     containerStyle={{ height: 70 }}
                   />
                 </div>
-                <h3 className="font-serif text-sm font-semibold leading-tight text-[#1a1a1a]">
+                <h3 className="text-sm font-extrabold leading-tight text-[#101C14]">
                   {d.name}
                 </h3>
-                <p className="text-[11px] text-[#666]">{d.brand}</p>
-                <p className="mt-1 font-serif text-base font-semibold text-[#2D6A4F]">
+                <p className="text-[11px] text-[#101C1499]">{d.brand}</p>
+                <p className="mt-1 text-base font-extrabold text-[#101C14]">
                   {price != null ? `${price} kr` : "—"}
                 </p>
               </Link>
@@ -510,10 +465,7 @@ function PopularDiscs() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link
-            href="/browse"
-            className="inline-block rounded-xl border border-[#2D6A4F] px-7 py-3 text-sm font-medium text-[#2D6A4F] transition-all hover:bg-[#2D6A4F]/5"
-          >
+          <Link href="/browse" className="dd-cta px-6 py-3 text-sm">
             Se alle {discs.length} disker →
           </Link>
         </div>
@@ -524,28 +476,6 @@ function PopularDiscs() {
 
 // ── Page ───────────────────────────────────────────────────────────────────
 export function DiscDropHome() {
-  const [heroSearchVisible, setHeroSearchVisible] = useState(true);
-
-  useEffect(() => {
-    const el = document.getElementById("hero-search-input");
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setHeroSearchVisible(entry.isIntersecting),
-      { threshold: 0 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  function scrollToSearch() {
-    const input = document.getElementById(
-      "hero-search-input"
-    ) as HTMLInputElement | null;
-    if (!input) return;
-    input.scrollIntoView({ behavior: "smooth", block: "center" });
-    setTimeout(() => input.focus(), 400);
-  }
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -559,29 +489,26 @@ export function DiscDropHome() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F2EB]">
+    <div className="min-h-screen bg-[#FFFDF6]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar
-        showMobileSearch={!heroSearchVisible}
-        onSearchClick={scrollToSearch}
-      />
+      <SiteHeader />
       <main>
         <Hero />
         <HotDrops />
         <WhyDiscDrop />
         <PopularDiscs />
       </main>
-      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
-          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+      <footer className="border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
+          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
           <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
           <div className="flex gap-4">
-            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
-            <Link href="/kontakt" className="transition-colors hover:text-[#444]">Kontakt</Link>
-            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
+            <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
+            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>

@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { SiteHeader } from "@/components/SiteHeader";
 import type { StoredBag, GeneratedDisc, WizardAnswers } from "@/app/bag/[id]/BagPageClient";
 
 // ── API types ──────────────────────────────────────────────────────────────
@@ -55,9 +55,9 @@ function StepIndicator({ step }: { step: number }) {
   return (
     <div className="relative mb-8">
       {/* Track */}
-      <div className="absolute left-4 right-4 top-4 h-0.5 bg-[#e8e8e4]">
+      <div className="absolute left-4 right-4 top-4 h-0.5 bg-[#F1EFE6]">
         <div
-          className="h-full bg-[#2D6A4F] transition-all duration-500 ease-out"
+          className="h-full bg-[#101C14] transition-all duration-500 ease-out"
           style={{ width: `${((step - 1) / 3) * 100}%` }}
         />
       </div>
@@ -69,12 +69,12 @@ function StepIndicator({ step }: { step: number }) {
           return (
             <div key={s.num} className="flex flex-col items-center gap-1.5">
               <div
-                className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold transition-all duration-300 ${
                   done
-                    ? "bg-[#2D6A4F] text-white"
+                    ? "bg-[#101C14] text-[#B8E04A]"
                     : active
-                    ? "bg-[#2D6A4F] text-white shadow-[0_0_0_4px_rgba(45,106,79,0.15)]"
-                    : "border-2 border-[#ddd] bg-white text-[#bbb]"
+                    ? "bg-[#101C14] text-[#B8E04A] shadow-[3px_3px_0_#B8E04A]"
+                    : "border-2 border-[#101C14] bg-[#F1EFE6] text-[#101C1477]"
                 }`}
               >
                 {done ? (
@@ -86,8 +86,8 @@ function StepIndicator({ step }: { step: number }) {
                 )}
               </div>
               <span
-                className={`text-[10px] font-medium leading-none ${
-                  step >= s.num ? "text-[#2D6A4F]" : "text-[#bbb]"
+                className={`text-[10px] font-bold leading-none ${
+                  step >= s.num ? "text-[#101C14]" : "text-[#101C1477]"
                 }`}
               >
                 {s.label}
@@ -115,10 +115,8 @@ function SelectCard({
     <button
       type="button"
       onClick={onClick}
-      className={`min-h-[80px] w-full rounded-xl border-2 px-4 py-4 text-left transition-all duration-150 ${
-        selected
-          ? "border-[#2D6A4F] bg-[#f0f9e8]"
-          : "border-[#e8e8e4] bg-white hover:border-[#2D6A4F]/40 hover:bg-[#fafaf8]"
+      className={`dd-selectable min-h-[80px] w-full rounded-xl bg-white px-4 py-4 text-left ${
+        selected ? "dd-active" : ""
       }`}
     >
       {children}
@@ -141,10 +139,8 @@ function Pill({
     <button
       type="button"
       onClick={onClick}
-      className={`min-h-[44px] rounded-full border-2 px-4 py-2 text-sm font-medium transition-all duration-150 ${
-        selected
-          ? "border-[#2D6A4F] bg-[#2D6A4F] text-white"
-          : "border-[#e8e8e4] bg-white text-[#444] hover:border-[#2D6A4F]/40"
+      className={`dd-selectable min-h-[44px] rounded-full bg-[#F1EFE6] px-4 py-2 text-sm font-semibold text-[#101C14] ${
+        selected ? "dd-active" : ""
       }`}
     >
       {children}
@@ -159,7 +155,7 @@ function BackBtn({ onClick }: { onClick: () => void }) {
     <button
       type="button"
       onClick={onClick}
-      className="flex items-center gap-1.5 text-sm text-[#888] transition-colors hover:text-[#1a1a1a]"
+      className="flex items-center gap-1.5 text-sm font-semibold text-[#101C1499] transition-colors hover:text-[#101C14]"
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
         <path d="M19 12H5M12 5l-7 7 7 7" />
@@ -183,30 +179,10 @@ function NextBtn({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="w-full rounded-xl bg-[#2D6A4F] px-6 py-3.5 text-base font-medium text-white transition-all duration-150 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
+      className="dd-cta w-full px-6 py-3.5 text-base disabled:cursor-not-allowed disabled:opacity-40"
     >
       {label}
     </button>
-  );
-}
-
-// ── Navbar ─────────────────────────────────────────────────────────────────
-
-function Navbar() {
-  return (
-    <nav className="sticky top-0 z-50 relative flex w-full items-center bg-[#1E3D2F] px-8 py-4 shadow-sm">
-      <Link href="/" className="flex shrink-0 items-center transition-opacity hover:opacity-85" style={{ gap: 10 }}>
-        <Image src="/discdrop-logo-dark.svg" alt="DiscDrop" width={170} height={36} className="h-[28px] w-auto md:h-[36px]" />
-      </Link>
-      <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 text-sm text-[#9DC08B] md:flex">
-        <Link href="/" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hjem</Link>
-        <a href="/#hot-drops" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Hot Drops</a>
-        <Link href="/browse" className="rounded-full px-3.5 py-1.5 transition-colors duration-200 hover:bg-white/10 hover:text-white">Alle disker</Link>
-        <Link href="/bag/build" className="rounded-full px-3.5 py-1.5 bg-white/15 font-medium text-white">
-          Bygg min bag
-        </Link>
-      </div>
-    </nav>
   );
 }
 
@@ -312,34 +288,34 @@ export default function BuildBagPage() {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center bg-[#F5F2EB]">
+      <div className="flex min-h-screen flex-col items-center justify-center bg-[#FFFDF6]">
         <div className="flex flex-col items-center gap-6">
           <svg width="64" height="64" viewBox="0 0 24 24" className="animate-spin" aria-hidden fill="none">
-            <ellipse cx="12" cy="14" rx="10" ry="4.5" fill="#2D6A4F" />
+            <ellipse cx="12" cy="14" rx="10" ry="4.5" fill="#101C14" />
             <ellipse cx="12" cy="12" rx="5" ry="2.5" fill="#B8E04A" />
-            <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#F5F2EB" opacity="0.7" />
+            <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#FFFDF6" opacity="0.7" />
           </svg>
-          <p className="font-serif text-2xl font-semibold text-[#2D6A4F]">Bygger din bag...</p>
-          <p className="text-sm text-[#888]">Dette tar noen sekunder</p>
+          <p className="text-2xl font-extrabold text-[#101C14]">Bygger din bag...</p>
+          <p className="text-sm text-[#101C1499]">Dette tar noen sekunder</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F5F2EB]">
-      <Navbar />
+    <div className="flex min-h-screen flex-col bg-[#FFFDF6]">
+      <SiteHeader />
       <main className="flex flex-1 items-start justify-center px-4 py-12">
-        <div className="w-full max-w-xl rounded-2xl border border-[#e0ddd4] bg-white p-8 shadow-sm">
+        <div className="w-full max-w-xl rounded-2xl border-2 border-[#101C14] bg-white p-8 shadow-[5px_5px_0_#B8E04A]">
           <StepIndicator step={step} />
 
           {/* ── Step 1: Nivå ── */}
           {step === 1 && (
             <div key={1} style={{ animation: "fadeIn 250ms ease forwards" }}>
-              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+              <h2 className="mb-1.5 text-2xl font-extrabold text-[#101C14]">
                 Hva er ditt spillnivå?
               </h2>
-              <p className="mb-6 text-sm text-[#666]">
+              <p className="mb-6 text-sm text-[#101C1499]">
                 Vær ærlig — riktige disker for ditt nivå utgjør en enorm forskjell.
               </p>
               <div className="grid grid-cols-2 gap-3">
@@ -356,8 +332,8 @@ export default function BuildBagPage() {
                     selected={level === value}
                     onClick={() => setLevel(value)}
                   >
-                    <div className="font-semibold text-[#1a1a1a]">{label}</div>
-                    <div className="mt-1 text-xs leading-snug text-[#888]">{desc}</div>
+                    <div className="font-bold">{label}</div>
+                    <div className="mt-1 text-xs leading-snug opacity-70">{desc}</div>
                   </SelectCard>
                 ))}
               </div>
@@ -373,10 +349,10 @@ export default function BuildBagPage() {
               <div className="mb-5">
                 <BackBtn onClick={back} />
               </div>
-              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+              <h2 className="mb-1.5 text-2xl font-extrabold text-[#101C14]">
                 Hva er din kastestil?
               </h2>
-              <p className="mb-6 text-sm text-[#666]">
+              <p className="mb-6 text-sm text-[#101C1499]">
                 Dette påvirker hvilke disker som passer din teknikk.
               </p>
               <div className="grid grid-cols-2 gap-3">
@@ -393,8 +369,8 @@ export default function BuildBagPage() {
                     selected={throwingStyle === value}
                     onClick={() => setThrowingStyle(value)}
                   >
-                    <div className="font-semibold text-[#1a1a1a]">{label}</div>
-                    <div className="mt-1 text-xs leading-snug text-[#888]">
+                    <div className="font-bold">{label}</div>
+                    <div className="mt-1 text-xs leading-snug opacity-70">
                       {sub}{desc ? ` — ${desc}` : ""}
                     </div>
                   </SelectCard>
@@ -412,10 +388,10 @@ export default function BuildBagPage() {
               <div className="mb-5">
                 <BackBtn onClick={back} />
               </div>
-              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+              <h2 className="mb-1.5 text-2xl font-extrabold text-[#101C14]">
                 Hva trenger du?
               </h2>
-              <p className="mb-6 text-sm text-[#666]">
+              <p className="mb-6 text-sm text-[#101C1499]">
                 Velg ett eller flere områder du vil forbedre.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -450,16 +426,16 @@ export default function BuildBagPage() {
               <div className="mb-5">
                 <BackBtn onClick={back} />
               </div>
-              <h2 className="mb-1.5 font-serif text-2xl font-semibold text-[#1a1a1a]">
+              <h2 className="mb-1.5 text-2xl font-extrabold text-[#101C14]">
                 Noen siste preferanser?
               </h2>
-              <p className="mb-6 text-sm text-[#666]">
+              <p className="mb-6 text-sm text-[#101C1499]">
                 Valgfritt — hjelper oss å gi bedre forslag.
               </p>
 
               {/* Budget */}
               <div className="mb-6">
-                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#aaa]">Budsjett</p>
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Budsjett</p>
                 <div className="flex flex-wrap gap-2">
                   {(
                     [
@@ -478,7 +454,7 @@ export default function BuildBagPage() {
 
               {/* Favorittmerke */}
               <div className="mb-6">
-                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#aaa]">Favorittmerke</p>
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Favorittmerke</p>
                 <div className="flex flex-wrap gap-2">
                   {(
                     [
@@ -500,7 +476,7 @@ export default function BuildBagPage() {
 
               {/* Antall disker */}
               <div className="mb-8">
-                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#aaa]">Antall disker</p>
+                <p className="mb-2.5 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Antall disker</p>
                 <div className="flex flex-wrap gap-2">
                   {(
                     [
@@ -519,7 +495,7 @@ export default function BuildBagPage() {
               <button
                 type="button"
                 onClick={handleBuild}
-                className="w-full rounded-xl bg-[#B8E04A] px-6 py-4 text-base font-semibold text-[#1E3D2F] transition-all duration-150 hover:brightness-110"
+                className="dd-cta w-full px-6 py-4 text-base"
               >
                 Vis forslag →
               </button>
@@ -541,14 +517,14 @@ export default function BuildBagPage() {
         </div>
       </main>
 
-      <footer className="border-t border-[#e0ddd4] bg-[#F5F2EB] px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[12px] text-[#999]">
-          <span>© 2026 DiscDrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#2D6A4F] hover:underline">Kviist</a></span>
+      <footer className="border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
+          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
           <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
           <div className="flex gap-4">
-            <Link href="/personvern" className="transition-colors hover:text-[#444]">Personvern</Link>
-            <Link href="/kontakt" className="transition-colors hover:text-[#444]">Kontakt</Link>
-            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#444]">kontakt@discdrop.net</a>
+            <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
+            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
+            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
           </div>
         </div>
       </footer>

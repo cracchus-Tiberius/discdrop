@@ -72,12 +72,12 @@ export function PriceTable({
   if (stores.length === 0 && intlStores.length === 0) {
     if (hideHeader || inline) return null;
     return (
-      <section className="w-full bg-[#F5F2EB] px-4 py-10 sm:px-8">
+      <section className="w-full bg-[#FFFDF6] px-4 py-10 sm:px-8">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
+          <h2 className="mb-1 text-2xl font-extrabold tracking-tight text-[#101C14]">
             Hvor kan du kjøpe
           </h2>
-          <p className="mt-6 rounded-2xl border border-[#e0ddd4] bg-white px-6 py-8 text-center text-sm text-[#aaa]">
+          <p className="mt-6 rounded-2xl border-2 border-[#101C14] bg-white px-6 py-8 text-center text-sm text-[#101C1477]">
             Ingen priser funnet ennå. Vi oppdaterer prisene daglig.
           </p>
         </div>
@@ -123,14 +123,14 @@ export function PriceTable({
     });
 
   return (
-    <div className={inline ? undefined : "w-full bg-[#F5F2EB] px-4 pb-10 pt-4 sm:px-8"}>
+    <div className={inline ? undefined : "w-full bg-[#FFFDF6] px-4 pb-10 pt-4 sm:px-8"}>
       <div className={inline ? undefined : "mx-auto max-w-4xl"}>
         {!hideHeader && (
           <>
-            <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
+            <h2 className="mb-1 text-2xl font-extrabold tracking-tight text-[#101C14]">
               Hvor kan du kjøpe
             </h2>
-            <p className="mb-3 text-sm text-[#666]">
+            <p className="mb-3 text-sm text-[#101C1499]">
               Sortert etter totalpris inkl. frakt.
             </p>
           </>
@@ -142,22 +142,22 @@ export function PriceTable({
             {intlRows.length > 0 && (
               <div className="mb-2 flex items-center gap-2">
                 <span className="text-base">🇳🇴</span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#666]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">
                   Norske butikker
                 </span>
               </div>
             )}
 
             {/* Desktop */}
-            <div className="hidden overflow-hidden rounded-2xl border border-[#e0ddd4] bg-white shadow-sm md:block">
+            <div className="hidden overflow-hidden rounded-2xl border-2 border-[#101C14] bg-white md:block">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-[#e8e8e4] bg-[#f7f6f2] text-left text-xs uppercase tracking-wider text-[#888]">
+                  <tr className="border-b-2 border-[#101C14] bg-[#F1EFE6] text-left text-xs uppercase tracking-wider text-[#101C1499]">
                     <th className={inline ? "px-3 py-2" : "px-5 py-3"}>Butikk</th>
                     {!inline && <th className="px-4 py-3">Lager</th>}
                     <th className={inline ? "px-3 py-2" : "px-4 py-3"}>Diskpris</th>
                     <th className={inline ? "px-3 py-2" : "px-4 py-3"}>Frakt</th>
-                    <th className={`font-bold text-[#2D6A4F] ${inline ? "px-3 py-2" : "px-4 py-3"}`}>Total</th>
+                    <th className={`font-extrabold text-[#101C14] ${inline ? "px-3 py-2" : "px-4 py-3"}`}>Total</th>
                     <th className={inline ? "px-2 py-2" : "px-4 py-3"}></th>
                   </tr>
                 </thead>
@@ -167,17 +167,17 @@ export function PriceTable({
                     return (
                       <tr
                         key={i}
-                        className={`border-b border-[#f0ede6] last:border-0 transition-colors ${
-                          isBest ? "bg-[#f0f9e8]" : "hover:bg-[#fafaf8]"
+                        className={`border-b border-[#F1EFE6] last:border-0 transition-colors ${
+                          isBest ? "bg-[#EEF7D4]" : "hover:bg-[#F1EFE6]"
                         } ${!row.inStock && inline ? "opacity-60" : ""}`}
                       >
                         <td className={inline ? "px-3 py-2" : "px-5 py-4"}>
                           <div className="flex flex-wrap items-center gap-1.5">
-                            <span className="font-medium text-[#1a1a1a]">{row.name}</span>
-                            {row.country === "SE" && <span className="rounded bg-[#eef0f3] px-1.5 py-0.5 text-[10px] font-semibold text-[#777]" title="Svensk butikk">SE</span>}
+                            <span className="font-semibold text-[#101C14]">{row.name}</span>
+                            {row.country === "SE" && <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]" title="Svensk butikk">SE</span>}
                             {isBest && (
-                              <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
-                                Beste deal
+                              <span className="dd-sticker text-[10px]">
+                                Beste pris
                               </span>
                             )}
                             {inline && !row.inStock && (
@@ -185,7 +185,7 @@ export function PriceTable({
                             )}
                           </div>
                           {row.country === "SE" && row.voec && !inline && (
-                            <div className="mt-0.5 text-[11px] text-[#888]">inkl. frakt og MVA</div>
+                            <div className="mt-0.5 text-[11px] text-[#101C1477]">inkl. frakt og MVA</div>
                           )}
                         </td>
                         {!inline && (
@@ -193,23 +193,23 @@ export function PriceTable({
                             <StockDot inStock={row.inStock} />
                           </td>
                         )}
-                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} text-[#444]`}>kr {row.price}</td>
-                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} text-[#444]`}>
+                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} text-[#101C14]`}>kr {row.price}</td>
+                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} text-[#101C14]`}>
                           {row.shippingNOK > 0 ? (
                             `kr ${row.shippingNOK}`
                           ) : (
-                            <span className="font-medium text-[#2D6A4F]">Gratis</span>
+                            <span className="font-semibold text-[#101C14]">Gratis</span>
                           )}
                         </td>
                         <td className={inline ? "px-3 py-2" : "px-4 py-4"}>
-                          <span className="font-semibold text-[#1a1a1a]">kr {row.total}</span>
+                          <span className="font-extrabold text-[#101C14]">kr {row.total}</span>
                         </td>
                         <td className={inline ? "px-2 py-2" : "px-4 py-4"}>
                           <a
                             href={row.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`inline-block rounded-lg bg-[#2D6A4F] text-xs font-medium text-white transition-all duration-150 hover:brightness-110 ${inline ? "px-2 py-1.5" : "px-4 py-2"}`}
+                            className={`dd-cta text-xs ${inline ? "px-3 py-1.5" : "px-4 py-2"}`}
                             aria-disabled={!row.inStock}
                             tabIndex={row.inStock ? 0 : -1}
                           >
@@ -230,48 +230,48 @@ export function PriceTable({
                 return (
                   <div
                     key={i}
-                    className={`rounded-2xl border p-4 ${
-                      isBest ? "border-[#B8E04A] bg-[#f0f9e8]" : "border-[#e0ddd4] bg-white"
+                    className={`rounded-2xl border-2 p-4 ${
+                      isBest ? "border-[#101C14] bg-[#EEF7D4] shadow-[3px_3px_0_#101C14]" : "border-[#101C14] bg-white"
                     }`}
                   >
                     <div className="mb-3 flex items-start justify-between gap-2">
                       <div>
                         <div className="flex flex-wrap items-center gap-1.5">
-                          <span className="font-semibold text-[#1a1a1a]">{row.name}</span>
-                          {row.country === "SE" && <span className="rounded bg-[#eef0f3] px-1.5 py-0.5 text-[10px] font-semibold text-[#777]" title="Svensk butikk">SE</span>}
+                          <span className="font-extrabold text-[#101C14]">{row.name}</span>
+                          {row.country === "SE" && <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]" title="Svensk butikk">SE</span>}
                           {isBest && (
-                            <span className="rounded-full bg-[#B8E04A] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1E3D2F]">
-                              Beste deal
+                            <span className="dd-sticker text-[10px]">
+                              Beste pris
                             </span>
                           )}
                         </div>
                         {row.country === "SE" && row.voec && (
-                          <div className="mt-0.5 text-[11px] text-[#888]">inkl. frakt og MVA</div>
+                          <div className="mt-0.5 text-[11px] text-[#101C1477]">inkl. frakt og MVA</div>
                         )}
                       </div>
                       <StockDot inStock={row.inStock} />
                     </div>
-                    <div className="mb-3 grid grid-cols-3 gap-2 text-xs text-[#666]">
+                    <div className="mb-3 grid grid-cols-3 gap-2 text-xs text-[#101C1499]">
                       <div>
                         <div className="uppercase tracking-wider">Diskpris</div>
-                        <div className="font-medium text-[#1a1a1a]">kr {row.price}</div>
+                        <div className="font-semibold text-[#101C14]">kr {row.price}</div>
                       </div>
                       <div>
                         <div className="uppercase tracking-wider">Frakt</div>
-                        <div className="font-medium text-[#1a1a1a]">
+                        <div className="font-semibold text-[#101C14]">
                           {row.shippingNOK > 0 ? `kr ${row.shippingNOK}` : "Gratis"}
                         </div>
                       </div>
                       <div>
                         <div className="uppercase tracking-wider">Total</div>
-                        <div className="font-semibold text-[#1a1a1a]">kr {row.total}</div>
+                        <div className="font-extrabold text-[#101C14]">kr {row.total}</div>
                       </div>
                     </div>
                     <a
                       href={row.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full rounded-lg bg-[#2D6A4F] py-2.5 text-center text-sm font-medium text-white transition-all hover:brightness-110"
+                      className="dd-cta block w-full py-2.5 text-center text-sm"
                     >
                       Gå til butikk
                     </a>
@@ -431,7 +431,7 @@ export function PriceTable({
           </div>
         )}
 
-        <p className="mt-4 text-xs text-[#888]">
+        <p className="mt-4 text-xs text-[#101C1477]">
           Prisene inkluderer 25% MVA. Fraktgrenser varierer per butikk.
         </p>
       </div>
@@ -447,7 +447,7 @@ function StockDot({ inStock }: { inStock: boolean }) {
           inStock ? "bg-[#4CAF82]" : "bg-[#E8704A]"
         }`}
       />
-      <span className="text-xs text-[#666]">{inStock ? "På lager" : "Utsolgt"}</span>
+      <span className="text-xs text-[#101C1499]">{inStock ? "På lager" : "Utsolgt"}</span>
     </div>
   );
 }
@@ -674,49 +674,49 @@ function FlightPathSVG({ flight }: { flight: FlightNumbers }) {
   return (
     <div className="flex flex-col items-center gap-2">
       {/* Toggle */}
-      <div className="flex rounded-full bg-[#e8e4dc] p-0.5 text-xs font-semibold">
+      <div className="flex rounded-full bg-[#F1EFE6] p-0.5 text-xs font-bold">
         <button
           type="button"
           onClick={() => setIsForehand(false)}
-          className={`rounded-full px-3 py-1 transition-colors ${!isForehand ? "bg-[#2D6A4F] text-white" : "text-[#666] hover:text-[#1a1a1a]"}`}
+          className={`rounded-full px-3 py-1 transition-colors ${!isForehand ? "bg-[#101C14] text-[#B8E04A]" : "text-[#101C1499] hover:text-[#101C14]"}`}
         >
           BH
         </button>
         <button
           type="button"
           onClick={() => setIsForehand(true)}
-          className={`rounded-full px-3 py-1 transition-colors ${isForehand ? "bg-[#2D6A4F] text-white" : "text-[#666] hover:text-[#1a1a1a]"}`}
+          className={`rounded-full px-3 py-1 transition-colors ${isForehand ? "bg-[#101C14] text-[#B8E04A]" : "text-[#101C1499] hover:text-[#101C14]"}`}
         >
           FH
         </button>
       </div>
 
       <svg viewBox={`0 0 ${W} ${H}`} style={{ maxWidth: 340, width: "100%" }} aria-label="Disc flight path chart">
-        <rect width={W} height={H} fill="#F8F7F3" rx="12" />
-        <rect x={padL} y={padT} width={chartW} height={chartH} fill="white" rx="6" />
+        <rect width={W} height={H} fill="#FFFDF6" rx="12" stroke="#101C14" strokeWidth="2" />
+        <rect x={padL} y={padT} width={chartW} height={chartH} fill="white" rx="6" stroke="#101C14" strokeWidth="1.5" />
         {yTicks.map((m) => {
           const y = baseY - m * scale;
           return (
             <g key={`y-${m}`}>
-              <line x1={padL} y1={y} x2={padL + chartW} y2={y} stroke="#2D6A4F" strokeWidth="0.5" strokeOpacity="0.25" />
-              <text x={padL - 5} y={y + 4} textAnchor="end" fontSize="9" fill="#2D6A4F" fontFamily="system-ui,sans-serif">{m}m</text>
+              <line x1={padL} y1={y} x2={padL + chartW} y2={y} stroke="#101C14" strokeWidth="0.5" strokeOpacity="0.15" />
+              <text x={padL - 5} y={y + 4} textAnchor="end" fontSize="9" fill="#101C14" fontFamily="system-ui,sans-serif" opacity="0.6">{m}m</text>
             </g>
           );
         })}
-        <text x={padL - 5} y={baseY + 4} textAnchor="end" fontSize="9" fill="#2D6A4F" fontFamily="system-ui,sans-serif">0m</text>
+        <text x={padL - 5} y={baseY + 4} textAnchor="end" fontSize="9" fill="#101C14" fontFamily="system-ui,sans-serif" opacity="0.6">0m</text>
         {xTicks.map((m) => {
           const x = cx + m * scale;
           const isCenter = m === 0;
           return (
             <g key={`x-${m}`}>
-              <line x1={x} y1={padT} x2={x} y2={baseY} stroke="#2D6A4F"
-                strokeWidth={isCenter ? 1.0 : 0.5} strokeOpacity={isCenter ? 0.45 : 0.18}
+              <line x1={x} y1={padT} x2={x} y2={baseY} stroke="#101C14"
+                strokeWidth={isCenter ? 1.0 : 0.5} strokeOpacity={isCenter ? 0.3 : 0.1}
                 strokeDasharray={isCenter ? undefined : "3 3"} />
             </g>
           );
         })}
-        <text x={padL + 5} y={padT + 15} fontSize="8" fill="#2D6A4F" fontFamily="system-ui,sans-serif" opacity="0.55">{leftLabel}</text>
-        <text x={padL + chartW - 5} y={padT + 15} fontSize="8" fill="#2D6A4F" fontFamily="system-ui,sans-serif" opacity="0.55" textAnchor="end">{rightLabel}</text>
+        <text x={padL + 5} y={padT + 15} fontSize="8" fill="#101C14" fontFamily="system-ui,sans-serif" opacity="0.5">{leftLabel}</text>
+        <text x={padL + chartW - 5} y={padT + 15} fontSize="8" fill="#101C14" fontFamily="system-ui,sans-serif" opacity="0.5" textAnchor="end">{rightLabel}</text>
         {arms.map((arm) => {
           const { d, endX, endY } = calcCurve(arm);
           return (
@@ -726,9 +726,9 @@ function FlightPathSVG({ flight }: { flight: FlightNumbers }) {
             </g>
           );
         })}
-        <circle cx={cx} cy={baseY} r="5" fill="#2D6A4F" opacity="0.18" />
-        <circle cx={cx} cy={baseY} r="3" fill="#2D6A4F" />
-        <circle cx={cx} cy={baseY} r="1.5" fill="#F5F2EB" />
+        <circle cx={cx} cy={baseY} r="5" fill="#101C14" opacity="0.15" />
+        <circle cx={cx} cy={baseY} r="3" fill="#101C14" />
+        <circle cx={cx} cy={baseY} r="1.5" fill="#FFFDF6" />
         {arms.map((arm, i) => {
           const lx = padL + i * legendItemW + 6;
           const ly = legendY;
@@ -736,8 +736,8 @@ function FlightPathSVG({ flight }: { flight: FlightNumbers }) {
             <g key={`legend-${arm.id}`}>
               <line x1={lx} y1={ly + 5} x2={lx + 18} y2={ly + 5} stroke={arm.color} strokeWidth="2.5" strokeLinecap="round" />
               <circle cx={lx + 18} cy={ly + 5} r="3" fill={arm.color} />
-              <text x={lx + 25} y={ly + 9} fontSize="9" fill="#1a1a1a" fontFamily="system-ui,sans-serif" fontWeight="600">{arm.label}</text>
-              <text x={lx + 25} y={ly + 21} fontSize="8" fill="#666" fontFamily="system-ui,sans-serif">{arm.sub}</text>
+              <text x={lx + 25} y={ly + 9} fontSize="9" fill="#101C14" fontFamily="system-ui,sans-serif" fontWeight="700">{arm.label}</text>
+              <text x={lx + 25} y={ly + 21} fontSize="8" fill="#101C1499" fontFamily="system-ui,sans-serif">{arm.sub}</text>
             </g>
           );
         })}
@@ -761,10 +761,8 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`shrink-0 rounded-full border px-4 py-2.5 text-sm font-medium transition-all min-h-[44px] ${
-        active
-          ? "border-[#2D6A4F] bg-[#2D6A4F] text-white shadow-sm"
-          : "border-[#ddd] bg-white text-[#444] hover:border-[#2D6A4F]/50 hover:text-[#2D6A4F]"
+      className={`dd-selectable shrink-0 rounded-full bg-[#F1EFE6] px-4 py-2.5 text-sm font-semibold text-[#101C14] min-h-[44px] ${
+        active ? "dd-active" : ""
       }`}
     >
       {label}
@@ -1182,17 +1180,8 @@ export function DiscHeroSection({
   return (
     <>
       {/* ── Main info section (cream bg) ──────────────────────────────────── */}
-      <section className="w-full bg-[#F5F2EB] px-4 pb-10 pt-6 sm:px-8">
+      <section className="w-full bg-[#FFFDF6] px-4 pb-10 pt-2 sm:px-8">
         <div className="mx-auto max-w-5xl">
-
-          {/* Breadcrumb — full width */}
-          <div className="mb-5 flex flex-wrap items-center gap-1.5 text-xs text-[#888]">
-            <Link href="/" className="transition-colors hover:text-[#2D6A4F]">DiscDrop</Link>
-            <span className="opacity-40">/</span>
-            <Link href={breadcrumbHref} className="transition-colors hover:text-[#2D6A4F]">{breadcrumbLabel}</Link>
-            <span className="opacity-40">/</span>
-            <span className="text-[#1a1a1a]">{disc.name}</span>
-          </div>
 
           {/* Two-column grid on desktop — each column is a single flex-col div */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-[40%_1fr] md:items-start md:gap-8">
@@ -1201,16 +1190,16 @@ export function DiscHeroSection({
             <div className="flex flex-col gap-4">
 
               {/* Disc image */}
-              <div className="overflow-hidden rounded-2xl border border-[#e0ddd4] bg-white">
+              <div className="overflow-hidden rounded-2xl border-2 border-[#101C14] bg-white shadow-[5px_5px_0_#B8E04A]">
                 <div className="flex items-center justify-center p-6" style={{ minHeight: 260 }}>
                   <DiscImage src={disc.image} name={disc.name} brand={disc.brand} type={disc.type} containerStyle={{ height: 260 }} />
                 </div>
               </div>
 
               {/* Flight path card */}
-              <div className="rounded-2xl border border-[#e0ddd4] bg-white p-4">
-                <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-[#888]">Flybane</div>
-                <p className="mb-2 text-[11px] text-[#999]">RHBH-flybaner sett ovenfra etter armhastighet.</p>
+              <div className="rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#B8E04A]">
+                <div className="mb-1 text-sm font-extrabold text-[#101C14]">Flyvebane</div>
+                <p className="mb-2 text-[11px] text-[#101C1477]">RHBH-flybaner sett ovenfra etter armhastighet.</p>
                 <FlightPathSVG flight={disc.flight} />
               </div>
 
@@ -1223,12 +1212,12 @@ export function DiscHeroSection({
               <div className="flex flex-wrap items-center gap-2">
                 <Link
                   href={`/brand/${BRAND_SLUG[disc.brand] ?? disc.brand.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="text-sm font-medium text-[#888] transition-colors hover:text-[#2D6A4F]"
+                  className="text-sm font-semibold text-[#101C1499] transition-colors hover:text-[#101C14]"
                 >
                   {disc.brand}
                 </Link>
-                <span className="text-[#ccc]">·</span>
-                <span className="rounded-md bg-[#e8f5e9] px-2.5 py-1 text-xs font-medium text-[#2D6A4F]">
+                <span className="text-[#101C1444]">·</span>
+                <span className="rounded-md bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C14]">
                   {TYPE_LABELS_CLIENT[disc.type] ?? disc.type}
                 </span>
                 {disc.tags.map((tag) => {
@@ -1236,33 +1225,33 @@ export function DiscHeroSection({
                   return (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold tracking-wide"
-                      style={style ? { background: style.bg, color: style.text } : { background: "#555", color: "#fff" }}
+                      className="dd-sticker text-[10px]"
+                      style={style ? { background: style.bg, color: style.text, boxShadow: "2px 2px 0 #101C14" } : undefined}
                     >
                       {style?.label ?? tag.toUpperCase()}
                     </span>
                   );
                 })}
-                {disc.player && <span className="text-sm text-[#666]">{disc.player}</span>}
+                {disc.player && <span className="text-sm text-[#101C1499]">{disc.player}</span>}
               </div>
 
               {/* Disc name */}
               <div className="flex items-center gap-2.5">
                 <BrandLogo brand={disc.brand} />
-                <h1 className="font-serif text-[clamp(1.75rem,4vw,3rem)] font-bold leading-tight tracking-tight text-[#1a1a1a]">
+                <h1 className="text-[clamp(1.75rem,4vw,3rem)] font-extrabold leading-tight tracking-tight text-[#101C14]">
                   {disc.name}
                 </h1>
               </div>
 
               {/* Description */}
               {description && (
-                <p className="mt-3 text-sm leading-relaxed text-[#555]">{description}</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#101C1499]">{description}</p>
               )}
 
               {/* Plastic chips */}
               {showPlasticChips && (
                 <div>
-                  <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#888]">Plastikk</div>
+                  <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Plastikk</div>
                   <div className="flex flex-wrap gap-2">
                     <Chip
                       label="Alle"
@@ -1284,7 +1273,7 @@ export function DiscHeroSection({
               {/* Edition chips */}
               {showEditionChips && (
                 <div>
-                  <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#888]">Utgave</div>
+                  <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Utgave</div>
                   <div className="flex flex-wrap gap-2">
                     <Chip label="Alle" active={selectedEdition === null} onClick={() => setSelectedEdition(null)} />
                     {editions.map((e) => (
@@ -1296,15 +1285,15 @@ export function DiscHeroSection({
 
               {/* Flight numbers */}
               <div>
-                <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#888]">Flyvetall</div>
+                <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Flyvetall</div>
                 <div className="grid grid-cols-4 gap-2">
                   {flightCells.map(({ label, value }) => (
                     <div
                       key={label}
-                      className="rounded-xl border border-[#e0ddd4] bg-white px-2 py-3 text-center"
+                      className="rounded-xl bg-[#F1EFE6] px-2 py-3 text-center"
                     >
-                      <div className="text-[10px] font-semibold uppercase tracking-widest text-[#888]">{label}</div>
-                      <div className="mt-0.5 font-serif text-3xl font-bold text-[#1a1a1a]">{value}</div>
+                      <div className="mt-0.5 text-3xl font-extrabold text-[#101C14]">{value}</div>
+                      <div className="text-[10px] font-semibold uppercase tracking-widest text-[#101C1488]">{label}</div>
                     </div>
                   ))}
                 </div>
@@ -1312,19 +1301,19 @@ export function DiscHeroSection({
 
               {/* Beste pris — compact single line */}
               <div className="mt-[36px] flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#888]">Beste pris</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Beste pris</span>
                 {bestEntry != null ? (
                   <>
-                    <span className="text-lg font-bold text-[#2D6A4F]">kr {bestEntry.price}</span>
+                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.price}</span>
                     {inStockCount > 0 && (
-                      <span className="text-sm text-[#999]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
+                      <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
                     )}
                   </>
                 ) : (
-                  <span className="text-sm text-[#999]">· ikke tilgjengelig</span>
+                  <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
                 )}
                 {lastUpdated && (
-                  <span className="text-xs text-[#bbb]">· Oppdatert {formatLastUpdated(lastUpdated)}</span>
+                  <span className="text-xs text-[#101C1477]">· Oppdatert {formatLastUpdated(lastUpdated)}</span>
                 )}
               </div>
 
@@ -1342,17 +1331,17 @@ export function DiscHeroSection({
 
       {/* Sticky mobile buy bar */}
       {bestEntry && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#e0ddd4] bg-white/95 px-4 py-3 backdrop-blur-sm md:hidden">
+        <div className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-[#101C14] bg-[#FFFDF6]/97 px-4 py-3 backdrop-blur-sm md:hidden">
           <a
             href={bestEntry.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-full items-center justify-between rounded-xl bg-[#2D6A4F] px-5 py-3.5 text-white transition-all hover:brightness-110 active:scale-95"
+            className="dd-cta flex w-full items-center justify-between px-5 py-3.5"
           >
-            <span className="text-sm font-medium opacity-90">
-              Beste pris: <span className="font-bold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
+            <span className="text-sm font-semibold opacity-90">
+              Beste pris: <span className="font-extrabold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
             </span>
-            <span className="flex items-center gap-1 text-sm font-semibold text-[#B8E04A]">
+            <span className="flex items-center gap-1 text-sm font-extrabold">
               Kjøp
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
                 <path d="M5 12h14M12 5l7 7-7 7" />
@@ -1404,18 +1393,18 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
   }
 
   const card = (
-    <div className="rounded-2xl bg-[#1E3D2F] px-6 py-5">
+    <div className="rounded-2xl border-2 border-[#101C14] bg-[#101C14] px-6 py-5 shadow-[4px_4px_0_#B8E04A]">
           {submitted ? (
             <div className="flex items-center gap-4">
               <span className="text-3xl text-[#B8E04A]">✓</span>
               <div>
-                <p className="font-semibold text-[#F5F2EB]">Varsel opprettet!</p>
-                <p className="text-sm text-[#9DC08B]">Vi sender deg en e-post når {discName} går under ønsket pris.</p>
+                <p className="font-extrabold text-[#FFFDF6]">Varsel opprettet!</p>
+                <p className="text-sm text-[#FFFDF6]/70">Vi sender deg en e-post når {discName} går under ønsket pris.</p>
               </div>
             </div>
           ) : (
             <>
-              <h2 className="mb-4 font-serif text-xl font-semibold text-[#F5F2EB]">Bli varslet</h2>
+              <h2 className="mb-4 text-xl font-extrabold text-[#FFFDF6]">Bli varslet</h2>
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-wrap items-end gap-3 md:flex-nowrap">
                   <input
@@ -1424,7 +1413,7 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
                     placeholder="din@epost.no"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#F5F2EB] placeholder:text-[#9DC08B]/60 outline-none focus:border-[#B8E04A]/60"
+                    className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
                   />
                   <input
                     type="number"
@@ -1432,12 +1421,12 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
                     placeholder="Ønsket pris (kr)"
                     value={targetPrice}
                     onChange={(e) => setTargetPrice(e.target.value)}
-                    className="w-44 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#F5F2EB] placeholder:text-[#9DC08B]/60 outline-none focus:border-[#B8E04A]/60"
+                    className="w-44 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
                   />
                   <button
                     type="submit"
                     disabled={!consent || loading}
-                    className="whitespace-nowrap rounded-xl bg-[#B8E04A] px-5 py-3 text-sm font-semibold text-[#1E3D2F] transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-40"
+                    className="dd-cta whitespace-nowrap px-5 py-3 text-sm disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     {loading ? "Lagrer…" : "Varsle meg"}
                   </button>
@@ -1451,8 +1440,8 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
                     onChange={(e) => setConsent(e.target.checked)}
                     className="mt-0.5 h-4 w-4 shrink-0 accent-[#B8E04A]"
                   />
-                  <span className="text-xs leading-relaxed text-[#9DC08B]/80">
-                    Jeg godtar at DiscDrop lagrer e-postadressen min for å sende prisvarsler. Se vår{" "}
+                  <span className="text-xs leading-relaxed text-[#FFFDF6]/70">
+                    Jeg godtar at discdrop lagrer e-postadressen min for å sende prisvarsler. Se vår{" "}
                     <a href="/personvern" className="underline underline-offset-2 transition-colors hover:text-[#B8E04A]">
                       personvernserklæring
                     </a>
@@ -1468,7 +1457,7 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
   if (inline) return card;
 
   return (
-    <section className="w-full bg-[#F5F2EB] px-4 py-8 sm:px-8">
+    <section className="w-full bg-[#FFFDF6] px-4 py-8 sm:px-8">
       <div className="mx-auto max-w-5xl">
         {card}
       </div>
