@@ -159,11 +159,19 @@ export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
   });
 }
 
+// Product photos of unstamped "blank" discs (no printed design — just a
+// plain-colored disc) are real images but poor representative photos.
+// Store scrapes don't preserve the original product name on each price
+// entry, so we detect these via the image filename, which store product
+// photo naming conventions consistently flag (e.g. "Neutron-Trail-Blank-WR").
+const BLANK_IMAGE_PATTERN = /\bblank\b/i;
+
 /**
  * Resolves the best available image for a disc using this priority:
  * 1. disc.image from discs.js
  * 2. disc-images.json (Infinite Discs enrichment)
- * 3. image from scraped-prices.json (Norwegian store scrape)
+ * 3. image from scraped-prices.json (Norwegian store scrape) — preferring a
+ *    stamped photo over an unstamped "blank" one when both are available
  * 4. /disc-placeholder.svg
  */
 export function getDiscImage(disc: Disc): string {
@@ -172,9 +180,16 @@ export function getDiscImage(disc: Disc): string {
   if (enriched) return enriched;
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[disc.id];
   if (scraped) {
+    let fallbackBlank: string | null = null;
     for (const entry of scraped) {
-      if (entry.image) return entry.image;
+      if (!entry.image) continue;
+      if (BLANK_IMAGE_PATTERN.test(entry.image)) {
+        if (!fallbackBlank) fallbackBlank = entry.image;
+        continue;
+      }
+      return entry.image;
     }
+    if (fallbackBlank) return fallbackBlank;
   }
   return "/disc-placeholder.svg";
 }
