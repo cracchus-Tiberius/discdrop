@@ -169,9 +169,14 @@ function matchDiscCandidate(rawProductName) {
       'i'
     );
     if (pattern.test(normalised)) {
-      // Very short disc names (<= 2 chars) require the brand name to also appear.
-      // Exception: Discmania line plastics (C-Line, S-Line, D-Line, P-Line) infer brand.
-      if (discName.length <= 2) {
+      // Very short disc names (<= 3 chars, e.g. "Spy", "H1", "P2") require the
+      // brand name to also appear — otherwise a short, generic-looking name
+      // can match a completely unrelated product from a different brand that
+      // merely happens to contain the same word (confirmed in production:
+      // "Northstar Spy" was matching catalog id prodiscus-spy).
+      // Exception: Discmania/Innova plastic-line keywords infer brand, since
+      // those are near-universally present whenever the short name is.
+      if (discName.length <= 3) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
         const hasDiscmaniaPlastic = disc.brand === 'Discmania' &&
