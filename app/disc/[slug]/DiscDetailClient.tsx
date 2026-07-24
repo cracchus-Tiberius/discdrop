@@ -1218,7 +1218,9 @@ export function DiscHeroSection({
                 </Link>
                 <span className="text-[#101C1444]">·</span>
                 <span className="rounded-md bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C14]">
-                  {TYPE_LABELS_CLIENT[disc.type] ?? disc.type}
+                  {disc.type === "driver"
+                    ? (disc.flight.speed >= 10 ? "Distance Driver" : "Fairway Driver")
+                    : (TYPE_LABELS_CLIENT[disc.type] ?? disc.type)}
                 </span>
                 {disc.tags.map((tag) => {
                   const style = BADGE_STYLES_CLIENT[tag];

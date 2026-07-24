@@ -291,7 +291,9 @@ export function SearchInput({
                     </div>
                     <div className="ml-3 flex shrink-0 items-center gap-3">
                       <span className="hidden rounded-full bg-[#f0f0ee] px-2.5 py-1 text-xs text-[#888] sm:inline">
-                        {TYPE_LABEL[d.type] ?? d.type}
+                        {d.type === "driver"
+                          ? (d.flight.speed >= 10 ? "Distance Driver" : "Fairway Driver")
+                          : (TYPE_LABEL[d.type] ?? d.type)}
                       </span>
                       {price != null && (
                         <span className="text-sm font-medium text-[#2D6A4F]">fra kr {price}</span>
