@@ -136,7 +136,12 @@ export function DiscImage({
           src={src}
           alt={name}
           onError={() => setFailed(true)}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          // Product photos usually have the disc drawn with some margin inside
+          // an otherwise-square canvas — since our containers are square/circular
+          // too, plain object-fit:cover has nothing to crop (same aspect ratio),
+          // so that margin still shows as a visible white ring. Scale up on top
+          // of cover to crop past it.
+          style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.35)" }}
         />
       </div>
     );
