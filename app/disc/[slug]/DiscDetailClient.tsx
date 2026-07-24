@@ -31,36 +31,20 @@ type StoreRow = Store & {
   total: number;
 };
 
-/** Future-ready: international store entry with currency + VOEC info */
-type IntlStore = {
-  name: string;
-  flag: string;
-  priceLocal: number;
-  currency: string;
-  rateToNOK: number;
-  shippingLocal: number;
-  freeShippingLocalOver?: number;
-  voec: boolean; // true = MVA pre-paid via VOEC, false = collected at delivery
-  url: string;
-  inStock: boolean;
-};
-
 // ── Price Comparison Table ───────────────────────────────────────────────────
 
 export function PriceTable({
   stores,
-  intlStores = [],
   lastUpdated,
   hideHeader,
   inline,
 }: {
   stores: Store[];
-  intlStores?: IntlStore[];
   lastUpdated?: string | null;
   hideHeader?: boolean;
   inline?: boolean;
 }) {
-  if (stores.length === 0 && intlStores.length === 0) {
+  if (stores.length === 0) {
     if (hideHeader || inline) return null;
     return (
       <section className="w-full bg-[#FFFDF6] px-4 py-10 sm:px-8">
@@ -89,30 +73,6 @@ export function PriceTable({
 
   const bestTotal = rows.find((r) => r.inStock)?.total ?? rows[0]?.total;
 
-  // International rows with MVA calculation
-  type IntlRow = IntlStore & {
-    diskNOK: number;
-    shippingNOK: number;
-    subtotalNOK: number;
-    mvaNOK: number;
-    totalNOK: number;
-  };
-  const intlRows: IntlRow[] = intlStores
-    .map((s) => {
-      const freeOver = s.freeShippingLocalOver ?? Infinity;
-      const shippingLocal = s.priceLocal >= freeOver ? 0 : s.shippingLocal;
-      const diskNOK = Math.round(s.priceLocal * s.rateToNOK);
-      const shippingNOK = Math.round(shippingLocal * s.rateToNOK);
-      const subtotalNOK = diskNOK + shippingNOK;
-      const mvaNOK = s.voec ? 0 : Math.round(subtotalNOK * 0.25);
-      return { ...s, diskNOK, shippingNOK, subtotalNOK, mvaNOK, totalNOK: subtotalNOK + mvaNOK };
-    })
-    .sort((a, b) => {
-      if (a.inStock && !b.inStock) return -1;
-      if (!a.inStock && b.inStock) return 1;
-      return a.totalNOK - b.totalNOK;
-    });
-
   return (
     <div className={inline ? undefined : "w-full bg-[#FFFDF6] px-4 pb-10 pt-4 sm:px-8"}>
       <div className={inline ? undefined : "mx-auto max-w-4xl"}>
@@ -127,18 +87,8 @@ export function PriceTable({
           </>
         )}
 
-        {/* ── Norwegian stores ── */}
         {rows.length > 0 && (
           <>
-            {intlRows.length > 0 && (
-              <div className="mb-2 flex items-center gap-2">
-                <span className="text-base">🇳🇴</span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">
-                  Norske butikker
-                </span>
-              </div>
-            )}
-
             {/* Desktop */}
             <div className="hidden overflow-hidden rounded-2xl border-2 border-[#101C14] bg-white md:block">
               <table className="w-full text-sm">
@@ -273,155 +223,6 @@ export function PriceTable({
           </>
         )}
 
-        {/* ── International stores ── */}
-        {intlRows.length > 0 && (
-          <div className="mt-6">
-            <div className="mb-2 flex items-center gap-2">
-              <span className="text-base">🌍</span>
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#666]">
-                Internasjonale butikker
-              </span>
-            </div>
-
-            {/* Desktop */}
-            <div className="hidden overflow-hidden rounded-2xl border border-[#e0ddd4] bg-white shadow-sm md:block">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-[#e8e8e4] bg-[#f7f6f2] text-left text-xs uppercase tracking-wider text-[#888]">
-                    <th className="px-5 py-3">Butikk</th>
-                    <th className="px-4 py-3">Lager</th>
-                    <th className="px-4 py-3">Diskpris</th>
-                    <th className="px-4 py-3">Frakt</th>
-                    <th className="px-4 py-3">MVA (25%)</th>
-                    <th className="px-4 py-3 font-bold text-[#2D6A4F]">Total NOK</th>
-                    <th className="px-4 py-3"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {intlRows.map((row, i) => (
-                    <tr
-                      key={i}
-                      className="border-b border-[#f0ede6] last:border-0 transition-colors hover:bg-[#fafaf8]"
-                    >
-                      <td className="px-5 py-4">
-                        <div className="flex items-center gap-2">
-                          <span>{row.flag}</span>
-                          <span className="font-medium text-[#1a1a1a]">{row.name}</span>
-                        </div>
-                      </td>
-                      <td className="px-4 py-4">
-                        <StockDot inStock={row.inStock} />
-                      </td>
-                      <td className="px-4 py-4 text-[#444]">
-                        <div>kr {row.diskNOK}</div>
-                        <div className="text-[11px] text-[#aaa]">
-                          {row.priceLocal} {row.currency}
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 text-[#444]">
-                        {row.shippingNOK > 0 ? (
-                          <div>
-                            <div>kr {row.shippingNOK}</div>
-                            <div className="text-[11px] text-[#aaa]">
-                              {row.shippingLocal} {row.currency}
-                            </div>
-                          </div>
-                        ) : (
-                          <span className="font-medium text-[#2D6A4F]">Gratis</span>
-                        )}
-                      </td>
-                      <td className="px-4 py-4">
-                        {row.voec ? (
-                          <span className="rounded-full bg-[#e8f5e9] px-2 py-0.5 text-[11px] font-medium text-[#2D6A4F]">
-                            MVA inkl.
-                          </span>
-                        ) : (
-                          <div>
-                            <div className="text-[#444]">+ kr {row.mvaNOK}</div>
-                            <span className="mt-0.5 inline-block rounded-full bg-[#fff8e1] px-2 py-0.5 text-[10px] font-medium text-[#b45309]">
-                              MVA ved levering
-                            </span>
-                          </div>
-                        )}
-                      </td>
-                      <td className="px-4 py-4">
-                        <span className="font-semibold text-[#1a1a1a]">kr {row.totalNOK}</span>
-                      </td>
-                      <td className="px-4 py-4">
-                        <a
-                          href={row.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block rounded-lg bg-[#2D6A4F] px-4 py-2 text-xs font-medium text-white transition-all hover:brightness-110"
-                        >
-                          Gå til butikk
-                        </a>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-
-            {/* Mobile cards */}
-            <div className="grid gap-3 md:hidden">
-              {intlRows.map((row, i) => (
-                <div key={i} className="rounded-2xl border border-[#e0ddd4] bg-white p-4">
-                  <div className="mb-3 flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span>{row.flag}</span>
-                      <span className="font-semibold text-[#1a1a1a]">{row.name}</span>
-                    </div>
-                    <StockDot inStock={row.inStock} />
-                  </div>
-                  <div className="mb-3 grid grid-cols-4 gap-2 text-xs text-[#666]">
-                    <div>
-                      <div className="uppercase tracking-wider">Diskpris</div>
-                      <div className="font-medium text-[#1a1a1a]">kr {row.diskNOK}</div>
-                    </div>
-                    <div>
-                      <div className="uppercase tracking-wider">Frakt</div>
-                      <div className="font-medium text-[#1a1a1a]">
-                        {row.shippingNOK > 0 ? `kr ${row.shippingNOK}` : "Gratis"}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="uppercase tracking-wider">MVA</div>
-                      <div className="font-medium text-[#1a1a1a]">
-                        {row.voec ? (
-                          <span className="text-[#2D6A4F]">Inkl.</span>
-                        ) : (
-                          `kr ${row.mvaNOK}`
-                        )}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="uppercase tracking-wider">Total</div>
-                      <div className="font-semibold text-[#1a1a1a]">kr {row.totalNOK}</div>
-                    </div>
-                  </div>
-                  {!row.voec && (
-                    <p className="mb-2 text-[10px] text-[#b45309]">
-                      MVA beregnes på disk + frakt kombinert, og betales ved levering.
-                    </p>
-                  )}
-                  <a
-                    href={row.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full rounded-lg bg-[#2D6A4F] py-2.5 text-center text-sm font-medium text-white transition-all hover:brightness-110"
-                  >
-                    Gå til butikk
-                  </a>
-                </div>
-              ))}
-            </div>
-            <p className="mt-3 text-[11px] text-[#aaa]">
-              MVA beregnes på disk + frakt kombinert. VOEC-registrerte butikker krever inn MVA ved kjøp.
-            </p>
-          </div>
-        )}
-
         <p className="mt-4 text-xs text-[#101C1477]">
           Prisene inkluderer 25% MVA. Fraktgrenser varierer per butikk.
         </p>
@@ -440,28 +241,6 @@ function StockDot({ inStock }: { inStock: boolean }) {
       />
       <span className="text-xs text-[#101C1499]">{inStock ? "På lager" : "Utsolgt"}</span>
     </div>
-  );
-}
-
-// ── Price History Chart ──────────────────────────────────────────────────────
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function PriceHistoryChart({ priceHistory: _, inline }: { priceHistory: (number | null)[]; inline?: boolean }) {
-  const content = (
-    <>
-      <h2 className={`mb-1 font-serif font-semibold tracking-tight text-[#1a1a1a] ${inline ? "text-xl" : "text-2xl"}`}>
-        Prishistorikk
-      </h2>
-      <p className="mt-3 rounded-2xl border border-[#e0ddd4] bg-white px-6 py-6 text-center text-sm text-[#aaa]">
-        Prishistorikk kommer snart — vi samler inn data daglig.
-      </p>
-    </>
-  );
-  if (inline) return <div>{content}</div>;
-  return (
-    <section className="w-full bg-[#F5F2EB] px-4 py-10 sm:px-8">
-      <div className="mx-auto max-w-4xl">{content}</div>
-    </section>
   );
 }
 
@@ -758,202 +537,6 @@ function Chip({
     >
       {label}
     </button>
-  );
-}
-
-export function VariantPriceSection({
-  allEntries,
-  lastUpdated,
-}: {
-  allEntries: RichStoreEntry[];
-  lastUpdated?: string | null;
-}) {
-  // Unique non-null plastic types across all entries for this disc
-  const plastics = useMemo(() => {
-    const seen = new Set<string>();
-    const out: string[] = [];
-    for (const e of allEntries) {
-      if (e.plastic) {
-        const norm = normalizePlastic(e.plastic);
-        if (!seen.has(norm)) { seen.add(norm); out.push(norm); }
-      }
-    }
-    return out;
-  }, [allEntries]);
-
-  // Show plastic chips only when 2+ distinct plastics exist
-  const showPlasticChips = plastics.length >= 2;
-
-  // Default to the plastic with the cheapest in-stock entry
-  const defaultPlastic = useMemo(() => {
-    if (!showPlasticChips) return null;
-    let best: string | null = null;
-    let bestPrice = Infinity;
-    for (const p of plastics) {
-      const pEntries = allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === p && e.inStock);
-      const min = pEntries.length ? Math.min(...pEntries.map((e) => e.price)) : Infinity;
-      if (min < bestPrice) { bestPrice = min; best = p; }
-    }
-    return best ?? plastics[0] ?? null;
-  }, [allEntries, plastics, showPlasticChips]);
-
-  // Default to null = "Alle" so count reflects all stores on first render
-  const [selectedPlastic, setSelectedPlastic] = useState<string | null>(null);
-  const [selectedEdition, setSelectedEdition] = useState<string | null>(null);
-
-  // Entries for selected plastic (all entries if "Alle" or chips aren't shown)
-  const plasticEntries = useMemo(() => {
-    if (!showPlasticChips || selectedPlastic === null) return allEntries;
-    return allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === selectedPlastic);
-  }, [allEntries, selectedPlastic, showPlasticChips]);
-
-  // Unique non-null editions within the selected plastic
-  const editions = useMemo(() => {
-    const seen = new Set<string>();
-    const out: string[] = [];
-    for (const e of plasticEntries) {
-      if (e.edition && !seen.has(e.edition)) {
-        seen.add(e.edition);
-        out.push(e.edition);
-      }
-    }
-    return out;
-  }, [plasticEntries]);
-
-  const showEditionChips = editions.length >= 1;
-
-  // Final filtered entries for the price table
-  const filtered = useMemo(
-    () => selectedEdition ? plasticEntries.filter((e) => e.edition === selectedEdition) : plasticEntries,
-    [plasticEntries, selectedEdition]
-  );
-
-  // Deduplicate by store: one row per store, cheapest in-stock entry wins
-  const deduplicatedEntries = useMemo(() => {
-    const byStore = new Map<string, RichStoreEntry>();
-    for (const e of filtered) {
-      const existing = byStore.get(e.storeKey);
-      if (!existing) {
-        byStore.set(e.storeKey, e);
-      } else if (e.inStock && !existing.inStock) {
-        byStore.set(e.storeKey, e);
-      } else if (e.inStock === existing.inStock && e.price < existing.price) {
-        byStore.set(e.storeKey, e);
-      }
-    }
-    return [...byStore.values()];
-  }, [filtered]);
-
-  const storeRows: Store[] = deduplicatedEntries.map((e) => ({
-    name: e.storeName,
-    price: e.price,
-    inStock: e.inStock,
-    url: e.url,
-    shipping: e.shipping,
-    freeShippingOver: e.freeShippingOver,
-    country: e.country,
-    voec: e.voec,
-  }));
-
-  // Best in-stock entry for sticky mobile CTA
-  const bestEntry = useMemo(() => {
-    const rows = deduplicatedEntries.map((e) => ({
-      ...e,
-      total: e.price + (e.price >= e.freeShippingOver ? 0 : e.shipping),
-    }));
-    return rows.filter((r) => r.inStock).sort((a, b) => a.total - b.total)[0] ?? null;
-  }, [deduplicatedEntries]);
-
-  if (allEntries.length === 0) {
-    return <PriceTable stores={[]} lastUpdated={lastUpdated} />;
-  }
-
-  return (
-    <>
-      <section className="w-full bg-[#F5F2EB] px-4 pt-10 sm:px-8">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="mb-1 font-serif text-2xl font-semibold tracking-tight text-[#1a1a1a]">
-            Hvor kan du kjøpe
-          </h2>
-          <p className="mb-4 text-sm text-[#666]">
-            Alle priser i NOK, inkl. MVA. Sortert etter totalpris inkl. frakt.
-          </p>
-
-          {/* Plastic chips — only when 2+ distinct plastics */}
-          {showPlasticChips && (
-            <div className="mb-4">
-              <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#888]">
-                Plastikk
-              </div>
-              <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-                <Chip
-                  label="Alle"
-                  active={selectedPlastic === null}
-                  onClick={() => { setSelectedPlastic(null); setSelectedEdition(null); }}
-                />
-                {plastics.map((p) => (
-                  <Chip
-                    key={p}
-                    label={p}
-                    active={selectedPlastic === p}
-                    onClick={() => { setSelectedPlastic(p); setSelectedEdition(null); }}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Edition chips — only when editions exist within selected plastic */}
-          {showEditionChips && (
-            <div className="mb-4">
-              <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#888]">
-                Utgave
-              </div>
-              <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-                <Chip
-                  label="Alle"
-                  active={selectedEdition === null}
-                  onClick={() => setSelectedEdition(null)}
-                />
-                {editions.map((e) => (
-                  <Chip
-                    key={e}
-                    label={e}
-                    active={selectedEdition === e}
-                    onClick={() => setSelectedEdition(e)}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Price table — without its own section header */}
-      <PriceTable stores={storeRows} lastUpdated={lastUpdated} hideHeader />
-
-      {/* Sticky mobile buy bar — hidden on desktop */}
-      {bestEntry && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#e0ddd4] bg-white/95 px-4 py-3 backdrop-blur-sm md:hidden">
-          <a
-            href={bestEntry.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex w-full items-center justify-between rounded-xl bg-[#2D6A4F] px-5 py-3.5 text-white transition-all hover:brightness-110 active:scale-95"
-          >
-            <span className="text-sm font-medium opacity-90">
-              Beste pris: <span className="font-bold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
-            </span>
-            <span className="flex items-center gap-1 text-sm font-semibold text-[#B8E04A]">
-              Kjøp
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </a>
-        </div>
-      )}
-    </>
   );
 }
 
