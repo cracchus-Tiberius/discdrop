@@ -103,12 +103,17 @@ export function DiscImage({
   brand,
   type,
   containerStyle,
+  fit = "contain",
 }: {
   src?: string;
   name: string;
   brand: string;
   type?: string;
   containerStyle?: React.CSSProperties;
+  /** "cover" fills the container edge-to-edge (crops the photo) — use for
+   * circular/fixed-shape frames where the product photo's white square
+   * background would otherwise show as a visible box inside the frame. */
+  fit?: "contain" | "cover";
 }) {
   // Start in failed state if src is absent — avoids a wasted network request
   const [failed, setFailed] = useState(!src);
@@ -119,6 +124,20 @@ export function DiscImage({
         style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", ...containerStyle }}
       >
         <DiscPlaceholder brand={brand} type={type} />
+      </div>
+    );
+  }
+
+  if (fit === "cover") {
+    return (
+      <div style={{ width: "100%", height: "100%", overflow: "hidden", ...containerStyle }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={src}
+          alt={name}
+          onError={() => setFailed(true)}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </div>
     );
   }

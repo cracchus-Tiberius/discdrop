@@ -278,24 +278,24 @@ function Hero() {
 
         <div className="relative hidden h-72 md:block">
           {heroDiscs[0] && (
-            <div className="absolute right-16 top-2 flex h-52 w-52 items-center justify-center rounded-full border-2 border-[#101C14] bg-[#F1EFE6] shadow-[6px_6px_0_#B8E04A]">
+            <div className="absolute right-16 top-2 h-52 w-52 overflow-hidden rounded-full border-2 border-[#101C14] bg-[#F1EFE6] shadow-[6px_6px_0_#B8E04A]">
               <DiscImage
                 src={getDiscImage(heroDiscs[0])}
                 name={heroDiscs[0].name}
                 brand={heroDiscs[0].brand}
                 type={heroDiscs[0].type}
-                containerStyle={{ height: 148 }}
+                fit="cover"
               />
             </div>
           )}
           {heroDiscs[1] && (
-            <div className="absolute right-0 top-32 flex h-40 w-40 items-center justify-center rounded-full border-2 border-[#101C14] bg-[#F6F8EA] shadow-[5px_5px_0_#101C14]">
+            <div className="absolute right-0 top-32 h-40 w-40 overflow-hidden rounded-full border-2 border-[#101C14] bg-[#F6F8EA] shadow-[5px_5px_0_#101C14]">
               <DiscImage
                 src={getDiscImage(heroDiscs[1])}
                 name={heroDiscs[1].name}
                 brand={heroDiscs[1].brand}
                 type={heroDiscs[1].type}
-                containerStyle={{ height: 112 }}
+                fit="cover"
               />
             </div>
           )}
