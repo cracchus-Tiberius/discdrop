@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
-import { getScrapedPrice, getDiscImage, entryLandedNOK } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, entryLandedNOK, formatRelativeTime } from "@/lib/disc-utils";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -103,7 +103,7 @@ const ALL_HOT_EDITION_KEYWORDS = new Set([
 ]);
 
 /** Return the badge tag that best describes an edition string */
-function editionToBadge(edition: string | null, inStock: boolean, lastScraped?: string): string {
+function editionToBadge(edition: string | null, inStock: boolean, firstSeen?: string): string {
   if (!inStock) return 'sold-out';
 
   // Edition type takes priority over recency — classify first
@@ -116,9 +116,11 @@ function editionToBadge(edition: string | null, inStock: boolean, lastScraped?: 
   }
 
   // Event/tournament editions are limited runs — show as limited
-  // Generic edition seen recently → new-drop
-  if (lastScraped) {
-    const ageMs = Date.now() - new Date(lastScraped).getTime();
+  // Generic edition that genuinely just showed up → new-drop. Uses firstSeen
+  // (set once, never overwritten) rather than lastScraped, which now bumps
+  // on every single scrape run and would otherwise make everything "new".
+  if (firstSeen) {
+    const ageMs = Date.now() - new Date(firstSeen).getTime();
     if (ageMs < 14 * 24 * 60 * 60 * 1000) return 'new-drop';
   }
   return 'limited';
@@ -137,6 +139,7 @@ type HotDropRow = {
   storeCount: number;
   image: string;
   lastScraped: string | null;
+  premiumRatio: number;
 };
 
 const BRAND_PRIORITY = [
@@ -145,7 +148,7 @@ const BRAND_PRIORITY = [
 ];
 
 function buildHotDropRows(): HotDropRow[] {
-  type ScrapedEntry = { store: string; price: number; inStock: boolean; url: string; edition?: string | null; lastScraped: string };
+  type ScrapedEntry = { store: string; price: number; inStock: boolean; url: string; edition?: string | null; lastScraped: string; firstSeen?: string };
   const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
   const storeMeta = scrapedPrices.stores as Record<string, Parameters<typeof entryLandedNOK>[1]>;
 
@@ -176,11 +179,21 @@ function buildHotDropRows(): HotDropRow[] {
 
     const edition = winner.edition ?? null;
     const lastScraped = winner.lastScraped ?? null;
+    const firstSeen = winner.firstSeen ?? null;
     const price = inStockHot.length > 0 ? entryLandedNOK(winner, storeMeta[winner.store]) : null;
     const inStock = inStockHot.length > 0;
     const storeCount = new Set(inStockHot.map((e) => e.store)).size;
 
-    const badge = editionToBadge(edition, inStock, lastScraped ?? undefined);
+    // Price premium vs. the disc's overall cheapest in-stock price: a special
+    // edition that costs much more than the baseline plastic is a stronger
+    // "this is genuinely special" signal than one that costs about the same.
+    const allInStock = entries.filter((e) => e.inStock && e.price >= 50);
+    const basePrice = allInStock.length > 0
+      ? Math.min(...allInStock.map((e) => entryLandedNOK(e, storeMeta[e.store])))
+      : null;
+    const premiumRatio = price != null && basePrice ? price / basePrice : 1;
+
+    const badge = editionToBadge(edition, inStock, firstSeen ?? undefined);
 
     rows.push({
       id: disc.id,
@@ -195,11 +208,13 @@ function buildHotDropRows(): HotDropRow[] {
       storeCount,
       image: getDiscImage(disc),
       lastScraped,
+      premiumRatio,
     });
   }
 
   // Sort: 1) in-stock first  2) badge rank (tour > first-run > limited > new > hot)
-  //       3) brand priority  4) scarcity (fewer stores = more exclusive)  5) recency
+  //       3) scarcity (fewer stores = more exclusive)  4) price premium
+  //       5) brand priority  6) recency
   const badgeRank: Record<string, number> = {
     'tour-series': 5, 'first-run': 4, limited: 3, 'new-drop': 2, hot: 1, 'sold-out': 0,
   };
@@ -207,17 +222,87 @@ function buildHotDropRows(): HotDropRow[] {
     if (a.inStock !== b.inStock) return a.inStock ? -1 : 1;
     const rankDiff = (badgeRank[b.badge] ?? 0) - (badgeRank[a.badge] ?? 0);
     if (rankDiff !== 0) return rankDiff;
-    // Within same badge: brand priority
+    if (a.storeCount !== b.storeCount) return a.storeCount - b.storeCount;
+    if (Math.abs(a.premiumRatio - b.premiumRatio) > 0.05) return b.premiumRatio - a.premiumRatio;
+    // Within same badge/rarity/premium: brand priority
     const aP = BRAND_PRIORITY.indexOf(a.brand); const bP = BRAND_PRIORITY.indexOf(b.brand);
     const aBP = aP === -1 ? 999 : aP; const bBP = bP === -1 ? 999 : bP;
     if (aBP !== bBP) return aBP - bBP;
-    if (a.storeCount !== b.storeCount) return a.storeCount - b.storeCount;
     return (b.lastScraped ?? '').localeCompare(a.lastScraped ?? '');
   });
 
   // Brand diversity: max 2 per brand, greedy pick in badge+priority order
   const brandCount: Record<string, number> = {};
   const selected: HotDropRow[] = [];
+  for (const row of rows) {
+    if (selected.length >= 6) break;
+    const count = brandCount[row.brand] ?? 0;
+    if (count >= 2) continue;
+    brandCount[row.brand] = count + 1;
+    selected.push(row);
+  }
+
+  return selected;
+}
+
+// ── Latest Drops ─────────────────────────────────────────────────────────────
+// Distinct from Hot Drops: not filtered by edition keywords at all — this is
+// purely "what genuinely just showed up", using firstSeen (set once per price
+// entry, never overwritten). Surfaces ordinary restocks and new plastic runs
+// that Hot Drops' tour-series/player-edition filter would otherwise miss.
+
+type LatestDropRow = {
+  id: string;
+  name: string;
+  brand: string;
+  type: string;
+  flight: Flight;
+  price: number;
+  storeCount: number;
+  image: string;
+  firstSeen: string;
+  plastic: string | null;
+};
+
+const LATEST_DROP_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+
+function buildLatestDropRows(): LatestDropRow[] {
+  type ScrapedEntry = { store: string; price: number; inStock: boolean; url: string; plastic?: string | null; firstSeen?: string; lastScraped: string };
+  const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
+  const storeMeta = scrapedPrices.stores as Record<string, Parameters<typeof entryLandedNOK>[1]>;
+  const cutoff = Date.now() - LATEST_DROP_MAX_AGE_MS;
+
+  const rows: LatestDropRow[] = [];
+
+  for (const disc of discs as Disc[]) {
+    if (disc.brand === "Alfa") continue;
+    const entries = (prices[disc.id] ?? []).filter(
+      (e) => e.inStock && e.price >= 50 && e.firstSeen && new Date(e.firstSeen).getTime() >= cutoff
+    );
+    if (entries.length === 0) continue;
+
+    // Most-recently-appeared entry represents this disc's card
+    const newest = entries.reduce((a, b) => (a.firstSeen! > b.firstSeen! ? a : b));
+
+    rows.push({
+      id: disc.id,
+      name: disc.name,
+      brand: disc.brand,
+      type: disc.type,
+      flight: disc.flight,
+      price: entryLandedNOK(newest, storeMeta[newest.store]),
+      storeCount: new Set(entries.map((e) => e.store)).size,
+      image: getDiscImage(disc),
+      firstSeen: newest.firstSeen!,
+      plastic: newest.plastic ?? null,
+    });
+  }
+
+  rows.sort((a, b) => b.firstSeen.localeCompare(a.firstSeen));
+
+  // Brand diversity, same pattern as Hot Drops
+  const brandCount: Record<string, number> = {};
+  const selected: LatestDropRow[] = [];
   for (const row of rows) {
     if (selected.length >= 6) break;
     const count = brandCount[row.brand] ?? 0;
@@ -351,6 +436,65 @@ function HotDrops() {
                     {row.price != null ? `${row.price},-` : "—"}
                   </p>
                   <p className="text-[11px] text-[#101C1477]">inkl. frakt · {row.storeCount} {row.storeCount === 1 ? "butikk" : "butikker"}</p>
+                </div>
+                <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LatestDrops() {
+  const rows = useMemo(() => buildLatestDropRows(), []);
+  if (rows.length === 0) return null;
+
+  return (
+    <section id="latest-drops" className="w-full border-b-2 border-[#101C14] bg-[#FFFDF6] px-5 py-14 md:px-10 md:py-16" style={{ scrollMarginTop: "72px" }}>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-8 flex items-baseline justify-between">
+          <h2 className="text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">
+            Siste drops
+          </h2>
+          <Link href="/browse" className="text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4">
+            Se alle disker →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {rows.map((row) => (
+            <Link
+              key={row.id}
+              href={`/disc/${row.id}`}
+              className="flex flex-col gap-3 rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#101C14] transition-transform duration-150 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[7px_7px_0_#101C14]"
+            >
+              <div className="flex items-start justify-between gap-2">
+                <span className="dd-sticker -rotate-2 text-[11px]" style={{ background: "#B8E04A", color: "#101C14" }}>
+                  NYTT
+                </span>
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-[#F1EFE6]">
+                  <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-extrabold leading-tight text-[#101C14]">
+                  {row.name}
+                </h3>
+                <p className="text-sm text-[#101C1499]">
+                  {row.brand}{row.plastic ? ` · ${row.plastic}` : ""}
+                </p>
+              </div>
+
+              <FlightBoxes flight={row.flight} />
+
+              <div className="mt-auto flex items-center justify-between gap-3 border-t-2 border-[#F1EFE6] pt-3">
+                <div>
+                  <p className="text-xl font-extrabold text-[#101C14]">
+                    {row.price},-
+                  </p>
+                  <p className="text-[11px] text-[#101C1477]">{formatRelativeTime(row.firstSeen)}</p>
                 </div>
                 <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
               </div>
@@ -520,6 +664,7 @@ export function DiscDropHome() {
       <main>
         <Hero />
         <HotDrops />
+        <LatestDrops />
         <WhyDiscDrop />
         <PopularDiscs />
       </main>

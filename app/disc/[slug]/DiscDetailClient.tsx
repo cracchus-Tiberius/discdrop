@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import type { RichStoreEntry } from "@/lib/disc-utils";
+import { formatRelativeTime } from "@/lib/disc-utils";
 
 // ── Plastic normalization ────────────────────────────────────────────────────
 // Scrapers sometimes emit word-swapped names (e.g. "Horizon C-Line" vs "C-Line Horizon").
@@ -45,16 +46,6 @@ type IntlStore = {
 };
 
 // ── Price Comparison Table ───────────────────────────────────────────────────
-
-function formatLastUpdated(iso: string): string {
-  const diffMs = Date.now() - new Date(iso).getTime();
-  const hours = Math.floor(diffMs / (1000 * 60 * 60));
-  if (hours < 1) return "akkurat nå";
-  if (hours === 1) return "for 1 time siden";
-  if (hours < 24) return `for ${hours} timer siden`;
-  const days = Math.floor(hours / 24);
-  return days === 1 ? "for 1 dag siden" : `for ${days} dager siden`;
-}
 
 export function PriceTable({
   stores,
@@ -1315,7 +1306,7 @@ export function DiscHeroSection({
                   <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
                 )}
                 {lastUpdated && (
-                  <span className="text-xs text-[#101C1477]">· Oppdatert {formatLastUpdated(lastUpdated)}</span>
+                  <span className="text-xs text-[#101C1477]">· Oppdatert {formatRelativeTime(lastUpdated)}</span>
                 )}
               </div>
 

@@ -292,6 +292,17 @@ export function badgeStyles(kind: string | null): string {
   }
 }
 
+/** "for 2 dager siden" / "akkurat nå" style relative time, Norwegian */
+export function formatRelativeTime(iso: string): string {
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const hours = Math.floor(diffMs / (1000 * 60 * 60));
+  if (hours < 1) return "akkurat nå";
+  if (hours === 1) return "for 1 time siden";
+  if (hours < 24) return `for ${hours} timer siden`;
+  const days = Math.floor(hours / 24);
+  return days === 1 ? "for 1 dag siden" : `for ${days} dager siden`;
+}
+
 export const TABS = [
   { id: "all" as const, label: "All" },
   { id: "driver" as const, label: "Drivers" },
