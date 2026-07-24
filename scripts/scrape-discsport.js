@@ -6,9 +6,7 @@
 'use strict';
 
 const fetch = require('node-fetch');
-const fs = require('fs');
-const path = require('path');
-const { matchDisc, extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./stores.config.js');
+const { isUsedDisc, isMiniDisc, isNonDiscProduct, mergeStoreResults } = require('./stores.config.js');
 
 const STORE = {
   key: 'discsport',
@@ -204,71 +202,26 @@ async function scrape() {
 // ── Merge results ─────────────────────────────────────────────────────────────
 
 function mergeResults(products, sekToNok, now) {
-  const dataPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
-  let existing = { lastUpdated: now, stores: {}, prices: {} };
-  if (fs.existsSync(dataPath)) {
-    try { existing = JSON.parse(fs.readFileSync(dataPath, 'utf8')); } catch {}
-  }
+  // Currency conversion + sanity floor happen here, before the shared merge
+  // helper — it expects `product.price` to already be the final NOK price.
+  const convertedProducts = products
+    .map((p) => ({ ...p, price: Math.round(p.price * sekToNok), image: null }))
+    .filter((p) => p.price >= 50); // sanity check on converted NOK (in case rate goes weird)
 
-  existing.stores[STORE.key] = {
-    name: STORE.name,
-    url: STORE.baseUrl,
-    shipping: STORE.shipping,
-    country: STORE.country,
-    voec: STORE.voec,
-  };
-
-  // Remove stale entries for this store
-  for (const discId of Object.keys(existing.prices)) {
-    existing.prices[discId] = existing.prices[discId].filter(e => e.store !== STORE.key);
-    if (existing.prices[discId].length === 0) delete existing.prices[discId];
-  }
-
-  let matched = 0;
-  const unmatched = [];
-
-  for (const product of products) {
-    const disc = matchDisc(product.rawName);
-    if (disc) {
-      if (!existing.prices[disc.id]) existing.prices[disc.id] = [];
-      const variant = extractVariant(product.rawName, disc.brand);
-      const priceNOK = Math.round(product.price * sekToNok);
-      if (priceNOK < 50) continue; // sanity check on converted NOK (in case rate goes weird)
-
-      const dupe = existing.prices[disc.id].find(e => e.store === STORE.key && e.plastic === variant.plastic);
-      if (!dupe) {
-        existing.prices[disc.id].push({
-          store: STORE.key,
-          price: priceNOK,
-          inStock: product.inStock,
-          url: product.productUrl,
-          image: null,
-          plastic: variant.plastic,
-          edition: variant.edition,
-          lastScraped: now,
-        });
-      } else if (priceNOK < dupe.price) {
-        Object.assign(dupe, { price: priceNOK, inStock: product.inStock, url: product.productUrl, lastScraped: now });
-      }
-      matched++;
-    } else {
-      unmatched.push({ store: STORE.key, rawName: product.rawName, price: product.price, url: product.productUrl });
-    }
-  }
-
-  existing.lastUpdated = now;
-  fs.writeFileSync(dataPath, JSON.stringify(existing, null, 2));
-  console.log(`✓ Wrote ${dataPath}`);
-
-  const unmatchedPath = path.join(__dirname, '..', 'data', 'unmatched-products.json');
-  let unmatchedFile = { lastUpdated: now, products: [] };
-  if (fs.existsSync(unmatchedPath)) { try { unmatchedFile = JSON.parse(fs.readFileSync(unmatchedPath, 'utf8')); } catch {} }
-  unmatchedFile.products = unmatchedFile.products.filter(p => p.store !== STORE.key);
-  unmatchedFile.products.push(...unmatched);
-  unmatchedFile.lastUpdated = now;
-  fs.writeFileSync(unmatchedPath, JSON.stringify(unmatchedFile, null, 2));
-
-  return { matched, unmatched: unmatched.length, total: products.length };
+  return mergeStoreResults({
+    products: convertedProducts.map((p) => ({ ...p, store: STORE.key })),
+    storeKeys: [STORE.key],
+    storeMeta: {
+      [STORE.key]: {
+        name: STORE.name,
+        url: STORE.baseUrl,
+        shipping: STORE.shipping,
+        country: STORE.country,
+        voec: STORE.voec,
+      },
+    },
+    now,
+  });
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────

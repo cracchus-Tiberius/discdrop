@@ -7,9 +7,7 @@
 'use strict';
 
 const fetch = require('node-fetch');
-const fs = require('fs');
-const path = require('path');
-const { isUsedDisc, isMiniDisc, isNonDiscProduct, extractVariant, matchDisc } = require('./stores.config.js');
+const { isUsedDisc, isMiniDisc, isNonDiscProduct, mergeStoreResults } = require('./stores.config.js');
 
 // ── Store configs ─────────────────────────────────────────────────────────────
 const STORES = [
@@ -197,22 +195,10 @@ async function main() {
   console.log(`DiscDrop scraper — ${now}`);
   console.log('='.repeat(50));
 
-  const prices = {};      // discId → [storeEntry, ...]
-  const unmatched = [];   // { store, rawName, price, url }
   const storeSummary = {};
-
-  const storesMeta = {};
-  for (const store of STORES) {
-    storesMeta[store.key] = {
-      name: store.name,
-      url: store.baseUrl,
-      freeShippingOver: store.freeShippingOver,
-      shipping: store.shipping,
-    };
-  }
-
   let totalMatched = 0;
   let totalUnmatched = 0;
+  let totalDiscsWithPrices = 0;
 
   for (const store of STORES) {
     let products;
@@ -222,110 +208,42 @@ async function main() {
         : await scrapeWooCommerceApiStore(store);
     } catch (err) {
       console.error(`  ✗ ${store.name} failed entirely: ${err.message}`);
-      storeSummary[store.key] = { found: 0, matched: 0, unmatched: 0, error: err.message };
+      storeSummary[store.key] = { name: store.name, found: 0, matched: 0, unmatched: 0, error: err.message };
       continue;
     }
 
-    let matched = 0;
-    let notMatched = 0;
+    const taggedProducts = products.map((p) => ({ ...p, store: store.key }));
+    const result = mergeStoreResults({
+      products: taggedProducts,
+      storeKeys: [store.key],
+      storeMeta: {
+        [store.key]: {
+          name: store.name,
+          url: store.baseUrl,
+          freeShippingOver: store.freeShippingOver,
+          shipping: store.shipping,
+        },
+      },
+      now,
+    });
 
-    for (const product of products) {
-      const disc = matchDisc(product.rawName);
-      if (disc) {
-        if (!prices[disc.id]) prices[disc.id] = [];
-        const variant = extractVariant(product.rawName, disc.brand);
-        const existing = prices[disc.id].find((e) => e.store === store.key && e.plastic === variant.plastic);
-        if (!existing) {
-          prices[disc.id].push({
-            store: store.key,
-            price: product.price,
-            inStock: product.inStock,
-            url: product.productUrl,
-            image: product.image || null,
-            plastic: variant.plastic,
-            edition: variant.edition,
-            lastScraped: now,
-          });
-        } else if (product.price < existing.price) {
-          existing.price = product.price;
-          existing.inStock = product.inStock;
-          existing.url = product.productUrl;
-          if (product.image && !existing.image) existing.image = product.image;
-          existing.lastScraped = now;
-        }
-        matched++;
-        totalMatched++;
-      } else {
-        unmatched.push({
-          store: store.key,
-          rawName: product.rawName,
-          price: product.price,
-          url: product.productUrl,
-          inStock: product.inStock,
-        });
-        notMatched++;
-        totalUnmatched++;
-      }
-    }
-
-    storeSummary[store.key] = {
-      found: products.length,
-      matched,
-      unmatched: notMatched,
-    };
+    storeSummary[store.key] = { name: store.name, found: products.length, matched: result.matched, unmatched: result.unmatched };
+    totalMatched += result.matched;
+    totalUnmatched += result.unmatched;
   }
 
   // ── Summary ──
   console.log('\n' + '='.repeat(50));
   console.log('RESULTS:');
-  for (const [key, s] of Object.entries(storeSummary)) {
-    const meta = storesMeta[key];
+  for (const s of Object.values(storeSummary)) {
     if (s.error) {
-      console.log(`  ${meta.name}: ERROR — ${s.error}`);
+      console.log(`  ${s.name}: ERROR — ${s.error}`);
     } else {
-      console.log(`  ${meta.name}: ${s.found} products found, ${s.matched} matched, ${s.unmatched} unmatched`);
+      console.log(`  ${s.name}: ${s.found} products found, ${s.matched} matched, ${s.unmatched} unmatched`);
     }
   }
   console.log(`\n  Total matched: ${totalMatched}`);
   console.log(`  Total unmatched: ${totalUnmatched}`);
-  console.log(`  Discs with scraped prices: ${Object.keys(prices).length}`);
-
-  // ── Merge into scraped-prices.json (preserves other stores' entries) ──
-  // History: a from-scratch overwrite here caused a race condition where a
-  // late-completing zombie scraper.js (after scrape-all.js's 10-min SIGTERM
-  // failed to actually kill it) would wipe data freshly written by Aceshop.
-  // Match the pattern used by every per-store scraper: read existing, drop
-  // own stores' entries, push fresh ones, write.
-  const ownKeys = new Set(STORES.map((s) => s.key));
-  const outPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
-  let existing = { lastUpdated: now, stores: {}, prices: {} };
-  if (fs.existsSync(outPath)) {
-    try { existing = JSON.parse(fs.readFileSync(outPath, 'utf8')); } catch {}
-  }
-  Object.assign(existing.stores, storesMeta);
-  for (const discId of Object.keys(existing.prices)) {
-    existing.prices[discId] = existing.prices[discId].filter((e) => !ownKeys.has(e.store));
-    if (existing.prices[discId].length === 0) delete existing.prices[discId];
-  }
-  for (const [discId, entries] of Object.entries(prices)) {
-    if (!existing.prices[discId]) existing.prices[discId] = [];
-    existing.prices[discId].push(...entries);
-  }
-  existing.lastUpdated = now;
-  fs.writeFileSync(outPath, JSON.stringify(existing, null, 2));
-  console.log(`\n✓ Wrote ${outPath}`);
-
-  // ── Merge into unmatched-products.json (preserves other stores' entries) ──
-  const unmatchedPath = path.join(__dirname, '..', 'data', 'unmatched-products.json');
-  let unmatchedFile = { lastUpdated: now, products: [] };
-  if (fs.existsSync(unmatchedPath)) {
-    try { unmatchedFile = JSON.parse(fs.readFileSync(unmatchedPath, 'utf8')); } catch {}
-  }
-  unmatchedFile.products = unmatchedFile.products.filter((p) => !ownKeys.has(p.store));
-  unmatchedFile.products.push(...unmatched);
-  unmatchedFile.lastUpdated = now;
-  fs.writeFileSync(unmatchedPath, JSON.stringify(unmatchedFile, null, 2));
-  console.log(`✓ Wrote ${unmatchedPath} (${unmatched.length} products for review)`);
 }
 
 main().catch((err) => {

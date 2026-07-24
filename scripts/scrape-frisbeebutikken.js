@@ -13,9 +13,7 @@
 
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
-const fs = require('fs');
-const path = require('path');
-const { extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct, matchDisc } = require('./stores.config.js');
+const { isUsedDisc, isMiniDisc, isNonDiscProduct, mergeStoreResults } = require('./stores.config.js');
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -335,87 +333,20 @@ async function scrapeWithPlaywright() {
 // ── Merge results into scraped-prices.json ───────────────────────────────────
 
 function mergeResults(products, now) {
-  const dataPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
-
-  let data = { lastUpdated: now, stores: {}, prices: {} };
-  if (fs.existsSync(dataPath)) {
-    try {
-      data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    } catch (_) {
-      console.warn('  ⚠ Could not parse existing scraped-prices.json — starting fresh');
-    }
-  }
-
-  data.stores[STORE.key] = {
-    name:             STORE.name,
-    url:              STORE.baseUrl,
-    freeShippingOver: STORE.freeShippingOver,
-    shipping:         STORE.shipping,
-  };
-
-  // Remove stale entries for this store
-  for (const entries of Object.values(data.prices)) {
-    const i = entries.findIndex((e) => e.store === STORE.key);
-    if (i !== -1) entries.splice(i, 1);
-  }
-
-  let matched = 0;
-  let unmatched = 0;
-  const unmatchedProducts = [];
-
-  for (const product of products) {
-    const disc = matchDisc(product.rawName);
-    if (disc) {
-      if (!data.prices[disc.id]) data.prices[disc.id] = [];
-      const variant = extractVariant(product.rawName, disc.brand);
-      const existing = data.prices[disc.id].find((e) => e.store === STORE.key && e.plastic === variant.plastic);
-      if (!existing) {
-        data.prices[disc.id].push({
-          store:       STORE.key,
-          price:       product.price,
-          inStock:     product.inStock,
-          url:         product.productUrl,
-          image:       product.image || null,
-          plastic:     variant.plastic,
-          edition:     variant.edition,
-          lastScraped: now,
-        });
-      } else if (product.price < existing.price) {
-        existing.price   = product.price;
-        existing.inStock = product.inStock;
-        existing.url     = product.productUrl;
-        if (product.image && !existing.image) existing.image = product.image;
-        existing.lastScraped = now;
-      }
-      matched++;
-    } else {
-      unmatchedProducts.push({
-        store:   STORE.key,
-        rawName: product.rawName,
-        price:   product.price,
-        url:     product.productUrl,
-        inStock: product.inStock,
-      });
-      unmatched++;
-    }
-  }
-
-  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
-  console.log(`✓ Wrote ${dataPath}`);
-  console.log(`  Matched ${matched} discs, ${unmatched} unmatched`);
-
-  const unmatchedPath = path.join(__dirname, '..', 'data', 'unmatched-products.json');
-  let unmatchedData = { lastUpdated: now, products: [] };
-  if (fs.existsSync(unmatchedPath)) {
-    try {
-      unmatchedData = JSON.parse(fs.readFileSync(unmatchedPath, 'utf8'));
-      unmatchedData.products = unmatchedData.products.filter((p) => p.store !== STORE.key);
-    } catch (_) {}
-  }
-  unmatchedData.products.push(...unmatchedProducts);
-  unmatchedData.lastUpdated = now;
-  fs.writeFileSync(unmatchedPath, JSON.stringify(unmatchedData, null, 2));
-  console.log(`✓ Wrote ${unmatchedPath} (${unmatchedProducts.length} unmatched for review)`);
+  const result = mergeStoreResults({
+    products: products.map((p) => ({ ...p, store: STORE.key })),
+    storeKeys: [STORE.key],
+    storeMeta: {
+      [STORE.key]: {
+        name: STORE.name,
+        url: STORE.baseUrl,
+        freeShippingOver: STORE.freeShippingOver,
+        shipping: STORE.shipping,
+      },
+    },
+    now,
+  });
+  console.log(`  Matched ${result.matched} discs, ${result.unmatched} unmatched`);
 }
 
 // ── Main ─────────────────────────────────────────────────────────────────────

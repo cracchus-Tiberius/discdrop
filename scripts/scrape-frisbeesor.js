@@ -5,9 +5,7 @@
 'use strict';
 
 const fetch = require('node-fetch');
-const fs = require('fs');
-const path = require('path');
-const { STORE_CONFIGS, SKIP_CATEGORY_SLUGS, matchDisc, extractVariant, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./stores.config.js');
+const { STORE_CONFIGS, SKIP_CATEGORY_SLUGS, isUsedDisc, isMiniDisc, isNonDiscProduct, mergeStoreResults } = require('./stores.config.js');
 
 const STORE = {
   ...STORE_CONFIGS.frisbeesor,
@@ -195,75 +193,19 @@ async function scrapeWithPlaywright() {
 // ── Merge results into scraped-prices.json ────────────────────────────────────
 
 function mergeResults(products, now) {
-  const dataPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
-  let existing = { lastUpdated: now, stores: {}, prices: {} };
-  if (fs.existsSync(dataPath)) {
-    try { existing = JSON.parse(fs.readFileSync(dataPath, 'utf8')); } catch {}
-  }
-
-  // Update store metadata
-  existing.stores[STORE.key] = {
-    name: STORE.name,
-    url: STORE.baseUrl,
-    freeShippingOver: STORE.freeShippingOver,
-    shipping: STORE.shipping,
-  };
-
-  // Remove stale entries for this store
-  for (const discId of Object.keys(existing.prices)) {
-    existing.prices[discId] = existing.prices[discId].filter(e => e.store !== STORE.key);
-    if (existing.prices[discId].length === 0) delete existing.prices[discId];
-  }
-
-  let matched = 0;
-  const unmatched = [];
-
-  for (const product of products) {
-    const disc = matchDisc(product.rawName);
-    if (disc) {
-      if (!existing.prices[disc.id]) existing.prices[disc.id] = [];
-      const variant = extractVariant(product.rawName, disc.brand);
-      const dupe = existing.prices[disc.id].find(e => e.store === STORE.key && e.plastic === variant.plastic);
-      if (!dupe) {
-        existing.prices[disc.id].push({
-          store: STORE.key,
-          price: product.price,
-          inStock: product.inStock,
-          url: product.productUrl,
-          image: product.image || null,
-          plastic: variant.plastic,
-          edition: variant.edition,
-          lastScraped: now,
-        });
-      } else if (product.price < dupe.price) {
-        dupe.price = product.price;
-        dupe.inStock = product.inStock;
-        dupe.url = product.productUrl;
-        if (product.image && !dupe.image) dupe.image = product.image;
-        dupe.lastScraped = now;
-      }
-      matched++;
-    } else {
-      unmatched.push({ store: STORE.key, rawName: product.rawName, price: product.price, url: product.productUrl });
-    }
-  }
-
-  existing.lastUpdated = now;
-  fs.writeFileSync(dataPath, JSON.stringify(existing, null, 2));
-  console.log(`✓ Wrote ${dataPath}`);
-
-  // Merge unmatched into unmatched-products.json
-  const unmatchedPath = path.join(__dirname, '..', 'data', 'unmatched-products.json');
-  let unmatchedFile = { lastUpdated: now, products: [] };
-  if (fs.existsSync(unmatchedPath)) {
-    try { unmatchedFile = JSON.parse(fs.readFileSync(unmatchedPath, 'utf8')); } catch {}
-  }
-  unmatchedFile.products = unmatchedFile.products.filter(p => p.store !== STORE.key);
-  unmatchedFile.products.push(...unmatched);
-  unmatchedFile.lastUpdated = now;
-  fs.writeFileSync(unmatchedPath, JSON.stringify(unmatchedFile, null, 2));
-
-  return { matched, unmatched: unmatched.length, total: products.length };
+  return mergeStoreResults({
+    products: products.map((p) => ({ ...p, store: STORE.key })),
+    storeKeys: [STORE.key],
+    storeMeta: {
+      [STORE.key]: {
+        name: STORE.name,
+        url: STORE.baseUrl,
+        freeShippingOver: STORE.freeShippingOver,
+        shipping: STORE.shipping,
+      },
+    },
+    now,
+  });
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
