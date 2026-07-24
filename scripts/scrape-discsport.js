@@ -127,21 +127,22 @@ async function scrape() {
     }
 
     // ── Step 2: Visit each mold page and scrape variant prices ────────────────
+    // 1000+ mold pages, one at a time with a full page navigation each, was
+    // the whole reason this scraper always blew the 10-min budget (sequential
+    // networkidle waits alone add up to way more than that). Run a small pool
+    // of concurrent pages against the same browser context instead — pages
+    // are cheap, the site itself is the actual bottleneck either way.
+    const CONCURRENCY = 8;
     const allProducts = [];
     const seenKeys = new Set();
+    let nextIndex = 0;
+    let completed = 0;
 
-    for (let i = 0; i < moldSlugs.length; i++) {
-      const slug = moldSlugs[i];
-      // Use Swedish URL — /no/ prefix shows wrong discs on mold pages
+    async function scrapeMold(slug) {
       const url = `${STORE.baseUrl}/discar/mold/${slug}`;
-
-      if ((i + 1) % 20 === 0 || i === 0) {
-        console.log(`  Scraping mold ${i + 1}/${moldSlugs.length}: ${slug}`);
-      }
-
       const page = await context.newPage();
       try {
-        await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+        await page.goto(url, { waitUntil: 'networkidle', timeout: 20000 });
 
         // Products are in .col children of the Bootstrap row grid
         const products = await page.evaluate(() => {
@@ -180,17 +181,27 @@ async function scrape() {
             inStock: p.inStock,
           });
         }
-
-        // Polite delay — networkidle already waits, keep short
-        await new Promise(r => setTimeout(r, 200 + Math.random() * 150));
       } catch (err) {
-        if (!err.message.includes('Timeout') || i % 50 === 0) {
+        if (!err.message.includes('Timeout')) {
           console.warn(`    ⚠ ${slug}: ${err.message}`);
         }
       } finally {
         await page.close();
       }
     }
+
+    async function worker() {
+      while (nextIndex < moldSlugs.length) {
+        const i = nextIndex++;
+        await scrapeMold(moldSlugs[i]);
+        completed++;
+        if (completed % 50 === 0) {
+          console.log(`  Scraped ${completed}/${moldSlugs.length} mold pages...`);
+        }
+      }
+    }
+
+    await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
 
     console.log(`  Scraped ${allProducts.length} products from ${moldSlugs.length} mold pages`);
     return allProducts;
