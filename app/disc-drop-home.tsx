@@ -329,8 +329,8 @@ function HotDrops() {
             >
               <div className="flex items-start justify-between gap-2">
                 <Badge tag={row.badge} />
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#F1EFE6]">
-                  <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} containerStyle={{ height: 56 }} />
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-[#F1EFE6]">
+                  <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
                 </div>
               </div>
 
@@ -463,7 +463,7 @@ function PopularDiscs() {
                 className="min-w-[130px] shrink-0 rounded-xl border-2 border-[#101C14] bg-white p-3 transition-transform duration-150 hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[3px_3px_0_#B8E04A] sm:min-w-0"
               >
                 <div
-                  className="mb-2 flex items-center justify-center rounded-lg bg-[#F1EFE6]"
+                  className="mb-2 overflow-hidden rounded-lg bg-[#F1EFE6]"
                   style={{ height: 70 }}
                 >
                   <DiscImage
@@ -471,7 +471,7 @@ function PopularDiscs() {
                     name={d.name}
                     brand={d.brand}
                     type={d.type}
-                    containerStyle={{ height: 70 }}
+                    fit="cover"
                   />
                 </div>
                 <h3 className="text-sm font-extrabold leading-tight text-[#101C14]">
