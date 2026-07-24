@@ -47,7 +47,11 @@ jobs:
         run: |
           git config user.name "DiscDrop Bot"
           git config user.email "bot@discdrop.net"
-          git add data/scraped-prices.json data/disc-images.json data/discs.js
+          # Whole data/ dir, not an explicit file list — a scraper writing a
+          # new data file that this line doesn't know about was exactly how
+          # unmatched-products.json ended up perpetually uncommitted, which
+          # then made `git rebase` below fail with "unstaged changes".
+          git add -A -- data/
           git diff --staged --quiet || git commit -m "Daily scrape $(date +%Y-%m-%d)"
           # Retry with rebase on a non-fast-forward push — a concurrent manual
           # push to main during a long scrape run would otherwise fail this
