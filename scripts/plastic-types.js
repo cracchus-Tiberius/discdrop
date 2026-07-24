@@ -80,7 +80,7 @@ const PLASTIC_TYPES = {
       'Zero Soft', 'Zero Medium', 'Zero Hard',
       'BioGold', 'Moonshine',
       'Royal', 'Opto', 'Gold', 'Grand', 'Sense', 'Frost',
-      'Retro', 'Zero', 'VIP',
+      'Retro', 'Zero', 'VIP', 'Project Grip', 'Clear', 'Neo',
     ],
     suffix: [],
   },
@@ -150,7 +150,7 @@ const PLASTIC_TYPES = {
   Streamline: {
     prefix: [
       'Electron Soft', 'Electron Firm',
-      'Electron', 'Neutron', 'Proton',
+      'Electron', 'Neutron', 'Proton', 'Eclipse',
     ],
     suffix: [],
   },
@@ -178,7 +178,7 @@ const PLASTIC_TYPES = {
   'Viking Discs': {
     prefix: [
       'Warpaint', 'Ground', 'Explorer', 'Warrior',
-      'Armor', 'Swirl', 'Storm', 'Air', 'Ice', 'Origin', 'Fire',
+      'Armor', 'Swirl', 'Storm', 'Air', 'Ice', 'Origin', 'Fire', 'Sigr',
     ],
     suffix: [],
   },
@@ -203,7 +203,7 @@ const PLASTIC_TYPES = {
     suffix: [],
   },
   'Clash Discs': {
-    prefix: ['Tone', 'Premium'],
+    prefix: ['Base Blend', 'Tone', 'Premium', 'Salt', 'Popcorn'],
     suffix: [],
   },
   'Thought Space Athletics': {
@@ -216,6 +216,10 @@ const PLASTIC_TYPES = {
   },
   Prodiscus: {
     prefix: ['NS Line', 'Major Line', 'Trophy Line', 'Competition Line'],
+    suffix: [],
+  },
+  Alfa: {
+    prefix: ['Chrome Line', 'Copper Line', 'Chrome', 'Copper'],
     suffix: [],
   },
 };
