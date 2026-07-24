@@ -1,13 +1,12 @@
 // scripts/scraper.js — DiscDrop price scraper
 // Scrapes Norwegian disc golf stores and writes data/scraped-prices.json
-// WooCommerce stores: HTML scraping with cheerio
+// WooCommerce stores: public wp-json/wc/store/v1/products JSON API
 // Shopify stores: public products.json API (no scraping needed)
 // Usage: node scripts/scraper.js  or  pnpm scrape
 
 'use strict';
 
 const fetch = require('node-fetch');
-const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 const { isUsedDisc, isMiniDisc, isNonDiscProduct, extractVariant, matchDisc } = require('./stores.config.js');
@@ -20,22 +19,8 @@ const STORES = [
     baseUrl: 'https://wearediscgolf.no',
     freeShippingOver: 899,
     shipping: 45,
-    categories: [
-      'https://wearediscgolf.no/product-category/golfdiscer/?_disc_type=1000',
-      'https://wearediscgolf.no/product-category/golfdiscer/?_disc_type=1001',
-      'https://wearediscgolf.no/product-category/golfdiscer/?_disc_type=1002',
-      'https://wearediscgolf.no/product-category/golfdiscer/?_disc_type=1003',
-    ],
+    type: 'woocommerce-api',
     skipCategorySlugs: ['second-hand', 'brukt', 'used', 'nice-not-perfect'],
-    selectors: {
-      productCard: 'li.product',
-      name: 'h2.woocommerce-loop-product__title',
-      price: 'span.woocommerce-Price-amount bdi',
-      link: 'a.woocommerce-LoopProduct-link',
-      outOfStock: '.out-of-stock, .button.disabled',
-      outOfStockText: 'utsolgt',
-      nextPage: 'a.next.page-numbers',
-    },
   },
   // ── Shopify stores (use products.json API) ─────────────────────────────────
   {
@@ -68,82 +53,6 @@ function sleep(ms) {
 function randomDelay() {
   const ms = 2000 + Math.random() * 1000;
   return sleep(ms);
-}
-
-async function fetchPage(url) {
-  const res = await fetch(url, {
-    headers: {
-      'User-Agent': USER_AGENT,
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'no,nb;q=0.9,en;q=0.8',
-    },
-    timeout: 15000,
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
-}
-
-/** Parse Norwegian price string like "249,00" or "1.249,00" → 249 */
-function parseNOKPrice(raw) {
-  if (!raw) return null;
-  const cleaned = raw.replace(/[^\d,.\s]/g, '').trim();
-  const normalised = cleaned.replace(/\./g, '').replace(',', '.').replace(/\s/g, '');
-  const n = parseFloat(normalised);
-  return isNaN(n) ? null : Math.round(n);
-}
-
-// ── Page scraper ──────────────────────────────────────────────────────────────
-
-function scrapeProductsFromHtml(html, store) {
-  const $ = cheerio.load(html);
-  const sel = store.selectors;
-  const products = [];
-
-  $(sel.productCard).each((_, el) => {
-    const card = $(el);
-
-    // Skip products in excluded WooCommerce categories (e.g. second-hand)
-    if (store.skipCategorySlugs) {
-      const cardClass = card.attr('class') || '';
-      if (store.skipCategorySlugs.some((slug) => cardClass.includes(`product_cat-${slug}`))) return;
-    }
-
-    const nameEl = card.find(sel.name);
-    const rawName = nameEl.text().trim();
-    if (!rawName) return;
-
-    // Price — grab the first price amount (ignore sale/original price dupe)
-    const priceEl = card.find(sel.price).first();
-    const rawPrice = priceEl.text().trim();
-    const price = parseNOKPrice(rawPrice);
-    if (!price) return; // skip if we can't parse a price
-    if (price < 50) return; // skip suspiciously low prices (used/clearance)
-
-    // Product URL
-    const linkEl = card.find(sel.link).first();
-    const href = linkEl.attr('href') || '';
-    const productUrl = href.startsWith('http') ? href : store.baseUrl + href;
-
-    // Out of stock detection
-    const cardHtml = card.html() || '';
-    const cardText = card.text().toLowerCase();
-    const hasOutOfStockClass = card.hasClass('out-of-stock') ||
-      card.find(sel.outOfStock).length > 0;
-    const hasUtsolgt = cardText.includes(sel.outOfStockText);
-    const inStock = !hasOutOfStockClass && !hasUtsolgt;
-
-    // Image — first thumbnail in the product card
-    const imgEl = card.find('a.woocommerce-LoopProduct-link img').first();
-    const image = imgEl.attr('src') || imgEl.attr('data-src') || null;
-
-    if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) products.push({ rawName, price, productUrl, inStock, image });
-  });
-
-  // Next page URL
-  const nextPageEl = $(sel.nextPage).first();
-  const nextPage = nextPageEl.attr('href') || null;
-
-  return { products, nextPage };
 }
 
 // ── Shopify scraper ───────────────────────────────────────────────────────────
@@ -212,46 +121,69 @@ async function scrapeShopifyStore(store) {
   return allProducts;
 }
 
-// ── WooCommerce store scraper ─────────────────────────────────────────────────
+// ── WooCommerce Store API scraper ─────────────────────────────────────────────
+// Uses the site's public wp-json/wc/store/v1/products JSON API instead of
+// scraping rendered HTML. Same public data WooCommerce serves to its own
+// storefront JS, but structured and paginated at 100/page instead of the
+// theme's 8-per-page HTML listing (2500 products at 8/page = 313 HTML pages,
+// which is what was blowing the 10-min timeout every day).
+// Stops on the first page that returns fewer than PER_PAGE items — X-WP-Total
+// is unreliable on this site, so we don't trust it for loop termination.
 
-async function scrapeStore(store) {
-  console.log(`\nScraping ${store.name}...`);
+const WC_API_PER_PAGE = 100;
+const WC_API_MAX_PAGES = 60; // safety net: 60 * 100 = 6000 products, well above any real catalog
+
+async function scrapeWooCommerceApiStore(store) {
+  console.log(`\nScraping ${store.name} (WooCommerce Store API)...`);
   const allProducts = [];
-  const seenUrls = new Set();
+  let page = 1;
 
-  for (const categoryUrl of store.categories) {
-    let pageUrl = categoryUrl;
-    let pageNum = 1;
+  while (page <= WC_API_MAX_PAGES) {
+    // orderby=id&order=asc gives a stable sort — the default "latest" sort
+    // reshuffles as the catalog changes mid-crawl, which was silently
+    // skipping/duplicating products across the ~25 pages of a single run.
+    const url = `${store.baseUrl}/wp-json/wc/store/v1/products?per_page=${WC_API_PER_PAGE}&page=${page}&orderby=id&order=asc`;
+    console.log(`  ${store.key} page ${page}: ${url}`);
 
-    while (pageUrl) {
-      console.log(`  ${store.key} page ${pageNum}: ${pageUrl}`);
-      let html;
-      try {
-        html = await fetchPage(pageUrl);
-      } catch (err) {
-        console.warn(`  ⚠ Failed to fetch ${pageUrl}: ${err.message}`);
-        break;
-      }
-
-      const { products, nextPage } = scrapeProductsFromHtml(html, store);
-
-      for (const p of products) {
-        if (!seenUrls.has(p.productUrl)) {
-          seenUrls.add(p.productUrl);
-          allProducts.push(p);
-        }
-      }
-
-      await randomDelay();
-
-      if (nextPage && !seenUrls.has(nextPage)) {
-        seenUrls.add(nextPage);
-        pageUrl = nextPage;
-        pageNum++;
-      } else {
-        break;
-      }
+    let data;
+    try {
+      const res = await fetch(url, {
+        headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
+        timeout: 15000,
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      data = await res.json();
+    } catch (err) {
+      console.warn(`  ⚠ Failed to fetch ${url}: ${err.message}`);
+      break;
     }
+
+    if (!Array.isArray(data) || data.length === 0) break;
+
+    for (const product of data) {
+      const rawName = product.name;
+      if (!rawName) continue;
+
+      // Skip used/second-hand categories (belt-and-braces alongside the
+      // name-based isUsedDisc check below, which also catches most of these)
+      const categorySlugs = (product.categories || []).map((c) => c.slug);
+      if (store.skipCategorySlugs && store.skipCategorySlugs.some((slug) => categorySlugs.includes(slug))) continue;
+
+      if (isUsedDisc(rawName) || isMiniDisc(rawName) || isNonDiscProduct(rawName)) continue;
+
+      const rawPrice = product.prices && product.prices.price;
+      const price = rawPrice ? Math.round(parseInt(rawPrice, 10) / (10 ** (product.prices.currency_minor_unit ?? 2))) : null;
+      if (!price || price < 50) continue; // skip unparseable or suspiciously low (used/clearance) prices
+
+      const productUrl = product.permalink || `${store.baseUrl}/produkt/${product.slug}`;
+      const inStock = product.is_in_stock !== false;
+      const image = (product.images && product.images[0]) ? product.images[0].src : null;
+
+      allProducts.push({ rawName, price, productUrl, inStock, image });
+    }
+
+    await randomDelay();
+    page++;
   }
 
   console.log(`  → ${store.name}: found ${allProducts.length} products`);
@@ -287,7 +219,7 @@ async function main() {
     try {
       products = store.type === 'shopify'
         ? await scrapeShopifyStore(store)
-        : await scrapeStore(store);
+        : await scrapeWooCommerceApiStore(store);
     } catch (err) {
       console.error(`  ✗ ${store.name} failed entirely: ${err.message}`);
       storeSummary[store.key] = { found: 0, matched: 0, unmatched: 0, error: err.message };

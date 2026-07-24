@@ -1,1469 +1,6 @@
 {
-  "lastUpdated": "2026-05-03T09:53:22.697Z",
+  "lastUpdated": "2026-07-24T09:03:54.380Z",
   "products": [
-    {
-      "store": "wearediscgolf",
-      "rawName": "Hero 3 Disc Golf Set",
-      "price": 249,
-      "url": "https://wearediscgolf.no/produkt/hero-3-disc-golf-set/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Prototype Fossil Ricky Wysocki",
-      "price": 229,
-      "url": "https://wearediscgolf.no/produkt/prototype-fossil-ricky-wysocki/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "P-Line Swirl P4 Razor Claw Kyle Klein",
-      "price": 219,
-      "url": "https://wearediscgolf.no/produkt/p-line-swirl-p4-razor-claw-kyle-klein/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Composite Chicane",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/composite-chicane/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Atmos Breaker",
-      "price": 219,
-      "url": "https://wearediscgolf.no/produkt/atmos-breaker/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "BlowFly 1",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/blowfly-1/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Blunt Gumbputt",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/blunt-gumbputt/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Trophy Line Champ First Run",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/trophy-line-champ-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Alfa 3-Disc Starter Set",
-      "price": 399,
-      "url": "https://wearediscgolf.no/produkt/alfa-3-disc-starter-set/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Putter Line Soft Ringer",
-      "price": 149,
-      "url": "https://wearediscgolf.no/produkt/putter-line-soft-ringer/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Hardy Fudge",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/hardy-fudge/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Softy Fudge",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/softy-fudge/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "V1 Bluebonnet",
-      "price": 229,
-      "url": "https://wearediscgolf.no/produkt/v1-bluebonnet/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Alpha Armadillo Ride ’em Rocket Cowboy",
-      "price": 249,
-      "url": "https://wearediscgolf.no/produkt/alpha-armadillo-ride-em-rocket-cowboy/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Forged Pace First Run",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/forged-pace-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Softly Mint",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/softy-mint/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Hardy Mint",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/hardy-mint/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Hardy Butter",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/hardy-butter/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Crystal Line Snoopy",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/crystal-line-snoopy/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Knife",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-knife/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Rune",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-rune/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "BT Burst Swan Soft",
-      "price": 145,
-      "url": "https://wearediscgolf.no/produkt/bt-burst-swan-soft/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Knife",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-knife/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Ground Knife",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/ground-knife/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Ground Rune",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/ground-rune/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "D-Blend Cohort",
-      "price": 145,
-      "url": "https://wearediscgolf.no/produkt/d-blend-cohort/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "We Are Forundringspakke 2025",
-      "price": 549,
-      "url": "https://wearediscgolf.no/produkt/we-are-forundringspakke-2025/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Composite Sector",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/composite-sector/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "FuZed BuzzzSaw",
-      "price": 249,
-      "url": "https://wearediscgolf.no/produkt/fuzed-buzzzsaw/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Granite Blend Ouake Sullivan Tipton 2025",
-      "price": 285,
-      "url": "https://wearediscgolf.no/produkt/granite-blend-ouake-sullivan-tipton-2025/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "ProLine Aftershock",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/proline-aftershock/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Atmos Rift",
-      "price": 219,
-      "url": "https://wearediscgolf.no/produkt/atmos-rift/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "S-Blend Khonsu",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/s-blend-khonsu/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Pacific Sea Turtle",
-      "price": 259,
-      "url": "https://wearediscgolf.no/produkt/pacific-sea-turtle/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Marine Sea Turtle",
-      "price": 189,
-      "url": "https://wearediscgolf.no/produkt/marine-sea-turtle/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Z Colorshift Nebula Ezra Aderhold",
-      "price": 279,
-      "url": "https://wearediscgolf.no/produkt/z-colorshift-nebula-ezra-aderhold/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Trash Panda Dune",
-      "price": 259,
-      "url": "https://wearediscgolf.no/produkt/trash-panda-dune/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Composite Supra First Run",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/composite-supra-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Forged Supra First Run",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/forged-supra-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Putter Line Ringer",
-      "price": 149,
-      "url": "https://wearediscgolf.no/produkt/putter-line-ringer/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "VIP Ice Gatekeeper We Are Discgolf",
-      "price": 209,
-      "url": "https://wearediscgolf.no/produkt/vip-ice-gatekeeper-we-are-discgolf/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Arctic Line Midrange Silent Cruiser",
-      "price": 99,
-      "url": "https://wearediscgolf.no/produkt/arctic-line-midrange-silent-cruiser/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Arctic Line Midrange Mad Mission",
-      "price": 99,
-      "url": "https://wearediscgolf.no/produkt/arctic-line-midrange-mad-mission/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Putter Nuno",
-      "price": 119,
-      "url": "https://wearediscgolf.no/produkt/putter-nuno/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Putter Narwhal",
-      "price": 119,
-      "url": "https://wearediscgolf.no/produkt/putter-narwhal/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Midrange Kapre",
-      "price": 119,
-      "url": "https://wearediscgolf.no/produkt/midrange-kapre/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "SafetyLine Putter Cumulus, 115-125g",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/safetyline-putter-cumulus-115-125g/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "SafetyLine Midrange Cirrus, 115-125g",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/safetyline-midrange-cirrus-115-125g/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "SafetyLine Driver Contrail, 115-125g",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/safetyline-driver-contrail-115-125g/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Axe",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-axe/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Loki",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-loki/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Ground Loki",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/ground-loki/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Ground Warrior",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/ground-warrior/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Loki",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-loki/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Axe",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-axe/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "SureGrip Element",
-      "price": 149,
-      "url": "https://wearediscgolf.no/produkt/suregrip-element/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Phoenix Star Yao",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/phoenix-star-yao/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Ground Axe",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/ground-axe/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "C-Blend Ra",
-      "price": 205,
-      "url": "https://wearediscgolf.no/produkt/c-blend-ra/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "C-Plastic Thor Blank",
-      "price": 219,
-      "url": "https://wearediscgolf.no/produkt/c-plastic-thor-blank/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Z Sparkle XL Ledgestone 2026",
-      "price": 309,
-      "url": "https://wearediscgolf.no/produkt/z-sparkle-xl-ledgestone-2026/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Halo C-Blend Glow Dynasty Eric Oakley 2025",
-      "price": 349,
-      "url": "https://wearediscgolf.no/produkt/halo-c-blend-glow-dynasty-eric-oakley-2025/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "C-Blend Glow Metal Flake Exodus Eric Oakley",
-      "price": 309,
-      "url": "https://wearediscgolf.no/produkt/c-blend-glow-metal-flake-exodus-eric-oakley/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Premium Ozone",
-      "price": 259,
-      "url": "https://wearediscgolf.no/produkt/trash-panda-ozone/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Bravo Frio",
-      "price": 229,
-      "url": "https://wearediscgolf.no/produkt/bravo-frio/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Alpha Frio",
-      "price": 229,
-      "url": "https://wearediscgolf.no/produkt/alpha-frio/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Alpha Mockingbird",
-      "price": 229,
-      "url": "https://wearediscgolf.no/produkt/alpha-mockingbird/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Forged Torque First Run",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/forged-torque-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Forged Rally First Run",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/forged-rally-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Composite Era",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/composite-era/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "NS Line Paladin",
-      "price": 209,
-      "url": "https://wearediscgolf.no/produkt/ns-line-paladin/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Aurora Line Driver Night Trooper",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/aurora-line-driver-night-trooper/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Driver Minotaur",
-      "price": 119,
-      "url": "https://wearediscgolf.no/produkt/driver-minotaur/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Driver Lawin",
-      "price": 119,
-      "url": "https://wearediscgolf.no/produkt/driver-lawin/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Driver Kraken",
-      "price": 119,
-      "url": "https://wearediscgolf.no/produkt/driver-kraken/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Nobel Count",
-      "price": 139,
-      "url": "https://wearediscgolf.no/produkt/nobel-count/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Barbarian",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-barbarian/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Ground Cosmos",
-      "price": 129,
-      "url": "https://wearediscgolf.no/produkt/ground-cosmos/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Barbarian",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-barbarian/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "MVP Forcefield Slim Rainfly",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/mvp-forcefield-slim-rainfly/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Prototype Hallux Ricky Wysocki",
-      "price": 229,
-      "url": "https://wearediscgolf.no/produkt/prototype-hallux-ricky-wysocki/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Z Colorshift Avenger Nate Doss 20 Year Anniversary",
-      "price": 249,
-      "url": "https://wearediscgolf.no/produkt/z-colorshift-avenger-nate-doss-20-year-anniversary/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "ProLine Typhoon First Flight",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/proline-typhoon-first-flight/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Radiant Interval Drew Gibson",
-      "price": 289,
-      "url": "https://wearediscgolf.no/produkt/radiant-interval-drew-gibson/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "S-Blend Swirly Conqueror",
-      "price": 239,
-      "url": "https://wearediscgolf.no/produkt/s-blend-swirly-conqueror/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Forged Interval",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/forged-interval/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Forged Daytona",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/forged-daytona/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Sirius Quasar",
-      "price": 269,
-      "url": "https://wearediscgolf.no/produkt/sirius-quasar/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Star Power Disc 2 Elixer",
-      "price": 269,
-      "url": "https://wearediscgolf.no/produkt/star-power-disc-2-elixer/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Icicle Disc Golf Starter Set",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/icicle-disc-golf-starter-set/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Valhalla",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-valhalla/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Ragnarok",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-ragnarok/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Valhalla",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-valhalla/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Armor Berserker",
-      "price": 179,
-      "url": "https://wearediscgolf.no/produkt/armor-berserker/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Platinum Illusion",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/platinum-illusion/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Phoenix Star Hu",
-      "price": 199,
-      "url": "https://wearediscgolf.no/produkt/phoenix-star-hu/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Thor",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-thor/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Storm Ragnarok",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/storm-ragnarok/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "D-Plastic Sleipner Blank",
-      "price": 159,
-      "url": "https://wearediscgolf.no/produkt/d-plastic-sleipner-blank/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "R-Pro Wahoo",
-      "price": 169,
-      "url": "https://wearediscgolf.no/produkt/r-pro-wahoo/",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Forcefield Pro Rainfly",
-      "price": 299,
-      "url": "https://kvamdgs.no/products/forcefield-pro-rainfly",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Forcefield Slim Rainfly",
-      "price": 299,
-      "url": "https://kvamdgs.no/products/forcefield-slim-rainfly",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Markør - Anti 3-Putt Cookie",
-      "price": 149,
-      "url": "https://kvamdgs.no/products/markor-anti-3-putt-cookie",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Markør - Don't Step On Me",
-      "price": 149,
-      "url": "https://kvamdgs.no/products/markor-dont-step-on-me",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Markør - 3-Putt Antidote",
-      "price": 149,
-      "url": "https://kvamdgs.no/products/markor-3-putt-antidote",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - Astronaut",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-patch-astronaut",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - World's Okayest Disc Golfer",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-patch-worlds-okayest-disc-golfer",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - 3-Putt Antidote",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-3-putt-antidote",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - I Love Disc Golf",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-patch-i-love-disc-golf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - I Hate Trees",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-patch-i-hate-trees",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - May The Course Be With You",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-patch-may-the-course-be-with-you",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Myggolf Kløstopp 15ml",
-      "price": 139,
-      "url": "https://kvamdgs.no/products/myggolf-klostopp-15ml",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Myggolf Myggspray 50ml",
-      "price": 159,
-      "url": "https://kvamdgs.no/products/myggolf-myggspray-50ml",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Myggolf Myggmelk 60ml",
-      "price": 179,
-      "url": "https://kvamdgs.no/products/myggolf-myggmelk-60ml",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Drawstring Bag",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/mvp-drawstring-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Vessi - Coastal Hoodie",
-      "price": 2399,
-      "url": "https://kvamdgs.no/products/vessi-coastal-hoodie",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Vessi - Forecast Gloves",
-      "price": 899,
-      "url": "https://kvamdgs.no/products/vessi-forecast-gloves",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - Team Kvam Frisbeegolf",
-      "price": 99,
-      "url": "https://kvamdgs.no/products/pvc-patch-team-kvam-frisbeegolf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Max Disctance XF Bag Clip",
-      "price": 149,
-      "url": "https://kvamdgs.no/products/max-disctance-xf-bag-clip",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Max Disctance XF30 Retriever",
-      "price": 2249,
-      "url": "https://kvamdgs.no/products/max-disctance-xf30-retriever",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Max Disctance XF20 Retriever",
-      "price": 1649,
-      "url": "https://kvamdgs.no/products/max-disctance-xf20-retriever",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Black Hole Sound Barrier",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/mvp-black-hole-sound-barrier",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Black Hole Transit HD Bag",
-      "price": 599,
-      "url": "https://kvamdgs.no/products/black-hole-transit-hd-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Particle Glow Proton Particle - Gyropalooza 2025",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/particle-glow-proton-particle-gyropalooza-2025",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Repz Sports - ThroForm",
-      "price": 549,
-      "url": "https://kvamdgs.no/products/repz-sports-throform",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Black Hole Pro HD",
-      "price": 2499,
-      "url": "https://kvamdgs.no/products/black-hole-pro-hd",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Ocoopa UT3 Lite Plus - Hand Warmers",
-      "price": 499,
-      "url": "https://kvamdgs.no/products/ocoopa-ut3-lite-plus-hand-warmers",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Gavekort Kvam Disc Golf Shop",
-      "price": 125,
-      "url": "https://kvamdgs.no/products/gavekort-kvam-disc-golf-shop",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Axiom Voyager Pro Bag",
-      "price": 2299,
-      "url": "https://kvamdgs.no/products/axiom-voyager-pro-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Axiom Voyager Slim Bag",
-      "price": 1899,
-      "url": "https://kvamdgs.no/products/axiom-voyager-slim-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "BRICK & MORTAR GYROPALOOZA 2025",
-      "price": 1699,
-      "url": "https://kvamdgs.no/products/brick-mortar-gyropalooza-2025",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - Team KFG",
-      "price": 79,
-      "url": "https://kvamdgs.no/products/pin-team-kfg",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - Kvam Disc Golf Shop",
-      "price": 79,
-      "url": "https://kvamdgs.no/products/pin-kvam-disc-golf-shop",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - Kvam Frisbeegolf",
-      "price": 79,
-      "url": "https://kvamdgs.no/products/pin-kvam-frisbeegolf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "GYROPALOOZA 2025",
-      "price": 1249,
-      "url": "https://kvamdgs.no/products/gyropalooza-2025",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Flaske - Kvam Disc Golf Shop",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/flaske-kvam-disc-golf-shop",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Flaske - Kvam Frisbeegolf",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/flaske-kvam-frisbeegolf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Axiom Cell Starter Bag",
-      "price": 349,
-      "url": "https://kvamdgs.no/products/axiom-cell-starter-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Cell Starter Bag",
-      "price": 349,
-      "url": "https://kvamdgs.no/products/mvp-cell-starter-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - Jeremy Koling Lionheart",
-      "price": 69,
-      "url": "https://kvamdgs.no/products/pin-jeremy-koling-lionheart",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - Silva Saarinen",
-      "price": 69,
-      "url": "https://kvamdgs.no/products/pin-silva-saarinen",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - MVP | Axiom Discs | Streamline",
-      "price": 69,
-      "url": "https://kvamdgs.no/products/pin-mvp-axiom-discs-streamline",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Pin - Simon Line",
-      "price": 69,
-      "url": "https://kvamdgs.no/products/pin-simon-line",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "BagTag - Kvam Frisbeegolf",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/bagtag-kvam-frisbeegolf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Birdie Challange - Kvam Frisbeegolf",
-      "price": 99,
-      "url": "https://kvamdgs.no/products/birdie-challange-kvam-frisbeegolf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - Kvam Frisbeegolf",
-      "price": 99,
-      "url": "https://kvamdgs.no/products/pvc-patch-kvam-frisbeegolf",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Discmania Starter bag",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/discmania-starter-bag",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Chalk Bag - Kvam Disc Golf Shop",
-      "price": 149,
-      "url": "https://kvamdgs.no/products/chalk-bag-kvam-disc-golf-shop",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Starter Set",
-      "price": 499,
-      "url": "https://kvamdgs.no/products/mvp-starter-set",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Axiom Starter Set",
-      "price": 499,
-      "url": "https://kvamdgs.no/products/axiom-starter-set",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "PVC Patch - Kvam Disc Golf Shop",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/pvc-patch-kvam-disc-golf-shop",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Halloween 2025 - Full pakke",
-      "price": 1299,
-      "url": "https://kvamdgs.no/products/halloween-2025-full-pakke",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "ZipChip",
-      "price": 149,
-      "url": "https://kvamdgs.no/products/zipchip",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "SIGR Odin",
-      "price": 2799,
-      "url": "https://kvamdgs.no/products/sigr-odin",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "GRIP EQ 5x Claw - Paul McBeth",
-      "price": 4999,
-      "url": "https://kvamdgs.no/products/grip-eq-5x-claw-paul-mcbeth",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Zero Gravity Disc Golf Starter Set",
-      "price": 399,
-      "url": "https://kvamdgs.no/products/zero-gravity-disc-golf-starter-set",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Apport! Disc Retriever",
-      "price": 599,
-      "url": "https://kvamdgs.no/products/apport-disc-retriever",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Latitude 64 Core Backpack",
-      "price": 799,
-      "url": "https://kvamdgs.no/products/latitude-64-core-backpack",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Axiom Shuttle Backpack",
-      "price": 649,
-      "url": "https://kvamdgs.no/products/axiom-shuttle-backpack",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Disc Doctor 3.0",
-      "price": 129,
-      "url": "https://kvamdgs.no/products/disc-doctor-3-0",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Håndkle - Mikrofiber",
-      "price": 99,
-      "url": "https://kvamdgs.no/products/handkle-mikrofiber",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "DiscFinder",
-      "price": 59,
-      "url": "https://kvamdgs.no/products/discfinder",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Disc Frame",
-      "price": 229,
-      "url": "https://kvamdgs.no/products/mvp-disc-frame",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Craft - Kvam Frisbeegolf Hettegenser",
-      "price": 799,
-      "url": "https://kvamdgs.no/products/craft-hettegenser",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Eclipse Parachute - Gyropalooza 2024",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/eclipse-parachute-gyropalooza-2024",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Tripod Stool - Large",
-      "price": 349,
-      "url": "https://kvamdgs.no/products/mvp-tripod-stool-large",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Disc Station",
-      "price": 1949,
-      "url": "https://kvamdgs.no/products/mvp-disc-station",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Halo Star Sonic - Garrett Gurthie Tour Series",
-      "price": 399,
-      "url": "https://kvamdgs.no/products/halo-star-sonic-garrett-gurthie-tour-series",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Meta Tactic Razor Claw 3 - Eagle McMahon Signature Series",
-      "price": 279,
-      "url": "https://kvamdgs.no/products/meta-tactic-razor-claw-3-eagle-mcmahon-signature-series",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "GRIP EQ - MB-TDS1 - Paul McBeth",
-      "price": 3199,
-      "url": "https://kvamdgs.no/products/grip-eq-mb-tds1",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "GRIP EQ MB-PX1 - Paul McBeth",
-      "price": 4399,
-      "url": "https://kvamdgs.no/products/grip-eq-mb-px1-paul-mcbeth",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Lunar Module LED Basket Light",
-      "price": 179,
-      "url": "https://kvamdgs.no/products/mvp-lunar-module-led-basket-light",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "MVP Large UV Flashlight",
-      "price": 249,
-      "url": "https://kvamdgs.no/products/mvp-large-uv-flashlight",
-      "inStock": true
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "GYROPALOOZA 2024",
-      "price": 1249,
-      "url": "https://kvamdgs.no/products/gyropalooza-2024",
-      "inStock": false
-    },
-    {
-      "store": "kvamdgs",
-      "rawName": "Craft - Kvam Frisbeegolf Jersey",
-      "price": 399,
-      "url": "https://kvamdgs.no/products/craft-jersey",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Mvp voyager pro",
-      "price": 1913,
-      "url": "https://arcticdisc.no/products/mvp-voyager-pro",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Discmania Tech towel",
-      "price": 129,
-      "url": "https://arcticdisc.no/products/discmania-tech-klut",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 Core Pro E3 backpack",
-      "price": 1304,
-      "url": "https://arcticdisc.no/products/lattitude-64-core-pro-e3-backpack-1",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 Core Pro E3 backpack - Kristin Lätt",
-      "price": 1478,
-      "url": "https://arcticdisc.no/products/lattitude-64-core-pro-e3-backpack",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 Luxury E5 Backpack",
-      "price": 1739,
-      "url": "https://arcticdisc.no/products/lattitude-64-luxury-e5",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 ProBasket Go",
-      "price": 2600,
-      "url": "https://arcticdisc.no/products/lattitude-64-probasket-go",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SQUATCH - The Lore Regntrekk",
-      "price": 347,
-      "url": "https://arcticdisc.no/products/squatch-the-lore-regntrekk",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Axiom Osmosis Sport bag",
-      "price": 109,
-      "url": "https://arcticdisc.no/products/axiom-osmosis-sport-bag",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "MVP Osmosis Sport bag",
-      "price": 109,
-      "url": "https://arcticdisc.no/products/mvp-osmosis-sport-bag",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Squatch - The Legend w/cooler",
-      "price": 3044,
-      "url": "https://arcticdisc.no/products/squatch-the-legend-w-cooler",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Squatch- The Lore 2.0 w/Cooler - Drew Gibson",
-      "price": 2696,
-      "url": "https://arcticdisc.no/products/squatch-the-lore-2-0-w-cooler-drew-gibson",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Squatch - The Lore 2.0 bag w/cooler",
-      "price": 2609,
-      "url": "https://arcticdisc.no/products/squatch-the-lore-2-0-bag-w-cooler",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Extra Large UV Flashlight",
-      "price": 399,
-      "url": "https://arcticdisc.no/products/extra-large-uv-flashlight",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Large UV Flashlight",
-      "price": 249,
-      "url": "https://arcticdisc.no/products/large-uv-flashlight",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Guru Frigg Starter bag",
-      "price": 199,
-      "url": "https://arcticdisc.no/products/guru-frigg-starter-bag",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SIGR Disc Golf Paraply",
-      "price": 429,
-      "url": "https://arcticdisc.no/products/sigr-disc-golf-paraply",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SIGR Disc golf retriever krok - uttrekkbar",
-      "price": 499,
-      "url": "https://arcticdisc.no/products/sigr-disc-golf-retriever-krok-uttrekkbar",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Sigr flaske 500 ml",
-      "price": 229,
-      "url": "https://arcticdisc.no/products/sigr-flaske",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "MVP Håndkle",
-      "price": 129,
-      "url": "https://arcticdisc.no/products/mvp-handkle",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lunar Module - Kurvlys",
-      "price": 179,
-      "url": "https://arcticdisc.no/products/lunar-module-kurvlys",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Compact UV Flashlight",
-      "price": 139,
-      "url": "https://arcticdisc.no/products/compact-uv-flashlight",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Innova Traveler Target, Portabel kurv",
-      "price": 1999,
-      "url": "https://arcticdisc.no/products/innova-traveler-target-portabel-kurv",
-      "inStock": false
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SIGR Mikrofiberklut",
-      "price": 119,
-      "url": "https://arcticdisc.no/products/sigr-sigr-microfiber-towel",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SIGR Dry Bag",
-      "price": 199,
-      "url": "https://arcticdisc.no/products/sigr-sigr-dry-bag",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Innova Adventure Backpack",
-      "price": 565,
-      "url": "https://arcticdisc.no/products/innova-innova-adventure-backpack",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Innova Excursion Backpack",
-      "price": 695,
-      "url": "https://arcticdisc.no/products/innova-innova-excursion-backpack",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SIGR Odin",
-      "price": 2435,
-      "url": "https://arcticdisc.no/products/sigr-sigr-odin",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "SIGR Balder",
-      "price": 2087,
-      "url": "https://arcticdisc.no/products/sigr-sigr-balder",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "MVP Black Hole Pro",
-      "price": 2399,
-      "url": "https://arcticdisc.no/products/mvp-black-hole-pro",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Gavekort - Arctic Disc",
-      "price": 100,
-      "url": "https://arcticdisc.no/products/gavekort-arctic-disc",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 Startsett - Zero Gravity",
-      "price": 399,
-      "url": "https://arcticdisc.no/products/lattitude-64-startsett-zero-gravity",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 startsett - lett",
-      "price": 339,
-      "url": "https://arcticdisc.no/products/lattitude-64-startsett-lett",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 Startsett - Classic",
-      "price": 339,
-      "url": "https://arcticdisc.no/products/lattitude-64-startsett-classic",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
-      "rawName": "Lattitude 64 klut - Mikrofiber",
-      "price": 109,
-      "url": "https://arcticdisc.no/products/lattitude-64-klut-mikrofiber",
-      "inStock": true
-    },
     {
       "store": "frisbeebutikken",
       "rawName": "DX Sonic",
@@ -19883,6 +18420,1952 @@
       "rawName": "Presentkort",
       "price": 101,
       "url": "https://www.discexpress.se/products/gift-card"
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Champion Xcaliber",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/champion-xcaliber/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discraft Håndkle",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/discraft-handkle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Legacy Towel",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/legacy-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Playing Cards",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-playing-cards/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Dew Fly Håndkle",
+      "price": 89,
+      "url": "https://wearediscgolf.no/produkt/innova-dew-fly-handkle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Guru Disc Golf Towel Microfiber",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/guru-disc-golf-towel-microfiber/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Guru Dirt Bag ass",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/guru-dirt-bag-ass/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Tour Håndkle",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/innova-tour-handkle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Halo Star ThunderBird",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/halo-star-thunderbird/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Halo Star RoadRunner",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/halo-star-roadrunner/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "D-Plastic Sleipner Blank",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/d-plastic-sleipner-blank/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Kastaplast Towel",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/kastaplast-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "D-Blend Cohort",
+      "price": 145,
+      "url": "https://wearediscgolf.no/produkt/d-blend-cohort/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "C-Blend Ra",
+      "price": 205,
+      "url": "https://wearediscgolf.no/produkt/c-blend-ra/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "I-Dye Poly",
+      "price": 89,
+      "url": "https://wearediscgolf.no/produkt/i-dye-poly/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discraft Paige Pierce Towel",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/discraft-paige-pierce-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discraft Buzzz Towel",
+      "price": 139,
+      "url": "https://wearediscgolf.no/produkt/discraft-buzzz-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "BT Burst Swan Soft",
+      "price": 145,
+      "url": "https://wearediscgolf.no/produkt/bt-burst-swan-soft/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Phoenix Star Hu",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/phoenix-star-hu/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Phoenix Star Yao",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/phoenix-star-yao/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "J Star Junior Ultimate 145g",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/j-star-junior-ultimate-145g/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Minidisc Star",
+      "price": 50,
+      "url": "https://wearediscgolf.no/produkt/innova-minidisc-star/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Discover Disc Golf Backpack",
+      "price": 319,
+      "url": "https://wearediscgolf.no/produkt/innova-discover-disc-golf-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Adventure Backpack",
+      "price": 599,
+      "url": "https://wearediscgolf.no/produkt/innova-adventure-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Paul Mcbeth Trucker Hat",
+      "price": 299,
+      "url": "https://wearediscgolf.no/produkt/paul-mcbeth-trucker-hat/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova String Bag",
+      "price": 135,
+      "url": "https://wearediscgolf.no/produkt/innova-string-bag/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discraft Draw String Bag",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/discraft-draw-string-bag/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Shuttle Backpack",
+      "price": 649,
+      "url": "https://wearediscgolf.no/produkt/mvp-shuttle-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Voyager Slim Backpack",
+      "price": 1799,
+      "url": "https://wearediscgolf.no/produkt/mvp-voyager-slim-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Axiom Shuttle Backpack",
+      "price": 649,
+      "url": "https://wearediscgolf.no/produkt/axiom-shuttle-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Guru Bifrost Backpack",
+      "price": 999,
+      "url": "https://wearediscgolf.no/produkt/guru-bifrost-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Traveler Target, Portabel kurv",
+      "price": 2099,
+      "url": "https://wearediscgolf.no/produkt/innova-traveler-target-portabel-kurv/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Guru Practice Basket",
+      "price": 1499,
+      "url": "https://wearediscgolf.no/produkt/guru-disc-golf-practice-basket/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova DISCatcher Pro 28",
+      "price": 5699,
+      "url": "https://wearediscgolf.no/produkt/innova-discatcher-pro-28/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Infinite Discs 1000 Piece Puzzle",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/infinite-discs-1000-piece-puzzle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Infinite Discs 500 Piece Puzzle",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/infinite-discs-500-piece-puzzle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Stainless Steel Canteen Water Bottle",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-stainless-steel-canteen-water-bottle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Westside Beanie Knit",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/westside-beanie-knit/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Dynamic Discs Stainless Steel Canteen Water Bottle",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/dynamic-discs-stainless-steel-canteen-water-bottle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Westside Discs Stainless Steel Canteen Water Bottle",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/westside-discs-stainless-steel-canteen-water-bottle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Alfa 3.0 ECO-Line",
+      "price": 799,
+      "url": "https://wearediscgolf.no/produkt/alfa-3-0-eco-line/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "SureGrip Element",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/suregrip-element/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Platinum Illusion",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/platinum-illusion/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Ground Warrior",
+      "price": 129,
+      "url": "https://wearediscgolf.no/produkt/ground-warrior/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Nobel Count",
+      "price": 139,
+      "url": "https://wearediscgolf.no/produkt/nobel-count/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Stretch Fit Deluxe Cap",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/innova-stretch-fit-deluxe-cap/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "SafetyLine Driver Contrail, 115-125g",
+      "price": 129,
+      "url": "https://wearediscgolf.no/produkt/safetyline-driver-contrail-115-125g/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "SafetyLine Midrange Cirrus, 115-125g",
+      "price": 129,
+      "url": "https://wearediscgolf.no/produkt/safetyline-midrange-cirrus-115-125g/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Sky Styler 160g",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/sky-styler-160g/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Arctic Line Midrange Mad Mission",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/arctic-line-midrange-mad-mission/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Arctic Line Midrange Silent Cruiser",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/arctic-line-midrange-silent-cruiser/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Aurora Line Driver Night Trooper",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/aurora-line-driver-night-trooper/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Driver Kraken",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/driver-kraken/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Driver Lawin",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/driver-lawin/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Driver Minotaur",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/driver-minotaur/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova Excursion Backpack",
+      "price": 799,
+      "url": "https://wearediscgolf.no/produkt/innova-excursion-backpack-2/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Innova GO bag",
+      "price": 129,
+      "url": "https://wearediscgolf.no/produkt/innova-go-bag/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Rain Cover Easy-Go, Black",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-rain-cover-easy-go-black/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Midrange Kapre",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/midrange-kapre/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Putter Narwhal",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/putter-narwhal/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Putter Nuno",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/putter-nuno/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Guru Carrying-Bag",
+      "price": 349,
+      "url": "https://wearediscgolf.no/produkt/guru-carrying-bag/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Crystal Line Snoopy",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/crystal-line-snoopy/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discmania Fanatic Sky",
+      "price": 1099,
+      "url": "https://wearediscgolf.no/produkt/discmania-fanatic-sky/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Hardy Butter",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/hardy-butter/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Hardy Mint",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/hardy-mint/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Softly Mint",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/softy-mint/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "NS Line Paladin",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/ns-line-paladin/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Forged Pace First Run",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/forged-pace-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Composite Era",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/composite-era/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Forged Rally First Run",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/forged-rally-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Forged Daytona",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/forged-daytona/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Forged Interval",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/forged-interval/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Forged Supra First Run",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/forged-supra-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Forged Torque First Run",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/forged-torque-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Composite Supra First Run",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/composite-supra-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Alpha Mockingbird",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/alpha-mockingbird/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Alpha Frio",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/alpha-frio/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Bravo Frio",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/bravo-frio/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Alpha Armadillo Ride &#8217;em Rocket Cowboy",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/alpha-armadillo-ride-em-rocket-cowboy/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "V1 Bluebonnet",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/v1-bluebonnet/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "S-Blend Swirly Conqueror",
+      "price": 239,
+      "url": "https://wearediscgolf.no/produkt/s-blend-swirly-conqueror/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Softy Fudge",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/softy-fudge/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Hardy Fudge",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/hardy-fudge/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Kastaplast Hiva Messenger Bag",
+      "price": 599,
+      "url": "https://wearediscgolf.no/produkt/kastaplast-hiva-messenger-bag/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Trash Panda Dune",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/trash-panda-dune/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Premium Ozone",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/trash-panda-ozone/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Radiant Interval Drew Gibson",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/radiant-interval-drew-gibson/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "TechDisc Distance Driver",
+      "price": 3899,
+      "url": "https://wearediscgolf.no/produkt/tech-disc-distance-driver/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "TechDisc Fairway Driver",
+      "price": 3899,
+      "url": "https://wearediscgolf.no/produkt/techdisc-fairway-driver/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "TechDisc Midrange",
+      "price": 3899,
+      "url": "https://wearediscgolf.no/produkt/techdisc-midrange/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "TechDisc Putter",
+      "price": 3899,
+      "url": "https://wearediscgolf.no/produkt/techdisc-putter/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Loot Bags We Are Disc Golf Royal Blend",
+      "price": 109,
+      "url": "https://wearediscgolf.no/produkt/loot-bags-we-are-disc-golf-royal-blend/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Loot Bags We Are Disc Golf Gemstone",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/loot-bags-we-are-disc-golf-gemstone/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Gavekort wearediscgolf.no",
+      "price": 50,
+      "url": "https://wearediscgolf.no/produkt/we-are-discgolf-gavekort/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Pod Disc Stacker v2 + Transit Bag",
+      "price": 1099,
+      "url": "https://wearediscgolf.no/produkt/mvp-pod-disc-stacker-transit-bag/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "S-Blend Khonsu",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/s-blend-khonsu/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "C-Blend Glow Metal Flake Exodus Eric Oakley",
+      "price": 309,
+      "url": "https://wearediscgolf.no/produkt/c-blend-glow-metal-flake-exodus-eric-oakley/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "College Genser Disc Or Die",
+      "price": 599,
+      "url": "https://wearediscgolf.no/produkt/college-genser-disc-or-die/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "College Genser Thrower",
+      "price": 599,
+      "url": "https://wearediscgolf.no/produkt/college-genser-thrower/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Paige Pierce Tri-Pod",
+      "price": 499,
+      "url": "https://wearediscgolf.no/produkt/paige-pierce-tri-pod/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discraft Chainstar Lite Portable Target",
+      "price": 2599,
+      "url": "https://wearediscgolf.no/produkt/discraft-chainstar-lite-portable-target/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Sigr Balder",
+      "price": 2399,
+      "url": "https://wearediscgolf.no/produkt/sigr-balder/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Sigr Loke",
+      "price": 699,
+      "url": "https://wearediscgolf.no/produkt/sigr-loke/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Trophy Line Champ First Run",
+      "price": 169,
+      "url": "https://wearediscgolf.no/produkt/trophy-line-champ-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Performance Pique Herre",
+      "price": 699,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-performance-pique-herre/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Performance Pique Herre",
+      "price": 699,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-performance-pique-herre-2/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Performance Pique Herre",
+      "price": 699,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-performance-pique-herre-3/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Performance Pique Dame",
+      "price": 649,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-performance-pique-dame/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf x Anniken K. Steen Performance Pique Dame",
+      "price": 649,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-x-anniken-k-steen-performance-pique-dame/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Stainless Steel Water Bottle",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-stainless-steel-water-bottle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Blunt Gumbputt",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/blunt-gumbputt/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "BlowFly 1",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/blowfly-1/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Atmos Rift",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/atmos-rift/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "ProLine Aftershock",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/proline-aftershock/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Dog Collar Small",
+      "price": 109,
+      "url": "https://wearediscgolf.no/produkt/mvp-dog-collar-small/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Rover Cart vol 2",
+      "price": 2299,
+      "url": "https://wearediscgolf.no/produkt/mvp-rover-cart-vol-2/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Disc Station VI",
+      "price": 1999,
+      "url": "https://wearediscgolf.no/produkt/mvp-disc-station-vi/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Total Eclipse Lens Cap",
+      "price": 89,
+      "url": "https://wearediscgolf.no/produkt/total-eclipse-lens-cap/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Cotton Towel",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-cotton-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Disc Golf Microfiber Towel",
+      "price": 79,
+      "url": "https://wearediscgolf.no/produkt/we-are-disc-golf-microfiber-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Disc Station Shelf Add-On",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/mvp-disc-station-shelf-add-on/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Sigr Microfiber Towel",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/sigr-microfiber-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "ProLine Typhoon First Flight",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/proline-typhoon-first-flight/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Atmos Breaker",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/atmos-breaker/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Halo C-Blend Glow Dynasty Eric Oakley 2025",
+      "price": 349,
+      "url": "https://wearediscgolf.no/produkt/halo-c-blend-glow-dynasty-eric-oakley-2025/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Composite Sector",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/composite-sector/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Composite Chicane",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/composite-chicane/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Add-On Module II",
+      "price": 599,
+      "url": "https://wearediscgolf.no/produkt/mvp-add-on-module-ii/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "P-Line Swirl P4 Razor Claw Kyle Klein",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/p-line-swirl-p4-razor-claw-kyle-klein/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Pins",
+      "price": 59,
+      "url": "https://wearediscgolf.no/produkt/mvp-pins/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Axiom Pins",
+      "price": 59,
+      "url": "https://wearediscgolf.no/produkt/axiom-pins/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "SimonLine Pins",
+      "price": 59,
+      "url": "https://wearediscgolf.no/produkt/simonline-pins/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Eagle McMahon Pins",
+      "price": 59,
+      "url": "https://wearediscgolf.no/produkt/eagle-mcmahon-pins/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Silva Saarinen Pins",
+      "price": 59,
+      "url": "https://wearediscgolf.no/produkt/silva-saarinen-pins/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Jeremy Koling Pins",
+      "price": 59,
+      "url": "https://wearediscgolf.no/produkt/jeremy-koling-pins/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Prototype Hallux Ricky Wysocki",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/prototype-hallux-ricky-wysocki/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Prototype Fossil Ricky Wysocki",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/prototype-fossil-ricky-wysocki/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Luxury E5 Backpack",
+      "price": 1999,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-luxury-e5-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "We Are Forundringspakke 2025",
+      "price": 549,
+      "url": "https://wearediscgolf.no/produkt/we-are-forundringspakke-2025/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Add-On Module III",
+      "price": 699,
+      "url": "https://wearediscgolf.no/produkt/mvp-add-on-module-iii/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Axiom Voyager Slim Backpack",
+      "price": 1799,
+      "url": "https://wearediscgolf.no/produkt/axiom-voyager-slim-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Streamline Voyager Backpack",
+      "price": 2049,
+      "url": "https://wearediscgolf.no/produkt/streamline-voyager-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Krokhol 199,-",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/krokhol-199/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Kastaplast Towel (99,-)",
+      "price": 99,
+      "url": "https://wearediscgolf.no/produkt/kastaplast-towel-99/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Total Eclipse Lens Cap Blank",
+      "price": 89,
+      "url": "https://wearediscgolf.no/produkt/total-eclipse-lens-cap-blank/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Z Sparkle XL Ledgestone 2026",
+      "price": 309,
+      "url": "https://wearediscgolf.no/produkt/z-sparkle-xl-ledgestone-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Star Lynx I-dye",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/star-lynx-i-dye/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Champion Proto Glow Lynx",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/champion-proto-glow-lynx/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Champion Lynx",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/champion-lynx/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Star Lynx",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/star-lynx/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Halo Star Lynx",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/halo-star-lynx/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Trophy Line Cliff Prototype",
+      "price": 169,
+      "url": "https://wearediscgolf.no/produkt/trophy-line-cliff-prototype/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Special Blend Hallux Ricky Wysocki 2026",
+      "price": 279,
+      "url": "https://wearediscgolf.no/produkt/special-blend-hallux-ricky-wysocki-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Grand Fire",
+      "price": 269,
+      "url": "https://wearediscgolf.no/produkt/grand-fire/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Brixton 2025 Tour Series Parallel Universe",
+      "price": 119,
+      "url": "https://wearediscgolf.no/produkt/brixton-2025-tour-series-parallel-universe/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Parallel Expanse",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/parallel-expanse/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Vex Breaker Requiem",
+      "price": 279,
+      "url": "https://wearediscgolf.no/produkt/vex-breaker-requiem/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Vex Breaker Vessel",
+      "price": 279,
+      "url": "https://wearediscgolf.no/produkt/vex-breaker-vessel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Premium Procyon",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/premium-procyon/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "MVP Pod Extension Kit",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/mvp-pod-extension-kit/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Logo Cap",
+      "price": 299,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-logo-cap/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Star Mid Disc3 Metal Warrior",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/star-mid-disc3-metal-warrior/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "VIP Vellamo First Run",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/vip-vellamo-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Z FLX Jawbreaker Fossil Ledgestone 2026",
+      "price": 309,
+      "url": "https://wearediscgolf.no/produkt/z-flx-jawbreaker-fossil-ledgestone-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Neutron Stasis",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/neutron-stasis/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Treehugger m/oppheng",
+      "price": 3398,
+      "url": "https://wearediscgolf.no/produkt/treehugger-m-oppheng/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Grand Mighty",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/grand-mighty/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Z Colorshift Midnight Hallux Ricky Wysocki 2026",
+      "price": 269,
+      "url": "https://wearediscgolf.no/produkt/colorshift-midnight-z-hallux-ricky-wysocki-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Clear Fire",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/clear-fire/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "ProLine Sail",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/proline-sail/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "ProLine Hellfire",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/proline-hellfire/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Atmos Sail",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/atmos-sail/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Atmos Banzai",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/atmos-banzai/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "D-Line Blast",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/d-line-blast/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "D-Line Sonar",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/d-line-sonar/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Stainless Steel Canteen Water Bottle 2026",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-stainless-steel-canteen-water-bottle-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discmania Stainless Steel Canteen Water Bottle 2026",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/discmania-stainless-steel-canteen-water-bottle-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Kastaplast Stainless Steel Canteen Water Bottle",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/kastaplast-stainless-steel-canteen-water-bottle/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Westside Discs Stainless Steel Canteen Water Bottle 2026",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/westside-discs-stainless-steel-canteen-water-bottle-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Stone Surf",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/stone-surf/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Stone Sonar",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/stone-sonar/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Trophy Line Soft Champ",
+      "price": 169,
+      "url": "https://wearediscgolf.no/produkt/trophy-line-soft-champ/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Signature Line Streak",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/signature-line-streak/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Signature Line Osprey",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/signature-line-osprey/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Major Line Streak",
+      "price": 219,
+      "url": "https://wearediscgolf.no/produkt/major-line-streak/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Swift Hex Backpack",
+      "price": 499,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-swift-hex-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "VIP-X Orbit Pine Lucas Oberholtzer Hess 2026",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/vip-x-orbit-pine-lucas-oberholtzer-hess-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Putter Line Soft Roost",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/putter-line-soft-roost/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Putter Line Roost",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/putter-line-roost/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "CT Swirl Roost Chris Dickerson",
+      "price": 169,
+      "url": "https://wearediscgolf.no/produkt/ct-swirl-roost-chris-dickerson/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Surf Andrew Miranda 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-surf-andrew-miranda-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Typhoon Catrina Allen 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-typhoon-catrina-allen-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "ESP Hallux Ricky Wysocki First Run",
+      "price": 235,
+      "url": "https://wearediscgolf.no/produkt/esp-hallux-ricky-wysocki-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Z Colorshift Fossil Ricky Wysocki",
+      "price": 235,
+      "url": "https://wearediscgolf.no/produkt/z-colorshift-fossil-ricky-wysocki/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Star Arachind We Are Corner Stamp",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/star-arachind-we-are-corner-stamp/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Star Arachind We Are Stamp",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/star-arachind-we-are-stamp/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Opto Amber",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/opto-amber/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Halo Champion RoadRunner Limited Edition",
+      "price": 269,
+      "url": "https://wearediscgolf.no/produkt/halo-champion-roadrunner-limited-edition/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Neutron Boost We Are Stamp",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/neutron-boost-we-are-stamp/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Clear Mighty Jakub Semerád 2026",
+      "price": 279,
+      "url": "https://wearediscgolf.no/produkt/clear-mighty-jakub-semerad-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "K1 Gadd",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/k1-gadd/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "K1 Gadd First Run",
+      "price": 199,
+      "url": "https://wearediscgolf.no/produkt/k1-gadd-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Q-Line Cloudbreaker Gannon Buhr",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/q-line-cloudbreaker-gannon-buhr/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Clear Fire Anniken K. Steen 2026",
+      "price": 279,
+      "url": "https://wearediscgolf.no/produkt/clear-fire-anniken-k-steen-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Neutron Boost",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/neutron-boost/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Neutron Boost Blank",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/neutron-boost-blank/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "DX Proto Glow Lynx",
+      "price": 159,
+      "url": "https://wearediscgolf.no/produkt/dx-proto-glow-lynx/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Neutron Control Special Edition Pre-Sale",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/neutron-control-special-edition-pre-sale/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tournament X Ring Hatchet",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/tournament-x-ring-hatchet/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Clear Mighty",
+      "price": 249,
+      "url": "https://wearediscgolf.no/produkt/clear-mighty/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Supreme Intent",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/supreme-intent/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Parallel Requiem",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/parallel-requiem/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Premium Extraterrestrial II",
+      "price": 259,
+      "url": "https://wearediscgolf.no/produkt/premium-extraterrestrial-ii/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Blast Sullivan Tipton 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-blast-sullivan-tipton-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Hypercane Andrew Miranda 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-hypercane-andrew-miranda-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Sail Catrina Allen 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-sail-catrina-allen-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Tsunami Jake Monn 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-tsunami-jake-monn-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Rift Eliezra Midtlyng 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-rift-eliezra-midtlyng-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Tour Series Aftershock Cole Redalen 2026",
+      "price": 289,
+      "url": "https://wearediscgolf.no/produkt/tour-series-aftershock-cole-redalen-2026/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Trophy Line Soft Cliff",
+      "price": 169,
+      "url": "https://wearediscgolf.no/produkt/trophy-line-soft-cliff/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Trophy Line Cliff",
+      "price": 169,
+      "url": "https://wearediscgolf.no/produkt/trophy-line-cliff/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Signature Line Coast Prototype",
+      "price": 229,
+      "url": "https://wearediscgolf.no/produkt/signature-line-coast-prototype/",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Neutron Control - Special Edition",
+      "price": 255,
+      "url": "https://kvamdgs.no/products/neutron-control-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Grand Mighty",
+      "price": 265,
+      "url": "https://kvamdgs.no/products/grand-mighty",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Neutron Boost",
+      "price": 215,
+      "url": "https://kvamdgs.no/products/neutron-boost",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Håndkle - Kvam Disc Golf Shop",
+      "price": 199,
+      "url": "https://kvamdgs.no/products/handkle-kvam-disc-golf-shop",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Prototype Hallux - Ricky Wysocki",
+      "price": 235,
+      "url": "https://kvamdgs.no/products/prototype-hallux-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "iDye Poly",
+      "price": 79,
+      "url": "https://kvamdgs.no/products/idye-poly",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Grip6 Belt - PDGA Logo",
+      "price": 499,
+      "url": "https://kvamdgs.no/products/grip6-belt-pdga-logo",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Bushnell Disc Jockey Bluetooth Speaker",
+      "price": 899,
+      "url": "https://kvamdgs.no/products/bushnell-disc-jockey-bluetooth-speaker",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Neutron Stasis – PLC",
+      "price": 225,
+      "url": "https://kvamdgs.no/products/neutron-stasis-plc",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Neutron Stasis – Special Edition - PLC",
+      "price": 255,
+      "url": "https://kvamdgs.no/products/neutron-stasis-special-edition-plc",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Grand Fire",
+      "price": 265,
+      "url": "https://kvamdgs.no/products/grand-fire",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Markør - Anti 3-Putt Cookie",
+      "price": 149,
+      "url": "https://kvamdgs.no/products/markor-anti-3-putt-cookie",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Markør - Don't Step On Me",
+      "price": 149,
+      "url": "https://kvamdgs.no/products/markor-dont-step-on-me",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Markør - 3-Putt Antidote",
+      "price": 149,
+      "url": "https://kvamdgs.no/products/markor-3-putt-antidote",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Vessi - Forecast Gloves",
+      "price": 899,
+      "url": "https://kvamdgs.no/products/vessi-forecast-gloves",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Black Hole Transit HD Bag",
+      "price": 599,
+      "url": "https://kvamdgs.no/products/black-hole-transit-hd-bag",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Repz Sports - ThroForm",
+      "price": 549,
+      "url": "https://kvamdgs.no/products/repz-sports-throform",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Black Hole Pro HD",
+      "price": 2499,
+      "url": "https://kvamdgs.no/products/black-hole-pro-hd",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Gavekort Kvam Disc Golf Shop",
+      "price": 125,
+      "url": "https://kvamdgs.no/products/gavekort-kvam-disc-golf-shop",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Axiom Voyager Pro Bag",
+      "price": 2299,
+      "url": "https://kvamdgs.no/products/axiom-voyager-pro-bag",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Axiom Voyager Slim Bag",
+      "price": 1899,
+      "url": "https://kvamdgs.no/products/axiom-voyager-slim-bag",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Flaske - Kvam Disc Golf Shop",
+      "price": 249,
+      "url": "https://kvamdgs.no/products/flaske-kvam-disc-golf-shop",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Flaske - Kvam Frisbeegolf",
+      "price": 249,
+      "url": "https://kvamdgs.no/products/flaske-kvam-frisbeegolf",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "BagTag - Kvam Frisbeegolf",
+      "price": 249,
+      "url": "https://kvamdgs.no/products/bagtag-kvam-frisbeegolf",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Halloween 2025 - Full pakke",
+      "price": 1299,
+      "url": "https://kvamdgs.no/products/halloween-2025-full-pakke",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "ZipChip",
+      "price": 149,
+      "url": "https://kvamdgs.no/products/zipchip",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Axiom Shuttle Backpack",
+      "price": 649,
+      "url": "https://kvamdgs.no/products/axiom-shuttle-backpack",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Disc Doctor 3.0",
+      "price": 129,
+      "url": "https://kvamdgs.no/products/disc-doctor-3-0",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "Håndkle - Mikrofiber",
+      "price": 99,
+      "url": "https://kvamdgs.no/products/handkle-mikrofiber",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "DiscFinder",
+      "price": 59,
+      "url": "https://kvamdgs.no/products/discfinder",
+      "inStock": true
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "MVP Disc Frame",
+      "price": 229,
+      "url": "https://kvamdgs.no/products/mvp-disc-frame",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "MVP Tripod Stool - Large",
+      "price": 349,
+      "url": "https://kvamdgs.no/products/mvp-tripod-stool-large",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "MVP Disc Station",
+      "price": 1949,
+      "url": "https://kvamdgs.no/products/mvp-disc-station",
+      "inStock": false
+    },
+    {
+      "store": "kvamdgs",
+      "rawName": "MVP Lunar Module LED Basket Light",
+      "price": 179,
+      "url": "https://kvamdgs.no/products/mvp-lunar-module-led-basket-light",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Neutron Control - Special Edition",
+      "price": 259,
+      "url": "https://arcticdisc.no/products/neutron-control-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "SIGR Mikrofiberklut",
+      "price": 119,
+      "url": "https://arcticdisc.no/products/sigr-sigr-microfiber-towel",
+      "inStock": false
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "K1 Gadd",
+      "price": 229,
+      "url": "https://arcticdisc.no/products/k1-gadd",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Clear Sparkle Fire - Anniken Steen Team Series",
+      "price": 279,
+      "url": "https://arcticdisc.no/products/clear-sparkle-fire-anniken-steen-team-series",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Neutron Boost",
+      "price": 239,
+      "url": "https://arcticdisc.no/products/neutron-boost",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Clear Fire",
+      "price": 269,
+      "url": "https://arcticdisc.no/products/clear-fire",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Halo Star Lynx",
+      "price": 269,
+      "url": "https://arcticdisc.no/products/halo-star-lynx",
+      "inStock": false
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Neutron Stasis",
+      "price": 249,
+      "url": "https://arcticdisc.no/products/neutron-stasis",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "NEUTRON STASIS - SPECIAL EDITION",
+      "price": 279,
+      "url": "https://arcticdisc.no/products/neutron-stasis-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Grand Royal Fire",
+      "price": 269,
+      "url": "https://arcticdisc.no/products/grand-royal-fire",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Lattitude 64 Luxury E5 Backpack",
+      "price": 1999,
+      "url": "https://arcticdisc.no/products/lattitude-64-luxury-e5",
+      "inStock": false
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "MVP Håndkle",
+      "price": 129,
+      "url": "https://arcticdisc.no/products/mvp-handkle",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Innova Adventure Backpack",
+      "price": 649,
+      "url": "https://arcticdisc.no/products/innova-innova-adventure-backpack",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Innova Excursion Backpack",
+      "price": 799,
+      "url": "https://arcticdisc.no/products/innova-innova-excursion-backpack",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "SIGR Balder",
+      "price": 2399,
+      "url": "https://arcticdisc.no/products/sigr-sigr-balder",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "MVP Black Hole Pro",
+      "price": 2399,
+      "url": "https://arcticdisc.no/products/mvp-black-hole-pro",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Gavekort - Arctic Disc",
+      "price": 100,
+      "url": "https://arcticdisc.no/products/gavekort-arctic-disc",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Lattitude 64 Startsett - Zero Gravity",
+      "price": 399,
+      "url": "https://arcticdisc.no/products/lattitude-64-startsett-zero-gravity",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Lattitude 64 startsett - lett",
+      "price": 339,
+      "url": "https://arcticdisc.no/products/lattitude-64-startsett-lett",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Lattitude 64 Startsett - Classic",
+      "price": 339,
+      "url": "https://arcticdisc.no/products/lattitude-64-startsett-classic",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Lattitude 64 klut - Mikrofiber",
+      "price": 109,
+      "url": "https://arcticdisc.no/products/lattitude-64-klut-mikrofiber",
+      "inStock": true
     }
   ]
 }
