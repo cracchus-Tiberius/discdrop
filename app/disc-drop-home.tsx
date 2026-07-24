@@ -230,9 +230,15 @@ function buildHotDropRows(): HotDropRow[] {
 }
 
 // ── Hero ───────────────────────────────────────────────────────────────────
+const HERO_DISC_IDS = topSellers.discs
+  .filter((d) => d.catalogId !== null)
+  .slice(0, 2)
+  .map((d) => d.catalogId as string);
+
 function Hero() {
   const [query, setQuery] = useState("");
   const storeCount = Object.keys(scrapedPrices.stores).length;
+  const heroDiscs = HERO_DISC_IDS.map((id) => discs.find((d) => d.id === id)).filter(Boolean) as Disc[];
 
   return (
     <section className="w-full bg-[#FFFDF6] px-5 pb-16 pt-10 md:px-10 md:pb-20 md:pt-16">
@@ -271,12 +277,28 @@ function Hero() {
         </div>
 
         <div className="relative hidden h-72 md:block">
-          <div className="absolute right-16 top-2 flex h-52 w-52 items-center justify-center rounded-full border-2 border-[#101C14] bg-[repeating-linear-gradient(45deg,#EEF3D8,#EEF3D8_8px,#F6F8EA_8px,#F6F8EA_16px)] shadow-[6px_6px_0_#B8E04A]">
-            <span className="font-mono text-[10px] text-[#8A9674]">disk</span>
-          </div>
-          <div className="absolute right-0 top-32 flex h-40 w-40 items-center justify-center rounded-full border-2 border-[#101C14] bg-[repeating-linear-gradient(45deg,#F1ECDC,#F1ECDC_8px,#F8F4E8_8px,#F8F4E8_16px)] shadow-[5px_5px_0_#101C14]">
-            <span className="font-mono text-[10px] text-[#8A9674]">disk</span>
-          </div>
+          {heroDiscs[0] && (
+            <div className="absolute right-16 top-2 flex h-52 w-52 items-center justify-center rounded-full border-2 border-[#101C14] bg-[#F1EFE6] shadow-[6px_6px_0_#B8E04A]">
+              <DiscImage
+                src={getDiscImage(heroDiscs[0])}
+                name={heroDiscs[0].name}
+                brand={heroDiscs[0].brand}
+                type={heroDiscs[0].type}
+                containerStyle={{ height: 148 }}
+              />
+            </div>
+          )}
+          {heroDiscs[1] && (
+            <div className="absolute right-0 top-32 flex h-40 w-40 items-center justify-center rounded-full border-2 border-[#101C14] bg-[#F6F8EA] shadow-[5px_5px_0_#101C14]">
+              <DiscImage
+                src={getDiscImage(heroDiscs[1])}
+                name={heroDiscs[1].name}
+                brand={heroDiscs[1].brand}
+                type={heroDiscs[1].type}
+                containerStyle={{ height: 112 }}
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
