@@ -3,7 +3,7 @@ export async function onRequestPost({ request, env }) {
   try {
     const { discId, email, targetPrice } = await request.json();
 
-    if (!discId || !email || !targetPrice) {
+    if (!discId || !email) {
       return Response.json({ error: "Mangler felt" }, { status: 400 });
     }
 
@@ -11,7 +11,8 @@ export async function onRequestPost({ request, env }) {
       return Response.json({ error: "Ugyldig e-postadresse" }, { status: 400 });
     }
 
-    if (typeof targetPrice !== "number" || targetPrice < 1 || targetPrice > 10000) {
+    // targetPrice 0 means "notify as soon as it's back in stock, any price"
+    if (typeof targetPrice !== "number" || targetPrice < 0 || targetPrice > 10000) {
       return Response.json({ error: "Ugyldig målpris" }, { status: 400 });
     }
 

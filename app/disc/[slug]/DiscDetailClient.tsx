@@ -1401,12 +1401,19 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
               <span className="text-3xl text-[#B8E04A]">✓</span>
               <div>
                 <p className="font-extrabold text-[#FFFDF6]">Varsel opprettet!</p>
-                <p className="text-sm text-[#FFFDF6]/70">Vi sender deg en e-post når {discName} går under ønsket pris.</p>
+                <p className="text-sm text-[#FFFDF6]/70">
+                  {targetPrice
+                    ? `Vi sender deg en e-post når ${discName} går under ønsket pris.`
+                    : `Vi sender deg en e-post så snart ${discName} er tilgjengelig i en butikk.`}
+                </p>
               </div>
             </div>
           ) : (
             <>
-              <h2 className="mb-4 text-xl font-extrabold text-[#FFFDF6]">Bli varslet</h2>
+              <h2 className="mb-1 text-xl font-extrabold text-[#FFFDF6]">Bli varslet</h2>
+              <p className="mb-4 text-xs text-[#FFFDF6]/60">
+                La prisfeltet stå tomt for å bli varslet så snart disken er tilgjengelig, uansett pris.
+              </p>
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-wrap items-end gap-3 md:flex-nowrap">
                   <input
@@ -1420,10 +1427,10 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
                   <input
                     type="number"
                     min="1"
-                    placeholder="Ønsket pris (kr)"
+                    placeholder="Ønsket pris (valgfritt)"
                     value={targetPrice}
                     onChange={(e) => setTargetPrice(e.target.value)}
-                    className="w-44 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
+                    className="w-48 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
                   />
                   <button
                     type="submit"

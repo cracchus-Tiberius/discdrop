@@ -103,6 +103,7 @@ async function notifyOwner(subject, message) {
 
 async function sendEmail(alert, currentPrice) {
   const { id, disc_id, email, target_price } = alert;
+  const isRestockAlert = target_price === 0;
   const discUrl = `https://discdrop.net/disc/${disc_id}`;
   const unsubUrl = `https://discdrop.net/api/alerts/unsubscribe?id=${id}`;
   const bestStoreUrl = getBestUrl(disc_id);
@@ -111,6 +112,18 @@ async function sendEmail(alert, currentPrice) {
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
+
+  const subject = isRestockAlert
+    ? `${discName} er tilbake på lager`
+    : `Prisvarsel: ${discName} er nå kr ${currentPrice}`;
+
+  const heading = isRestockAlert
+    ? "Disken du ventet på er tilgjengelig igjen!"
+    : "Prisvarslet ditt er utløst!";
+
+  const body = isRestockAlert
+    ? `<strong>${discName}</strong> er nå tilgjengelig til <strong style="color: #2D6A4F;">kr ${currentPrice}</strong>.`
+    : `<strong>${discName}</strong> er nå tilgjengelig til <strong style="color: #2D6A4F;">kr ${currentPrice}</strong> — under ditt mål på kr ${target_price}.`;
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -121,15 +134,15 @@ async function sendEmail(alert, currentPrice) {
     body: JSON.stringify({
       from: "DiscDrop <varsler@discdrop.net>",
       to: [email],
-      subject: `Prisvarsel: ${discName} er nå kr ${currentPrice}`,
+      subject,
       html: `
         <div style="font-family: 'DM Sans', Arial, sans-serif; max-width: 560px; margin: 0 auto; background: #F5F2EB; padding: 32px 24px; border-radius: 12px;">
           <div style="margin-bottom: 24px;">
             <span style="font-size: 28px; font-weight: 700; color: #1E3D2F;">Disc</span><span style="font-size: 28px; font-weight: 700; color: #B8E04A;">Drop</span>
           </div>
-          <h1 style="font-size: 22px; color: #1a1a1a; margin: 0 0 8px;">Prisvarslet ditt er utløst!</h1>
+          <h1 style="font-size: 22px; color: #1a1a1a; margin: 0 0 8px;">${heading}</h1>
           <p style="color: #555; margin: 0 0 24px; font-size: 15px;">
-            <strong>${discName}</strong> er nå tilgjengelig til <strong style="color: #2D6A4F;">kr ${currentPrice}</strong> — under ditt mål på kr ${target_price}.
+            ${body}
           </p>
           <a href="${bestStoreUrl}" style="display: inline-block; background: #2D6A4F; color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 15px; margin-bottom: 24px;">
             Se tilbudet nå →
@@ -139,7 +152,7 @@ async function sendEmail(alert, currentPrice) {
           </p>
           <hr style="border: none; border-top: 1px solid #e0ddd4; margin: 24px 0;" />
           <p style="color: #aaa; font-size: 12px; margin: 0;">
-            Du mottok denne e-posten fordi du opprettet et prisvarsel på discdrop.net.<br/>
+            Du mottok denne e-posten fordi du opprettet et varsel på discdrop.net.<br/>
             <a href="${unsubUrl}" style="color: #aaa;">Avslutt varslet</a>
           </p>
         </div>
@@ -163,8 +176,9 @@ async function main() {
   let triggered = 0;
   for (const alert of alerts) {
     const currentPrice = getBestPrice(alert.disc_id);
-    if (currentPrice == null) continue;
-    if (currentPrice > alert.target_price) continue;
+    if (currentPrice == null) continue; // still out of stock everywhere
+    // target_price === 0 means "notify me as soon as it's back in stock, any price"
+    if (alert.target_price > 0 && currentPrice > alert.target_price) continue;
 
     console.log(`  Trigger: ${alert.disc_id} at kr ${currentPrice} (target kr ${alert.target_price}) → ${alert.email}`);
     const sent = await sendEmail(alert, currentPrice);
