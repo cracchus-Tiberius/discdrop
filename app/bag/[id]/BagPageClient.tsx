@@ -538,7 +538,7 @@ export function BagPageClient() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-serif text-lg font-semibold text-[#B8E04A]">
+                <h3 className="text-lg font-semibold text-[#B8E04A]">
                   Roter diskene dine
                 </h3>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#FFFDF6]/70">
@@ -601,7 +601,7 @@ export function BagPageClient() {
                       </h3>
                       <p className="text-xs text-[#101C1499]">{gear.brand}</p>
                     </div>
-                    <span className="shrink-0 font-serif text-base font-semibold text-[#101C14]">
+                    <span className="shrink-0 text-base font-semibold text-[#101C14]">
                       {gear.price}
                     </span>
                   </div>
