@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
-import { getScrapedPrice, getDiscImage, entryLandedNOK, formatRelativeTime } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, entryLandedNOK, formatRelativeTime, scrapedLastUpdated } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -291,7 +291,9 @@ function Hero() {
     <section className="w-full bg-[#FFFDF6] px-5 pb-16 pt-10 md:px-10 md:pb-20 md:pt-16">
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <span className="dd-sticker">{discs.length} disker sjekket i dag ✓</span>
+          <span className="dd-sticker">
+            {discs.length} disker{scrapedLastUpdated ? ` · oppdatert ${formatRelativeTime(scrapedLastUpdated)}` : ""}
+          </span>
           <h1 className="mt-4 text-[44px] font-extrabold leading-[0.98] tracking-tight text-[#101C14] md:text-[72px]">
             Riktig disk.
             <br />
@@ -302,7 +304,7 @@ function Hero() {
             </span>
           </h1>
           <p className="mb-8 mt-4 max-w-[46ch] text-base leading-relaxed text-[#101C14]/70 md:text-lg">
-            Norges prissammenligning for diskgolf. Vi sjekker prisene i {storeCount} butikker hver morgen — totalpris med frakt, alltid.
+            Norges prissammenligning for diskgolf — {storeCount} butikker, oppdatert daglig.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:max-w-xl">
