@@ -482,6 +482,11 @@ const NON_DISC_WORDS = [
   // Baskets / accessories (single-word)
   'teepad', 'kastnät', 'cooler', 'umbrella', 'paraply', 'lykt', 'regntrekk',
   'sportsack', 'whalesack', 'dirtbag', 'kalkpose',
+  // Glow-in-the-dark decal accessories that stick onto a disc — not a disc
+  // themselves. Confirmed in production: "Hive Firefly Glow Vinyls" (a decal
+  // set) matched the Innova Firefly disc, showing a 59 kr disc price that was
+  // actually the sticker set's price.
+  'vinyl', 'vinyls',
   // Sets (single-word)
   'startset', 'startpakke', 'nybegynnersett', 'lettkastet', 'lettkast',
   'startpakkett', 'gyropalooza',
