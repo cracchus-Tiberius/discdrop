@@ -22,9 +22,9 @@ export default function PersonvernPage() {
         <div className="space-y-10">
           <Section heading="Hvem vi er">
             <p>
-              DiscDrop er en prissammenligningstjeneste for disc golf drevet av{" "}
+              DiscDrop er en prissammenligningstjeneste for diskgolf drevet av{" "}
               <strong>Kviist Studio</strong>. Vi hjelper deg med å finne beste pris på
-              discer fra norske butikker, inkludert frakt.
+              disker fra norske butikker, inkludert frakt.
             </p>
             <p className="mt-3">
               Kontakt:{" "}
