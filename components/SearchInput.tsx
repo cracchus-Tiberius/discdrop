@@ -145,9 +145,9 @@ export function SearchInput({
   return (
     <div ref={containerRef} className={`relative ${className ?? ""}`}>
       {/* Input box */}
-      <div className="flex items-center gap-3 rounded-xl border-2 border-[#2D6A4F]/40 bg-white px-5 py-4 shadow-sm transition-all duration-200 focus-within:border-[#2D6A4F] focus-within:shadow-md">
+      <div className="flex items-center gap-3 rounded-2xl border-2 border-[#101C14] bg-white px-5 py-4 shadow-[3px_3px_0_#101C14] transition-all duration-150 focus-within:-translate-x-0.5 focus-within:-translate-y-0.5 focus-within:shadow-[5px_5px_0_#101C14]">
         <svg
-          className="shrink-0 text-[#888]"
+          className="shrink-0 text-[#101C1477]"
           width="18" height="18" viewBox="0 0 24 24"
           fill="none" stroke="currentColor" strokeWidth="2" aria-hidden
         >
@@ -159,7 +159,7 @@ export function SearchInput({
         {hasActiveFilter && (
           <div className="flex shrink-0 items-center gap-1.5">
             {quickType && (
-              <span className="flex items-center gap-1 rounded-full bg-[#2D6A4F] pl-2.5 pr-1.5 py-1 text-xs font-medium text-white">
+              <span className="flex items-center gap-1 rounded-full bg-[#101C14] pl-2.5 pr-1.5 py-1 text-xs font-semibold text-[#FFFDF6]">
                 {TYPE_CHIPS.find((t) => t.id === quickType)?.label ?? quickType}
                 <button type="button" onClick={() => setQuickType(null)} className="rounded-full p-0.5 hover:bg-white/20">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
@@ -167,7 +167,7 @@ export function SearchInput({
               </span>
             )}
             {quickBrand && (
-              <span className="flex items-center gap-1 rounded-full bg-[#2D6A4F] pl-2.5 pr-1.5 py-1 text-xs font-medium text-white">
+              <span className="flex items-center gap-1 rounded-full bg-[#101C14] pl-2.5 pr-1.5 py-1 text-xs font-semibold text-[#FFFDF6]">
                 {quickBrand}
                 <button type="button" onClick={() => setQuickBrand(null)} className="rounded-full p-0.5 hover:bg-white/20">
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden><path d="M18 6 6 18M6 6l12 12" /></svg>
@@ -184,14 +184,14 @@ export function SearchInput({
           onFocus={() => setFocused(true)}
           placeholder={hasActiveFilter ? "Søk innenfor valgt filter..." : placeholder}
           autoComplete="off"
-          className="min-w-0 flex-1 bg-transparent text-base text-[#1a1a1a] outline-none placeholder:text-[#aaa]"
+          className="min-w-0 flex-1 bg-transparent text-base text-[#101C14] outline-none placeholder:text-[#101C1477]"
         />
         {(value || hasActiveFilter) && (
           <button
             type="button"
             onClick={handleClear}
             aria-label="Tøm søk"
-            className="shrink-0 rounded-full p-1 text-[#999] transition-colors hover:bg-[#f0f0ee] hover:text-[#1a1a1a]"
+            className="shrink-0 rounded-full p-1 text-[#101C1477] transition-colors hover:bg-[#F1EFE6] hover:text-[#101C14]"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
               <path d="M18 6 6 18M6 6l12 12" />
@@ -202,13 +202,13 @@ export function SearchInput({
 
       {/* Dropdown */}
       {showDropdown && (
-        <div className="absolute left-0 right-0 top-full z-50 mt-1 max-h-[50vh] overflow-y-auto rounded-xl border border-[#e5e5e5] bg-white shadow-lg">
+        <div className="absolute left-0 right-0 top-full z-50 mt-2 max-h-[50vh] overflow-y-auto rounded-2xl border-2 border-[#101C14] bg-white shadow-[4px_4px_0_#101C14]">
 
           {/* Pre-search chip panel */}
           {showPanel && (
             <div className="px-4 py-4">
               {/* Category */}
-              <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[#999]">
+              <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[#101C1477]">
                 Kategori
               </div>
               <div className="mb-4 flex flex-wrap gap-2">
@@ -217,7 +217,7 @@ export function SearchInput({
                     key={chip.id}
                     type="button"
                     onClick={() => setQuickType(chip.id)}
-                    className="rounded-full border border-[#e0e0e0] bg-[#f7f6f2] px-3.5 py-1.5 text-sm text-[#444] transition-colors hover:border-[#2D6A4F]/50 hover:bg-[#edf5f0] hover:text-[#2D6A4F]"
+                    className="dd-selectable rounded-full bg-[#F1EFE6] px-3.5 py-1.5 text-sm font-semibold text-[#101C14]"
                   >
                     {chip.label}
                   </button>
@@ -225,7 +225,7 @@ export function SearchInput({
               </div>
 
               {/* Brand */}
-              <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[#999]">
+              <div className="mb-1 text-[11px] font-semibold uppercase tracking-wider text-[#101C1477]">
                 Merke
               </div>
               <div className="flex flex-wrap gap-2">
@@ -234,7 +234,7 @@ export function SearchInput({
                     key={brand}
                     type="button"
                     onClick={() => setQuickBrand(brand)}
-                    className="rounded-full border border-[#e0e0e0] bg-[#f7f6f2] px-3.5 py-1.5 text-sm text-[#444] transition-colors hover:border-[#2D6A4F]/50 hover:bg-[#edf5f0] hover:text-[#2D6A4F]"
+                    className="dd-selectable rounded-full bg-[#F1EFE6] px-3.5 py-1.5 text-sm font-semibold text-[#101C14]"
                   >
                     {brand}
                   </button>
@@ -243,7 +243,7 @@ export function SearchInput({
                   <button
                     type="button"
                     onClick={() => setShowAllBrands(true)}
-                    className="rounded-full border border-dashed border-[#ccc] px-3.5 py-1.5 text-sm text-[#888] transition-colors hover:border-[#2D6A4F]/50 hover:text-[#2D6A4F]"
+                    className="rounded-full border-2 border-dashed border-[#101C1444] px-3.5 py-1.5 text-sm font-semibold text-[#101C1477] transition-colors hover:border-[#101C14] hover:text-[#101C14]"
                   >
                     Alle merker →
                   </button>
@@ -256,7 +256,7 @@ export function SearchInput({
           {(showResults || (focused && hasActiveFilter && results.length > 0)) && (
             <>
               {hasActiveFilter && (
-                <div className="border-t border-[#f0f0f0] px-4 py-2 text-[11px] text-[#999]">
+                <div className="border-t-2 border-[#F1EFE6] px-4 py-2 text-[11px] font-semibold text-[#101C1477]">
                   {results.length} disk{results.length !== 1 ? "er" : ""} funnet
                   {quickType && ` · ${TYPE_CHIPS.find((t) => t.id === quickType)?.label}`}
                   {quickBrand && ` · ${quickBrand}`}
@@ -269,11 +269,11 @@ export function SearchInput({
                     key={d.id}
                     href={`/disc/${d.id}`}
                     onClick={handleSelect}
-                    className="flex cursor-pointer items-center justify-between border-b border-[#f0f0f0] px-5 py-3 transition-colors last:border-0 hover:bg-[#f9f9f7]"
+                    className="flex cursor-pointer items-center justify-between border-b-2 border-[#F1EFE6] px-5 py-3 transition-colors last:border-0 hover:bg-[#F1EFE6]"
                   >
                     <div className="flex min-w-0 items-center gap-3">
                       <div
-                        className="flex shrink-0 items-center justify-center rounded-lg bg-[#F5F2EB]"
+                        className="flex shrink-0 items-center justify-center rounded-lg bg-[#F1EFE6]"
                         style={{ width: 36, height: 36 }}
                       >
                         <DiscImage
@@ -285,18 +285,18 @@ export function SearchInput({
                         />
                       </div>
                       <div className="min-w-0">
-                        <span className="block truncate font-medium text-[#1a1a1a]">{d.name}</span>
-                        <span className="block truncate text-xs text-[#888]">{d.brand}</span>
+                        <span className="block truncate font-semibold text-[#101C14]">{d.name}</span>
+                        <span className="block truncate text-xs text-[#101C1499]">{d.brand}</span>
                       </div>
                     </div>
                     <div className="ml-3 flex shrink-0 items-center gap-3">
-                      <span className="hidden rounded-full bg-[#f0f0ee] px-2.5 py-1 text-xs text-[#888] sm:inline">
+                      <span className="hidden rounded-full bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C1499] sm:inline">
                         {d.type === "driver"
                           ? (d.flight.speed >= 10 ? "Distance Driver" : "Fairway Driver")
                           : (TYPE_LABEL[d.type] ?? d.type)}
                       </span>
                       {price != null && (
-                        <span className="text-sm font-medium text-[#2D6A4F]">fra kr {price}</span>
+                        <span className="text-sm font-extrabold text-[#101C14]">fra kr {price}</span>
                       )}
                     </div>
                   </Link>
@@ -307,7 +307,7 @@ export function SearchInput({
 
           {/* Empty state */}
           {showEmpty && (
-            <div className="px-5 py-4 text-sm text-[#888]">
+            <div className="px-5 py-4 text-sm text-[#101C1477]">
               Ingen resultater for &ldquo;{value}&rdquo;
             </div>
           )}
