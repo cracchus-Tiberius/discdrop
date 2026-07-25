@@ -88,6 +88,24 @@ function extractVariant(rawName, brand) {
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
 
+/** True if any of `brand`'s known plastic-line keywords (from PLASTIC_TYPES)
+ * appear in `normalisedText` — used to infer brand for short disc names (see
+ * matchDiscCandidate) without requiring the brand name itself to be present.
+ * Covers any brand with a PLASTIC_TYPES entry (MVP, Axiom, Streamline, RPM
+ * Discs, Prodigy, ...); Discmania/Innova have their own hand-tuned regex
+ * below and don't need this. */
+function brandPlasticPresent(brand, normalisedText) {
+  const entry = PLASTIC_TYPES[brand];
+  if (!entry) return false;
+  for (const w of [...(entry.prefix || []), ...(entry.suffix || [])]) {
+    const wn = norm(w);
+    if (wn && new RegExp('(?:^|\\s)' + wn.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i').test(normalisedText)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 /** Normalise a string for comparison */
 function norm(s) {
   return s
@@ -183,7 +201,9 @@ function matchDiscCandidate(rawProductName) {
           /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line)\b/i.test(normalised);
         const hasInnovaPlastic = disc.brand === 'Innova' &&
           /\b(?:champion|star|gstar|blizzard|halo|pro|xt|dx|r-pro|jstar)\b/i.test(normalised);
-        if (!hasDiscmaniaPlastic && !hasInnovaPlastic && !brandPattern.test(normalised)) continue;
+        const hasOtherBrandPlastic = disc.brand !== 'Discmania' && disc.brand !== 'Innova' &&
+          brandPlasticPresent(disc.brand, normalised);
+        if (!hasDiscmaniaPlastic && !hasInnovaPlastic && !hasOtherBrandPlastic && !brandPattern.test(normalised)) continue;
       }
       const score = discName.length;
       if (score > bestScore) {
