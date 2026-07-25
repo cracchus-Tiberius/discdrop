@@ -117,6 +117,23 @@ function norm(s) {
     .trim();
 }
 
+/** Same as norm(), but WITHOUT inserting a space at camelCase boundaries.
+ * norm()'s camelCase split assumes "TeeBird" is really "Tee Devil"-style two
+ * words that lost their space — correct for some catalog names, but wrong
+ * whenever the catalog's canonical name is genuinely one word (e.g.
+ * "Teebird"): "TeeBird" then splits into "tee bird", which never matches the
+ * catalog's single-token "teebird". Rocketdiscs in particular writes disc
+ * names this way ("DX TeeBird", "GStar TeeBird"). Used as a second match
+ * attempt alongside norm() rather than a replacement, since the split *is*
+ * correct for real two-word names typed without a space. */
+function normNoCamelSplit(s) {
+  return s
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 const NON_DISC_KEYWORDS = [
   'bag', 'sekk', 'ryggsekk', 'basket', 'kurv', 'armbånd', 'handledds',
   'towel', 'håndkle', 'marker', 'kasse',
@@ -176,6 +193,11 @@ function matchDiscCandidate(rawProductName) {
   // Insert space before digit suffix to handle "Swan2" → "swan 2", "Aviar3" → "aviar 3"
   normalised = normalised.replace(/([a-z])(\d)/g, '$1 $2');
 
+  // Second candidate string without the camelCase split — see normNoCamelSplit.
+  let normalisedNoSplit = normNoCamelSplit(rawProductName);
+  normalisedNoSplit = normalisedNoSplit.replace(/^20\d{2}\s+/, '');
+  normalisedNoSplit = normalisedNoSplit.replace(/([a-z])(\d)/g, '$1 $2');
+
   let bestMatch = null;
   let bestScore = 0;
 
@@ -186,7 +208,7 @@ function matchDiscCandidate(rawProductName) {
       '(?:^|\\s)' + discName.replace(/\s+/g, '\\s+') + '(?:\\s|$)',
       'i'
     );
-    if (pattern.test(normalised)) {
+    if (pattern.test(normalised) || (normalisedNoSplit !== normalised && pattern.test(normalisedNoSplit))) {
       // Very short disc names (<= 3 chars, e.g. "Spy", "H1", "P2") require the
       // brand name to also appear — otherwise a short, generic-looking name
       // can match a completely unrelated product from a different brand that
@@ -197,13 +219,14 @@ function matchDiscCandidate(rawProductName) {
       if (discName.length <= 3) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
-        const hasDiscmaniaPlastic = disc.brand === 'Discmania' &&
-          /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line)\b/i.test(normalised);
-        const hasInnovaPlastic = disc.brand === 'Innova' &&
-          /\b(?:champion|star|gstar|blizzard|halo|pro|xt|dx|r-pro|jstar)\b/i.test(normalised);
+        const discmaniaPlasticRe = /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line)\b/i;
+        const innovaPlasticRe = /\b(?:champion|star|gstar|blizzard|halo|pro|xt|dx|r-pro|jstar)\b/i;
+        const texts = normalisedNoSplit !== normalised ? [normalised, normalisedNoSplit] : [normalised];
+        const hasDiscmaniaPlastic = disc.brand === 'Discmania' && texts.some((t) => discmaniaPlasticRe.test(t));
+        const hasInnovaPlastic = disc.brand === 'Innova' && texts.some((t) => innovaPlasticRe.test(t));
         const hasOtherBrandPlastic = disc.brand !== 'Discmania' && disc.brand !== 'Innova' &&
-          brandPlasticPresent(disc.brand, normalised);
-        if (!hasDiscmaniaPlastic && !hasInnovaPlastic && !hasOtherBrandPlastic && !brandPattern.test(normalised)) continue;
+          texts.some((t) => brandPlasticPresent(disc.brand, t));
+        if (!hasDiscmaniaPlastic && !hasInnovaPlastic && !hasOtherBrandPlastic && !texts.some((t) => brandPattern.test(t))) continue;
       }
       const score = discName.length;
       if (score > bestScore) {
