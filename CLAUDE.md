@@ -42,9 +42,15 @@ Package manager: pnpm (always use pnpm, never npm).
 - Output: data/scraped-prices.json + data/unmatched-products.json
 
 ## API Route
-- /api/bag/generate — Anthropic API, server-side only
-- Model: claude-sonnet-4-20250514
-- Key: process.env.ANTHROPIC_API_KEY
+- The site builds with `output: "export"` (pure static, deployed as `out/`) — Next.js
+  Route Handlers under app/api/ never ship. All server-side endpoints are Cloudflare
+  Pages Functions under functions/api/, using env.* bindings, not process.env.
+- functions/api/bag/generate.js — AI bag builder, calls Anthropic API directly via fetch
+  (not the SDK, for Workers-runtime compatibility). Model: claude-sonnet-5.
+  Key: env.ANTHROPIC_API_KEY (set as a Cloudflare Pages environment variable/secret).
+- functions/api/alerts/ — price/back-in-stock alerts, reads/writes the `DB` D1 binding.
+- Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
+  serve them) — see wrangler.toml for the D1 binding.
 
 ## Deploy
 npx wrangler pages deploy out --project-name=discdrop --commit-dirty=true
