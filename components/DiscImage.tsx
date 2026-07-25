@@ -135,6 +135,7 @@ export function DiscImage({
         <img
           src={src}
           alt={name}
+          loading="lazy"
           onError={() => setFailed(true)}
           // Product photos usually have the disc drawn with some margin inside
           // an otherwise-square canvas — since our containers are square/circular
@@ -153,6 +154,7 @@ export function DiscImage({
       <img
         src={src}
         alt={name}
+        loading="lazy"
         onError={() => setFailed(true)}
         style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
       />

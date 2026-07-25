@@ -43,6 +43,8 @@ const TYPE_OPTIONS: { id: TypeFilter; label: string }[] = [
   { id: "putter", label: "Putter" },
 ];
 
+const PAGE_SIZE = 60;
+
 const SORT_OPTIONS: { id: SortBy; label: string }[] = [
   { id: "newest", label: "Nyeste" },
   { id: "price", label: "Beste pris" },
@@ -323,6 +325,14 @@ function BrowseContent() {
     return list;
   }, [query, typeFilter, brand, activeChip, effectiveSort]);
 
+  // Rendering all ~700 discs at once (each with an eager <img>) blows past a 30s
+  // page load — page results in instead, growing as the user asks for more.
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [query, typeFilter, brand, activeChip, effectiveSort]);
+  const visible = filtered.slice(0, visibleCount);
+
   const hasActiveFilters =
     query !== "" ||
     typeFilter !== "all" ||
@@ -423,7 +433,9 @@ function BrowseContent() {
           </select>
 
           <span className="ml-auto text-sm font-semibold text-[#101C1499]">
-            Viser {filtered.length} disk{filtered.length === 1 ? "" : "er"}
+            {visibleCount < filtered.length
+              ? `Viser ${visibleCount} av ${filtered.length} disker`
+              : `Viser ${filtered.length} disk${filtered.length === 1 ? "" : "er"}`}
           </span>
         </div>
 
@@ -443,7 +455,7 @@ function BrowseContent() {
           </div>
         ) : (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {filtered.map((d) => {
+            {visible.map((d) => {
               const price = bestPriceNOK(d);
               const unavailable = price === null;
               return (
@@ -535,6 +547,18 @@ function BrowseContent() {
                 </Link>
               );
             })}
+          </div>
+        )}
+
+        {visibleCount < filtered.length && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+              className="dd-cta px-6 py-3 text-sm"
+            >
+              Vis flere ({filtered.length - visibleCount} igjen)
+            </button>
           </div>
         )}
       </main>

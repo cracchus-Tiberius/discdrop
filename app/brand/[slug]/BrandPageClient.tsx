@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -45,6 +45,8 @@ const BRAND_LOGO_EXT: Record<string, string> = {
   "latitude-64": "jpg",
 };
 const BRAND_LOGO_LARGE = new Set(["mvp", "axiom", "streamline"]);
+
+const PAGE_SIZE = 60;
 
 // Score map from top-sellers.json
 const scoreMap = new Map<string, number>(
@@ -119,6 +121,12 @@ export default function BrandPageClient({
     return sortDiscs(list);
   }, [discs, typeFilter]);
 
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [typeFilter]);
+  const visible = filtered.slice(0, visibleCount);
+
   return (
     <div className="min-h-screen bg-[#FFFDF6]">
       <SiteHeader />
@@ -165,13 +173,15 @@ export default function BrandPageClient({
         </div>
 
         <p className="mb-4 text-sm font-semibold text-[#101C1499]">
-          Viser {filtered.length} disk{filtered.length !== 1 ? "er" : ""}
+          {visibleCount < filtered.length
+            ? `Viser ${visibleCount} av ${filtered.length} disker`
+            : `Viser ${filtered.length} disk${filtered.length !== 1 ? "er" : ""}`}
           {typeFilter !== "all" && ` · ${TYPE_PILLS.find((p) => p.id === typeFilter)?.label}`}
         </p>
 
         {/* Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {filtered.map((d) => {
+          {visible.map((d) => {
             const price = getScrapedPrice(d.id).price;
             const unavailable = price === null;
             return (
@@ -243,6 +253,18 @@ export default function BrandPageClient({
             );
           })}
         </div>
+
+        {visibleCount < filtered.length && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+              className="dd-cta px-6 py-3 text-sm"
+            >
+              Vis flere ({filtered.length - visibleCount} igjen)
+            </button>
+          </div>
+        )}
       </main>
 
       <footer className="mt-16 border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
