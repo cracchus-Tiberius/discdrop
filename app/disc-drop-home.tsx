@@ -314,13 +314,6 @@ function Hero() {
               inputId="hero-search-input"
             />
           </div>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            <span className="dd-sticker -rotate-1">{discs.length} disker</span>
-            <span className="-rotate-1 rounded-lg border-2 border-[#101C14] bg-white px-2.5 py-1.5 text-xs font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
-              {storeCount} butikker
-            </span>
-          </div>
         </div>
 
         <div className="relative hidden h-72 md:block">
