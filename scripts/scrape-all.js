@@ -19,7 +19,13 @@ const TIMEOUT_MS = 10 * 60 * 1000; // 10 min per scraper
 
 const STEPS = [
   { name: 'WeAreDiscGolf / Kvam / Arctic',  cmd: 'node scripts/scraper.js' },
-  { name: 'Aceshop',                         cmd: 'node scripts/scrape-aceshop.js' },
+  // Aceshop renders its catalog client-side and gets 0 products from the plain-fetch
+  // attempt, so it always falls through to a Playwright crawl of 4 categories with
+  // full pagination (40+ page loads). Results only get written to scraped-prices.json
+  // once, at the very end — a SIGKILL from the default 10-min timeout mid-crawl (which
+  // happened routinely in CI, confirmed by scraped-prices.json carrying 18+ hour stale
+  // Aceshop entries with no error surfaced) silently discards the entire run.
+  { name: 'Aceshop',                         cmd: 'node scripts/scrape-aceshop.js', timeoutMs: 20 * 60 * 1000 },
   { name: 'Frisbeebutikken',                 cmd: 'node scripts/scrape-frisbeebutikken.js' },
   { name: 'GolfDiscer',                      cmd: 'node scripts/scrape-golfdiscer.js' },
   { name: 'Frisbee Sør',                     cmd: 'node scripts/scrape-frisbeesor.js' },
@@ -30,7 +36,7 @@ const STEPS = [
   { name: 'Enrich variants',                 cmd: 'node scripts/enrich-variants.js' },
 ];
 
-function runStep(cmd) {
+function runStep(cmd, timeoutMs = TIMEOUT_MS) {
   return new Promise((resolve) => {
     const [bin, ...args] = cmd.split(' ');
     const child = spawn(bin, args, { stdio: 'inherit', detached: true });
@@ -41,11 +47,11 @@ function runStep(cmd) {
       try {
         process.kill(-child.pid, 'SIGKILL'); // negative pid = whole process group
       } catch (_) {}
-    }, TIMEOUT_MS);
+    }, timeoutMs);
 
     child.on('exit', (code, signal) => {
       clearTimeout(timer);
-      if (timedOut) resolve({ ok: false, reason: 'timed out after 10 min' });
+      if (timedOut) resolve({ ok: false, reason: `timed out after ${Math.round(timeoutMs / 60000)} min` });
       else if (code === 0) resolve({ ok: true });
       else resolve({ ok: false, reason: `exited with code ${code}${signal ? ` (${signal})` : ''}` });
     });
@@ -60,11 +66,11 @@ function runStep(cmd) {
 async function main() {
   const failed = [];
 
-  for (const { name, cmd } of STEPS) {
+  for (const { name, cmd, timeoutMs } of STEPS) {
     console.log(`\n${'='.repeat(60)}`);
     console.log(`▶  ${name}`);
     console.log('='.repeat(60));
-    const result = await runStep(cmd);
+    const result = await runStep(cmd, timeoutMs);
     if (result.ok) {
       console.log(`✓  ${name} done`);
     } else {
