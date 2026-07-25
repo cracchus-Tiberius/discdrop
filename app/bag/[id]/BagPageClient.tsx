@@ -20,7 +20,7 @@ export type GeneratedDisc = {
   category: "driver" | "fairway" | "midrange" | "putter";
   quantity: 1 | 2;
   reason: string;
-  priceNOK?: number;
+  priceNOK?: number | null;
 };
 
 export type WizardAnswers = {
@@ -385,6 +385,7 @@ export function BagPageClient() {
   }
 
   const totalValue = discs.reduce((sum, d) => sum + (d.priceNOK ?? 0) * d.quantity, 0);
+  const hasMissingPrices = discs.some((d) => d.priceNOK == null);
   const discCount = discs.reduce((sum, d) => sum + d.quantity, 0);
 
   const grouped = CATEGORY_ORDER.map((cat) => ({
@@ -458,7 +459,9 @@ export function BagPageClient() {
                     Bagverdi
                   </div>
                   <div className="text-4xl font-extrabold text-[#B8E04A]">
-                    {totalValue > 0 ? `kr ${totalValue.toLocaleString("nb-NO")}` : "—"}
+                    {totalValue > 0
+                      ? `${hasMissingPrices ? "fra " : ""}kr ${totalValue.toLocaleString("nb-NO")}`
+                      : "—"}
                   </div>
                 </div>
                 <div>

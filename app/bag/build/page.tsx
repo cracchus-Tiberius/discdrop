@@ -17,7 +17,7 @@ type ApiDisc = {
   glide: number;
   turn: number;
   fade: number;
-  priceNOK: number;
+  priceNOK: number | null;
   reason: string;
   slug: string;
 };

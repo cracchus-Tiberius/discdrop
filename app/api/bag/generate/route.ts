@@ -1,4 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { discs } from "@/data/discs.js";
+import { getScrapedPrice } from "@/lib/disc-utils";
 
 type WizardAnswers = {
   level: string;
@@ -18,7 +20,7 @@ export type ApiDisc = {
   glide: number;
   turn: number;
   fade: number;
-  priceNOK: number;
+  priceNOK: number | null;
   reason: string;
   slug: string;
 };
@@ -28,6 +30,25 @@ export type BagApiResponse = {
   discs: ApiDisc[];
   bagTips: string;
 };
+
+function normalize(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+const catalogByNormalizedId = new Map(discs.map((d) => [normalize(d.id), d]));
+const catalogByNormalizedName = new Map(
+  discs.map((d) => [normalize(`${d.brand}${d.name}`), d])
+);
+
+/** LLM output is a guess at a real catalog disc — resolve it to the actual entry so we
+ * can attach a real scraped price and a working /disc/[slug] link instead of trusting
+ * whatever slug/price the model invented. */
+function resolveCatalogDisc(apiDisc: ApiDisc) {
+  return (
+    catalogByNormalizedId.get(normalize(apiDisc.slug)) ??
+    catalogByNormalizedName.get(normalize(`${apiDisc.brand}${apiDisc.name}`))
+  );
+}
 
 export async function POST(request: Request) {
   if (!process.env.ANTHROPIC_API_KEY) {
@@ -103,7 +124,6 @@ Respond with a JSON object in exactly this format:
       "glide": 5,
       "turn": -1,
       "fade": 3,
-      "priceNOK": 249,
       "reason": "One sentence explaining why this disc suits this player",
       "slug": "innova-destroyer"
     }
@@ -120,8 +140,7 @@ Rules:
 - Focus on the player's stated needs (${needsStr})
 - Prefer the player's brand preferences if specified
 - Use only real disc golf discs that actually exist
-- Keep priceNOK realistic: putters 149-199, mids 179-229, drivers 199-299
-- The slug should be brand-name in lowercase with hyphens`;
+- The slug should be brand-name in lowercase with hyphens, matching the disc's actual product page slug`;
 
   const client = new Anthropic();
 
@@ -146,6 +165,17 @@ Rules:
     if (!Array.isArray(result.discs) || result.discs.length === 0) {
       throw new Error("Invalid response structure");
     }
+
+    // Never trust the model's own price or slug — resolve against the real catalog
+    // and only show a price when we have real scraped data for it.
+    result.discs = result.discs.map((disc) => {
+      const match = resolveCatalogDisc(disc);
+      return {
+        ...disc,
+        slug: match?.id ?? disc.slug,
+        priceNOK: match ? getScrapedPrice(match.id).price : null,
+      };
+    });
 
     return Response.json(result);
   } catch (err) {
