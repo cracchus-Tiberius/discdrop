@@ -10,6 +10,8 @@ import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
 import { getScrapedPrice, getDiscImage, entryLandedNOK, formatRelativeTime } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
+import { FlightBoxes } from "@/components/FlightBoxes";
+import { SiteFooter } from "@/components/SiteFooter";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -32,29 +34,6 @@ function Badge({ tag }: { tag: string }) {
 }
 
 type Flight = Disc["flight"];
-
-
-function FlightBoxes({ flight }: { flight: Flight }) {
-  const cells: { label: string; value: number }[] = [
-    { label: "SPEED", value: flight.speed },
-    { label: "GLIDE", value: flight.glide },
-    { label: "TURN", value: flight.turn },
-    { label: "FADE", value: flight.fade },
-  ];
-  return (
-    <div className="mt-3 flex gap-1.5">
-      {cells.map(({ label, value }) => (
-        <div
-          key={label}
-          className="flex flex-1 flex-col items-center gap-0.5 rounded-xl bg-[#F1EFE6] py-2"
-        >
-          <div className="text-lg font-extrabold text-[#101C14]">{value}</div>
-          <div className="text-[9px] font-semibold uppercase tracking-wider text-[#101C1488]">{label}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 // Keywords that classify a hot-drop badge type
 const TOUR_SERIES_KEYWORDS = [
@@ -411,7 +390,7 @@ function HotDrops() {
                 </p>
               </div>
 
-              <FlightBoxes flight={row.flight} />
+              <FlightBoxes flight={row.flight} labels="full" size="lg" />
 
               <div className="mt-auto flex items-center justify-between gap-3 border-t-2 border-[#F1EFE6] pt-3">
                 <div>
@@ -470,7 +449,7 @@ function LatestDrops() {
                 </p>
               </div>
 
-              <FlightBoxes flight={row.flight} />
+              <FlightBoxes flight={row.flight} labels="full" size="lg" />
 
               <div className="mt-auto flex items-center justify-between gap-3 border-t-2 border-[#F1EFE6] pt-3">
                 <div>
@@ -651,17 +630,7 @@ export function DiscDropHome() {
         <WhyDiscDrop />
         <PopularDiscs />
       </main>
-      <footer className="border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
-          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
-          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
-          <div className="flex gap-4">
-            <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
-            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
-            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

@@ -6,6 +6,8 @@ import { DiscImage } from "@/components/DiscImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
+import { FlightBoxes } from "@/components/FlightBoxes";
+import { SiteFooter } from "@/components/SiteFooter";
 import { discs } from "@/data/discs.js";
 import topSellers from "@/data/top-sellers.json";
 
@@ -58,24 +60,6 @@ function sortDiscs(list: Disc[]): Disc[] {
     if (sa === -1 && sb === -1) return a.name.localeCompare(b.name, "nb"); // alphabetical fallback
     return 0;
   });
-}
-
-function FlightBoxes({ flight }: { flight: Disc["flight"] }) {
-  return (
-    <div className="mt-3 flex gap-1.5">
-      {[
-        { label: "S", value: flight.speed },
-        { label: "G", value: flight.glide },
-        { label: "T", value: flight.turn },
-        { label: "F", value: flight.fade },
-      ].map(({ label, value }) => (
-        <div key={label} className="flex-1 rounded-lg bg-[#F1EFE6] py-1.5 text-center">
-          <div className="text-sm font-extrabold text-[#101C14]">{value}</div>
-          <div className="text-[9px] font-semibold uppercase tracking-wider text-[#101C1488]">{label}</div>
-        </div>
-      ))}
-    </div>
-  );
 }
 
 function BrandHeroLogo({ slug, brand }: { slug: string; brand: string }) {
@@ -261,17 +245,7 @@ export default function BrandPageClient({
         )}
       </main>
 
-      <footer className="mt-16 border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
-          <span>© 2026 discdrop · Laget av <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">Kviist</a></span>
-          <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
-          <div className="flex gap-4">
-            <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
-            <Link href="/kontakt" className="transition-colors hover:text-[#FFFDF6]">Kontakt</Link>
-            <a href="mailto:kontakt@discdrop.net" className="transition-colors hover:text-[#FFFDF6]">kontakt@discdrop.net</a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter className="mt-16" />
     </div>
   );
 }
