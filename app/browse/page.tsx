@@ -366,20 +366,8 @@ function BrowseContent() {
           </div>
         </div>
 
-        {/* Filter bar: Type · Brand · Sort */}
-        <div className="mb-5 mt-1 flex flex-wrap items-center gap-3">
-          <select
-            value={typeFilter}
-            onChange={(e) => handleType(e.target.value as TypeFilter)}
-            className="rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
-          >
-            {TYPE_OPTIONS.map((o) => (
-              <option key={o.id} value={o.id}>
-                {o.label}
-              </option>
-            ))}
-          </select>
-
+        {/* Filter bar: Brand on its own row (names can be long), Type · Sort side by side below */}
+        <div className="mb-5 mt-1 flex flex-col gap-2">
           <select
             value={brand}
             onChange={(e) => handleBrand(e.target.value)}
@@ -390,23 +378,37 @@ function BrowseContent() {
             ))}
           </select>
 
-          <select
-            value={sort}
-            onChange={(e) => handleSort(e.target.value as SortBy)}
-            className="rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
-          >
-            {SORT_OPTIONS.map((o) => (
-              <option key={o.id} value={o.id}>
-                {o.label}
-              </option>
-            ))}
-          </select>
+          <div className="flex flex-wrap items-center gap-2">
+            <select
+              value={typeFilter}
+              onChange={(e) => handleType(e.target.value as TypeFilter)}
+              className="min-w-0 flex-1 rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
+            >
+              {TYPE_OPTIONS.map((o) => (
+                <option key={o.id} value={o.id}>
+                  {o.label}
+                </option>
+              ))}
+            </select>
 
-          <span className="ml-auto text-sm font-semibold text-[#101C1499]">
-            {visibleCount < filtered.length
-              ? `Viser ${visibleCount} av ${filtered.length} disker`
-              : `Viser ${filtered.length} disk${filtered.length === 1 ? "" : "er"}`}
-          </span>
+            <select
+              value={sort}
+              onChange={(e) => handleSort(e.target.value as SortBy)}
+              className="min-w-0 flex-1 rounded-xl border-2 border-[#101C14] bg-white px-3 py-2 text-sm font-semibold text-[#101C14] outline-none"
+            >
+              {SORT_OPTIONS.map((o) => (
+                <option key={o.id} value={o.id}>
+                  {o.label}
+                </option>
+              ))}
+            </select>
+
+            <span className="ml-auto shrink-0 text-sm font-semibold text-[#101C1499]">
+              {visibleCount < filtered.length
+                ? `Viser ${visibleCount} av ${filtered.length} disker`
+                : `Viser ${filtered.length} disk${filtered.length === 1 ? "" : "er"}`}
+            </span>
+          </div>
         </div>
 
         {/* Grid or empty state */}
