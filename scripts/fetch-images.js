@@ -4,38 +4,85 @@
 // Visits the Infinite Discs product page for each disc missing an image and
 // saves the first product photo to data/disc-images.json.
 // Usage: node scripts/fetch-images.js  or  pnpm fetch-images
+//
+// Previously built the URL slug by guessing "{brand}-{name}" (capitalized,
+// spaces to hyphens) and hoping it resolved. That stopped working — Infinite
+// Discs' real slugs are lowercase and don't reliably follow that pattern
+// (confirmed via their sitemap: some include the brand, some don't, some use
+// a different brand's slug entirely for shared molds). Result was 0/38 found
+// on every run. Now fetches their sitemap once per run to get the actual
+// slug list and only ever uses a slug we've confirmed exists.
 
 const { chromium } = require('playwright');
+const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 
 const IMAGES_PATH = path.join(__dirname, '..', 'data', 'disc-images.json');
 const SCRAPED_PATH = path.join(__dirname, '..', 'data', 'scraped-prices.json');
+const SITEMAP_INDEX_URL = 'https://infinitediscs.com/sitemap.xml';
 
-// Brands whose names must be spelled out in full in the URL slug
-// e.g. "Clash Discs" → "Clash-Discs-Salt" not "Clash-Salt"
-const FULL_NAME_BRANDS = new Set([
-  'Infinite Discs',
-  'Lone Star Discs',
-  'Thought Space Athletics',
-  'Dynamic Discs',
-  'Latitude 64',
-  'Westside Discs',
-  'RPM Discs',
-  'Clash Discs',
-  'Viking Discs',
-  'EggShell Discs',
+// Path segments that are sitemap noise, not disc-model pages
+const NON_PRODUCT_SLUGS = new Set([
+  'about-us', 'additional', 'advanced-search', 'contact-us', 'new-releases',
+  'newly-added-discs', 'player-profile', 'what-on-sale', 'faqs', 'blog',
 ]);
+
+// Some brands share molds with a sibling brand under the same manufacturing
+// group and Infinite Discs lists the mold under only ONE of the sibling
+// slugs — e.g. MVP Fireball is listed as "axiom-fireball". Using that photo
+// IS correct (same physical disc), unlike a same-name collision with an
+// unrelated brand (e.g. Kastaplast "Neon" vs. the unrelated "Loft Discs
+// Neon" — those must NOT be cross-matched). Only cross-check within these
+// documented, confirmed-same-factory groups; never search brand-blind.
+const SIBLING_BRANDS = {
+  MVP: ['Axiom', 'Streamline'],
+  Axiom: ['MVP', 'Streamline'],
+  Streamline: ['MVP', 'Axiom'],
+  'Latitude 64': ['Discmania', 'Westside Discs'],
+  Discmania: ['Latitude 64', 'Westside Discs'],
+  'Westside Discs': ['Latitude 64', 'Discmania'],
+};
 
 function sleep(ms) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
-// Build the Infinite Discs URL slug.
-// For most brands: "Innova Destroyer" → "Innova-Destroyer"
-// For full-name brands: "Clash Discs Salt" → "Clash-Discs-Salt"
-function buildSlug(brand, name) {
-  return `${brand} ${name}`.replace(/\s+/g, '-');
+function slugify(s) {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+// ── Fetch the real slug list from Infinite Discs' sitemap ─────────────────────
+
+async function fetchRealSlugs() {
+  const indexRes = await fetch(SITEMAP_INDEX_URL, { timeout: 15000 });
+  if (!indexRes.ok) throw new Error(`sitemap index HTTP ${indexRes.status}`);
+  const indexXml = await indexRes.text();
+  const subSitemapUrls = [...indexXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+
+  const slugs = new Set();
+  for (const sitemapUrl of subSitemapUrls) {
+    const res = await fetch(sitemapUrl, { timeout: 30000 });
+    if (!res.ok) continue;
+    const xml = await res.text();
+    for (const m of xml.matchAll(/<loc>https:\/\/infinitediscs\.com\/([a-z0-9-]+)(?:\/[a-z0-9-]+)?<\/loc>/g)) {
+      const first = m[1];
+      if (!NON_PRODUCT_SLUGS.has(first) && !first.startsWith('page-')) slugs.add(first);
+    }
+  }
+  return slugs;
+}
+
+// Find a confirmed-real slug for a disc, trying its own brand first, then
+// documented sibling brands only.
+function resolveSlug(disc, realSlugs) {
+  const nameSlug = slugify(disc.name);
+  const brandsToTry = [disc.brand, ...(SIBLING_BRANDS[disc.brand] || [])];
+  for (const brand of brandsToTry) {
+    const candidate = `${slugify(brand)}-${nameSlug}`;
+    if (realSlugs.has(candidate)) return candidate;
+  }
+  return null;
 }
 
 // ── Determine which discs are missing images ──────────────────────────────────
@@ -69,8 +116,7 @@ function getMissingDiscs() {
 
 // Infinite Discs product images live under /Inf_Uploads/DiscProducts/
 // Redirecting to /Page/... means there's no standalone disc page — skip it.
-async function fetchDiscImage(page, disc) {
-  const slug = buildSlug(disc.brand, disc.name);
+async function fetchDiscImage(page, slug) {
   const url = `https://infinitediscs.com/${slug}`;
 
   let resp;
@@ -125,6 +171,21 @@ async function main() {
     return;
   }
 
+  console.log('Fetching real slug list from Infinite Discs sitemap...');
+  const realSlugs = await fetchRealSlugs();
+  console.log(`Found ${realSlugs.size} real disc-model slugs`);
+
+  const resolved = missing
+    .map((d) => ({ disc: d, slug: resolveSlug(d, realSlugs) }))
+    .filter((r) => r.slug);
+  console.log(`${resolved.length}/${missing.length} discs have a confirmed real slug (rest aren't carried by Infinite Discs, or aren't a documented sibling-brand match — skipped rather than guessed)`);
+  console.log('='.repeat(50));
+
+  if (resolved.length === 0) {
+    console.log('Nothing resolvable this run.');
+    return;
+  }
+
   const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
   const context = await browser.newContext({
     userAgent:
@@ -137,13 +198,13 @@ async function main() {
   let found = 0;
   let notFound = 0;
 
-  for (let i = 0; i < missing.length; i++) {
-    const disc = missing[i];
-    process.stdout.write(`[${i + 1}/${missing.length}] ${disc.brand} ${disc.name}... `);
+  for (let i = 0; i < resolved.length; i++) {
+    const { disc, slug } = resolved[i];
+    process.stdout.write(`[${i + 1}/${resolved.length}] ${disc.brand} ${disc.name} (${slug})... `);
 
     let imgUrl = null;
     try {
-      imgUrl = await fetchDiscImage(page, disc);
+      imgUrl = await fetchDiscImage(page, slug);
     } catch (err) {
       process.stdout.write(`ERROR: ${err.message}\n`);
     }
@@ -160,7 +221,7 @@ async function main() {
     // Save after each disc so progress survives interruption
     fs.writeFileSync(IMAGES_PATH, JSON.stringify(images, null, 2));
 
-    if (i < missing.length - 1) {
+    if (i < resolved.length - 1) {
       await sleep(2000);
     }
   }
@@ -168,7 +229,7 @@ async function main() {
   await browser.close();
 
   console.log('\n' + '='.repeat(50));
-  console.log(`Found: ${found}  Not found: ${notFound}  (${missing.length} attempted)`);
+  console.log(`Found: ${found}  Not found: ${notFound}  (${resolved.length} attempted, ${missing.length - resolved.length} skipped — no confirmed slug)`);
   console.log(`Saved to ${IMAGES_PATH}`);
 }
 
