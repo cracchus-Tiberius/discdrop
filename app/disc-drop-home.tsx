@@ -397,7 +397,7 @@ function HotDrops() {
                   <p className="text-xl font-extrabold text-[#101C14]">
                     {row.price != null ? `${row.price},-` : "—"}
                   </p>
-                  <p className="text-[11px] text-[#101C1477]">inkl. frakt · {row.storeCount} {row.storeCount === 1 ? "butikk" : "butikker"}</p>
+                  <p className="text-[11px] text-[#101C1499]">inkl. frakt · {row.storeCount} {row.storeCount === 1 ? "butikk" : "butikker"}</p>
                 </div>
                 <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
               </div>
@@ -456,7 +456,7 @@ function LatestDrops() {
                   <p className="text-xl font-extrabold text-[#101C14]">
                     {row.price},-
                   </p>
-                  <p className="text-[11px] text-[#101C1477]">{formatRelativeTime(row.firstSeen)}</p>
+                  <p className="text-[11px] text-[#101C1499]">{formatRelativeTime(row.firstSeen)}</p>
                 </div>
                 <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
               </div>

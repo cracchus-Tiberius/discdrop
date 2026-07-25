@@ -53,7 +53,7 @@ export function PriceTable({
           <h2 className="mb-1 text-2xl font-extrabold tracking-tight text-[#101C14]">
             Hvor kan du kjøpe
           </h2>
-          <p className="mt-6 rounded-2xl border-2 border-[#101C14] bg-white px-6 py-8 text-center text-sm text-[#101C1477]">
+          <p className="mt-6 rounded-2xl border-2 border-[#101C14] bg-white px-6 py-8 text-center text-sm text-[#101C1499]">
             Ingen priser funnet ennå. Vi oppdaterer prisene daglig.
           </p>
         </div>
@@ -127,7 +127,7 @@ export function PriceTable({
                             )}
                           </div>
                           {row.country === "SE" && row.voec && !inline && (
-                            <div className="mt-0.5 text-[11px] text-[#101C1477]">inkl. frakt og MVA</div>
+                            <div className="mt-0.5 text-[11px] text-[#101C1499]">inkl. frakt og MVA</div>
                           )}
                         </td>
                         {!inline && (
@@ -152,8 +152,6 @@ export function PriceTable({
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`dd-cta text-xs ${inline ? "px-3 py-1.5" : "px-4 py-2"}`}
-                            aria-disabled={!row.inStock}
-                            tabIndex={row.inStock ? 0 : -1}
                           >
                             {inline ? "Kjøp" : "Gå til butikk"}
                           </a>
@@ -188,7 +186,7 @@ export function PriceTable({
                           )}
                         </div>
                         {row.country === "SE" && row.voec && (
-                          <div className="mt-0.5 text-[11px] text-[#101C1477]">inkl. frakt og MVA</div>
+                          <div className="mt-0.5 text-[11px] text-[#101C1499]">inkl. frakt og MVA</div>
                         )}
                       </div>
                       <StockDot inStock={row.inStock} />
@@ -224,7 +222,7 @@ export function PriceTable({
           </>
         )}
 
-        <p className="mt-4 text-xs text-[#101C1477]">
+        <p className="mt-4 text-xs text-[#101C1499]">
           Prisene inkluderer 25% MVA. Fraktgrenser varierer per butikk.
         </p>
       </div>
@@ -613,7 +611,7 @@ export function DiscHeroSection({
               {/* Flight path card */}
               <div className="rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#B8E04A]">
                 <div className="mb-1 text-sm font-extrabold text-[#101C14]">Flyvebane</div>
-                <p className="mb-2 text-[11px] text-[#101C1477]">RHBH-flybaner sett ovenfra etter armhastighet.</p>
+                <p className="mb-2 text-[11px] text-[#101C1499]">RHBH-flybaner sett ovenfra etter armhastighet.</p>
                 <FlightPathSVG flight={disc.flight} />
               </div>
 
@@ -630,7 +628,7 @@ export function DiscHeroSection({
                 >
                   {disc.brand}
                 </Link>
-                <span className="text-[#101C1444]">·</span>
+                <span className="text-[#101C1499]">·</span>
                 <span className="rounded-md bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C14]">
                   {disc.type === "driver"
                     ? (disc.flight.speed >= 10 ? "Distance Driver" : "Fairway Driver")
@@ -729,7 +727,7 @@ export function DiscHeroSection({
                   <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
                 )}
                 {lastUpdated && (
-                  <span className="text-xs text-[#101C1477]">· Oppdatert {formatRelativeTime(lastUpdated)}</span>
+                  <span className="text-xs text-[#101C1499]">· Oppdatert {formatRelativeTime(lastUpdated)}</span>
                 )}
               </div>
 

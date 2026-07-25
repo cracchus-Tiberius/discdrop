@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SearchInput } from "@/components/SearchInput";
+import { discs } from "@/data/discs.js";
 
 const NAV_LINKS = [
   { href: "/", label: "Hjem" },
@@ -87,7 +88,7 @@ export function SiteHeader() {
               <SearchInput
                 value={query}
                 onChange={setQuery}
-                placeholder="Søk blant 683 disker …"
+                placeholder={`Søk blant ${discs.length} disker …`}
                 inputId="mobile-menu-search"
               />
             </div>
