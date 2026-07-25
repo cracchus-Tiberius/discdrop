@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-25T08:26:04.511Z",
+  "lastUpdated": "2026-07-25T18:37:34.458Z",
   "products": [
     {
       "store": "frisbeebutikken",
@@ -125,48 +125,6 @@
       "rawName": "300 PA-3",
       "price": 169,
       "url": "https://frisbeebutikken.no/products/300-pa-3",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CRYSTAL LINE SNOOPY FIRST RUN",
-      "price": 199,
-      "url": "https://aceshop.no/product/crystal-line-sniipy-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "R-PRO HYDRA",
-      "price": 179,
-      "url": "https://aceshop.no/product/r-pro-hydra/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "WIZARD SUPER SOFT",
-      "price": 149,
-      "url": "https://aceshop.no/product/wizard-super-soft/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "ZERO SPIKE MEDIUM",
-      "price": 145,
-      "url": "https://aceshop.no/product/zero-spike-medium/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "OPTO-X CULVERIN",
-      "price": 229,
-      "url": "https://aceshop.no/product/opto-x-culverin/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SL NEUTRON TURBULANCE",
-      "price": 219,
-      "url": "https://aceshop.no/product/sl-neutron-turbulance/",
       "inStock": true
     },
     {
@@ -28335,6 +28293,146 @@
       "rawName": "NEW Signature Coast - Prototype",
       "price": 255,
       "url": "https://discsport.se/discar/mold/coast",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CRYSTAL LINE SNOOPY FIRST RUN",
+      "price": 199,
+      "url": "https://aceshop.no/product/crystal-line-sniipy-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DX AVIARX3",
+      "price": 145,
+      "url": "https://aceshop.no/product/dx-aviarx3/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "HARD BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
+      "price": 169,
+      "url": "https://aceshop.no/product/hard-blend-ultraluna-paul-mcbeth-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "JEREMY KOLING SIGNATURE STAR AVIARX3",
+      "price": 199,
+      "url": "https://aceshop.no/product/jeremy-koling-signature-star-aviarx3/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SOFT BLEND ROOST",
+      "price": 139,
+      "url": "https://aceshop.no/product/soft-blend-roost/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SOFT BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
+      "price": 169,
+      "url": "https://aceshop.no/product/soft-blend-ultraluna-paul-mcbeth-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "WIZARD SUPER SOFT",
+      "price": 149,
+      "url": "https://aceshop.no/product/wizard-super-soft/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Z-LINE COLORSHIFT FOSSIL - FIRST RUN",
+      "price": 229,
+      "url": "https://aceshop.no/product/z-line-colorshift-fossil-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "5X PAIGE PIERCE Z SOL",
+      "price": 219,
+      "url": "https://aceshop.no/product/5x-paige-pierce-z-sol/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ESP JOY PAIGE PIERCE FIRST RUN",
+      "price": 229,
+      "url": "https://aceshop.no/product/esp-joy-paige-pierce-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ESP SOL PAIGE PIERCE 5X SIGNATURE SERIES",
+      "price": 219,
+      "url": "https://aceshop.no/product/esp-sol-paige-pierce-5x-signature-series/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ROYAL CLEAR FIRE ANNIKEN K. STEEN 2026",
+      "price": 279,
+      "url": "https://aceshop.no/product/royal-clear-fire-anniken-k-steen-2026/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Z-LINE SOL",
+      "price": 199,
+      "url": "https://aceshop.no/product/z-line-sol/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SL NEUTRON BOOST EAGEL MCMAHON TEAM SERIES",
+      "price": 245,
+      "url": "https://aceshop.no/product/sl-neutron-boost-eagel-mcmahon-team-series/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SL NEUTRON TURBULANCE",
+      "price": 219,
+      "url": "https://aceshop.no/product/sl-neutron-turbulance/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "K1 ÄLVA",
+      "price": 199,
+      "url": "https://aceshop.no/product/k1-alva/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "K1 ÄLVA GLOW",
+      "price": 219,
+      "url": "https://aceshop.no/product/k1-alva-glow/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SPECIAL BLEND HALLUX - RICKY WYSOCKI TOUR SERIES 2026",
+      "price": 279,
+      "url": "https://aceshop.no/product/special-blend-hallux-ricky-wysocki-tour-series-2026/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "STAR XCALIBER",
+      "price": 199,
+      "url": "https://aceshop.no/product/star-xcaliber/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "STAR XCALIBER NATE SEXTON",
+      "price": 199,
+      "url": "https://aceshop.no/product/star-xcaliber-nate-sexton/",
       "inStock": true
     }
   ]
