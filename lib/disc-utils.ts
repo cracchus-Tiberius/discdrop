@@ -74,35 +74,6 @@ export function getScrapedPrice(discId: string): {
  * Returns ONLY real scraped stores for a disc, shaped for the PriceTable.
  * Returns empty array if no scraped data exists — do NOT fall back to mock data.
  */
-export function getMergedStores(disc: Disc): Array<{
-  name: string;
-  url: string;
-  price: number;
-  inStock: boolean;
-  shipping: number;
-  freeShippingOver: number;
-}> {
-  const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[disc.id];
-  if (!scraped || scraped.length === 0) return [];
-
-  const valid = scraped.filter((e) => e.price >= MIN_VALID_PRICE_NOK);
-  if (valid.length === 0) return [];
-
-  const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
-
-  return valid.map((entry) => {
-    const meta = storeMeta[entry.store];
-    return {
-      name: meta?.name ?? entry.store,
-      url: entry.url,
-      price: entry.price,
-      inStock: entry.inStock,
-      shipping: meta?.shipping ?? 45,
-      freeShippingOver: meta?.freeShippingOver ?? 999,
-    };
-  });
-}
-
 /** ISO timestamp of last scrape, or null if never scraped */
 export const scrapedLastUpdated: string | null = scrapedPrices.lastUpdated as string | null;
 
@@ -194,104 +165,6 @@ export function getDiscImage(disc: Disc): string {
   return "/disc-placeholder.svg";
 }
 
-export function getBestInStockNOK(disc: Disc): {
-  best: number | null;
-  storeCount: number;
-  inStockCount: number;
-} {
-  const { price, storeCount, inStockCount } = getScrapedPrice(disc.id);
-  return { best: price, storeCount, inStockCount };
-}
-
-export function isOnSale(disc: Disc): boolean {
-  const { best } = getBestInStockNOK(disc);
-  if (best == null) return false;
-  let peak = 0;
-  for (const p of disc.priceHistory) {
-    if (typeof p === "number" && p > peak) peak = p;
-  }
-  if (peak === 0) return false;
-  return best > 0 && best < peak;
-}
-
-export function matchesSearch(disc: Disc, q: string): boolean {
-  if (!q.trim()) return false;
-  const s = q.toLowerCase();
-  const playerMatch =
-    "player" in disc && disc.player
-      ? disc.player.toLowerCase().includes(s)
-      : false;
-  return (
-    disc.name.toLowerCase().includes(s) ||
-    disc.brand.toLowerCase().includes(s) ||
-    playerMatch
-  );
-}
-
-const TOUR_SERIES_KW = ['tour series', 'team series', 'team championship series', 'signature series', 'mold team'];
-const FIRST_RUN_KW = ['first run', 'primal run'];
-const LIMITED_KW = ['limited edition', 'special edition', 'prototype', 'project lab coat', 'lab coat'];
-const PLAYER_NAMES_KW = [
-  'eagle mcmahon', 'calvin heimburg', 'ricky wysocki', 'simon lizotte', 'paige pierce',
-  'brodie smith', 'paul mcbeth', 'niklas anttila', 'bradley williams', 'gannon buhr',
-  'clay edwards', 'casey white', 'nate sexton', 'anthony barela', 'catrina allen',
-  'henna blomroos', 'eveliina salonen', 'vaino makela', 'kristofer hivju', 'albert tamm',
-  'kristin lätt', 'kristin tattar', 'johne mccray', 'dallas garber', 'joseph anderson',
-  'silva saarinen', 'sockibomb', 'jeremy koling', 'james conrad', 'kona montgomery',
-  'ida emilie nesse', 'anniken steen', 'julia fors', 'juliana korver', 'josef berg',
-  'cadence burge', 'kyle klein', 'aaron gossage', 'holyn handley', 'ella hansen',
-  'isaac robinson', 'chris dickerson', 'adam hammes', 'silas schultz',
-];
-
-function editionToBadgeLabel(edition: string): string | null {
-  const ed = edition.toLowerCase();
-  if (TOUR_SERIES_KW.some((kw) => ed.includes(kw))) return "Tour Series";
-  if (PLAYER_NAMES_KW.some((p) => ed.includes(p))) return "Tour Series";
-  if (FIRST_RUN_KW.some((kw) => ed.includes(kw))) return "First Run";
-  if (LIMITED_KW.some((kw) => ed.includes(kw))) return "Limited";
-  return null;
-}
-
-export function releaseBadge(disc: Disc): string | null {
-  const { inStockCount } = getScrapedPrice(disc.id);
-  const tags = disc.tags as string[];
-
-  if (tags.includes("sold-out") || inStockCount === 0) return "Sold Out";
-
-  // Derive badge from scraped edition field
-  const entries = getAllScrapedEntries(disc.id);
-  for (const entry of entries) {
-    if (!entry.edition) continue;
-    const label = editionToBadgeLabel(entry.edition);
-    if (label) return label;
-  }
-
-  // Fall back to explicit manual tags
-  if (tags.includes("limited")) return "Limited";
-  if (tags.includes("first-run")) return "First Run";
-  if (tags.includes("tour-series")) return "Tour Series";
-  if (tags.includes("new") || tags.includes("new-drop")) return "New Drop";
-
-  return null;
-}
-
-export function badgeStyles(kind: string | null): string {
-  switch (kind) {
-    case "Sold Out":
-      return "bg-white/10 text-muted";
-    case "Limited":
-      return "bg-alert/20 text-alert";
-    case "First Run":
-      return "bg-red-700/20 text-red-400";
-    case "Tour Series":
-      return "bg-accent/20 text-accent";
-    case "New Drop":
-      return "bg-accent/10 text-accent";
-    default:
-      return "bg-accent/10 text-accent";
-  }
-}
-
 /** "for 2 dager siden" / "akkurat nå" style relative time, Norwegian */
 export function formatRelativeTime(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
@@ -301,20 +174,4 @@ export function formatRelativeTime(iso: string): string {
   if (hours < 24) return `for ${hours} timer siden`;
   const days = Math.floor(hours / 24);
   return days === 1 ? "for 1 dag siden" : `for ${days} dager siden`;
-}
-
-export const TABS = [
-  { id: "all" as const, label: "All" },
-  { id: "driver" as const, label: "Drivers" },
-  { id: "midrange" as const, label: "Mid-range" },
-  { id: "putter" as const, label: "Putters" },
-  { id: "sale" as const, label: "On Sale" },
-];
-
-export type TabId = (typeof TABS)[number]["id"];
-
-export function filterByTab(list: Disc[], tab: TabId): Disc[] {
-  if (tab === "all") return list;
-  if (tab === "sale") return list.filter(isOnSale);
-  return list.filter((d) => d.type === tab);
 }
