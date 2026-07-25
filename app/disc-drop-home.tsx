@@ -618,10 +618,10 @@ export function DiscDropHome() {
       <SiteHeader />
       <main>
         <Hero />
+        <PopularDiscs />
         <HotDrops />
         <LatestDrops />
         <WhyDiscDrop />
-        <PopularDiscs />
       </main>
       <SiteFooter />
     </div>
