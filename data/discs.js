@@ -422,6 +422,7 @@ export const discs = [
   { id:"axiom-rhythm",   name:"Rhythm",   brand:"Axiom", type:"midrange", flight:{speed:5,glide:5,turn:-1,fade:1},   image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
 
   // ── MVP ───────────────────────────────────────────────────────────────────
+  { id:"mvp-control", name:"Control", brand:"MVP", type:"driver",   flight:{speed:10,glide:5,turn:-0.5,fade:2},image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"mvp-octane",  name:"Octane",  brand:"MVP", type:"driver",   flight:{speed:13,glide:5,turn:-1,fade:2},  image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"mvp-relay",   name:"Relay",   brand:"MVP", type:"driver",   flight:{speed:6,glide:5,turn:-2,fade:1},   image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"mvp-servo",   name:"Servo",   brand:"MVP", type:"driver",   flight:{speed:9,glide:5,turn:0,fade:2},    image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
