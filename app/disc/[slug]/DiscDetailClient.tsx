@@ -608,6 +608,24 @@ export function DiscHeroSection({
                 </div>
               </div>
 
+              {/* Beste pris — mobile only: on md+ the grid stacks left/right
+                  columns as whole blocks, so this needs its own copy right
+                  under the image instead of relying on the one further down
+                  the (desktop-only-adjacent) right column. */}
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 md:hidden">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Beste pris</span>
+                {bestEntry != null ? (
+                  <>
+                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.price}</span>
+                    {inStockCount > 0 && (
+                      <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
+                    )}
+                  </>
+                ) : (
+                  <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
+                )}
+              </div>
+
               {/* Flight path card */}
               <div className="rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#B8E04A]">
                 <div className="mb-1 text-sm font-extrabold text-[#101C14]">Flyvebane</div>
@@ -657,9 +675,27 @@ export function DiscHeroSection({
                 </h1>
               </div>
 
+              {/* Beste pris — desktop only (mobile has its own copy right under the image) */}
+              <div className="hidden flex-wrap items-baseline gap-x-2 gap-y-0.5 md:flex">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Beste pris</span>
+                {bestEntry != null ? (
+                  <>
+                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.price}</span>
+                    {inStockCount > 0 && (
+                      <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
+                    )}
+                  </>
+                ) : (
+                  <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
+                )}
+                {lastUpdated && (
+                  <span className="text-xs text-[#101C1499]">· Oppdatert {formatRelativeTime(lastUpdated)}</span>
+                )}
+              </div>
+
               {/* Description */}
               {description && (
-                <p className="mt-3 text-sm leading-relaxed text-[#101C1499]">{description}</p>
+                <p className="mt-1 text-sm leading-relaxed text-[#101C1499]">{description}</p>
               )}
 
               {/* Plastic chips */}
@@ -711,24 +747,6 @@ export function DiscHeroSection({
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Beste pris — compact single line */}
-              <div className="mt-[36px] flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Beste pris</span>
-                {bestEntry != null ? (
-                  <>
-                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.price}</span>
-                    {inStockCount > 0 && (
-                      <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
-                    )}
-                  </>
-                ) : (
-                  <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
-                )}
-                {lastUpdated && (
-                  <span className="text-xs text-[#101C1499]">· Oppdatert {formatRelativeTime(lastUpdated)}</span>
-                )}
               </div>
 
               {/* Prissammenligning — inline in right column */}
