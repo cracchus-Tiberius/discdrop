@@ -9,6 +9,7 @@ import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
 import { getScrapedPrice, getDiscImage, entryLandedNOK, formatRelativeTime } from "@/lib/disc-utils";
+import { BADGE_STYLES } from "@/lib/badge-styles";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -18,32 +19,14 @@ function bestPriceNOK(disc: Disc): number | null {
 }
 
 // ── Badge ──────────────────────────────────────────────────────────────────
-const BADGE_STYLES: Record<string, string> = {
-  hot: "bg-[#E8704A] text-white",
-  new: "bg-[#B8E04A] text-[#101C14]",
-  "new-drop": "bg-[#B8E04A] text-[#101C14]",
-  limited: "bg-[#E8704A] text-white",
-  "first-run": "bg-[#101C14] text-[#B8E04A]",
-  "tour-series": "bg-[#B8E04A] text-[#101C14]",
-  "sold-out": "bg-[#888] text-white",
-};
-
-const BADGE_LABELS: Record<string, string> = {
-  hot: "HOT",
-  new: "NY",
-  "new-drop": "NY",
-  limited: "LIMITED",
-  "first-run": "FIRST RUN",
-  "tour-series": "TOUR SERIES",
-  "sold-out": "UTSOLGT",
-};
-
 function Badge({ tag }: { tag: string }) {
+  const s = BADGE_STYLES[tag];
   return (
     <span
-      className={`inline-flex w-fit -rotate-2 items-center rounded-lg px-2.5 py-1 text-[11px] font-extrabold tracking-wide shadow-[2px_2px_0_#101C14] ${BADGE_STYLES[tag] ?? "bg-gray-200 text-gray-700"}`}
+      className="inline-flex w-fit -rotate-2 items-center rounded-lg px-2.5 py-1 text-[11px] font-extrabold tracking-wide shadow-[2px_2px_0_#101C14]"
+      style={{ background: s?.bg ?? "#E5E7EB", color: s?.text ?? "#374151" }}
     >
-      {BADGE_LABELS[tag] ?? tag.toUpperCase()}
+      {s?.label ?? tag.toUpperCase()}
     </span>
   );
 }

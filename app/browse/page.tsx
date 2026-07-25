@@ -7,6 +7,7 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
 import { getScrapedPrice, getDiscImage, getDiscLastScraped } from "@/lib/disc-utils";
+import { BADGE_STYLES } from "@/lib/badge-styles";
 import { discs } from "@/data/discs.js";
 
 type Disc = (typeof discs)[number];
@@ -60,15 +61,6 @@ const CHIP_IMPLIED_SORT: Partial<Record<ChipId, SortBy>> = {
   overstable: "fade-desc",
   understable: "turn-asc",
   "most-stores": "stores",
-};
-
-const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
-  hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
-  new: { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  limited: { bg: "#9B59B6", text: "#fff", label: "BEGRENSET" },
-  "tour-series": { bg: "#6B5B95", text: "#fff", label: "TOUR SERIES" },
-  "sold-out": { bg: "#888", text: "#fff", label: "UTSOLGT" },
 };
 
 const CHIPS: {

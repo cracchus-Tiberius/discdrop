@@ -5,6 +5,7 @@ import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import type { RichStoreEntry } from "@/lib/disc-utils";
 import { formatRelativeTime } from "@/lib/disc-utils";
+import { BADGE_STYLES as BADGE_STYLES_CLIENT } from "@/lib/badge-styles";
 
 // ── Plastic normalization ────────────────────────────────────────────────────
 // Scrapers sometimes emit word-swapped names (e.g. "Horizon C-Line" vs "C-Line Horizon").
@@ -603,16 +604,6 @@ const TYPE_LABELS_CLIENT: Record<string, string> = {
   driver: "Distance Driver",
   midrange: "Midrange",
   putter: "Putter",
-};
-
-const BADGE_STYLES_CLIENT: Record<string, { bg: string; text: string; label: string }> = {
-  hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
-  new: { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  limited: { bg: "#9B59B6", text: "#fff", label: "BEGRENSET" },
-  "tour-series": { bg: "#6B5B95", text: "#fff", label: "TOUR SERIES" },
-  "sold-out": { bg: "#888", text: "#fff", label: "UTSOLGT" },
-  upcoming: { bg: "#3B82F6", text: "#fff", label: "KOMMENDE" },
 };
 
 type DiscInfo = {

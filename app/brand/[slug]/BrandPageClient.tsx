@@ -5,6 +5,7 @@ import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import { SiteHeader } from "@/components/SiteHeader";
 import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
+import { BADGE_STYLES } from "@/lib/badge-styles";
 import { discs } from "@/data/discs.js";
 import topSellers from "@/data/top-sellers.json";
 
@@ -26,13 +27,6 @@ const TYPE_LABEL: Record<string, string> = {
   putter: "Putter",
 };
 
-const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
-  hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
-  new: { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  limited: { bg: "#9B59B6", text: "#fff", label: "BEGRENSET" },
-  "tour-series": { bg: "#6B5B95", text: "#fff", label: "TOUR SERIES" },
-};
 
 // Logo extension map — must match public/images/brands/ files
 const BRAND_LOGO_EXT: Record<string, string> = {
