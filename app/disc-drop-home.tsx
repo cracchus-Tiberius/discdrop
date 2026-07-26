@@ -17,6 +17,16 @@ import { RelativeTime } from "@/components/RelativeTime";
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
 
+// "Now" for age-based classification (new-drop badge, latest-drops cutoff) must be a
+// value that's identical during the static build AND when a client hydrates later —
+// Date.now() differs between those two moments and flips classification right at
+// SSR/client — a page loading the moment a disc crosses the threshold, causing a
+// hydration mismatch (a card/badge present on the server render but not the client's,
+// or vice versa — worse than a text mismatch, since whole nodes differ). scrapedLastUpdated
+// is a fixed value baked into the page from data/scraped-prices.json, so it's identical
+// on both renders.
+const ASOF_MS = scrapedLastUpdated ? new Date(scrapedLastUpdated).getTime() : Date.now();
+
 function bestPriceNOK(disc: Disc): number | null {
   return getScrapedPrice(disc.id).price;
 }
@@ -83,7 +93,7 @@ function editionToBadge(edition: string | null, inStock: boolean, firstSeen?: st
   // (set once, never overwritten) rather than lastScraped, which now bumps
   // on every single scrape run and would otherwise make everything "new".
   if (firstSeen) {
-    const ageMs = Date.now() - new Date(firstSeen).getTime();
+    const ageMs = ASOF_MS - new Date(firstSeen).getTime();
     if (ageMs < 14 * 24 * 60 * 60 * 1000) return 'new-drop';
   }
   return 'limited';
@@ -233,7 +243,7 @@ function buildLatestDropRows(): LatestDropRow[] {
   type ScrapedEntry = { store: string; price: number; inStock: boolean; url: string; plastic?: string | null; firstSeen?: string; lastScraped: string };
   const prices = (scrapedPrices as { prices: Record<string, ScrapedEntry[]> }).prices;
   const storeMeta = scrapedPrices.stores as Record<string, Parameters<typeof entryLandedNOK>[1]>;
-  const cutoff = Date.now() - LATEST_DROP_MAX_AGE_MS;
+  const cutoff = ASOF_MS - LATEST_DROP_MAX_AGE_MS;
 
   const rows: LatestDropRow[] = [];
 
