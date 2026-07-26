@@ -9,13 +9,14 @@ import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 type Disc = (typeof discs)[number];
 
 const TYPE_LABEL: Record<string, string> = {
-  driver: "Distance Driver",
+  distance: "Distance Driver",
+  fairway: "Fairway Driver",
   midrange: "Midrange",
   putter: "Putter",
 };
 
 const TYPE_CHIPS = [
-  { id: "driver", label: "Distance Driver" },
+  { id: "distance", label: "Distance Driver" },
   { id: "fairway", label: "Fairway Driver" },
   { id: "midrange", label: "Midrange" },
   { id: "putter", label: "Putter" },
@@ -67,15 +68,7 @@ export function SearchInput({
     return (discs as Disc[])
       .filter((d) => {
         // Type filter (chip)
-        if (quickType) {
-          const isDriver = d.type === "driver";
-          const isFairway = isDriver && d.flight.speed < 10;
-          const isDistance = isDriver && d.flight.speed >= 10;
-          if (quickType === "fairway" && !isFairway) return false;
-          if (quickType === "driver" && !isDistance) return false;
-          if (quickType === "midrange" && d.type !== "midrange") return false;
-          if (quickType === "putter" && d.type !== "putter") return false;
-        }
+        if (quickType && d.type !== quickType) return false;
         // Brand filter (chip)
         if (quickBrand && d.brand !== quickBrand) return false;
         // Text query
@@ -291,9 +284,7 @@ export function SearchInput({
                     </div>
                     <div className="ml-3 flex shrink-0 items-center gap-3">
                       <span className="hidden rounded-full bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C1499] sm:inline">
-                        {d.type === "driver"
-                          ? (d.flight.speed >= 10 ? "Distance Driver" : "Fairway Driver")
-                          : (TYPE_LABEL[d.type] ?? d.type)}
+                        {TYPE_LABEL[d.type] ?? d.type}
                       </span>
                       {price != null && (
                         <span className="text-sm font-extrabold text-[#101C14]">fra kr {price}</span>

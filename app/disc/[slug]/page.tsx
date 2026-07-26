@@ -68,7 +68,7 @@ export default async function DiscDetailPage({
     "@type": "Product",
     name: disc.name,
     brand: { "@type": "Brand", name: disc.brand },
-    description: `${disc.type === "driver" ? "Driver" : disc.type === "midrange" ? "Midrange" : "Putter"} diskgolfdisk fra ${disc.brand}`,
+    description: `${disc.type === "distance" ? "Distance driver" : disc.type === "fairway" ? "Fairway driver" : disc.type === "midrange" ? "Midrange" : "Putter"} diskgolfdisk fra ${disc.brand}`,
     ...(discImage !== "/disc-placeholder.svg" ? { image: discImage } : {}),
     ...(storeCount > 0
       ? {

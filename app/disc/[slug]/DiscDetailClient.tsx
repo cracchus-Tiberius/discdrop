@@ -448,7 +448,8 @@ function BrandLogo({ brand }: { brand: string }) {
 // ── Disc Hero Section ────────────────────────────────────────────────────────
 
 const TYPE_LABELS_CLIENT: Record<string, string> = {
-  driver: "Distance Driver",
+  distance: "Distance Driver",
+  fairway: "Fairway Driver",
   midrange: "Midrange",
   putter: "Putter",
 };
@@ -572,15 +573,9 @@ export function DiscHeroSection({
 
   // ── Breadcrumb ──────────────────────────────────────────────────────────────
 
-  const breadcrumbHref =
-    disc.type === "driver"
-      ? disc.flight.speed >= 10 ? "/browse?type=distance" : "/browse?type=fairway"
-      : `/browse?type=${disc.type}`;
+  const breadcrumbHref = `/browse?type=${disc.type}`;
 
-  const breadcrumbLabel =
-    disc.type === "driver"
-      ? disc.flight.speed >= 10 ? "Distance Drivers" : "Fairway Drivers"
-      : (TYPE_LABELS_CLIENT[disc.type] ?? disc.type) + "s";
+  const breadcrumbLabel = (TYPE_LABELS_CLIENT[disc.type] ?? disc.type) + "s";
 
   const flightCells = [
     { label: "Speed", value: disc.flight.speed },
@@ -648,9 +643,7 @@ export function DiscHeroSection({
                 </Link>
                 <span className="text-[#101C1499]">·</span>
                 <span className="rounded-md bg-[#F1EFE6] px-2.5 py-1 text-xs font-semibold text-[#101C14]">
-                  {disc.type === "driver"
-                    ? (disc.flight.speed >= 10 ? "Distance Driver" : "Fairway Driver")
-                    : (TYPE_LABELS_CLIENT[disc.type] ?? disc.type)}
+                  {TYPE_LABELS_CLIENT[disc.type] ?? disc.type}
                 </span>
                 {disc.tags.map((tag) => {
                   const style = BADGE_STYLES_CLIENT[tag];

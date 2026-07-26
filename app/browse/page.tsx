@@ -137,7 +137,8 @@ const BRANDS = [
 const BRAND_COUNT = new Set(discs.map((d) => d.brand)).size;
 
 const TYPE_LABEL: Record<string, string> = {
-  driver: "Driver",
+  distance: "Distance Driver",
+  fairway: "Fairway Driver",
   midrange: "Mid-range",
   putter: "Putter",
 };
@@ -241,9 +242,9 @@ function BrowseContent() {
 
     // Type filter
     if (typeFilter === "distance") {
-      list = list.filter((d) => d.type === "driver" && d.flight.speed >= 10);
+      list = list.filter((d) => d.type === "distance");
     } else if (typeFilter === "fairway") {
-      list = list.filter((d) => d.type === "driver" && d.flight.speed < 10);
+      list = list.filter((d) => d.type === "fairway");
     } else if (typeFilter === "midrange") {
       list = list.filter((d) => d.type === "midrange");
     } else if (typeFilter === "putter") {

@@ -24,7 +24,8 @@ const TYPE_PILLS: { id: TypeFilter; label: string }[] = [
 ];
 
 const TYPE_LABEL: Record<string, string> = {
-  driver: "Driver",
+  distance: "Distance Driver",
+  fairway: "Fairway Driver",
   midrange: "Mid-range",
   putter: "Putter",
 };
@@ -92,8 +93,8 @@ export default function BrandPageClient({
 
   const filtered = useMemo(() => {
     let list = discs;
-    if (typeFilter === "distance") list = list.filter((d) => d.type === "driver" && d.flight.speed >= 10);
-    else if (typeFilter === "fairway") list = list.filter((d) => d.type === "driver" && d.flight.speed < 10);
+    if (typeFilter === "distance") list = list.filter((d) => d.type === "distance");
+    else if (typeFilter === "fairway") list = list.filter((d) => d.type === "fairway");
     else if (typeFilter === "midrange") list = list.filter((d) => d.type === "midrange");
     else if (typeFilter === "putter") list = list.filter((d) => d.type === "putter");
     return sortDiscs(list);
