@@ -31,6 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${base}/butikker/`,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
     ...discEntries,
   ];
 }

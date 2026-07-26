@@ -113,6 +113,8 @@ export function SiteHeader() {
               </span>
             </div>
             <p className="mt-6 text-xs text-white/40">
+              <Link href="/butikker" onClick={() => setMenuOpen(false)} className="hover:text-white/70">Butikker</Link>
+              {" · "}
               <Link href="/kontakt" onClick={() => setMenuOpen(false)} className="hover:text-white/70">Kontakt</Link>
               {" · "}
               <Link href="/personvern" onClick={() => setMenuOpen(false)} className="hover:text-white/70">Personvern</Link>

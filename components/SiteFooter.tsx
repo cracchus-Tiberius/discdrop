@@ -6,7 +6,7 @@ export function SiteFooter({
 }: {
   className?: string;
   /** Omit the link to the page the footer is currently rendered on. */
-  hideLink?: "personvern" | "kontakt";
+  hideLink?: "personvern" | "kontakt" | "butikker";
 }) {
   return (
     <footer className={`border-t-2 border-[#101C14] bg-[#101C14] px-5 py-6 text-[#FFFDF6] md:px-10 ${className}`}>
@@ -19,6 +19,9 @@ export function SiteFooter({
         </span>
         <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
         <div className="flex gap-4">
+          {hideLink !== "butikker" && (
+            <Link href="/butikker" className="transition-colors hover:text-[#FFFDF6]">Butikker</Link>
+          )}
           {hideLink !== "personvern" && (
             <Link href="/personvern" className="transition-colors hover:text-[#FFFDF6]">Personvern</Link>
           )}
