@@ -5,7 +5,7 @@ import scrapedPrices from "@/data/scraped-prices.json";
 import { STORE_PROFILES } from "@/data/store-profiles.js";
 
 export const metadata: Metadata = {
-  title: "Butikkene våre | DiscDrop",
+  title: "Butikkene vi sammenligner | DiscDrop",
   description:
     "Se hvilke nettbutikker DiscDrop henter priser fra, og bli kjent med hver enkelt butikk i deres egne ord.",
 };
@@ -40,7 +40,7 @@ export default function ButikkerPage() {
 
       <main className="mx-auto max-w-5xl px-6 py-14 sm:px-8">
         <h1 className="mb-2 text-4xl font-extrabold tracking-tight text-[#101C14]">
-          Butikkene våre
+          Butikkene vi sammenligner
         </h1>
         <p className="mb-12 max-w-2xl text-[#101C1499]">
           DiscDrop sammenligner priser fra {storeKeys.length} nettbutikker i Norge og
@@ -80,7 +80,7 @@ export default function ButikkerPage() {
                 )}
 
                 <div className="mt-auto space-y-1 border-t border-[#101C1414] pt-4 text-[12px] text-[#101C1499]">
-                  <p>{discCount} disker hos oss</p>
+                  <p>{discCount} disker i vår prisdatabase</p>
                   <p>
                     {store.freeShippingOver
                       ? `Fri frakt over kr ${store.freeShippingOver} · ellers kr ${store.shipping}`
