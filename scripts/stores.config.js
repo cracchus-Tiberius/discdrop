@@ -18,7 +18,7 @@ const DISC_CATALOG = SOURCE_DISCS.map(({ id, name, brand }) => ({ id, name, bran
 // Category slugs that indicate used/second-hand products — applied universally
 // In WooCommerce HTML: appears as "product_cat-{slug}" in the <li> class
 // In WooCommerce REST API: appears in product.categories[].slug
-const SKIP_CATEGORY_SLUGS = ['second-hand', 'brukt', 'used', 'nice-not-perfect'];
+const SKIP_CATEGORY_SLUGS = ['second-hand', 'brukt', 'used', 'nice-not-perfect', 'begagnad', 'begagnade'];
 
 // Used keyword check for Shopify product_type / tags fields
 function isUsedProductMeta(productType, tags) {
@@ -89,6 +89,26 @@ const STORE_CONFIGS = {
     country: 'SE',
     currency: 'EUR',
     shipping: 40, // 39 SEK ≈ 40 NOK
+    voec: true,
+  },
+  ugglans: {
+    key: 'ugglans',
+    name: 'Ugglans Discgolf',
+    url: 'https://ugglansdiscgolf.se',
+    freeShippingOver: 800,
+    shipping: 45,
+    country: 'SE',
+    currency: 'SEK',
+    voec: true,
+  },
+  discace: {
+    key: 'discace',
+    name: 'Discace of Sweden',
+    url: 'https://discaceofsweden.com',
+    freeShippingOver: 700,
+    shipping: 29,
+    country: 'SE',
+    currency: 'SEK',
     voec: true,
   },
 };

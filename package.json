@@ -20,6 +20,8 @@
     "scrape:discexpress": "node scripts/scrape-discexpress.js",
     "scrape:rocketdiscs": "node scripts/scrape-rocketdiscs.js",
     "scrape:discsport": "node scripts/scrape-discsport.js",
+    "scrape:ugglans": "node scripts/scrape-ugglans.js",
+    "scrape:discace": "node scripts/scrape-discace.js",
     "scrape:all": "node scripts/scrape-all.js",
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",

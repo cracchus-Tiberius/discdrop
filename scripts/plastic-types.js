@@ -273,6 +273,7 @@ const USED_KEYWORDS = [
   'second hand', 'brukt', 'x-out', ' xout', 'x out',
   'blank stamp', 'blank disc', 'nice not perfect', 'recycled', 'recycling',
   'b-grade', 'b grade', 'factory second', 'lab second', 'practice disc',
+  'begagnad', 'begagnade', 'disc replay',
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

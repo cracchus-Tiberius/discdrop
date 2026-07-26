@@ -34,6 +34,8 @@ const STEPS = [
   { name: 'Discexpress',                     cmd: 'node scripts/scrape-discexpress.js' },
   { name: 'Rocketdiscs',                     cmd: 'node scripts/scrape-rocketdiscs.js' },
   { name: 'Discsport',                       cmd: 'node scripts/scrape-discsport.js' },
+  { name: 'Ugglans Discgolf',                cmd: 'node scripts/scrape-ugglans.js' },
+  { name: 'Discace of Sweden',               cmd: 'node scripts/scrape-discace.js' },
   { name: 'Fetch images',                    cmd: 'node scripts/fetch-images.js' },
   { name: 'Enrich variants',                 cmd: 'node scripts/enrich-variants.js' },
 ];
