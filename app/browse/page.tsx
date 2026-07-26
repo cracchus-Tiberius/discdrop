@@ -11,6 +11,7 @@ import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
 import { discs } from "@/data/discs.js";
+import scrapedPrices from "@/data/scraped-prices.json";
 
 type Disc = (typeof discs)[number];
 type TypeFilter = "all" | "distance" | "fairway" | "midrange" | "putter";
@@ -135,6 +136,7 @@ const BRANDS = [
   ...Array.from(new Set(discs.map((d) => d.brand))).sort(),
 ];
 const BRAND_COUNT = new Set(discs.map((d) => d.brand)).size;
+const STORE_COUNT = Object.keys(scrapedPrices.stores).length;
 
 const TYPE_LABEL: Record<string, string> = {
   distance: "Distance Driver",
@@ -330,7 +332,7 @@ function BrowseContent() {
               Alle disker
             </h1>
             <p className="text-sm text-[#101C1499] sm:text-base">
-              {discs.length} disker fra {BRAND_COUNT} merker
+              {discs.length} disker fra {BRAND_COUNT} merker · {STORE_COUNT} butikker
             </p>
           </div>
           <div className="mt-6">
