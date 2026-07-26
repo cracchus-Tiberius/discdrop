@@ -32,6 +32,12 @@ Package manager: pnpm (always use pnpm, never npm).
 - scraped-prices.json — real store prices, updated by pnpm scrape
 - Only show prices from scraped-prices.json, never mock store data
 - Run pnpm scrape to update prices from Norwegian stores
+- top-sellers.json — drives "Populære disker" on the homepage. Refreshed every
+  ~14 days by scripts/scrape-top-sellers.js (.github/workflows/refresh-top-sellers.yml,
+  cron on the 1st/15th) from Infinite Discs' rolling "top selling last month" page,
+  matched to our catalog and filtered to discs with real store coverage. Kastaplast
+  Berg is pinned at the top regardless of the feed — a US retailer's ranking won't
+  surface a Scandinavian-market favorite. Run manually with: pnpm scrape:top-sellers
 
 ## Scraper
 - scripts/scrape-all.js runs every store scraper in sequence (10-min timeout each,

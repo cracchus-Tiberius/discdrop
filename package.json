@@ -23,6 +23,7 @@
     "scrape:ugglans": "node scripts/scrape-ugglans.js",
     "scrape:discace": "node scripts/scrape-discace.js",
     "scrape:all": "node scripts/scrape-all.js",
+    "scrape:top-sellers": "node scripts/scrape-top-sellers.js",
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",
     "check-alerts": "node scripts/check-alerts.js"

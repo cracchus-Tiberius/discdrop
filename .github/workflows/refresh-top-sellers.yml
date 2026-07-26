@@ -1,0 +1,60 @@
+name: Refresh Top Sellers & Deploy
+
+on:
+  schedule:
+    - cron: '0 6 1,15 * *'  # 06:00 UTC on the 1st and 15th (~every 14 days)
+  workflow_dispatch:
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run scrape:top-sellers
+        run: pnpm scrape:top-sellers
+
+      - name: Commit updated data
+        run: |
+          git config user.name "DiscDrop Bot"
+          git config user.email "bot@discdrop.net"
+          git add -A -- data/top-sellers.json
+          git diff --staged --quiet || git commit -m "chore: refresh top-sellers list $(date +%Y-%m-%d)"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              break
+            fi
+            echo "Push rejected (attempt $attempt/5) — rebasing onto origin/main and retrying"
+            git fetch origin main
+            git rebase origin/main
+            if [ "$attempt" -eq 5 ]; then
+              echo "::error::git push failed after 5 attempts"
+              exit 1
+            fi
+          done
+
+      - name: Build
+        run: pnpm build
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy out --project-name=discdrop --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
