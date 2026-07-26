@@ -38,11 +38,6 @@ function apiTypeToCategory(type: string, speed: number): GeneratedDisc["category
   return "midrange";
 }
 
-function randomId(): string {
-  const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-  return Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
-}
-
 // ── Step indicator ─────────────────────────────────────────────────────────
 
 function StepIndicator({ step }: { step: number }) {
@@ -268,7 +263,6 @@ export default function BuildBagPage() {
         priceNOK: d.priceNOK,
       }));
 
-      const id = randomId();
       const stored: StoredBag = {
         answers,
         discs: generated,
@@ -276,6 +270,19 @@ export default function BuildBagPage() {
         summary: data.summary,
         bagTips: data.bagTips,
       };
+
+      // Save server-side so a shared /bag/[id] link resolves on any device —
+      // localStorage alone only works in the browser that generated it.
+      const saveRes = await fetch("/api/bags", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(stored),
+      });
+      if (!saveRes.ok) throw new Error("Failed to save bag");
+      const { id } = (await saveRes.json()) as { id: string };
+
+      // Cache locally too, so this same device doesn't need a network round
+      // trip to view the bag it just built.
       localStorage.setItem(`discdrop_bag_${id}`, JSON.stringify(stored));
       router.push(`/bag?id=${id}`);
     } catch {

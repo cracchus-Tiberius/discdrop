@@ -354,16 +354,36 @@ export function BagPageClient() {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const raw = localStorage.getItem(`discdrop_bag_${id}`);
-    if (!raw) {
+    if (!id) {
       setBagData(null);
       return;
     }
-    try {
-      setBagData(JSON.parse(raw) as StoredBag);
-    } catch {
-      setBagData(null);
+
+    // Same device that generated it — instant, no network round trip.
+    const raw = localStorage.getItem(`discdrop_bag_${id}`);
+    if (raw) {
+      try {
+        setBagData(JSON.parse(raw) as StoredBag);
+        return;
+      } catch {
+        // fall through to server fetch
+      }
     }
+
+    // Shared link opened elsewhere — localStorage won't have it, so fetch
+    // the server copy instead.
+    let cancelled = false;
+    fetch(`/api/bags/${id}`)
+      .then((res) => (res.ok ? (res.json() as Promise<StoredBag>) : null))
+      .then((data) => {
+        if (!cancelled) setBagData(data);
+      })
+      .catch(() => {
+        if (!cancelled) setBagData(null);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, [id]);
 
   if (bagData === "loading") {
