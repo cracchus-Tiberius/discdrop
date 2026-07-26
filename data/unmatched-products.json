@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-26T12:03:52.878Z",
+  "lastUpdated": "2026-07-26T12:25:54.959Z",
   "products": [
     {
       "store": "frisbeebutikken",
@@ -14041,6 +14041,594 @@
       "rawName": "Gavekort på DiscShopen.no – 1000",
       "price": 1000,
       "url": "https://discshopen.no/produkt/1000kr/",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Backpack",
+      "price": 425,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-backpack",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Älva - Swedish Open",
+      "price": 198,
+      "url": "https://ugglansdiscgolf.se/products/k1-alva-swedish-open",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans slim shoulderbag",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-slim-shoulderbag",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "2026 Ledgestone Jawbreaker Z Flx Hallux",
+      "price": 283,
+      "url": "https://ugglansdiscgolf.se/products/2026-ledgestone-jawbreaker-z-flx-hallux",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "2026 Ledgestone Ti Colorshift Impact",
+      "price": 283,
+      "url": "https://ugglansdiscgolf.se/products/2026-ledgestone-ti-colorshift-impact",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "ESP First run Hallux Ricky Wysocki",
+      "price": 217,
+      "url": "https://ugglansdiscgolf.se/products/ricky-wysocki-prototype-hallux-kopia",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Discmania Tour Bag",
+      "price": 1892,
+      "url": "https://ugglansdiscgolf.se/products/discmania-tour-bag",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Discmania Fanatic Sky bag",
+      "price": 945,
+      "url": "https://ugglansdiscgolf.se/products/discmania-fanatic-sky-bag",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Neutron Boost",
+      "price": 169,
+      "url": "https://ugglansdiscgolf.se/products/neutron-boost",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Stainless Steel Water Bottle - Latitude 64",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/stainless-steel-water-bottle-discmania-kopia",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Stainless Steel Water Bottle - Kastaplast",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/stainless-steel-water-bottle-discmania-kopia-kopia",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Stainless Steel Water Bottle - Discmania",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/stainless-steel-water-bottle-discmania",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ricky Wysocki First Run Z Colorshift Fossil",
+      "price": 217,
+      "url": "https://ugglansdiscgolf.se/products/ricky-wysocki-first-run-z-colorshift-fossil",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Axiom Premium Starter Kit",
+      "price": 472,
+      "url": "https://ugglansdiscgolf.se/products/axiom-premium-starter-kit",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Kastaplast Hiva Messenger Bag 2.0 Mint colour on visible seams",
+      "price": 567,
+      "url": "https://ugglansdiscgolf.se/products/kastaplast-hiva-messenger-bag",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Doubles - Ultuna 6/9",
+      "price": 662,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-uspastorp-6-9-kopia",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Doubles - Bockarp 13/9",
+      "price": 662,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-bockarp-13-9",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Doubles - Ymer 20/9",
+      "price": 662,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-ymer-20-9",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "ESP Caliber - Test Flight (Seppo Paju)",
+      "price": 283,
+      "url": "https://ugglansdiscgolf.se/products/esp-caliber-test-flight-seppo-paju",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Kasta Set",
+      "price": 434,
+      "url": "https://ugglansdiscgolf.se/products/kasta-set",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "2026 Ledgestone Jawbreaker Z Flx Fossil",
+      "price": 283,
+      "url": "https://ugglansdiscgolf.se/products/2026-ledgestone-jawbreaker-z-flx-fossil",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Q-Line Horizon Premier Cloud Breaker - Gannon Buhr Signature Series",
+      "price": 264,
+      "url": "https://ugglansdiscgolf.se/products/q-line-horizon-premier-cloud-breaker-gannon-buhr-signature-series",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "2026 Tour Series Hallux – Ricky Wysocki",
+      "price": 283,
+      "url": "https://ugglansdiscgolf.se/products/2026-tour-series-hallux-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Luxury E5 Backpack",
+      "price": 1892,
+      "url": "https://ugglansdiscgolf.se/products/luxury-e5-backpack",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Kastaplast K Beanie",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/kastaplast-k-beanie",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Streamline Voyager Pro Bag",
+      "price": 2081,
+      "url": "https://ugglansdiscgolf.se/products/streamline-voyager-bag",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Axiom Voyager Pro Bag",
+      "price": 2081,
+      "url": "https://ugglansdiscgolf.se/products/axiom-voyager-bag",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "MVP Voyager Pro",
+      "price": 2081,
+      "url": "https://ugglansdiscgolf.se/products/voyager-pro",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ricky Wysocki Prototype Fossil",
+      "price": 217,
+      "url": "https://ugglansdiscgolf.se/products/ricky-wysocki-prototype-fossil",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ricky Wysocki Prototype Hallux",
+      "price": 217,
+      "url": "https://ugglansdiscgolf.se/products/ricky-wysocki-prototype-hallux",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Voyager Lite",
+      "price": 1135,
+      "url": "https://ugglansdiscgolf.se/products/voyager-lite",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Anthony Barela Signature Series AX6",
+      "price": 3406,
+      "url": "https://ugglansdiscgolf.se/products/anthony-barela-signature-series-ax6",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Fanatic Go Backpack",
+      "price": 311,
+      "url": "https://ugglansdiscgolf.se/products/fanatic-go-backpack",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Isolerade Vattenflaska (0.5L)",
+      "price": 169,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-isolerade-vattenflaska-0-5l",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "MVP Beaker Bag",
+      "price": 349,
+      "url": "https://ugglansdiscgolf.se/products/mvp-beaker-bag",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Razor Claw Kyle Klein Signature Series Swirl P-Line P4",
+      "price": 207,
+      "url": "https://ugglansdiscgolf.se/products/razor-claw-kyle-klein-signature-series-swirl-p-line-p4",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Älva - Moomin Group",
+      "price": 226,
+      "url": "https://ugglansdiscgolf.se/products/k1-alva-moomin-group",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Magnofly för Framtid & Frid 2",
+      "price": 330,
+      "url": "https://ugglansdiscgolf.se/products/magnofly-for-framtid",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ript Revenge",
+      "price": 141,
+      "url": "https://ugglansdiscgolf.se/products/ript-revenge",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Hard Älva - Clay Edwards Tour Series 2025",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/k1-hard-alva-clay-edwards-tour-series-2026",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Dynamic Discs Insulated Vattenflaska",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/dynamic-discs-insulated-vattenflaska",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Grind Älva",
+      "price": 198,
+      "url": "https://ugglansdiscgolf.se/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "SIGR Balder",
+      "price": 2270,
+      "url": "https://ugglansdiscgolf.se/products/sigr-balder",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "SIGR Loke",
+      "price": 662,
+      "url": "https://ugglansdiscgolf.se/products/sigr-loke",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Prototype Color Glow C-Line P4 x Worlds",
+      "price": 245,
+      "url": "https://ugglansdiscgolf.se/products/prototype-color-glow-c-line-p4-x-worlds",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Prototype Putter - Ricky Wysocki",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/prototype-putter-ricky-wysocki",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Sugproppsboll Till Retrievers",
+      "price": 188,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-sugproppsboll-till-retrivers",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Framtid",
+      "price": 3311,
+      "url": "https://ugglansdiscgolf.se/products/framtid",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "European Birdies - Frid 2",
+      "price": 4259,
+      "url": "https://ugglansdiscgolf.se/products/frid-2-european-birdie-turkos",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Latitude slim shoulderbag",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/latitude-slim-shoulderbag",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Presentkort",
+      "price": 118,
+      "url": "https://ugglansdiscgolf.se/products/gift-card",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Älva - Nätugglan",
+      "price": 198,
+      "url": "https://ugglansdiscgolf.se/products/k1-alva-natugglan",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglan Minimarker Gummi",
+      "price": 56,
+      "url": "https://ugglansdiscgolf.se/products/ugglan-mini-rubber",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Markeringspenna",
+      "price": 27,
+      "url": "https://ugglansdiscgolf.se/products/sharpie",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Prodigy practicebag",
+      "price": 330,
+      "url": "https://ugglansdiscgolf.se/products/prodigy-practicebag",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Prodigy Backpack 3",
+      "price": 472,
+      "url": "https://ugglansdiscgolf.se/products/prodigy-bp3",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Prodigy Backpack 1",
+      "price": 1040,
+      "url": "https://ugglansdiscgolf.se/products/prodigy-bp1",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Prodigy Apex XL",
+      "price": 2357,
+      "url": "https://ugglansdiscgolf.se/products/prodigy-apex-xl",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Metal Flake PD Lone Howl 3 Colten Montgomery",
+      "price": 207,
+      "url": "https://ugglansdiscgolf.se/products/metal-flake-pd-lone-howl-3-colten-montgomery",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Marshal Classic Blend",
+      "price": 132,
+      "url": "https://ugglansdiscgolf.se/products/marshal-classic-blend",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Kastaplast Mint Vattenflaska",
+      "price": 122,
+      "url": "https://ugglansdiscgolf.se/products/kastaplast-mint-vattenflaska",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Glow Älva",
+      "price": 245,
+      "url": "https://ugglansdiscgolf.se/products/k1-glow-alva",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "K1 Älva",
+      "price": 198,
+      "url": "https://ugglansdiscgolf.se/products/k1-alva",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Innova discovery bag",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/innova-discovery-bag",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Grip G2",
+      "price": 1608,
+      "url": "https://ugglansdiscgolf.se/products/grip-g2-coal",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Grip Bx3",
+      "price": 2838,
+      "url": "https://ugglansdiscgolf.se/products/grip-bx3",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Grip AX 6",
+      "price": 3406,
+      "url": "https://ugglansdiscgolf.se/products/grip-ax-6",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Classic Supreme Orbit Sockibomb Slammer",
+      "price": 188,
+      "url": "https://ugglansdiscgolf.se/products/first-run-sockibomb-slammer",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Isolerade Vattenflaska (0.95L)",
+      "price": 236,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-vattenflaska",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Mössa",
+      "price": 188,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-mossa",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Magnetfäste för handduk",
+      "price": 75,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-magnet",
+      "inStock": true
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Ugglans Handduk med karbinhake",
+      "price": 132,
+      "url": "https://ugglansdiscgolf.se/products/ugglans-handuk",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Prodigy BP-4 Backpack",
+      "price": 275,
+      "url": "https://discaceofsweden.com/produkt/prodigy-bp-4-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Innova Discover Backpack",
+      "price": 295,
+      "url": "https://discaceofsweden.com/produkt/innova-discover-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Anthracite black",
+      "price": 344,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-anthracite-black/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Tour blue",
+      "price": 344,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-tour-blue/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Deep Red",
+      "price": 344,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-deep-red/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Cloud White",
+      "price": 344,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-cloud-white/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Discace of Sweden Patch 10x6cm",
+      "price": 58,
+      "url": "https://discaceofsweden.com/produkt/discace-of-sweden-patch-10x6cm/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Discmania Mössa Huntsman Cuffed Beanie",
+      "price": 196,
+      "url": "https://discaceofsweden.com/produkt/discmania-mossa-huntsman-cuffed-beanie/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Evolvent Discs Readiness Apex-80",
+      "price": 236,
+      "url": "https://discaceofsweden.com/produkt/evolvent-discs-readiness-apex-80/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Innova Excursion Pack",
+      "price": 788,
+      "url": "https://discaceofsweden.com/produkt/innova-excursion-pack/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Clash Discs Berry Special Blend",
+      "price": 236,
+      "url": "https://discaceofsweden.com/produkt/clash-discs-steady-berry-special-blend/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Clash Discs  Special Blend Mint",
+      "price": 236,
+      "url": "https://discaceofsweden.com/produkt/clash-discs-special-blend-mint/",
       "inStock": true
     }
   ]
