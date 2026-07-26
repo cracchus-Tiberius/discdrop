@@ -8,10 +8,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
-import { getScrapedPrice, getDiscImage, entryLandedNOK, formatRelativeTime, scrapedLastUpdated } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, entryLandedNOK, scrapedLastUpdated } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RelativeTime } from "@/components/RelativeTime";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -292,7 +293,8 @@ function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
         <div>
           <span className="dd-sticker">
-            {discs.length} disker{scrapedLastUpdated ? ` · oppdatert ${formatRelativeTime(scrapedLastUpdated)}` : ""}
+            {discs.length} disker
+            {scrapedLastUpdated && <RelativeTime iso={scrapedLastUpdated} prefix=" · oppdatert " />}
           </span>
           <h1 className="mt-4 text-[44px] font-extrabold leading-[0.98] tracking-tight text-[#101C14] md:text-[72px]">
             Riktig disk.
@@ -451,7 +453,7 @@ function LatestDrops() {
                   <p className="text-xl font-extrabold text-[#101C14]">
                     {row.price},-
                   </p>
-                  <p className="text-[11px] text-[#101C1499]">{formatRelativeTime(row.firstSeen)}</p>
+                  <p className="text-[11px] text-[#101C1499]"><RelativeTime iso={row.firstSeen} /></p>
                 </div>
                 <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
               </div>

@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import type { RichStoreEntry } from "@/lib/disc-utils";
-import { formatRelativeTime } from "@/lib/disc-utils";
+import { RelativeTime } from "@/components/RelativeTime";
 import { BADGE_STYLES as BADGE_STYLES_CLIENT } from "@/lib/badge-styles";
 
 // ── Plastic normalization ────────────────────────────────────────────────────
@@ -689,7 +689,9 @@ export function DiscHeroSection({
                   <span className="text-sm text-[#101C1499]">· ikke tilgjengelig</span>
                 )}
                 {lastUpdated && (
-                  <span className="text-xs text-[#101C1499]">· Oppdatert {formatRelativeTime(lastUpdated)}</span>
+                  <span className="text-xs text-[#101C1499]">
+                    <RelativeTime iso={lastUpdated} prefix="· Oppdatert " />
+                  </span>
                 )}
               </div>
 
