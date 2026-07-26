@@ -34,11 +34,20 @@ Package manager: pnpm (always use pnpm, never npm).
 - Run pnpm scrape to update prices from Norwegian stores
 
 ## Scraper
-- scripts/scraper.js — scrapes WeAreDiscGolf (WooCommerce) +
-  Kvam DGS + Arctic Disc (Shopify JSON API)
+- scripts/scrape-all.js runs every store scraper in sequence (10-min timeout each,
+  20 min for Aceshop — see comment there). One failure doesn't block the rest.
+- Stores scraped, in run order: WeAreDiscGolf/Kvam DGS/Arctic Disc (scripts/scraper.js,
+  WooCommerce + Shopify JSON APIs), Aceshop, Frisbeebutikken, GolfDiscer, Frisbee Sør,
+  NyDisk, DiscShopen (Norwegian, NOK — no currency conversion), Discexpress, Rocketdiscs,
+  Discsport (Swedish/EU — SEK or EUR, converted to NOK with a live exchange rate at
+  scrape time, VOEC-registered so MVA is included at checkout).
+- Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
+  or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
+  if that's blocked or unavailable.
 - Scraping is automated via GitHub Actions (.github/workflows/daily-scrape.yml)
   Runs daily at 06:00 UTC (08:00 Norway). Manual runs only needed for testing.
-- Run manually with: pnpm scrape:all
+- Run manually with: pnpm scrape:all (or pnpm scrape:nydisk / pnpm scrape:discshopen
+  etc. for a single store)
 - Output: data/scraped-prices.json + data/unmatched-products.json
 
 ## API Route

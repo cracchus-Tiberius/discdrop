@@ -29,6 +29,8 @@ const STEPS = [
   { name: 'Frisbeebutikken',                 cmd: 'node scripts/scrape-frisbeebutikken.js' },
   { name: 'GolfDiscer',                      cmd: 'node scripts/scrape-golfdiscer.js' },
   { name: 'Frisbee Sør',                     cmd: 'node scripts/scrape-frisbeesor.js' },
+  { name: 'NyDisk',                          cmd: 'node scripts/scrape-nydisk.js' },
+  { name: 'DiscShopen',                      cmd: 'node scripts/scrape-discshopen.js' },
   { name: 'Discexpress',                     cmd: 'node scripts/scrape-discexpress.js' },
   { name: 'Rocketdiscs',                     cmd: 'node scripts/scrape-rocketdiscs.js' },
   { name: 'Discsport',                       cmd: 'node scripts/scrape-discsport.js' },

@@ -49,6 +49,21 @@ const STORE_CONFIGS = {
     ],
     skipCategorySlugs: SKIP_CATEGORY_SLUGS,
   },
+  nydisk: {
+    key: 'nydisk',
+    name: 'NyDisk',
+    baseUrl: 'https://nydisk.no',
+    freeShippingOver: 800,
+    shipping: 45,
+  },
+  discshopen: {
+    key: 'discshopen',
+    name: 'DiscShopen',
+    baseUrl: 'https://discshopen.no',
+    freeShippingOver: 699,
+    shipping: 45,
+    playwrightCategoryUrls: ['https://discshopen.no/butikk/'],
+  },
   discexpress: {
     key: 'discexpress',
     name: 'Discexpress',

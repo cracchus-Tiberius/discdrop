@@ -15,6 +15,8 @@
     "scrape:frisbeebutikken": "node scripts/scrape-frisbeebutikken.js",
     "scrape:golfdiscer": "node scripts/scrape-golfdiscer.js",
     "scrape:frisbeesor": "node scripts/scrape-frisbeesor.js",
+    "scrape:nydisk": "node scripts/scrape-nydisk.js",
+    "scrape:discshopen": "node scripts/scrape-discshopen.js",
     "scrape:discexpress": "node scripts/scrape-discexpress.js",
     "scrape:rocketdiscs": "node scripts/scrape-rocketdiscs.js",
     "scrape:discsport": "node scripts/scrape-discsport.js",
