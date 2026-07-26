@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
-import { getScrapedPrice, getDiscImage, getDiscLastScraped } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, getDiscLastScraped, getDiscPlastics } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -238,7 +238,8 @@ function BrowseContent() {
         (d) =>
           d.name.toLowerCase().includes(q) ||
           d.brand.toLowerCase().includes(q) ||
-          d.type.toLowerCase().includes(q)
+          d.type.toLowerCase().includes(q) ||
+          getDiscPlastics(d.id).some((p) => p.toLowerCase().includes(q))
       );
     }
 

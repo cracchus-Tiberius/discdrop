@@ -86,6 +86,26 @@ export function getDiscLastScraped(discId: string): string | null {
   return dates.sort().at(-1) ?? null;
 }
 
+// Precomputed once at module load: discId -> distinct plastic names seen
+// across all store listings. Powers plastic-name search (e.g. "Jawbreaker")
+// without rescanning scraped-prices.json on every keystroke.
+const DISC_PLASTICS_MAP: Record<string, string[]> = (() => {
+  const out: Record<string, string[]> = {};
+  for (const [discId, entries] of Object.entries(
+    scrapedPrices.prices as Record<string, ScrapedEntry[]>
+  )) {
+    const set = new Set<string>();
+    for (const e of entries) if (e.plastic) set.add(e.plastic);
+    if (set.size) out[discId] = [...set];
+  }
+  return out;
+})();
+
+/** Distinct plastic names seen across store listings for a disc, e.g. ["Jawbreaker", "Z"]. */
+export function getDiscPlastics(discId: string): string[] {
+  return DISC_PLASTICS_MAP[discId] ?? [];
+}
+
 export type RichStoreEntry = {
   storeName: string;
   storeKey: string;

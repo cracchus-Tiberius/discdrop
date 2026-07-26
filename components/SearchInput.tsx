@@ -4,7 +4,7 @@ import { useRef, useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { DiscImage } from "./DiscImage";
 import { discs } from "@/data/discs.js";
-import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, getDiscPlastics } from "@/lib/disc-utils";
 
 type Disc = (typeof discs)[number];
 
@@ -75,16 +75,29 @@ export function SearchInput({
         if (hasQuery) {
           const playerMatch =
             "player" in d && (d as { player?: string }).player?.toLowerCase().includes(q);
+          const plasticMatch = getDiscPlastics(d.id).some((p) => p.toLowerCase().includes(q));
           return (
             d.name.toLowerCase().includes(q) ||
             d.brand.toLowerCase().includes(q) ||
             d.type.toLowerCase().includes(q) ||
-            !!playerMatch
+            !!playerMatch ||
+            plasticMatch
           );
         }
         return true;
       })
-      .slice(0, 8);
+      .slice(0, 8)
+      .map((d) => {
+        const nameOrBrandMatch =
+          hasQuery && (d.name.toLowerCase().includes(q) || d.brand.toLowerCase().includes(q));
+        // Only surface the plastic as a hint when it's *why* the disc matched —
+        // otherwise every result would redundantly show its plastic.
+        const matchedPlastic =
+          hasQuery && !nameOrBrandMatch
+            ? getDiscPlastics(d.id).find((p) => p.toLowerCase().includes(q)) ?? null
+            : null;
+        return { disc: d, matchedPlastic };
+      });
   }, [value, quickType, quickBrand]);
 
   const showPanel = focused && value.trim().length < 2 && quickType === null && quickBrand === null;
@@ -255,7 +268,7 @@ export function SearchInput({
                   {quickBrand && ` · ${quickBrand}`}
                 </div>
               )}
-              {results.map((d) => {
+              {results.map(({ disc: d, matchedPlastic }) => {
                 const price = getScrapedPrice(d.id).price;
                 return (
                   <Link
@@ -279,7 +292,10 @@ export function SearchInput({
                       </div>
                       <div className="min-w-0">
                         <span className="block truncate font-semibold text-[#101C14]">{d.name}</span>
-                        <span className="block truncate text-xs text-[#101C1499]">{d.brand}</span>
+                        <span className="block truncate text-xs text-[#101C1499]">
+                          {d.brand}
+                          {matchedPlastic && ` · ${matchedPlastic} plast`}
+                        </span>
                       </div>
                     </div>
                     <div className="ml-3 flex shrink-0 items-center gap-3">
