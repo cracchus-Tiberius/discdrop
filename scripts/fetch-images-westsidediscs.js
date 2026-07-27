@@ -84,6 +84,12 @@ async function fetchAllProducts() {
     if (batch.length === 0) { console.log(' done'); break; }
 
     for (const p of batch) {
+      // Only match against actual discs — the store also sells apparel,
+      // bags and accessories under their own product_type, and a text-only
+      // title match can collide with those (confirmed in production:
+      // "Ladies Sword Flannel", product_type "Apparel", matched the disc
+      // "Sword" and served a photo of a shirt on the disc's page).
+      if (p.product_type !== 'Discs') continue;
       const image = p.images?.[0]?.src || null;
       if (p.title && image) {
         products.push({ title: p.title, image });
