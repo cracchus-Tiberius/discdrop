@@ -20,3 +20,16 @@
 /disc/mvp-pitch             /disc/axiom-pitch/         301
 /disc/mvp-delirium          /disc/axiom-delirium/      301
 /disc/mvp-range             /disc/streamline-range/    301
+
+# Duplicate entries removed during the full-catalog flight-number/brand
+# audit (2026-07-27) — each of these was a second catalog entry for a
+# disc that already exists correctly elsewhere, kept because it carried
+# the real scraped price data.
+/disc/mvp-fireball          /disc/axiom-fireball/      301
+/disc/mvp-mayhem            /disc/axiom-mayhem/        301
+/disc/mvp-panic             /disc/axiom-panic/         301
+/disc/latitude-essence      /disc/discmania-essence/   301
+/disc/latitude-method       /disc/discmania-method/    301
+/disc/latitude-instinct     /disc/discmania-instinct/  301
+/disc/latitude-origin       /disc/discmania-origin/    301
+/disc/latitude-splice       /disc/discmania-splice/    301
