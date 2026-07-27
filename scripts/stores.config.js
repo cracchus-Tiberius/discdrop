@@ -180,6 +180,9 @@ const NON_DISC_KEYWORDS = [
   'led', 'kurvlys', 'disc doctor', 'mikrofiber', 'pins', 'bagtag',
   'chalk bag', 'tripod', 'thro', 'dry bag', 'lens cap',
   'mini metal', 'pvc', 'forcefield', 'frame', 'station',
+  // "Sigr" backpack brand — confirmed false-matching to viking-odin via a
+  // "Sigr Odin" backpack product (kvamdgs.no), not a disc at all.
+  'sigr', 'väska', 'ryggsäck',
 ];
 
 /** Returns false if the product name contains a non-disc keyword */
