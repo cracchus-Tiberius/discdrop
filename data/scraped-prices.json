@@ -47501,52 +47501,6 @@
         "firstSeen": "2026-07-24T21:06:56.489Z"
       }
     ],
-    "dynamic-phenom": [
-      {
-        "store": "arcticdisc",
-        "price": 329,
-        "inStock": true,
-        "url": "https://arcticdisc.no/products/horizon-dd3-nordic-phenom-iii-niklas-anttila",
-        "image": "https://cdn.shopify.com/s/files/1/0932/8050/2130/files/nordic_phenom_3_product_gray_dmsu.jpg?v=1758698001",
-        "plastic": null,
-        "edition": "Niklas Anttila",
-        "lastScraped": "2026-07-27T09:48:00.950Z",
-        "firstSeen": "2026-07-24T16:34:05.624Z"
-      },
-      {
-        "store": "golfdiscer",
-        "price": 319,
-        "inStock": false,
-        "url": "https://golfdiscer.no/products/horizon-dd3-nordic-phenom-3-niklas-anttila",
-        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/discmania-horizon-dd3-nordic-phenom-3-niklas-anttila-322354.webp?v=1719636999",
-        "plastic": null,
-        "edition": "Niklas Anttila",
-        "lastScraped": "2026-07-27T09:55:47.527Z",
-        "firstSeen": "2026-07-24T16:45:56.042Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 259,
-        "inStock": false,
-        "url": "https://nydisk.no/products/discmania-neo-pd-phenom-stone-1",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-PD---Phenom-Stone-2.png?v=1720117012",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-07-27T09:56:05.346Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discsport",
-        "price": 236,
-        "inStock": false,
-        "url": "https://discsport.se/discar/mold/pd",
-        "image": null,
-        "plastic": null,
-        "edition": "Niklas Anttila",
-        "lastScraped": "2026-07-27T10:05:06.374Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      }
-    ],
     "latitude-maul": [
       {
         "store": "discexpress",
@@ -78569,19 +78523,6 @@
         "inStock": true,
         "url": "https://wearediscgolf.no/produkt/protege-clozer/",
         "image": "https://wearediscgolf.no/content/uploads/2022/01/Protege_Clozer-2.jpg",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-07-27T09:48:00.950Z",
-        "firstSeen": "2026-07-24T16:34:05.624Z"
-      }
-    ],
-    "viking-berserker": [
-      {
-        "store": "kvamdgs",
-        "price": 275,
-        "inStock": true,
-        "url": "https://kvamdgs.no/products/neutron-hex-viking-berserker",
-        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_1458.jpg?v=1774529323",
         "plastic": null,
         "edition": null,
         "lastScraped": "2026-07-27T09:48:00.950Z",
