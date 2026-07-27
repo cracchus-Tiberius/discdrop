@@ -254,7 +254,16 @@ function matchDiscCandidate(rawProductName) {
       // "Northstar Spy" was matching catalog id prodiscus-spy).
       // Exception: Discmania/Innova plastic-line keywords infer brand, since
       // those are near-universally present whenever the short name is.
-      if (discName.length <= 3) {
+      //
+      // Some longer disc names double as tour-series/signature/fan-art stamp
+      // themes stores print AFTER the real mold name — e.g. "Neutron Hex
+      // Viking Berserker" (an Axiom Hex with fan-art) matched catalog id
+      // viking-berserker, and "Discmania Neo PD Phenom Stone 1" matched
+      // dynamic-phenom (Legacy Discs' actual mold) — because "longest match
+      // wins" let the stamp name beat the real (shorter) mold name earlier
+      // in the same title. Require brand confirmation for these too.
+      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking']);
+      if (discName.length <= 3 || REQUIRES_BRAND_CHECK.has(discName)) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
         const discmaniaPlasticRe = /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line)\b/i;
