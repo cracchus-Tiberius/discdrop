@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          # build-price-changes.js reads the last ~7 daily commits of
+          # data/scraped-prices.json via `git show <sha>:...` — the default
+          # shallow (depth-1) clone wouldn't have that history.
+          fetch-depth: 20
 
       - name: Install Node.js 22
         uses: actions/setup-node@v4
@@ -42,6 +47,13 @@ jobs:
         run: pnpm fetch-images
         timeout-minutes: 10
         continue-on-error: true
+
+      - name: Build price-changes.json
+        run: pnpm build:price-changes
+        # Must run AFTER scrape:all but BEFORE "Commit updated data" below —
+        # at this point HEAD is still yesterday's committed snapshot while
+        # data/scraped-prices.json on disk is today's fresh scrape, which is
+        # exactly the day-over-day diff the Prisfall feature needs.
 
       - name: Commit updated data
         run: |

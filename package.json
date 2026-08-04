@@ -26,7 +26,9 @@
     "scrape:top-sellers": "node scripts/scrape-top-sellers.js",
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",
-    "check-alerts": "node scripts/check-alerts.js"
+    "check-alerts": "node scripts/check-alerts.js",
+    "build:price-changes": "node scripts/build-price-changes.js",
+    "test": "node --test scripts/**/*.test.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.80.0",
