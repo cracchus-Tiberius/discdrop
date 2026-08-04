@@ -183,6 +183,11 @@ const NON_DISC_KEYWORDS = [
   // "Sigr" backpack brand — confirmed false-matching to viking-odin via a
   // "Sigr Odin" backpack product (kvamdgs.no), not a disc at all.
   'sigr', 'väska', 'ryggsäck',
+  // Swedish candy/snack keywords — confirmed false-matching to clash-salt via
+  // "Ferarri: Salt Hallon" (product_type "Godis"/candy) on discexpress.se,
+  // since Clash Discs' real "Salt" mold and its "Salt" plastic-blend name are
+  // themselves too generic to disambiguate from a snack product.
+  'hallon', 'godis', 'lakrits', 'tuggummi', 'kola',
 ];
 
 /** Returns false if the product name contains a non-disc keyword */
