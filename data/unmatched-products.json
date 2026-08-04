@@ -1,132 +1,6 @@
 {
-  "lastUpdated": "2026-08-04T09:00:51.359Z",
+  "lastUpdated": "2026-08-04T10:18:11.357Z",
   "products": [
-    {
-      "store": "frisbeebutikken",
-      "rawName": "DX Sonic",
-      "price": 145,
-      "url": "https://frisbeebutikken.no/products/dx-sonic",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Disc Golf Starter Set - Classic",
-      "price": 399,
-      "url": "https://frisbeebutikken.no/products/disc-golf-starter-set-classic",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "MVP Compact UV Flashlight",
-      "price": 129,
-      "url": "https://frisbeebutikken.no/products/mvp-compact-uv-flashlight",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "MVP Extra Large UV Flashlight",
-      "price": 399,
-      "url": "https://frisbeebutikken.no/products/mvp-extra-large-uv-flashlight",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "MVP R2 Neutron Nybegynnersett",
-      "price": 549,
-      "url": "https://frisbeebutikken.no/products/mvp-r2-neutron-nybegynnersett",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Protoype Fossil - Ricky Wysocki",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/prototype-fossil-ricky-wysocki",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium STARi",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/premium-stari",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Amulet",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-amulet",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium FASTi",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-fasti",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium JOKERiX",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-jokerix",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium LEGENDa",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Pyramid",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium SLAIDi",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Titan",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-titan",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Zero Gravity Starter Set",
-      "price": 399,
-      "url": "https://frisbeebutikken.no/products/zero-gravity-starter-set",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Zero Medium Spike",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/zero-medium-spike",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "300 PA-3",
-      "price": 169,
-      "url": "https://frisbeebutikken.no/products/300-pa-3",
-      "inStock": true
-    },
     {
       "store": "wearediscgolf",
       "rawName": "Champion Xcaliber",
@@ -20544,6 +20418,118 @@
       "rawName": "Clash Discs  Special Blend Mint",
       "price": 239,
       "url": "https://discaceofsweden.com/produkt/clash-discs-special-blend-mint/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "BT Soft Swan",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NEO Enigma",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/neo-enigma",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Gamma-Solid Neon",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/gamma-solid-neon",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Gamma-Solid Titanium",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Hallux - Ricky Wysocki",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-hallux-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Amulet",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-amulet",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium FASTi",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-fasti",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium LEGENDa",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Pyramid",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium SLAIDi",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Titan",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-titan",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Neutron Boost",
+      "price": 209,
+      "url": "https://frisbeebutikken.no/products/neutron-boost",
       "inStock": true
     }
   ]

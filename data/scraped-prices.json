@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-04T09:00:51.359Z",
+  "lastUpdated": "2026-08-04T10:18:11.357Z",
   "stores": {
     "wearediscgolf": {
       "name": "We Are Disc Golf",
@@ -89,6 +89,12 @@
       "country": "SE",
       "currency": "SEK",
       "voec": true
+    },
+    "frisbeebutikken": {
+      "name": "Frisbeebutikken",
+      "url": "https://frisbeebutikken.no",
+      "freeShippingOver": 699,
+      "shipping": 45
     }
   },
   "prices": {
@@ -433,6 +439,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-zone-ss",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/U8XV5_Discraft_Z_Zone_SS_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-zone-ss",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/B2BkB_Discraft_ESP_Zone_SS_1.webp/w665h665.webp",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-aviar": [
@@ -1238,6 +1266,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/kc-pro-aviar-calvin-heimburg-pizza-chef",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Pl8D2_Innova_KC_Pro_Aviar_1.jpg/w665h665.jpg",
+        "plastic": "KC Pro",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/jk-pro-aviar-x",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3rfON_Innova_JK_Pro_Aviar-X_1.jpg/w657h665.jpg",
+        "plastic": "JK Pro",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 145,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/dx-aviar",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FhMly_Innova_DX_Aviar_1.webp/w664h665.webp",
+        "plastic": "DX",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-rhyno": [
@@ -1427,6 +1488,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 145,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/dx-rhyno",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/if8X5_Innova_DX_Rhyno_1.jpg/w665h665.jpg",
+        "plastic": "DX",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/r-pro-rhyno",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/7ITet_Innova_R-Pro_Rhyno_1.webp/w665h665.webp",
+        "plastic": "R-Pro",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-berg": [
@@ -2078,6 +2161,83 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-soft-glow-berg-corey-ellis-mold-team-tour-series-2026",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/YR9bu_Kastaplast_K1_Soft_Glow_Berg_-_Corey_Ellis_M_1.jpg/w665h665.jpg",
+        "plastic": "K1 Soft Glow",
+        "edition": "Mold Team",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k3-berg-x",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/0Xhh5_Kastaplast_K3_Berg_X_1.jpg/w665h660.jpg",
+        "plastic": "K3",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-grind-berg",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Ce2ZQ_Kastaplast_K1_Grind_Berg_1.webp/w665h665.webp",
+        "plastic": "K1 Grind",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-hard-berg-josef-berg-mold-team-2026",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1aMGR_Kastaplast_K1_Hard_Berg_X_-_Braeden_Sides_1.webp/w665h665.webp",
+        "plastic": "K1 Hard",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-soft-berg",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/U8u0s_Kastaplast_K1_Soft_Berg_1.webp/w665h665.webp",
+        "plastic": "K1 Soft",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-glow-berg-x",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/cEKOE_Kastaplast_K1_Glow_Berg_X_1.webp/w665h665.webp",
+        "plastic": "K1 Glow",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-berg-x",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ZuUV5_Kastaplast_K1_Berg_X_1.webp/w664h665.webp",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-proxy": [
@@ -2795,6 +2955,50 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-proxy-soft",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/fYYDd_Axiom_Electron_Proxy_Soft_1.jpg/w665h665.jpg",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/total-eclipse-proxy",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/NHifW_Axiom_Total_Eclipse_Proxy_1.webp/w665h665.webp",
+        "plastic": "Total Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 189,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/cosmic-electron-proxy-medium",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/BF9TS_Axiom_Cosmic_Electron_Proxy_Medium_1.webp/w665h665.webp",
+        "plastic": "Cosmic Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-proxy-soft",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IgGQ9_Axiom_Neutron_Proxy_Soft_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-pitch": [
@@ -3514,6 +3718,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/cosmic-electron-watt",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/0xiXF_MVP_Cosmic_Electron_Watt_1.webp/w665h665.webp",
+        "plastic": "Cosmic Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-alter": [
@@ -4158,6 +4373,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/jawbreaker-luna",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/UXCOV_Discraft_Jawbreaker_Luna_1.webp/w665h665.webp",
+        "plastic": "Jawbreaker",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/hard-blend-luna",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/bxuBo_Discraft_Hard_Blend_Luna_1.webp/w665h664.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/big-z-luna",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/RGLyX_Discraft_Big_Z_Luna_1.webp/w662h665.webp",
+        "plastic": "Big Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-zone": [
@@ -4930,6 +5178,72 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/jawbreaker-zone",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/In8nU_Discraft_Jawbreaker_Zone_1.webp/w665h660.webp",
+        "plastic": "Jawbreaker",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/putter-line-soft-zone2",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/E6U1m_Discraft_Putter_Line_Soft_Zone_1.webp/w662h665.webp",
+        "plastic": "Putter Line Soft",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/putter-line-zone",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/05Bc5_Discraft_Putter_Line_Zone_1.webp/w665h665.webp",
+        "plastic": "Putter Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/titanium-zone-gt",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/hHngi_Discraft_Titanium_Zone_GT_1.webp/w665h660.webp",
+        "plastic": "Titanium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-zone",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/PkDqP_Discraft_ESP_Zone_1.webp/w665h665.webp",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-zone",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/5LliJ_Discraft_Z_Zone_Fly_Dyed_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-ares": [
@@ -5042,6 +5356,17 @@
         "edition": "Paul McBeth",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-ares-first-run",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/N8nGT_Discraft_ESP_Ares_First_Run_1.jpg/w665h665.jpg",
+        "plastic": "ESP",
+        "edition": "First Run",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-aviar3": [
@@ -5442,6 +5767,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k3-tuff",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/acfeB_Kastaplast_K3_Tuff_1.jpg/w665h660.jpg",
+        "plastic": "K3",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-tuff",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TYGLJ_Kastaplast_K1_Tuff_1.jpg/w665h665.jpg",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-judge": [
@@ -5721,6 +6068,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/bt-medium-orbit-swan-1-reborn",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/F5D5a_Westside_Discs_BT_Medium_Orbit_Swan_1_Reborn_1.jpg/w665h665.jpg",
+        "plastic": "BT Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-tempo": [
@@ -6141,6 +6499,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-tempo-project-lab-coat",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/eASuH_Axiom_Neutron_Tempo_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-tempo",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/WZLkf_Axiom_Electron_Tempo_1.webp/w665h665.webp",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-pig": [
@@ -6541,6 +6921,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-glitch-soft-blank",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/lctkt_MVP_Neutron_Glitch_Soft_Blank_1.webp/w657h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-focus": [
@@ -6774,6 +7165,17 @@
         "edition": "Anthony Barela",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/jawbreaker-focus-ricky-wysocki",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/wjV81_Discraft_Jawbreaker_Focus_-_Ricky_Wysocki_1.webp/w665h665.webp",
+        "plastic": "Jawbreaker",
+        "edition": "Ricky Wysocki",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-pure": [
@@ -7425,6 +7827,50 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-x-sparkle-pure-lauri-lehtinen-team-series",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/w1PRy_Latitude_64_Opto-X_Sparkle_Pure_-_Lauri_Leht_1.webp/w665h665.webp",
+        "plastic": "Opto-X",
+        "edition": "Team Series",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-medium-pure",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/OAcUE_Latitude_64_Zero_Medium_Moonshine_Orbit_Pure_1.webp/w665h665.webp",
+        "plastic": "Zero Medium",
+        "edition": "Kristin Lätt",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-pure",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/acwNc_Latitude_64_Zero_Pro_Moonshine_Pure_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-soft-pure",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/kol9x_Latitude_64_Zero_Soft_Pure_1.webp/w665h660.webp",
+        "plastic": "Zero Soft",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-peak": [
@@ -7779,6 +8225,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-peak",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IkR3N_Latitude_64_Clear_Peak_1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-medium-orbit-peak-isaac-robinson-team-series",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/wQKIQ_Latitude_64_Zero_Medium_Orbit_Peak_-_Isaac_R_1.webp/w665h665.webp",
+        "plastic": "Zero Medium",
+        "edition": "Isaac Robinson",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-envy": [
@@ -8628,6 +9096,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-08-03T10:04:02.385Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-envy1",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/NgZo3_Axiom_Neutron_Envy__1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-envy",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/YtEF3_Axiom_Proton_Envy_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-envy",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/upMWv_Axiom_Electron_Envy_1.webp/w665h665.webp",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-pilot": [
@@ -8883,6 +9384,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-pilot",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Pn7Ap_Streamline_Electron_Pilot__1.jpg/w662h665.jpg",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-pilot",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Irv3x_Streamline_Neutron_Pilot_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-stabilizer": [
@@ -9459,6 +9982,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-jrn",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/T3073_Kastaplast_K1_J__rn_1.jpg/w665h665.jpg",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-reko-x": [
@@ -9969,6 +10503,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 209,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k4-glow-sten",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/bQZhK_Kastaplast_K4_Glow_Sten_1.jpg/w665h665.jpg",
+        "plastic": "K4 Glow",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-soft-sten",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/yACCp_Kastaplast_K1_Soft_Sten_1.jpg/w665h665.jpg",
+        "plastic": "K1 Soft",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-reko": [
@@ -10510,6 +11066,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k3-hard-reko",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ZMs7q_Kastaplast_K3_Hard_Reko_1.jpg/w662h665.jpg",
+        "plastic": "K3 Hard",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k3-reko",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/teC87_Kastaplast_K3_Reko_1.jpg/w665h665.jpg",
+        "plastic": "K3",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-reko",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/g0BDX_Kastaplast_K1_Reko_1.webp/w665h665.webp",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-hope": [
@@ -10754,6 +11343,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/sense-orbit-hope",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3lo0T_Latitude_64_Sense_Orbit_Hope_1.webp/w665h665.webp",
+        "plastic": "Sense",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-faith": [
@@ -11066,6 +11666,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 145,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/dx-firefly",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Q35v5_Innova_DX_Firefly_1.jpg/w665h665.jpg",
+        "plastic": "DX",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/r-pro-proto-glow-firefly-edgc-2025",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/W9pbF_Innova_R-Pro_Proto_Glow_Firefly_-_EDGC_2025_1.webp/w662h665.webp",
+        "plastic": "R-Pro",
+        "edition": "2025",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-invader": [
@@ -11600,6 +12222,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-medium-dagger",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/PKsVt_Latitude_64_Zero_Medium_Dagger_1.webp/w665h660.webp",
+        "plastic": "Zero Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-keystone": [
@@ -12000,6 +12633,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-medium-mercy",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XQevH_Latitude_64_Zero_Medium_Mercy_1.webp/w665h665.webp",
+        "plastic": "Zero Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "streamline-range": [
@@ -12200,6 +12844,28 @@
         "edition": "Special Edition",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/eclipse-range",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/EmCBp_Streamline_Eclipse_Range__1.jpg/w665h665.jpg",
+        "plastic": "Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 209,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-range-soft",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/YaF4R_Streamline_Neutron_Range_Soft_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-p2x": [
@@ -12422,6 +13088,28 @@
         "edition": "Gannon Buhr",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-glow-metal-flake-horizon-p2x-arctic-assassin",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/GbA2A_Discmania_C-Line_Glow_Metal_Flake_Horizon_P2_1.jpg/w665h665.jpg",
+        "plastic": "C-Line Glow",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 189,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/p-line-flex-3-p2x-halloween",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/7GfrQ_Discmania_P-Line_Flex_3_P2x_-_Halloween_1.webp/w665h665.webp",
+        "plastic": "P-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-challenger": [
@@ -13536,6 +14224,28 @@
         "edition": "Team Series",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-savior",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CABfU_Latitude_64_Clear_Savior_1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-savior",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/vH4ql_Latitude_64_Grand_Savior_1.jpg/w665h665.jpg",
+        "plastic": "Grand",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-p1x": [
@@ -13969,6 +14679,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/d-line-p2-flex-2",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/E4c7O_Discmania_D-Line_P2_Flex_2_1.webp/w665h665.webp",
+        "plastic": "D-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/p-line-p2-flex-3",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Mg0md_Discmania_P-Line_P2_Flex_3_1.webp/w665h665.webp",
+        "plastic": "P-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-p1": [
@@ -14081,6 +14813,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/p-line-p1-flex-33",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/G9PGC_Discmania_P-Line_P1_Flex_3_1.webp/w665h665.webp",
+        "plastic": "P-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/d-line-p1-flex-2",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/r5wdv_Discmania_D-Line_P1_Flex_3_Vapor_-_Niklas_An_1.webp/w665h665.webp",
+        "plastic": "D-Line",
+        "edition": "Niklas Anttila",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-fierce": [
@@ -15369,6 +16123,17 @@
         "edition": "Isaac Robinson",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-medium-sinus-re-tooled",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/z4cqO_Latitude_64_Zero_Medium_Sinus_Re-Tooled_1.webp/w665h665.webp",
+        "plastic": "Zero Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-world": [
@@ -16048,6 +16813,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-notion-special-edition",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/kulQg_Discmania_C-Line_Notion_-_Special_Edition_1.webp/w665h665.webp",
+        "plastic": "C-Line",
+        "edition": "Special Edition",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/exo-hard-notion",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/tw8cv_Discmania_EXO_Hard_Notion_1.webp/w665h665.webp",
+        "plastic": "Exo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-ringer": [
@@ -16452,6 +17239,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-p3x",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/lxAz7_Discmania_S-Line_P3x_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-spore": [
@@ -16997,6 +17795,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/jawbreaker-zone-os",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/l5aWE_Discraft_Jawbreaker_Zone_OS_1.jpg/w665h665.jpg",
+        "plastic": "Jawbreaker",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-zone-os-test-flight",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FXobv_Discraft_Z_Zone_OS_Test_Flight__1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "prodigy-distortion": [
@@ -17144,6 +17964,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-rat",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/fP1pY_Innova_Star_Rat_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-anode": [
@@ -17355,6 +18186,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-anode",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/iLRYS_MVP_Neutron_Anode_1.jpg/w665h664.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-anode",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/hZnxj_MVP_Electron_Anode_1.jpg/w664h665.jpg",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-sonic": [
@@ -17445,6 +18298,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 145,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/dx-sonic",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/KwVSn_Innova_DX_Sonic_1.jpg/w665h665.jpg",
+        "plastic": "DX",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-aviarx3": [
@@ -17889,6 +18753,17 @@
         "edition": "Calvin Heimburg",
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-07-26T12:25:01.767Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-toro-calvin-heimburg",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/vkYVW_Innova_Champion_Toro_-_Calvin_Heimburg_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": "Calvin Heimburg",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-motion": [
@@ -18366,6 +19241,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/eclipse-atom-space-race-2025",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/MKCxc_MVP_Eclipse_Atom_-_Space_Race_2025_1.jpg/w664h665.jpg",
+        "plastic": "Eclipse",
+        "edition": "2025",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-nomad": [
@@ -18643,6 +19529,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-nomad",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/SdIKP_MVP_Electron_Nomad_1.webp/w665h665.webp",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-banger-gt": [
@@ -18977,6 +19874,17 @@
         "edition": "Gannon Buhr",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-horizon-glacier-gannon-buhr-creator-series",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/wrocm_Discmania_C-Line_Horizon_Glacier_-_Gannon_Bu_1.webp/w665h665.webp",
+        "plastic": "C-Line Horizon",
+        "edition": "Gannon Buhr",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-harp": [
@@ -19320,6 +20228,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-08-03T10:04:02.385Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/avip-orbit-moonshine-harp-colin-bryantvip-moonshine-harp2",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/uaaCB_Westside_Discs_VIP_Orbit_Moonshine_Harp_-_Co_1.webp/w665h665.webp",
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/bt-medium-trusty-harp-ap",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/KMv54_Westside_Discs_BT_Medium_Trusty_Harp_-_AP__1.webp/w665h665.webp",
+        "plastic": "BT Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-rhynox": [
@@ -19656,6 +20586,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-catalyst",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/q5kef_MVP_Neutron_Catalyst_1.jpg/w664h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-warden": [
@@ -19891,6 +20832,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-spin",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/cdu2J_MVP_Electron_Spin_1.jpg/w665h665.jpg",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-spin",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/KRICM_MVP_Neutron_Spin_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-swan-2": [
@@ -21007,6 +21970,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/exo-hard-link",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/INfUW_Discmania_EXO_Hard_Link_1.webp/w665h665.webp",
+        "plastic": "Exo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-thunderbird": [
@@ -21416,6 +22390,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-thunderbird",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/WhvYq_Innova_Halo_Star_Thunderbird_1.webp/w665h665.webp",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-polecat": [
@@ -22060,6 +23045,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-buzzz-ss-paige-shue",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/uNYR5_Discraft_Z_Buzzz_SS_-_Paige_Shue_1.webp/w662h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-malita": [
@@ -23329,6 +24325,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-buzzz",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1FCwj_Discraft_Z_Buzzz_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-buzzz-solid-white-bottom-stamp",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/9NQiP_Discraft_ESP_Buzzz_Solid_White_Bottom_Stamp_1.webp/w662h665.webp",
+        "plastic": "ESP",
+        "edition": "Bottom Stamp",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/cryztal-ti-buzzz-2026-worlds-reissue",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3PT8w_Discraft_CryZtal_Ti_Buzzz_-_2026_Worlds_Reis_1.webp/w665h665.webp",
+        "plastic": "CryZtal",
+        "edition": "2026",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-trust": [
@@ -23551,6 +24580,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-trust-2",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/O31Am_Latitude_64_Clear_Trust_1.webp/w665h665.webp",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-trust",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/MC2K3_Latitude_64_Grand_Trust_1.webp/w665h665.webp",
+        "plastic": "Grand",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-reactor": [
@@ -23949,6 +25000,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-reactor-project-lab-coat",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/kaC6g_MVP_Proton_Reactor_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-particle": [
@@ -24193,6 +25255,17 @@
         "edition": "Team Series",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/particle-soft-proton-rhythm-otb-open-2026",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ecQir_Axiom_Particle_Soft_Proton_Rhythm_-_OTB_Open_1.webp/w665h665.webp",
+        "plastic": "Particle",
+        "edition": "OTB Open",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-hex": [
@@ -25145,6 +26218,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-compass",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/SbhjV_Latitude_64_Opto_Compass_1.webp/w662h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-compass",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/o3bLB_Latitude_64_Gold_Compass_1.webp/w665h665.webp",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-archer": [
@@ -25358,6 +26453,17 @@
         "edition": "First Run",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-arachnid",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FtarC_Innova_Star_Arachnid_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-founder": [
@@ -25415,6 +26521,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-founder",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XG5M9_Discmania_NEO_Founder_1.webp/w665h665.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-fox": [
@@ -25736,6 +26853,17 @@
         "edition": "First Run",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-fox",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/K1poZ_Innova_Champion_Fox_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-hornet": [
@@ -26800,6 +27928,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-glow-stig",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/HSSdP_Kastaplast_K1_Glow_Stig_1.jpg/w665h665.jpg",
+        "plastic": "K1 Glow",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-md3": [
@@ -27220,6 +28359,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/swirly-s-line-md3-mariners-tide",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/npYJU_Discmania_Swirly_S-Line_MD3_-_Mariners_Tide_1.webp/w665h665.webp",
+        "plastic": "Swirly S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-md3",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/R1Tmv_Discmania_S-Line_MD3_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/q-line-premier-md3-gannon-buhr-triumph-series",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/klnsG_Discmania_Q-Line_Premier_MD3_-_Gannon_Buhr_T_1.webp/w665h664.webp",
+        "plastic": "Q-Line",
+        "edition": "Gannon Buhr",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-claymore": [
@@ -27708,6 +28880,17 @@
         "edition": "Prototype",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-md44",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TR3p6_Discmania_S-Line_MD4_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-origin": [
@@ -27875,6 +29058,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-origin",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CzPJz_Discmania_NEO_Origin_1.jpg/w665h665.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-wombat3": [
@@ -28053,6 +29247,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-wombat3",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/8Yhoe_Innova_Champion_Wombat3_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-comet": [
@@ -28497,6 +29702,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-md5",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/zOhEX_Discmania_S-Line_MD5_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-horizon-md5-cryo-bladegannon-buhr-signature-series-2",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/PMreY_Discmania_C-Line_Horizon_MD5_-_Cryo_Blade____1.webp/w665h665.webp",
+        "plastic": "C-Line Horizon",
+        "edition": "Gannon Buhr",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-roc": [
@@ -28763,6 +29990,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/kc-pro-roc",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/VwaeS_Innova_KC_Pro_Roc_1.jpg/w665h665.jpg",
+        "plastic": "KC Pro",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-fuse": [
@@ -29216,6 +30454,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-fuse",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/pOuKs_Latitude_64_Opto_Fuse_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-fuse",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ttf5v_Latitude_64_Zero_Gravity_Fuse_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-fuse",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/fswtU_Latitude_64_Gold_Fuse_1.webp/w665h665.webp",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-kaxe": [
@@ -30324,6 +31595,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-balance",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1xgG0_Axiom_Neutron_Balance_Special_Edition_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": "Special Edition",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-swarm": [
@@ -30902,6 +32184,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-deflector",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TeGNx_MVP_Proton_Deflector__1.webp/w664h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-rollo": [
@@ -31146,6 +32439,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-rollo",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/nvIcg_Innova_Star_Rollo_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-rollo",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ecnBe_Innova_Champion_Rollo_1.webp/w664h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-anchor": [
@@ -31559,6 +32874,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-md1",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/oYjWq_Discmania_S-Line_MD1_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-nord": [
@@ -31836,6 +33162,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-nord",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Lk3dG_Kastaplast_K1_Nord_1.jpg/w665h665.jpg",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-malta": [
@@ -32137,6 +33474,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-detour-blank",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/rUC0s_MVP_Neutron_Detour_Blank_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-wasp": [
@@ -32526,6 +33874,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/prism-proton-pyro",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/70Qra_Axiom_Prism_Proton_Pyro_1.webp/w665h665.webp",
+        "plastic": "Prism Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/prism-plasma-pyro",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/dUvmp_Axiom_Prism_Plasma_Pyro_1.webp/w665h665.webp",
+        "plastic": "Prism Plasma",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/prism-neutron-pyro",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/vaTUa_Axiom_Prism_Neutron_Pyro_1.webp/w665h665.webp",
+        "plastic": "Prism Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "prodigy-mx-2": [
@@ -33618,6 +34999,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-matrix",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IiLeZ_MVP_Proton_Matrix_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-jay": [
@@ -33851,6 +35243,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-jay",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/7pgCE_Innova_Champion_Jay_1.jpg/w659h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-cd1": [
@@ -34117,6 +35520,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-cd1",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CC8N9_Discmania_S-Line_CD1_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-culprit": [
@@ -34330,6 +35744,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-mutant",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/EBFWO_Discmania_NEO_Mutant_1.jpg/w665h665.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-svea": [
@@ -34629,6 +36054,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k4-svea-dealer-exclusive",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Crq01_Kastaplast_K4_Svea_-_Dealer_Exclusive_1.jpg/w665h665.jpg",
+        "plastic": "K4",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-glow-svea",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TZATG_Kastaplast_K1_Glow_Svea_1.jpg/w662h665.jpg",
+        "plastic": "K1 Glow",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-lion": [
@@ -34886,6 +36333,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-tantrum",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/L8Y5x_Axiom_Neutron_Tantrum_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-paradox": [
@@ -35534,6 +36992,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-teebird3",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/UolJd_Innova_Champion_Teebird3_1.jpg/w664h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-teebird3",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TBlSA_Innova_Star_Teebird3_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-caiman": [
@@ -35646,6 +37126,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-caiman",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/iRUa5_Innova_Champion_Caiman_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-runway": [
@@ -36103,6 +37594,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-07-26T12:25:01.767Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/active-premium-rockstar",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CYqjk_Discmania_Active_Premium_Rockstar_1.webp/w662h665.webp",
+        "plastic": "Active Premium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-tactic": [
@@ -36382,6 +37884,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-pearl",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/le9XP_Latitude_64_Opto_Pearl_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-pearl",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FhcLf_Latitude_64_Gold_Pearl_1.webp/w665h654.webp",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-suspect": [
@@ -36542,6 +38066,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:46:27.063Z",
         "firstSeen": "2026-07-24T16:46:27.699Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 145,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/dx-wolf",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/8FJQO_Innova_DX_Wolf_1.jpg/w665h665.jpg",
+        "plastic": "DX",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-stingray": [
@@ -37350,6 +38885,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-hard-idog-jesse-nieminen-2026",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/GkPSx_Kastaplast_K1_Hard_Idog_-_Jesse_Nieminen_202_1.jpg/w665h665.jpg",
+        "plastic": "K1 Hard",
+        "edition": "2026",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-malm": [
@@ -38102,6 +39648,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-explorer",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/KHM8E_Latitude_64_Opto_Explorer__1.webp/w662h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-explorer",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/qV3Iq_Latitude_64_Zero_Gravity_Explorer_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-saint-pro": [
@@ -38258,6 +39826,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-orbit-saint-pro-kristin-latt-20252",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ayQlA_Latitude_64_Gold_Orbit_Saint_Pro_-_Kristin_L_1.jpg/w664h665.jpg",
+        "plastic": "Gold Orbit",
+        "edition": "Kristin Lätt",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-saint-pro",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/tiIzP_Latitude_64_Opto_Saint_Pro_1.webp/w665h660.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-brave": [
@@ -38480,6 +40070,17 @@
         "edition": "Team Series",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-brave",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/0LHcM_Latitude_64_Grand_Brave_1.webp/w665h665.webp",
+        "plastic": "Grand",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-river": [
@@ -38955,6 +40556,61 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-river",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/nigmA_Latitude_64_Gold_River_1.webp/w665h665.webp",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-air-river",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FsKT1_Latitude_64_Opto_Air_River_1.webp/w660h665.webp",
+        "plastic": "Opto Air",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-river",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/q2tmm_Latitude_64_Opto_Orbit_River_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-river",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/vMJWP_Latitude_64_Zero_Gravity_River_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 259,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/project-grip-river",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IHhpm_Latitude_64_Project_Grip_River_1.webp/w665h665.webp",
+        "plastic": "Project Grip",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-honor": [
@@ -39465,6 +41121,28 @@
         "edition": "Ella Hansen",
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-07-26T12:25:01.767Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/q-line-fd",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3tnjm_Discmania_Q-Line_FD_-_Niklas_Anttila_1.webp/w665h665.webp",
+        "plastic": "Q-Line",
+        "edition": "Niklas Anttila",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-fd",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Ifiov_Discmania_C-Line_FD_1.webp/w665h665.webp",
+        "plastic": "C-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-cicada": [
@@ -40017,6 +41695,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-cicada",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TKqhH_Discraft_ESP_Cicada_1.webp/w665h665.webp",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-cigarra": [
@@ -40338,6 +42027,17 @@
         "edition": "Anthony Barela",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-cigarra-anthony-barela",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/i4Wuj_Discraft_Z_Cigarra_-_Anthony_Barela_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": "Anthony Barela",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-passion": [
@@ -41169,6 +42869,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-ice-splash-diamond",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/xgeWA_Latitude_64_Opto-Ice_Splash_Diamond_1.webp/w665h665.webp",
+        "plastic": "Opto-Ice",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-diamond",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/RMPUK_Latitude_64_Zero_Gravity_Diamond_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-diamond",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/0Iggt_Dynamic_Discs_Opto_Orbit_Diamond_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-servo": [
@@ -41655,6 +43388,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-servo",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/nYO5P_MVP_Proton_Servo_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-leopard3": [
@@ -42152,6 +43896,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/g-star-leopard3",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/t5lVM_Innova_G-Star_Leopard3_1.webp/w665h665.webp",
+        "plastic": "G-Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-sting": [
@@ -42761,6 +44516,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-wave-project-lab-coat",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Mj36T_MVP_Proton_Wave_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/cosmic-neutron-wave",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/5gxlM_MVP_Cosmic_Neutron_Wave__1.webp/w665h665.webp",
+        "plastic": "Cosmic Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-signal": [
@@ -43038,6 +44815,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-signal-project-lab-coat",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/QAAw7_MVP_Neutron_Signal_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/plasma-signal",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/9SxLT_MVP_Plasma_Signal_1.webp/w665h665.webp",
+        "plastic": "Plasma",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-crave": [
@@ -43667,6 +45466,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/total-eclipse-crave",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/7PE9A_Axiom_Total_Eclipse_Crave_1.webp/w665h665.webp",
+        "plastic": "Total Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-crave-project-lab-coat",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ZZK2S_Axiom_Proton_Crave_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-teebird": [
@@ -44153,6 +45974,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-teebird",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/NEfcl_Innova_Champion_Teebird_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-teebird",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CCyOY_Innova_Star_Teebird_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-drift": [
@@ -44718,6 +46561,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-eagle",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3vtbI_Innova_Champion_Eagle_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-volt": [
@@ -44808,6 +46662,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-volt",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/2sKTU_MVP_Proton_Volt_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-saint": [
@@ -45162,6 +47027,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 259,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/project-grip-saint",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/6RUYe_Latitude_64_Project_Grip_Saint_1.webp/w665h665.webp",
+        "plastic": "Project Grip",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-saint",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TbCtl_Latitude_64_Zero_Gravity_Saint_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-relay": [
@@ -45307,6 +47194,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-relay-2",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/gvwim_MVP_Neutron_Relay_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-it": [
@@ -45872,6 +47770,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 259,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-athena",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/hEbJ1_Discraft_Z_Athena__1.webp/w664h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-falk": [
@@ -46538,6 +48447,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/prism-neutron-trance",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FmIoX_Axiom_Prism_Neutron_Trance_1.webp/w665h665.webp",
+        "plastic": "Prism Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-squall": [
@@ -47685,6 +49605,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-leopard",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/r711y_Innova_Star_Leopard_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 199,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/g-star-leopard",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/gS1Q6_Innova_G-Star_Leopard_1.webp/w665h665.webp",
+        "plastic": "G-Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-leopard",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/FMsrV_Innova_Champion_Leopard_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-tesla": [
@@ -48193,6 +50146,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-tesla-project-lab-coat",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/qhN7G_MVP_Neutron_Tesla_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-tesla",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/uewn9_MVP_Proton_Tesla_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-defy": [
@@ -48492,6 +50467,28 @@
         "edition": "Special Edition",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/eclipse-defy",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/D9IFG_Axiom_Eclipse_Defy_1.webp/w665h665.webp",
+        "plastic": "Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-defy",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/AXlBJ_Axiom_Neutron_Defy_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-hawkeye": [
@@ -48659,6 +50656,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-hawkeye",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IrCc0_Innova_Champion_Hawkeye_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-tl": [
@@ -49224,6 +51232,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-valkyrie",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TccUq_Innova_Champion_Valkyrie_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-valkyrie",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/5QF0d_Innova_Star_Valkyrie_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-gorgon": [
@@ -49622,6 +51652,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-gorgon",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CLhJ5_Innova_Champion_Gorgon__1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-rhythm": [
@@ -49844,6 +51885,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-soft-rhythm-otb-open-2024",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IkpiI_Axiom_Proton_Soft_Rhythm_-_OTB_Open_2024_1.webp/w665h664.webp",
+        "plastic": "Proton Soft",
+        "edition": "OTB Open",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-terra": [
@@ -49967,6 +52019,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/electron-terra",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/O4Jq0_MVP_Electron_Terra_1.webp/w665h665.webp",
+        "plastic": "Electron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-anax": [
@@ -50288,6 +52351,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-anax",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/sONgk_Discraft_ESP_Anax_1.jpg/w665h665.jpg",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "prodigy-fx-2": [
@@ -51198,6 +53272,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-firebird",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/lPMdA_Innova_Star_Firebird_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-firebird",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Zh2km_Innova_Halo_Star_Firebird_1.webp/w665h665.webp",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-fd1": [
@@ -52543,6 +54639,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/q-line-premier-dd3",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/rR722_Discmania_Q-Line_Premier_DD3_1.webp/w665h665.webp",
+        "plastic": "Q-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-sergeant": [
@@ -52991,6 +55098,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-pioneer",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/aFZ3j_Latitude_64_Opto_Pioneer_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-savant": [
@@ -53191,6 +55309,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-savant",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ZIEzZ_Innova_Star_Savant_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-sidewinder": [
@@ -53479,6 +55608,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-sidewinder",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/fKks3_Innova_Champion_Sidewinder_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-stalker": [
@@ -53580,6 +55720,17 @@
         "edition": "Paige Pierce",
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-stalker",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/cb9Ig_Discraft_Z_Stalker_1.webp/w662h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-maul": [
@@ -53714,6 +55865,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-maul",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/5w8RQ_Latitude_64_Opto_Maul_1.webp/w665h660.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-fury": [
@@ -53870,6 +56032,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-fury",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/hGW83_Latitude_64_Gold_Fury_1.jpg/w665h665.jpg",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-fury",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/duUME_Latitude_64_Opto_Fury_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-stl": [
@@ -54424,6 +56608,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/eclipse-impulse",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/bEBVJ_MVP_Eclipse_Impulse_1.jpg/w664h665.jpg",
+        "plastic": "Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-dragon": [
@@ -54481,6 +56676,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 145,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/dx-dragon",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/RZCs6_Innova_DX_Dragon_1.webp/w665h665.webp",
+        "plastic": "DX",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-archangel": [
@@ -54914,6 +57120,39 @@
         "edition": "Kristin Lätt",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-grace",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/2ay8M_Latitude_64_Clear_Grace__1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-grace",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/zDSbZ_Latitude_64_Zero_Gravity_Grace_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-grace",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/X3lNW_Latitude_64_Grand_Grace_1.webp/w665h665.webp",
+        "plastic": "Grand",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-guld": [
@@ -55191,6 +57430,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-guld",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/INU1c_Kastaplast_K1_Guld__1.jpg/w665h665.jpg",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-dd": [
@@ -55424,6 +57674,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-dd",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/teVac_Discmania_C-Line_DD_1.jpg/w665h665.jpg",
+        "plastic": "C-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-dd",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/WyUNf_Discmania_S-Line_DD_1.webp/w665h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-cloudbreaker": [
@@ -55492,6 +57764,17 @@
         "edition": "Gannon Buhr",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 289,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/q-line-premier-cloudbreaker-gannon-buhr-signature-series",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/20soK_Discmania_Q-Line_Premier_Cloudbreaker_-_Gann_1.webp/w665h665.webp",
+        "plastic": "Q-Line",
+        "edition": "Gannon Buhr",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-orbital": [
@@ -55714,6 +57997,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-orbital-project-lab-coat2",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/pgAzj_MVP_Proton_Orbital_-_Project_Lab_Coat_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-destroyer": [
@@ -56409,6 +58703,39 @@
         "edition": "Henna Blomroos",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-destroyer",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/P5rPg_Innova_Champion_Destroyer_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-destroyer",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Nyetq_Innova_Star_Destroyer__1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-destroyer",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/RTGbc_Innova_Halo_Star_Destroyer_1.webp/w665h665.webp",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-inertia": [
@@ -56686,6 +59013,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/eclipse-inertia",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ODrES_MVP_Eclipse_Inertia_1.jpg/w665h665.jpg",
+        "plastic": "Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-inertia-project-lab-coat",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/iyhvh_MVP_Neutron_Inertia_-_Project_Lab_Coat_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-trail": [
@@ -57130,6 +59479,28 @@
         "edition": "Isaac Robinson",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-sweep",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/4hn4L_Latitude_64_Clear_Sweep__1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-sweep-prototype",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/djDKu_Latitude_64_Grand_Sweep_Prototype_1.png/w665h665.png",
+        "plastic": "Grand",
+        "edition": "Prototype",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-scorch": [
@@ -57660,6 +60031,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/QX7dF_Discraft_Special_Blend_Scorch_-_Valerie_Mand_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/jawbreaker-lite-scorch",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/8pHfb_Discraft_Jawbreaker_Lite_Scorch_1.webp/w665h665.webp",
+        "plastic": "Jawbreaker",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-scorch",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/JkjLe_Discraft_ESP_Scorch_1.webp/w665h665.webp",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-force": [
@@ -59195,6 +61599,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-heat",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/uKm58_Discraft_ESP_Heat_1.webp/w665h665.webp",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-wraith": [
@@ -59769,6 +62184,39 @@
         "edition": "2025",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-wraith",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Hcyle_Innova_Champion_Proto_Glow_Wraith_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-wraith",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Hn99y_Innova_Halo_Star_Wraith_1.jpg/w662h665.jpg",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-wraith",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/zaHu0_Innova_Star_Wraith_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-mamba": [
@@ -60156,6 +62604,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-mamba",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/lkrmi_Innova_Champion_Mamba_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-insanity": [
@@ -60774,6 +63233,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-insanity",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ySrbd_Axiom_Proton_Insanity_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/fission-insanity",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Bv91R_Axiom_Fission_Insanity_1.webp/w665h665.webp",
+        "plastic": "Fission",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-delirium": [
@@ -60908,6 +63389,17 @@
         "edition": "2026",
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-delirium",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/riL0u_Axiom_Neutron_Panic_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-raptor": [
@@ -61482,6 +63974,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-29T08:58:02.260Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-raptor-5x-paige-pierce",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/uoEv9_Discraft_Z_Raptor_-_5x_Paige_Pierce_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": "Paige Pierce",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-virus": [
@@ -61880,6 +64383,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/cosmic-neutron-virus-project-lab-coat",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/PwqHQ_Axiom_Cosmic_Neutron_Virus_-_Project_Lab_Coa_1.webp/w665h665.webp",
+        "plastic": "Cosmic Neutron",
+        "edition": "Project Lab Coat",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/eclipse-virus",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/PO2zP_Axiom_Eclipse_Virus_1.webp/w665h665.webp",
+        "plastic": "Eclipse",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "axiom-fireball": [
@@ -62289,6 +64814,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-fireball",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/NAqBS_Axiom_Neutron_Fireball_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-fireball",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/utQOG_Axiom_Proton_Fireball_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-pd2": [
@@ -62634,6 +65181,17 @@
         "edition": "2025",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-katana",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/HNCDh_Innova_Champion_Katana_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-shryke": [
@@ -63065,6 +65623,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-07-26T12:25:01.767Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-shryke",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/g6gfC_Innova_Champion_Shryke_1.jpg/w665h665.jpg",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-shryke",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/AYbKJ_Innova_Star_Shryke_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-shryke",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/RZsm1_Innova_Halo_Star_Shryke_1.webp/w665h665.webp",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-beast": [
@@ -63674,6 +66265,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-time-lapse-re-tooled",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/n5Eax_Axiom_Neutron_Time-Lapse_Re-Tooled_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-thrasher": [
@@ -64226,6 +66828,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 289,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-swirl-captains-thrasher-missy-gannon-2026",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/iTM9x_Discraft_Z_Swirl_Captain_s_Thrasher_-_Missy__1.webp/w665h665.webp",
+        "plastic": "Z Swirl",
+        "edition": "2026",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-venom": [
@@ -64635,6 +67248,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-29T08:58:02.260Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-venom",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/5VEld_Discraft_Z_Venom_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-drive": [
@@ -64857,6 +67481,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 299,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-swirl-drive-paige-pierce",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/yscHj_Discraft_Z_Swirl_Drive_-_Paige_Pierce_1.webp/w665h660.webp",
+        "plastic": "Z Swirl",
+        "edition": "Paige Pierce",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-vanish": [
@@ -65167,6 +67802,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-vanish",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/SsV2U_Axiom_Proton_Vanish_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-rive": [
@@ -65400,6 +68046,17 @@
         "edition": "Team Series",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-rive-limited-edition",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/tTGnY_Latitude_64_Grand_Rive_-_Limited_Edition_1.jpg/w665h665.jpg",
+        "plastic": "Grand",
+        "edition": "Limited Edition",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-engine": [
@@ -65545,6 +68202,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-engine",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/snNaG_Neutron_Engine_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-predator": [
@@ -66989,6 +69657,28 @@
         "edition": "Team Series",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-sapphire",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/6e51I_Latitude_64_Opto_Orbit_Sapphire_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 259,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/project-grip-sapphire",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/M4nBd_Latitude_64_Project_Grip_Sapphire_1.webp/w665h665.webp",
+        "plastic": "Project Grip",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-bolt": [
@@ -67178,6 +69868,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-bolt2",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/KuSOo_Latitude_64_Gold_Bolt_1.jpg/w665h665.jpg",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-bolt",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1TEd9_Latitude_64_Opto_Bolt_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 159,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-gravity-bolt",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/UfY81_Latitude_64_Zero_Gravity_Bolt_1.webp/w665h665.webp",
+        "plastic": "Zero",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-vass": [
@@ -67613,6 +70336,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-ballista-pro",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/KnJIa_Latitude_64_Opto_Ballista_Pro_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-vulture": [
@@ -68191,6 +70925,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-nuke-os",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/5ptkh_Discraft_Z_Nuke_OS_1.webp/w665h665.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-octane": [
@@ -68380,6 +71125,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-octane",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/n2gS0_MVP_Proton_Octane__1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-zeus": [
@@ -68712,6 +71468,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/big-z-zeus",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/cFKkH_Discraft_Big_Z_Zeus_1.jpg/w662h665.jpg",
+        "plastic": "Big Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 259,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-lite-zeus",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/vS2ZX_Discraft_Z_Lite_Zeus_1.webp/w662h665.webp",
+        "plastic": "Z Lite",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 259,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-zeus",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/9xGzX_Discraft_ESP_Zeus_1.webp/w665h665.webp",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-escape": [
@@ -69255,6 +72044,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/esp-avenger-ss",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/GMVeb_Discraft_ESP_Avenger_SS_1.jpg/w662h665.jpg",
+        "plastic": "ESP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-avenger-ss",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/dhM8F_Discraft_Z_Avenger_SS_1.webp/w665h660.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-max": [
@@ -69688,6 +72499,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-roadrunner",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/3WiHd_Innova_Champion_Roadrunner_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-roadrunner",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/GsQsA_Innova_Star_Roadrunner_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-charger": [
@@ -70253,6 +73086,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-tern",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Frp14_Innova_Halo_Star_Tern_1.webp/w665h665.webp",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-racer": [
@@ -70398,6 +73242,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-racer",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/eU547_Innova_Star_Racer_1.webp/w665h665.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-hades": [
@@ -70798,6 +73653,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-relativity",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/EDZyJ_MVP_Neutron_Relativity_1.webp/w662h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-nuke-ss": [
@@ -71044,6 +73910,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-strive",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Hrhaj_Latitude_64_Clear_Strive_1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-strive",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/kukVZ_Latitude_64_Grand_Strive_1.jpg/w665h665.jpg",
+        "plastic": "Grand",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-mystere": [
@@ -71545,6 +74433,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-stiletto",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/fiWJ3_Latitude_64_Gold_Stiletto_1.jpg/w665h665.jpg",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-stiletto-oyvind-jarnes",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/sC5mN_Latitude_64_Opto_Stiletto_-___yvind_Jarnes_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-krut": [
@@ -72323,6 +75233,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-zenith",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IV2eB_MVP_Neutron_Zenith_1.webp/w664h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-trace": [
@@ -72978,6 +75899,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/halo-star-boss",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/LfHq3_Innova_Halo_Star_Boss_1.jpg/w665h665.jpg",
+        "plastic": "Halo Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/star-boss",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/8Du1P_Innova_Star_Boss_1.webp/w665h664.webp",
+        "plastic": "Star",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-paradigm": [
@@ -73393,6 +76336,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-havoc",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/YaQ6k_Latitude_64_Opto_Havoc_1.webp/w662h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-power-disc": [
@@ -73575,6 +76529,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-panic",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/riL0u_Axiom_Neutron_Panic_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-captain": [
@@ -73687,6 +76652,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 289,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-confetti-captains-raptor-2026",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/X5I1t_Discraft_Z_Confetti_Captain_s_Raptor_2026_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": "Confetti",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-musket": [
@@ -74302,6 +77278,39 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-mayhem",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/gY4Og_Axiom_Neutron_Mayhem_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/proton-mayhem",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/0Ajul_Axiom_Proton_Mayhem_1.webp/w665h665.webp",
+        "plastic": "Proton",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/plasma-mayhem",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/uKm4H_Axiom_Plasma_Mayhem_1.webp/w665h664.webp",
+        "plastic": "Plasma",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-ballista": [
@@ -74469,6 +77478,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-ballista",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/HFV4L_Latitude_64_Gold_Ballista_1.jpg/w665h665.jpg",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-air-ballista",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/mN6jP_Latitude_64_Opto_Air_Ballista_1.webp/w665h665.webp",
+        "plastic": "Opto Air",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-colossus": [
@@ -74937,6 +77968,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-jade",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/iFvTP_Latitude_64_Opto_Jade_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/gold-jade",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/e2sz4_Latitude_64_Gold_Jade_1.webp/w665h660.webp",
+        "plastic": "Gold",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-trespass": [
@@ -75688,6 +78741,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-tenacity",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Knoc2_Axiom_Neutron_Tenacity_1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-teleport": [
@@ -75745,6 +78809,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-teleport",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/shy6f_MVP_Neutron_Teleport_1.webp/w665h664.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-nitro": [
@@ -75960,6 +79035,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-rask",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/iUJtV_Kastaplast_K1_Rask_1.webp/w665h665.webp",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-phase": [
@@ -76118,6 +79204,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-wrath",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XXST0_Axiom_Neutron_Wrath__1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-splice": [
@@ -76241,6 +79338,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-splice",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/MCMXp_Discmania_NEO_Splice_1.jpg/w665h665.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-essence": [
@@ -76509,6 +79617,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-instinct",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/HuPd3_Discmania_NEO_Instinct_1.webp/w665h665.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-pd": [
@@ -76753,6 +79872,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/c-line-pd",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1u8Ff_Discmania_C-Line_PD_1.webp/w665h665.webp",
+        "plastic": "C-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/s-line-pd",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/IYHNU_Discmania_S-Line_PD_1.webp/w662h665.webp",
+        "plastic": "S-Line",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-echo": [
@@ -77054,6 +80195,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-impa",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/6apTM_Kastaplast_K1_Impa_1.jpg/w665h665.jpg",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-striker": [
@@ -77449,6 +80601,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 169,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/300-pa-3-soft",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/J5VgB_Prodigy_300_PA-3_Soft_1.webp/w664h665.webp",
+        "plastic": "300",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "prodigy-px-3": [
@@ -77862,6 +81025,28 @@
         "edition": "Gannon Buhr",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-function",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/9D8UY_Discmania_NEO_Function_1.webp/w665h665.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/Jlvn9_Discmania_Lux_Vapor_Function_-_Special_Editi_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": "Special Edition",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-grym-x": [
@@ -79141,6 +82326,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:46:27.063Z",
         "firstSeen": "2026-07-24T16:46:27.699Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 149,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/zero-medium-spike",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/RZp30_Latitude_64_Zero_Medium_Spike_1.webp/w665h665.webp",
+        "plastic": "Zero Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "dynamic-evidence": [
@@ -81137,6 +84333,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 289,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/special-blend-sled-worlds-edition",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/CaShp_Discraft_Special_Blend_Sled_-_Worlds_Edition_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-bear": [
@@ -81418,6 +84625,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/vip-stag",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/zvA0O_Westside_Discs_VIP_Stag_1.webp/w665h665.webp",
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-crown": [
@@ -81675,6 +84893,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-08-03T10:04:02.385Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 179,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/bt-medium-orbit-maiden",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/UPNTB_Westside_Discs_BT_Medium_Orbit_Maiden_1.jpg/w665h665.jpg",
+        "plastic": "BT Medium",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-gatekeeper": [
@@ -81965,6 +85194,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:51.359Z",
         "firstSeen": "2026-08-03T10:04:02.385Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 239,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/vip-moonshine-warship",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/tYbun_Westside_Discs_VIP_Moonshine_Warship_1.webp/w665h665.webp",
+        "plastic": "VIP Moonshine",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "clash-popcorn": [
@@ -82537,17 +85777,6 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:45:27.046Z",
         "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 20,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/ferarri-salt-hallon",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/05774540630809_C1N1_s03.avif?v=1783065064",
-        "plastic": "Salt",
-        "edition": null,
-        "lastScraped": "2026-08-04T08:45:53.275Z",
-        "firstSeen": "2026-07-24T20:58:19.645Z"
       }
     ],
     "westside-king": [
@@ -82969,6 +86198,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-bokeh",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/SkZJk_Axiom_Neutron_Bokeh__1.webp/w665h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "infinite-aztec": [
@@ -83333,6 +86573,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/tournament-underworld",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/OKVQP_Westside_Discs_Tournament_Underworld_1.webp/w665h665.webp",
+        "plastic": "Tournament",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/vip-underworld",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/TbUnw_Westside_Discs_VIP_Underworld_1.webp/w665h665.webp",
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-longbowman": [
@@ -83480,6 +86742,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/vip-tursas",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ADPKS_Westside_Discs_VIP_Tursas_1.webp/w665h665.webp",
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "innova-condor": [
@@ -83992,6 +87265,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/premium-jokeri-roland-kur-signature-series",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/sRJMX_Prodiscus_Ultrium_JOKERi_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-ohm": [
@@ -84115,6 +87399,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-ohm",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/l0BEf_MVP_Neutron_Ohm_1.jpg/w665h665.jpg",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "mvp-ion": [
@@ -84559,6 +87854,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/z-sol",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/SgYdh_Discraft_Z_Sol_1.webp/w665h660.webp",
+        "plastic": "Z",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-joy": [
@@ -85110,6 +88416,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-26T08:51:30.378Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/champion-lynx",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/yQn8Y_Innova_Champion_Lynx_1.webp/w665h665.webp",
+        "plastic": "Champion",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-fire": [
@@ -85299,6 +88616,28 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 279,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-sparkle-fire-anniken-steen",
+        "image": "https://frisbeebutikke-i03.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/eCQbA_Latitude_64_Clear_Sparkle_Fire_-_Anniken_Ste_1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": "Anniken Steen",
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 269,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/grand-fire",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/LG6cx_Latitude_64_Grand_Fire_1.jpg/w665h665.jpg",
+        "plastic": "Grand",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-vellamo": [
@@ -85468,6 +88807,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-stasis",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/ycyWh_MVP_Neutron_Stasis_1.webp/w663h665.webp",
+        "plastic": "Neutron",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "latitude-mighty": [
@@ -85602,6 +88952,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 249,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/clear-mighty",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/1oQo9_Latitude_64_Clear_Mighty__1.jpg/w665h665.jpg",
+        "plastic": "Clear",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discraft-roost": [
@@ -85804,6 +89165,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/opto-amber",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/nE6YS_Latitude_64_Opto_Amber_1.webp/w665h665.webp",
+        "plastic": "Opto",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "kastaplast-gadd": [
@@ -85883,6 +89255,17 @@
         "edition": "First Run",
         "lastScraped": "2026-08-04T09:00:31.667Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/k1-gadd",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/M83eY_Kastaplast_K1_Gadd_1.jpg/w665h665.jpg",
+        "plastic": "K1",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "westside-hatchet": [
@@ -86173,6 +89556,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:53:54.847Z",
         "firstSeen": "2026-07-26T08:51:30.378Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/400-a2",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/L0XRP_Prodigy_400_A2_1.jpg/w665h664.jpg",
+        "plastic": "400",
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "prodigy-d2": [
@@ -88728,6 +92122,17 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:46:27.063Z",
         "firstSeen": "2026-07-24T16:46:27.699Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/premium-midari",
+        "image": "https://frisbeebutikke-i05.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/prNw1_Prodiscus_Premium_MIDARi_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ],
     "discmania-sparta": [
@@ -90678,6 +94083,32 @@
         "edition": null,
         "lastScraped": "2026-08-04T08:46:27.063Z",
         "firstSeen": "2026-07-24T16:46:27.699Z"
+      }
+    ],
+    "discmania-talisman": [
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/premium-talisman",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/mbJwv_Prodiscus_Glow_Talisman_1.jpg/w665h665.jpg",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
+      }
+    ],
+    "discmania-laseri": [
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/premium-laseri",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/N8bVr_Prodiscus_Ultrium_LASERi_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-08-04T10:18:11.357Z",
+        "firstSeen": "2026-08-04T10:18:11.357Z"
       }
     ]
   }
