@@ -5,8 +5,18 @@
 // Attempt 2: Playwright headless Chromium (fallback if bot protection is added later)
 //
 // Platform: Mystore (custom Norwegian e-commerce, not WooCommerce)
-// Products are in [data-price-including-tax] cards with price already as integer NOK.
-// Pagination via /categories/golfdisker?&page=N (100 products per page).
+// Site was rebuilt (confirmed 2026-08-04, silently broke this scraper — no
+// stores.discace-style HTTP errors, it just quietly returned 0 products every
+// day since the old [data-price-including-tax] markup was gone). Product
+// data now lives inline in each card's `@click="... addToCart({...})"`
+// Alpine.js handler as a JS object literal (name/price/url/image/brand), not
+// in DOM attributes — parsed via regex below instead of cheerio selectors.
+// Category listing appears to only show in-stock items (no "utsolgt"/out-of-
+// stock markers found anywhere across 4 sample pages), so inStock is always
+// true here — if that assumption turns out wrong, prices for genuinely
+// out-of-stock discs would incorrectly show as available.
+// Pagination via /categories/golfdisker?&page=N (~100 products per page) —
+// this part of the site was NOT changed.
 //
 // Reads existing data/scraped-prices.json, merges results in, writes back.
 // Usage: node scripts/scrape-frisbeebutikken.js   or   pnpm scrape:frisbeebutikken
@@ -33,54 +43,43 @@ const STORE = {
 
 // ── HTML parsing (Mystore platform) ──────────────────────────────────────────
 //
-// Product cards: [data-price-including-tax]
-//   data-price-including-tax = integer NOK price (no parsing needed)
-//   data-manufacturer = brand name
-// Inside each card:
-//   a.title            → product name (text) and URL (href)
-//   a.__product_url    → product URL (href)
-//   div.image img[src] → product image
-//   div.product[data-quantity] → stock quantity (0 = out of stock)
+// Each product card's add-to-cart button carries an Alpine.js handler like:
+//   @click.prevent="async () => { ... await $store.cart.addToCart({
+//       name: 'Champion Caiman', image: 'https://...', price: '219,-',
+//       url: 'https://frisbeebutikken.no/products/champion-caiman',
+//       brand: 'Innova', ... }) }"
+// Extract each addToCart({...}) block's body and pull fields out with regex —
+// it's a JS object literal (unquoted keys, single-quoted strings), not JSON.
 
 function parseProductsFromHtml(html) {
-  const $ = cheerio.load(html);
   const products = [];
+  const blockRe = /addToCart\(\{([\s\S]*?)\}\)/g;
+  let match;
 
-  $('[data-price-including-tax]').each((_, el) => {
-    const card = $(el);
+  while ((match = blockRe.exec(html)) !== null) {
+    const block = match[1];
+    const nameM = block.match(/name:\s*'([^']*)'/);
+    const priceM = block.match(/price:\s*'([^']*)'/);
+    const urlM = block.match(/url:\s*'([^']*)'/);
+    const imageM = block.match(/image:\s*'([^']*)'/);
+    if (!nameM || !priceM || !urlM) continue;
 
-    const rawName = card.find('a.title').text().trim();
-    if (!rawName) return;
+    const rawName = nameM[1].trim();
+    if (!rawName) continue;
 
-    const price = parseInt(card.attr('data-price-including-tax'), 10);
-    if (!price || isNaN(price) || price < 50) return; // skip suspiciously low prices (used/clearance/parsing error)
+    const price = parseInt(priceM[1].replace(/[^\d]/g, ''), 10);
+    if (!price || isNaN(price) || price < 50) continue; // skip suspiciously low prices (used/clearance/parsing error)
 
-    // Prefer __product_url link, fall back to a.title href
-    const linkEl = card.find('a.__product_url, a.title').first();
-    const href = linkEl.attr('href') || '';
-    const productUrl = href.startsWith('http')
-      ? href
-      : STORE.baseUrl + (href.startsWith('/') ? '' : '/') + href;
+    const productUrl = urlM[1];
+    const image = imageM ? imageM[1] : null;
 
-    // data-quantity: 0 = out of stock; missing or >0 = in stock
-    const qtyAttr = card.find('[data-quantity]').attr('data-quantity');
-    const inStock = qtyAttr === undefined ? true : parseInt(qtyAttr, 10) > 0;
+    if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) {
+      products.push({ rawName, price, productUrl, inStock: true, image });
+    }
+  }
 
-    const image = card.find('div.image img').first().attr('src') || null;
-
-    if (!isUsedDisc(rawName) && !isMiniDisc(rawName) && !isNonDiscProduct(rawName)) products.push({ rawName, price, productUrl, inStock, image });
-  });
-
-  // Pagination: look for a.next-page or numbered links in ?&page=N format
-  const nextPageHref = $('a[href*="?&page="], a[href*="?page="]')
-    .filter((_, el) => {
-      const text = $(el).text().trim();
-      return text === '»' || /^\d+$/.test(text);
-    })
-    .last()
-    .attr('href');
-
-  // Find the highest page number linked to determine if there are more pages
+  // Pagination unchanged by the rebuild — still plain <a href="?&page=N"> links.
+  const $ = cheerio.load(html);
   let maxPage = 1;
   $('a[href*="?&page="], a[href*="?page="]').each((_, el) => {
     const m = ($(el).attr('href') || '').match(/[?&]page=(\d+)/);
@@ -287,28 +286,8 @@ async function scrapeWithPlaywright() {
         await sleep(1000);
       }
 
-      const products = await page.evaluate((baseUrl) => {
-        return Array.from(document.querySelectorAll('[data-price-including-tax]')).map((card) => {
-          const rawName = (card.querySelector('a.title') || {}).textContent || '';
-          if (!rawName.trim()) return null;
-          const price = parseInt(card.getAttribute('data-price-including-tax') || '0', 10);
-          if (!price) return null;
-          const linkEl = card.querySelector('a.__product_url, a.title');
-          const href = linkEl ? linkEl.getAttribute('href') : '';
-          const productUrl = href.startsWith('http') ? href : baseUrl + (href.startsWith('/') ? '' : '/') + href;
-          const qtyEl = card.querySelector('[data-quantity]');
-          const qty = qtyEl ? parseInt(qtyEl.getAttribute('data-quantity') || '-1', 10) : -1;
-          const inStock = qty < 0 ? true : qty > 0;
-          const img = card.querySelector('div.image img');
-          return {
-            rawName: rawName.trim(),
-            price,
-            productUrl,
-            inStock,
-            image: img ? img.src : null,
-          };
-        }).filter(Boolean);
-      }, STORE.baseUrl);
+      const pageHtml = await page.content();
+      const { products } = parseProductsFromHtml(pageHtml);
 
       for (const prod of products) {
         if (!seenUrls.has(prod.productUrl) && !isUsedDisc(prod.rawName) && !isMiniDisc(prod.rawName) && !isNonDiscProduct(prod.rawName)) {
