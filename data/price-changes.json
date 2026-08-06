@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-05T09:01:55.479Z",
+  "generated": "2026-08-06T08:56:32.551Z",
   "summary": {
-    "priceChanges24h": 7,
+    "priceChanges24h": 21,
     "newDiscs24h": 0,
     "storesChecked": 14
   },
@@ -18,10 +18,10 @@
       "period": "week",
       "history": [
         242,
-        242,
         241,
         241,
         241,
+        169,
         169,
         169
       ]
@@ -38,12 +38,32 @@
       "period": "week",
       "history": [
         286,
-        286,
         285,
         284,
         285,
         249,
+        249,
         249
+      ]
+    },
+    {
+      "discId": "latitude-river",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Zero",
+      "oldPrice": 176,
+      "newPrice": 159,
+      "pct": -10,
+      "changedAt": "2026-08-04T10:18:11.357Z",
+      "period": "week",
+      "history": [
+        176,
+        175,
+        175,
+        175,
+        159,
+        159,
+        159
       ]
     },
     {
@@ -58,10 +78,10 @@
       "period": "week",
       "history": [
         176,
-        176,
         175,
         175,
         175,
+        159,
         159,
         159
       ]
@@ -81,7 +101,7 @@
         235,
         235,
         235,
-        235,
+        219,
         219,
         219
       ]
@@ -94,14 +114,14 @@
       "oldPrice": 169,
       "newPrice": 159,
       "pct": -6,
-      "changedAt": "2026-08-05T08:31:30.479Z",
+      "changedAt": "2026-08-06T08:32:47.634Z",
       "period": "week",
       "history": [
         169,
         169,
         169,
         169,
-        169,
+        159,
         159,
         159
       ]
@@ -121,7 +141,7 @@
         169,
         169,
         169,
-        169,
+        159,
         159,
         159
       ]
@@ -134,14 +154,14 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-05T08:31:30.479Z",
+      "changedAt": "2026-08-06T08:32:47.634Z",
       "period": "week",
       "history": [
         209,
         209,
         209,
         209,
-        209,
+        199,
         199,
         199
       ]
@@ -154,19 +174,39 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-05T08:31:30.479Z",
+      "changedAt": "2026-08-06T08:32:47.634Z",
       "period": "week",
       "history": [
         209,
         209,
         209,
         209,
-        209,
+        199,
         199,
         199
+      ]
+    },
+    {
+      "discId": "westside-sword",
+      "store": "discace",
+      "storeName": "Discace of Sweden",
+      "plastic": "VIP",
+      "oldPrice": 229,
+      "newPrice": 218,
+      "pct": -5,
+      "changedAt": "2026-08-05T09:01:04.329Z",
+      "period": "week",
+      "history": [
+        229,
+        229,
+        228,
+        217,
+        218,
+        218,
+        218
       ]
     }
   ],
   "totalDrops": 0,
-  "totalDropsWeek": 8
+  "totalDropsWeek": 10
 }
