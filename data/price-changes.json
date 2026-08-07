@@ -1,89 +1,89 @@
 {
-  "generated": "2026-08-06T08:56:32.551Z",
+  "generated": "2026-08-07T07:40:43.560Z",
   "summary": {
-    "priceChanges24h": 21,
+    "priceChanges24h": 49,
     "newDiscs24h": 0,
     "storesChecked": 14
   },
   "drops": [
     {
-      "discId": "prodigy-pa-3",
+      "discId": "discraft-drone",
       "store": "frisbeebutikken",
       "storeName": "Frisbeebutikken",
-      "plastic": "300",
+      "plastic": "ESP FLX",
+      "oldPrice": 308,
+      "newPrice": 239,
+      "pct": -22,
+      "changedAt": "2026-08-07T07:23:24.460Z",
+      "period": "day",
+      "history": [
+        306,
+        306,
+        307,
+        308,
+        308,
+        308,
+        239
+      ]
+    },
+    {
+      "discId": "innova-avatar",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "XT",
+      "oldPrice": 243,
+      "newPrice": 210,
+      "pct": -14,
+      "changedAt": "2026-08-07T07:32:27.100Z",
+      "period": "day",
+      "history": [
+        242,
+        242,
+        242,
+        243,
+        243,
+        243,
+        210
+      ]
+    },
+    {
+      "discId": "discraft-drone",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "ESP FLX",
+      "oldPrice": 306,
+      "newPrice": 239,
+      "pct": -22,
+      "changedAt": "2026-08-07T07:23:24.460Z",
+      "period": "week",
+      "history": [
+        306,
+        306,
+        307,
+        308,
+        308,
+        308,
+        239
+      ]
+    },
+    {
+      "discId": "innova-avatar",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "XT",
       "oldPrice": 242,
-      "newPrice": 169,
-      "pct": -30,
-      "changedAt": "2026-08-04T10:18:11.357Z",
+      "newPrice": 210,
+      "pct": -13,
+      "changedAt": "2026-08-07T07:32:27.100Z",
       "period": "week",
       "history": [
         242,
-        241,
-        241,
-        241,
-        169,
-        169,
-        169
-      ]
-    },
-    {
-      "discId": "discmania-jokeri",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 286,
-      "newPrice": 249,
-      "pct": -13,
-      "changedAt": "2026-08-04T10:18:11.357Z",
-      "period": "week",
-      "history": [
-        286,
-        285,
-        284,
-        285,
-        249,
-        249,
-        249
-      ]
-    },
-    {
-      "discId": "latitude-river",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Zero",
-      "oldPrice": 176,
-      "newPrice": 159,
-      "pct": -10,
-      "changedAt": "2026-08-04T10:18:11.357Z",
-      "period": "week",
-      "history": [
-        176,
-        175,
-        175,
-        175,
-        159,
-        159,
-        159
-      ]
-    },
-    {
-      "discId": "latitude-diamond",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Zero",
-      "oldPrice": 176,
-      "newPrice": 159,
-      "pct": -10,
-      "changedAt": "2026-08-04T10:18:11.357Z",
-      "period": "week",
-      "history": [
-        176,
-        175,
-        175,
-        175,
-        159,
-        159,
-        159
+        242,
+        242,
+        243,
+        243,
+        243,
+        210
       ]
     },
     {
@@ -94,13 +94,13 @@
       "oldPrice": 235,
       "newPrice": 219,
       "pct": -7,
-      "changedAt": "2026-08-04T10:18:11.357Z",
+      "changedAt": "2026-08-07T07:23:24.460Z",
       "period": "week",
       "history": [
         235,
         235,
         235,
-        235,
+        219,
         219,
         219,
         219
@@ -114,33 +114,13 @@
       "oldPrice": 169,
       "newPrice": 159,
       "pct": -6,
-      "changedAt": "2026-08-06T08:32:47.634Z",
+      "changedAt": "2026-08-07T07:11:57.972Z",
       "period": "week",
       "history": [
         169,
         169,
         169,
-        169,
         159,
-        159,
-        159
-      ]
-    },
-    {
-      "discId": "kastaplast-svea",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "K4",
-      "oldPrice": 169,
-      "newPrice": 159,
-      "pct": -6,
-      "changedAt": "2026-08-04T10:18:11.357Z",
-      "period": "week",
-      "history": [
-        169,
-        169,
-        169,
-        169,
         159,
         159,
         159
@@ -154,13 +134,13 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-06T08:32:47.634Z",
+      "changedAt": "2026-08-07T07:11:57.972Z",
       "period": "week",
       "history": [
         209,
         209,
         209,
-        209,
+        199,
         199,
         199,
         199
@@ -174,13 +154,13 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-06T08:32:47.634Z",
+      "changedAt": "2026-08-07T07:11:57.972Z",
       "period": "week",
       "history": [
         209,
         209,
         209,
-        209,
+        199,
         199,
         199,
         199
@@ -198,15 +178,15 @@
       "period": "week",
       "history": [
         229,
-        229,
         228,
         217,
+        218,
         218,
         218,
         218
       ]
     }
   ],
-  "totalDrops": 0,
-  "totalDropsWeek": 10
+  "totalDrops": 2,
+  "totalDropsWeek": 7
 }
