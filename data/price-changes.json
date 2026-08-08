@@ -1,49 +1,169 @@
 {
-  "generated": "2026-08-07T07:40:43.560Z",
+  "generated": "2026-08-08T07:19:13.357Z",
   "summary": {
-    "priceChanges24h": 49,
-    "newDiscs24h": 0,
+    "priceChanges24h": 66,
+    "newDiscs24h": 1,
     "storesChecked": 14
   },
   "drops": [
     {
-      "discId": "discraft-drone",
+      "discId": "prodigy-pa-3",
       "store": "frisbeebutikken",
       "storeName": "Frisbeebutikken",
-      "plastic": "ESP FLX",
-      "oldPrice": 308,
-      "newPrice": 239,
-      "pct": -22,
-      "changedAt": "2026-08-07T07:23:24.460Z",
+      "plastic": "300",
+      "oldPrice": 242,
+      "newPrice": 169,
+      "pct": -30,
+      "changedAt": "2026-08-08T07:01:43.941Z",
       "period": "day",
       "history": [
-        306,
-        306,
-        307,
-        308,
-        308,
-        308,
-        239
+        241,
+        241,
+        169,
+        169,
+        169,
+        242,
+        169
       ]
     },
     {
-      "discId": "innova-avatar",
-      "store": "discsport",
-      "storeName": "Discsport",
-      "plastic": "XT",
-      "oldPrice": 243,
-      "newPrice": 210,
-      "pct": -14,
-      "changedAt": "2026-08-07T07:32:27.100Z",
+      "discId": "discmania-talisman",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": null,
+      "oldPrice": 289,
+      "newPrice": 229,
+      "pct": -21,
+      "changedAt": "2026-08-08T07:01:43.941Z",
       "period": "day",
       "history": [
+        229,
+        229,
+        229,
+        229,
+        229,
+        289,
+        229
+      ]
+    },
+    {
+      "discId": "discmania-jokeri",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": null,
+      "oldPrice": 286,
+      "newPrice": 249,
+      "pct": -13,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "day",
+      "history": [
+        284,
+        285,
+        249,
+        249,
+        249,
+        286,
+        249
+      ]
+    },
+    {
+      "discId": "latitude-river",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Zero",
+      "oldPrice": 176,
+      "newPrice": 159,
+      "pct": -10,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "day",
+      "history": [
+        175,
+        175,
+        159,
+        159,
+        159,
+        176,
+        159
+      ]
+    },
+    {
+      "discId": "latitude-diamond",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Zero",
+      "oldPrice": 176,
+      "newPrice": 159,
+      "pct": -10,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "day",
+      "history": [
+        175,
+        175,
+        159,
+        159,
+        159,
+        176,
+        159
+      ]
+    },
+    {
+      "discId": "kastaplast-svea",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "K4",
+      "oldPrice": 169,
+      "newPrice": 159,
+      "pct": -6,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "day",
+      "history": [
+        169,
+        169,
+        159,
+        159,
+        159,
+        169,
+        159
+      ]
+    },
+    {
+      "discId": "latitude-maul",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Opto",
+      "oldPrice": 230,
+      "newPrice": 219,
+      "pct": -5,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "day",
+      "history": [
+        228,
+        228,
+        219,
+        219,
+        219,
+        230,
+        219
+      ]
+    },
+    {
+      "discId": "prodigy-pa-3",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "300",
+      "oldPrice": 241,
+      "newPrice": 169,
+      "pct": -30,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "week",
+      "history": [
+        241,
+        241,
+        169,
+        169,
+        169,
         242,
-        242,
-        242,
-        243,
-        243,
-        243,
-        210
+        169
       ]
     },
     {
@@ -54,15 +174,15 @@
       "oldPrice": 306,
       "newPrice": 239,
       "pct": -22,
-      "changedAt": "2026-08-07T07:23:24.460Z",
+      "changedAt": "2026-08-08T07:01:43.941Z",
       "period": "week",
       "history": [
-        306,
         306,
         307,
         308,
         308,
         308,
+        239,
         239
       ]
     },
@@ -72,18 +192,78 @@
       "storeName": "Discsport",
       "plastic": "XT",
       "oldPrice": 242,
-      "newPrice": 210,
-      "pct": -13,
-      "changedAt": "2026-08-07T07:32:27.100Z",
+      "newPrice": 209,
+      "pct": -14,
+      "changedAt": "2026-08-08T07:11:15.521Z",
       "period": "week",
       "history": [
         242,
         242,
-        242,
         243,
         243,
         243,
-        210
+        210,
+        209
+      ]
+    },
+    {
+      "discId": "discmania-jokeri",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": null,
+      "oldPrice": 284,
+      "newPrice": 249,
+      "pct": -12,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "week",
+      "history": [
+        284,
+        285,
+        249,
+        249,
+        249,
+        286,
+        249
+      ]
+    },
+    {
+      "discId": "latitude-river",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Zero",
+      "oldPrice": 175,
+      "newPrice": 159,
+      "pct": -9,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "week",
+      "history": [
+        175,
+        175,
+        159,
+        159,
+        159,
+        176,
+        159
+      ]
+    },
+    {
+      "discId": "latitude-diamond",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Zero",
+      "oldPrice": 175,
+      "newPrice": 159,
+      "pct": -9,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "week",
+      "history": [
+        175,
+        175,
+        159,
+        159,
+        159,
+        176,
+        159
       ]
     },
     {
@@ -94,12 +274,12 @@
       "oldPrice": 235,
       "newPrice": 219,
       "pct": -7,
-      "changedAt": "2026-08-07T07:23:24.460Z",
+      "changedAt": "2026-08-08T07:01:43.941Z",
       "period": "week",
       "history": [
         235,
         235,
-        235,
+        219,
         219,
         219,
         219,
@@ -114,15 +294,35 @@
       "oldPrice": 169,
       "newPrice": 159,
       "pct": -6,
-      "changedAt": "2026-08-07T07:11:57.972Z",
+      "changedAt": "2026-08-08T06:50:01.309Z",
       "period": "week",
       "history": [
         169,
         169,
+        159,
+        159,
+        159,
+        159,
+        159
+      ]
+    },
+    {
+      "discId": "kastaplast-svea",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "K4",
+      "oldPrice": 169,
+      "newPrice": 159,
+      "pct": -6,
+      "changedAt": "2026-08-08T07:01:43.941Z",
+      "period": "week",
+      "history": [
+        169,
         169,
         159,
         159,
         159,
+        169,
         159
       ]
     },
@@ -134,12 +334,12 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-07T07:11:57.972Z",
+      "changedAt": "2026-08-08T06:50:01.309Z",
       "period": "week",
       "history": [
         209,
         209,
-        209,
+        199,
         199,
         199,
         199,
@@ -154,39 +354,19 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-07T07:11:57.972Z",
+      "changedAt": "2026-08-08T06:50:01.309Z",
       "period": "week",
       "history": [
         209,
         209,
-        209,
+        199,
         199,
         199,
         199,
         199
       ]
-    },
-    {
-      "discId": "westside-sword",
-      "store": "discace",
-      "storeName": "Discace of Sweden",
-      "plastic": "VIP",
-      "oldPrice": 229,
-      "newPrice": 218,
-      "pct": -5,
-      "changedAt": "2026-08-05T09:01:04.329Z",
-      "period": "week",
-      "history": [
-        229,
-        228,
-        217,
-        218,
-        218,
-        218,
-        218
-      ]
     }
   ],
-  "totalDrops": 2,
-  "totalDropsWeek": 7
+  "totalDrops": 7,
+  "totalDropsWeek": 11
 }
