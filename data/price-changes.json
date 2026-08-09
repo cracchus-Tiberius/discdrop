@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-08T07:19:13.357Z",
+  "generated": "2026-08-09T07:15:45.602Z",
   "summary": {
-    "priceChanges24h": 66,
-    "newDiscs24h": 1,
+    "priceChanges24h": 13,
+    "newDiscs24h": 0,
     "storesChecked": 14
   },
   "drops": [
@@ -11,159 +11,39 @@
       "store": "frisbeebutikken",
       "storeName": "Frisbeebutikken",
       "plastic": "300",
-      "oldPrice": 242,
-      "newPrice": 169,
-      "pct": -30,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        241,
-        241,
-        169,
-        169,
-        169,
-        242,
-        169
-      ]
-    },
-    {
-      "discId": "discmania-talisman",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 289,
-      "newPrice": 229,
-      "pct": -21,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        229,
-        229,
-        229,
-        229,
-        229,
-        289,
-        229
-      ]
-    },
-    {
-      "discId": "discmania-jokeri",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 286,
-      "newPrice": 249,
-      "pct": -13,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        284,
-        285,
-        249,
-        249,
-        249,
-        286,
-        249
-      ]
-    },
-    {
-      "discId": "latitude-river",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Zero",
-      "oldPrice": 176,
-      "newPrice": 159,
-      "pct": -10,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        175,
-        175,
-        159,
-        159,
-        159,
-        176,
-        159
-      ]
-    },
-    {
-      "discId": "latitude-diamond",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Zero",
-      "oldPrice": 176,
-      "newPrice": 159,
-      "pct": -10,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        175,
-        175,
-        159,
-        159,
-        159,
-        176,
-        159
-      ]
-    },
-    {
-      "discId": "kastaplast-svea",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "K4",
-      "oldPrice": 169,
-      "newPrice": 159,
-      "pct": -6,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        169,
-        169,
-        159,
-        159,
-        159,
-        169,
-        159
-      ]
-    },
-    {
-      "discId": "latitude-maul",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Opto",
-      "oldPrice": 230,
-      "newPrice": 219,
-      "pct": -5,
-      "changedAt": "2026-08-08T07:01:43.941Z",
-      "period": "day",
-      "history": [
-        228,
-        228,
-        219,
-        219,
-        219,
-        230,
-        219
-      ]
-    },
-    {
-      "discId": "prodigy-pa-3",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "300",
       "oldPrice": 241,
       "newPrice": 169,
       "pct": -30,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
-        241,
         241,
         169,
         169,
         169,
         242,
+        169,
         169
+      ]
+    },
+    {
+      "discId": "kastaplast-kaxe",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K3",
+      "oldPrice": 189,
+      "newPrice": 139,
+      "pct": -26,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        189,
+        139,
+        139,
+        139,
+        139,
+        139,
+        139
       ]
     },
     {
@@ -171,19 +51,79 @@
       "store": "frisbeebutikken",
       "storeName": "Frisbeebutikken",
       "plastic": "ESP FLX",
-      "oldPrice": 306,
+      "oldPrice": 307,
       "newPrice": 239,
       "pct": -22,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
-        306,
         307,
         308,
         308,
         308,
         239,
+        239,
         239
+      ]
+    },
+    {
+      "discId": "dynamic-deputy",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Classic",
+      "oldPrice": 175,
+      "newPrice": 139,
+      "pct": -21,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        175,
+        139,
+        139,
+        139,
+        139,
+        139,
+        139
+      ]
+    },
+    {
+      "discId": "latitude-spike",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Zero",
+      "oldPrice": 180,
+      "newPrice": 145,
+      "pct": -19,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        180,
+        145,
+        145,
+        145,
+        145,
+        145,
+        145
+      ]
+    },
+    {
+      "discId": "innova-viking",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 170,
+      "newPrice": 145,
+      "pct": -15,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        170,
+        145,
+        145,
+        145,
+        145,
+        145,
+        145
       ]
     },
     {
@@ -194,16 +134,36 @@
       "oldPrice": 242,
       "newPrice": 209,
       "pct": -14,
-      "changedAt": "2026-08-08T07:11:15.521Z",
+      "changedAt": "2026-08-09T07:07:48.795Z",
       "period": "week",
       "history": [
-        242,
         242,
         243,
         243,
         243,
         210,
+        209,
         209
+      ]
+    },
+    {
+      "discId": "dynamic-evader",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Lucid",
+      "oldPrice": 228,
+      "newPrice": 199,
+      "pct": -13,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        228,
+        199,
+        199,
+        199,
+        199,
+        199,
+        199
       ]
     },
     {
@@ -211,18 +171,18 @@
       "store": "frisbeebutikken",
       "storeName": "Frisbeebutikken",
       "plastic": null,
-      "oldPrice": 284,
+      "oldPrice": 285,
       "newPrice": 249,
-      "pct": -12,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "pct": -13,
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
-        284,
         285,
         249,
         249,
         249,
         286,
+        249,
         249
       ]
     },
@@ -234,15 +194,15 @@
       "oldPrice": 175,
       "newPrice": 159,
       "pct": -9,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
-        175,
         175,
         159,
         159,
         159,
         176,
+        159,
         159
       ]
     },
@@ -254,16 +214,56 @@
       "oldPrice": 175,
       "newPrice": 159,
       "pct": -9,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
-        175,
         175,
         159,
         159,
         159,
         176,
+        159,
         159
+      ]
+    },
+    {
+      "discId": "innova-xt-nova",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "XT",
+      "oldPrice": 218,
+      "newPrice": 199,
+      "pct": -9,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        218,
+        199,
+        199,
+        199,
+        199,
+        199,
+        199
+      ]
+    },
+    {
+      "discId": "mvp-lift",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 209,
+      "newPrice": 195,
+      "pct": -7,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        209,
+        195,
+        195,
+        195,
+        195,
+        195,
+        195
       ]
     },
     {
@@ -274,16 +274,56 @@
       "oldPrice": 235,
       "newPrice": 219,
       "pct": -7,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
         235,
-        235,
+        219,
         219,
         219,
         219,
         219,
         219
+      ]
+    },
+    {
+      "discId": "discraft-roost",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": null,
+      "oldPrice": 149,
+      "newPrice": 139,
+      "pct": -7,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        149,
+        139,
+        139,
+        139,
+        139,
+        139,
+        139
+      ]
+    },
+    {
+      "discId": "discraft-zone-ss",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Jawbreaker",
+      "oldPrice": 169,
+      "newPrice": 159,
+      "pct": -6,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        169,
+        159,
+        159,
+        159,
+        159,
+        159,
+        159
       ]
     },
     {
@@ -294,11 +334,31 @@
       "oldPrice": 169,
       "newPrice": 159,
       "pct": -6,
-      "changedAt": "2026-08-08T06:50:01.309Z",
+      "changedAt": "2026-08-09T06:52:54.908Z",
       "period": "week",
       "history": [
         169,
+        159,
+        159,
+        159,
+        159,
+        159,
+        159
+      ]
+    },
+    {
+      "discId": "innova-rhynox",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "XT",
+      "oldPrice": 169,
+      "newPrice": 159,
+      "pct": -6,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
         169,
+        159,
         159,
         159,
         159,
@@ -314,16 +374,36 @@
       "oldPrice": 169,
       "newPrice": 159,
       "pct": -6,
-      "changedAt": "2026-08-08T07:01:43.941Z",
+      "changedAt": "2026-08-09T06:58:50.805Z",
       "period": "week",
       "history": [
         169,
-        169,
         159,
         159,
         159,
         169,
+        159,
         159
+      ]
+    },
+    {
+      "discId": "westside-voodoo",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": null,
+      "oldPrice": 159,
+      "newPrice": 149,
+      "pct": -6,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        159,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149
       ]
     },
     {
@@ -334,11 +414,11 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-08T06:50:01.309Z",
+      "changedAt": "2026-08-09T06:52:54.908Z",
       "period": "week",
       "history": [
         209,
-        209,
+        199,
         199,
         199,
         199,
@@ -354,11 +434,91 @@
       "oldPrice": 209,
       "newPrice": 199,
       "pct": -5,
-      "changedAt": "2026-08-08T06:50:01.309Z",
+      "changedAt": "2026-08-09T06:52:54.908Z",
       "period": "week",
       "history": [
         209,
+        199,
+        199,
+        199,
+        199,
+        199,
+        199
+      ]
+    },
+    {
+      "discId": "dynamic-justice",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Lucid",
+      "oldPrice": 199,
+      "newPrice": 189,
+      "pct": -5,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        199,
+        189,
+        189,
+        189,
+        189,
+        189,
+        189
+      ]
+    },
+    {
+      "discId": "latitude-saint-pro",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto",
+      "oldPrice": 209,
+      "newPrice": 199,
+      "pct": -5,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
         209,
+        199,
+        199,
+        199,
+        199,
+        199,
+        199
+      ]
+    },
+    {
+      "discId": "dynamic-felon",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Fuzion",
+      "oldPrice": 209,
+      "newPrice": 199,
+      "pct": -5,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        209,
+        199,
+        199,
+        199,
+        199,
+        199,
+        199
+      ]
+    },
+    {
+      "discId": "discraft-sol",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Z",
+      "oldPrice": 209,
+      "newPrice": 199,
+      "pct": -5,
+      "changedAt": "2026-08-08T06:54:14.163Z",
+      "period": "week",
+      "history": [
+        209,
+        199,
         199,
         199,
         199,
@@ -367,6 +527,6 @@
       ]
     }
   ],
-  "totalDrops": 7,
-  "totalDropsWeek": 11
+  "totalDrops": 0,
+  "totalDropsWeek": 26
 }
