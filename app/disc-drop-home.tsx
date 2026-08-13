@@ -20,6 +20,16 @@ import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RelativeTime } from "@/components/RelativeTime";
+import { PriceSparkline } from "@/components/PriceSparkline";
+import { PriceAlertInline } from "@/components/PriceAlertInline";
+import {
+  getPriceDropRows,
+  capPerBrand,
+  getTotalDrops,
+  priceChangesSummary,
+  hasPriceDropsData,
+  type PriceChangePeriod,
+} from "@/lib/price-drops";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Disc = (typeof discs)[number];
@@ -303,6 +313,93 @@ function buildLatestDropRows(): LatestDropRow[] {
   return selected;
 }
 
+// ── Pulse ticker ─────────────────────────────────────────────────────────────
+// Dark band between SiteHeader and Hero — daily scrape activity, links to
+// /prisfall. "I DAG" not "LIVE": the site scrapes once a day, not in real
+// time, and a pulsing/live-looking indicator would misrepresent that.
+function TickerArrow({ size }: { size: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#B8E04A" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
+function PulseTicker() {
+  if (!hasPriceDropsData) return null;
+  const { priceChanges24h, newDiscs24h, storesChecked } = priceChangesSummary;
+
+  const chips = [
+    { value: priceChanges24h, label: "prisendringer", highlight: true },
+    { value: newDiscs24h, label: "nye disker", highlight: false },
+    { value: storesChecked, label: "butikker sjekket", highlight: false },
+  ].filter((c) => c.value > 0);
+
+  return (
+    <Link
+      href="/prisfall"
+      aria-label={`Se alle prisfall — ${priceChanges24h} prisendringer siste døgn`}
+      className="block w-full border-b-2 border-[#101C14] bg-[#1E3D2F] text-[#FFFDF6] transition-colors duration-150 hover:bg-[#24483a]"
+    >
+      {/* Desktop */}
+      <div className="mx-auto hidden h-[76px] max-w-6xl items-center justify-between gap-8 px-10 md:flex">
+        <span className="flex shrink-0 items-center gap-2">
+          <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
+          <span className="text-xs font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
+        </span>
+
+        <span className="flex flex-1 justify-center">
+          {chips.map((chip, i) => (
+            <span
+              key={chip.label}
+              className={`flex items-baseline gap-2 px-7 ${i < chips.length - 1 ? "border-r border-[#FFFDF6]/[0.16]" : ""}`}
+            >
+              <span
+                className="text-[26px] font-extrabold tracking-[-0.02em]"
+                style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}
+              >
+                {chip.value}
+              </span>
+              <span className="text-sm font-semibold text-[#FFFDF6]/80">{chip.label}</span>
+            </span>
+          ))}
+        </span>
+
+        <span className="flex shrink-0 items-center gap-1.5 text-sm font-extrabold">
+          Se alle prisfall
+          <TickerArrow size={16} />
+        </span>
+      </div>
+
+      {/* Mobile */}
+      <div className="px-5 py-3.5 md:hidden">
+        <div className="mb-3 flex items-center justify-between">
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
+            <span className="text-[11px] font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
+          </span>
+          <span className="flex items-center gap-1 text-[13px] font-extrabold">
+            Se alle prisfall
+            <TickerArrow size={15} />
+          </span>
+        </div>
+        <div className="flex">
+          {chips.map((chip, i) => (
+            <span key={chip.label} className={`flex-1 ${i > 0 ? "border-l border-[#FFFDF6]/[0.16] pl-3.5" : ""}`}>
+              <span className="block text-2xl font-extrabold" style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}>
+                {chip.value}
+              </span>
+              <span className="block text-[11px] font-semibold leading-[1.25] text-[#FFFDF699]">
+                {chip.label === "prisendringer" ? "pris­endringer" : chip.label}
+              </span>
+            </span>
+          ))}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
 // ── Hero ───────────────────────────────────────────────────────────────────
 const HERO_DISC_IDS = topSellers.discs
   .filter((d) => d.catalogId !== null)
@@ -318,11 +415,7 @@ function Hero() {
     <section className="w-full bg-[#FFFDF6] px-5 pb-16 pt-10 md:px-10 md:pb-20 md:pt-16">
       <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <span className="dd-sticker">
-            {discs.length} disker
-            {scrapedLastUpdated && <RelativeTime iso={scrapedLastUpdated} prefix=" · oppdatert " />}
-          </span>
-          <h1 className="mt-4 text-[44px] font-extrabold leading-[0.98] tracking-tight text-[#101C14] md:text-[72px]">
+          <h1 className="text-[44px] font-extrabold leading-[0.98] tracking-tight text-[#101C14] md:text-[72px]">
             Riktig disk.
             <br />
             <span
@@ -491,6 +584,118 @@ function LatestDrops() {
   );
 }
 
+// ── Prisfall ──────────────────────────────────────────────────────────────
+// All visible numbers (pct, prices, totals) come straight from
+// lib/price-drops.ts (data/price-changes.json) — never recomputed here.
+const PRICE_DROP_CARD_COUNT = 6;
+
+function PriceDropCard({ row }: { row: ReturnType<typeof getPriceDropRows>[number] }) {
+  return (
+    <Link
+      href={`/disc/${row.discId}`}
+      className="flex flex-col gap-3 rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#B8E04A] transition-transform duration-150 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[7px_7px_0_#B8E04A]"
+    >
+      <div className="flex items-start justify-between gap-2">
+        <span className="inline-flex w-fit -rotate-2 items-center rounded-[10px] bg-[#B8E04A] px-[11px] py-[5px] text-[15px] font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
+          −{Math.abs(row.pct)} %
+        </span>
+        <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-[#F1EFE6]">
+          <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-lg font-extrabold leading-tight text-[#101C14]">{row.name}</h3>
+        <p className="text-sm text-[#101C1499]">
+          {row.brand}{row.plastic ? ` · ${row.plastic}` : ""}
+        </p>
+      </div>
+
+      <PriceSparkline history={row.history} />
+
+      <div className="mt-auto flex items-center justify-between gap-3 border-t-2 border-[#F1EFE6] pt-3">
+        <div>
+          <div className="flex items-baseline gap-2">
+            <span className="text-sm text-[#101C1477] line-through">{row.oldPrice} kr</span>
+            <span className="text-xl font-extrabold text-[#101C14]">{row.newPrice},-</span>
+          </div>
+          <p className="text-[11px] text-[#101C1499]">inkl. frakt · {row.storeName}</p>
+        </div>
+        <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
+      </div>
+    </Link>
+  );
+}
+
+function PriceDrops() {
+  const [period, setPeriod] = useState<PriceChangePeriod>("day");
+
+  const dayRows = useMemo(() => capPerBrand(getPriceDropRows("day")).slice(0, PRICE_DROP_CARD_COUNT), []);
+  const weekRows = useMemo(() => capPerBrand(getPriceDropRows("week")).slice(0, PRICE_DROP_CARD_COUNT), []);
+  const rows = period === "day" ? dayRows : weekRows;
+  const total = getTotalDrops(period);
+
+  const alertDiscs = useMemo(
+    () => rows.map((r) => ({ discId: r.discId, name: r.name, brand: r.brand, newPrice: r.newPrice })),
+    [rows]
+  );
+
+  if (!hasPriceDropsData) return null;
+
+  return (
+    <section id="prisfall" className="w-full border-b-2 border-[#101C14] bg-[#FFFDF6] px-5 py-14 md:px-10 md:py-16" style={{ scrollMarginTop: "72px" }}>
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-6">
+          <div>
+            <h2 className="text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">Prisfall</h2>
+            <p className="mt-2 text-base text-[#101C1499]">Største priskutt vi har fanget opp — totalpris med frakt.</p>
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+            <div className="flex gap-[3px] rounded-full bg-[#F1EFE6] p-1">
+              {(["day", "week"] as const).map((p) => (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => setPeriod(p)}
+                  className={`min-h-[40px] flex-1 rounded-full px-5 text-sm font-extrabold transition-colors sm:min-h-[36px] ${
+                    period === p ? "bg-[#101C14] text-[#B8E04A]" : "bg-transparent text-[#101C1499]"
+                  }`}
+                >
+                  {p === "day" ? "I dag" : "Denne uka"}
+                </button>
+              ))}
+            </div>
+            {total > 0 && (
+              <Link href="/prisfall" className="hidden text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4 sm:inline">
+                Se alle {total} →
+              </Link>
+            )}
+          </div>
+        </div>
+
+        {rows.length === 0 ? (
+          <p className="text-sm text-[#101C1499]">Ingen store prisfall i denne perioden akkurat nå — sjekk igjen senere.</p>
+        ) : (
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {rows.map((row) => (
+              <PriceDropCard key={`${row.discId}-${period}`} row={row} />
+            ))}
+          </div>
+        )}
+
+        {total > 0 && (
+          <Link href="/prisfall" className="mt-6 flex min-h-[44px] items-center justify-center text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4 sm:hidden">
+            Se alle {total} prisfall →
+          </Link>
+        )}
+
+        {alertDiscs.length > 0 && <PriceAlertInline discs={alertDiscs} />}
+      </div>
+    </section>
+  );
+}
+
 // ── Hvorfor DiscDrop ───────────────────────────────────────────────────────
 function WhyDiscDrop() {
   const props = [
@@ -646,11 +851,13 @@ export function DiscDropHome() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SiteHeader />
+      <PulseTicker />
       <main>
         <Hero />
         <PopularDiscs />
         <HotDrops />
         <LatestDrops />
+        <PriceDrops />
         <WhyDiscDrop />
       </main>
       <SiteFooter />

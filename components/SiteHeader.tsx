@@ -10,6 +10,7 @@ import { discs } from "@/data/discs.js";
 const NAV_LINKS = [
   { href: "/", label: "Hjem" },
   { href: "/#hot-drops", label: "Hot Drops" },
+  { href: "/prisfall", label: "Prisfall" },
   { href: "/browse", label: "Alle disker" },
   { href: "/bag/build", label: "Bygg min bag" },
 ];
