@@ -8,7 +8,14 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import topSellers from "@/data/top-sellers.json";
-import { getScrapedPrice, getDiscImage, entryLandedNOK, scrapedLastUpdated } from "@/lib/disc-utils";
+import {
+  getScrapedPrice,
+  getDiscImage,
+  entryLandedNOK,
+  scrapedLastUpdated,
+  MIN_VALID_PRICE_NOK,
+  MAX_VALID_PRICE_NOK,
+} from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -145,7 +152,9 @@ function buildHotDropRows(): HotDropRow[] {
 
     // Cheapest in-stock hot entry wins the card. Falls back to first hot
     // entry (out-of-stock) just to keep the badge.
-    const inStockHot = hotEntries.filter((e) => e.inStock && e.price >= 50);
+    const inStockHot = hotEntries.filter(
+      (e) => e.inStock && e.price >= MIN_VALID_PRICE_NOK && e.price <= MAX_VALID_PRICE_NOK
+    );
     const winner = inStockHot.length > 0
       ? inStockHot.reduce((a, b) => entryLandedNOK(a, storeMeta[a.store]) <= entryLandedNOK(b, storeMeta[b.store]) ? a : b)
       : hotEntries[0];
@@ -160,7 +169,9 @@ function buildHotDropRows(): HotDropRow[] {
     // Price premium vs. the disc's overall cheapest in-stock price: a special
     // edition that costs much more than the baseline plastic is a stronger
     // "this is genuinely special" signal than one that costs about the same.
-    const allInStock = entries.filter((e) => e.inStock && e.price >= 50);
+    const allInStock = entries.filter(
+      (e) => e.inStock && e.price >= MIN_VALID_PRICE_NOK && e.price <= MAX_VALID_PRICE_NOK
+    );
     const basePrice = allInStock.length > 0
       ? Math.min(...allInStock.map((e) => entryLandedNOK(e, storeMeta[e.store])))
       : null;
@@ -250,7 +261,12 @@ function buildLatestDropRows(): LatestDropRow[] {
   for (const disc of discs as Disc[]) {
     if (disc.brand === "Alfa") continue;
     const entries = (prices[disc.id] ?? []).filter(
-      (e) => e.inStock && e.price >= 50 && e.firstSeen && new Date(e.firstSeen).getTime() >= cutoff
+      (e) =>
+        e.inStock &&
+        e.price >= MIN_VALID_PRICE_NOK &&
+        e.price <= MAX_VALID_PRICE_NOK &&
+        e.firstSeen &&
+        new Date(e.firstSeen).getTime() >= cutoff
     );
     if (entries.length === 0) continue;
 

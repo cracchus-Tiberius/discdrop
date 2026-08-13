@@ -55,6 +55,14 @@ jobs:
         # data/scraped-prices.json on disk is today's fresh scrape, which is
         # exactly the day-over-day diff the Prisfall feature needs.
 
+      - name: Audit price caps
+        run: pnpm audit:price-caps
+        continue-on-error: true
+        # Informational only — logs every scraped price outside the
+        # MIN/MAX_VALID_PRICE_NOK bounds (currency bugs, accessory
+        # mismatches) to data/rejected-prices.json for spot-checking.
+        # Never blocks the pipeline.
+
       - name: Commit updated data
         run: |
           git config user.name "DiscDrop Bot"

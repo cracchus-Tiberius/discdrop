@@ -1,0 +1,109 @@
+{
+  "generated": "2026-08-13T17:37:05.244Z",
+  "bounds": {
+    "min": 50,
+    "max": 600
+  },
+  "count": 11,
+  "rejected": [
+    {
+      "discId": "latitude-bite",
+      "discName": "Latitude 64 Bite",
+      "store": "discsport",
+      "price": 64252,
+      "reason": "above-max",
+      "url": "https://discsport.se/discar/mold/#3-flyer",
+      "lastScraped": "2026-08-05T08:53:20.186Z"
+    },
+    {
+      "discId": "latitude-bite",
+      "discName": "Latitude 64 Bite",
+      "store": "discsport",
+      "price": 64222,
+      "reason": "above-max",
+      "url": "https://discsport.se/discar/mold/bite-puppy",
+      "lastScraped": "2026-08-05T08:53:20.186Z"
+    },
+    {
+      "discId": "mvp-shift",
+      "discName": "Streamline Shift",
+      "store": "discexpress",
+      "price": 2352,
+      "reason": "above-max",
+      "url": "https://www.discexpress.se/products/upper-park-the-shift",
+      "lastScraped": "2026-08-05T08:44:51.257Z"
+    },
+    {
+      "discId": "mvp-trail",
+      "discName": "MVP Trail",
+      "store": "discsport",
+      "price": 1557,
+      "reason": "above-max",
+      "url": "https://discsport.se/discar/mold/#3-flyer",
+      "lastScraped": "2026-08-05T08:53:20.186Z"
+    },
+    {
+      "discId": "streamline-range",
+      "discName": "Streamline Range",
+      "store": "discexpress",
+      "price": 1000,
+      "reason": "above-max",
+      "url": "https://www.discexpress.se/products/range-finder-lite",
+      "lastScraped": "2026-08-05T08:44:51.257Z"
+    },
+    {
+      "discId": "latitude-core",
+      "discName": "Latitude 64 Core",
+      "store": "golfdiscer",
+      "price": 799,
+      "reason": "above-max",
+      "url": "https://golfdiscer.no/products/latitude-64-core-bag",
+      "lastScraped": "2026-08-05T08:44:06.045Z"
+    },
+    {
+      "discId": "latitude-gatekeeper",
+      "discName": "Latitude 64 Gatekeeper",
+      "store": "wearediscgolf",
+      "price": 749,
+      "reason": "above-max",
+      "url": "https://wearediscgolf.no/produkt/the-gatekeeper-box-5/",
+      "lastScraped": "2026-08-05T08:31:30.479Z"
+    },
+    {
+      "discId": "latitude-core",
+      "discName": "Latitude 64 Core",
+      "store": "frisbeesor",
+      "price": 729,
+      "reason": "above-max",
+      "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
+      "lastScraped": "2026-08-05T08:44:09.703Z"
+    },
+    {
+      "discId": "discraft-raptor",
+      "discName": "Discraft Raptor",
+      "store": "frisbeesor",
+      "price": 659,
+      "reason": "above-max",
+      "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
+      "lastScraped": "2026-08-05T08:44:09.703Z"
+    },
+    {
+      "discId": "innova-birdie",
+      "discName": "Innova Birdie",
+      "store": "discexpress",
+      "price": 49,
+      "reason": "below-min",
+      "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
+      "lastScraped": "2026-08-05T08:44:51.257Z"
+    },
+    {
+      "discId": "discmania-active",
+      "discName": "Discmania Active",
+      "store": "discexpress",
+      "price": 49,
+      "reason": "below-min",
+      "url": "https://www.discexpress.se/products/mermaid-basic-active",
+      "lastScraped": "2026-08-05T08:44:51.257Z"
+    }
+  ]
+}

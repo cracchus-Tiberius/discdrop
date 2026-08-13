@@ -43,7 +43,19 @@ export function entryLandedNOK(entry: ScrapedEntry, meta: StoreMeta | undefined)
 // No legitimate new disc retails for under 50 NOK in any Norwegian or
 // VOEC-imported context. Filter at the data-access layer so HotDrops, the disc
 // detail price table, search ordering, etc. all share one floor.
-const MIN_VALID_PRICE_NOK = 50;
+export const MIN_VALID_PRICE_NOK = 50;
+
+// Defense against accessory/gear mismatches (e.g. a bag or rangefinder whose
+// title happens to contain a generic mold name like "Shift" or "Range"
+// matching to that disc — confirmed in production: "Upper Park - The Shift"
+// bag matched mvp-shift at 2344 kr, "Range Finder Lite" matched
+// streamline-range at 997 kr). No real single disc retails above ~600 kr, even
+// rare Tour Series/signature editions. Same data-access-layer pattern as
+// MIN_VALID_PRICE_NOK. Rejected entries are logged daily by
+// scripts/audit-price-caps.js -> data/rejected-prices.json so a genuinely
+// expensive limited-run disc doesn't just silently vanish — spot-check that
+// file if a disc's price looks suspiciously absent.
+export const MAX_VALID_PRICE_NOK = 600;
 
 /**
  * Returns price/stock data from scraped-prices.json for a disc ID.
@@ -60,7 +72,9 @@ export function getScrapedPrice(discId: string): {
     return { price: null, inStockCount: 0, storeCount: 0 };
   }
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
-  const inStock = scraped.filter((s) => s.inStock && s.price >= MIN_VALID_PRICE_NOK);
+  const inStock = scraped.filter(
+    (s) => s.inStock && s.price >= MIN_VALID_PRICE_NOK && s.price <= MAX_VALID_PRICE_NOK
+  );
   return {
     price: inStock.length
       ? Math.min(...inStock.map((s) => entryLandedNOK(s, storeMeta[s.store])))
@@ -128,7 +142,7 @@ export type RichStoreEntry = {
 export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
   if (!scraped || scraped.length === 0) return [];
-  const valid = scraped.filter((e) => e.price >= MIN_VALID_PRICE_NOK);
+  const valid = scraped.filter((e) => e.price >= MIN_VALID_PRICE_NOK && e.price <= MAX_VALID_PRICE_NOK);
   if (valid.length === 0) return [];
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
   return valid.map((entry) => {

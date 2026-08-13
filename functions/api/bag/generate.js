@@ -10,6 +10,10 @@ import { discs } from "../../../data/discs.js";
 import scrapedPrices from "../../../data/scraped-prices.json";
 
 const MIN_VALID_PRICE_NOK = 50;
+// Same accessory-mismatch guard as lib/disc-utils.ts's MAX_VALID_PRICE_NOK —
+// without it a mismatched bag/rangefinder priced in the thousands could get
+// fed to the LLM as if it were a real disc price and skew a bag suggestion.
+const MAX_VALID_PRICE_NOK = 600;
 
 function entryLandedNOK(entry, meta) {
   if (meta?.country && meta.country !== "NO") {
@@ -22,7 +26,9 @@ function getScrapedPrice(discId) {
   const scraped = scrapedPrices.prices[discId];
   if (!scraped || scraped.length === 0) return null;
   const storeMeta = scrapedPrices.stores;
-  const inStock = scraped.filter((s) => s.inStock && s.price >= MIN_VALID_PRICE_NOK);
+  const inStock = scraped.filter(
+    (s) => s.inStock && s.price >= MIN_VALID_PRICE_NOK && s.price <= MAX_VALID_PRICE_NOK
+  );
   if (inStock.length === 0) return null;
   return Math.min(...inStock.map((s) => entryLandedNOK(s, storeMeta[s.store])));
 }
