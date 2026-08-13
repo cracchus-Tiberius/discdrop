@@ -18,6 +18,16 @@ const MIN_VALID_PRICE_NOK = 50;
 // a store nudging a price by a few kroner) shouldn't show up as a "prisfall".
 const MIN_DROP_PCT = -5;
 
+// Below these thresholds a price move doesn't even count as a "change" at
+// all (not just "not a drop") — a live run found 201 "prisfall" that were
+// almost entirely SEK/EUR->NOK exchange-rate drift on international stores'
+// listed prices (fetched fresh every scrape), not real price cuts. A change
+// must clear BOTH bounds — percentage alone falsely flags cheap discs where
+// a single-krone rounding wobble is already >2%, and kr alone falsely flags
+// expensive discs where 2% is a large absolute number but still just noise.
+const NOISE_MIN_ABS_PCT = 2;
+const NOISE_MIN_ABS_NOK = 5;
+
 // Cap on how many drops from the same brand can appear in one period's list,
 // applied greedily after sorting by pct — same pattern as
 // buildHotDropRows()/buildLatestDropRows() in app/disc-drop-home.tsx, so one
@@ -77,10 +87,12 @@ function pctChange(oldPrice, newPrice) {
 /**
  * Compare two full scraped-prices.json snapshots (`{prices, stores}` shape)
  * for one period (day or week). Returns:
- *   - changedDiscCount: discs whose best landed price differs at all between
- *     old and new (any direction) — this is the ticker's "N prisendringer"
- *     count. A disc is only counted once no matter how many of its stores'
- *     rows changed.
+ *   - changedDiscCount: discs whose best landed price differs by more than
+ *     the noise thresholds (NOISE_MIN_ABS_PCT and NOISE_MIN_ABS_NOK, both
+ *     required) between old and new (any direction) — this is the ticker's
+ *     "N prisendringer" count. A disc is only counted once no matter how
+ *     many of its stores' rows changed. A difference that doesn't clear
+ *     both thresholds isn't counted as a change at all.
  *   - newDiscCount: discs with a valid price in `newSnapshot` that had none
  *     in `oldSnapshot` (newly in-stock/newly matched).
  *   - dropsRaw: every disc where pct <= MIN_DROP_PCT, sorted by pct ascending
@@ -114,8 +126,12 @@ function computeChanges({ oldSnapshot, newSnapshot, catalog, period }) {
     if (!newBest) continue; // no longer available anywhere — not shown as a drop
 
     if (oldBest.landed !== newBest.landed) {
-      changedDiscCount++;
       const pct = pctChange(oldBest.landed, newBest.landed);
+      const absNok = Math.abs(newBest.landed - oldBest.landed);
+      const isNoise = Math.abs(pct) < NOISE_MIN_ABS_PCT || absNok < NOISE_MIN_ABS_NOK;
+      if (isNoise) continue; // exchange-rate/rounding wobble, not a real change
+
+      changedDiscCount++;
       if (pct <= MIN_DROP_PCT) {
         dropsRaw.push({
           discId,
@@ -187,6 +203,8 @@ module.exports = {
   MIN_VALID_PRICE_NOK,
   MIN_DROP_PCT,
   MAX_PER_BRAND,
+  NOISE_MIN_ABS_PCT,
+  NOISE_MIN_ABS_NOK,
   entryLandedNOK,
   bestLandedEntry,
   pctChange,

@@ -110,16 +110,60 @@ test('computeChanges counts newly-priced discs separately from changes, no pct e
 test('computeChanges ignores changes below the MIN_DROP_PCT threshold', () => {
   const catalog = [{ id: 'disc-a', brand: 'BrandA' }];
   const storesMeta = { s1: { country: 'NO' } };
-  const oldSnapshot = { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 100, inStock: true }] } };
-  const newSnapshot = { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 98, inStock: true }] } }; // -2%
+  const oldSnapshot = { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 200, inStock: true }] } };
+  const newSnapshot = { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 192, inStock: true }] } }; // -4%, -8kr: clears the noise gate, not the drop gate
   const { changedDiscCount, dropsRaw } = computeChanges({
     oldSnapshot,
     newSnapshot,
     catalog,
     period: 'day',
   });
-  assert.equal(changedDiscCount, 1); // still a price change...
+  assert.equal(changedDiscCount, 1); // still a real price change...
   assert.equal(dropsRaw.length, 0); // ...but not a "prisfall" worth showing
+});
+
+test('computeChanges ignores currency-drift-sized noise: %-only or kr-only is not enough', () => {
+  const catalog = [
+    { id: 'disc-cheap', brand: 'BrandA' }, // 1kr on a cheap disc clears %, not kr
+    { id: 'disc-pricey', brand: 'BrandB' }, // 10kr on an expensive disc clears kr, not %
+  ];
+  const storesMeta = { s1: { country: 'NO' } };
+  const oldSnapshot = {
+    stores: storesMeta,
+    prices: {
+      'disc-cheap': [{ store: 's1', price: 50, inStock: true }],
+      'disc-pricey': [{ store: 's1', price: 1000, inStock: true }],
+    },
+  };
+  const newSnapshot = {
+    stores: storesMeta,
+    prices: {
+      'disc-cheap': [{ store: 's1', price: 49, inStock: true }], // -2%, -1kr
+      'disc-pricey': [{ store: 's1', price: 990, inStock: true }], // -1%, -10kr
+    },
+  };
+  const { changedDiscCount, dropsRaw } = computeChanges({
+    oldSnapshot,
+    newSnapshot,
+    catalog,
+    period: 'day',
+  });
+  assert.equal(changedDiscCount, 0);
+  assert.equal(dropsRaw.length, 0);
+});
+
+test('computeChanges counts a change that clears both noise thresholds', () => {
+  const catalog = [{ id: 'disc-a', brand: 'BrandA' }];
+  const storesMeta = { s1: { country: 'NO' } };
+  const oldSnapshot = { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 100, inStock: true }] } };
+  const newSnapshot = { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 94, inStock: true }] } }; // -6%, -6kr
+  const { changedDiscCount } = computeChanges({
+    oldSnapshot,
+    newSnapshot,
+    catalog,
+    period: 'day',
+  });
+  assert.equal(changedDiscCount, 1);
 });
 
 test('computeChanges sorts drops by pct ascending (biggest cut first)', () => {

@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-13T07:53:38.697Z",
+  "generated": "2026-08-13T17:43:50.259Z",
   "summary": {
-    "priceChanges24h": 101,
-    "newDiscs24h": 2,
+    "priceChanges24h": 0,
+    "newDiscs24h": 0,
     "storesChecked": 14
   },
   "drops": [
@@ -11,18 +11,18 @@
       "store": "nydisk",
       "storeName": "NyDisk",
       "plastic": "Zero",
-      "oldPrice": 176,
+      "oldPrice": 159,
       "newPrice": 149,
-      "pct": -15,
+      "pct": -6,
       "changedAt": "2026-08-13T07:36:50.741Z",
-      "period": "day",
+      "period": "week",
       "history": [
-        176,
         159,
         159,
         159,
         159,
         176,
+        149,
         149
       ]
     },
@@ -31,242 +31,22 @@
       "store": "nydisk",
       "storeName": "NyDisk",
       "plastic": "Zero",
-      "oldPrice": 176,
+      "oldPrice": 159,
       "newPrice": 149,
-      "pct": -15,
-      "changedAt": "2026-08-13T07:36:50.741Z",
-      "period": "day",
-      "history": [
-        176,
-        159,
-        159,
-        159,
-        159,
-        176,
-        149
-      ]
-    },
-    {
-      "discId": "mvp-trail",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Neutron",
-      "oldPrice": 269,
-      "newPrice": 229,
-      "pct": -15,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "day",
-      "history": [
-        209,
-        209,
-        209,
-        269,
-        269,
-        269,
-        229
-      ]
-    },
-    {
-      "discId": "discmania-jokeri",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 285,
-      "newPrice": 249,
-      "pct": -13,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "day",
-      "history": [
-        286,
-        249,
-        249,
-        249,
-        249,
-        285,
-        249
-      ]
-    },
-    {
-      "discId": "kastaplast-svea",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "K4",
-      "oldPrice": 169,
-      "newPrice": 159,
       "pct": -6,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "day",
-      "history": [
-        169,
-        159,
-        159,
-        159,
-        159,
-        169,
-        159
-      ]
-    },
-    {
-      "discId": "prodigy-pa-3",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "300",
-      "oldPrice": 242,
-      "newPrice": 169,
-      "pct": -30,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "week",
-      "history": [
-        242,
-        169,
-        169,
-        169,
-        169,
-        169,
-        169
-      ]
-    },
-    {
-      "discId": "discmania-talisman",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 289,
-      "newPrice": 229,
-      "pct": -21,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "week",
-      "history": [
-        289,
-        229,
-        229,
-        229,
-        229,
-        229,
-        229
-      ]
-    },
-    {
-      "discId": "latitude-river",
-      "store": "nydisk",
-      "storeName": "NyDisk",
-      "plastic": "Zero",
-      "oldPrice": 176,
-      "newPrice": 149,
-      "pct": -15,
       "changedAt": "2026-08-13T07:36:50.741Z",
       "period": "week",
       "history": [
-        176,
         159,
         159,
         159,
         159,
         176,
+        149,
         149
-      ]
-    },
-    {
-      "discId": "latitude-diamond",
-      "store": "nydisk",
-      "storeName": "NyDisk",
-      "plastic": "Zero",
-      "oldPrice": 176,
-      "newPrice": 149,
-      "pct": -15,
-      "changedAt": "2026-08-13T07:36:50.741Z",
-      "period": "week",
-      "history": [
-        176,
-        159,
-        159,
-        159,
-        159,
-        176,
-        149
-      ]
-    },
-    {
-      "discId": "discmania-jokeri",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 286,
-      "newPrice": 249,
-      "pct": -13,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "week",
-      "history": [
-        286,
-        249,
-        249,
-        249,
-        249,
-        285,
-        249
-      ]
-    },
-    {
-      "discId": "discmania-md4",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "S-Line",
-      "oldPrice": 259,
-      "newPrice": 239,
-      "pct": -8,
-      "changedAt": "2026-08-13T07:23:33.786Z",
-      "period": "week",
-      "history": [
-        259,
-        249,
-        249,
-        249,
-        239,
-        239,
-        239
-      ]
-    },
-    {
-      "discId": "kastaplast-svea",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "K4",
-      "oldPrice": 169,
-      "newPrice": 159,
-      "pct": -6,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "week",
-      "history": [
-        169,
-        159,
-        159,
-        159,
-        159,
-        169,
-        159
-      ]
-    },
-    {
-      "discId": "latitude-maul",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Opto",
-      "oldPrice": 230,
-      "newPrice": 219,
-      "pct": -5,
-      "changedAt": "2026-08-13T07:36:15.529Z",
-      "period": "week",
-      "history": [
-        230,
-        219,
-        219,
-        219,
-        219,
-        229,
-        219
       ]
     }
   ],
-  "totalDrops": 5,
-  "totalDropsWeek": 8
+  "totalDrops": 0,
+  "totalDropsWeek": 2
 }
