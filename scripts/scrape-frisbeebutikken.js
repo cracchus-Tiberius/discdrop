@@ -170,7 +170,18 @@ async function scrapeWithHeaders() {
   }
   console.log(`    → ${firstProducts.length} products (max page: ${maxPage})`);
 
-  // Remaining pages
+  // Remaining pages. A mid-pagination HTTP error or an unexpectedly empty
+  // page (before we've reached the maxPage that page 1 itself reported) used
+  // to just `break` here — that silently accepted whatever partial result
+  // had been collected so far AS IF it were the complete catalog, and the
+  // caller had no way to tell "found everything" apart from "gave up early".
+  // Rate limiting kicking in partway through pagination looked identical to
+  // "we've reached the last page". isChallengePage() was also only ever
+  // checked on page 1 — bot protection triggered by page 3 or 4 went
+  // undetected entirely. Now any page that errors, comes back empty before
+  // maxPage, or trips the challenge check aborts attempt 1 (same as a page-1
+  // failure already did) and falls back to Playwright, instead of quietly
+  // declaring victory with whatever was collected so far.
   for (let page = 2; page <= maxPage; page++) {
     await randomDelay(2000, 3000);
     const url = buildPageUrl(page);
@@ -179,12 +190,21 @@ async function scrapeWithHeaders() {
     try {
       html = await fetchPage(url, STORE.categoryUrl);
     } catch (err) {
-      console.warn(`    ⚠ ${err.message}`);
-      break;
+      console.warn(`    ⚠ Page ${page}/${maxPage} failed (${allProducts.length} products collected so far): ${err.message}`);
+      return null;
     }
 
     const { products } = parseProductsFromHtml(html);
-    if (products.length === 0) break;
+
+    if (isChallengePage(html, products.length)) {
+      console.log(`    ✗ Bot protection detected on page ${page}/${maxPage} (${allProducts.length} products collected so far) — switching to Playwright`);
+      return null;
+    }
+
+    if (products.length === 0) {
+      console.warn(`    ⚠ Page ${page}/${maxPage} returned 0 products, but page 1 reported ${maxPage} pages exist (${allProducts.length} products collected so far)`);
+      return null;
+    }
 
     for (const p of products) {
       if (!seenUrls.has(p.productUrl)) { seenUrls.add(p.productUrl); allProducts.push(p); }

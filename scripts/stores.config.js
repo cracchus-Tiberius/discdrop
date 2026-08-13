@@ -321,6 +321,26 @@ function matchDiscCandidate(rawProductName) {
 // storeMeta: { [key]: {...} } written into data.stores as-is (field set is
 //   allowed to vary per store — NOK stores use freeShippingOver, international
 //   ones use country/currency/voec).
+// Drop-guard thresholds — same philosophy as scrape-discexpress.js's currency
+// assertion: a scraper finding drastically fewer products than last run is
+// far more likely a broken scraper (pagination bug, new bot protection, a
+// site rebuild) than a real overnight inventory collapse. Below
+// MIN_BASELINE_FOR_DROP_GUARD a store hasn't scraped enough previously for a
+// ratio comparison to mean anything (a brand-new store's first real run, or
+// one that's always been tiny), so the guard is skipped for it.
+const DROP_GUARD_RATIO = 0.5;
+const MIN_BASELINE_FOR_DROP_GUARD = 20;
+
+function countEntriesForKeys(prices, keySet) {
+  let count = 0;
+  for (const entries of Object.values(prices)) {
+    for (const e of entries) {
+      if (keySet.has(e.store)) count++;
+    }
+  }
+  return count;
+}
+
 function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
   const dataPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
   let data = { lastUpdated: now, stores: {}, prices: {} };
@@ -331,6 +351,7 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
   Object.assign(data.stores, storeMeta);
 
   const keySet = new Set(storeKeys);
+  const previousEntryCount = countEntriesForKeys(data.prices, keySet);
 
   // The entries below get wiped and rebuilt from scratch every run (that's
   // intentional — everything except firstSeen should reflect this run's
@@ -398,6 +419,17 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
       });
       unmatchedCount++;
     }
+  }
+
+  if (
+    previousEntryCount >= MIN_BASELINE_FOR_DROP_GUARD &&
+    matched < previousEntryCount * DROP_GUARD_RATIO
+  ) {
+    throw new Error(
+      `mergeStoreResults: ${storeKeys.join(', ')} matched only ${matched} price entries this run, ` +
+        `down from ${previousEntryCount} previously (>${Math.round((1 - DROP_GUARD_RATIO) * 100)}% drop). ` +
+        `Refusing to write — likely a broken scraper, not a real inventory collapse. Previous data left unchanged.`
+    );
   }
 
   data.lastUpdated = now;
