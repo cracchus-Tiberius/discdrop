@@ -153,7 +153,15 @@ async function scrape() {
           const cols = grid.querySelectorAll(':scope > .col');
           for (const col of cols) {
             const text = col.innerText || '';
-            const rawPrice = (text.match(/(\d[\d\s]*):- *$/) || text.match(/(\d[\d\s]*):-/))?.[0] || '';
+            // Matching against the whole multi-line innerText with \s (which
+            // matches newlines too) let the greedy [\d\s]* run glue digits
+            // from two separate lines into one bogus price (e.g. Latitude 64
+            // Bite showing 63991-64020 kr) whenever nothing but blank lines
+            // or another number sat between them. Match a clean single price
+            // line instead — the price is always its own line in this grid,
+            // same assumption extractNameFromColText() already makes below.
+            const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
+            const rawPrice = [...lines].reverse().find((l) => /^\d[\d\s]*:-$/.test(l)) || '';
             if (!rawPrice) continue;
 
             const inStock = !text.includes('Slutsåld');
