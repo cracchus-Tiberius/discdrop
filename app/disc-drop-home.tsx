@@ -341,28 +341,33 @@ function PulseTicker() {
       aria-label={`Se alle prisfall — ${priceChanges24h} prisendringer siste døgn`}
       className="block w-full border-b-2 border-[#101C14] bg-[#1E3D2F] text-[#FFFDF6] transition-colors duration-150 hover:bg-[#24483a]"
     >
-      {/* Desktop */}
-      <div className="mx-auto hidden h-[76px] max-w-6xl items-center justify-between gap-8 px-10 md:flex">
-        <span className="flex shrink-0 items-center gap-2">
-          <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
-          <span className="text-xs font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
-        </span>
+      {/* Desktop — compact, left-aligned: on a quiet day (few/no chips) this
+          still reads as a deliberately trim status line, not a big empty
+          banner. Height and type scale are intentionally smaller than the
+          original 76px/26px draft for the same reason. */}
+      <div className="mx-auto hidden h-[52px] max-w-6xl items-center justify-between gap-8 px-10 md:flex">
+        <span className="flex shrink-0 items-center gap-6">
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
+            <span className="text-xs font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
+          </span>
 
-        <span className="flex flex-1 justify-center">
-          {chips.map((chip, i) => (
-            <span
-              key={chip.label}
-              className={`flex items-baseline gap-2 px-7 ${i < chips.length - 1 ? "border-r border-[#FFFDF6]/[0.16]" : ""}`}
-            >
+          <span className="flex items-center">
+            {chips.map((chip, i) => (
               <span
-                className="text-[26px] font-extrabold tracking-[-0.02em]"
-                style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}
+                key={chip.label}
+                className={`flex items-baseline gap-1.5 px-4 first:pl-0 ${i < chips.length - 1 ? "border-r border-[#FFFDF6]/[0.16]" : ""}`}
               >
-                {chip.value}
+                <span
+                  className="text-lg font-extrabold tracking-[-0.02em]"
+                  style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}
+                >
+                  {chip.value}
+                </span>
+                <span className="text-sm font-semibold text-[#FFFDF6]/80">{chip.label}</span>
               </span>
-              <span className="text-sm font-semibold text-[#FFFDF6]/80">{chip.label}</span>
-            </span>
-          ))}
+            ))}
+          </span>
         </span>
 
         <span className="flex shrink-0 items-center gap-1.5 text-sm font-extrabold">
@@ -371,30 +376,33 @@ function PulseTicker() {
         </span>
       </div>
 
-      {/* Mobile */}
-      <div className="px-5 py-3.5 md:hidden">
-        <div className="mb-3 flex items-center justify-between">
+      {/* Mobile — kept as two compact rows (unlike desktop) since "I DAG" +
+          every chip + "Se alle prisfall" genuinely don't fit one line at
+          375px without truncating something. */}
+      <div className="px-5 py-2.5 md:hidden">
+        <div className="mb-1.5 flex items-center justify-between">
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
             <span className="text-[11px] font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
           </span>
-          <span className="flex items-center gap-1 text-[13px] font-extrabold">
+          <span className="flex items-center gap-1 text-xs font-extrabold">
             Se alle prisfall
-            <TickerArrow size={15} />
+            <TickerArrow size={13} />
           </span>
         </div>
-        <div className="flex">
+        <span className="flex items-center">
           {chips.map((chip, i) => (
-            <span key={chip.label} className={`flex-1 ${i > 0 ? "border-l border-[#FFFDF6]/[0.16] pl-3.5" : ""}`}>
-              <span className="block text-2xl font-extrabold" style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}>
+            <span
+              key={chip.label}
+              className={`flex items-baseline gap-1 pr-3 first:pl-0 ${i > 0 ? "border-l border-[#FFFDF6]/[0.16] pl-3" : ""}`}
+            >
+              <span className="text-sm font-extrabold" style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}>
                 {chip.value}
               </span>
-              <span className="block text-[11px] font-semibold leading-[1.25] text-[#FFFDF699]">
-                {chip.label === "prisendringer" ? "pris­endringer" : chip.label}
-              </span>
+              <span className="text-[11px] font-semibold text-[#FFFDF699]">{chip.label}</span>
             </span>
           ))}
-        </div>
+        </span>
       </div>
     </Link>
   );
