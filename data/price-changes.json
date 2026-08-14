@@ -1,52 +1,32 @@
 {
-  "generated": "2026-08-14T07:50:03.763Z",
+  "generated": "2026-08-14T09:36:35.867Z",
   "summary": {
-    "priceChanges24h": 1,
+    "priceChanges24h": 0,
     "newDiscs24h": 0,
     "storesChecked": 14
   },
   "drops": [
     {
-      "discId": "latitude-river",
-      "store": "nydisk",
-      "storeName": "NyDisk",
-      "plastic": "Zero",
-      "oldPrice": 159,
-      "newPrice": 149,
-      "pct": -6,
-      "changedAt": "2026-08-14T07:33:06.648Z",
+      "discId": "latitude-bite",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Opto",
+      "oldPrice": 214,
+      "newPrice": 168,
+      "pct": -21,
+      "changedAt": "2026-08-14T07:41:57.975Z",
       "period": "week",
       "history": [
-        159,
-        159,
-        159,
-        159,
-        176,
-        149,
-        149
-      ]
-    },
-    {
-      "discId": "latitude-diamond",
-      "store": "nydisk",
-      "storeName": "NyDisk",
-      "plastic": "Zero",
-      "oldPrice": 159,
-      "newPrice": 149,
-      "pct": -6,
-      "changedAt": "2026-08-14T07:33:06.648Z",
-      "period": "week",
-      "history": [
-        159,
-        159,
-        159,
-        159,
-        176,
-        149,
-        149
+        214,
+        64275,
+        214,
+        214,
+        214,
+        168,
+        168
       ]
     }
   ],
   "totalDrops": 0,
-  "totalDropsWeek": 2
+  "totalDropsWeek": 1
 }

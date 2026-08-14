@@ -13,11 +13,17 @@ const {
   buildHistory,
 } = require('./price-changes');
 
-test('entryLandedNOK adds shipping for non-NO stores, not for NO stores', () => {
-  assert.equal(entryLandedNOK({ price: 100 }, { country: 'SE', shipping: 49 }), 149);
-  assert.equal(entryLandedNOK({ price: 100 }, { country: 'NO', shipping: 79 }), 100);
+test('entryLandedNOK adds shipping unless the price clears freeShippingOver', () => {
+  // No freeShippingOver at all (how every international store is configured
+  // — see scripts/stores.config.js's STORE_CONFIGS) -> shipping always added.
+  assert.equal(entryLandedNOK({ price: 100 }, { shipping: 49 }), 149);
+  // Below the store's threshold -> shipping added.
+  assert.equal(entryLandedNOK({ price: 149 }, { shipping: 45, freeShippingOver: 800 }), 194);
+  // At/above the threshold -> free shipping, no addition.
+  assert.equal(entryLandedNOK({ price: 800 }, { shipping: 45, freeShippingOver: 800 }), 800);
+  assert.equal(entryLandedNOK({ price: 900 }, { shipping: 45, freeShippingOver: 800 }), 900);
   assert.equal(entryLandedNOK({ price: 100 }, undefined), 100);
-  assert.equal(entryLandedNOK({ price: 100 }, { country: 'SE' }), 100); // missing shipping defaults to 0
+  assert.equal(entryLandedNOK({ price: 100 }, {}), 100); // missing shipping defaults to 0
 });
 
 test('bestLandedEntry picks cheapest in-stock landed price and ignores out-of-stock/invalid', () => {

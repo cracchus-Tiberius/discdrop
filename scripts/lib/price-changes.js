@@ -35,17 +35,18 @@ const NOISE_MIN_ABS_NOK = 5;
 const MAX_PER_BRAND = 2;
 
 /**
- * Landed cost in NOK for one scraped price entry: for non-Norwegian stores,
- * price + shipping (VOEC-registered stores already include MVA in the listed
- * price, but shipping is always due); for Norwegian stores, shipping is
- * conditional on basket total so we don't add it here. Mirrors
+ * Landed cost in NOK: disc price, plus shipping unless the store's
+ * freeShippingOver threshold is met by the price alone. International stores
+ * never define freeShippingOver (see scripts/stores.config.js's
+ * STORE_CONFIGS), so they always get shipping added. Mirrors
  * lib/disc-utils.ts's entryLandedNOK() — keep both in sync if this changes.
  */
 function entryLandedNOK(entry, storeMeta) {
-  if (storeMeta && storeMeta.country && storeMeta.country !== 'NO') {
-    return entry.price + (storeMeta.shipping || 0);
+  if (!storeMeta) return entry.price;
+  if (storeMeta.freeShippingOver != null && entry.price >= storeMeta.freeShippingOver) {
+    return entry.price;
   }
-  return entry.price;
+  return entry.price + (storeMeta.shipping || 0);
 }
 
 /**

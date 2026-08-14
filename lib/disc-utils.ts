@@ -28,15 +28,29 @@ type StoreMeta = {
 };
 
 /**
- * For international (non-Norwegian) stores, shipping is always required — no free-shipping
- * threshold. Returns disc price + shipping. For Norwegian stores returns disc price only
- * (shipping is conditional on basket total, MVA already included in listed price).
+ * Landed cost: disc price, plus shipping unless this store's freeShippingOver
+ * threshold is met by the price alone. International stores never define
+ * freeShippingOver (see scripts/stores.config.js's STORE_CONFIGS), so they
+ * always get shipping added — matching that they don't offer a domestic-style
+ * free-shipping tier. Previously this only added shipping for non-Norwegian
+ * stores, treating every Norwegian store's single-disc order as if it always
+ * qualified for free shipping — wrong for the common case where one disc's
+ * price sits well under an 700-900 kr threshold, which understated "best
+ * price" sitewide and directly contradicted the "reell totalpris" promise on
+ * the homepage. This function is the single source of truth for that
+ * calculation now — the disc detail page's price table (app/disc/[slug]/
+ * DiscDetailClient.tsx) used to duplicate an equivalent (and here, more
+ * correct) formula inline; it now calls this instead.
  */
-export function entryLandedNOK(entry: ScrapedEntry, meta: StoreMeta | undefined): number {
-  if (meta?.country && meta.country !== "NO") {
-    return entry.price + (meta.shipping ?? 0);
+export function entryLandedNOK(
+  entry: { price: number },
+  meta: { freeShippingOver?: number; shipping?: number } | undefined
+): number {
+  if (!meta) return entry.price;
+  if (meta.freeShippingOver != null && entry.price >= meta.freeShippingOver) {
+    return entry.price;
   }
-  return entry.price;
+  return entry.price + (meta.shipping ?? 0);
 }
 
 // Defense against scraper currency bugs (e.g. Discexpress USD-as-SEK incident).

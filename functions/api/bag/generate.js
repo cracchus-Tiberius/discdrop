@@ -15,11 +15,13 @@ const MIN_VALID_PRICE_NOK = 50;
 // fed to the LLM as if it were a real disc price and skew a bag suggestion.
 const MAX_VALID_PRICE_NOK = 600;
 
+// Mirrors lib/disc-utils.ts's entryLandedNOK() — keep both in sync.
 function entryLandedNOK(entry, meta) {
-  if (meta?.country && meta.country !== "NO") {
-    return entry.price + (meta.shipping ?? 0);
+  if (!meta) return entry.price;
+  if (meta.freeShippingOver != null && entry.price >= meta.freeShippingOver) {
+    return entry.price;
   }
-  return entry.price;
+  return entry.price + (meta.shipping ?? 0);
 }
 
 function getScrapedPrice(discId) {

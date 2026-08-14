@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
-import type { RichStoreEntry } from "@/lib/disc-utils";
+import { entryLandedNOK, type RichStoreEntry } from "@/lib/disc-utils";
 import { RelativeTime } from "@/components/RelativeTime";
 import { BADGE_STYLES as BADGE_STYLES_CLIENT } from "@/lib/badge-styles";
 
@@ -63,8 +63,11 @@ export function PriceTable({
 
   const rows: StoreRow[] = stores
     .map((s) => {
-      const shippingNOK = s.price >= s.freeShippingOver ? 0 : s.shipping;
-      return { ...s, shippingNOK, total: s.price + shippingNOK };
+      // Shared with the rest of the site — see lib/disc-utils.ts's
+      // entryLandedNOK() for why this isn't just "add shipping for
+      // non-Norwegian stores".
+      const total = entryLandedNOK(s, s);
+      return { ...s, shippingNOK: total - s.price, total };
     })
     .sort((a, b) => {
       if (a.inStock && !b.inStock) return -1;
@@ -564,7 +567,7 @@ export function DiscHeroSection({
   const bestEntry = useMemo(() => {
     const rows = deduplicatedEntries.map((e) => ({
       ...e,
-      total: e.price + (e.price >= e.freeShippingOver ? 0 : e.shipping),
+      total: entryLandedNOK(e, e),
     }));
     return rows.filter((r) => r.inStock).sort((a, b) => a.total - b.total)[0] ?? null;
   }, [deduplicatedEntries]);
@@ -611,7 +614,7 @@ export function DiscHeroSection({
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Beste pris</span>
                 {bestEntry != null ? (
                   <>
-                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.price}</span>
+                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.total}</span>
                     {inStockCount > 0 && (
                       <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
                     )}
@@ -673,7 +676,7 @@ export function DiscHeroSection({
                 <span className="text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Beste pris</span>
                 {bestEntry != null ? (
                   <>
-                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.price}</span>
+                    <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.total}</span>
                     {inStockCount > 0 && (
                       <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
                     )}
