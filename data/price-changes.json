@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-14T09:36:35.867Z",
+  "generated": "2026-08-14T13:05:26.800Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 1,
     "newDiscs24h": 0,
     "storesChecked": 14
   },
@@ -10,10 +10,10 @@
       "discId": "latitude-bite",
       "store": "discsport",
       "storeName": "Discsport",
-      "plastic": "Opto",
+      "plastic": "Gold",
       "oldPrice": 214,
-      "newPrice": 168,
-      "pct": -21,
+      "newPrice": 198,
+      "pct": -7,
       "changedAt": "2026-08-14T07:41:57.975Z",
       "period": "week",
       "history": [
@@ -23,7 +23,7 @@
         214,
         214,
         168,
-        168
+        198
       ]
     }
   ],

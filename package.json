@@ -29,7 +29,7 @@
     "check-alerts": "node scripts/check-alerts.js",
     "build:price-changes": "node scripts/build-price-changes.js",
     "audit:price-caps": "node scripts/audit-price-caps.js",
-    "test": "node --test scripts/**/*.test.js"
+    "test": "node --test 'scripts/**/*.test.js'"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.80.0",

@@ -436,9 +436,20 @@ function isUsedDisc(rawName) {
 
 function isMiniDisc(rawName) {
   const lower = rawName.toLowerCase();
-  // "Macro" is MVP's brand name for mini-marker discs
-  // Also catch "mini" appearing anywhere in the name (e.g. "K1 Reko Mini", "Reko Mini disc")
-  return /\bmini\b/.test(lower) || lower.includes('mini-marker') || lower.includes('mini marker') || /\bmacro\b/.test(lower);
+  // "Macro" is MVP's brand name for mini-marker discs. "Puppy" is Latitude
+  // 64's naming for a lighter, smaller-diameter version of a mold aimed at
+  // kids/dogs (confirmed in production: Discsport's "Opto Bite Puppy" —
+  // 0/0/0/0 flight numbers, "smaller version of the bite... for you and
+  // your small canine friend" — matched catalog id latitude-bite, showing
+  // up as a fake 21% "prisfall" against the real disc's price). Also catch
+  // "mini" appearing anywhere in the name (e.g. "K1 Reko Mini").
+  return (
+    /\bmini\b/.test(lower) ||
+    lower.includes('mini-marker') ||
+    lower.includes('mini marker') ||
+    /\bmacro\b/.test(lower) ||
+    /\bpuppy\b/.test(lower)
+  );
 }
 
 // Multi-word phrases that mean the product is NOT a disc.
