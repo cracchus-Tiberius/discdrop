@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-13T17:43:50.259Z",
+  "generated": "2026-08-14T07:50:03.763Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 1,
     "newDiscs24h": 0,
     "storesChecked": 14
   },
@@ -14,7 +14,7 @@
       "oldPrice": 159,
       "newPrice": 149,
       "pct": -6,
-      "changedAt": "2026-08-13T07:36:50.741Z",
+      "changedAt": "2026-08-14T07:33:06.648Z",
       "period": "week",
       "history": [
         159,
@@ -34,7 +34,7 @@
       "oldPrice": 159,
       "newPrice": 149,
       "pct": -6,
-      "changedAt": "2026-08-13T07:36:50.741Z",
+      "changedAt": "2026-08-14T07:33:06.648Z",
       "period": "week",
       "history": [
         159,
