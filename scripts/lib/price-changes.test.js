@@ -76,7 +76,7 @@ test('computeChanges counts a disc once even if multiple stores changed', () => 
     stores: storesMeta,
     prices: {
       'disc-a': [
-        { store: 's1', price: 150, inStock: true }, // -25%
+        { store: 's1', price: 150, inStock: true, url: 'https://s1.example/disc-a' }, // -25%
         { store: 's2', price: 160, inStock: true }, // also changed, same disc
       ],
     },
@@ -92,6 +92,10 @@ test('computeChanges counts a disc once even if multiple stores changed', () => 
   assert.equal(dropsRaw[0].discId, 'disc-a');
   assert.equal(dropsRaw[0].oldPrice, 200);
   assert.equal(dropsRaw[0].newPrice, 150);
+  // The winning store's URL passes through — the daily anomaly-review
+  // routine has no way to fetch the store page itself, so this is its
+  // only clue for "does this look like the same product as the disc".
+  assert.equal(dropsRaw[0].url, 'https://s1.example/disc-a');
 });
 
 test('computeChanges counts newly-priced discs separately from changes, no pct emitted', () => {

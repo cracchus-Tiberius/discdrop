@@ -145,6 +145,11 @@ function computeChanges({ oldSnapshot, newSnapshot, catalog, period }) {
           pct,
           changedAt: newBest.lastScraped || (newSnapshot && newSnapshot.generated) || null,
           period,
+          // Not shown in the UI — kept for the daily anomaly-review routine,
+          // which has no way to fetch the store page itself and uses the
+          // URL slug as its main clue for "does this look like the same
+          // product as the catalog disc" (see README/CLAUDE.md).
+          url: newBest.url,
         });
       }
     }

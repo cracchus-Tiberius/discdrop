@@ -104,6 +104,7 @@ function buildDropEntries(dropsRaw, snapshots) {
     changedAt: drop.changedAt,
     period: drop.period,
     history: buildHistory(drop.discId, snapshots, HISTORY_LENGTH),
+    url: drop.url,
   }));
 }
 
