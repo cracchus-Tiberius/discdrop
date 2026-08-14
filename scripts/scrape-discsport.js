@@ -112,7 +112,21 @@ async function scrape() {
         const matches = text.matchAll(/"[^"]*##\d+##2##discar\/mold\/([^"\s]+)[^"]*"/g);
         for (const m of matches) {
           const moldSlug = m[1];
-          if (moldSlug && moldSlug.length > 1) slugs.add(moldSlug);
+          // Discsport's own autocomplete data has entries like "#3",
+          // "#3-flyer", "#1-helix" whose "slug" starts with a hash — these
+          // are NOT per-product mold pages. Verified live: every single
+          // one of them (not just the bare "#3" case) resolves to the
+          // exact same generic listing page (DISCatcher Traveler, a
+          // starter bag, Active Premium Majesty/Magician/...), because "#"
+          // is a URL fragment, not a real path segment their site routes
+          // on when loaded directly. Confirmed in production: 98 price
+          // entries across completely unrelated discs (Zone SS, Aviar,
+          // Berg, Luna, ...) all ended up pointing at discsport.se/discar/
+          // mold/#3, making every price attributed to it unverifiable —
+          // reject the whole "starts with #" family, not just that one.
+          if (moldSlug && moldSlug.length > 1 && !moldSlug.startsWith('#')) {
+            slugs.add(moldSlug);
+          }
         }
       }
       return [...slugs];

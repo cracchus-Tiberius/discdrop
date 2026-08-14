@@ -1,7 +1,7 @@
 {
-  "generated": "2026-08-14T13:14:26.798Z",
+  "generated": "2026-08-14T13:42:20.158Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 2,
     "newDiscs24h": 0,
     "storesChecked": 14
   },
@@ -10,11 +10,32 @@
       "discId": "latitude-bite",
       "store": "discsport",
       "storeName": "Discsport",
-      "plastic": "Gold",
+      "plastic": "Opto",
+      "oldPrice": 198,
+      "newPrice": 188,
+      "pct": -5,
+      "changedAt": "2026-08-14T13:38:13.774Z",
+      "period": "day",
+      "history": [
+        214,
+        64275,
+        214,
+        214,
+        214,
+        198,
+        188
+      ],
+      "url": "https://discsport.se/discar/mold/bite"
+    },
+    {
+      "discId": "latitude-bite",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Opto",
       "oldPrice": 214,
-      "newPrice": 198,
-      "pct": -7,
-      "changedAt": "2026-08-14T07:41:57.975Z",
+      "newPrice": 188,
+      "pct": -12,
+      "changedAt": "2026-08-14T13:38:13.774Z",
       "period": "week",
       "history": [
         214,
@@ -23,11 +44,11 @@
         214,
         214,
         198,
-        198
+        188
       ],
-      "url": "https://discsport.se/discar/mold/#3"
+      "url": "https://discsport.se/discar/mold/bite"
     }
   ],
-  "totalDrops": 0,
+  "totalDrops": 1,
   "totalDropsWeek": 1
 }
