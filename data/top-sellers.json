@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01",
+  "generated": "2026-08-15",
   "sources": [
     "https://infinitediscs.com/top-selling/discs-last-month"
   ],
@@ -18,124 +18,124 @@
       "catalogId": "mvp-control"
     },
     {
-      "name": "Wraith",
-      "brand": "Innova",
-      "score": 37,
-      "catalogId": "innova-wraith"
-    },
-    {
       "name": "Trail",
       "brand": "MVP",
-      "score": 36,
+      "score": 37,
       "catalogId": "mvp-trail"
     },
     {
-      "name": "Glitch",
-      "brand": "MVP",
+      "name": "DD1",
+      "brand": "Discmania",
       "score": 35,
-      "catalogId": "mvp-glitch"
-    },
-    {
-      "name": "Hex",
-      "brand": "Axiom",
-      "score": 34,
-      "catalogId": "axiom-hex"
+      "catalogId": "discmania-dd1"
     },
     {
       "name": "Eagle",
       "brand": "Innova",
-      "score": 33,
+      "score": 34,
       "catalogId": "innova-eagle"
     },
     {
       "name": "Arachnid",
       "brand": "Innova",
-      "score": 31,
+      "score": 33,
       "catalogId": "innova-arachnid"
     },
     {
       "name": "Destroyer",
       "brand": "Innova",
-      "score": 24,
+      "score": 32,
       "catalogId": "innova-destroyer"
     },
     {
-      "name": "Maya",
-      "brand": "Infinite Discs",
+      "name": "Glitch",
+      "brand": "MVP",
+      "score": 30,
+      "catalogId": "mvp-glitch"
+    },
+    {
+      "name": "Hex",
+      "brand": "Axiom",
+      "score": 29,
+      "catalogId": "axiom-hex"
+    },
+    {
+      "name": "Wraith",
+      "brand": "Innova",
+      "score": 28,
+      "catalogId": "innova-wraith"
+    },
+    {
+      "name": "Pixel",
+      "brand": "Axiom",
+      "score": 24,
+      "catalogId": "mvp-pixel"
+    },
+    {
+      "name": "Crave",
+      "brand": "Axiom",
       "score": 23,
-      "catalogId": "infinite-maya"
+      "catalogId": "axiom-crave"
+    },
+    {
+      "name": "Detour",
+      "brand": "MVP",
+      "score": 22,
+      "catalogId": "mvp-detour"
     },
     {
       "name": "River",
       "brand": "Latitude 64",
-      "score": 21,
+      "score": 20,
       "catalogId": "latitude-river"
+    },
+    {
+      "name": "Pure",
+      "brand": "Latitude 64",
+      "score": 17,
+      "catalogId": "latitude-pure"
     },
     {
       "name": "Mamba",
       "brand": "Innova",
-      "score": 19,
+      "score": 16,
       "catalogId": "innova-mamba"
     },
     {
       "name": "Luna",
       "brand": "Discraft",
-      "score": 18,
-      "catalogId": "discraft-luna"
-    },
-    {
-      "name": "PD",
-      "brand": "Discmania",
-      "score": 17,
-      "catalogId": "discmania-pd"
-    },
-    {
-      "name": "Aviar",
-      "brand": "Innova",
-      "score": 16,
-      "catalogId": "innova-aviar"
-    },
-    {
-      "name": "Buzzz",
-      "brand": "Discraft",
       "score": 15,
-      "catalogId": "discraft-buzzz"
+      "catalogId": "discraft-luna"
     },
     {
       "name": "Wave",
       "brand": "MVP",
-      "score": 13,
+      "score": 14,
       "catalogId": "mvp-wave"
     },
     {
-      "name": "Crave",
-      "brand": "Axiom",
-      "score": 12,
-      "catalogId": "axiom-crave"
+      "name": "Buzzz",
+      "brand": "Discraft",
+      "score": 13,
+      "catalogId": "discraft-buzzz"
     },
     {
-      "name": "Diamond",
+      "name": "DD3",
+      "brand": "Discmania",
+      "score": 8,
+      "catalogId": "discmania-dd3"
+    },
+    {
+      "name": "Core",
       "brand": "Latitude 64",
-      "score": 11,
-      "catalogId": "latitude-diamond"
+      "score": 6,
+      "catalogId": "latitude-core"
     },
     {
       "name": "Thunderbird",
       "brand": "Innova",
-      "score": 6,
-      "catalogId": "innova-thunderbird"
-    },
-    {
-      "name": "Detour",
-      "brand": "MVP",
-      "score": 2,
-      "catalogId": "mvp-detour"
-    },
-    {
-      "name": "Pixel",
-      "brand": "Axiom",
       "score": 1,
-      "catalogId": "mvp-pixel"
+      "catalogId": "innova-thunderbird"
     }
   ]
 }
