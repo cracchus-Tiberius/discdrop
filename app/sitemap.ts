@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { discs } from "@/data/discs.js";
+import { SLUG_TO_BRAND } from "@/app/brand/[slug]/page";
 
 export const dynamic = "force-static";
 
@@ -15,6 +16,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // 21 real, statically-generated pages that were entirely missing from
+  // the sitemap — confirmed live via curl against /sitemap.xml (16.08.2026,
+  // investigating the GSC indexed-pages drop). They're reachable via
+  // on-site navigation, so Google could still find them by crawling links,
+  // but an explicit sitemap entry is the more reliable discovery signal.
+  const brandEntries: MetadataRoute.Sitemap = Object.keys(SLUG_TO_BRAND).map((slug) => ({
+    url: `${base}/brand/${slug}/`,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
   return [
     {
       url: `${base}/`,
@@ -23,6 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${base}/browse/`,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/prisfall/`,
       changeFrequency: "daily",
       priority: 0.9,
     },
@@ -36,6 +53,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${base}/kontakt/`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${base}/personvern/`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    ...brandEntries,
     ...discEntries,
   ];
 }
