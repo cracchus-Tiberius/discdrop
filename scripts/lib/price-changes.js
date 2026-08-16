@@ -13,6 +13,17 @@
 // TS pipeature; if that floor ever changes, change both.
 const MIN_VALID_PRICE_NOK = 50;
 
+// Same ceiling as lib/disc-utils.ts's MAX_VALID_PRICE_NOK / audit-price-
+// caps.js — without it, a garbage price sitting in an OLD git snapshot
+// (e.g. the pre-fix Discsport regex bug that once produced 64275 kr for
+// Latitude 64 Bite) can still get picked as that disc's "best" price for
+// that historical day if it was the only entry in stock, producing a fake
+// ~-100% week-over-week "prisfall" long after the live data was fixed —
+// confirmed in production 2026-08-16, caught by the daily Prisfall
+// product-match routine. The live site itself was never wrong; only this
+// script's read of old history was.
+const MAX_VALID_PRICE_NOK = 600;
+
 // A disc's price only counts as a genuine "drop" worth showing if the cut is
 // at least this many percentage points — small day-to-day noise (rounding,
 // a store nudging a price by a few kroner) shouldn't show up as a "prisfall".
@@ -60,7 +71,7 @@ function bestLandedEntry(entries, storesMeta) {
   let best = null;
   for (const entry of entries) {
     if (!entry.inStock) continue;
-    if (!entry.price || entry.price < MIN_VALID_PRICE_NOK) continue;
+    if (!entry.price || entry.price < MIN_VALID_PRICE_NOK || entry.price > MAX_VALID_PRICE_NOK) continue;
     const meta = storesMeta[entry.store];
     const landed = entryLandedNOK(entry, meta);
     if (!best || landed < best.landed) {
@@ -207,6 +218,7 @@ function buildHistory(discId, snapshots, targetLength = 7) {
 
 module.exports = {
   MIN_VALID_PRICE_NOK,
+  MAX_VALID_PRICE_NOK,
   MIN_DROP_PCT,
   MAX_PER_BRAND,
   NOISE_MIN_ABS_PCT,

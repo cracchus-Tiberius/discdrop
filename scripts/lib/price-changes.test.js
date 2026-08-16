@@ -5,6 +5,7 @@ const assert = require('node:assert/strict');
 
 const {
   MIN_VALID_PRICE_NOK,
+  MAX_VALID_PRICE_NOK,
   entryLandedNOK,
   bestLandedEntry,
   pctChange,
@@ -51,6 +52,34 @@ test('bestLandedEntry respects MIN_VALID_PRICE_NOK floor', () => {
 test('bestLandedEntry returns null for empty/missing entries', () => {
   assert.equal(bestLandedEntry([], {}), null);
   assert.equal(bestLandedEntry(undefined, {}), null);
+});
+
+test('bestLandedEntry respects MAX_VALID_PRICE_NOK ceiling, even as the only entry', () => {
+  // Confirmed in production 2026-08-16: a garbage price (64275 kr, from the
+  // pre-fix Discsport regex bug) sitting in an OLD git snapshot was still
+  // picked as Latitude 64 Bite's "best" price for that historical day
+  // because it was the ONLY in-stock entry that day, producing a fake
+  // ~-100% week-over-week "prisfall" long after the live bug was fixed.
+  const storesMeta = { discsport: { country: 'SE', shipping: 40 } };
+  const entries = [{ store: 'discsport', price: 64275, inStock: true }];
+  assert.equal(bestLandedEntry(entries, storesMeta), null);
+
+  const atCeiling = [{ store: 'a', price: MAX_VALID_PRICE_NOK, inStock: true }];
+  assert.equal(bestLandedEntry(atCeiling, { a: {} }).landed, MAX_VALID_PRICE_NOK);
+
+  const overCeiling = [{ store: 'a', price: MAX_VALID_PRICE_NOK + 1, inStock: true }];
+  assert.equal(bestLandedEntry(overCeiling, { a: {} }), null);
+});
+
+test('bestLandedEntry picks a valid entry over one above MAX_VALID_PRICE_NOK', () => {
+  const storesMeta = { a: { country: 'NO' }, b: { country: 'NO' } };
+  const entries = [
+    { store: 'a', price: 64275, inStock: true },
+    { store: 'b', price: 200, inStock: true },
+  ];
+  const best = bestLandedEntry(entries, storesMeta);
+  assert.equal(best.store, 'b');
+  assert.equal(best.landed, 200);
 });
 
 test('pctChange rounds and is negative for a drop', () => {
