@@ -1,11 +1,263 @@
 {
-  "generated": "2026-08-16T10:23:38.309Z",
+  "generated": "2026-08-16T10:37:24.997Z",
   "summary": {
-    "priceChanges24h": 26,
-    "newDiscs24h": 0,
+    "priceChanges24h": 28,
+    "newDiscs24h": 28,
     "storesChecked": 14
   },
   "drops": [
+    {
+      "discId": "latitude-rogue",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": null,
+      "oldPrice": 334,
+      "newPrice": 244,
+      "pct": -27,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        334,
+        244
+      ],
+      "url": "https://wearediscgolf.no/produkt/proline-rogue/"
+    },
+    {
+      "discId": "latitude-avalanche",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": null,
+      "oldPrice": 334,
+      "newPrice": 264,
+      "pct": -21,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        264,
+        264,
+        264,
+        264,
+        264,
+        334,
+        264
+      ],
+      "url": "https://wearediscgolf.no/produkt/atmos-avalanche/"
+    },
+    {
+      "discId": "alfa-theios",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Copper Line",
+      "oldPrice": 274,
+      "newPrice": 224,
+      "pct": -18,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        224,
+        224,
+        224,
+        224,
+        224,
+        274,
+        224
+      ],
+      "url": "https://wearediscgolf.no/produkt/copper-line-theios/"
+    },
+    {
+      "discId": "latitude-grace",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Zero",
+      "oldPrice": 194,
+      "newPrice": 164,
+      "pct": -15,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        164,
+        164,
+        164,
+        164,
+        164,
+        194,
+        164
+      ],
+      "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/"
+    },
+    {
+      "discId": "latitude-bolt",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Zero",
+      "oldPrice": 194,
+      "newPrice": 164,
+      "pct": -15,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        164,
+        164,
+        164,
+        164,
+        164,
+        194,
+        164
+      ],
+      "url": "https://wearediscgolf.no/produkt/zero-gravity-bolt/"
+    },
+    {
+      "discId": "latitude-hurricane",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": null,
+      "oldPrice": 267,
+      "newPrice": 244,
+      "pct": -9,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        267,
+        244
+      ],
+      "url": "https://wearediscgolf.no/produkt/spark-hurricane/"
+    },
+    {
+      "discId": "discraft-fierce",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Putter Line",
+      "oldPrice": 230,
+      "newPrice": 214,
+      "pct": -7,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        214,
+        214,
+        214,
+        214,
+        214,
+        230,
+        214
+      ],
+      "url": "https://wearediscgolf.no/produkt/putter-line-fierce-soft/"
+    },
+    {
+      "discId": "alfa-apollo",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Copper Line",
+      "oldPrice": 240,
+      "newPrice": 224,
+      "pct": -7,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        224,
+        224,
+        224,
+        224,
+        224,
+        240,
+        224
+      ],
+      "url": "https://wearediscgolf.no/produkt/copper-line-apollo/"
+    },
+    {
+      "discId": "discraft-cicada",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "X",
+      "oldPrice": 208,
+      "newPrice": 194,
+      "pct": -7,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        208,
+        194
+      ],
+      "url": "https://wearediscgolf.no/produkt/x-cicada/"
+    },
+    {
+      "discId": "discraft-avenger",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Z",
+      "oldPrice": 317,
+      "newPrice": 294,
+      "pct": -7,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        294,
+        294,
+        294,
+        294,
+        294,
+        317,
+        294
+      ],
+      "url": "https://wearediscgolf.no/produkt/z-colorshift-avenger-nate-doss-20-year-anniversary/"
+    },
+    {
+      "discId": "prodiscus-belleair",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": null,
+      "oldPrice": 228,
+      "newPrice": 214,
+      "pct": -6,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        214,
+        214,
+        214,
+        214,
+        214,
+        228,
+        214
+      ],
+      "url": "https://wearediscgolf.no/produkt/trophy-line-belleair/"
+    },
+    {
+      "discId": "mvp-trail",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Neutron",
+      "oldPrice": 267,
+      "newPrice": 254,
+      "pct": -5,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "day",
+      "history": [
+        269,
+        269,
+        267,
+        268,
+        267,
+        267,
+        254
+      ],
+      "url": "https://wearediscgolf.no/produkt/neutron-trail-white-rim/"
+    },
     {
       "discId": "latitude-bite",
       "store": "discsport",
@@ -26,6 +278,27 @@
         188
       ],
       "url": "https://discsport.se/discar/mold/bite"
+    },
+    {
+      "discId": "mvp-trail",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Neutron",
+      "oldPrice": 269,
+      "newPrice": 254,
+      "pct": -6,
+      "changedAt": "2026-08-16T10:32:12.262Z",
+      "period": "week",
+      "history": [
+        269,
+        269,
+        267,
+        268,
+        267,
+        267,
+        254
+      ],
+      "url": "https://wearediscgolf.no/produkt/neutron-trail-white-rim/"
     },
     {
       "discId": "mvp-control",
@@ -49,6 +322,6 @@
       "url": "https://www.discexpress.se/products/control-neutron"
     }
   ],
-  "totalDrops": 0,
-  "totalDropsWeek": 2
+  "totalDrops": 12,
+  "totalDropsWeek": 3
 }

@@ -267,7 +267,22 @@ function matchDiscCandidate(rawProductName) {
       // dynamic-phenom (Legacy Discs' actual mold) — because "longest match
       // wins" let the stamp name beat the real (shorter) mold name earlier
       // in the same title. Require brand confirmation for these too.
-      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking']);
+      //
+      // "motion" and "flow" are also generic enough words to collide with
+      // unrelated products — confirmed in production: WeAreDiscGolf's
+      // "Arctic Line Putter Flow Motion" (a 99 kr non-MVP, non-Latitude 64
+      // product — "Arctic Line" is their own in-house plastic naming for a
+      // putter, not a mold) matched catalog id mvp-motion via "motion"
+      // (longest match wins), dragging its "best price" down to a fake
+      // ~34% "prisfall". Once "motion" alone was brand-checked, the SAME
+      // bad product just fell through to "flow" instead and corrupted
+      // latitude-flow (a fairway driver) the same way — both need the
+      // check together, not just one. Safe to add: every legitimate
+      // listing for either mold already carries a real brand plastic
+      // keyword (MVP: Neutron/Plasma/R2 Neutron; Latitude 64: Opto — see
+      // the prefix lists above), which satisfies hasOtherBrandPlastic below
+      // on its own, without needing the literal brand name in the title.
+      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow']);
       if (discName.length <= 3 || REQUIRES_BRAND_CHECK.has(discName)) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
