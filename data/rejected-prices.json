@@ -1,10 +1,10 @@
 {
-  "generated": "2026-08-16T07:02:35.421Z",
+  "generated": "2026-08-16T10:23:38.390Z",
   "bounds": {
     "min": 50,
     "max": 600
   },
-  "count": 8,
+  "count": 7,
   "rejected": [
     {
       "discId": "mvp-shift",
@@ -32,15 +32,6 @@
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
       "lastScraped": "2026-08-16T06:44:32.561Z"
-    },
-    {
-      "discId": "latitude-gatekeeper",
-      "discName": "Latitude 64 Gatekeeper",
-      "store": "wearediscgolf",
-      "price": 749,
-      "reason": "above-max",
-      "url": "https://wearediscgolf.no/produkt/the-gatekeeper-box-5/",
-      "lastScraped": "2026-08-14T07:21:05.166Z"
     },
     {
       "discId": "latitude-core",

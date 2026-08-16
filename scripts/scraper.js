@@ -201,35 +201,42 @@ async function main() {
   let totalDiscsWithPrices = 0;
 
   for (const store of STORES) {
-    let products;
+    // Everything for this store — scrape AND merge — lives in one try/catch.
+    // mergeStoreResults() used to sit outside this block: when its >50%
+    // drop-guard (scripts/stores.config.js) threw for one store, the error
+    // was uncaught, main().catch() below killed the whole process, and
+    // every store after the failing one in STORES silently never ran —
+    // confirmed in production: wearediscgolf's guard tripping left kvamdgs
+    // and arcticdisc (both healthy) stuck on 2-day-old data too, since
+    // they're later in this same array.
     try {
-      products = store.type === 'shopify'
+      const products = store.type === 'shopify'
         ? await scrapeShopifyStore(store)
         : await scrapeWooCommerceApiStore(store);
+
+      const taggedProducts = products.map((p) => ({ ...p, store: store.key }));
+      const result = mergeStoreResults({
+        products: taggedProducts,
+        storeKeys: [store.key],
+        storeMeta: {
+          [store.key]: {
+            name: store.name,
+            url: store.baseUrl,
+            freeShippingOver: store.freeShippingOver,
+            shipping: store.shipping,
+          },
+        },
+        now,
+      });
+
+      storeSummary[store.key] = { name: store.name, found: products.length, matched: result.matched, unmatched: result.unmatched };
+      totalMatched += result.matched;
+      totalUnmatched += result.unmatched;
     } catch (err) {
       console.error(`  ✗ ${store.name} failed entirely: ${err.message}`);
       storeSummary[store.key] = { name: store.name, found: 0, matched: 0, unmatched: 0, error: err.message };
       continue;
     }
-
-    const taggedProducts = products.map((p) => ({ ...p, store: store.key }));
-    const result = mergeStoreResults({
-      products: taggedProducts,
-      storeKeys: [store.key],
-      storeMeta: {
-        [store.key]: {
-          name: store.name,
-          url: store.baseUrl,
-          freeShippingOver: store.freeShippingOver,
-          shipping: store.shipping,
-        },
-      },
-      now,
-    });
-
-    storeSummary[store.key] = { name: store.name, found: products.length, matched: result.matched, unmatched: result.unmatched };
-    totalMatched += result.matched;
-    totalUnmatched += result.unmatched;
   }
 
   // ── Summary ──
