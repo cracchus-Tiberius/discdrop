@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-15T06:57:19.458Z",
+  "lastUpdated": "2026-08-16T07:02:09.652Z",
   "products": [
     {
       "store": "wearediscgolf",
@@ -2256,517 +2256,6 @@
       "inStock": true
     },
     {
-      "store": "discace",
-      "rawName": "Prodigy BP-4 Backpack",
-      "price": 277,
-      "url": "https://prylgrossen.se/produkt/prodigy-bp-4-backpack/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Innova Discover Backpack",
-      "price": 297,
-      "url": "https://prylgrossen.se/produkt/innova-discover-backpack/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "DA of Sweden TPL Team Polo Anthracite black",
-      "price": 347,
-      "url": "https://prylgrossen.se/produkt/da-of-sweden-tpl-team-polo-anthracite-black/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "DA of Sweden TPL Team Polo Tour blue",
-      "price": 347,
-      "url": "https://prylgrossen.se/produkt/da-of-sweden-tpl-team-polo-tour-blue/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "DA of Sweden TPL Team Polo Deep Red",
-      "price": 347,
-      "url": "https://prylgrossen.se/produkt/da-of-sweden-tpl-team-polo-deep-red/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "DA of Sweden TPL Team Polo Cloud White",
-      "price": 347,
-      "url": "https://prylgrossen.se/produkt/da-of-sweden-tpl-team-polo-cloud-white/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Discace of Sweden Patch 10x6cm",
-      "price": 59,
-      "url": "https://prylgrossen.se/produkt/discace-of-sweden-patch-10x6cm/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Discmania Mössa Huntsman Cuffed Beanie",
-      "price": 198,
-      "url": "https://prylgrossen.se/produkt/discmania-mossa-huntsman-cuffed-beanie/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Prodigy Ace Line F Model S Duraflex",
-      "price": 158,
-      "url": "https://prylgrossen.se/produkt/prodigy-ace-line-f-model-s-duraflex/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Evolvent Discs Readiness Apex-80",
-      "price": 238,
-      "url": "https://prylgrossen.se/produkt/evolvent-discs-readiness-apex-80/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Innova Excursion Pack",
-      "price": 795,
-      "url": "https://prylgrossen.se/produkt/innova-excursion-pack/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Clash Discs Berry Special Blend",
-      "price": 238,
-      "url": "https://prylgrossen.se/produkt/clash-discs-steady-berry-special-blend/",
-      "inStock": true
-    },
-    {
-      "store": "discace",
-      "rawName": "Clash Discs  Special Blend Mint",
-      "price": 238,
-      "url": "https://prylgrossen.se/produkt/clash-discs-special-blend-mint/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CRYSTAL LINE SNOOPY FIRST RUN",
-      "price": 199,
-      "url": "https://aceshop.no/product/crystal-line-sniipy-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "DX SYNC",
-      "price": 145,
-      "url": "https://aceshop.no/product/dx-sync/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "HARD BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
-      "price": 169,
-      "url": "https://aceshop.no/product/hard-blend-ultraluna-paul-mcbeth-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "JEREMY KOLING SIGNATURE STAR AVIARX3",
-      "price": 199,
-      "url": "https://aceshop.no/product/jeremy-koling-signature-star-aviarx3/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SOFT BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
-      "price": 169,
-      "url": "https://aceshop.no/product/soft-blend-ultraluna-paul-mcbeth-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "STAR SYNC",
-      "price": 199,
-      "url": "https://aceshop.no/product/star-sync/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "WIZARD SUPER SOFT",
-      "price": 149,
-      "url": "https://aceshop.no/product/wizard-super-soft/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Z-LINE COLORSHIFT FOSSIL - FIRST RUN",
-      "price": 229,
-      "url": "https://aceshop.no/product/z-line-colorshift-fossil-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SL NEUTRON BOOST EAGEL MCMAHON TEAM SERIES",
-      "price": 245,
-      "url": "https://aceshop.no/product/sl-neutron-boost-eagel-mcmahon-team-series/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SL NEUTRON TURBULANCE",
-      "price": 219,
-      "url": "https://aceshop.no/product/sl-neutron-turbulance/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "K1 ÄLVA",
-      "price": 199,
-      "url": "https://aceshop.no/product/k1-alva/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "K1 ÄLVA GLOW",
-      "price": 219,
-      "url": "https://aceshop.no/product/k1-alva-glow/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SPECIAL BLEND HALLUX - RICKY WYSOCKI TOUR SERIES 2026",
-      "price": 279,
-      "url": "https://aceshop.no/product/special-blend-hallux-ricky-wysocki-tour-series-2026/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "STAR XCALIBER",
-      "price": 199,
-      "url": "https://aceshop.no/product/star-xcaliber/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "STAR XCALIBER NATE SEXTON",
-      "price": 199,
-      "url": "https://aceshop.no/product/star-xcaliber-nate-sexton/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Gamma-Solid Neon",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/gamma-solid-neon",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Neutron Boost",
-      "price": 209,
-      "url": "https://frisbeebutikken.no/products/neutron-boost",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "MVP Lunar Module - Kurvlys",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "NEO Enigma",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/neo-enigma",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Amulet",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-amulet",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium FASTi",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-fasti",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium LEGENDa",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Pyramid",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium SLAIDi",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Titan",
-      "price": 259,
-      "url": "https://frisbeebutikken.no/products/ultrium-titan",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Star Sync First Run",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/star-sync-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "BT Soft Swan",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Gamma-Solid Titanium",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "DX Sync",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/dx-sync",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Star Sync",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/star-sync",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Latitude 64 Easy-Go E2. FØR 1699,- Nå 999,-",
-      "price": 999,
-      "url": "https://golfdiscer.no/products/latitude-64-easy-go-e2",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "MVP Black Hole Lite med Transit Bag",
-      "price": 1699,
-      "url": "https://golfdiscer.no/products/mvp-black-hole-lite-med-transit-bag",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Guru Bifrost Backpack",
-      "price": 949,
-      "url": "https://golfdiscer.no/products/guru-bifrost-backpack",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Sigr Odin",
-      "price": 2649,
-      "url": "https://golfdiscer.no/products/sigr-odin",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Kastaplast Håndkle",
-      "price": 129,
-      "url": "https://golfdiscer.no/products/kastaplast-handle",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Latitude Håndkle",
-      "price": 129,
-      "url": "https://golfdiscer.no/products/latitude-handkle",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Neo Enigma",
-      "price": 219,
-      "url": "https://golfdiscer.no/products/neo-enigma",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Prodigy BP-3",
-      "price": 599,
-      "url": "https://golfdiscer.no/products/prodigy-bp-3",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Phoenix Line Kui",
-      "price": 179,
-      "url": "https://golfdiscer.no/products/phoenix-line-kui",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Innova Adventure Backpack",
-      "price": 599,
-      "url": "https://golfdiscer.no/products/innova-adventure-backpack",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "2022 Special Edition Lux Vapor Enigma",
-      "price": 249,
-      "url": "https://golfdiscer.no/products/lux-vapor-enigma",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Prodigy Ascent",
-      "price": 499,
-      "url": "https://golfdiscer.no/products/prodigy-ascent",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "MVP Shuttle",
-      "price": 599,
-      "url": "https://golfdiscer.no/products/mvp-shuttle",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "FANATIC GO BACKPACK",
-      "price": 399,
-      "url": "https://golfdiscer.no/products/fanatic-go-backpack",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Innova Excursion Sekk",
-      "price": 799,
-      "url": "https://golfdiscer.no/products/innova-excursion-sekk",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Star Spider – Arachne Stamp. Innova Factory Store",
-      "price": 299,
-      "url": "https://golfdiscer.no/products/star-spider-arachne-stamp-innova-factory-store",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "DX Stud Innova Factory Store",
-      "price": 260,
-      "url": "https://golfdiscer.no/products/dx-stud-innova-factory-store",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Guru Berserk Backpack",
-      "price": 499,
-      "url": "https://golfdiscer.no/products/guru-berserk-backpack",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "DX Ram Innova",
-      "price": 198,
-      "url": "https://golfdiscer.no/products/dx-ram-innova",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Innova DISCatcher Pro 28. Bestillingsvare",
-      "price": 5499,
-      "url": "https://golfdiscer.no/products/innova-discatcher-ez-kurv",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Disc golf startsett Kasteplast Mummi",
-      "price": 598,
-      "url": "https://golfdiscer.no/products/disc-golf-startsett-kasteplast-mummi",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Hardy Fudge",
-      "price": 179,
-      "url": "https://golfdiscer.no/products/hardy-fudge",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Forundringspakke",
-      "price": 649,
-      "url": "https://golfdiscer.no/products/overraskelsesboks",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Discmania Performance Tee",
-      "price": 199,
-      "url": "https://golfdiscer.no/products/discmania-performance-tee",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Discraft Paul McBeth T-skjorte",
-      "price": 199,
-      "url": "https://golfdiscer.no/products/discraft-t-skjorte",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Paul McBeth Signature Series T-skjorte",
-      "price": 199,
-      "url": "https://golfdiscer.no/products/paul-mcbeth-signature-series-t-skjorte",
-      "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Gavekort",
-      "price": 250,
-      "url": "https://golfdiscer.no/products/gavekort-1",
-      "inStock": true
-    },
-    {
       "store": "frisbeesor",
       "rawName": "Prototype Hallux &#8211; Ricky Wysocki",
       "price": 249,
@@ -2967,6 +2456,419 @@
       "rawName": "GAVEKORT FRISBEE SØR DISKGOLF",
       "price": 150,
       "url": "https://www.frisbeesor.no/produkt/gavekort-frisbee-sor-diskgolf/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CRYSTAL LINE SNOOPY FIRST RUN",
+      "price": 199,
+      "url": "https://aceshop.no/product/crystal-line-sniipy-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DX SYNC",
+      "price": 145,
+      "url": "https://aceshop.no/product/dx-sync/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "HARD BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
+      "price": 169,
+      "url": "https://aceshop.no/product/hard-blend-ultraluna-paul-mcbeth-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "JEREMY KOLING SIGNATURE STAR AVIARX3",
+      "price": 199,
+      "url": "https://aceshop.no/product/jeremy-koling-signature-star-aviarx3/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SOFT BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
+      "price": 169,
+      "url": "https://aceshop.no/product/soft-blend-ultraluna-paul-mcbeth-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "STAR SYNC",
+      "price": 199,
+      "url": "https://aceshop.no/product/star-sync/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "WIZARD SUPER SOFT",
+      "price": 149,
+      "url": "https://aceshop.no/product/wizard-super-soft/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Z-LINE COLORSHIFT FOSSIL - FIRST RUN",
+      "price": 229,
+      "url": "https://aceshop.no/product/z-line-colorshift-fossil-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SL NEUTRON BOOST EAGEL MCMAHON TEAM SERIES",
+      "price": 245,
+      "url": "https://aceshop.no/product/sl-neutron-boost-eagel-mcmahon-team-series/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SL NEUTRON TURBULANCE",
+      "price": 219,
+      "url": "https://aceshop.no/product/sl-neutron-turbulance/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "K1 ÄLVA",
+      "price": 199,
+      "url": "https://aceshop.no/product/k1-alva/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "K1 ÄLVA GLOW",
+      "price": 219,
+      "url": "https://aceshop.no/product/k1-alva-glow/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SPECIAL BLEND HALLUX - RICKY WYSOCKI TOUR SERIES 2026",
+      "price": 279,
+      "url": "https://aceshop.no/product/special-blend-hallux-ricky-wysocki-tour-series-2026/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "STAR XCALIBER",
+      "price": 199,
+      "url": "https://aceshop.no/product/star-xcaliber/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "STAR XCALIBER NATE SEXTON",
+      "price": 199,
+      "url": "https://aceshop.no/product/star-xcaliber-nate-sexton/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Gamma-Solid Neon",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/gamma-solid-neon",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Gamma-Solid Titanium",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "DX Sync",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/dx-sync",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "BT Soft Swan",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Star Sync",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/star-sync",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Star Sync First Run",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/star-sync-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Amulet",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-amulet",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium FASTi",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-fasti",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium LEGENDa",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Pyramid",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium SLAIDi",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Titan",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-titan",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NEO Enigma",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/neo-enigma",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Neutron Boost",
+      "price": 209,
+      "url": "https://frisbeebutikken.no/products/neutron-boost",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Latitude 64 Easy-Go E2. FØR 1699,- Nå 999,-",
+      "price": 999,
+      "url": "https://golfdiscer.no/products/latitude-64-easy-go-e2",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "MVP Black Hole Lite med Transit Bag",
+      "price": 1699,
+      "url": "https://golfdiscer.no/products/mvp-black-hole-lite-med-transit-bag",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Guru Bifrost Backpack",
+      "price": 949,
+      "url": "https://golfdiscer.no/products/guru-bifrost-backpack",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Sigr Odin",
+      "price": 2649,
+      "url": "https://golfdiscer.no/products/sigr-odin",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Kastaplast Håndkle",
+      "price": 129,
+      "url": "https://golfdiscer.no/products/kastaplast-handle",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Latitude Håndkle",
+      "price": 129,
+      "url": "https://golfdiscer.no/products/latitude-handkle",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Neo Enigma",
+      "price": 219,
+      "url": "https://golfdiscer.no/products/neo-enigma",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Prodigy BP-3",
+      "price": 599,
+      "url": "https://golfdiscer.no/products/prodigy-bp-3",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Phoenix Line Kui",
+      "price": 179,
+      "url": "https://golfdiscer.no/products/phoenix-line-kui",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Innova Adventure Backpack",
+      "price": 599,
+      "url": "https://golfdiscer.no/products/innova-adventure-backpack",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "2022 Special Edition Lux Vapor Enigma",
+      "price": 249,
+      "url": "https://golfdiscer.no/products/lux-vapor-enigma",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Prodigy Ascent",
+      "price": 499,
+      "url": "https://golfdiscer.no/products/prodigy-ascent",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "MVP Shuttle",
+      "price": 599,
+      "url": "https://golfdiscer.no/products/mvp-shuttle",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "FANATIC GO BACKPACK",
+      "price": 399,
+      "url": "https://golfdiscer.no/products/fanatic-go-backpack",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Innova Excursion Sekk",
+      "price": 799,
+      "url": "https://golfdiscer.no/products/innova-excursion-sekk",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Star Spider – Arachne Stamp. Innova Factory Store",
+      "price": 299,
+      "url": "https://golfdiscer.no/products/star-spider-arachne-stamp-innova-factory-store",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "DX Stud Innova Factory Store",
+      "price": 260,
+      "url": "https://golfdiscer.no/products/dx-stud-innova-factory-store",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Guru Berserk Backpack",
+      "price": 499,
+      "url": "https://golfdiscer.no/products/guru-berserk-backpack",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "DX Ram Innova",
+      "price": 198,
+      "url": "https://golfdiscer.no/products/dx-ram-innova",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Innova DISCatcher Pro 28. Bestillingsvare",
+      "price": 5499,
+      "url": "https://golfdiscer.no/products/innova-discatcher-ez-kurv",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Disc golf startsett Kasteplast Mummi",
+      "price": 598,
+      "url": "https://golfdiscer.no/products/disc-golf-startsett-kasteplast-mummi",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Forundringspakke",
+      "price": 649,
+      "url": "https://golfdiscer.no/products/overraskelsesboks",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Discmania Performance Tee",
+      "price": 199,
+      "url": "https://golfdiscer.no/products/discmania-performance-tee",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Discraft Paul McBeth T-skjorte",
+      "price": 199,
+      "url": "https://golfdiscer.no/products/discraft-t-skjorte",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Paul McBeth Signature Series T-skjorte",
+      "price": 199,
+      "url": "https://golfdiscer.no/products/paul-mcbeth-signature-series-t-skjorte",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Gavekort",
+      "price": 250,
+      "url": "https://golfdiscer.no/products/gavekort-1",
       "inStock": true
     },
     {
@@ -4036,7 +3938,7 @@
     {
       "store": "discexpress",
       "rawName": "Discmania - Tour Bag",
-      "price": 1983,
+      "price": 1984,
       "url": "https://www.discexpress.se/products/discmania-tour-bag",
       "inStock": true
     },
@@ -4519,9 +4421,9 @@
     {
       "store": "discexpress",
       "rawName": "Älva K1 Grind",
-      "price": 207,
+      "price": 108,
       "url": "https://www.discexpress.se/products/alva-k1-grind",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "discexpress",
@@ -5450,7 +5352,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4563,
+      "price": 4564,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
@@ -5527,7 +5429,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart and Insert Bag",
-      "price": 4166,
+      "price": 4167,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-backpack-cart-with-insert",
       "inStock": true
     },
@@ -5919,35 +5821,35 @@
     {
       "store": "rocketdiscs",
       "rawName": "Star Fairway Disc",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/innova-fairway-disc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Fairway Disc",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/innova-fairway-disc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Mid Disc 3",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/innova-mid-disc-3",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Mid Disc 3",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/innova-mid-disc-3",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Mid Disc 3",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/innova-mid-disc-3",
       "inStock": true
     },
@@ -6607,13 +6509,6 @@
       "rawName": "K1 Älva",
       "price": 207,
       "url": "https://rocketdiscs.com/kastaplast-älva",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Neutron - Axiom Bokeh",
-      "price": 228,
-      "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
@@ -14277,84 +14172,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
-      "url": "https://rocketdiscs.com/streamline-boost",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
@@ -14368,84 +14256,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
-      "price": 217,
-      "url": "https://rocketdiscs.com/streamline-boost",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Neutron SL Boost",
-      "price": 217,
+      "price": 218,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
@@ -15158,6 +15039,13 @@
     },
     {
       "store": "discsport",
+      "rawName": "ProFlex F Model S",
+      "price": 197,
+      "url": "https://discsport.se/discar/mold/f-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "ProFlex D Model S",
       "price": 197,
       "url": "https://discsport.se/discar/mold/d-model-s",
@@ -15168,13 +15056,6 @@
       "rawName": "DuraFlex D Model S",
       "price": 158,
       "url": "https://discsport.se/discar/mold/d-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "ProFlex F Model S",
-      "price": 197,
-      "url": "https://discsport.se/discar/mold/f-model-s",
       "inStock": true
     },
     {
@@ -15445,6 +15326,13 @@
     },
     {
       "store": "discsport",
+      "rawName": "BITEaLOT 230 DISCaLOT",
+      "price": 197,
+      "url": "https://discsport.se/discar/mold/bite-a-lot",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "Hero SuperHero Proto Glow 235 Hero Disc",
       "price": 267,
       "url": "https://discsport.se/discar/mold/super-hero",
@@ -15466,10 +15354,24 @@
     },
     {
       "store": "discsport",
-      "rawName": "BITEaLOT 230 DISCaLOT",
-      "price": 197,
-      "url": "https://discsport.se/discar/mold/bite-a-lot",
+      "rawName": "ESP Hallux - First Run",
+      "price": 237,
+      "url": "https://discsport.se/discar/mold/hallux",
       "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
+      "price": 297,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prototype Hallux - Ricky Wysocki",
+      "price": 237,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": false
     },
     {
       "store": "discsport",
@@ -15487,51 +15389,9 @@
     },
     {
       "store": "discsport",
-      "rawName": "Prototype Hallux - Ricky Wysocki",
-      "price": 237,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "ESP Hallux - First Run",
-      "price": 237,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
-      "price": 297,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
       "rawName": "First Flight Typhoon - Catrina Allen",
       "price": 247,
       "url": "https://discsport.se/discar/mold/typhoon",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Trophy Cliff - Prototype",
-      "price": 188,
-      "url": "https://discsport.se/discar/mold/cliff",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Trophy Champ",
-      "price": 188,
-      "url": "https://discsport.se/discar/mold/champ",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Trophy Soft Champ",
-      "price": 188,
-      "url": "https://discsport.se/discar/mold/champ",
       "inStock": true
     },
     {
@@ -15553,6 +15413,20 @@
       "rawName": "Signature Streak",
       "price": 257,
       "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Trophy Champ",
+      "price": 188,
+      "url": "https://discsport.se/discar/mold/champ",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Trophy Soft Champ",
+      "price": 188,
+      "url": "https://discsport.se/discar/mold/champ",
       "inStock": true
     },
     {
@@ -15582,6 +15456,13 @@
       "price": 277,
       "url": "https://discsport.se/discar/mold/premier-cloudbreaker",
       "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Trophy Cliff - Prototype",
+      "price": 188,
+      "url": "https://discsport.se/discar/mold/cliff",
+      "inStock": true
     },
     {
       "store": "discsport",
@@ -15670,7 +15551,7 @@
     {
       "store": "ugglans",
       "rawName": "Discmania Tour Bag",
-      "price": 1983,
+      "price": 1984,
       "url": "https://ugglansdiscgolf.se/products/discmania-tour-bag",
       "inStock": true
     },
@@ -15789,7 +15670,7 @@
     {
       "store": "ugglans",
       "rawName": "Luxury E5 Backpack",
-      "price": 1983,
+      "price": 1984,
       "url": "https://ugglansdiscgolf.se/products/luxury-e5-backpack",
       "inStock": false
     },
@@ -15929,7 +15810,7 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2380,
+      "price": 2381,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": true
     },
@@ -16027,7 +15908,7 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Backpack 1",
-      "price": 1090,
+      "price": 1091,
       "url": "https://ugglansdiscgolf.se/products/prodigy-bp1",
       "inStock": true
     },
@@ -16141,6 +16022,97 @@
       "rawName": "Ugglans Handduk med karbinhake",
       "price": 138,
       "url": "https://ugglansdiscgolf.se/products/ugglans-handuk",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Prodigy BP-4 Backpack",
+      "price": 277,
+      "url": "https://discaceofsweden.com/produkt/prodigy-bp-4-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Innova Discover Backpack",
+      "price": 297,
+      "url": "https://discaceofsweden.com/produkt/innova-discover-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Anthracite black",
+      "price": 346,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-anthracite-black/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Tour blue",
+      "price": 346,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-tour-blue/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Deep Red",
+      "price": 346,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-deep-red/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "DA of Sweden TPL Team Polo Cloud White",
+      "price": 346,
+      "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-cloud-white/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Discace of Sweden Patch 10x6cm",
+      "price": 59,
+      "url": "https://discaceofsweden.com/produkt/discace-of-sweden-patch-10x6cm/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Discmania Mössa Huntsman Cuffed Beanie",
+      "price": 197,
+      "url": "https://discaceofsweden.com/produkt/discmania-mossa-huntsman-cuffed-beanie/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Prodigy Ace Line F Model S Duraflex",
+      "price": 158,
+      "url": "https://discaceofsweden.com/produkt/prodigy-ace-line-f-model-s-duraflex/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Evolvent Discs Readiness Apex-80",
+      "price": 237,
+      "url": "https://discaceofsweden.com/produkt/evolvent-discs-readiness-apex-80/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Innova Excursion Pack",
+      "price": 793,
+      "url": "https://discaceofsweden.com/produkt/innova-excursion-pack/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Clash Discs Berry Special Blend",
+      "price": 237,
+      "url": "https://discaceofsweden.com/produkt/clash-discs-steady-berry-special-blend/",
+      "inStock": true
+    },
+    {
+      "store": "discace",
+      "rawName": "Clash Discs  Special Blend Mint",
+      "price": 237,
+      "url": "https://discaceofsweden.com/produkt/clash-discs-special-blend-mint/",
       "inStock": true
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15T06:58:10.502Z",
+  "generated": "2026-08-16T07:02:35.421Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -13,7 +13,7 @@
       "price": 2331,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-08-15T06:42:10.108Z"
+      "lastScraped": "2026-08-16T06:45:37.247Z"
     },
     {
       "discId": "streamline-range",
@@ -22,7 +22,7 @@
       "price": 991,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-08-15T06:42:10.108Z"
+      "lastScraped": "2026-08-16T06:45:37.247Z"
     },
     {
       "discId": "latitude-core",
@@ -31,7 +31,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-08-15T06:41:26.469Z"
+      "lastScraped": "2026-08-16T06:44:32.561Z"
     },
     {
       "discId": "latitude-gatekeeper",
@@ -67,7 +67,7 @@
       "price": 49,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-08-15T06:42:10.108Z"
+      "lastScraped": "2026-08-16T06:45:37.247Z"
     },
     {
       "discId": "discmania-active",
@@ -76,7 +76,7 @@
       "price": 49,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/mermaid-basic-active",
-      "lastScraped": "2026-08-15T06:42:10.108Z"
+      "lastScraped": "2026-08-16T06:45:37.247Z"
     }
   ]
 }
