@@ -54,6 +54,28 @@ function resolveCatalogDisc(apiDisc) {
   );
 }
 
+// Values sent by app/bag/build/page.tsx's brand pills -> the real `brand`
+// field in data/discs.js. Used to hand the model an explicit inventory list
+// when a preferred brand is picked, instead of letting it recommend
+// whatever it "knows" about that brand in general — confirmed in
+// production 2026-08-17: with "MVP" selected, the model suggested Volt,
+// Format, and Axis, none of which are in our 51-disc MVP catalog, so they
+// showed up with no image, no price, and a dead /disc/[slug] link.
+const BRAND_SLUG_TO_NAME = {
+  innova: "Innova",
+  discmania: "Discmania",
+  kastaplast: "Kastaplast",
+  mvp: "MVP",
+  discraft: "Discraft",
+  latitude64: "Latitude 64",
+};
+
+const discNamesByBrand = new Map();
+for (const d of discs) {
+  if (!discNamesByBrand.has(d.brand)) discNamesByBrand.set(d.brand, []);
+  discNamesByBrand.get(d.brand).push(d.name);
+}
+
 const SYSTEM_PROMPT =
   "You are an expert disc golf caddie helping players build their bag. " +
   "You have deep knowledge of disc golf discs, flight characteristics, " +
@@ -77,10 +99,14 @@ const LEVEL_MAP = {
 
 function buildUserPrompt(answers) {
   const needsStr = answers.needs.length > 0 ? answers.needs.join(", ") : "full bag";
-  const brandsStr =
-    answers.brands.length > 0 && !answers.brands.includes("no-preference")
-      ? answers.brands.join(", ")
-      : "any brand";
+  // answers.brands holds slugs ("mvp"), not display names — map to real
+  // brand names both for the prompt's own readability and to look up each
+  // brand's real inventory below.
+  const preferredBrandNames = (answers.brands || [])
+    .filter((b) => b !== "no-preference")
+    .map((b) => BRAND_SLUG_TO_NAME[b])
+    .filter(Boolean);
+  const brandsStr = preferredBrandNames.length > 0 ? preferredBrandNames.join(", ") : "any brand";
   // "10+" is what the wizard's button actually sends (app/bag/build/page.tsx)
   // — left open-ended in the prompt, the model has no reason not to
   // recommend 15-20 discs, each with a sentence of reasoning, which blew
@@ -89,13 +115,26 @@ function buildUserPrompt(answers) {
   const DISC_COUNT_LABELS = { "3-5": "3-5", "6-10": "6-10", "10+": "10-14" };
   const discCountStr = DISC_COUNT_LABELS[answers.discCount] ?? answers.discCount ?? "6-10";
 
+  // When one or more brands are preferred, hand the model the REAL list of
+  // discs we carry for those brands so it can't recommend a disc that
+  // doesn't exist in our catalog (see BRAND_SLUG_TO_NAME comment above for
+  // the production case this fixes). Skipped for "any brand" — the full
+  // 660-disc catalog is too much to include in every request, so that path
+  // still relies on the UI's graceful handling of an unresolved disc.
+  const inventoryNote =
+    preferredBrandNames.length > 0
+      ? `\n\nOnly recommend discs from this list of discs we actually carry for these brands — do not invent or suggest any disc outside this list:\n${preferredBrandNames
+          .map((b) => `${b}: ${(discNamesByBrand.get(b) || []).join(", ")}`)
+          .join("\n")}`
+      : "";
+
   return `Build a disc golf bag for this player:
 - Skill level: ${LEVEL_MAP[answers.level] ?? answers.level}
 - Throwing style: ${THROWING_STYLE_MAP[answers.throwingStyle] ?? answers.throwingStyle}
 - Needs / goals: ${needsStr}
 - Budget: ${answers.budget ?? "no limit"}
 - Preferred brands: ${brandsStr}
-- Desired disc count: ${discCountStr}
+- Desired disc count: ${discCountStr}${inventoryNote}
 
 Respond with a JSON object in exactly this format:
 {

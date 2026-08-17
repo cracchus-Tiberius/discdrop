@@ -144,11 +144,45 @@ function DiscCard({ disc }: { disc: GeneratedDisc }) {
   const catalogDisc = discCatalog.find((d) => d.id === disc.id);
   const catalogTags = (catalogDisc?.tags as string[] | undefined) ?? [];
   const imageUrl = catalogDisc ? getDiscImage(catalogDisc) : "";
+  const cardClassName =
+    "group relative flex flex-col rounded-2xl border-2 border-[#101C14] bg-white p-4 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#B8E04A]";
+
+  // The AI suggests discs by name/brand, not by browsing our actual catalog
+  // — most match a real /disc/[slug] page, but occasionally it recommends
+  // a real (or invented) disc we don't carry. Linking to /disc/[slug] for
+  // those produced a dead page and, since Next.js prefetches Link hrefs by
+  // default, a wall of 404s in the console (confirmed in production
+  // 2026-08-17). Render those as a plain, non-clickable card instead.
+  if (!catalogDisc) {
+    return (
+      <div className={`${cardClassName} cursor-default hover:translate-y-0 hover:shadow-none`}>
+        <DiscCardBody disc={disc} imageUrl={imageUrl} catalogTags={catalogTags} f={f} inCatalog={false} />
+      </div>
+    );
+  }
+
   return (
-    <Link
-      href={`/disc/${disc.id}`}
-      className="group relative flex flex-col rounded-2xl border-2 border-[#101C14] bg-white p-4 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#B8E04A]"
-    >
+    <Link href={`/disc/${disc.id}`} className={cardClassName}>
+      <DiscCardBody disc={disc} imageUrl={imageUrl} catalogTags={catalogTags} f={f} inCatalog />
+    </Link>
+  );
+}
+
+function DiscCardBody({
+  disc,
+  imageUrl,
+  catalogTags,
+  f,
+  inCatalog,
+}: {
+  disc: GeneratedDisc;
+  imageUrl: string;
+  catalogTags: string[];
+  f: GeneratedDisc["flight"];
+  inCatalog: boolean;
+}) {
+  return (
+    <>
       {disc.quantity === 2 && (
         <span className="absolute right-3 top-3 z-10 rounded-full bg-[#101C14] px-2 py-0.5 text-[10px] font-semibold text-[#B8E04A]">
           ×2 rotasjon
@@ -214,9 +248,13 @@ function DiscCard({ disc }: { disc: GeneratedDisc }) {
         ) : (
           <span className="text-sm text-[#101C1477]">—</span>
         )}
-        <span className="text-xs text-[#101C14]">Finn beste pris →</span>
+        {inCatalog ? (
+          <span className="text-xs text-[#101C14]">Finn beste pris →</span>
+        ) : (
+          <span className="text-xs text-[#101C1477]">Ikke i vårt utvalg</span>
+        )}
       </div>
-    </Link>
+    </>
   );
 }
 
