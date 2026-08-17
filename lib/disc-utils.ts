@@ -3,6 +3,7 @@ import {
 } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import discImages from "@/data/disc-images.json";
+import topSellers from "@/data/top-sellers.json";
 
 export type Disc = (typeof discs)[number];
 
@@ -15,6 +16,7 @@ type ScrapedEntry = {
   lastScraped: string;
   plastic?: string | null;
   edition?: string | null;
+  firstSeen?: string;
 };
 
 type StoreMeta = {
@@ -112,6 +114,49 @@ export function getDiscLastScraped(discId: string): string | null {
   const dates = scraped.map((e) => e.lastScraped).filter(Boolean) as string[];
   if (dates.length === 0) return null;
   return dates.sort().at(-1) ?? null;
+}
+
+/** Earliest firstSeen ISO string for a disc across all store listings, or null if unknown. */
+export function getDiscFirstSeen(discId: string): string | null {
+  const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
+  if (!scraped || scraped.length === 0) return null;
+  const dates = scraped.map((e) => e.firstSeen).filter(Boolean) as string[];
+  if (dates.length === 0) return null;
+  return dates.sort()[0] ?? null;
+}
+
+// Same threshold app/disc-drop-home.tsx uses for its "new-drop" badge — kept
+// in sync so a disc reads as "new" identically on the homepage and on the
+// browse/all-discs grid instead of two independently-tuned cutoffs drifting
+// apart over time.
+const NEW_DROP_MAX_AGE_MS = 14 * 24 * 60 * 60 * 1000;
+
+/**
+ * True if this disc first showed up in scraped data within the last 14 days.
+ * Replaces the old approach of manually adding "new"/"new-drop" to a disc's
+ * tags array in discs.js — that never got updated when the scraper actually
+ * picked up a new listing, so the browse page's "Nye drop" filter and badge
+ * silently went stale (confirmed in production 2026-08-17: it only ever
+ * reflected whatever a human had hand-tagged, not real scrape recency).
+ */
+export function isNewDrop(discId: string): boolean {
+  const firstSeen = getDiscFirstSeen(discId);
+  if (!firstSeen) return false;
+  const asOf = scrapedLastUpdated ? new Date(scrapedLastUpdated).getTime() : Date.now();
+  return asOf - new Date(firstSeen).getTime() < NEW_DROP_MAX_AGE_MS;
+}
+
+// data/top-sellers.json is already a real, periodically-refreshed signal
+// (scripts/scrape-top-sellers.js, ~every 14 days) of which discs are
+// actually popular right now — reusing it for the "Hot" badge means that
+// badge tracks real demand too, instead of another hand-maintained tag.
+const HOT_DISC_IDS = new Set(
+  (topSellers.discs as { catalogId?: string }[]).map((d) => d.catalogId).filter(Boolean)
+);
+
+/** True if this disc is on the current top-sellers list (see data/top-sellers.json). */
+export function isHotDisc(discId: string): boolean {
+  return HOT_DISC_IDS.has(discId);
 }
 
 // Precomputed once at module load: discId -> distinct plastic names seen

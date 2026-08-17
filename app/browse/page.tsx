@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { DiscImage } from "@/components/DiscImage";
 import { SearchInput } from "@/components/SearchInput";
-import { getScrapedPrice, getDiscImage, getDiscLastScraped, getDiscPlastics } from "@/lib/disc-utils";
+import { getScrapedPrice, getDiscImage, getDiscLastScraped, getDiscPlastics, isNewDrop, isHotDisc } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -82,13 +82,17 @@ const CHIPS: {
     id: "hot",
     emoji: "🔥",
     label: "Hot",
-    fn: (d) => (d.tags as string[]).includes("hot"),
+    // Driven by data/top-sellers.json (real, periodically-refreshed sales
+    // data) instead of a hand-set tag — see lib/disc-utils.ts's isHotDisc.
+    fn: (d) => isHotDisc(d.id),
   },
   {
     id: "new-drop",
     emoji: "✨",
-    label: "Nye slipp",
-    fn: (d) => (d.tags as string[]).some((t) => t === "new" || t === "new-drop"),
+    label: "Nye drop",
+    // Driven by real scrape recency (firstSeen within 14 days) instead of a
+    // hand-set tag — see lib/disc-utils.ts's isNewDrop.
+    fn: (d) => isNewDrop(d.id),
   },
   {
     id: "beginner",
@@ -434,6 +438,15 @@ function BrowseContent() {
             {visible.map((d) => {
               const price = bestPriceNOK(d);
               const unavailable = price === null;
+              // Hot/new-drop are computed from real data (see CHIPS above);
+              // other badges (limited, tour-series, etc.) are still hand-set
+              // in discs.js. Drop any stale "hot"/"new"/"new-drop" tag from
+              // that static list so it can't disagree with the live check.
+              const badgeTags = [
+                ...(isHotDisc(d.id) ? ["hot"] : []),
+                ...(isNewDrop(d.id) ? ["new-drop"] : []),
+                ...(d.tags as string[]).filter((t) => t !== "hot" && t !== "new" && t !== "new-drop"),
+              ];
               return (
                 <Link
                   key={d.id}
@@ -453,9 +466,9 @@ function BrowseContent() {
                       type={d.type}
                       containerStyle={{ height: 100 }}
                     />
-                    {(d.tags as string[]).some((t) => BADGE_STYLES[t]) && (
+                    {badgeTags.some((t) => BADGE_STYLES[t]) && (
                       <div className="absolute left-2 top-2 flex flex-col gap-1">
-                        {(d.tags as string[])
+                        {badgeTags
                           .filter((t) => BADGE_STYLES[t])
                           .slice(0, 2)
                           .map((tag) => {
