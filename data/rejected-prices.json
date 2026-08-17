@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-16T10:37:25.079Z",
+  "generated": "2026-08-17T07:08:28.770Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -10,10 +10,10 @@
       "discId": "mvp-shift",
       "discName": "Streamline Shift",
       "store": "discexpress",
-      "price": 2331,
+      "price": 2330,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-08-16T06:45:37.247Z"
+      "lastScraped": "2026-08-17T06:58:37.916Z"
     },
     {
       "discId": "streamline-range",
@@ -22,7 +22,7 @@
       "price": 991,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-08-16T06:45:37.247Z"
+      "lastScraped": "2026-08-17T06:58:37.916Z"
     },
     {
       "discId": "latitude-core",
@@ -31,7 +31,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-08-16T06:44:32.561Z"
+      "lastScraped": "2026-08-17T06:57:48.723Z"
     },
     {
       "discId": "latitude-gatekeeper",
@@ -40,7 +40,7 @@
       "price": 749,
       "reason": "above-max",
       "url": "https://wearediscgolf.no/produkt/the-gatekeeper-box-5/",
-      "lastScraped": "2026-08-16T10:32:12.262Z"
+      "lastScraped": "2026-08-17T06:50:38.430Z"
     },
     {
       "discId": "latitude-core",
@@ -49,7 +49,7 @@
       "price": 729,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
-      "lastScraped": "2026-08-15T06:41:30.105Z"
+      "lastScraped": "2026-08-17T06:57:53.056Z"
     },
     {
       "discId": "discraft-raptor",
@@ -58,7 +58,7 @@
       "price": 659,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
-      "lastScraped": "2026-08-15T06:41:30.105Z"
+      "lastScraped": "2026-08-17T06:57:53.056Z"
     },
     {
       "discId": "innova-birdie",
@@ -67,7 +67,7 @@
       "price": 49,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-08-16T06:45:37.247Z"
+      "lastScraped": "2026-08-17T06:58:37.916Z"
     },
     {
       "discId": "discmania-active",
@@ -76,7 +76,7 @@
       "price": 49,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/mermaid-basic-active",
-      "lastScraped": "2026-08-16T06:45:37.247Z"
+      "lastScraped": "2026-08-17T06:58:37.916Z"
     }
   ]
 }
