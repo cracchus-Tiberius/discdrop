@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { discs as discCatalog } from "@/data/discs.js";
 import { getDiscImage } from "@/lib/disc-utils";
+import { BADGE_STYLES } from "@/lib/badge-styles";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -96,15 +97,6 @@ const BAG_GEAR = [
     url: "#",
   },
 ];
-
-const BADGE_STYLES: Record<string, { bg: string; text: string; label: string }> = {
-  hot: { bg: "#E8704A", text: "#fff", label: "HOT" },
-  new: { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  "new-drop": { bg: "#4CAF82", text: "#fff", label: "NY DROP" },
-  limited: { bg: "#9B59B6", text: "#fff", label: "BEGRENSET" },
-  "tour-series": { bg: "#6B5B95", text: "#fff", label: "TOUR SERIES" },
-  "sold-out": { bg: "#888", text: "#fff", label: "UTSOLGT" },
-};
 
 // ── Reason tooltip ──────────────────────────────────────────────────────────
 
