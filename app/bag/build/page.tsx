@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { DiscFlyLoader } from "@/components/DiscFlyLoader";
 import type { StoredBag, GeneratedDisc, WizardAnswers } from "@/app/bag/[id]/BagPageClient";
 
 // ── API types ──────────────────────────────────────────────────────────────
@@ -298,11 +299,7 @@ export default function BuildBagPage() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center bg-[#FFFDF6]">
         <div className="flex flex-col items-center gap-6">
-          <svg width="64" height="64" viewBox="0 0 24 24" className="animate-spin" aria-hidden fill="none">
-            <ellipse cx="12" cy="14" rx="10" ry="4.5" fill="#101C14" />
-            <ellipse cx="12" cy="12" rx="5" ry="2.5" fill="#B8E04A" />
-            <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#FFFDF6" opacity="0.7" />
-          </svg>
+          <DiscFlyLoader />
           <p className="text-2xl font-extrabold text-[#101C14]">Bygger din bag...</p>
           <p className="text-sm text-[#101C1499]">Dette tar noen sekunder</p>
         </div>

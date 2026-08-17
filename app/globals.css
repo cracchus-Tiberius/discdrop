@@ -35,6 +35,57 @@ body {
   }
 }
 
+/* Bag-builder loading state (app/bag/build/page.tsx) — a disc gliding
+   left-to-right with a gentle up/down bob, not spinning in place. The
+   container clips (overflow: hidden) so the disc can jump back to its
+   off-screen starting position invisibly between loops, instead of
+   visibly snapping. */
+@keyframes discGlideFly {
+  0% {
+    transform: translate(-140px, 6px) rotate(-4deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  25% {
+    transform: translate(-70px, -10px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(0, 4px) rotate(2deg);
+  }
+  75% {
+    transform: translate(70px, -8px) rotate(-1deg);
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(140px, 6px) rotate(3deg);
+    opacity: 0;
+  }
+}
+
+/* Wind streak lines behind the disc — travel the same left-to-right
+   direction but faster, so they read as air rushing past rather than
+   the disc's own motion trail. */
+@keyframes windStreak {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+}
+
 /* 1b "Pop" interaction system:
    AV  (default)  = light bg, dark text — always, even on hover. Hover = lift + hard dark shadow.
    PÅ  (selected)  = dark bg, light text — always, even on hover. Hover = lift + lime shadow instead of dark. */
