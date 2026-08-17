@@ -70,6 +70,18 @@ const BRAND_SLUG_TO_NAME = {
   latitude64: "Latitude 64",
 };
 
+// Catalog type -> the display string the frontend expects in ApiDisc.type
+// (app/bag/build/page.tsx's apiTypeToCategory groups by this text plus
+// speed). Overriding it alongside the flight numbers keeps a resolved
+// disc's category grouping consistent with its real catalog data instead
+// of whatever category label the model guessed.
+const CATALOG_TYPE_TO_DISPLAY = {
+  distance: "Distance Driver",
+  fairway: "Fairway Driver",
+  midrange: "Midrange",
+  putter: "Putter",
+};
+
 const discNamesByBrand = new Map();
 for (const d of discs) {
   if (!discNamesByBrand.has(d.brand)) discNamesByBrand.set(d.brand, []);
@@ -247,13 +259,24 @@ export async function onRequestPost({ request, env }) {
       throw new Error("Invalid response structure");
     }
 
-    // Never trust the model's own price or slug — resolve against the real catalog
-    // and only show a price when we have real scraped data for it.
+    // Never trust the model's own price, slug, or flight numbers — resolve
+    // against the real catalog and use its actual data. The model can name a
+    // real disc correctly but still hallucinate its speed/glide/turn/fade
+    // (e.g. quoting MVP Catalyst — a 13/5.5/-2/2 distance driver — with
+    // putter-range numbers), which is worse than a missing price since it's
+    // wrong in a way that looks authoritative.
     result.discs = result.discs.map((disc) => {
       const match = resolveCatalogDisc(disc);
       return {
         ...disc,
+        name: match?.name ?? disc.name,
+        brand: match?.brand ?? disc.brand,
+        type: (match && CATALOG_TYPE_TO_DISPLAY[match.type]) ?? disc.type,
         slug: match?.id ?? disc.slug,
+        speed: match?.flight.speed ?? disc.speed,
+        glide: match?.flight.glide ?? disc.glide,
+        turn: match?.flight.turn ?? disc.turn,
+        fade: match?.flight.fade ?? disc.fade,
         priceNOK: match ? getScrapedPrice(match.id) : null,
       };
     });
