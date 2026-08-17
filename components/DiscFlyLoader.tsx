@@ -2,7 +2,7 @@
 // (app/bag/build/page.tsx). A disc glides horizontally with a gentle
 // up/down bob, trailed by a few wind-streak lines — not a spinning disc,
 // which reads as "loading a generic spinner" rather than "throwing a disc".
-// Keyframes (discGlideFly / windStreak) live in app/globals.css.
+// Keyframes (discGlideX / discBobY / windStreak) live in app/globals.css.
 
 const STREAKS = [
   { top: "38%", delay: "0s", width: 22 },
@@ -25,18 +25,26 @@ export function DiscFlyLoader() {
           }}
         />
       ))}
-      <svg
-        width="64"
-        height="64"
-        viewBox="0 0 24 24"
-        fill="none"
+      {/* Outer: constant-velocity horizontal glide (linear, 2 keyframe stops
+          only — see globals.css for why more stops made this choppy).
+          Inner: independent up/down bob + slight wobble. Nesting keeps the
+          two motions from fighting over one shared "transform" property. */}
+      <div
         className="absolute left-1/2 top-1/2 -ml-8 -mt-8"
-        style={{ animation: "discGlideFly 1.6s ease-in-out infinite" }}
+        style={{ animation: "discGlideX 1.8s linear infinite" }}
       >
-        <ellipse cx="12" cy="14" rx="10" ry="4.5" fill="#101C14" />
-        <ellipse cx="12" cy="12" rx="5" ry="2.5" fill="#B8E04A" />
-        <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#FFFDF6" opacity="0.7" />
-      </svg>
+        <svg
+          width="64"
+          height="64"
+          viewBox="0 0 24 24"
+          fill="none"
+          style={{ animation: "discBobY 0.9s ease-in-out infinite" }}
+        >
+          <ellipse cx="12" cy="14" rx="10" ry="4.5" fill="#101C14" />
+          <ellipse cx="12" cy="12" rx="5" ry="2.5" fill="#B8E04A" />
+          <ellipse cx="12" cy="10.5" rx="2" ry="1.2" fill="#FFFDF6" opacity="0.7" />
+        </svg>
+      </div>
     </div>
   );
 }
