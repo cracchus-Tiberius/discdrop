@@ -81,7 +81,13 @@ function buildUserPrompt(answers) {
     answers.brands.length > 0 && !answers.brands.includes("no-preference")
       ? answers.brands.join(", ")
       : "any brand";
-  const discCountStr = answers.discCount ?? "6-10";
+  // "10+" is what the wizard's button actually sends (app/bag/build/page.tsx)
+  // — left open-ended in the prompt, the model has no reason not to
+  // recommend 15-20 discs, each with a sentence of reasoning, which blew
+  // through max_tokens and silently truncated the response (confirmed in
+  // production 2026-08-17). Bound it to a real range instead.
+  const DISC_COUNT_LABELS = { "3-5": "3-5", "6-10": "6-10", "10+": "10-14" };
+  const discCountStr = DISC_COUNT_LABELS[answers.discCount] ?? answers.discCount ?? "6-10";
 
   return `Build a disc golf bag for this player:
 - Skill level: ${LEVEL_MAP[answers.level] ?? answers.level}
@@ -156,7 +162,16 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         model: "claude-sonnet-5",
-        max_tokens: 2048,
+        // 2048 was silently truncating "10+" (tournament bag) requests
+        // mid-response — confirmed in production 2026-08-17: the model ran
+        // out of budget before emitting a text block at all for a 10+/any-
+        // brand/any-budget request, and JSON.parse failed with a "not
+        // valid JSON" error for slightly smaller-but-still-large ones.
+        // Even after bounding "10+" to "10-14" discs in the prompt above,
+        // 4096 still wasn't enough headroom in testing — 14 discs x
+        // (~10 fields incl. a sentence-long "reason" each) plus the
+        // summary/bagTips prose needs real margin, not a tight fit.
+        max_tokens: 6000,
         system: SYSTEM_PROMPT,
         messages: [{ role: "user", content: buildUserPrompt(answers) }],
       }),
@@ -168,6 +183,15 @@ export async function onRequestPost({ request, env }) {
     }
 
     const message = await anthropicRes.json();
+    if (message.stop_reason === "max_tokens") {
+      // Give a clear, specific error instead of letting this surface as a
+      // confusing "Unexpected response type" / JSON-parse failure further
+      // down — both of those are just downstream symptoms of a truncated
+      // response, and a raised max_tokens (see above) should prevent this
+      // in practice, but a wide-open "brands"/"needs" combo plus a large
+      // discCount could still theoretically be big enough to hit it again.
+      throw new Error("Bag suggestion was too large to generate — prøv et mindre antall disker.");
+    }
     // Don't assume content[0] is the text block — a thinking block (when the
     // model does extended/interleaved reasoning) can come first.
     const content = message.content?.find((c) => c.type === "text");
