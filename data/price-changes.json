@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T07:08:28.378Z",
+  "generated": "2026-08-18T06:57:32.706Z",
   "summary": {
     "priceChanges24h": 0,
     "newDiscs24h": 0,
@@ -7,42 +7,21 @@
   },
   "drops": [
     {
-      "discId": "latitude-bite",
-      "store": "discsport",
-      "storeName": "Discsport",
-      "plastic": "Opto",
-      "oldPrice": 214,
-      "newPrice": 188,
-      "pct": -12,
-      "changedAt": "2026-08-16T06:54:18.259Z",
-      "period": "week",
-      "history": [
-        214,
-        214,
-        214,
-        188,
-        188,
-        188,
-        188
-      ],
-      "url": "https://discsport.se/discar/mold/bite"
-    },
-    {
       "discId": "mvp-trail",
       "store": "wearediscgolf",
       "storeName": "We Are Disc Golf",
       "plastic": "Neutron",
-      "oldPrice": 267,
+      "oldPrice": 268,
       "newPrice": 254,
       "pct": -5,
       "changedAt": "2026-08-17T06:50:38.430Z",
       "period": "week",
       "history": [
-        267,
-        267,
-        267,
+        268,
+        268,
         268,
         267,
+        254,
         254,
         254
       ],
@@ -56,14 +35,14 @@
       "oldPrice": 294,
       "newPrice": 278,
       "pct": -5,
-      "changedAt": "2026-08-17T06:58:37.916Z",
+      "changedAt": "2026-08-18T06:48:15.387Z",
       "period": "week",
       "history": [
         294,
         294,
         294,
         294,
-        294,
+        278,
         278,
         278
       ],
@@ -71,5 +50,5 @@
     }
   ],
   "totalDrops": 0,
-  "totalDropsWeek": 3
+  "totalDropsWeek": 2
 }
