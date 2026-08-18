@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getLatestWeek, getWeekIndex, hasNewInStoresData } from "@/lib/new-in-stores";
-import { WeekView } from "./WeekView";
+import { getLatestWeek, hasNewInStoresData } from "@/lib/new-in-stores";
+import { WeekHero } from "@/components/nytt/WeekHero";
+import { NewDiscTier } from "@/components/nytt/NewDiscTier";
+import { NewReleases } from "@/components/nytt/NewReleaseCard";
+import { StoreClusters } from "@/components/nytt/StoreCluster";
+import { WeekArchive } from "@/components/nytt/WeekArchive";
 
 // Deliberately not linked from SiteHeader's nav or app/sitemap.ts yet — see
 // scripts/lib/new-in-stores.js's header comment: the underlying firstSeen
@@ -14,43 +18,37 @@ import { WeekView } from "./WeekView";
 export const metadata: Metadata = {
   title: "Nytt i butikk — Diskgolf-disker | DiscDrop",
   description:
-    "Nye disker, nye plastutgaver og nye butikk-lagerføringer vi har fanget opp hos norske og nordiske diskgolf-butikker, uke for uke.",
+    "Nye disker, nye drops og nye lagerføringer vi har fanget opp hos norske og nordiske diskgolf-butikker, uke for uke.",
   alternates: { canonical: "https://discdrop.net/nytt/" },
   openGraph: {
     title: "Nytt i butikk — Diskgolf-disker | DiscDrop",
-    description: "Nye disker og nye plastutgaver vi har fanget opp hos norske og nordiske diskgolf-butikker.",
+    description: "Nye disker og nye drops vi har fanget opp hos norske og nordiske diskgolf-butikker.",
     url: "https://discdrop.net/nytt/",
   },
 };
 
 export default function NyttPage() {
   const week = getLatestWeek();
-  const weekIndex = getWeekIndex();
 
   return (
     <div className="min-h-screen bg-[#FFFDF6]">
       <SiteHeader />
       <main>
-        <section className="w-full border-b-2 border-[#101C14] bg-[#FFFDF6] px-5 py-10 md:px-10 md:py-14">
-          <div className="mx-auto max-w-4xl">
-            <h1 className="text-3xl font-extrabold tracking-tight text-[#101C14] md:text-4xl">Nytt i butikk</h1>
-            <p className="mt-3 max-w-[60ch] text-base text-[#101C1499]">
-              Nye disker, nye plastutgaver og nye lagerføringer vi har fanget opp hos butikkene vi følger, uke for uke.
+        {!hasNewInStoresData || !week ? (
+          <section className="w-full px-5 py-20 md:px-10">
+            <p className="mx-auto max-w-4xl text-center text-sm text-[#101C1499]">
+              Ingen nye disker fanget opp ennå — sjekk igjen senere.
             </p>
-          </div>
-        </section>
-
-        <section className="w-full bg-[#FFFDF6] px-5 py-10 md:px-10 md:py-14">
-          <div className="mx-auto max-w-4xl">
-            {!hasNewInStoresData || !week ? (
-              <p className="py-10 text-center text-sm text-[#101C1499]">
-                Ingen nye disker fanget opp ennå — sjekk igjen senere.
-              </p>
-            ) : (
-              <WeekView week={week} weekIndex={weekIndex} isArchive={false} />
-            )}
-          </div>
-        </section>
+          </section>
+        ) : (
+          <>
+            <WeekHero week={week} weekIndexInList={0} isArchive={false} />
+            <NewDiscTier signals={week.newDiscSignals} />
+            <NewReleases signals={week.newReleaseSignals} />
+            <StoreClusters groups={week.storeArrivals} />
+            <WeekArchive currentSlug={week.slug} />
+          </>
+        )}
       </main>
       <SiteFooter />
     </div>
