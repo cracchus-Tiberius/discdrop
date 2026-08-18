@@ -18,6 +18,12 @@ import {
 } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
+import {
+  TOUR_SERIES_KEYWORDS,
+  LIMITED_KEYWORDS,
+  HOT_PLAYER_NAMES,
+  ALL_EDITION_KEYWORDS,
+} from "@/scripts/lib/edition-keywords.js";
 import { SiteFooter } from "@/components/SiteFooter";
 import { RelativeTime } from "@/components/RelativeTime";
 import { PriceSparkline } from "@/components/PriceSparkline";
@@ -63,34 +69,10 @@ function Badge({ tag }: { tag: string }) {
 
 type Flight = Disc["flight"];
 
-// Keywords that classify a hot-drop badge type
-const TOUR_SERIES_KEYWORDS = [
-  'Tour Series', 'Team Series', 'Team Championship Series', 'Signature Series', 'Mold Team',
-];
-const LIMITED_KEYWORDS = [
-  'Limited Edition', 'Special Edition', 'Prototype', 'First Run', 'Primal Run',
-  'Project Lab Coat', 'Lab Coat',
-];
-const HOT_PLAYER_NAMES = [
-  'Eagle McMahon', 'Calvin Heimburg', 'Ricky Wysocki', 'Simon Lizotte',
-  'Paige Pierce', 'Brodie Smith', 'Paul McBeth', 'Niklas Anttila',
-  'Bradley Williams', 'Gannon Buhr', 'Clay Edwards', 'Casey White',
-  'Nate Sexton', 'Anthony Barela', 'Catrina Allen', 'Henna Blomroos',
-  'Eveliina Salonen', 'Vaino Makela', 'Kristofer Hivju', 'Albert Tamm',
-  'Kristin Lätt', 'Kristin Tattar', 'JohnE McCray', 'Dallas Garber',
-  'Joseph Anderson', 'Silva Saarinen', 'Sockibomb',
-  'Jeremy Koling', 'James Conrad', 'Kona Montgomery',
-  'Ida Emilie Nesse', 'Anniken Steen', 'Julia Fors', 'Juliana Korver',
-  'Josef Berg', 'Cadence Burge', 'Kyle Klein', 'Aaron Gossage',
-  'Holyn Handley', 'Ella Hansen', 'Isaac Robinson',
-];
-
-// All edition keywords that qualify a disc as a hot drop
-const ALL_HOT_EDITION_KEYWORDS = new Set([
-  ...TOUR_SERIES_KEYWORDS, ...LIMITED_KEYWORDS, ...HOT_PLAYER_NAMES,
-  'Ledgestone', 'OTB Open', 'Gyropalooza', 'MVP Open', 'USDGC', 'EDGF',
-  'World Championship', 'Nordic Phenom', 'Sky Stone', 'Solar Flare', 'Get Freaky', 'Show Stopper',
-]);
+// Keyword lists that classify a hot-drop badge type now live in
+// scripts/lib/edition-keywords.js — shared with the "Ny drop" signal in
+// lib/new-in-stores.ts so the two features can't drift apart on what
+// counts as a notable edition (they used to duplicate these independently).
 
 /** Return the badge tag that best describes an edition string */
 function editionToBadge(edition: string | null, inStock: boolean, firstSeen?: string): string {
@@ -156,7 +138,7 @@ function buildHotDropRows(): HotDropRow[] {
     const hotEntries = entries.filter((e) => {
       if (!e.edition) return false;
       const ed = e.edition.toLowerCase();
-      return [...ALL_HOT_EDITION_KEYWORDS].some((kw) => ed.includes(kw.toLowerCase()));
+      return [...ALL_EDITION_KEYWORDS].some((kw) => ed.includes(kw.toLowerCase()));
     });
     if (hotEntries.length === 0) continue;
 

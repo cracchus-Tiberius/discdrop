@@ -11,7 +11,7 @@
 // what's new).
 //
 // Writes data/new-in-stores.json: every recent listing classified as
-// new-disc / new-edition / new-at-store, grouped by ISO week.
+// new-disc / new-release / new-at-store, grouped by ISO week.
 
 const fs = require('fs');
 const path = require('path');
@@ -39,7 +39,7 @@ function main() {
   });
   const weeks = groupSignalsByWeek(signals);
 
-  const counts = { 'new-disc': 0, 'new-edition': 0, 'new-at-store': 0 };
+  const counts = { 'new-disc': 0, 'new-release': 0, 'new-at-store': 0 };
   for (const s of signals) counts[s.type]++;
 
   const output = {
@@ -47,7 +47,7 @@ function main() {
     summary: {
       totalSignals: signals.length,
       newDiscs: counts['new-disc'],
-      newEditions: counts['new-edition'],
+      newReleases: counts['new-release'],
       newAtStore: counts['new-at-store'],
       weeksIncluded: weeks.length,
       quarantinedStores,
@@ -65,7 +65,7 @@ function main() {
 
   console.log(
     `new-in-stores.json: ${signals.length} signals (${counts['new-disc']} new-disc, ` +
-      `${counts['new-edition']} new-edition, ${counts['new-at-store']} new-at-store) ` +
+      `${counts['new-release']} new-release, ${counts['new-at-store']} new-at-store) ` +
       `across ${weeks.length} week(s). Quarantined stores: ${quarantinedStores.join(', ') || 'none'}.`
   );
   if (massResetEvents.length > 0) {

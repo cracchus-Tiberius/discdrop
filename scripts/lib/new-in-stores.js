@@ -16,6 +16,7 @@
 // specifically, is new about it.
 
 const { MIN_VALID_PRICE_NOK, MAX_VALID_PRICE_NOK, entryLandedNOK } = require('./price-changes');
+const { normalizeEdition } = require('./edition-keywords');
 
 // Same "is this recent" window app/disc-drop-home.tsx and lib/disc-utils.ts
 // already use for their own new-drop badges — kept in sync so "new" means
@@ -34,7 +35,7 @@ const SIGNAL_WINDOW_MS = 14 * 24 * 60 * 60 * 1000;
 // entirely from BOTH signal generation and the "have we seen this before"
 // baseline other stores' entries are checked against — otherwise an
 // invisible quarantined listing could make a later, real store's arrival
-// look like a "new-edition" when it isn't.
+// look like a "new-release" when it isn't.
 const STORE_QUARANTINE_MS = 21 * 24 * 60 * 60 * 1000;
 
 // Confirmed in production 2026-08-17: this site's scraper/matching logic
@@ -52,7 +53,7 @@ const STORE_QUARANTINE_MS = 21 * 24 * 60 * 60 * 1000;
 // were real — we have no way to tell them apart once firstSeen is reset.
 const MASS_RESET_THRESHOLD = 30;
 
-const SIGNAL_TYPE_RANK = { 'new-disc': 0, 'new-edition': 1, 'new-at-store': 2 };
+const SIGNAL_TYPE_RANK = { 'new-disc': 0, 'new-release': 1, 'new-at-store': 2 };
 
 function ageMs(isoDate, asOfMs) {
   return asOfMs - new Date(isoDate).getTime();
@@ -108,8 +109,18 @@ function findMassResetEvents(prices, threshold = MASS_RESET_THRESHOLD) {
 
 /**
  * Classify every recent (discId, store, plastic) listing into new-disc /
- * new-edition / new-at-store, merge same-disc-same-type listings into one
+ * new-release / new-at-store, merge same-disc-same-type listings into one
  * signal per week, and group the result by ISO week (Monday start).
+ *
+ * "new-release" ("Ny drop" in the UI) means: a known mold that's newly
+ * purchasable in a way players actually care about — either a plastic
+ * variant never seen for that mold before, OR a notable edition marker
+ * (Tour Series, a player's signature stamp, an event run, a dated year
+ * release — see scripts/lib/edition-keywords.js, the same keyword set Hot
+ * Drops uses) never seen for that mold before, EVEN in an already-known
+ * plastic. A 2026 Tour Series stamp on a mold we've sold in Star plastic
+ * for years is still real news to a player — "new-at-store" would badly
+ * undersell it.
  *
  * @param {{prices: object, stores: object}} snapshot - scraped-prices.json shape
  * @param {{id: string, name: string, brand: string, image?: string}[]} catalog
@@ -174,18 +185,38 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
       const age = effectiveAge(entry);
       if (age >= SIGNAL_WINDOW_MS) continue; // not recent enough to be news
 
+      const entryEditionKey = normalizeEdition(entry.edition);
+
       let type;
       if (isDiscEntirelyNew) {
         type = 'new-disc';
       } else {
         // Has any OTHER entry for this exact plastic already been around
         // longer than the window (or is unreliably dated but still proof
-        // the plastic existed)? If not, this plastic/edition has never
-        // been seen for this disc before, at any store.
+        // the plastic existed)? If not, this plastic has never been seen
+        // for this disc before, at any store.
         const plasticSeenBefore = entries.some(
           (o) => o !== entry && o.plastic === entry.plastic && effectiveAge(o) >= SIGNAL_WINDOW_MS
         );
-        type = plasticSeenBefore ? 'new-at-store' : 'new-edition';
+        // Same check for a notable edition marker, normalized so "TS
+        // Cloudbreaker 2026" and "Tour Series Cloudbreaker" at two
+        // different stores both correctly read as "already seen" once
+        // either has been around a while — see edition-keywords.js.
+        const editionSeenBefore =
+          entryEditionKey &&
+          entries.some(
+            (o) =>
+              o !== entry &&
+              normalizeEdition(o.edition) === entryEditionKey &&
+              effectiveAge(o) >= SIGNAL_WINDOW_MS
+          );
+        // A brand-new plastic OR a brand-new notable edition marker is real
+        // news, even when the OTHER of the two is already known — a 2026
+        // Tour Series stamp on a mold we've long sold in Star plastic is
+        // still a drop, not just "another Star Destroyer at a new store".
+        const isNewPlastic = !plasticSeenBefore;
+        const isNewEditionMarker = entryEditionKey != null && !editionSeenBefore;
+        type = isNewPlastic || isNewEditionMarker ? 'new-release' : 'new-at-store';
       }
 
       const meta = storesMeta[entry.store];
@@ -196,6 +227,8 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
         image: disc.image || '',
         type,
         plastic: entry.plastic || null,
+        edition: entry.edition || null,
+        editionKey: entryEditionKey,
         firstSeenMs: new Date(entry.firstSeen).getTime(),
         store: entry.store,
         storeName: (meta && meta.name) || entry.store,
@@ -207,9 +240,10 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
 
   // Merge same disc + same signal type into one entry with a stores list —
   // e.g. a disc appearing at 3 stores in one week is ONE "new-disc" entry,
-  // not 3. A disc that's simultaneously new-edition (one plastic) and
-  // new-at-store (a different, already-known plastic) stays two entries —
-  // that's genuinely two different pieces of news.
+  // not 3. A disc that's simultaneously new-release (say, a Tour Series
+  // stamp) and new-at-store (a different, already-known plastic at another
+  // store) stays two entries — that's genuinely two different pieces of
+  // news.
   const grouped = new Map();
   for (const s of rawSignals) {
     const key = `${s.discId}|${s.type}`;
@@ -221,6 +255,7 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
         image: s.image,
         type: s.type,
         plastic: s.plastic,
+        edition: null,
         firstSeenMs: s.firstSeenMs,
         price: s.price,
         stores: [],
@@ -229,6 +264,13 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
     const g = grouped.get(key);
     g.firstSeenMs = Math.min(g.firstSeenMs, s.firstSeenMs);
     g.price = Math.min(g.price, s.price);
+    // The edition IS the news for a new-release signal — surface the raw
+    // edition text (e.g. "Tour Series", "Henna Blomroos") on the merged
+    // signal whenever a contributing entry actually carried one, even if
+    // an earlier-merged entry for the same disc didn't (e.g. the plastic
+    // alone triggered the signal at one store, but another store's listing
+    // is what actually carries the Tour Series stamp).
+    if (s.edition && !g.edition) g.edition = s.edition;
     // A store can list a disc under more than one plastic/edition, and both
     // could land in the same signal type (e.g. two brand-new plastics of the
     // same disc at once) — dedupe to one row per store, keeping its cheapest

@@ -1,10 +1,10 @@
 {
-  "generated": "2026-08-18T12:53:12.107Z",
+  "generated": "2026-08-18T13:36:20.923Z",
   "summary": {
-    "totalSignals": 83,
+    "totalSignals": 84,
     "newDiscs": 0,
-    "newEditions": 20,
-    "newAtStore": 63,
+    "newReleases": 25,
+    "newAtStore": 59,
     "weeksIncluded": 3,
     "quarantinedStores": [
       "frisbeebutikken"
@@ -130,8 +130,9 @@
           "name": "Watt",
           "brand": "MVP",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Proton",
+          "edition": null,
           "firstSeenMs": 1787035695387,
           "price": 278,
           "stores": [
@@ -148,8 +149,9 @@
           "name": "Stratus",
           "brand": "Discraft",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "X Line",
+          "edition": null,
           "firstSeenMs": 1787035668943,
           "price": 204,
           "stores": [
@@ -162,12 +164,32 @@
           ]
         },
         {
+          "discId": "dynamic-enforcer",
+          "name": "Enforcer",
+          "brand": "Dynamic Discs",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Lucid Ice",
+          "edition": "Sockibomb",
+          "firstSeenMs": 1787035668943,
+          "price": 185,
+          "stores": [
+            {
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 185,
+              "url": "https://nydisk.no/products/dynamic-discs-lucid-ice-enforcer-sockibomb"
+            }
+          ]
+        },
+        {
           "discId": "dynamic-raider",
           "name": "Raider",
           "brand": "Dynamic Discs",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Lucid X",
+          "edition": "Ricky Wysocki",
           "firstSeenMs": 1787035668943,
           "price": 185,
           "stores": [
@@ -186,6 +208,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Jawbreaker",
+          "edition": "Paul McBeth",
           "firstSeenMs": 1787036203784,
           "price": 272,
           "stores": [
@@ -204,6 +227,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "S-Line",
+          "edition": null,
           "firstSeenMs": 1787035740343,
           "price": 284,
           "stores": [
@@ -222,6 +246,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Project Grip",
+          "edition": null,
           "firstSeenMs": 1787035695387,
           "price": 288,
           "stores": [
@@ -240,6 +265,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
+          "edition": "Anthony Barela",
           "firstSeenMs": 1787035695387,
           "price": 248,
           "stores": [
@@ -258,6 +284,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Halo Champion Proto Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1787035695387,
           "price": 387,
           "stores": [
@@ -276,6 +303,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
+          "edition": null,
           "firstSeenMs": 1787035695387,
           "price": 317,
           "stores": [
@@ -294,6 +322,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
+          "edition": null,
           "firstSeenMs": 1787035695387,
           "price": 268,
           "stores": [
@@ -312,6 +341,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "VIP",
+          "edition": null,
           "firstSeenMs": 1787035695387,
           "price": 268,
           "stores": [
@@ -330,6 +360,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
+          "edition": null,
           "firstSeenMs": 1787035695387,
           "price": 268,
           "stores": [
@@ -348,6 +379,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Gold Ice",
+          "edition": null,
           "firstSeenMs": 1787035668943,
           "price": 274,
           "stores": [
@@ -360,30 +392,13 @@
           ]
         },
         {
-          "discId": "dynamic-enforcer",
-          "name": "Enforcer",
-          "brand": "Dynamic Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Lucid Ice",
-          "firstSeenMs": 1787035668943,
-          "price": 185,
-          "stores": [
-            {
-              "store": "nydisk",
-              "storeName": "NyDisk",
-              "price": 185,
-              "url": "https://nydisk.no/products/dynamic-discs-lucid-ice-enforcer-sockibomb"
-            }
-          ]
-        },
-        {
           "discId": "westside-stag",
           "name": "Stag",
           "brand": "Westside Discs",
           "image": "",
           "type": "new-at-store",
           "plastic": "VIP",
+          "edition": "2025",
           "firstSeenMs": 1787035668943,
           "price": 294,
           "stores": [
@@ -402,6 +417,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Putter Line",
+          "edition": null,
           "firstSeenMs": 1787035655114,
           "price": 184,
           "stores": [
@@ -420,6 +436,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Putter Line",
+          "edition": null,
           "firstSeenMs": 1787035655114,
           "price": 190,
           "stores": [
@@ -438,6 +455,7 @@
           "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
           "type": "new-at-store",
           "plastic": "Pro",
+          "edition": null,
           "firstSeenMs": 1787035650436,
           "price": 224,
           "stores": [
@@ -456,6 +474,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "KC Pro",
+          "edition": null,
           "firstSeenMs": 1787035650436,
           "price": 224,
           "stores": [
@@ -474,6 +493,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "KC Pro",
+          "edition": null,
           "firstSeenMs": 1787035153174,
           "price": 224,
           "stores": [
@@ -492,6 +512,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "VIP",
+          "edition": null,
           "firstSeenMs": 1786949917916,
           "price": 228,
           "stores": [
@@ -517,8 +538,9 @@
           "name": "Rhythm",
           "brand": "Axiom",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Proton",
+          "edition": null,
           "firstSeenMs": 1786862737247,
           "price": 278,
           "stores": [
@@ -535,8 +557,9 @@
           "name": "Photon",
           "brand": "MVP",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Eclipse",
+          "edition": null,
           "firstSeenMs": 1786862737247,
           "price": 298,
           "stores": [
@@ -553,8 +576,9 @@
           "name": "Thunderbird",
           "brand": "Innova",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Duo",
+          "edition": "Special Edition",
           "firstSeenMs": 1786776130108,
           "price": 308,
           "stores": [
@@ -571,8 +595,9 @@
           "name": "Bite",
           "brand": "Latitude 64",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Opto",
+          "edition": null,
           "firstSeenMs": 1786714343164,
           "price": 188,
           "stores": [
@@ -589,8 +614,9 @@
           "name": "Ballista Pro",
           "brand": "Latitude 64",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Opto-X",
+          "edition": "JohnE McCray",
           "firstSeenMs": 1786693317975,
           "price": 287,
           "stores": [
@@ -609,6 +635,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Fission",
+          "edition": null,
           "firstSeenMs": 1786862737247,
           "price": 308,
           "stores": [
@@ -627,6 +654,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
+          "edition": "Paul McBeth",
           "firstSeenMs": 1786714343164,
           "price": 287,
           "stores": [
@@ -645,6 +673,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "DX",
+          "edition": null,
           "firstSeenMs": 1786693317975,
           "price": 198,
           "stores": [
@@ -663,6 +692,7 @@
           "image": "https://cdn.shopify.com/s/files/1/0005/7779/8204/files/media_009dadc8-243f-425b-8baf-b7d05264426f.jpg?v=1765907547",
           "type": "new-at-store",
           "plastic": "Q-Line",
+          "edition": "Gannon Buhr",
           "firstSeenMs": 1786693317975,
           "price": 307,
           "stores": [
@@ -681,6 +711,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "DX",
+          "edition": null,
           "firstSeenMs": 1786693317975,
           "price": 198,
           "stores": [
@@ -699,6 +730,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Halo Star",
+          "edition": null,
           "firstSeenMs": 1786607163586,
           "price": 277,
           "stores": [
@@ -717,6 +749,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "ESP",
+          "edition": null,
           "firstSeenMs": 1786607163586,
           "price": 267,
           "stores": [
@@ -735,6 +768,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Zero",
+          "edition": null,
           "firstSeenMs": 1786606610741,
           "price": 194,
           "stores": [
@@ -753,6 +787,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Plasma",
+          "edition": null,
           "firstSeenMs": 1786605813786,
           "price": 254,
           "stores": [
@@ -777,6 +812,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Horizon",
+          "edition": null,
           "firstSeenMs": 1786347948154,
           "price": 267,
           "stores": [
@@ -798,12 +834,32 @@
       "endDate": "2026-08-09",
       "signals": [
         {
+          "discId": "dynamic-captain",
+          "name": "Captain",
+          "brand": "Dynamic Discs",
+          "image": "",
+          "type": "new-release",
+          "plastic": null,
+          "edition": "First Run",
+          "firstSeenMs": 1786258788090,
+          "price": 327,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 327,
+              "url": "https://www.discexpress.se/products/captains-caliber-z-jawbreaker-first-run-seppo-paju"
+            }
+          ]
+        },
+        {
           "discId": "axiom-tempo",
           "name": "Tempo",
           "brand": "Axiom",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Eclipse",
+          "edition": "MVP Open",
           "firstSeenMs": 1786172054163,
           "price": 340,
           "stores": [
@@ -816,12 +872,51 @@
           ]
         },
         {
+          "discId": "streamline-parachute",
+          "name": "Parachute",
+          "brand": "Streamline",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Proton",
+          "edition": "MVP Open",
+          "firstSeenMs": 1786172054163,
+          "price": 290,
+          "stores": [
+            {
+              "store": "aceshop",
+              "storeName": "Aceshop",
+              "price": 290,
+              "url": "https://aceshop.no/product/sl-proton-soft-parachute-mvp-open/"
+            }
+          ]
+        },
+        {
+          "discId": "axiom-bokeh-lizotte",
+          "name": "Neutron Bokeh",
+          "brand": "Axiom",
+          "image": "https://mvpdiscsports.com/wp-content/uploads/2026/01/SimonLine-NeutronBokeh-Orange1k-500x500.jpg",
+          "type": "new-release",
+          "plastic": "Neutron",
+          "edition": "Team Series",
+          "firstSeenMs": 1786172054163,
+          "price": 320,
+          "stores": [
+            {
+              "store": "aceshop",
+              "storeName": "Aceshop",
+              "price": 320,
+              "url": "https://aceshop.no/product/neutron-bokeh-simon-lizzote-team-series/"
+            }
+          ]
+        },
+        {
           "discId": "innova-destroyer",
           "name": "Destroyer",
           "brand": "Innova",
           "image": "https://www.innovadiscs.com/wp-content/uploads/2014/11/Innova_ES_Swirled_Star_Destroyer.jpg",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Proto Glow",
+          "edition": null,
           "firstSeenMs": 1786087452155,
           "price": 278,
           "stores": [
@@ -838,8 +933,9 @@
           "name": "Praxis",
           "brand": "Thought Space Athletics",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Ethos",
+          "edition": null,
           "firstSeenMs": 1786005970583,
           "price": 294,
           "stores": [
@@ -856,8 +952,9 @@
           "name": "P2X",
           "brand": "Discmania",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "C-Line",
+          "edition": null,
           "firstSeenMs": 1786005167634,
           "price": 294,
           "stores": [
@@ -874,8 +971,9 @@
           "name": "Berg",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -892,8 +990,9 @@
           "name": "Järn",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -910,8 +1009,9 @@
           "name": "Drop",
           "brand": "Discmania",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "Horizon",
+          "edition": "Niklas Anttila",
           "firstSeenMs": 1785920000186,
           "price": 307,
           "stores": [
@@ -934,8 +1034,9 @@
           "name": "Nord",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -952,8 +1053,9 @@
           "name": "Idog",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -970,8 +1072,9 @@
           "name": "Malm",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -988,8 +1091,9 @@
           "name": "Stål",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Tour Series",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -1006,8 +1110,9 @@
           "name": "Guld",
           "brand": "Kastaplast",
           "image": "",
-          "type": "new-edition",
+          "type": "new-release",
           "plastic": "K1 Hard Glow",
+          "edition": "Clay Edwards",
           "firstSeenMs": 1785920000186,
           "price": 317,
           "stores": [
@@ -1020,12 +1125,51 @@
           ]
         },
         {
+          "discId": "discraft-flick",
+          "name": "Flick",
+          "brand": "Discraft",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Z Sparkle",
+          "edition": "Ledgestone",
+          "firstSeenMs": 1785918690479,
+          "price": 374,
+          "stores": [
+            {
+              "store": "arcticdisc",
+              "storeName": "Arctic Disc",
+              "price": 374,
+              "url": "https://arcticdisc.no/products/z-sparkle-flick-ledgestone-2026"
+            }
+          ]
+        },
+        {
+          "discId": "dynamic-captain",
+          "name": "Captain",
+          "brand": "Dynamic Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Lucid",
+          "edition": null,
+          "firstSeenMs": 1786259268795,
+          "price": 228,
+          "stores": [
+            {
+              "store": "discsport",
+              "storeName": "Discsport",
+              "price": 228,
+              "url": "https://discsport.se/discar/mold/captain"
+            }
+          ]
+        },
+        {
           "discId": "discraft-mantis",
           "name": "Mantis",
           "brand": "Discraft",
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
+          "edition": null,
           "firstSeenMs": 1786259268795,
           "price": 237,
           "stores": [
@@ -1038,36 +1182,13 @@
           ]
         },
         {
-          "discId": "dynamic-captain",
-          "name": "Captain",
-          "brand": "Dynamic Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Lucid",
-          "firstSeenMs": 1786258788090,
-          "price": 228,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 228,
-              "url": "https://discsport.se/discar/mold/captain"
-            },
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 327,
-              "url": "https://www.discexpress.se/products/captains-caliber-z-jawbreaker-first-run-seppo-paju"
-            }
-          ]
-        },
-        {
           "discId": "mvp-watt",
           "name": "Watt",
           "brand": "MVP",
           "image": "",
           "type": "new-at-store",
           "plastic": "Cosmic Electron",
+          "edition": null,
           "firstSeenMs": 1786173075521,
           "price": 218,
           "stores": [
@@ -1086,6 +1207,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Neutron",
+          "edition": "Special Edition",
           "firstSeenMs": 1786172536953,
           "price": 284,
           "stores": [
@@ -1110,6 +1232,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Neutron",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 270,
           "stores": [
@@ -1128,6 +1251,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Neutron",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 264,
           "stores": [
@@ -1146,6 +1270,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Neutron",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 264,
           "stores": [
@@ -1164,6 +1289,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Proton",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 300,
           "stores": [
@@ -1182,6 +1308,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Fission",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 281,
           "stores": [
@@ -1200,6 +1327,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Fission",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 344,
           "stores": [
@@ -1218,6 +1346,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Cosmic Neutron",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 264,
           "stores": [
@@ -1236,6 +1365,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Plasma",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 264,
           "stores": [
@@ -1248,48 +1378,13 @@
           ]
         },
         {
-          "discId": "streamline-parachute",
-          "name": "Parachute",
-          "brand": "Streamline",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Proton",
-          "firstSeenMs": 1786172054163,
-          "price": 290,
-          "stores": [
-            {
-              "store": "aceshop",
-              "storeName": "Aceshop",
-              "price": 290,
-              "url": "https://aceshop.no/product/sl-proton-soft-parachute-mvp-open/"
-            }
-          ]
-        },
-        {
-          "discId": "axiom-bokeh-lizotte",
-          "name": "Neutron Bokeh",
-          "brand": "Axiom",
-          "image": "https://mvpdiscsports.com/wp-content/uploads/2026/01/SimonLine-NeutronBokeh-Orange1k-500x500.jpg",
-          "type": "new-at-store",
-          "plastic": "Neutron",
-          "firstSeenMs": 1786172054163,
-          "price": 320,
-          "stores": [
-            {
-              "store": "aceshop",
-              "storeName": "Aceshop",
-              "price": 320,
-              "url": "https://aceshop.no/product/neutron-bokeh-simon-lizzote-team-series/"
-            }
-          ]
-        },
-        {
           "discId": "mvp-stasis",
           "name": "Stasis",
           "brand": "MVP",
           "image": "",
           "type": "new-at-store",
           "plastic": "Neutron",
+          "edition": null,
           "firstSeenMs": 1786172054163,
           "price": 270,
           "stores": [
@@ -1308,6 +1403,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "BT",
+          "edition": null,
           "firstSeenMs": 1786087452155,
           "price": 179,
           "stores": [
@@ -1326,6 +1422,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Q-Line",
+          "edition": null,
           "firstSeenMs": 1786086985449,
           "price": 304,
           "stores": [
@@ -1344,6 +1441,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "D-Line",
+          "edition": "Niklas Anttila",
           "firstSeenMs": 1786086717972,
           "price": 214,
           "stores": [
@@ -1362,6 +1460,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Q-Line",
+          "edition": "Gannon Buhr",
           "firstSeenMs": 1786086717972,
           "price": 324,
           "stores": [
@@ -1380,6 +1479,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": null,
+          "edition": "Special Edition",
           "firstSeenMs": 1786086717972,
           "price": 274,
           "stores": [
@@ -1404,6 +1504,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": null,
+          "edition": "Limited Edition",
           "firstSeenMs": 1786005998191,
           "price": 268,
           "stores": [
@@ -1422,6 +1523,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
+          "edition": null,
           "firstSeenMs": 1786005998191,
           "price": 228,
           "stores": [
@@ -1440,6 +1542,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
+          "edition": null,
           "firstSeenMs": 1786005998191,
           "price": 228,
           "stores": [
@@ -1458,6 +1561,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": null,
+          "edition": "Prototype",
           "firstSeenMs": 1786005167634,
           "price": 199,
           "stores": [
@@ -1482,6 +1586,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "C-Line Glow",
+          "edition": "Gannon Buhr",
           "firstSeenMs": 1785920446535,
           "price": 312,
           "stores": [
@@ -1506,6 +1611,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
+          "edition": null,
           "firstSeenMs": 1785920000186,
           "price": 267,
           "stores": [
@@ -1530,6 +1636,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
+          "edition": null,
           "firstSeenMs": 1785920000186,
           "price": 267,
           "stores": [
@@ -1548,6 +1655,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Particle Proton Soft",
+          "edition": "OTB Open",
           "firstSeenMs": 1785918690479,
           "price": 320,
           "stores": [
@@ -1572,6 +1680,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "ESP",
+          "edition": "Bottom Stamp",
           "firstSeenMs": 1785918690479,
           "price": 274,
           "stores": [
@@ -1590,6 +1699,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "ESP",
+          "edition": null,
           "firstSeenMs": 1785918690479,
           "price": 314,
           "stores": [
@@ -1608,6 +1718,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Fission",
+          "edition": "OTB Open",
           "firstSeenMs": 1785918690479,
           "price": 324,
           "stores": [
@@ -1626,6 +1737,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "ESP",
+          "edition": "Bottom Stamp",
           "firstSeenMs": 1785918690479,
           "price": 274,
           "stores": [
@@ -1644,6 +1756,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
+          "edition": null,
           "firstSeenMs": 1785918690479,
           "price": 344,
           "stores": [
@@ -1662,6 +1775,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Big Z",
+          "edition": null,
           "firstSeenMs": 1785918690479,
           "price": 274,
           "stores": [
@@ -1670,24 +1784,6 @@
               "storeName": "Arctic Disc",
               "price": 274,
               "url": "https://arcticdisc.no/products/big-z-undertaker"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-flick",
-          "name": "Flick",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Z Sparkle",
-          "firstSeenMs": 1785918690479,
-          "price": 374,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 374,
-              "url": "https://arcticdisc.no/products/z-sparkle-flick-ledgestone-2026"
             }
           ]
         }

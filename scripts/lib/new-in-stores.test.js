@@ -88,7 +88,7 @@ test('buildNewInStoresSignals: disc with only recent entries everywhere -> new-d
   assert.equal(signals[0].price, 200); // cheapest of the group
 });
 
-test('buildNewInStoresSignals: known disc, brand-new plastic at any store -> new-edition', () => {
+test('buildNewInStoresSignals: known disc, brand-new plastic at any store -> new-release', () => {
   const snapshot = {
     stores: STORES,
     prices: {
@@ -101,7 +101,7 @@ test('buildNewInStoresSignals: known disc, brand-new plastic at any store -> new
   };
   const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs: NOW });
   assert.equal(signals.length, 1);
-  assert.equal(signals[0].type, 'new-edition');
+  assert.equal(signals[0].type, 'new-release');
   assert.equal(signals[0].plastic, 'Champion');
 });
 
@@ -123,7 +123,7 @@ test('buildNewInStoresSignals: known disc + known plastic, new store -> new-at-s
 });
 
 test('buildNewInStoresSignals: same disc can produce two distinct signals in one week', () => {
-  // Store b's Champion plastic is new-edition; store c's Star plastic
+  // Store b's Champion plastic is new-release; store c's Star plastic
   // (already known via store a) is new-at-store. Both fresh, both real news.
   const snapshot = {
     stores: STORES,
@@ -139,7 +139,7 @@ test('buildNewInStoresSignals: same disc can produce two distinct signals in one
   const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs: NOW });
   assert.equal(signals.length, 2);
   const types = signals.map((s) => s.type).sort();
-  assert.deepEqual(types, ['new-at-store', 'new-edition']);
+  assert.deepEqual(types, ['new-at-store', 'new-release']);
 });
 
 test('buildNewInStoresSignals: entries older than the signal window produce nothing', () => {
@@ -307,8 +307,8 @@ test('buildNewInStoresSignals: mass-reset entries still count as baseline eviden
   const snapshot = { stores: STORES, prices };
   const { signals } = buildNewInStoresSignals({ snapshot, catalog, asOfMs: NOW });
   assert.equal(signals.length, 1);
-  // Must be new-edition (a new plastic on an established disc), NOT new-disc.
-  assert.equal(signals[0].type, 'new-edition');
+  // Must be new-release (a new plastic on an established disc), NOT new-disc.
+  assert.equal(signals[0].type, 'new-release');
   assert.equal(signals[0].plastic, 'Proto Glow');
 });
 
@@ -330,4 +330,101 @@ test('buildNewInStoresSignals: a mass-reset event at one store does not suppress
   const { signals } = buildNewInStoresSignals({ snapshot, catalog, asOfMs: NOW });
   assert.equal(signals.length, 1);
   assert.equal(signals[0].discId, 'innova-destroyer');
+});
+
+// ── Edition-marker-driven new-release (2026-08-18 taxonomy change) ─────────
+// Players define "new" by purchasability, not mold: a Tour Series or
+// dated-year stamp on a mold we've long sold in a known plastic is still a
+// real drop, not just "another Star Destroyer at a new store".
+
+test('buildNewInStoresSignals: known plastic + new edition marker -> new-release, not new-at-store', () => {
+  const prices = {
+    ...ANCHOR,
+    'innova-destroyer': [
+      // Star has been around a while, no edition — this is the baseline.
+      { store: 'a', price: 200, inStock: true, plastic: 'Star', edition: null, firstSeen: iso(60 * DAY), url: 'a.no' },
+      // Same plastic (Star!) but a brand-new Tour Series stamp on it.
+      { store: 'b', price: 230, inStock: true, plastic: 'Star', edition: 'Tour Series', firstSeen: iso(2 * DAY), url: 'b.no' },
+    ],
+  };
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs: NOW });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].type, 'new-release');
+  assert.equal(signals[0].edition, 'Tour Series');
+});
+
+test('buildNewInStoresSignals: differently-worded edition markers for the same drop normalize into ONE signal', () => {
+  // "TS ... 2026" and "Tour Series ... 2026" — two stores' own wording for
+  // what is, in reality, the same real-world drop.
+  const prices = {
+    ...ANCHOR,
+    'innova-destroyer': [
+      { store: 'a', price: 200, inStock: true, plastic: 'Star', edition: null, firstSeen: iso(60 * DAY), url: 'a.no' },
+      { store: 'b', price: 230, inStock: true, plastic: 'Star', edition: 'Tour Series 2026', firstSeen: iso(3 * DAY), url: 'b.no' },
+      { store: 'c', price: 235, inStock: true, plastic: 'Star', edition: '2026 Tour Series', firstSeen: iso(2 * DAY), url: 'c.no' },
+    ],
+  };
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs: NOW });
+  assert.equal(signals.length, 1); // NOT two separate new-release entries
+  assert.equal(signals[0].type, 'new-release');
+  assert.equal(signals[0].stores.length, 2); // store b and c, merged
+});
+
+test('buildNewInStoresSignals: an already-seen edition marker on a new plastic is still just new-release once, not double-counted', () => {
+  const prices = {
+    ...ANCHOR,
+    'innova-destroyer': [
+      { store: 'a', price: 200, inStock: true, plastic: 'Star', edition: 'Tour Series', firstSeen: iso(60 * DAY), url: 'a.no' },
+      // Same Tour Series marker (already established), but a genuinely new plastic -> still new-release, via the plastic path.
+      { store: 'b', price: 260, inStock: true, plastic: 'Halo Star', edition: 'Tour Series', firstSeen: iso(2 * DAY), url: 'b.no' },
+    ],
+  };
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs: NOW });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].type, 'new-release');
+});
+
+test('buildNewInStoresSignals: unrecognized/cosmetic edition text never triggers new-release on its own', () => {
+  const prices = {
+    ...ANCHOR,
+    'innova-destroyer': [
+      { store: 'a', price: 200, inStock: true, plastic: 'Star', edition: null, firstSeen: iso(60 * DAY), url: 'a.no' },
+      // "Swirly" isn't a recognized edition-keyword marker (see edition-keywords.js)
+      // and the plastic (Star) is already known -> new-at-store, not new-release.
+      { store: 'b', price: 210, inStock: true, plastic: 'Star', edition: 'Swirly', firstSeen: iso(2 * DAY), url: 'b.no' },
+    ],
+  };
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs: NOW });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].type, 'new-at-store');
+});
+
+test('buildNewInStoresSignals: mass-reset edition evidence still counts as a baseline for edition markers too', () => {
+  // Mirrors the plastic-baseline mass-reset test above, but for editions:
+  // a Tour Series listing whose only evidence is a suppressed mass-reset
+  // date must still prove "Tour Series has been seen before" for this mold.
+  const prices = { ...ANCHOR };
+  prices['innova-destroyer'] = [
+    { store: 'a', price: 200, inStock: true, plastic: 'Star', edition: 'Tour Series', firstSeen: iso(60 * DAY), url: 'a.no' },
+    { store: 'b', price: 230, inStock: true, plastic: 'Halo Star', edition: 'Tour Series', firstSeen: iso(2 * DAY), url: 'b.no' },
+  ];
+  for (let i = 0; i < 34; i++) {
+    prices[`filler-disc-${i}`] = [
+      { store: 'a', price: 150, inStock: true, plastic: 'DX', firstSeen: iso(60 * DAY), url: `filler-${i}.no` },
+    ];
+  }
+  const catalog = [
+    ...CATALOG,
+    ...Array.from({ length: 34 }, (_, i) => ({ id: `filler-disc-${i}`, name: `Filler ${i}`, brand: 'Innova' })),
+  ];
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog, asOfMs: NOW });
+  assert.equal(signals.length, 1);
+  // The Halo Star plastic is what's new here — Tour Series was already
+  // established (even if only via a mass-reset-suppressed entry).
+  assert.equal(signals[0].type, 'new-release');
 });
