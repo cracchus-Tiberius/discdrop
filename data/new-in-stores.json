@@ -1,10 +1,10 @@
 {
-  "generated": "2026-08-18T12:40:16.749Z",
+  "generated": "2026-08-18T12:53:12.107Z",
   "summary": {
-    "totalSignals": 85,
+    "totalSignals": 83,
     "newDiscs": 0,
-    "newEditions": 21,
-    "newAtStore": 64,
+    "newEditions": 20,
+    "newAtStore": 63,
     "weeksIncluded": 3,
     "quarantinedStores": [
       "frisbeebutikken"
@@ -48,7 +48,7 @@
       {
         "store": "frisbeesor",
         "date": "2026-07-24",
-        "count": 301
+        "count": 300
       },
       {
         "store": "kvamdgs",
@@ -58,7 +58,7 @@
       {
         "store": "aceshop",
         "date": "2026-08-04",
-        "count": 190
+        "count": 187
       },
       {
         "store": "frisbeebutikken",
@@ -132,7 +132,7 @@
           "image": "",
           "type": "new-edition",
           "plastic": "Proton",
-          "firstSeenMs": 1786949917916,
+          "firstSeenMs": 1787035695387,
           "price": 278,
           "stores": [
             {
@@ -150,7 +150,7 @@
           "image": "",
           "type": "new-edition",
           "plastic": "X Line",
-          "firstSeenMs": 1786949889349,
+          "firstSeenMs": 1787035668943,
           "price": 204,
           "stores": [
             {
@@ -168,7 +168,7 @@
           "image": "",
           "type": "new-edition",
           "plastic": "Lucid X",
-          "firstSeenMs": 1786949889349,
+          "firstSeenMs": 1787035668943,
           "price": 185,
           "stores": [
             {
@@ -186,7 +186,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Jawbreaker",
-          "firstSeenMs": 1786950450259,
+          "firstSeenMs": 1787036203784,
           "price": 272,
           "stores": [
             {
@@ -198,13 +198,31 @@
           ]
         },
         {
+          "discId": "discmania-td",
+          "name": "TD",
+          "brand": "Discmania",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "S-Line",
+          "firstSeenMs": 1787035740343,
+          "price": 284,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 284,
+              "url": "https://rocketdiscs.com/discmania-td"
+            }
+          ]
+        },
+        {
           "discId": "latitude-fuse",
           "name": "Fuse",
           "brand": "Latitude 64",
           "image": "",
           "type": "new-at-store",
           "plastic": "Project Grip",
-          "firstSeenMs": 1786949917916,
+          "firstSeenMs": 1787035695387,
           "price": 288,
           "stores": [
             {
@@ -222,7 +240,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
-          "firstSeenMs": 1786949917916,
+          "firstSeenMs": 1787035695387,
           "price": 248,
           "stores": [
             {
@@ -240,7 +258,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Halo Champion Proto Glow",
-          "firstSeenMs": 1786949917916,
+          "firstSeenMs": 1787035695387,
           "price": 387,
           "stores": [
             {
@@ -258,13 +276,13 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Z",
-          "firstSeenMs": 1786949917916,
-          "price": 318,
+          "firstSeenMs": 1787035695387,
+          "price": 317,
           "stores": [
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 318,
+              "price": 317,
               "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
             }
           ]
@@ -276,7 +294,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Tournament",
-          "firstSeenMs": 1786949917916,
+          "firstSeenMs": 1787035695387,
           "price": 268,
           "stores": [
             {
@@ -288,13 +306,49 @@
           ]
         },
         {
+          "discId": "westside-warship",
+          "name": "Warship",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "VIP",
+          "firstSeenMs": 1787035695387,
+          "price": 268,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 268,
+              "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
+            }
+          ]
+        },
+        {
+          "discId": "westside-sword",
+          "name": "Sword",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Tournament",
+          "firstSeenMs": 1787035695387,
+          "price": 268,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 268,
+              "url": "https://www.discexpress.se/products/sword-tournament-x"
+            }
+          ]
+        },
+        {
           "discId": "latitude-anchor",
           "name": "Anchor",
           "brand": "Latitude 64",
           "image": "",
           "type": "new-at-store",
           "plastic": "Gold Ice",
-          "firstSeenMs": 1786949889349,
+          "firstSeenMs": 1787035668943,
           "price": 274,
           "stores": [
             {
@@ -312,7 +366,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Lucid Ice",
-          "firstSeenMs": 1786949889349,
+          "firstSeenMs": 1787035668943,
           "price": 185,
           "stores": [
             {
@@ -330,7 +384,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "VIP",
-          "firstSeenMs": 1786949889349,
+          "firstSeenMs": 1787035668943,
           "price": 294,
           "stores": [
             {
@@ -348,7 +402,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Putter Line",
-          "firstSeenMs": 1786949873056,
+          "firstSeenMs": 1787035655114,
           "price": 184,
           "stores": [
             {
@@ -366,7 +420,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "Putter Line",
-          "firstSeenMs": 1786949873056,
+          "firstSeenMs": 1787035655114,
           "price": 190,
           "stores": [
             {
@@ -384,7 +438,7 @@
           "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
           "type": "new-at-store",
           "plastic": "Pro",
-          "firstSeenMs": 1786949868723,
+          "firstSeenMs": 1787035650436,
           "price": 224,
           "stores": [
             {
@@ -402,7 +456,7 @@
           "image": "",
           "type": "new-at-store",
           "plastic": "KC Pro",
-          "firstSeenMs": 1786949868723,
+          "firstSeenMs": 1787035650436,
           "price": 224,
           "stores": [
             {
@@ -410,6 +464,42 @@
               "storeName": "GolfDiscer",
               "price": 224,
               "url": "https://golfdiscer.no/products/kc-pro-animal"
+            }
+          ]
+        },
+        {
+          "discId": "innova-roc",
+          "name": "Roc",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "KC Pro",
+          "firstSeenMs": 1787035153174,
+          "price": 224,
+          "stores": [
+            {
+              "store": "kvamdgs",
+              "storeName": "Kvam DGS",
+              "price": 224,
+              "url": "https://kvamdgs.no/products/kc-pro-roc"
+            }
+          ]
+        },
+        {
+          "discId": "latitude-gatekeeper",
+          "name": "Gatekeeper",
+          "brand": "Latitude 64",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "VIP",
+          "firstSeenMs": 1786949917916,
+          "price": 228,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 228,
+              "url": "https://www.discexpress.se/products/gatekeeper-vip"
             }
           ]
         }
@@ -513,24 +603,6 @@
           ]
         },
         {
-          "discId": "innova-roc",
-          "name": "Roc",
-          "brand": "Innova",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "KC Pro",
-          "firstSeenMs": 1786875671411,
-          "price": 224,
-          "stores": [
-            {
-              "store": "kvamdgs",
-              "storeName": "Kvam DGS",
-              "price": 224,
-              "url": "https://kvamdgs.no/products/kc-pro-roc"
-            }
-          ]
-        },
-        {
           "discId": "axiom-rhythm",
           "name": "Rhythm",
           "brand": "Axiom",
@@ -545,24 +617,6 @@
               "storeName": "Discexpress",
               "price": 308,
               "url": "https://www.discexpress.se/products/rhythm-fission-plc"
-            }
-          ]
-        },
-        {
-          "discId": "latitude-gatekeeper",
-          "name": "Gatekeeper",
-          "brand": "Latitude 64",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "firstSeenMs": 1786862737247,
-          "price": 228,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 228,
-              "url": "https://www.discexpress.se/products/gatekeeper-vip"
             }
           ]
         },
@@ -966,24 +1020,6 @@
           ]
         },
         {
-          "discId": "dynamic-truth",
-          "name": "Truth",
-          "brand": "Dynamic Discs",
-          "image": "",
-          "type": "new-edition",
-          "plastic": "Emac",
-          "firstSeenMs": 1785751442385,
-          "price": 256,
-          "stores": [
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 256,
-              "url": "https://discaceofsweden.com/produkt/dynamic-discs-emac-truth-fuzion-x-eric-mccabe-2021-v-2/"
-            }
-          ]
-        },
-        {
           "discId": "discraft-mantis",
           "name": "Mantis",
           "brand": "Discraft",
@@ -1020,7 +1056,7 @@
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 328,
+              "price": 327,
               "url": "https://www.discexpress.se/products/captains-caliber-z-jawbreaker-first-run-seppo-paju"
             }
           ]
@@ -1068,6 +1104,24 @@
           ]
         },
         {
+          "discId": "axiom-proxy",
+          "name": "Proxy",
+          "brand": "Axiom",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Neutron",
+          "firstSeenMs": 1786172054163,
+          "price": 270,
+          "stores": [
+            {
+              "store": "aceshop",
+              "storeName": "Aceshop",
+              "price": 270,
+              "url": "https://aceshop.no/product/axiom-neutron-proxy-soft/"
+            }
+          ]
+        },
+        {
           "discId": "mvp-glitch",
           "name": "Glitch",
           "brand": "MVP",
@@ -1082,6 +1136,24 @@
               "storeName": "Aceshop",
               "price": 264,
               "url": "https://aceshop.no/product/mvp-neutron-glitch-soft/"
+            }
+          ]
+        },
+        {
+          "discId": "axiom-envy",
+          "name": "Envy",
+          "brand": "Axiom",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Neutron",
+          "firstSeenMs": 1786172054163,
+          "price": 264,
+          "stores": [
+            {
+              "store": "aceshop",
+              "storeName": "Aceshop",
+              "price": 264,
+              "url": "https://aceshop.no/product/axiom-neutron-envy/"
             }
           ]
         },
@@ -1226,6 +1298,24 @@
               "storeName": "Aceshop",
               "price": 270,
               "url": "https://aceshop.no/product/mvp-neutron-stasis/"
+            }
+          ]
+        },
+        {
+          "discId": "westside-harp",
+          "name": "Harp",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "BT",
+          "firstSeenMs": 1786087452155,
+          "price": 179,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 179,
+              "url": "https://www.discexpress.se/products/harp-bt-mega-soft"
             }
           ]
         },
@@ -1462,16 +1552,16 @@
           "price": 320,
           "stores": [
             {
-              "store": "aceshop",
-              "storeName": "Aceshop",
-              "price": 320,
-              "url": "https://aceshop.no/product/axiom-particle-proton-soft-rhythm-otb-open-2026/"
-            },
-            {
               "store": "arcticdisc",
               "storeName": "Arctic Disc",
               "price": 324,
               "url": "https://arcticdisc.no/products/particle-proton-soft-rhythm-otb-open-2026"
+            },
+            {
+              "store": "aceshop",
+              "storeName": "Aceshop",
+              "price": 320,
+              "url": "https://aceshop.no/product/axiom-particle-proton-soft-rhythm-otb-open-2026/"
             }
           ]
         },
@@ -1598,162 +1688,6 @@
               "storeName": "Arctic Disc",
               "price": 374,
               "url": "https://arcticdisc.no/products/z-sparkle-flick-ledgestone-2026"
-            }
-          ]
-        },
-        {
-          "discId": "axiom-envy",
-          "name": "Envy",
-          "brand": "Axiom",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Neutron",
-          "firstSeenMs": 1785751442385,
-          "price": 264,
-          "stores": [
-            {
-              "store": "aceshop",
-              "storeName": "Aceshop",
-              "price": 264,
-              "url": "https://aceshop.no/product/axiom-neutron-envy/"
-            },
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 276,
-              "url": "https://discaceofsweden.com/produkt/axiom-plasma-envy/"
-            }
-          ]
-        },
-        {
-          "discId": "westside-harp",
-          "name": "Harp",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "firstSeenMs": 1785751442385,
-          "price": 179,
-          "stores": [
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 217,
-              "url": "https://discaceofsweden.com/produkt/westside-vip-harp/"
-            },
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 179,
-              "url": "https://www.discexpress.se/products/harp-bt-mega-soft"
-            }
-          ]
-        },
-        {
-          "discId": "innova-rocx3",
-          "name": "RocX3",
-          "brand": "Innova",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Champion",
-          "firstSeenMs": 1785751442385,
-          "price": 217,
-          "stores": [
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 217,
-              "url": "https://discaceofsweden.com/produkt/innova-champion-rocx3/"
-            }
-          ]
-        },
-        {
-          "discId": "westside-maiden",
-          "name": "Maiden",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "firstSeenMs": 1785751442385,
-          "price": 217,
-          "stores": [
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 217,
-              "url": "https://discaceofsweden.com/produkt/westside-maiden-vip/"
-            }
-          ]
-        },
-        {
-          "discId": "westside-warship",
-          "name": "Warship",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Tournament",
-          "firstSeenMs": 1785751442385,
-          "price": 268,
-          "stores": [
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 276,
-              "url": "https://discaceofsweden.com/produkt/westside-tournament-orbit-warship-trilogy-challenge-2023/"
-            },
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 268,
-              "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
-            }
-          ]
-        },
-        {
-          "discId": "westside-sword",
-          "name": "Sword",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "firstSeenMs": 1785751442385,
-          "price": 217,
-          "stores": [
-            {
-              "store": "discace",
-              "storeName": "Discace of Sweden",
-              "price": 217,
-              "url": "https://discaceofsweden.com/produkt/westside-sword-vip/"
-            },
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 268,
-              "url": "https://www.discexpress.se/products/sword-tournament-x"
-            }
-          ]
-        },
-        {
-          "discId": "axiom-proxy",
-          "name": "Proxy",
-          "brand": "Axiom",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Neutron",
-          "firstSeenMs": 1785750019921,
-          "price": 270,
-          "stores": [
-            {
-              "store": "aceshop",
-              "storeName": "Aceshop",
-              "price": 270,
-              "url": "https://aceshop.no/product/axiom-neutron-proxy-soft/"
-            },
-            {
-              "store": "kvamdgs",
-              "storeName": "Kvam DGS",
-              "price": 320,
-              "url": "https://kvamdgs.no/products/plasma-soft-proxy-silva-saarinen"
             }
           ]
         }
