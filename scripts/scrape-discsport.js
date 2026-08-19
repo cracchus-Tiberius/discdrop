@@ -97,46 +97,70 @@ async function scrape() {
   try {
     // ── Step 1: Extract mold slugs from autocomplete on the main disc page ──────
     console.log('  Loading disc catalogue page to extract mold slugs...');
-    const indexPage = await context.newPage();
-    indexPage.on('dialog', d => d.dismiss().catch(() => {}));
-
-    // Use the Swedish path — /no/ prefix breaks mold page filtering
-    await indexPage.goto(`${STORE.baseUrl}/discar`, { waitUntil: 'domcontentloaded', timeout: 30000 });
 
     // Format: " Destroyer##15##2##discar/mold/destroyer "
-    const moldSlugs = await indexPage.evaluate(() => {
-      const scripts = Array.from(document.querySelectorAll('script'));
-      const slugs = new Set();
-      for (const script of scripts) {
-        const text = script.textContent || '';
-        const matches = text.matchAll(/"[^"]*##\d+##2##discar\/mold\/([^"\s]+)[^"]*"/g);
-        for (const m of matches) {
-          const moldSlug = m[1];
-          // Discsport's own autocomplete data has entries like "#3",
-          // "#3-flyer", "#1-helix" whose "slug" starts with a hash — these
-          // are NOT per-product mold pages. Verified live: every single
-          // one of them (not just the bare "#3" case) resolves to the
-          // exact same generic listing page (DISCatcher Traveler, a
-          // starter bag, Active Premium Majesty/Magician/...), because "#"
-          // is a URL fragment, not a real path segment their site routes
-          // on when loaded directly. Confirmed in production: 98 price
-          // entries across completely unrelated discs (Zone SS, Aviar,
-          // Berg, Luna, ...) all ended up pointing at discsport.se/discar/
-          // mold/#3, making every price attributed to it unverifiable —
-          // reject the whole "starts with #" family, not just that one.
-          if (moldSlug && moldSlug.length > 1 && !moldSlug.startsWith('#')) {
-            slugs.add(moldSlug);
-          }
-        }
-      }
-      return [...slugs];
-    });
+    async function extractMoldSlugs() {
+      const indexPage = await context.newPage();
+      indexPage.on('dialog', d => d.dismiss().catch(() => {}));
+      try {
+        // Use the Swedish path — /no/ prefix breaks mold page filtering
+        await indexPage.goto(`${STORE.baseUrl}/discar`, { waitUntil: 'domcontentloaded', timeout: 30000 });
 
-    await indexPage.close();
+        return await indexPage.evaluate(() => {
+          const scripts = Array.from(document.querySelectorAll('script'));
+          const slugs = new Set();
+          for (const script of scripts) {
+            const text = script.textContent || '';
+            const matches = text.matchAll(/"[^"]*##\d+##2##discar\/mold\/([^"\s]+)[^"]*"/g);
+            for (const m of matches) {
+              const moldSlug = m[1];
+              // Discsport's own autocomplete data has entries like "#3",
+              // "#3-flyer", "#1-helix" whose "slug" starts with a hash — these
+              // are NOT per-product mold pages. Verified live: every single
+              // one of them (not just the bare "#3" case) resolves to the
+              // exact same generic listing page (DISCatcher Traveler, a
+              // starter bag, Active Premium Majesty/Magician/...), because "#"
+              // is a URL fragment, not a real path segment their site routes
+              // on when loaded directly. Confirmed in production: 98 price
+              // entries across completely unrelated discs (Zone SS, Aviar,
+              // Berg, Luna, ...) all ended up pointing at discsport.se/discar/
+              // mold/#3, making every price attributed to it unverifiable —
+              // reject the whole "starts with #" family, not just that one.
+              if (moldSlug && moldSlug.length > 1 && !moldSlug.startsWith('#')) {
+                slugs.add(moldSlug);
+              }
+            }
+          }
+          return [...slugs];
+        });
+      } finally {
+        await indexPage.close();
+      }
+    }
+
+    // Confirmed in production 2026-08-18: the catalogue page (which now
+    // 301-redirects /discar -> /discar/alla) came back with 0 mold slugs on
+    // the daily GA run despite the page and its data being fine both before
+    // and after (reproduced live minutes after the failure: 997 slugs, no
+    // code or site change needed). A single transient load/redirect hiccup
+    // used to kill the whole store for the day with zero retry — 3 attempts
+    // with a short backoff costs a few seconds on a run that already takes
+    // several minutes, and turns a one-off blip back into a normal day
+    // instead of a full missed scrape.
+    let moldSlugs = [];
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      moldSlugs = await extractMoldSlugs();
+      if (moldSlugs.length > 0) break;
+      if (attempt < 3) {
+        console.warn(`  Attempt ${attempt}/3 found 0 mold slugs — retrying in 5s...`);
+        await new Promise((r) => setTimeout(r, 5000));
+      }
+    }
+
     console.log(`  Found ${moldSlugs.length} disc mold slugs`);
 
     if (moldSlugs.length === 0) {
-      console.error('  No mold slugs found — site structure may have changed');
+      console.error('  No mold slugs found after 3 attempts — site structure may have changed');
       return [];
     }
 
