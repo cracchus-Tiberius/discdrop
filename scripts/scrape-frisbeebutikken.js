@@ -158,11 +158,39 @@ async function scrapeWithHeaders() {
     return null;
   }
 
-  const { products: firstProducts, maxPage } = parseProductsFromHtml(html);
+  let { products: firstProducts, maxPage } = parseProductsFromHtml(html);
 
   if (isChallengePage(html, firstProducts.length)) {
     console.log('    ✗ Bot protection detected — switching to Playwright');
     return null;
+  }
+
+  // Confirmed in production 2026-08-18: page 1 loaded fine (98 real
+  // products parsed correctly) but maxPage came back as 1 on a catalogue
+  // that actually has 4 pages — the pagination links were there on a
+  // request made minutes later, so this reads as a one-off truncated/
+  // incomplete response rather than a real site change. Re-fetching page 1
+  // once whenever maxPage looks like "no pagination" (never true for this
+  // category in practice) catches that transient case before it gets
+  // treated as "this is the whole catalog" and silently trips the >50%
+  // drop guard in mergeStoreResults.
+  if (maxPage === 1) {
+    await randomDelay(1000, 2000);
+    let retryHtml;
+    try {
+      retryHtml = await fetchPage(firstUrl, 'https://www.google.no/');
+    } catch {
+      retryHtml = null;
+    }
+    if (retryHtml) {
+      const retry = parseProductsFromHtml(retryHtml);
+      if (retry.maxPage > maxPage) {
+        console.log(`    ⚠ Page 1 retry found ${retry.maxPage} pages (first attempt saw ${maxPage}) — using the higher count`);
+        html = retryHtml;
+        firstProducts = retry.products;
+        maxPage = retry.maxPage;
+      }
+    }
   }
 
   for (const p of firstProducts) {
