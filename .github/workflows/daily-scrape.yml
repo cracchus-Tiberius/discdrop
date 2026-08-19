@@ -11,9 +11,14 @@ jobs:
     # No job-level timeout means GitHub's default of 360 minutes (6 hours) —
     # confirmed in production 2026-08-19: "Install Playwright browsers" hung
     # silently twice in one morning (no error, no log output, just stuck) with
-    # nothing to catch it until someone noticed hours later. 30 min is
-    # generous for a run that normally completes end-to-end in ~20-25 min.
-    timeout-minutes: 30
+    # nothing to catch it until someone noticed hours later. That specific
+    # step now has its own 5-min timeout below, which is the real fix for
+    # that hang; this job-level timeout is just a backstop against some other
+    # future stuck step. Past real runs ranged 19-28 min end to end (before
+    # Starframe was added as a 15th store, adding more scrape time), so 60
+    # min leaves real headroom instead of risking a self-inflicted failure
+    # from normal duration variance.
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repo
