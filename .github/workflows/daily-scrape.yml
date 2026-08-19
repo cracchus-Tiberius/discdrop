@@ -8,6 +8,12 @@ on:
 jobs:
   scrape-and-deploy:
     runs-on: ubuntu-latest
+    # No job-level timeout means GitHub's default of 360 minutes (6 hours) —
+    # confirmed in production 2026-08-19: "Install Playwright browsers" hung
+    # silently twice in one morning (no error, no log output, just stuck) with
+    # nothing to catch it until someone noticed hours later. 30 min is
+    # generous for a run that normally completes end-to-end in ~20-25 min.
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repo
@@ -33,6 +39,7 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install chromium --with-deps
+        timeout-minutes: 5
 
       - name: Run scrape:all
         run: pnpm scrape:all
