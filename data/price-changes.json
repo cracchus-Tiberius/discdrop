@@ -1,54 +1,222 @@
 {
-  "generated": "2026-08-18T06:57:32.706Z",
+  "generated": "2026-08-19T09:43:39.310Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 4,
     "newDiscs24h": 0,
-    "storesChecked": 14
+    "storesChecked": 15
   },
   "drops": [
     {
-      "discId": "mvp-trail",
+      "discId": "mvp-control",
       "store": "wearediscgolf",
       "storeName": "We Are Disc Golf",
       "plastic": "Neutron",
-      "oldPrice": 268,
+      "oldPrice": 269,
       "newPrice": 254,
-      "pct": -5,
-      "changedAt": "2026-08-17T06:50:38.430Z",
-      "period": "week",
+      "pct": -6,
+      "changedAt": "2026-08-19T09:18:47.805Z",
+      "period": "day",
       "history": [
-        268,
-        268,
-        268,
-        267,
-        254,
-        254,
+        278,
+        278,
+        278,
+        278,
+        278,
+        269,
         254
       ],
-      "url": "https://wearediscgolf.no/produkt/neutron-trail-white-rim/"
+      "url": "https://wearediscgolf.no/produkt/neutron-control/"
+    },
+    {
+      "discId": "latitude-function",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": null,
+      "oldPrice": 237,
+      "newPrice": 179,
+      "pct": -24,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        237,
+        237,
+        237,
+        237,
+        237,
+        179,
+        179
+      ],
+      "url": "https://www.starframe.no/products/geo-function"
+    },
+    {
+      "discId": "prodigy-fx-4",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": "500",
+      "oldPrice": 288,
+      "newPrice": 259,
+      "pct": -10,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        288,
+        288,
+        288,
+        288,
+        288,
+        259,
+        259
+      ],
+      "url": "https://www.starframe.no/products/fx-4-500"
     },
     {
       "discId": "mvp-control",
-      "store": "discexpress",
-      "storeName": "Discexpress",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
       "plastic": "Neutron",
-      "oldPrice": 294,
-      "newPrice": 278,
-      "pct": -5,
-      "changedAt": "2026-08-18T06:48:15.387Z",
+      "oldPrice": 278,
+      "newPrice": 254,
+      "pct": -9,
+      "changedAt": "2026-08-19T09:18:47.805Z",
       "period": "week",
       "history": [
-        294,
-        294,
-        294,
-        294,
         278,
         278,
-        278
+        278,
+        278,
+        278,
+        269,
+        254
       ],
-      "url": "https://www.discexpress.se/products/control-neutron"
+      "url": "https://wearediscgolf.no/produkt/neutron-control/"
+    },
+    {
+      "discId": "prodigy-reverb",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": "400",
+      "oldPrice": 295,
+      "newPrice": 275,
+      "pct": -7,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        295,
+        295,
+        295,
+        295,
+        295,
+        275,
+        275
+      ],
+      "url": "https://www.starframe.no/products/reverb-400-kevin-jones"
+    },
+    {
+      "discId": "prodigy-f9",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": "500",
+      "oldPrice": 278,
+      "newPrice": 259,
+      "pct": -7,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        278,
+        278,
+        278,
+        278,
+        278,
+        259,
+        259
+      ],
+      "url": "https://www.starframe.no/products/f9-500"
+    },
+    {
+      "discId": "latitude-pipeline",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": null,
+      "oldPrice": 264,
+      "newPrice": 249,
+      "pct": -6,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        264,
+        264,
+        264,
+        264,
+        264,
+        249,
+        249
+      ],
+      "url": "https://www.starframe.no/products/spark-pipeline"
+    },
+    {
+      "discId": "latitude-avalanche",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": null,
+      "oldPrice": 264,
+      "newPrice": 249,
+      "pct": -6,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        264,
+        264,
+        264,
+        264,
+        264,
+        249,
+        249
+      ],
+      "url": "https://www.starframe.no/products/spark-avalanche"
+    },
+    {
+      "discId": "latitude-macana",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": "Zero Hard",
+      "oldPrice": 208,
+      "newPrice": 195,
+      "pct": -6,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        208,
+        208,
+        208,
+        208,
+        208,
+        195,
+        195
+      ],
+      "url": "https://www.starframe.no/products/zero-hard-macana"
+    },
+    {
+      "discId": "latitude-knight",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": "Opto-Ice",
+      "oldPrice": 274,
+      "newPrice": 259,
+      "pct": -5,
+      "changedAt": "2026-08-19T09:25:29.979Z",
+      "period": "week",
+      "history": [
+        274,
+        274,
+        274,
+        274,
+        273,
+        259,
+        259
+      ],
+      "url": "https://www.starframe.no/products/opto-ice-knight"
     }
   ],
-  "totalDrops": 0,
-  "totalDropsWeek": 2
+  "totalDrops": 1,
+  "totalDropsWeek": 9
 }

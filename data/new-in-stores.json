@@ -1,24 +1,25 @@
 {
-  "generated": "2026-08-18T13:36:20.923Z",
+  "generated": "2026-08-19T09:43:39.735Z",
   "summary": {
-    "totalSignals": 84,
+    "totalSignals": 97,
     "newDiscs": 0,
-    "newReleases": 25,
-    "newAtStore": 59,
+    "newReleases": 23,
+    "newAtStore": 74,
     "weeksIncluded": 3,
     "quarantinedStores": [
-      "frisbeebutikken"
+      "frisbeebutikken",
+      "starframe"
     ],
     "suppressedMassResetEvents": [
       {
         "store": "rocketdiscs",
         "date": "2026-07-24",
-        "count": 1333
+        "count": 1332
       },
       {
         "store": "discsport",
         "date": "2026-07-24",
-        "count": 1177
+        "count": 1175
       },
       {
         "store": "discexpress",
@@ -36,9 +37,14 @@
         "count": 790
       },
       {
+        "store": "starframe",
+        "date": "2026-08-19",
+        "count": 694
+      },
+      {
         "store": "wearediscgolf",
         "date": "2026-08-16",
-        "count": 539
+        "count": 531
       },
       {
         "store": "wearediscgolf",
@@ -61,14 +67,14 @@
         "count": 187
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-08-13",
-        "count": 181
-      },
-      {
         "store": "arcticdisc",
         "date": "2026-07-24",
         "count": 170
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-13",
+        "count": 157
       },
       {
         "store": "golfdiscer",
@@ -108,7 +114,12 @@
       {
         "store": "frisbeebutikken",
         "date": "2026-08-04",
-        "count": 37
+        "count": 35
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-19",
+        "count": 34
       },
       {
         "store": "rocketdiscs",
@@ -126,21 +137,59 @@
       "endDate": "2026-08-23",
       "signals": [
         {
-          "discId": "mvp-watt",
-          "name": "Watt",
+          "discId": "innova-rhyno",
+          "name": "Rhyno",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-release",
+          "plastic": null,
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 229,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 229,
+              "url": "https://rocketdiscs.com/innova-rhyno"
+            }
+          ]
+        },
+        {
+          "discId": "innova-dragon",
+          "name": "Dragon",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Champion",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 273,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 273,
+              "url": "https://rocketdiscs.com/innova-dragon"
+            }
+          ]
+        },
+        {
+          "discId": "mvp-particle",
+          "name": "Particle",
           "brand": "MVP",
           "image": "",
           "type": "new-release",
-          "plastic": "Proton",
-          "edition": null,
-          "firstSeenMs": 1787035695387,
-          "price": 278,
+          "plastic": "Particle Proton",
+          "edition": "James Conrad",
+          "firstSeenMs": 1787131593026,
+          "price": 334,
           "stores": [
             {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 278,
-              "url": "https://www.discexpress.se/products/watt-proton-plc"
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 334,
+              "url": "https://nydisk.no/products/mvp-particle-proton-trail-james-conrad-halloween-2026-forhandssalg"
             }
           ]
         },
@@ -152,7 +201,7 @@
           "type": "new-release",
           "plastic": "X Line",
           "edition": null,
-          "firstSeenMs": 1787035668943,
+          "firstSeenMs": 1787131593026,
           "price": 204,
           "stores": [
             {
@@ -164,6 +213,25 @@
           ]
         },
         {
+          "discId": "mvp-ascend",
+          "name": "Ascend",
+          "brand": "Streamline",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Eclipse",
+          "edition": "Eagle McMahon",
+          "firstSeenMs": 1787131593026,
+          "price": 294,
+          "stores": [
+            {
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 294,
+              "url": "https://nydisk.no/products/streamline-eclipse-ascend-eagle-mcmahon-halloween-2026-forhandssalg"
+            }
+          ]
+        },
+        {
           "discId": "dynamic-enforcer",
           "name": "Enforcer",
           "brand": "Dynamic Discs",
@@ -171,7 +239,7 @@
           "type": "new-release",
           "plastic": "Lucid Ice",
           "edition": "Sockibomb",
-          "firstSeenMs": 1787035668943,
+          "firstSeenMs": 1787131593026,
           "price": 185,
           "stores": [
             {
@@ -183,6 +251,25 @@
           ]
         },
         {
+          "discId": "mvp-echo",
+          "name": "Echo",
+          "brand": "MVP",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Eclipse",
+          "edition": "Silva Saarinen",
+          "firstSeenMs": 1787131593026,
+          "price": 294,
+          "stores": [
+            {
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 294,
+              "url": "https://nydisk.no/products/streamline-eclipse-echo-silva-saarinen-halloween-2026-forhandssalg"
+            }
+          ]
+        },
+        {
           "discId": "dynamic-raider",
           "name": "Raider",
           "brand": "Dynamic Discs",
@@ -190,7 +277,7 @@
           "type": "new-release",
           "plastic": "Lucid X",
           "edition": "Ricky Wysocki",
-          "firstSeenMs": 1787035668943,
+          "firstSeenMs": 1787131593026,
           "price": 185,
           "stores": [
             {
@@ -202,6 +289,88 @@
           ]
         },
         {
+          "discId": "mvp-control",
+          "name": "Control",
+          "brand": "MVP",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Eclipse",
+          "edition": "Jeremy Koling",
+          "firstSeenMs": 1787131593026,
+          "price": 334,
+          "stores": [
+            {
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 334,
+              "url": "https://nydisk.no/products/mvp-eclipse-control-jeremy-koling-halloween-2026-forhandssalg"
+            }
+          ]
+        },
+        {
+          "discId": "mvp-watt",
+          "name": "Watt",
+          "brand": "MVP",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Proton",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 254,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 254,
+              "url": "https://wearediscgolf.no/produkt/proton-watt-white-rim/"
+            },
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 277,
+              "url": "https://www.discexpress.se/products/watt-proton-plc"
+            }
+          ]
+        },
+        {
+          "discId": "innova-xero",
+          "name": "Xero",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-release",
+          "plastic": "KC Pro",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 214,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 214,
+              "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
+            }
+          ]
+        },
+        {
+          "discId": "discmania-drop",
+          "name": "Drop",
+          "brand": "Discmania",
+          "image": "",
+          "type": "new-release",
+          "plastic": "Horizon S-Line",
+          "edition": "Niklas Anttila",
+          "firstSeenMs": 1786949438430,
+          "price": 314,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 314,
+              "url": "https://wearediscgolf.no/produkt/horizon-s-line-drop-niklas-anttila-2026/"
+            }
+          ]
+        },
+        {
           "discId": "discraft-luna",
           "name": "Luna",
           "brand": "Discraft",
@@ -209,14 +378,690 @@
           "type": "new-at-store",
           "plastic": "Jawbreaker",
           "edition": "Paul McBeth",
-          "firstSeenMs": 1787036203784,
-          "price": 272,
+          "firstSeenMs": 1787132571771,
+          "price": 271,
           "stores": [
             {
               "store": "ugglans",
               "storeName": "Ugglans Discgolf",
-              "price": 272,
+              "price": 271,
               "url": "https://ugglansdiscgolf.se/products/jawbreaker-luna-paul-mcbeth"
+            }
+          ]
+        },
+        {
+          "discId": "mvp-pilot",
+          "name": "Pilot",
+          "brand": "Streamline",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Electron Firm",
+          "edition": null,
+          "firstSeenMs": 1787132138371,
+          "price": 187,
+          "stores": [
+            {
+              "store": "discsport",
+              "storeName": "Discsport",
+              "price": 187,
+              "url": "https://discsport.se/discar/mold/pilot"
+            }
+          ]
+        },
+        {
+          "discId": "latitude-mighty",
+          "name": "Mighty",
+          "brand": "Latitude 64",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Grand",
+          "edition": null,
+          "firstSeenMs": 1787132138371,
+          "price": 286,
+          "stores": [
+            {
+              "store": "discsport",
+              "storeName": "Discsport",
+              "price": 286,
+              "url": "https://discsport.se/discar/mold/mighty"
+            }
+          ]
+        },
+        {
+          "discId": "innova-firefly",
+          "name": "Firefly",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Star",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 284,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 284,
+              "url": "https://rocketdiscs.com/innova-firefly"
+            }
+          ]
+        },
+        {
+          "discId": "innova-aviarx3",
+          "name": "AviarX3",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Champion",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 273,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 273,
+              "url": "https://rocketdiscs.com/innova-aviarx3"
+            }
+          ]
+        },
+        {
+          "discId": "innova-dart",
+          "name": "Dart",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "R-Pro",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 229,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 229,
+              "url": "https://rocketdiscs.com/innova-dart"
+            }
+          ]
+        },
+        {
+          "discId": "innova-thunderbird",
+          "name": "Thunderbird",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Halo Champion Moondust",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 371,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 371,
+              "url": "https://rocketdiscs.com/innova-thunderbird"
+            }
+          ]
+        },
+        {
+          "discId": "innova-rocx3",
+          "name": "RocX3",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Champion",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 273,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 273,
+              "url": "https://rocketdiscs.com/innova-rocx3"
+            }
+          ]
+        },
+        {
+          "discId": "innova-teebird3",
+          "name": "Teebird3",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Star",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 284,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 284,
+              "url": "https://rocketdiscs.com/innova-teebird3"
+            }
+          ]
+        },
+        {
+          "discId": "innova-eagle",
+          "name": "Eagle",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Duo",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 371,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 371,
+              "url": "https://rocketdiscs.com/innova-eagle"
+            }
+          ]
+        },
+        {
+          "discId": "innova-dragon",
+          "name": "Dragon",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "DX",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 208,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 208,
+              "url": "https://rocketdiscs.com/innova-dragon"
+            }
+          ]
+        },
+        {
+          "discId": "innova-destroyer",
+          "name": "Destroyer",
+          "brand": "Innova",
+          "image": "https://www.innovadiscs.com/wp-content/uploads/2014/11/Innova_ES_Swirled_Star_Destroyer.jpg",
+          "type": "new-at-store",
+          "plastic": "GStar",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 262,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 262,
+              "url": "https://rocketdiscs.com/innova-destroyer"
+            }
+          ]
+        },
+        {
+          "discId": "innova-katana",
+          "name": "Katana",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Proto Glow Halo Star",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 371,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 371,
+              "url": "https://rocketdiscs.com/innova-katana"
+            }
+          ]
+        },
+        {
+          "discId": "innova-roadrunner",
+          "name": "Roadrunner",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Halo Champion",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 306,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 306,
+              "url": "https://rocketdiscs.com/innova-roadrunner"
+            }
+          ]
+        },
+        {
+          "discId": "innova-cheetah",
+          "name": "Cheetah",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "DX",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 208,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 208,
+              "url": "https://rocketdiscs.com/innova-cheetah"
+            }
+          ]
+        },
+        {
+          "discId": "innova-power-disc-2",
+          "name": "Power Disc 2",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Star",
+          "edition": null,
+          "firstSeenMs": 1787131655848,
+          "price": 284,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 284,
+              "url": "https://rocketdiscs.com/innova-power-disc-2"
+            }
+          ]
+        },
+        {
+          "discId": "latitude-fuse",
+          "name": "Fuse",
+          "brand": "Latitude 64",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Project Grip",
+          "edition": null,
+          "firstSeenMs": 1787131620591,
+          "price": 287,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 287,
+              "url": "https://www.discexpress.se/products/fuse-project-grip"
+            }
+          ]
+        },
+        {
+          "discId": "discraft-cigarra",
+          "name": "Cigarra",
+          "brand": "Discraft",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Z",
+          "edition": "Anthony Barela",
+          "firstSeenMs": 1787131620591,
+          "price": 247,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 247,
+              "url": "https://www.discexpress.se/products/cigarra-z-first-run-anthony-barela"
+            }
+          ]
+        },
+        {
+          "discId": "innova-gorgon",
+          "name": "Gorgon",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Halo Champion Proto Glow",
+          "edition": "Tour Series",
+          "firstSeenMs": 1787131620591,
+          "price": 386,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 386,
+              "url": "https://www.discexpress.se/products/gorgon-halo-champion-proto-glow-dennis-augustsson-copy"
+            }
+          ]
+        },
+        {
+          "discId": "discraft-scorch",
+          "name": "Scorch",
+          "brand": "Discraft",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Z",
+          "edition": null,
+          "firstSeenMs": 1787131620591,
+          "price": 316,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 316,
+              "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
+            }
+          ]
+        },
+        {
+          "discId": "westside-destiny",
+          "name": "Destiny",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Tournament",
+          "edition": null,
+          "firstSeenMs": 1787131620591,
+          "price": 267,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 267,
+              "url": "https://www.discexpress.se/products/destiny-tournament-x-ring"
+            }
+          ]
+        },
+        {
+          "discId": "westside-prince",
+          "name": "Prince",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Tournament",
+          "edition": null,
+          "firstSeenMs": 1787131620591,
+          "price": 267,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 267,
+              "url": "https://www.discexpress.se/products/prince-tournament-x"
+            }
+          ]
+        },
+        {
+          "discId": "westside-warship",
+          "name": "Warship",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "VIP",
+          "edition": null,
+          "firstSeenMs": 1787131620591,
+          "price": 267,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 267,
+              "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
+            }
+          ]
+        },
+        {
+          "discId": "westside-sword",
+          "name": "Sword",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Tournament",
+          "edition": null,
+          "firstSeenMs": 1787131620591,
+          "price": 267,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 267,
+              "url": "https://www.discexpress.se/products/sword-tournament-x"
+            }
+          ]
+        },
+        {
+          "discId": "latitude-anchor",
+          "name": "Anchor",
+          "brand": "Latitude 64",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Gold Ice",
+          "edition": null,
+          "firstSeenMs": 1787131593026,
+          "price": 274,
+          "stores": [
+            {
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 274,
+              "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
+            }
+          ]
+        },
+        {
+          "discId": "westside-stag",
+          "name": "Stag",
+          "brand": "Westside Discs",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "VIP",
+          "edition": "2025",
+          "firstSeenMs": 1787131593026,
+          "price": 294,
+          "stores": [
+            {
+              "store": "nydisk",
+              "storeName": "NyDisk",
+              "price": 294,
+              "url": "https://nydisk.no/products/westside-discs-vip-x-ring-stag-heidi-laine-2025"
+            }
+          ]
+        },
+        {
+          "discId": "innova-aviar",
+          "name": "Aviar",
+          "brand": "Innova",
+          "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
+          "type": "new-at-store",
+          "plastic": "JK Pro",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 214,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 214,
+              "url": "https://wearediscgolf.no/produkt/jk-pro-aviar/"
+            },
+            {
+              "store": "golfdiscer",
+              "storeName": "GolfDiscer",
+              "price": 224,
+              "url": "https://golfdiscer.no/products/yeti-pro-aviar"
+            }
+          ]
+        },
+        {
+          "discId": "innova-whale",
+          "name": "Whale",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "KC Pro",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 214,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 214,
+              "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
+            }
+          ]
+        },
+        {
+          "discId": "mvp-pixel",
+          "name": "Pixel",
+          "brand": "Axiom",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Cosmic Electron",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 220,
+          "stores": [
+            {
+              "store": "kvamdgs",
+              "storeName": "Kvam DGS",
+              "price": 220,
+              "url": "https://kvamdgs.no/products/cosmic-electron-pixel"
+            }
+          ]
+        },
+        {
+          "discId": "innova-animal",
+          "name": "Animal",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "KC Pro",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 214,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 214,
+              "url": "https://wearediscgolf.no/produkt/kc-pro-animal/"
+            },
+            {
+              "store": "golfdiscer",
+              "storeName": "GolfDiscer",
+              "price": 224,
+              "url": "https://golfdiscer.no/products/kc-pro-animal"
+            }
+          ]
+        },
+        {
+          "discId": "innova-roc",
+          "name": "Roc",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "KC Pro",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 214,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 214,
+              "url": "https://wearediscgolf.no/produkt/kc-pro-roc/"
+            },
+            {
+              "store": "kvamdgs",
+              "storeName": "Kvam DGS",
+              "price": 224,
+              "url": "https://kvamdgs.no/products/kc-pro-roc"
+            },
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 229,
+              "url": "https://rocketdiscs.com/innova-roc"
+            }
+          ]
+        },
+        {
+          "discId": "discraft-malta",
+          "name": "Malta",
+          "brand": "Discraft",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Z",
+          "edition": "Paul McBeth",
+          "firstSeenMs": 1787131127805,
+          "price": 280,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 280,
+              "url": "https://wearediscgolf.no/produkt/z-malta-paul-mcbeth/"
+            }
+          ]
+        },
+        {
+          "discId": "innova-lion",
+          "name": "Lion",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "KC Pro",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 214,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 214,
+              "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+            }
+          ]
+        },
+        {
+          "discId": "latitude-pearl",
+          "name": "Pearl",
+          "brand": "Latitude 64",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Opto",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 254,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 254,
+              "url": "https://wearediscgolf.no/produkt/opto-pearl/"
+            }
+          ]
+        },
+        {
+          "discId": "innova-leopard3",
+          "name": "Leopard3",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Star",
+          "edition": null,
+          "firstSeenMs": 1787131127805,
+          "price": 274,
+          "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 274,
+              "url": "https://wearediscgolf.no/produkt/star-splatter-leopard3-on-the-prowl/"
+            },
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 295,
+              "url": "https://rocketdiscs.com/innova-leopard3"
             }
           ]
         },
@@ -240,173 +1085,21 @@
           ]
         },
         {
-          "discId": "latitude-fuse",
-          "name": "Fuse",
+          "discId": "latitude-gatekeeper",
+          "name": "Gatekeeper",
           "brand": "Latitude 64",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Project Grip",
-          "edition": null,
-          "firstSeenMs": 1787035695387,
-          "price": 288,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 288,
-              "url": "https://www.discexpress.se/products/fuse-project-grip"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-cigarra",
-          "name": "Cigarra",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Z",
-          "edition": "Anthony Barela",
-          "firstSeenMs": 1787035695387,
-          "price": 248,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 248,
-              "url": "https://www.discexpress.se/products/cigarra-z-first-run-anthony-barela"
-            }
-          ]
-        },
-        {
-          "discId": "innova-gorgon",
-          "name": "Gorgon",
-          "brand": "Innova",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Halo Champion Proto Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1787035695387,
-          "price": 387,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 387,
-              "url": "https://www.discexpress.se/products/gorgon-halo-champion-proto-glow-dennis-augustsson-copy"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-scorch",
-          "name": "Scorch",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Z",
-          "edition": null,
-          "firstSeenMs": 1787035695387,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 317,
-              "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
-            }
-          ]
-        },
-        {
-          "discId": "westside-prince",
-          "name": "Prince",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Tournament",
-          "edition": null,
-          "firstSeenMs": 1787035695387,
-          "price": 268,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 268,
-              "url": "https://www.discexpress.se/products/prince-tournament-x"
-            }
-          ]
-        },
-        {
-          "discId": "westside-warship",
-          "name": "Warship",
-          "brand": "Westside Discs",
           "image": "",
           "type": "new-at-store",
           "plastic": "VIP",
           "edition": null,
           "firstSeenMs": 1787035695387,
-          "price": 268,
+          "price": 228,
           "stores": [
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 268,
-              "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
-            }
-          ]
-        },
-        {
-          "discId": "westside-sword",
-          "name": "Sword",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Tournament",
-          "edition": null,
-          "firstSeenMs": 1787035695387,
-          "price": 268,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 268,
-              "url": "https://www.discexpress.se/products/sword-tournament-x"
-            }
-          ]
-        },
-        {
-          "discId": "latitude-anchor",
-          "name": "Anchor",
-          "brand": "Latitude 64",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Gold Ice",
-          "edition": null,
-          "firstSeenMs": 1787035668943,
-          "price": 274,
-          "stores": [
-            {
-              "store": "nydisk",
-              "storeName": "NyDisk",
-              "price": 274,
-              "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
-            }
-          ]
-        },
-        {
-          "discId": "westside-stag",
-          "name": "Stag",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "edition": "2025",
-          "firstSeenMs": 1787035668943,
-          "price": 294,
-          "stores": [
-            {
-              "store": "nydisk",
-              "storeName": "NyDisk",
-              "price": 294,
-              "url": "https://nydisk.no/products/westside-discs-vip-x-ring-stag-heidi-laine-2025"
+              "price": 228,
+              "url": "https://www.discexpress.se/products/gatekeeper-vip"
             }
           ]
         },
@@ -447,82 +1140,6 @@
               "url": "https://www.frisbeesor.no/produkt/putter-line-banger-gt/"
             }
           ]
-        },
-        {
-          "discId": "innova-aviar",
-          "name": "Aviar",
-          "brand": "Innova",
-          "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
-          "type": "new-at-store",
-          "plastic": "Pro",
-          "edition": null,
-          "firstSeenMs": 1787035650436,
-          "price": 224,
-          "stores": [
-            {
-              "store": "golfdiscer",
-              "storeName": "GolfDiscer",
-              "price": 224,
-              "url": "https://golfdiscer.no/products/yeti-pro-aviar"
-            }
-          ]
-        },
-        {
-          "discId": "innova-animal",
-          "name": "Animal",
-          "brand": "Innova",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "KC Pro",
-          "edition": null,
-          "firstSeenMs": 1787035650436,
-          "price": 224,
-          "stores": [
-            {
-              "store": "golfdiscer",
-              "storeName": "GolfDiscer",
-              "price": 224,
-              "url": "https://golfdiscer.no/products/kc-pro-animal"
-            }
-          ]
-        },
-        {
-          "discId": "innova-roc",
-          "name": "Roc",
-          "brand": "Innova",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "KC Pro",
-          "edition": null,
-          "firstSeenMs": 1787035153174,
-          "price": 224,
-          "stores": [
-            {
-              "store": "kvamdgs",
-              "storeName": "Kvam DGS",
-              "price": 224,
-              "url": "https://kvamdgs.no/products/kc-pro-roc"
-            }
-          ]
-        },
-        {
-          "discId": "latitude-gatekeeper",
-          "name": "Gatekeeper",
-          "brand": "Latitude 64",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "edition": null,
-          "firstSeenMs": 1786949917916,
-          "price": 228,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 228,
-              "url": "https://www.discexpress.se/products/gatekeeper-vip"
-            }
-          ]
         }
       ]
     },
@@ -542,12 +1159,18 @@
           "plastic": "Proton",
           "edition": null,
           "firstSeenMs": 1786862737247,
-          "price": 278,
+          "price": 254,
           "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 254,
+              "url": "https://wearediscgolf.no/produkt/proton-rhythm-new-stamp/"
+            },
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 278,
+              "price": 277,
               "url": "https://www.discexpress.se/products/rhythm-proton-plc"
             }
           ]
@@ -561,32 +1184,19 @@
           "plastic": "Eclipse",
           "edition": null,
           "firstSeenMs": 1786862737247,
-          "price": 298,
+          "price": 264,
           "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 264,
+              "url": "https://wearediscgolf.no/produkt/eclipse-photon/"
+            },
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 298,
+              "price": 297,
               "url": "https://www.discexpress.se/products/photon-eclipse-glow"
-            }
-          ]
-        },
-        {
-          "discId": "innova-thunderbird",
-          "name": "Thunderbird",
-          "brand": "Innova",
-          "image": "",
-          "type": "new-release",
-          "plastic": "Duo",
-          "edition": "Special Edition",
-          "firstSeenMs": 1786776130108,
-          "price": 308,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 308,
-              "url": "https://www.discexpress.se/products/thunderbird-duo-special-edition"
             }
           ]
         },
@@ -599,12 +1209,12 @@
           "plastic": "Opto",
           "edition": null,
           "firstSeenMs": 1786714343164,
-          "price": 188,
+          "price": 187,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 188,
+              "price": 187,
               "url": "https://discsport.se/discar/mold/bite"
             }
           ]
@@ -618,12 +1228,12 @@
           "plastic": "Opto-X",
           "edition": "JohnE McCray",
           "firstSeenMs": 1786693317975,
-          "price": 287,
+          "price": 286,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 287,
+              "price": 286,
               "url": "https://discsport.se/discar/mold/ballista-pro"
             }
           ]
@@ -634,16 +1244,47 @@
           "brand": "Axiom",
           "image": "",
           "type": "new-at-store",
-          "plastic": "Fission",
+          "plastic": "Neutron",
           "edition": null,
           "firstSeenMs": 1786862737247,
-          "price": 308,
+          "price": 244,
           "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 244,
+              "url": "https://wearediscgolf.no/produkt/neutron-rhythm-blank/"
+            },
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 308,
+              "price": 307,
               "url": "https://www.discexpress.se/products/rhythm-fission-plc"
+            }
+          ]
+        },
+        {
+          "discId": "innova-arachnid",
+          "name": "Arachnid",
+          "brand": "Innova",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Halo Star",
+          "edition": null,
+          "firstSeenMs": 1786777039458,
+          "price": 271,
+          "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 317,
+              "url": "https://rocketdiscs.com/innova-arachnid"
+            },
+            {
+              "store": "ugglans",
+              "storeName": "Ugglans Discgolf",
+              "price": 271,
+              "url": "https://ugglansdiscgolf.se/products/halo-star-arachnid"
             }
           ]
         },
@@ -656,12 +1297,12 @@
           "plastic": "Z",
           "edition": "Paul McBeth",
           "firstSeenMs": 1786714343164,
-          "price": 287,
+          "price": 286,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 287,
+              "price": 286,
               "url": "https://discsport.se/discar/mold/hades"
             }
           ]
@@ -672,15 +1313,27 @@
           "brand": "Innova",
           "image": "",
           "type": "new-at-store",
-          "plastic": "DX",
+          "plastic": "Halo Star",
           "edition": null,
           "firstSeenMs": 1786693317975,
-          "price": 198,
+          "price": 197,
           "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 304,
+              "url": "https://wearediscgolf.no/produkt/halo-star-fox/"
+            },
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 218,
+              "url": "https://rocketdiscs.com/innova-fox"
+            },
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 198,
+              "price": 197,
               "url": "https://discsport.se/discar/mold/fox"
             }
           ]
@@ -694,12 +1347,18 @@
           "plastic": "Q-Line",
           "edition": "Gannon Buhr",
           "firstSeenMs": 1786693317975,
-          "price": 307,
+          "price": 304,
           "stores": [
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 304,
+              "url": "https://wearediscgolf.no/produkt/q-line-cloudbreaker-gannon-buhr/"
+            },
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 307,
+              "price": 306,
               "url": "https://discsport.se/discar/mold/premier-cloudbreaker"
             }
           ]
@@ -713,12 +1372,12 @@
           "plastic": "DX",
           "edition": null,
           "firstSeenMs": 1786693317975,
-          "price": 198,
+          "price": 197,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 198,
+              "price": 197,
               "url": "https://discsport.se/discar/mold/lynx"
             }
           ]
@@ -732,12 +1391,18 @@
           "plastic": "Halo Star",
           "edition": null,
           "firstSeenMs": 1786607163586,
-          "price": 277,
+          "price": 276,
           "stores": [
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 317,
+              "url": "https://rocketdiscs.com/innova-tern"
+            },
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 277,
+              "price": 276,
               "url": "https://discsport.se/discar/mold/tern"
             }
           ]
@@ -751,12 +1416,12 @@
           "plastic": "ESP",
           "edition": null,
           "firstSeenMs": 1786607163586,
-          "price": 267,
+          "price": 266,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 267,
+              "price": 266,
               "url": "https://discsport.se/discar/mold/nuke-ss"
             }
           ]
@@ -800,7 +1465,7 @@
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 288,
+              "price": 287,
               "url": "https://www.discexpress.se/products/insanity-plasma-plc"
             }
           ]
@@ -814,12 +1479,12 @@
           "plastic": "Horizon",
           "edition": null,
           "firstSeenMs": 1786347948154,
-          "price": 267,
+          "price": 266,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 267,
+              "price": 266,
               "url": "https://discsport.se/discar/mold/p2x"
             }
           ]
@@ -842,12 +1507,12 @@
           "plastic": null,
           "edition": "First Run",
           "firstSeenMs": 1786258788090,
-          "price": 327,
+          "price": 326,
           "stores": [
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 327,
+              "price": 326,
               "url": "https://www.discexpress.se/products/captains-caliber-z-jawbreaker-first-run-seppo-paju"
             }
           ]
@@ -918,12 +1583,12 @@
           "plastic": "Proto Glow",
           "edition": null,
           "firstSeenMs": 1786087452155,
-          "price": 278,
+          "price": 277,
           "stores": [
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 278,
+              "price": 277,
               "url": "https://www.discexpress.se/products/destroyer-champion-proto-glow"
             }
           ]
@@ -967,183 +1632,6 @@
           ]
         },
         {
-          "discId": "kastaplast-berg",
-          "name": "Berg",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/berg-x"
-            }
-          ]
-        },
-        {
-          "discId": "kastaplast-jrn",
-          "name": "Järn",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/jaern"
-            }
-          ]
-        },
-        {
-          "discId": "discmania-drop",
-          "name": "Drop",
-          "brand": "Discmania",
-          "image": "",
-          "type": "new-release",
-          "plastic": "Horizon",
-          "edition": "Niklas Anttila",
-          "firstSeenMs": 1785920000186,
-          "price": 307,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 307,
-              "url": "https://discsport.se/discar/mold/drop"
-            },
-            {
-              "store": "wearediscgolf",
-              "storeName": "We Are Disc Golf",
-              "price": 314,
-              "url": "https://wearediscgolf.no/produkt/horizon-s-line-drop-niklas-anttila-2026/"
-            }
-          ]
-        },
-        {
-          "discId": "kastaplast-nord",
-          "name": "Nord",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/nord"
-            }
-          ]
-        },
-        {
-          "discId": "kastaplast-idog",
-          "name": "Idog",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/idog"
-            }
-          ]
-        },
-        {
-          "discId": "kastaplast-malm",
-          "name": "Malm",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/malm"
-            }
-          ]
-        },
-        {
-          "discId": "kastaplast-stl",
-          "name": "Stål",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Tour Series",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/staal"
-            }
-          ]
-        },
-        {
-          "discId": "kastaplast-guld",
-          "name": "Guld",
-          "brand": "Kastaplast",
-          "image": "",
-          "type": "new-release",
-          "plastic": "K1 Hard Glow",
-          "edition": "Clay Edwards",
-          "firstSeenMs": 1785920000186,
-          "price": 317,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 317,
-              "url": "https://discsport.se/discar/mold/guld"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-flick",
-          "name": "Flick",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-release",
-          "plastic": "Z Sparkle",
-          "edition": "Ledgestone",
-          "firstSeenMs": 1785918690479,
-          "price": 374,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 374,
-              "url": "https://arcticdisc.no/products/z-sparkle-flick-ledgestone-2026"
-            }
-          ]
-        },
-        {
           "discId": "dynamic-captain",
           "name": "Captain",
           "brand": "Dynamic Discs",
@@ -1152,12 +1640,12 @@
           "plastic": "Lucid",
           "edition": null,
           "firstSeenMs": 1786259268795,
-          "price": 228,
+          "price": 227,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 228,
+              "price": 227,
               "url": "https://discsport.se/discar/mold/captain"
             }
           ]
@@ -1171,12 +1659,12 @@
           "plastic": "Z",
           "edition": null,
           "firstSeenMs": 1786259268795,
-          "price": 237,
+          "price": 236,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 237,
+              "price": 236,
               "url": "https://discsport.se/discar/mold/mantis"
             }
           ]
@@ -1190,12 +1678,12 @@
           "plastic": "Cosmic Electron",
           "edition": null,
           "firstSeenMs": 1786173075521,
-          "price": 218,
+          "price": 217,
           "stores": [
             {
               "store": "discsport",
               "storeName": "Discsport",
-              "price": 218,
+              "price": 217,
               "url": "https://discsport.se/discar/mold/watt"
             }
           ]
@@ -1321,6 +1809,25 @@
           ]
         },
         {
+          "discId": "mvp-particle",
+          "name": "Particle",
+          "brand": "MVP",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Particle Proton Soft",
+          "edition": "OTB Open",
+          "firstSeenMs": 1786172054163,
+          "price": 320,
+          "stores": [
+            {
+              "store": "aceshop",
+              "storeName": "Aceshop",
+              "price": 320,
+              "url": "https://aceshop.no/product/axiom-particle-proton-soft-rhythm-otb-open-2026/"
+            }
+          ]
+        },
+        {
           "discId": "axiom-pyro",
           "name": "Pyro",
           "brand": "Axiom",
@@ -1386,13 +1893,19 @@
           "plastic": "Neutron",
           "edition": null,
           "firstSeenMs": 1786172054163,
-          "price": 270,
+          "price": 254,
           "stores": [
             {
               "store": "aceshop",
               "storeName": "Aceshop",
               "price": 270,
               "url": "https://aceshop.no/product/mvp-neutron-stasis/"
+            },
+            {
+              "store": "wearediscgolf",
+              "storeName": "We Are Disc Golf",
+              "price": 254,
+              "url": "https://wearediscgolf.no/produkt/neutron-stasis/"
             }
           ]
         },
@@ -1405,12 +1918,12 @@
           "plastic": "BT",
           "edition": null,
           "firstSeenMs": 1786087452155,
-          "price": 179,
+          "price": 178,
           "stores": [
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 179,
+              "price": 178,
               "url": "https://www.discexpress.se/products/harp-bt-mega-soft"
             }
           ]
@@ -1506,12 +2019,12 @@
           "plastic": null,
           "edition": "Limited Edition",
           "firstSeenMs": 1786005998191,
-          "price": 268,
+          "price": 267,
           "stores": [
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 268,
+              "price": 267,
               "url": "https://www.discexpress.se/products/founder-c-line-horizon-flipmageddon-limited-edition-by-jmilly"
             }
           ]
@@ -1563,7 +2076,7 @@
           "plastic": null,
           "edition": "Prototype",
           "firstSeenMs": 1786005167634,
-          "price": 199,
+          "price": 198,
           "stores": [
             {
               "store": "arcticdisc",
@@ -1574,7 +2087,7 @@
             {
               "store": "discexpress",
               "storeName": "Discexpress",
-              "price": 199,
+              "price": 198,
               "url": "https://www.discexpress.se/products/peak-project-chaingrip-prototype"
             }
           ]
@@ -1587,203 +2100,14 @@
           "type": "new-at-store",
           "plastic": "C-Line Glow",
           "edition": "Gannon Buhr",
-          "firstSeenMs": 1785920446535,
-          "price": 312,
+          "firstSeenMs": 1786005167634,
+          "price": 364,
           "stores": [
             {
               "store": "arcticdisc",
               "storeName": "Arctic Disc",
               "price": 364,
               "url": "https://arcticdisc.no/products/c-line-glow-md5-gannon-buhr-signature-series-cryo-blade-2"
-            },
-            {
-              "store": "ugglans",
-              "storeName": "Ugglans Discgolf",
-              "price": 312,
-              "url": "https://ugglansdiscgolf.se/products/c-line-glow-md5-gannon-buhr-signature-series-cryo-blade-2"
-            }
-          ]
-        },
-        {
-          "discId": "westside-destiny",
-          "name": "Destiny",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Tournament",
-          "edition": null,
-          "firstSeenMs": 1785920000186,
-          "price": 267,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 267,
-              "url": "https://discsport.se/discar/mold/destiny"
-            },
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 268,
-              "url": "https://www.discexpress.se/products/destiny-tournament-x-ring"
-            }
-          ]
-        },
-        {
-          "discId": "westside-hatchet",
-          "name": "Hatchet",
-          "brand": "Westside Discs",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Tournament",
-          "edition": null,
-          "firstSeenMs": 1785920000186,
-          "price": 267,
-          "stores": [
-            {
-              "store": "discsport",
-              "storeName": "Discsport",
-              "price": 267,
-              "url": "https://discsport.se/discar/mold/hatchet"
-            }
-          ]
-        },
-        {
-          "discId": "mvp-particle",
-          "name": "Particle",
-          "brand": "MVP",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Particle Proton Soft",
-          "edition": "OTB Open",
-          "firstSeenMs": 1785918690479,
-          "price": 320,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 324,
-              "url": "https://arcticdisc.no/products/particle-proton-soft-rhythm-otb-open-2026"
-            },
-            {
-              "store": "aceshop",
-              "storeName": "Aceshop",
-              "price": 320,
-              "url": "https://aceshop.no/product/axiom-particle-proton-soft-rhythm-otb-open-2026/"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-anax",
-          "name": "Anax",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "ESP",
-          "edition": "Bottom Stamp",
-          "firstSeenMs": 1785918690479,
-          "price": 274,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 274,
-              "url": "https://arcticdisc.no/products/esp-anax-bottom-stamp"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-force",
-          "name": "Force",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "ESP",
-          "edition": null,
-          "firstSeenMs": 1785918690479,
-          "price": 314,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 314,
-              "url": "https://arcticdisc.no/products/esp-force-pm"
-            }
-          ]
-        },
-        {
-          "discId": "axiom-delirium",
-          "name": "Delirium",
-          "brand": "Axiom",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Fission",
-          "edition": "OTB Open",
-          "firstSeenMs": 1785918690479,
-          "price": 324,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 324,
-              "url": "https://arcticdisc.no/products/fission-delirium-otb-open-2026"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-raptor",
-          "name": "Raptor",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "ESP",
-          "edition": "Bottom Stamp",
-          "firstSeenMs": 1785918690479,
-          "price": 274,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 274,
-              "url": "https://arcticdisc.no/products/esp-raptor-bottom-stamp"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-thrasher",
-          "name": "Thrasher",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Z",
-          "edition": null,
-          "firstSeenMs": 1785918690479,
-          "price": 344,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 344,
-              "url": "https://arcticdisc.no/products/z-jawbreaker-captains-thrasher-missy-gannon"
-            }
-          ]
-        },
-        {
-          "discId": "discraft-undertaker",
-          "name": "Undertaker",
-          "brand": "Discraft",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "Big Z",
-          "edition": null,
-          "firstSeenMs": 1785918690479,
-          "price": 274,
-          "stores": [
-            {
-              "store": "arcticdisc",
-              "storeName": "Arctic Disc",
-              "price": 274,
-              "url": "https://arcticdisc.no/products/big-z-undertaker"
             }
           ]
         }
