@@ -27,6 +27,7 @@ const STEPS = [
   // Aceshop entries with no error surfaced) silently discards the entire run.
   { name: 'Aceshop',                         cmd: 'node scripts/scrape-aceshop.js', timeoutMs: 20 * 60 * 1000 },
   { name: 'Frisbeebutikken',                 cmd: 'node scripts/scrape-frisbeebutikken.js' },
+  { name: 'Starframe',                       cmd: 'node scripts/scrape-starframe.js' },
   { name: 'GolfDiscer',                      cmd: 'node scripts/scrape-golfdiscer.js' },
   { name: 'Frisbee Sør',                     cmd: 'node scripts/scrape-frisbeesor.js' },
   { name: 'NyDisk',                          cmd: 'node scripts/scrape-nydisk.js' },
