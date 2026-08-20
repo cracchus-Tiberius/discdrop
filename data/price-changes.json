@@ -1,31 +1,31 @@
 {
-  "generated": "2026-08-19T09:43:39.310Z",
+  "generated": "2026-08-20T07:10:54.675Z",
   "summary": {
-    "priceChanges24h": 4,
+    "priceChanges24h": 2,
     "newDiscs24h": 0,
     "storesChecked": 15
   },
   "drops": [
     {
-      "discId": "mvp-control",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "Neutron",
-      "oldPrice": 269,
-      "newPrice": 254,
+      "discId": "latitude-squall",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": null,
+      "oldPrice": 266,
+      "newPrice": 249,
       "pct": -6,
-      "changedAt": "2026-08-19T09:18:47.805Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "day",
       "history": [
-        278,
-        278,
-        278,
-        278,
-        278,
-        269,
-        254
+        267,
+        267,
+        267,
+        267,
+        267,
+        266,
+        249
       ],
-      "url": "https://wearediscgolf.no/produkt/neutron-control/"
+      "url": "https://www.starframe.no/products/spark-squall"
     },
     {
       "discId": "latitude-function",
@@ -35,7 +35,7 @@
       "oldPrice": 237,
       "newPrice": 179,
       "pct": -24,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         237,
@@ -56,7 +56,7 @@
       "oldPrice": 288,
       "newPrice": 259,
       "pct": -10,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         288,
@@ -77,7 +77,7 @@
       "oldPrice": 278,
       "newPrice": 254,
       "pct": -9,
-      "changedAt": "2026-08-19T09:18:47.805Z",
+      "changedAt": "2026-08-20T06:41:23.324Z",
       "period": "week",
       "history": [
         278,
@@ -85,10 +85,31 @@
         278,
         278,
         278,
-        269,
+        254,
         254
       ],
       "url": "https://wearediscgolf.no/produkt/neutron-control/"
+    },
+    {
+      "discId": "latitude-squall",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": null,
+      "oldPrice": 267,
+      "newPrice": 249,
+      "pct": -7,
+      "changedAt": "2026-08-20T06:52:35.591Z",
+      "period": "week",
+      "history": [
+        267,
+        267,
+        267,
+        267,
+        267,
+        266,
+        249
+      ],
+      "url": "https://www.starframe.no/products/spark-squall"
     },
     {
       "discId": "prodigy-reverb",
@@ -98,7 +119,7 @@
       "oldPrice": 295,
       "newPrice": 275,
       "pct": -7,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         295,
@@ -119,7 +140,7 @@
       "oldPrice": 278,
       "newPrice": 259,
       "pct": -7,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         278,
@@ -140,7 +161,7 @@
       "oldPrice": 264,
       "newPrice": 249,
       "pct": -6,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         264,
@@ -161,7 +182,7 @@
       "oldPrice": 264,
       "newPrice": 249,
       "pct": -6,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         264,
@@ -182,7 +203,7 @@
       "oldPrice": 208,
       "newPrice": 195,
       "pct": -6,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         208,
@@ -203,7 +224,7 @@
       "oldPrice": 274,
       "newPrice": 259,
       "pct": -5,
-      "changedAt": "2026-08-19T09:25:29.979Z",
+      "changedAt": "2026-08-20T06:52:35.591Z",
       "period": "week",
       "history": [
         274,
@@ -218,5 +239,5 @@
     }
   ],
   "totalDrops": 1,
-  "totalDropsWeek": 9
+  "totalDropsWeek": 10
 }
