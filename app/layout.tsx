@@ -20,7 +20,11 @@ export const metadata: Metadata = {
     "sammenlign diskgolfpriser",
     "disc golf",
   ],
-  icons: { icon: "/logo.svg" },
+  // No manual `icons` entry here — app/favicon.ico, app/icon.svg, and
+  // app/apple-icon.png (Next's file-convention icons) already generate the
+  // correct <link> tags automatically; adding one here would just produce
+  // a duplicate/conflicting tag alongside them.
+  manifest: "/site.webmanifest",
   metadataBase: new URL("https://discdrop.net"),
   alternates: {
     canonical: "https://discdrop.net",
