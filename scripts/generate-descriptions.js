@@ -37,17 +37,31 @@ function save(descriptions) {
 
 function buildPrompt(disc) {
   const typeLabel = { driver: 'driver', fairway: 'fairway driver', midrange: 'midrange', putter: 'putter' }[disc.type] ?? disc.type;
-  return `Write a 2-3 sentence disc golf disc description in Norwegian Bokmål for the ${disc.brand} ${disc.name}. Flight numbers: Speed ${disc.flight.speed}, Glide ${disc.flight.glide}, Turn ${disc.flight.turn}, Fade ${disc.flight.fade}. Type: ${typeLabel}. Keep it practical and friendly — what player suits it and what is it known for? If there are notable plastic types worth mentioning, include that briefly. Answer in plain text only, no quotes.`;
+  return `Write a 2-3 sentence disc golf disc description in Norwegian Bokmål for the ${disc.brand} ${disc.name}. Flight numbers: Speed ${disc.flight.speed}, Glide ${disc.flight.glide}, Turn ${disc.flight.turn}, Fade ${disc.flight.fade}. Type: ${typeLabel}. Keep it practical and friendly — what player suits it and what is it known for? Do not state a numeric speed/glide/turn/fade value anywhere in the text other than the exact ones given above — if you reference a flight number, it must match exactly. Only mention a specific plastic type by name if you are confident it is a real, commonly available plastic for this exact disc; if unsure, use a generic phrase like "ulike plasttyper" instead of inventing one. Answer in plain text only, no quotes.`;
+}
+
+// Confirmed in production 2026-08-21: the model (even given the correct
+// flight numbers in the prompt) sometimes hallucinates a DIFFERENT speed
+// number in the generated prose — e.g. told Speed 6, wrote "speed 10" in the
+// description. 26 of 660 existing descriptions (~4%) had this exact bug,
+// several badly (a real speed-4 putter described as speed 9-10). Catch it
+// before saving: scan for any "speed N" mention and reject if it doesn't
+// match the real value within a small tolerance (rounding/half-step language
+// like "rundt 9" is fine; a flatly different number is not).
+function hasSpeedMismatch(text, realSpeed) {
+  const matches = [...text.matchAll(/speed\s*(?:på\s*)?(\d+(?:[.,]\d+)?)/gi)];
+  return matches.some((m) => Math.abs(parseFloat(m[1].replace(',', '.')) - realSpeed) > 0.6);
 }
 
 async function generateOne(client, disc, attempt = 1) {
+  let text;
   try {
     const msg = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 256,
       messages: [{ role: 'user', content: buildPrompt(disc) }],
     });
-    return msg.content[0]?.text?.trim() ?? '';
+    text = msg.content[0]?.text?.trim() ?? '';
   } catch (err) {
     if (attempt < 3 && err.status === 429) {
       console.log(`  ↻ Rate limited on ${disc.brand} ${disc.name} — waiting ${RETRY_DELAY_MS / 1000}s before retry ${attempt + 1}/3`);
@@ -56,6 +70,15 @@ async function generateOne(client, disc, attempt = 1) {
     }
     throw err;
   }
+
+  if (text && hasSpeedMismatch(text, disc.flight.speed) && attempt < 3) {
+    console.log(`  ↻ Speed mismatch in generated text for ${disc.brand} ${disc.name} (real speed ${disc.flight.speed}) — retry ${attempt + 1}/3`);
+    return generateOne(client, disc, attempt + 1);
+  }
+  if (text && hasSpeedMismatch(text, disc.flight.speed)) {
+    console.warn(`  ⚠ Giving up after 3 attempts — ${disc.brand} ${disc.name} still has a speed mismatch, saving anyway (needs manual review)`);
+  }
+  return text;
 }
 
 async function main() {
