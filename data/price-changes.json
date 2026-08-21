@@ -1,31 +1,73 @@
 {
-  "generated": "2026-08-20T07:10:54.675Z",
+  "generated": "2026-08-21T07:08:33.184Z",
   "summary": {
-    "priceChanges24h": 2,
+    "priceChanges24h": 4,
     "newDiscs24h": 0,
     "storesChecked": 15
   },
   "drops": [
     {
-      "discId": "latitude-squall",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": null,
-      "oldPrice": 266,
-      "newPrice": 249,
-      "pct": -6,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "discId": "westside-crown",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Origio",
+      "oldPrice": 177,
+      "newPrice": 147,
+      "pct": -17,
+      "changedAt": "2026-08-21T07:00:20.330Z",
       "period": "day",
       "history": [
-        267,
-        267,
-        267,
-        267,
-        267,
-        266,
-        249
+        148,
+        148,
+        148,
+        148,
+        148,
+        177,
+        147
       ],
-      "url": "https://www.starframe.no/products/spark-squall"
+      "url": "https://discsport.se/discar/mold/crown"
+    },
+    {
+      "discId": "discmania-dd2",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Horizon",
+      "oldPrice": 307,
+      "newPrice": 276,
+      "pct": -10,
+      "changedAt": "2026-08-21T07:00:20.330Z",
+      "period": "day",
+      "history": [
+        308,
+        308,
+        308,
+        308,
+        307,
+        307,
+        276
+      ],
+      "url": "https://discsport.se/discar/mold/dd2"
+    },
+    {
+      "discId": "discraft-crush",
+      "store": "nydisk",
+      "storeName": "NyDisk",
+      "plastic": null,
+      "oldPrice": 316,
+      "newPrice": 295,
+      "pct": -7,
+      "changedAt": "2026-08-21T06:51:07.113Z",
+      "period": "day",
+      "history": [
+        317,
+        317,
+        317,
+        317,
+        317,
+        316,
+        295
+      ],
+      "url": "https://nydisk.no/products/discmania-c-line-cd1-the-crush-boys"
     },
     {
       "discId": "latitude-function",
@@ -35,18 +77,39 @@
       "oldPrice": 237,
       "newPrice": 179,
       "pct": -24,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         237,
         237,
         237,
         237,
-        237,
+        179,
         179,
         179
       ],
       "url": "https://www.starframe.no/products/geo-function"
+    },
+    {
+      "discId": "discmania-dd2",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Horizon",
+      "oldPrice": 308,
+      "newPrice": 276,
+      "pct": -10,
+      "changedAt": "2026-08-21T07:00:20.330Z",
+      "period": "week",
+      "history": [
+        308,
+        308,
+        308,
+        308,
+        307,
+        307,
+        276
+      ],
+      "url": "https://discsport.se/discar/mold/dd2"
     },
     {
       "discId": "prodigy-fx-4",
@@ -56,14 +119,14 @@
       "oldPrice": 288,
       "newPrice": 259,
       "pct": -10,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         288,
         288,
         288,
         288,
-        288,
+        259,
         259,
         259
       ],
@@ -84,32 +147,11 @@
         278,
         278,
         278,
-        278,
+        254,
         254,
         254
       ],
       "url": "https://wearediscgolf.no/produkt/neutron-control/"
-    },
-    {
-      "discId": "latitude-squall",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": null,
-      "oldPrice": 267,
-      "newPrice": 249,
-      "pct": -7,
-      "changedAt": "2026-08-20T06:52:35.591Z",
-      "period": "week",
-      "history": [
-        267,
-        267,
-        267,
-        267,
-        267,
-        266,
-        249
-      ],
-      "url": "https://www.starframe.no/products/spark-squall"
     },
     {
       "discId": "prodigy-reverb",
@@ -119,18 +161,39 @@
       "oldPrice": 295,
       "newPrice": 275,
       "pct": -7,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         295,
         295,
         295,
         295,
-        295,
+        275,
         275,
         275
       ],
       "url": "https://www.starframe.no/products/reverb-400-kevin-jones"
+    },
+    {
+      "discId": "discraft-crush",
+      "store": "nydisk",
+      "storeName": "NyDisk",
+      "plastic": null,
+      "oldPrice": 317,
+      "newPrice": 295,
+      "pct": -7,
+      "changedAt": "2026-08-21T06:51:07.113Z",
+      "period": "week",
+      "history": [
+        317,
+        317,
+        317,
+        317,
+        317,
+        316,
+        295
+      ],
+      "url": "https://nydisk.no/products/discmania-c-line-cd1-the-crush-boys"
     },
     {
       "discId": "prodigy-f9",
@@ -140,14 +203,14 @@
       "oldPrice": 278,
       "newPrice": 259,
       "pct": -7,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         278,
         278,
         278,
         278,
-        278,
+        259,
         259,
         259
       ],
@@ -161,14 +224,14 @@
       "oldPrice": 264,
       "newPrice": 249,
       "pct": -6,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         264,
         264,
         264,
         264,
-        264,
+        249,
         249,
         249
       ],
@@ -182,14 +245,14 @@
       "oldPrice": 264,
       "newPrice": 249,
       "pct": -6,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         264,
         264,
         264,
         264,
-        264,
+        249,
         249,
         249
       ],
@@ -203,14 +266,14 @@
       "oldPrice": 208,
       "newPrice": 195,
       "pct": -6,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         208,
         208,
         208,
         208,
-        208,
+        195,
         195,
         195
       ],
@@ -224,20 +287,20 @@
       "oldPrice": 274,
       "newPrice": 259,
       "pct": -5,
-      "changedAt": "2026-08-20T06:52:35.591Z",
+      "changedAt": "2026-08-21T06:50:28.491Z",
       "period": "week",
       "history": [
         274,
         274,
         274,
-        274,
         273,
+        259,
         259,
         259
       ],
       "url": "https://www.starframe.no/products/opto-ice-knight"
     }
   ],
-  "totalDrops": 1,
-  "totalDropsWeek": 10
+  "totalDrops": 3,
+  "totalDropsWeek": 11
 }
