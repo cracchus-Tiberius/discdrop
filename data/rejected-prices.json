@@ -1,11 +1,20 @@
 {
-  "generated": "2026-08-22T15:20:34.871Z",
+  "generated": "2026-08-22T17:41:53.918Z",
   "bounds": {
     "min": 50,
     "max": 600
   },
-  "count": 9,
+  "count": 10,
   "rejected": [
+    {
+      "discId": "viking-odin",
+      "discName": "Viking Discs Odin",
+      "store": "hyzershop",
+      "price": 2799,
+      "reason": "above-max",
+      "url": "https://hyzershop.no/products/odin",
+      "lastScraped": "2026-08-22T17:08:01.249Z"
+    },
     {
       "discId": "mvp-shift",
       "discName": "Streamline Shift",
@@ -13,7 +22,7 @@
       "price": 2306,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-08-22T15:03:46.384Z"
+      "lastScraped": "2026-08-22T17:25:19.160Z"
     },
     {
       "discId": "streamline-range",
@@ -22,7 +31,7 @@
       "price": 981,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-08-22T15:03:46.384Z"
+      "lastScraped": "2026-08-22T17:25:19.160Z"
     },
     {
       "discId": "innova-firebird",
@@ -31,7 +40,7 @@
       "price": 900,
       "reason": "above-max",
       "url": "https://www.starframe.no/products/champion-glow-firebird-nate-sexy-april-fools",
-      "lastScraped": "2026-08-22T15:02:45.202Z"
+      "lastScraped": "2026-08-22T17:23:49.521Z"
     },
     {
       "discId": "latitude-core",
@@ -40,7 +49,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-08-22T15:03:09.486Z"
+      "lastScraped": "2026-08-22T17:24:13.284Z"
     },
     {
       "discId": "latitude-gatekeeper",
@@ -49,7 +58,7 @@
       "price": 749,
       "reason": "above-max",
       "url": "https://wearediscgolf.no/produkt/the-gatekeeper-box-5/",
-      "lastScraped": "2026-08-22T14:48:27.659Z"
+      "lastScraped": "2026-08-22T17:08:01.249Z"
     },
     {
       "discId": "latitude-core",
@@ -76,7 +85,7 @@
       "price": 48,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-08-22T15:03:46.384Z"
+      "lastScraped": "2026-08-22T17:25:19.160Z"
     },
     {
       "discId": "discmania-active",
@@ -85,7 +94,7 @@
       "price": 48,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/mermaid-basic-active",
-      "lastScraped": "2026-08-22T15:03:46.384Z"
+      "lastScraped": "2026-08-22T17:25:19.160Z"
     }
   ]
 }
