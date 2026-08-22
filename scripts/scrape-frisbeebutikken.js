@@ -133,12 +133,27 @@ const BROWSER_HEADERS = {
   'Cache-Control':    'max-age=0',
 };
 
-async function fetchPage(url, referer) {
+// Confirmed in production 2026-08-22: page 1 timed out on attempt 1, AND the
+// Playwright fallback's initial page.goto also timed out (30s) in the same
+// run — both platform-side attempts failing together in one ~10-minute
+// window (alongside an unrelated store on a different platform entirely)
+// points at a transient runner/network blip, not a site break. 2 retries
+// with a short backoff here costs seconds and can avoid needing the much
+// heavier Playwright fallback at all.
+async function fetchPage(url, referer, attempts = 2) {
   const headers = { ...BROWSER_HEADERS };
   if (referer) headers['Referer'] = referer;
-  const res = await fetch(url, { headers, timeout: 20000, follow: 5 });
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const res = await fetch(url, { headers, timeout: 20000, follow: 5 });
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      return await res.text();
+    } catch (err) {
+      if (attempt === attempts) throw err;
+      console.warn(`    ⚠ Attempt ${attempt}/${attempts} failed to fetch ${url}: ${err.message} — retrying in 3s`);
+      await sleep(3000);
+    }
+  }
 }
 
 async function scrapeWithHeaders() {
@@ -286,9 +301,18 @@ async function scrapeWithPlaywright() {
   const seenUrls = new Set();
 
   try {
-    console.log(`    Visiting ${STORE.baseUrl}...`);
-    await page.goto(STORE.baseUrl, { waitUntil: 'networkidle', timeout: 30000 });
-    await randomDelay(2000, 3000);
+    // Just a "look like a real visitor" warm-up before the category page —
+    // not itself a data source, so a timeout here (confirmed in production
+    // 2026-08-22, same run as fetchPage's retries above) shouldn't abort the
+    // whole attempt when the actual category page load right after it might
+    // still succeed fine.
+    try {
+      console.log(`    Visiting ${STORE.baseUrl}...`);
+      await page.goto(STORE.baseUrl, { waitUntil: 'networkidle', timeout: 30000 });
+      await randomDelay(2000, 3000);
+    } catch (err) {
+      console.warn(`    ⚠ Warm-up visit to ${STORE.baseUrl} failed (${err.message}) — continuing to category page anyway`);
+    }
 
     // Page 1 — determine max pages
     await page.goto(buildPageUrl(1), { waitUntil: 'networkidle', timeout: 30000 });
