@@ -37,6 +37,37 @@ const STORES = [
     shipping: 45,
     type: 'shopify',
   },
+  {
+    key: 'hyzershop',
+    name: 'HyzerShop',
+    baseUrl: 'https://hyzershop.no',
+    freeShippingOver: 749, // confirmed: hyzershop.no/products/wraith listing text "Fri frakt*"
+    shipping: 45,
+    type: 'shopify',
+  },
+  {
+    key: 'discgolfdynasty',
+    name: 'Disc Golf Dynasty',
+    baseUrl: 'https://www.discgolfdynasty.no',
+    // freeShippingOver intentionally omitted — their shipping-policy page is
+    // generic template text ("gratis frakt over et bestemt beløp") with no
+    // stated figure anywhere findable (checked the policy page, homepage,
+    // and product pages). shipping:45 matches every other domestic NOK
+    // store's rate in this file, not a confirmed number for this store
+    // specifically — revisit both once an order/checkout confirms them.
+    shipping: 45,
+    type: 'shopify',
+  },
+  {
+    key: 'discsor',
+    name: 'Disc Sør',
+    baseUrl: 'https://discsor.no',
+    // Same caveat as discgolfdynasty above — no confirmed shipping figures
+    // found; shipping:45 is this file's near-universal domestic-store
+    // default, not a verified rate for this store.
+    shipping: 45,
+    type: 'woocommerce-api',
+  },
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

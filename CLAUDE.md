@@ -42,8 +42,10 @@ Package manager: pnpm (always use pnpm, never npm).
 ## Scraper
 - scripts/scrape-all.js runs every store scraper in sequence (10-min timeout each,
   20 min for Aceshop — see comment there). One failure doesn't block the rest.
-- Stores scraped, in run order: WeAreDiscGolf/Kvam DGS/Arctic Disc (scripts/scraper.js,
-  WooCommerce + Shopify JSON APIs), Aceshop, Frisbeebutikken, Starframe, GolfDiscer,
+- Stores scraped, in run order: WeAreDiscGolf/Kvam DGS/Arctic Disc/HyzerShop/Disc Golf
+  Dynasty/Disc Sør (all in scripts/scraper.js — WooCommerce + Shopify JSON APIs;
+  HyzerShop/Disc Golf Dynasty are Shopify, Disc Sør is WooCommerce, same as
+  WeAreDiscGolf), Aceshop, Frisbeebutikken, Starframe, GolfDiscer,
   Frisbee Sør, NyDisk, DiscShopen (Norwegian, NOK — no currency conversion), Discexpress,
   Rocketdiscs, Discsport, Ugglans Discgolf, Discace of Sweden (Swedish/EU — SEK or EUR,
   converted to NOK with a live exchange rate at scrape time, VOEC-registered so MVA is
