@@ -49,12 +49,10 @@ const STORES = [
     key: 'discgolfdynasty',
     name: 'Disc Golf Dynasty',
     baseUrl: 'https://www.discgolfdynasty.no',
-    // freeShippingOver intentionally omitted — their shipping-policy page is
-    // generic template text ("gratis frakt over et bestemt beløp") with no
-    // stated figure anywhere findable (checked the policy page, homepage,
-    // and product pages). shipping:45 matches every other domestic NOK
-    // store's rate in this file, not a confirmed number for this store
-    // specifically — revisit both once an order/checkout confirms them.
+    // shipping:45 confirmed live at checkout 2026-08-22 ("Pakke i
+    // Postkassen" = 45,00 kr, the cheapest option — matches this file's
+    // near-universal default exactly). freeShippingOver still unconfirmed
+    // — the checkout basket was too small (139 kr) to reveal a threshold.
     shipping: 45,
     type: 'shopify',
   },
@@ -62,10 +60,12 @@ const STORES = [
     key: 'discsor',
     name: 'Disc Sør',
     baseUrl: 'https://discsor.no',
-    // Same caveat as discgolfdynasty above — no confirmed shipping figures
-    // found; shipping:45 is this file's near-universal domestic-store
-    // default, not a verified rate for this store.
-    shipping: 45,
+    // shipping:60 confirmed live at checkout 2026-08-22 ("Posten Norge" via
+    // Vipps MobilePay Checkout = 60,00 kr) — NOT this file's usual 45 kr
+    // default, worth calling out since it's the one exception so far.
+    // freeShippingOver still unconfirmed — basket was too small (159 kr) to
+    // reveal a threshold.
+    shipping: 60,
     type: 'woocommerce-api',
   },
 ];
