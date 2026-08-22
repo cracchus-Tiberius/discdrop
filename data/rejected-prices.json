@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-22T07:04:25.505Z",
+  "generated": "2026-08-22T15:20:34.871Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -13,7 +13,7 @@
       "price": 2306,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-08-22T06:47:48.378Z"
+      "lastScraped": "2026-08-22T15:03:46.384Z"
     },
     {
       "discId": "streamline-range",
@@ -22,7 +22,7 @@
       "price": 981,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-08-22T06:47:48.378Z"
+      "lastScraped": "2026-08-22T15:03:46.384Z"
     },
     {
       "discId": "innova-firebird",
@@ -31,7 +31,7 @@
       "price": 900,
       "reason": "above-max",
       "url": "https://www.starframe.no/products/champion-glow-firebird-nate-sexy-april-fools",
-      "lastScraped": "2026-08-21T06:50:28.491Z"
+      "lastScraped": "2026-08-22T15:02:45.202Z"
     },
     {
       "discId": "latitude-core",
@@ -40,7 +40,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-08-22T06:47:05.382Z"
+      "lastScraped": "2026-08-22T15:03:09.486Z"
     },
     {
       "discId": "latitude-gatekeeper",
@@ -49,7 +49,7 @@
       "price": 749,
       "reason": "above-max",
       "url": "https://wearediscgolf.no/produkt/the-gatekeeper-box-5/",
-      "lastScraped": "2026-08-20T06:41:23.324Z"
+      "lastScraped": "2026-08-22T14:48:27.659Z"
     },
     {
       "discId": "latitude-core",
@@ -58,7 +58,7 @@
       "price": 729,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
-      "lastScraped": "2026-08-22T06:47:09.141Z"
+      "lastScraped": "2026-08-22T15:03:13.117Z"
     },
     {
       "discId": "discraft-raptor",
@@ -67,7 +67,7 @@
       "price": 659,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
-      "lastScraped": "2026-08-22T06:47:09.141Z"
+      "lastScraped": "2026-08-22T15:03:13.117Z"
     },
     {
       "discId": "innova-birdie",
@@ -76,7 +76,7 @@
       "price": 48,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-08-22T06:47:48.378Z"
+      "lastScraped": "2026-08-22T15:03:46.384Z"
     },
     {
       "discId": "discmania-active",
@@ -85,7 +85,7 @@
       "price": 48,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/mermaid-basic-active",
-      "lastScraped": "2026-08-22T06:47:48.378Z"
+      "lastScraped": "2026-08-22T15:03:46.384Z"
     }
   ]
 }
