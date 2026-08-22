@@ -48,6 +48,33 @@ function sleep(ms) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
+// Confirmed in production 2026-08-22: a single network timeout fetching
+// page 1 of wearediscgolf's WooCommerce API killed the whole store's run
+// for the day — 0 products found, correctly refused by mergeStoreResults'
+// >50%-drop guard rather than writing garbage, but still left 2 days of
+// stale data with no retry ever attempted. Frisbeebutikken and Starframe
+// (a different platform entirely) timed out the same way in the same
+// ~10-minute window that same run — a transient runner/network blip, not
+// a site-side break. Shared by both the Shopify and WooCommerce fetchers
+// below so neither has its own copy to drift out of sync.
+async function fetchJsonWithRetry(url, options, attempts = 3) {
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      const res = await fetch(url, options);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      if (attempt < attempts) {
+        console.warn(`  ⚠ Attempt ${attempt}/${attempts} failed to fetch ${url}: ${err.message} — retrying in 5s`);
+        await sleep(5000);
+      } else {
+        console.warn(`  ⚠ Failed to fetch ${url} after ${attempts} attempts: ${err.message}`);
+      }
+    }
+  }
+  return null;
+}
+
 function randomDelay() {
   const ms = 2000 + Math.random() * 1000;
   return sleep(ms);
@@ -64,18 +91,11 @@ async function scrapeShopifyStore(store) {
     const url = `${store.baseUrl}/products.json?limit=250&page=${page}`;
     console.log(`  ${store.key} page ${page}: ${url}`);
 
-    let data;
-    try {
-      const res = await fetch(url, {
-        headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
-        timeout: 15000,
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      data = await res.json();
-    } catch (err) {
-      console.warn(`  ⚠ Failed to fetch ${url}: ${err.message}`);
-      break;
-    }
+    const data = await fetchJsonWithRetry(url, {
+      headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
+      timeout: 15000,
+    });
+    if (data === null) break;
 
     const products = data.products || [];
     if (products.length === 0) break;
@@ -143,19 +163,18 @@ async function scrapeWooCommerceApiStore(store) {
     const url = `${store.baseUrl}/wp-json/wc/store/v1/products?per_page=${WC_API_PER_PAGE}&page=${page}&orderby=id&order=asc`;
     console.log(`  ${store.key} page ${page}: ${url}`);
 
-    let data;
-    try {
-      const res = await fetch(url, {
-        headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
-        timeout: 15000,
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      data = await res.json();
-    } catch (err) {
-      console.warn(`  ⚠ Failed to fetch ${url}: ${err.message}`);
-      break;
-    }
-
+    // Confirmed in production 2026-08-22 (and reproduced directly):
+    // per_page=100 with orderby=id&order=asc genuinely takes 12-26s on
+    // wearediscgolf's backend — not a network fluke, this store's WooCommerce
+    // install is just slow to serve a sorted 100-item page. The 15s timeout
+    // that was fine for every other store here was too tight for this one
+    // specifically, killing the whole store's daily run on ~every slow
+    // response. 40s comfortably covers the slowest observed response with
+    // margin, and fetchJsonWithRetry above still retries beyond that.
+    const data = await fetchJsonWithRetry(url, {
+      headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
+      timeout: 40000,
+    });
     if (!Array.isArray(data) || data.length === 0) break;
 
     for (const product of data) {
@@ -251,6 +270,22 @@ async function main() {
   }
   console.log(`\n  Total matched: ${totalMatched}`);
   console.log(`  Total unmatched: ${totalUnmatched}`);
+
+  // Confirmed in production 2026-08-22: wearediscgolf hit a network timeout
+  // and its per-store catch block above logged the error and moved on —
+  // main() still resolved normally, so this whole process exited 0.
+  // scripts/scrape-all.js only tracks pass/fail by exit code per step, so
+  // "WeAreDiscGolf / Kvam / Arctic" was reported as a fully successful step
+  // even though wearediscgolf's data was silently 2 days stale — nothing
+  // in the daily summary ever surfaced it. kvamdgs/arcticdisc's already-
+  // merged data is untouched by this (mergeStoreResults already wrote it
+  // per-store above); this only makes the PROCESS exit code reflect that
+  // at least one store in this run actually failed.
+  const failedStores = Object.values(storeSummary).filter((s) => s.error);
+  if (failedStores.length > 0) {
+    console.error(`\n  ${failedStores.length} store(s) failed: ${failedStores.map((s) => s.name).join(', ')}`);
+    process.exitCode = 1;
+  }
 }
 
 main().catch((err) => {
