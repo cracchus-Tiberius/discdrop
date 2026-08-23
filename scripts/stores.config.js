@@ -282,7 +282,15 @@ function matchDiscCandidate(rawProductName) {
       // keyword (MVP: Neutron/Plasma/R2 Neutron; Latitude 64: Opto — see
       // the prefix lists above), which satisfies hasOtherBrandPlastic below
       // on its own, without needing the literal brand name in the title.
-      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow']);
+      //
+      // "dragon" and "function" — confirmed in production 2026-08-22 via
+      // Prisfall drop review: Disc Golf Dynasty's "Yikun Dragon Da'E" (own
+      // page title says Yikun, a Chinese third-party mold maker per
+      // docs/DiscDrop_Knowledge_Base.md, not Innova) matched innova-dragon,
+      // and Starframe's "GEO Function" (own JSON-LD brand.name: "Discmania")
+      // matched latitude-function. Both are generic enough mold names to
+      // collide the same way as motion/flow above.
+      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function']);
       if (discName.length <= 3 || REQUIRES_BRAND_CHECK.has(discName)) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
