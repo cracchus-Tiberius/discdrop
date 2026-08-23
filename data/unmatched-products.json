@@ -1,209 +1,6 @@
 {
-  "lastUpdated": "2026-08-22T17:41:25.002Z",
+  "lastUpdated": "2026-08-23T07:11:36.976Z",
   "products": [
-    {
-      "store": "frisbeesor",
-      "rawName": "Prototype Hallux &#8211; Ricky Wysocki",
-      "price": 249,
-      "url": "https://www.frisbeesor.no/produkt/prototype-hallux-ricky-wysocki/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "P-Line Swirl Razor Claw &#8211; Kyle Klein",
-      "price": 229,
-      "url": "https://www.frisbeesor.no/produkt/p-line-swirl-razor-claw-kyle-klein/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "SIGR ODIN",
-      "price": 2799,
-      "url": "https://www.frisbeesor.no/produkt/sigr-odin/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "SIGR Balder",
-      "price": 2399,
-      "url": "https://www.frisbeesor.no/produkt/19990/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Älva K1",
-      "price": 229,
-      "url": "https://www.frisbeesor.no/produkt/alva-k1/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Retriver, diskpåle",
-      "price": 499,
-      "url": "https://www.frisbeesor.no/produkt/retriver-diskpale/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "MVP LOGO TRI POD STOOL",
-      "price": 399,
-      "url": "https://www.frisbeesor.no/produkt/mvp-logo-tri-pod-stool/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Latitude 64 Easy-Go E2",
-      "price": 1399,
-      "url": "https://www.frisbeesor.no/produkt/latitude-64-easy-go-e2/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "AX5 Simon Lizotte Line",
-      "price": 3299,
-      "url": "https://www.frisbeesor.no/produkt/ax5-simon-lizotte-line/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "DISCMANIA ARCTIC FLASKE",
-      "price": 299,
-      "url": "https://www.frisbeesor.no/produkt/discmania-arctic-flaske/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Innova DISCatcher Pro 28 ta kontakt for info om leveringstid",
-      "price": 5999,
-      "url": "https://www.frisbeesor.no/produkt/innova-discatcher-pro-28/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "team medlemmer pakke.",
-      "price": 295,
-      "url": "https://www.frisbeesor.no/produkt/team-medlemmer-pakke/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Angler &#8211; Lava",
-      "price": 219,
-      "url": "https://www.frisbeesor.no/produkt/angler-lava/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Great White &#8211; lava",
-      "price": 229,
-      "url": "https://www.frisbeesor.no/produkt/great-white-lava/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Mysterie bokser i flere størrelser i begrenset antall.",
-      "price": 389,
-      "url": "https://www.frisbeesor.no/produkt/mystery-bokser-i-flere-storrelser/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Treningskurv Frisbee Sør inkludert bæreveske.",
-      "price": 2249,
-      "url": "https://www.frisbeesor.no/produkt/treningskurv-frisbee-sor/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Frisbee Sør caps.",
-      "price": 199,
-      "url": "https://www.frisbeesor.no/produkt/frisbee-sor-caps-2/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "klubbtøy kun for medlemmer.",
-      "price": 319,
-      "url": "https://www.frisbeesor.no/produkt/klubbtoy-kun-for-medlemmer/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Shuttle MVP",
-      "price": 649,
-      "url": "https://www.frisbeesor.no/produkt/shuttle-mvp/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Buff Frisbee Sør.",
-      "price": 69,
-      "url": "https://www.frisbeesor.no/produkt/buff-frisbee-sor/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "P model S DuraFlex",
-      "price": 195,
-      "url": "https://www.frisbeesor.no/produkt/p-model-s-duraflex/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Ultimate disk RPM New Zealand style.",
-      "price": 189,
-      "url": "https://www.frisbeesor.no/produkt/ultimate/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Cipher",
-      "price": 189,
-      "url": "https://www.frisbeesor.no/produkt/5010/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Vannflaske Kastaplast.",
-      "price": 149,
-      "url": "https://www.frisbeesor.no/produkt/4703/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "Noble Duke",
-      "price": 165,
-      "url": "https://www.frisbeesor.no/produkt/noble-duke/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "HÅNDLEDDSBÅND &laquo;LYNG&raquo; FLÅTTAVVISENDE!",
-      "price": 89,
-      "url": "https://www.frisbeesor.no/produkt/handleddsband-lyng-flattavvisende/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "SOKKER &laquo;LIND&raquo; FLÅTTAVVISENDE!",
-      "price": 179,
-      "url": "https://www.frisbeesor.no/produkt/2758/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "FERD RYGGSEKK",
-      "price": 1299,
-      "url": "https://www.frisbeesor.no/produkt/ferd-reggsekk/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "GAVEKORT FRISBEE SØR DISKGOLF",
-      "price": 150,
-      "url": "https://www.frisbeesor.no/produkt/gavekort-frisbee-sor-diskgolf/",
-      "inStock": true
-    },
     {
       "store": "wearediscgolf",
       "rawName": "Champion Xcaliber",
@@ -5183,13 +4980,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "MVP Lunar Module - Kurvlys",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "NEO Enigma",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/neo-enigma",
@@ -5204,13 +4994,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Gamma-Solid Neon",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/gamma-solid-neon",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Gamma-Solid Titanium",
       "price": 279,
       "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
@@ -5221,13 +5004,6 @@
       "rawName": "ESP Hallux First Run",
       "price": 249,
       "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
       "inStock": true
     },
     {
@@ -5284,6 +5060,13 @@
       "rawName": "Star Sync",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/star-sync",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
       "inStock": true
     },
     {
@@ -6040,6 +5823,209 @@
       "rawName": "Gavekort",
       "price": 250,
       "url": "https://golfdiscer.no/products/gavekort-1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Prototype Hallux &#8211; Ricky Wysocki",
+      "price": 249,
+      "url": "https://www.frisbeesor.no/produkt/prototype-hallux-ricky-wysocki/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "P-Line Swirl Razor Claw &#8211; Kyle Klein",
+      "price": 229,
+      "url": "https://www.frisbeesor.no/produkt/p-line-swirl-razor-claw-kyle-klein/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "SIGR ODIN",
+      "price": 2799,
+      "url": "https://www.frisbeesor.no/produkt/sigr-odin/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "SIGR Balder",
+      "price": 2399,
+      "url": "https://www.frisbeesor.no/produkt/19990/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Älva K1",
+      "price": 229,
+      "url": "https://www.frisbeesor.no/produkt/alva-k1/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Retriver, diskpåle",
+      "price": 499,
+      "url": "https://www.frisbeesor.no/produkt/retriver-diskpale/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "MVP LOGO TRI POD STOOL",
+      "price": 399,
+      "url": "https://www.frisbeesor.no/produkt/mvp-logo-tri-pod-stool/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Latitude 64 Easy-Go E2",
+      "price": 1399,
+      "url": "https://www.frisbeesor.no/produkt/latitude-64-easy-go-e2/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "AX5 Simon Lizotte Line",
+      "price": 3299,
+      "url": "https://www.frisbeesor.no/produkt/ax5-simon-lizotte-line/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "DISCMANIA ARCTIC FLASKE",
+      "price": 299,
+      "url": "https://www.frisbeesor.no/produkt/discmania-arctic-flaske/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Innova DISCatcher Pro 28 ta kontakt for info om leveringstid",
+      "price": 5999,
+      "url": "https://www.frisbeesor.no/produkt/innova-discatcher-pro-28/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "team medlemmer pakke.",
+      "price": 295,
+      "url": "https://www.frisbeesor.no/produkt/team-medlemmer-pakke/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Angler &#8211; Lava",
+      "price": 219,
+      "url": "https://www.frisbeesor.no/produkt/angler-lava/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Great White &#8211; lava",
+      "price": 229,
+      "url": "https://www.frisbeesor.no/produkt/great-white-lava/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Mysterie bokser i flere størrelser i begrenset antall.",
+      "price": 389,
+      "url": "https://www.frisbeesor.no/produkt/mystery-bokser-i-flere-storrelser/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Treningskurv Frisbee Sør inkludert bæreveske.",
+      "price": 2249,
+      "url": "https://www.frisbeesor.no/produkt/treningskurv-frisbee-sor/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Frisbee Sør caps.",
+      "price": 199,
+      "url": "https://www.frisbeesor.no/produkt/frisbee-sor-caps-2/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "klubbtøy kun for medlemmer.",
+      "price": 319,
+      "url": "https://www.frisbeesor.no/produkt/klubbtoy-kun-for-medlemmer/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Shuttle MVP",
+      "price": 649,
+      "url": "https://www.frisbeesor.no/produkt/shuttle-mvp/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Buff Frisbee Sør.",
+      "price": 69,
+      "url": "https://www.frisbeesor.no/produkt/buff-frisbee-sor/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "P model S DuraFlex",
+      "price": 195,
+      "url": "https://www.frisbeesor.no/produkt/p-model-s-duraflex/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Ultimate disk RPM New Zealand style.",
+      "price": 189,
+      "url": "https://www.frisbeesor.no/produkt/ultimate/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Cipher",
+      "price": 189,
+      "url": "https://www.frisbeesor.no/produkt/5010/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Vannflaske Kastaplast.",
+      "price": 149,
+      "url": "https://www.frisbeesor.no/produkt/4703/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "Noble Duke",
+      "price": 165,
+      "url": "https://www.frisbeesor.no/produkt/noble-duke/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "HÅNDLEDDSBÅND &laquo;LYNG&raquo; FLÅTTAVVISENDE!",
+      "price": 89,
+      "url": "https://www.frisbeesor.no/produkt/handleddsband-lyng-flattavvisende/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "SOKKER &laquo;LIND&raquo; FLÅTTAVVISENDE!",
+      "price": 179,
+      "url": "https://www.frisbeesor.no/produkt/2758/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "FERD RYGGSEKK",
+      "price": 1299,
+      "url": "https://www.frisbeesor.no/produkt/ferd-reggsekk/",
+      "inStock": true
+    },
+    {
+      "store": "frisbeesor",
+      "rawName": "GAVEKORT FRISBEE SØR DISKGOLF",
+      "price": 150,
+      "url": "https://www.frisbeesor.no/produkt/gavekort-frisbee-sor-diskgolf/",
       "inStock": true
     },
     {
@@ -7242,7 +7228,7 @@
     {
       "store": "discexpress",
       "rawName": "Innova - Excursion Pack",
-      "price": 784,
+      "price": 785,
       "url": "https://www.discexpress.se/products/innova-excursion-pack",
       "inStock": true
     },
@@ -7697,7 +7683,7 @@
     {
       "store": "discexpress",
       "rawName": "Upper Park The Rebel 2025",
-      "price": 2739,
+      "price": 2740,
       "url": "https://www.discexpress.se/products/upper-park-the-rebel-2025",
       "inStock": true
     },
@@ -8313,7 +8299,7 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4417,
+      "price": 4418,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
@@ -8551,7 +8537,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4515,
+      "price": 4516,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
@@ -8572,7 +8558,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Saddle Bag Set for All-Terrain",
-      "price": 784,
+      "price": 785,
       "url": "https://www.discexpress.se/products/saddle-bag-set",
       "inStock": true
     },
@@ -8992,77 +8978,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
@@ -9573,21 +9559,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
@@ -10322,63 +10308,63 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
@@ -10756,42 +10742,42 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
@@ -10882,350 +10868,350 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 270,
+      "price": 271,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
@@ -12079,28 +12065,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -12646,14 +12632,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -12674,7 +12660,7 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 133,
+      "price": 134,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -18161,16 +18147,16 @@
     },
     {
       "store": "discsport",
-      "rawName": "Signature Blunt Gumbputt",
+      "rawName": "Signature Blowfly 1",
       "price": 186,
-      "url": "https://discsport.se/discar/mold/gumbputt",
+      "url": "https://discsport.se/discar/mold/blowfly-i",
       "inStock": true
     },
     {
       "store": "discsport",
-      "rawName": "Signature Blowfly 1",
+      "rawName": "Signature Blunt Gumbputt",
       "price": 186,
-      "url": "https://discsport.se/discar/mold/blowfly-i",
+      "url": "https://discsport.se/discar/mold/gumbputt",
       "inStock": true
     },
     {
@@ -18574,6 +18560,13 @@
     },
     {
       "store": "discsport",
+      "rawName": "First Flight Typhoon - Catrina Allen",
+      "price": 244,
+      "url": "https://discsport.se/discar/mold/typhoon",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "Hero SuperHero Proto Glow 235 Hero Disc",
       "price": 264,
       "url": "https://discsport.se/discar/mold/super-hero",
@@ -18592,13 +18585,6 @@
       "price": 235,
       "url": "https://discsport.se/discar/mold/super-hero",
       "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "BITEaLOT 230 DISCaLOT",
-      "price": 195,
-      "url": "https://discsport.se/discar/mold/bite-a-lot",
-      "inStock": true
     },
     {
       "store": "discsport",
@@ -18623,6 +18609,13 @@
     },
     {
       "store": "discsport",
+      "rawName": "BITEaLOT 230 DISCaLOT",
+      "price": 195,
+      "url": "https://discsport.se/discar/mold/bite-a-lot",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "Prototype Fossil - Ricky Wysocki",
       "price": 235,
       "url": "https://discsport.se/discar/mold/fossil",
@@ -18633,13 +18626,6 @@
       "rawName": "Z Colorshift Fossil - First Run",
       "price": 235,
       "url": "https://discsport.se/discar/mold/fossil",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "First Flight Typhoon - Catrina Allen",
-      "price": 244,
-      "url": "https://discsport.se/discar/mold/typhoon",
       "inStock": true
     },
     {
@@ -19086,7 +19072,7 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2355,
+      "price": 2356,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": true
     },
@@ -19121,14 +19107,14 @@
     {
       "store": "ugglans",
       "rawName": "Framtid",
-      "price": 3435,
+      "price": 3436,
       "url": "https://ugglansdiscgolf.se/products/framtid",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "European Birdies - Frid 2",
-      "price": 4418,
+      "price": 4419,
       "url": "https://ugglansdiscgolf.se/products/frid-2-european-birdie-turkos",
       "inStock": false
     },
@@ -19366,7 +19352,7 @@
     {
       "store": "discace",
       "rawName": "Innova Excursion Pack",
-      "price": 784,
+      "price": 785,
       "url": "https://discaceofsweden.com/produkt/innova-excursion-pack/",
       "inStock": true
     },
