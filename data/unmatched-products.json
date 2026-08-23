@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-23T07:11:36.976Z",
+  "lastUpdated": "2026-08-23T12:39:43.709Z",
   "products": [
     {
       "store": "wearediscgolf",
@@ -1641,6 +1641,13 @@
     },
     {
       "store": "wearediscgolf",
+      "rawName": "Lux Vapor Function Special Edition",
+      "price": 209,
+      "url": "https://wearediscgolf.no/produkt/lux-vapor-function-special-edition/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
       "rawName": "2026 WORLDS Edition Collector Sets",
       "price": 499,
       "url": "https://wearediscgolf.no/produkt/2026-worlds-edition-collector-sets/",
@@ -2134,6 +2141,13 @@
       "rawName": "Discmania Tour Bag",
       "price": 1999,
       "url": "https://arcticdisc.no/products/discmania-tour-bag",
+      "inStock": true
+    },
+    {
+      "store": "arcticdisc",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 229,
+      "url": "https://arcticdisc.no/products/lux-vapor-function-special-edition",
       "inStock": true
     },
     {
@@ -2813,7 +2827,7 @@
       "rawName": "D1 - Jake Hebenheimer Signature Series 2026",
       "price": 269,
       "url": "https://hyzershop.no/products/d1-jake-hebenheimer-signature-series-2026",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "hyzershop",
@@ -2890,6 +2904,13 @@
       "rawName": "Älva",
       "price": 399,
       "url": "https://hyzershop.no/products/alva-copy",
+      "inStock": false
+    },
+    {
+      "store": "hyzershop",
+      "rawName": "Function",
+      "price": 399,
+      "url": "https://hyzershop.no/products/function-1",
       "inStock": false
     },
     {
@@ -3128,6 +3149,13 @@
       "rawName": "Wild Honey",
       "price": 255,
       "url": "https://hyzershop.no/products/wild-honey-1",
+      "inStock": false
+    },
+    {
+      "store": "hyzershop",
+      "rawName": "Function",
+      "price": 245,
+      "url": "https://hyzershop.no/products/function",
       "inStock": false
     },
     {
@@ -3580,6 +3608,13 @@
     },
     {
       "store": "hyzershop",
+      "rawName": "Function - Gannon Buhr Player Of The Year",
+      "price": 285,
+      "url": "https://hyzershop.no/products/function-gannon-buhr-player-of-the-year",
+      "inStock": false
+    },
+    {
+      "store": "hyzershop",
       "rawName": "Hex",
       "price": 235,
       "url": "https://hyzershop.no/products/hex-1",
@@ -3808,6 +3843,13 @@
       "price": 249,
       "url": "https://hyzershop.no/products/f3-isaac-robinson-stained-glass",
       "inStock": false
+    },
+    {
+      "store": "hyzershop",
+      "rawName": "D1 - Dragon´s Hoard",
+      "price": 209,
+      "url": "https://hyzershop.no/products/d1-dragon-s-hoard",
+      "inStock": true
     },
     {
       "store": "hyzershop",
@@ -4609,6 +4651,20 @@
     },
     {
       "store": "discgolfdynasty",
+      "rawName": "Yikun Dragon Da'E",
+      "price": 99,
+      "url": "https://www.discgolfdynasty.no/products/yikun-dragon-dae",
+      "inStock": true
+    },
+    {
+      "store": "discgolfdynasty",
+      "rawName": "Yikun Dragon View",
+      "price": 100,
+      "url": "https://www.discgolfdynasty.no/products/yikun-dragon-view",
+      "inStock": true
+    },
+    {
+      "store": "discgolfdynasty",
       "rawName": "Yikun Tiger View",
       "price": 100,
       "url": "https://www.discgolfdynasty.no/products/yikun-tiger-view",
@@ -4959,13 +5015,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "BT Soft Swan",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "DX Sync",
       "price": 149,
       "url": "https://frisbeebutikken.no/products/dx-sync",
@@ -4973,9 +5022,16 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "rawName": "BT Soft Swan",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
       "inStock": true
     },
     {
@@ -4987,13 +5043,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Neutron Boost",
-      "price": 209,
-      "url": "https://frisbeebutikken.no/products/neutron-boost",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Gamma-Solid Titanium",
       "price": 279,
       "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
@@ -5001,9 +5050,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "rawName": "Neutron Boost",
+      "price": 209,
+      "url": "https://frisbeebutikken.no/products/neutron-boost",
       "inStock": true
     },
     {
@@ -5060,6 +5109,20 @@
       "rawName": "Star Sync",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/star-sync",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
       "inStock": true
     },
     {
@@ -5288,6 +5351,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Dragon Line GUI",
+      "price": 199,
+      "url": "https://www.starframe.no/products/dragon-line-gui",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Victory Line Osprey (Proto)",
       "price": 229,
       "url": "https://www.starframe.no/products/victory-line-osprey-proto",
@@ -5347,6 +5417,13 @@
       "rawName": "D Model OS Duraflex",
       "price": 199,
       "url": "https://www.starframe.no/products/d-model-os-duraflex",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "GEO Function",
+      "price": 129,
+      "url": "https://www.starframe.no/products/geo-function",
       "inStock": true
     },
     {
@@ -5431,6 +5508,13 @@
       "rawName": "Prominent Line Gain (First Run)",
       "price": 199,
       "url": "https://www.starframe.no/products/prominent-line-gain-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Lux Vapor Function (Special Edition)",
+      "price": 209,
+      "url": "https://www.starframe.no/products/lux-vapor-function-special-edition",
       "inStock": true
     },
     {
@@ -5708,9 +5792,23 @@
     },
     {
       "store": "golfdiscer",
+      "rawName": "Dragon Line Putter Gui",
+      "price": 199,
+      "url": "https://golfdiscer.no/products/dragon-line-putter-gui",
+      "inStock": true
+    },
+    {
+      "store": "golfdiscer",
       "rawName": "Innova Adventure Backpack",
       "price": 599,
       "url": "https://golfdiscer.no/products/innova-adventure-backpack",
+      "inStock": false
+    },
+    {
+      "store": "golfdiscer",
+      "rawName": "Dragon Line Driver QI",
+      "price": 148,
+      "url": "https://golfdiscer.no/products/dragon-line-driver-qi",
       "inStock": false
     },
     {
@@ -6061,6 +6159,13 @@
       "rawName": "Latitude64 Swift HEX Backpack",
       "price": 499,
       "url": "https://nydisk.no/products/latitude64-swift-hex-backpack",
+      "inStock": true
+    },
+    {
+      "store": "nydisk",
+      "rawName": "Kastaplast Function Tee",
+      "price": 399,
+      "url": "https://nydisk.no/products/kastaplast-function-tee",
       "inStock": true
     },
     {
@@ -6957,6 +7062,13 @@
       "rawName": "FPC Dad Cap",
       "price": 392,
       "url": "https://www.discexpress.se/products/fpc-dad-cap",
+      "inStock": true
+    },
+    {
+      "store": "discexpress",
+      "rawName": "Function Lux Vapor - Special Edition",
+      "price": 205,
+      "url": "https://www.discexpress.se/products/function-lux-vapor-special-edition",
       "inStock": true
     },
     {
@@ -18364,16 +18476,16 @@
     },
     {
       "store": "discsport",
-      "rawName": "Big Kahuna INNmold Beach Frisbee Innova",
-      "price": 156,
-      "url": "https://discsport.se/discar/mold/big-kahuna",
+      "rawName": "Pulsar Ultimate Disc Innova",
+      "price": 107,
+      "url": "https://discsport.se/discar/mold/pulsar",
       "inStock": false
     },
     {
       "store": "discsport",
-      "rawName": "Pulsar Ultimate Disc Innova",
-      "price": 107,
-      "url": "https://discsport.se/discar/mold/pulsar",
+      "rawName": "Big Kahuna INNmold Beach Frisbee Innova",
+      "price": 156,
+      "url": "https://discsport.se/discar/mold/big-kahuna",
       "inStock": false
     },
     {
@@ -18396,6 +18508,27 @@
       "price": 136,
       "url": "https://discsport.se/discar/mold/sky-styler",
       "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "NEW Lux Vapor Function - Special Edition",
+      "price": 205,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Alloy Function - Gannon Buhr",
+      "price": 284,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Geo Function",
+      "price": 107,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": false
     },
     {
       "store": "discsport",
@@ -18476,17 +18609,17 @@
     },
     {
       "store": "discsport",
-      "rawName": "Atlantic Swirl Sea Turtle",
-      "price": 254,
+      "rawName": "Pacific Sea Turtle",
+      "price": 235,
       "url": "https://discsport.se/discar/mold/sea-turtle",
       "inStock": true
     },
     {
       "store": "discsport",
-      "rawName": "Pacific Sea Turtle",
-      "price": 235,
+      "rawName": "Atlantic Swirl Sea Turtle",
+      "price": 254,
       "url": "https://discsport.se/discar/mold/sea-turtle",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "discsport",
@@ -18507,13 +18640,6 @@
       "rawName": "Granite Sail - Catrina Allen 2025",
       "price": 294,
       "url": "https://discsport.se/discar/mold/sail",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Atmos Vortex",
-      "price": 225,
-      "url": "https://discsport.se/discar/mold/vortex",
       "inStock": true
     },
     {
@@ -18539,6 +18665,13 @@
     },
     {
       "store": "discsport",
+      "rawName": "Atmos Vortex",
+      "price": 225,
+      "url": "https://discsport.se/discar/mold/vortex",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "DL Blast",
       "price": 136,
       "url": "https://discsport.se/discar/mold/blast",
@@ -18556,13 +18689,6 @@
       "rawName": "Hero SuperStar 235 Hero Disc",
       "price": 235,
       "url": "https://discsport.se/discar/mold/super-star",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "First Flight Typhoon - Catrina Allen",
-      "price": 244,
-      "url": "https://discsport.se/discar/mold/typhoon",
       "inStock": true
     },
     {
@@ -18588,27 +18714,6 @@
     },
     {
       "store": "discsport",
-      "rawName": "ESP Hallux - First Run",
-      "price": 235,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
-      "price": 294,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Prototype Hallux - Ricky Wysocki",
-      "price": 235,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
       "rawName": "BITEaLOT 230 DISCaLOT",
       "price": 195,
       "url": "https://discsport.se/discar/mold/bite-a-lot",
@@ -18627,6 +18732,34 @@
       "price": 235,
       "url": "https://discsport.se/discar/mold/fossil",
       "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "First Flight Typhoon - Catrina Allen",
+      "price": 244,
+      "url": "https://discsport.se/discar/mold/typhoon",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "ESP Hallux - First Run",
+      "price": 235,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
+      "price": 294,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prototype Hallux - Ricky Wysocki",
+      "price": 235,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": false
     },
     {
       "store": "discsport",
@@ -18767,6 +18900,13 @@
       "price": 195,
       "url": "https://ugglansdiscgolf.se/products/star-sync",
       "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 205,
+      "url": "https://ugglansdiscgolf.se/products/lux-vapor-function-special-edition",
+      "inStock": true
     },
     {
       "store": "ugglans",
@@ -19095,6 +19235,13 @@
       "rawName": "Prototype Putter - Ricky Wysocki",
       "price": 244,
       "url": "https://ugglansdiscgolf.se/products/prototype-putter-ricky-wysocki",
+      "inStock": false
+    },
+    {
+      "store": "ugglans",
+      "rawName": "Alloy Function - Gannon Buhr Player of the year",
+      "price": 284,
+      "url": "https://ugglansdiscgolf.se/products/alloy-function-gannon-buhr-player-of-the-year",
       "inStock": false
     },
     {

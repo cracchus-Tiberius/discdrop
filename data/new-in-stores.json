@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-23T07:12:03.766Z",
+  "generated": "2026-08-23T12:40:07.848Z",
   "summary": {
     "totalSignals": 105,
     "newDiscs": 0,
@@ -22,12 +22,12 @@
       {
         "store": "discsport",
         "date": "2026-07-24",
-        "count": 1171
+        "count": 1170
       },
       {
         "store": "discexpress",
         "date": "2026-07-24",
-        "count": 1145
+        "count": 1144
       },
       {
         "store": "nydisk",
@@ -37,17 +37,17 @@
       {
         "store": "ugglans",
         "date": "2026-07-26",
-        "count": 788
+        "count": 787
       },
       {
         "store": "starframe",
         "date": "2026-08-19",
-        "count": 685
+        "count": 682
       },
       {
         "store": "wearediscgolf",
         "date": "2026-08-16",
-        "count": 525
+        "count": 522
       },
       {
         "store": "wearediscgolf",
@@ -62,17 +62,17 @@
       {
         "store": "hyzershop",
         "date": "2026-08-22",
-        "count": 290
+        "count": 288
       },
       {
         "store": "discgolfdynasty",
         "date": "2026-08-22",
-        "count": 258
+        "count": 256
       },
       {
         "store": "kvamdgs",
         "date": "2026-07-24",
-        "count": 245
+        "count": 244
       },
       {
         "store": "aceshop",
@@ -92,12 +92,12 @@
       {
         "store": "golfdiscer",
         "date": "2026-07-24",
-        "count": 147
+        "count": 146
       },
       {
         "store": "frisbeebutikken",
         "date": "2026-08-13",
-        "count": 125
+        "count": 112
       },
       {
         "store": "discexpress",
@@ -135,23 +135,28 @@
         "count": 66
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-08-21",
-        "count": 35
-      },
-      {
         "store": "rocketdiscs",
         "date": "2026-08-21",
         "count": 34
       },
       {
         "store": "frisbeebutikken",
-        "date": "2026-08-22",
-        "count": 32
+        "date": "2026-08-23",
+        "count": 33
       },
       {
         "store": "rocketdiscs",
         "date": "2026-07-28",
+        "count": 31
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-21",
+        "count": 31
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-22",
         "count": 31
       }
     ]
@@ -172,7 +177,7 @@
           "type": "new-release",
           "plastic": "X Line",
           "edition": null,
-          "firstSeenMs": 1787468075635,
+          "firstSeenMs": 1787487975920,
           "price": 204,
           "stores": [
             {
@@ -191,7 +196,7 @@
           "type": "new-release",
           "plastic": "Lucid Ice",
           "edition": "Sockibomb",
-          "firstSeenMs": 1787468075635,
+          "firstSeenMs": 1787487975920,
           "price": 185,
           "stores": [
             {
@@ -210,7 +215,7 @@
           "type": "new-release",
           "plastic": "Lucid X",
           "edition": "Ricky Wysocki",
-          "firstSeenMs": 1787468075635,
+          "firstSeenMs": 1787487975920,
           "price": 185,
           "stores": [
             {
@@ -229,7 +234,7 @@
           "type": "new-release",
           "plastic": "KC Pro",
           "edition": null,
-          "firstSeenMs": 1787467041070,
+          "firstSeenMs": 1787486981994,
           "price": 214,
           "stores": [
             {
@@ -581,7 +586,7 @@
           "type": "new-at-store",
           "plastic": "Jawbreaker",
           "edition": "Paul McBeth",
-          "firstSeenMs": 1787469077300,
+          "firstSeenMs": 1787488763775,
           "price": 270,
           "stores": [
             {
@@ -600,7 +605,7 @@
           "type": "new-at-store",
           "plastic": "Project Grip",
           "edition": null,
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 285,
           "stores": [
             {
@@ -619,7 +624,7 @@
           "type": "new-at-store",
           "plastic": "Z",
           "edition": "Anthony Barela",
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 246,
           "stores": [
             {
@@ -638,7 +643,7 @@
           "type": "new-at-store",
           "plastic": "Halo Champion Proto Glow",
           "edition": "Tour Series",
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 384,
           "stores": [
             {
@@ -657,7 +662,7 @@
           "type": "new-at-store",
           "plastic": "Z",
           "edition": null,
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 315,
           "stores": [
             {
@@ -676,7 +681,7 @@
           "type": "new-at-store",
           "plastic": "Tournament",
           "edition": null,
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 266,
           "stores": [
             {
@@ -695,7 +700,7 @@
           "type": "new-at-store",
           "plastic": "Tournament",
           "edition": null,
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 266,
           "stores": [
             {
@@ -714,7 +719,7 @@
           "type": "new-at-store",
           "plastic": "VIP",
           "edition": null,
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 266,
           "stores": [
             {
@@ -733,7 +738,7 @@
           "type": "new-at-store",
           "plastic": "Tournament",
           "edition": null,
-          "firstSeenMs": 1787468103996,
+          "firstSeenMs": 1787488003928,
           "price": 266,
           "stores": [
             {
@@ -752,7 +757,7 @@
           "type": "new-at-store",
           "plastic": "Gold Ice",
           "edition": null,
-          "firstSeenMs": 1787468075635,
+          "firstSeenMs": 1787487975920,
           "price": 274,
           "stores": [
             {
@@ -771,7 +776,7 @@
           "type": "new-at-store",
           "plastic": "VIP",
           "edition": "2025",
-          "firstSeenMs": 1787468075635,
+          "firstSeenMs": 1787487975920,
           "price": 294,
           "stores": [
             {
@@ -790,7 +795,7 @@
           "type": "new-at-store",
           "plastic": "Putter Line",
           "edition": null,
-          "firstSeenMs": 1787468063289,
+          "firstSeenMs": 1787487964586,
           "price": 184,
           "stores": [
             {
@@ -809,7 +814,7 @@
           "type": "new-at-store",
           "plastic": "Putter Line",
           "edition": null,
-          "firstSeenMs": 1787468063289,
+          "firstSeenMs": 1787487964586,
           "price": 190,
           "stores": [
             {
@@ -828,7 +833,7 @@
           "type": "new-at-store",
           "plastic": "Neutron",
           "edition": "Special Edition",
-          "firstSeenMs": 1787468063289,
+          "firstSeenMs": 1787487964586,
           "price": 294,
           "stores": [
             {
@@ -847,7 +852,7 @@
           "type": "new-at-store",
           "plastic": "JK Pro",
           "edition": null,
-          "firstSeenMs": 1787467041070,
+          "firstSeenMs": 1787486981994,
           "price": 214,
           "stores": [
             {
@@ -865,6 +870,25 @@
           ]
         },
         {
+          "discId": "axiom-pitch",
+          "name": "Pitch",
+          "brand": "Axiom",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "Neutron Soft",
+          "edition": null,
+          "firstSeenMs": 1787486981994,
+          "price": 330,
+          "stores": [
+            {
+              "store": "kvamdgs",
+              "storeName": "Kvam DGS",
+              "price": 330,
+              "url": "https://kvamdgs.no/products/neutron-soft-pitch-dragon-fruit-brick-mortar"
+            }
+          ]
+        },
+        {
           "discId": "innova-whale",
           "name": "Whale",
           "brand": "Innova",
@@ -872,7 +896,7 @@
           "type": "new-at-store",
           "plastic": "KC Pro",
           "edition": null,
-          "firstSeenMs": 1787467041070,
+          "firstSeenMs": 1787486981994,
           "price": 214,
           "stores": [
             {
@@ -891,7 +915,7 @@
           "type": "new-at-store",
           "plastic": "KC Pro",
           "edition": null,
-          "firstSeenMs": 1787467041070,
+          "firstSeenMs": 1787486981994,
           "price": 214,
           "stores": [
             {
@@ -916,7 +940,7 @@
           "type": "new-at-store",
           "plastic": "KC Pro",
           "edition": null,
-          "firstSeenMs": 1787467041070,
+          "firstSeenMs": 1787486981994,
           "price": 214,
           "stores": [
             {
@@ -924,6 +948,25 @@
               "storeName": "We Are Disc Golf",
               "price": 214,
               "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+            }
+          ]
+        },
+        {
+          "discId": "latitude-gatekeeper",
+          "name": "Gatekeeper",
+          "brand": "Latitude 64",
+          "image": "",
+          "type": "new-at-store",
+          "plastic": "VIP",
+          "edition": null,
+          "firstSeenMs": 1787468103996,
+          "price": 227,
+          "stores": [
+            {
+              "store": "discexpress",
+              "storeName": "Discexpress",
+              "price": 227,
+              "url": "https://www.discexpress.se/products/gatekeeper-vip"
             }
           ]
         },
@@ -1000,25 +1043,6 @@
               "storeName": "Rocketdiscs",
               "price": 283,
               "url": "https://rocketdiscs.com/discmania-pd2-chaos"
-            }
-          ]
-        },
-        {
-          "discId": "latitude-gatekeeper",
-          "name": "Gatekeeper",
-          "brand": "Latitude 64",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": "VIP",
-          "edition": null,
-          "firstSeenMs": 1787419519160,
-          "price": 227,
-          "stores": [
-            {
-              "store": "discexpress",
-              "storeName": "Discexpress",
-              "price": 227,
-              "url": "https://www.discexpress.se/products/gatekeeper-vip"
             }
           ]
         },
@@ -1422,6 +1446,12 @@
               "storeName": "Discexpress",
               "price": 315,
               "url": "https://www.discexpress.se/products/k1-hard-glow-guld-clay-edwards-tour-series-2026"
+            },
+            {
+              "store": "rocketdiscs",
+              "storeName": "Rocketdiscs",
+              "price": 338,
+              "url": "https://rocketdiscs.com/kastaplast-guld"
             }
           ]
         },
@@ -2366,25 +2396,6 @@
               "storeName": "NyDisk",
               "price": 194,
               "url": "https://nydisk.no/products/latitude64-zero-gravity-bolt"
-            }
-          ]
-        },
-        {
-          "discId": "latitude-function",
-          "name": "Function",
-          "brand": "Latitude 64",
-          "image": "",
-          "type": "new-at-store",
-          "plastic": null,
-          "edition": null,
-          "firstSeenMs": 1786606610741,
-          "price": 444,
-          "stores": [
-            {
-              "store": "nydisk",
-              "storeName": "NyDisk",
-              "price": 444,
-              "url": "https://nydisk.no/products/kastaplast-function-tee"
             }
           ]
         },

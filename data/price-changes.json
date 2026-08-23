@@ -1,11 +1,53 @@
 {
-  "generated": "2026-08-23T07:12:03.322Z",
+  "generated": "2026-08-23T12:40:07.572Z",
   "summary": {
-    "priceChanges24h": 1,
-    "newDiscs24h": 0,
+    "priceChanges24h": 3,
+    "newDiscs24h": 1,
     "storesChecked": 18
   },
   "drops": [
+    {
+      "discId": "discmania-laseri",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": null,
+      "oldPrice": 304,
+      "newPrice": 274,
+      "pct": -10,
+      "changedAt": "2026-08-23T12:25:27.535Z",
+      "period": "day",
+      "history": [
+        274,
+        274,
+        274,
+        274,
+        274,
+        304,
+        274
+      ],
+      "url": "https://frisbeebutikken.no/products/premium-laseri"
+    },
+    {
+      "discId": "alfa-atlantis",
+      "store": "discgolfdynasty",
+      "storeName": "Disc Golf Dynasty",
+      "plastic": null,
+      "oldPrice": 259,
+      "newPrice": 144,
+      "pct": -44,
+      "changedAt": "2026-08-23T12:09:41.994Z",
+      "period": "week",
+      "history": [
+        259,
+        259,
+        259,
+        259,
+        144,
+        144,
+        144
+      ],
+      "url": "https://www.discgolfdynasty.no/products/norge-brazil-atlantis"
+    },
     {
       "discId": "gateway-penrose",
       "store": "hyzershop",
@@ -14,39 +56,18 @@
       "oldPrice": 200,
       "newPrice": 144,
       "pct": -28,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
-        200,
         200,
         200,
         200,
         200,
         144,
+        144,
         144
       ],
       "url": "https://hyzershop.no/products/penrose"
-    },
-    {
-      "discId": "latitude-function",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": null,
-      "oldPrice": 237,
-      "newPrice": 179,
-      "pct": -24,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        237,
-        237,
-        179,
-        179,
-        179,
-        179,
-        179
-      ],
-      "url": "https://www.starframe.no/products/geo-function"
     },
     {
       "discId": "prodigy-archive",
@@ -56,39 +77,18 @@
       "oldPrice": 334,
       "newPrice": 275,
       "pct": -18,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
-        334,
         334,
         334,
         334,
         334,
         275,
+        275,
         275
       ],
       "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
-    },
-    {
-      "discId": "innova-dragon",
-      "store": "discgolfdynasty",
-      "storeName": "Disc Golf Dynasty",
-      "plastic": null,
-      "oldPrice": 168,
-      "newPrice": 144,
-      "pct": -14,
-      "changedAt": "2026-08-23T06:37:21.070Z",
-      "period": "week",
-      "history": [
-        168,
-        168,
-        167,
-        167,
-        167,
-        144,
-        144
-      ],
-      "url": "https://www.discgolfdynasty.no/products/yikun-dragon-dae"
     },
     {
       "discId": "prodigy-shadowfax",
@@ -98,14 +98,14 @@
       "oldPrice": 295,
       "newPrice": 255,
       "pct": -14,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
         295,
         295,
         295,
         295,
-        295,
+        255,
         255,
         255
       ],
@@ -119,14 +119,14 @@
       "oldPrice": 251,
       "newPrice": 220,
       "pct": -12,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
         251,
         251,
         251,
         251,
-        251,
+        220,
         220,
         220
       ],
@@ -140,14 +140,14 @@
       "oldPrice": 244,
       "newPrice": 217,
       "pct": -11,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
         244,
         244,
         244,
         244,
-        244,
+        217,
         217,
         217
       ],
@@ -158,210 +158,63 @@
       "store": "discsport",
       "storeName": "Discsport",
       "plastic": "Horizon",
-      "oldPrice": 308,
+      "oldPrice": 307,
       "newPrice": 275,
-      "pct": -11,
-      "changedAt": "2026-08-23T07:03:53.871Z",
+      "pct": -10,
+      "changedAt": "2026-08-23T12:34:27.091Z",
       "period": "week",
       "history": [
-        308,
-        308,
+        307,
         307,
         307,
         276,
+        275,
         275,
         275
       ],
       "url": "https://discsport.se/discar/mold/dd2"
     },
     {
-      "discId": "prodigy-fx-4",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": "500",
-      "oldPrice": 288,
-      "newPrice": 259,
-      "pct": -10,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        288,
-        288,
-        259,
-        259,
-        259,
-        259,
-        259
-      ],
-      "url": "https://www.starframe.no/products/fx-4-500"
-    },
-    {
-      "discId": "mvp-control",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "Neutron",
-      "oldPrice": 278,
-      "newPrice": 254,
-      "pct": -9,
-      "changedAt": "2026-08-23T06:37:21.070Z",
-      "period": "week",
-      "history": [
-        278,
-        278,
-        254,
-        254,
-        254,
-        254,
-        254
-      ],
-      "url": "https://wearediscgolf.no/produkt/neutron-control/"
-    },
-    {
-      "discId": "prodigy-falcor",
-      "store": "discsor",
-      "storeName": "Disc Sør",
-      "plastic": "400",
-      "oldPrice": 276,
-      "newPrice": 255,
-      "pct": -8,
-      "changedAt": "2026-08-23T06:37:21.070Z",
-      "period": "week",
-      "history": [
-        276,
-        276,
-        275,
-        275,
-        274,
-        255,
-        255
-      ],
-      "url": "https://discsor.no/product/falcor-400/"
-    },
-    {
       "discId": "prodigy-feedback",
       "store": "discsor",
       "storeName": "Disc Sør",
       "plastic": "400",
-      "oldPrice": 288,
+      "oldPrice": 287,
       "newPrice": 265,
       "pct": -8,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
-        288,
-        288,
+        287,
         287,
         287,
         286,
+        265,
         265,
         265
       ],
       "url": "https://discsor.no/product/feedback-400-kevin-jones/"
     },
     {
-      "discId": "prodigy-reverb",
+      "discId": "prodigy-falcor",
       "store": "discsor",
       "storeName": "Disc Sør",
       "plastic": "400",
-      "oldPrice": 295,
-      "newPrice": 275,
+      "oldPrice": 275,
+      "newPrice": 255,
       "pct": -7,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
-        295,
-        295,
         275,
         275,
         275,
-        275,
-        275
+        274,
+        255,
+        255,
+        255
       ],
-      "url": "https://discsor.no/product/reverb-400-kevin-jones/"
-    },
-    {
-      "discId": "prodigy-f9",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": "500",
-      "oldPrice": 278,
-      "newPrice": 259,
-      "pct": -7,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        278,
-        278,
-        259,
-        259,
-        259,
-        259,
-        259
-      ],
-      "url": "https://www.starframe.no/products/f9-500"
-    },
-    {
-      "discId": "latitude-pipeline",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": null,
-      "oldPrice": 264,
-      "newPrice": 249,
-      "pct": -6,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        264,
-        264,
-        249,
-        249,
-        249,
-        249,
-        249
-      ],
-      "url": "https://www.starframe.no/products/spark-pipeline"
-    },
-    {
-      "discId": "latitude-avalanche",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": null,
-      "oldPrice": 264,
-      "newPrice": 249,
-      "pct": -6,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        264,
-        264,
-        249,
-        249,
-        249,
-        249,
-        249
-      ],
-      "url": "https://www.starframe.no/products/spark-avalanche"
-    },
-    {
-      "discId": "latitude-macana",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": "Zero Hard",
-      "oldPrice": 208,
-      "newPrice": 195,
-      "pct": -6,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        208,
-        208,
-        195,
-        195,
-        195,
-        195,
-        195
-      ],
-      "url": "https://www.starframe.no/products/zero-hard-macana"
+      "url": "https://discsor.no/product/falcor-400/"
     },
     {
       "discId": "mvp-anode",
@@ -371,62 +224,20 @@
       "oldPrice": 200,
       "newPrice": 190,
       "pct": -5,
-      "changedAt": "2026-08-23T06:37:21.070Z",
+      "changedAt": "2026-08-23T12:09:41.994Z",
       "period": "week",
       "history": [
-        200,
         200,
         200,
         200,
         200,
         190,
+        190,
         190
       ],
       "url": "https://www.discgolfdynasty.no/products/mvp-electron-anode"
-    },
-    {
-      "discId": "latitude-knight",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": "Opto-Ice",
-      "oldPrice": 273,
-      "newPrice": 259,
-      "pct": -5,
-      "changedAt": "2026-08-23T06:53:55.777Z",
-      "period": "week",
-      "history": [
-        273,
-        273,
-        259,
-        259,
-        259,
-        259,
-        259
-      ],
-      "url": "https://www.starframe.no/products/opto-ice-knight"
-    },
-    {
-      "discId": "prodigy-mx-1",
-      "store": "discsor",
-      "storeName": "Disc Sør",
-      "plastic": "400",
-      "oldPrice": 268,
-      "newPrice": 255,
-      "pct": -5,
-      "changedAt": "2026-08-23T06:37:21.070Z",
-      "period": "week",
-      "history": [
-        268,
-        268,
-        259,
-        259,
-        259,
-        255,
-        255
-      ],
-      "url": "https://discsor.no/product/mx-1-400/"
     }
   ],
-  "totalDrops": 0,
-  "totalDropsWeek": 20
+  "totalDrops": 1,
+  "totalDropsWeek": 10
 }
