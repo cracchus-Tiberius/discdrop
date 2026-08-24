@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-23T12:40:08.101Z",
+  "generated": "2026-08-24T07:27:40.666Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -13,16 +13,16 @@
       "price": 2799,
       "reason": "above-max",
       "url": "https://hyzershop.no/products/odin",
-      "lastScraped": "2026-08-23T12:09:41.994Z"
+      "lastScraped": "2026-08-24T06:53:54.110Z"
     },
     {
       "discId": "mvp-shift",
       "discName": "Streamline Shift",
       "store": "discexpress",
-      "price": 2306,
+      "price": 2307,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-08-23T12:26:43.928Z"
+      "lastScraped": "2026-08-24T07:10:54.714Z"
     },
     {
       "discId": "streamline-range",
@@ -31,7 +31,7 @@
       "price": 981,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-08-23T12:26:43.928Z"
+      "lastScraped": "2026-08-24T07:10:54.714Z"
     },
     {
       "discId": "innova-firebird",
@@ -40,7 +40,7 @@
       "price": 900,
       "reason": "above-max",
       "url": "https://www.starframe.no/products/champion-glow-firebird-nate-sexy-april-fools",
-      "lastScraped": "2026-08-23T12:25:39.835Z"
+      "lastScraped": "2026-08-24T07:09:46.008Z"
     },
     {
       "discId": "latitude-core",
@@ -49,7 +49,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-08-23T12:25:59.129Z"
+      "lastScraped": "2026-08-24T07:10:11.356Z"
     },
     {
       "discId": "latitude-gatekeeper",
@@ -58,7 +58,7 @@
       "price": 749,
       "reason": "above-max",
       "url": "https://wearediscgolf.no/produkt/the-gatekeeper-box-5/",
-      "lastScraped": "2026-08-23T12:09:41.994Z"
+      "lastScraped": "2026-08-24T06:53:54.110Z"
     },
     {
       "discId": "latitude-core",
@@ -67,7 +67,7 @@
       "price": 729,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
-      "lastScraped": "2026-08-23T12:26:04.586Z"
+      "lastScraped": "2026-08-24T07:10:15.364Z"
     },
     {
       "discId": "discraft-raptor",
@@ -76,7 +76,7 @@
       "price": 659,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
-      "lastScraped": "2026-08-23T12:26:04.586Z"
+      "lastScraped": "2026-08-24T07:10:15.364Z"
     },
     {
       "discId": "innova-birdie",
@@ -85,7 +85,7 @@
       "price": 48,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-08-23T12:26:43.928Z"
+      "lastScraped": "2026-08-24T07:10:54.714Z"
     },
     {
       "discId": "discmania-active",
@@ -94,7 +94,7 @@
       "price": 48,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/mermaid-basic-active",
-      "lastScraped": "2026-08-23T12:26:43.928Z"
+      "lastScraped": "2026-08-24T07:10:54.714Z"
     }
   ]
 }
