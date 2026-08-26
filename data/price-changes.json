@@ -1,220 +1,31 @@
 {
-  "generated": "2026-08-25T07:13:40.416Z",
+  "generated": "2026-08-26T07:23:13.544Z",
   "summary": {
-    "priceChanges24h": 12,
+    "priceChanges24h": 3,
     "newDiscs24h": 0,
     "storesChecked": 18
   },
   "drops": [
     {
-      "discId": "latitude-quake",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": null,
-      "oldPrice": 334,
-      "newPrice": 266,
-      "pct": -20,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        334,
-        334,
-        334,
-        334,
-        334,
-        334,
-        266
-      ],
-      "url": "https://www.discexpress.se/products/quake-sullivan-tipton-tour-series-2026"
-    },
-    {
       "discId": "prodigy-pa-5",
       "store": "discexpress",
       "storeName": "Discexpress",
-      "plastic": "Spectrum",
-      "oldPrice": 286,
-      "newPrice": 237,
-      "pct": -17,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        287,
-        287,
-        286,
-        285,
-        285,
-        286,
-        237
-      ],
-      "url": "https://www.discexpress.se/products/pa-5-500-spectrum-will-schusterick-2026-signature-series"
-    },
-    {
-      "discId": "prodigy-feedback",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Spectrum",
-      "oldPrice": 265,
-      "newPrice": 237,
-      "pct": -11,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        287,
-        287,
-        286,
-        265,
-        265,
-        265,
-        237
-      ],
-      "url": "https://www.discexpress.se/products/feedback-500-spectrum-kevin-jones-2026-signature-series"
-    },
-    {
-      "discId": "latitude-trust",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Clear",
-      "oldPrice": 285,
-      "newPrice": 257,
-      "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        286,
-        286,
-        285,
-        284,
-        284,
-        285,
-        257
-      ],
-      "url": "https://www.discexpress.se/products/trust-clear-albert-tamm-royal"
-    },
-    {
-      "discId": "latitude-honor",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Clear",
-      "oldPrice": 285,
-      "newPrice": 257,
-      "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        286,
-        286,
-        285,
-        284,
-        284,
-        285,
-        257
-      ],
-      "url": "https://www.discexpress.se/products/honor-clear-linus-carlsson-royal"
-    },
-    {
-      "discId": "latitude-sweep",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Clear",
-      "oldPrice": 285,
-      "newPrice": 257,
-      "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        286,
-        286,
-        285,
-        284,
-        284,
-        285,
-        257
-      ],
-      "url": "https://www.discexpress.se/products/sweep-clear-isaac-robinson-royal"
-    },
-    {
-      "discId": "latitude-fire",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Clear",
-      "oldPrice": 285,
-      "newPrice": 257,
-      "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        286,
-        286,
-        285,
-        284,
-        284,
-        285,
-        257
-      ],
-      "url": "https://www.discexpress.se/products/fire-clear-sparkle-anniken-steen-team-series"
-    },
-    {
-      "discId": "latitude-mighty",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Clear",
-      "oldPrice": 285,
-      "newPrice": 257,
-      "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        286,
-        286,
-        285,
-        284,
-        284,
-        285,
-        257
-      ],
-      "url": "https://www.discexpress.se/products/mighty-clear-jakub-semerad-team-series"
-    },
-    {
-      "discId": "prodigy-fx-4",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Spectrum",
-      "oldPrice": 259,
-      "newPrice": 237,
+      "plastic": "350G",
+      "oldPrice": 237,
+      "newPrice": 217,
       "pct": -8,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "day",
       "history": [
-        259,
-        259,
-        259,
-        259,
-        259,
-        259,
-        237
+        287,
+        286,
+        285,
+        285,
+        286,
+        237,
+        217
       ],
-      "url": "https://www.discexpress.se/products/fx-4-500-spectrum-noah-higgins-2026-signature-series"
-    },
-    {
-      "discId": "prodigy-a5",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Spectrum",
-      "oldPrice": 255,
-      "newPrice": 237,
-      "pct": -7,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "day",
-      "history": [
-        256,
-        256,
-        256,
-        255,
-        255,
-        255,
-        237
-      ],
-      "url": "https://www.discexpress.se/products/a5-500-spectrum-dylan-capaccioli-2026-signature-series"
+      "url": "https://www.discexpress.se/products/pa-5-350g"
     },
     {
       "discId": "alfa-atlantis",
@@ -224,12 +35,12 @@
       "oldPrice": 259,
       "newPrice": 144,
       "pct": -44,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         259,
         259,
-        259,
+        144,
         144,
         144,
         144,
@@ -245,12 +56,12 @@
       "oldPrice": 200,
       "newPrice": 144,
       "pct": -28,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         200,
         200,
-        200,
+        144,
         144,
         144,
         144,
@@ -259,14 +70,35 @@
       "url": "https://hyzershop.no/products/penrose"
     },
     {
+      "discId": "prodigy-pa-5",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "350G",
+      "oldPrice": 287,
+      "newPrice": 217,
+      "pct": -24,
+      "changedAt": "2026-08-26T07:06:15.145Z",
+      "period": "week",
+      "history": [
+        287,
+        286,
+        285,
+        285,
+        286,
+        237,
+        217
+      ],
+      "url": "https://www.discexpress.se/products/pa-5-350g"
+    },
+    {
       "discId": "latitude-quake",
       "store": "discexpress",
       "storeName": "Discexpress",
       "plastic": null,
       "oldPrice": 334,
-      "newPrice": 266,
+      "newPrice": 267,
       "pct": -20,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         334,
@@ -274,8 +106,8 @@
         334,
         334,
         334,
-        334,
-        266
+        266,
+        267
       ],
       "url": "https://www.discexpress.se/products/quake-sullivan-tipton-tour-series-2026"
     },
@@ -287,12 +119,12 @@
       "oldPrice": 334,
       "newPrice": 275,
       "pct": -18,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         334,
         334,
-        334,
+        275,
         275,
         275,
         275,
@@ -301,46 +133,46 @@
       "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
     },
     {
+      "discId": "westside-crown",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Origio",
+      "oldPrice": 177,
+      "newPrice": 147,
+      "pct": -17,
+      "changedAt": "2026-08-26T07:15:11.070Z",
+      "period": "week",
+      "history": [
+        177,
+        147,
+        147,
+        147,
+        147,
+        147,
+        147
+      ],
+      "url": "https://discsport.se/discar/mold/crown"
+    },
+    {
       "discId": "prodigy-feedback",
       "store": "discexpress",
       "storeName": "Discexpress",
       "plastic": "Spectrum",
       "oldPrice": 287,
-      "newPrice": 237,
+      "newPrice": 238,
       "pct": -17,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
-        287,
         287,
         286,
         265,
         265,
         265,
-        237
+        237,
+        238
       ],
       "url": "https://www.discexpress.se/products/feedback-500-spectrum-kevin-jones-2026-signature-series"
-    },
-    {
-      "discId": "prodigy-pa-5",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Spectrum",
-      "oldPrice": 287,
-      "newPrice": 237,
-      "pct": -17,
-      "changedAt": "2026-08-25T06:59:14.288Z",
-      "period": "week",
-      "history": [
-        287,
-        287,
-        286,
-        285,
-        285,
-        286,
-        237
-      ],
-      "url": "https://www.discexpress.se/products/pa-5-500-spectrum-will-schusterick-2026-signature-series"
     },
     {
       "discId": "prodigy-shadowfax",
@@ -350,12 +182,12 @@
       "oldPrice": 295,
       "newPrice": 255,
       "pct": -14,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         295,
         295,
-        295,
+        255,
         255,
         255,
         255,
@@ -371,12 +203,12 @@
       "oldPrice": 251,
       "newPrice": 220,
       "pct": -12,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         251,
         251,
-        251,
+        220,
         220,
         220,
         220,
@@ -392,12 +224,12 @@
       "oldPrice": 244,
       "newPrice": 217,
       "pct": -11,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         244,
         244,
-        244,
+        217,
         217,
         217,
         217,
@@ -406,44 +238,23 @@
       "url": "https://www.discgolfdynasty.no/products/neutron-trail-kopi"
     },
     {
-      "discId": "discmania-dd2",
-      "store": "discsport",
-      "storeName": "Discsport",
-      "plastic": "Horizon",
-      "oldPrice": 307,
-      "newPrice": 274,
-      "pct": -11,
-      "changedAt": "2026-08-25T07:07:10.042Z",
-      "period": "week",
-      "history": [
-        307,
-        307,
-        276,
-        275,
-        275,
-        275,
-        274
-      ],
-      "url": "https://discsport.se/discar/mold/dd2"
-    },
-    {
       "discId": "latitude-trust",
       "store": "discexpress",
       "storeName": "Discexpress",
       "plastic": "Clear",
       "oldPrice": 286,
-      "newPrice": 257,
+      "newPrice": 258,
       "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         286,
-        286,
         285,
         284,
         284,
         285,
-        257
+        257,
+        258
       ],
       "url": "https://www.discexpress.se/products/trust-clear-albert-tamm-royal"
     },
@@ -453,18 +264,18 @@
       "storeName": "Discexpress",
       "plastic": "Clear",
       "oldPrice": 286,
-      "newPrice": 257,
+      "newPrice": 258,
       "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         286,
-        286,
         285,
         284,
         284,
         285,
-        257
+        257,
+        258
       ],
       "url": "https://www.discexpress.se/products/honor-clear-linus-carlsson-royal"
     },
@@ -474,20 +285,41 @@
       "storeName": "Discexpress",
       "plastic": "Clear",
       "oldPrice": 286,
-      "newPrice": 257,
+      "newPrice": 258,
       "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         286,
-        286,
         285,
         284,
         284,
         285,
-        257
+        257,
+        258
       ],
       "url": "https://www.discexpress.se/products/sweep-clear-isaac-robinson-royal"
+    },
+    {
+      "discId": "discmania-dd2",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Horizon",
+      "oldPrice": 307,
+      "newPrice": 275,
+      "pct": -10,
+      "changedAt": "2026-08-26T07:15:11.070Z",
+      "period": "week",
+      "history": [
+        307,
+        276,
+        275,
+        275,
+        275,
+        274,
+        275
+      ],
+      "url": "https://discsport.se/discar/mold/dd2"
     },
     {
       "discId": "latitude-fire",
@@ -495,18 +327,18 @@
       "storeName": "Discexpress",
       "plastic": "Clear",
       "oldPrice": 286,
-      "newPrice": 257,
+      "newPrice": 258,
       "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         286,
-        286,
         285,
         284,
         284,
         285,
-        257
+        257,
+        258
       ],
       "url": "https://www.discexpress.se/products/fire-clear-sparkle-anniken-steen-team-series"
     },
@@ -516,18 +348,18 @@
       "storeName": "Discexpress",
       "plastic": "Clear",
       "oldPrice": 286,
-      "newPrice": 257,
+      "newPrice": 258,
       "pct": -10,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         286,
-        286,
         285,
         284,
         284,
         285,
-        257
+        257,
+        258
       ],
       "url": "https://www.discexpress.se/products/mighty-clear-jakub-semerad-team-series"
     },
@@ -537,9 +369,9 @@
       "storeName": "Discexpress",
       "plastic": "Spectrum",
       "oldPrice": 259,
-      "newPrice": 237,
+      "newPrice": 238,
       "pct": -8,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         259,
@@ -547,8 +379,8 @@
         259,
         259,
         259,
-        259,
-        237
+        237,
+        238
       ],
       "url": "https://www.discexpress.se/products/fx-4-500-spectrum-noah-higgins-2026-signature-series"
     },
@@ -558,18 +390,18 @@
       "storeName": "Discexpress",
       "plastic": "Spectrum",
       "oldPrice": 256,
-      "newPrice": 237,
+      "newPrice": 238,
       "pct": -7,
-      "changedAt": "2026-08-25T06:59:14.288Z",
+      "changedAt": "2026-08-26T07:06:15.145Z",
       "period": "week",
       "history": [
         256,
         256,
-        256,
         255,
         255,
         255,
-        237
+        237,
+        238
       ],
       "url": "https://www.discexpress.se/products/a5-500-spectrum-dylan-capaccioli-2026-signature-series"
     },
@@ -581,12 +413,12 @@
       "oldPrice": 275,
       "newPrice": 255,
       "pct": -7,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         275,
-        275,
         274,
+        255,
         255,
         255,
         255,
@@ -602,12 +434,12 @@
       "oldPrice": 200,
       "newPrice": 190,
       "pct": -5,
-      "changedAt": "2026-08-25T06:42:03.437Z",
+      "changedAt": "2026-08-26T06:44:18.420Z",
       "period": "week",
       "history": [
         200,
         200,
-        200,
+        190,
         190,
         190,
         190,
@@ -616,6 +448,6 @@
       "url": "https://www.discgolfdynasty.no/products/mvp-electron-anode"
     }
   ],
-  "totalDrops": 10,
-  "totalDropsWeek": 19
+  "totalDrops": 1,
+  "totalDropsWeek": 20
 }
