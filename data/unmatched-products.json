@@ -1,685 +1,6 @@
 {
-  "lastUpdated": "2026-08-29T12:53:44.403Z",
+  "lastUpdated": "2026-08-30T11:51:03.611Z",
   "products": [
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Gamma-Solid Titanium",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "MVP Lunar Module - Kurvlys",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "NEO Enigma",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/neo-enigma",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "BT Soft Swan",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Star Sync",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/star-sync",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Lux Vapor Function - Special Edition",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Neutron Boost",
-      "price": 209,
-      "url": "https://frisbeebutikken.no/products/neutron-boost",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "DX Sync",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/dx-sync",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Treasure Hunt (C-Plastikk)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/treasure-hunt-c-plastikk",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Treasure Hunt (Premium Plastikk)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/treasure-hunt-premium-plastikk",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "ACE Line Diskgolf Startsett",
-      "price": 399,
-      "url": "https://www.starframe.no/products/ace-line-diskgolf-startsett",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Champion Mid Disc3 (Metal Warrior)",
-      "price": 299,
-      "url": "https://www.starframe.no/products/champion-mid-disc3-metal-warrior-picture",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Chrome Cosmic",
-      "price": 199,
-      "url": "https://www.starframe.no/products/chrome-cosmic",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Clandestine Area 51",
-      "price": 249,
-      "url": "https://www.starframe.no/products/clandestne-area-51",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Composite Torque",
-      "price": 199,
-      "url": "https://www.starframe.no/products/composte-torque",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Discmania Fanatic Go Bag",
-      "price": 329,
-      "url": "https://www.starframe.no/products/discmania-fanatic-go-bag",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "DX Sync",
-      "price": 149,
-      "url": "https://www.starframe.no/products/dx-sync",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Forged Daytona",
-      "price": 199,
-      "url": "https://www.starframe.no/products/forgd-daytona",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Glaze X Fu Xi",
-      "price": 209,
-      "url": "https://www.starframe.no/products/glaze-x-fu-xi",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "I-Blend Khonsu (Run 1)",
-      "price": 185,
-      "url": "https://www.starframe.no/products/i-blend-khonsu-run-1",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Inner Colour Tian Shi",
-      "price": 189,
-      "url": "https://www.starframe.no/products/inner-colour-tian-shi",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Innova Discover Disc Golf Backpack",
-      "price": 349,
-      "url": "https://www.starframe.no/products/innova-discover-disc-golf-backpack",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "K1 Älva",
-      "price": 215,
-      "url": "https://www.starframe.no/products/k1-alva",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "NEO Enigma",
-      "price": 199,
-      "url": "https://www.starframe.no/products/neo-enigma",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Opto Ice Halo",
-      "price": 249,
-      "url": "https://www.starframe.no/products/opto-ice-halo",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Phoenix Line FU",
-      "price": 199,
-      "url": "https://www.starframe.no/products/phoenix-line-fu",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Phoenix Line YAO",
-      "price": 199,
-      "url": "https://www.starframe.no/products/phoenix-line-yao",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Planty Berry",
-      "price": 255,
-      "url": "https://www.starframe.no/products/planty-berry",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Planty Millet",
-      "price": 255,
-      "url": "https://www.starframe.no/products/planty-millet",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Planty Vanilla",
-      "price": 255,
-      "url": "https://www.starframe.no/products/planty-vanilla",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Planty Wild Honey",
-      "price": 255,
-      "url": "https://www.starframe.no/products/planty-wild-honey",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Fasti",
-      "price": 219,
-      "url": "https://www.starframe.no/products/premium-fasti",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Prominent Line Impetus (First Run)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/prominent-line-impetus-first-run",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Softy Mint",
-      "price": 159,
-      "url": "https://www.starframe.no/products/softy-mint",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Special Blend Lotus (Nate Perkins Tour Series 2023)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/special-blend-lotus-nate-perkins-2023",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Star Sync",
-      "price": 219,
-      "url": "https://www.starframe.no/products/star-sync",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Sunny Berry (Scott Withers Tour Series 2023)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/sunny-berry-scott-withers-tour-series-2023",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Sunny Mint (Evan Smith Tour Series 2023)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/sunny-mint-evan-smith-tour-series-2023",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Sunny Peach (Erika Stinchomb Tour Series 2023)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/sunny-peach-erika-stinchomb-tour-series-2023",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Sunny Peppermint (Jacob Courtis Tour Series 2023)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/sunny-peppermint-jacob-courtis-tour-series-2023",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Survival Midlife Crisis",
-      "price": 249,
-      "url": "https://www.starframe.no/products/survival-midlife-crisis",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Tiger Line VIEW",
-      "price": 139,
-      "url": "https://www.starframe.no/products/tiger-line-view",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Dragon Line GUI",
-      "price": 199,
-      "url": "https://www.starframe.no/products/dragon-line-gui",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Victory Line Osprey (Proto)",
-      "price": 229,
-      "url": "https://www.starframe.no/products/victory-line-osprey-proto",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Rubber Canyon",
-      "price": 179,
-      "url": "https://www.starframe.no/products/rubber-canyon",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Survival Lockdown",
-      "price": 249,
-      "url": "https://www.starframe.no/products/survival-lockdown",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Canyon",
-      "price": 269,
-      "url": "https://www.starframe.no/products/premium-canyon",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Canyon  (Phone Case)",
-      "price": 269,
-      "url": "https://www.starframe.no/products/premium-canyonphone-case",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Procyon",
-      "price": 269,
-      "url": "https://www.starframe.no/products/premium-procyon",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Ozone",
-      "price": 269,
-      "url": "https://www.starframe.no/products/premium-ozone",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Metal Flake Ozone (Retailer Exclusive)",
-      "price": 269,
-      "url": "https://www.starframe.no/products/metal-flake-ozone-retailer-exclusive",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "D Model OS Duraflex",
-      "price": 199,
-      "url": "https://www.starframe.no/products/d-model-os-duraflex",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "GEO Function",
-      "price": 129,
-      "url": "https://www.starframe.no/products/geo-function",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "D Model S Duraflex",
-      "price": 199,
-      "url": "https://www.starframe.no/products/d-model-s-duraflex",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Parallel Persona",
-      "price": 269,
-      "url": "https://www.starframe.no/products/parallel-persona",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Shimmer Parallel Expanse",
-      "price": 269,
-      "url": "https://www.starframe.no/products/shimmer-parallel-expanse",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Crystal Line Snoopy (First Run)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/snoopy-first-run",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Egg Shell Diplodocus",
-      "price": 199,
-      "url": "https://www.starframe.no/products/egg-shell-diplodocus",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Mellow (Prototype)",
-      "price": 219,
-      "url": "https://www.starframe.no/products/premium-mellow-prototype",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "H1v2 400",
-      "price": 205,
-      "url": "https://www.starframe.no/products/h1v2-400",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "H2v2 750",
-      "price": 219,
-      "url": "https://www.starframe.no/products/h2v2-750",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "DGA Tour Series Swirl Sonar (JomezPro x DGA &amp;#8217;26)",
-      "price": 279,
-      "url": "https://www.starframe.no/products/dga-tour-series-swirl-sonar-jomezpro-x-dga-26",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Hardy Butter",
-      "price": 159,
-      "url": "https://www.starframe.no/products/hardy-butter",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Hardy Mint",
-      "price": 159,
-      "url": "https://www.starframe.no/products/hardy-mint",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Prominent Line Gain (First Run)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/prominent-line-gain-first-run",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Lux Vapor Function (Special Edition)",
-      "price": 209,
-      "url": "https://www.starframe.no/products/lux-vapor-function-special-edition",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Eminent Stiff Gain (First Run)",
-      "price": 159,
-      "url": "https://www.starframe.no/products/eminent-stiff-gain-first-run",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Latitude 64 Swift HEX Backpack",
-      "price": 499,
-      "url": "https://www.starframe.no/products/latitude-64-swift-hex-backpack",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Crystal Line Snoopy",
-      "price": 199,
-      "url": "https://www.starframe.no/products/crystal-line-snoopy",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Supreme Intent (First Run)",
-      "price": 229,
-      "url": "https://www.starframe.no/products/supreme-intent-first-run",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Hardy Fudge",
-      "price": 159,
-      "url": "https://www.starframe.no/products/hardy-fudge",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Lux Vapor Enigma (2022 Special Edition)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/lux-vapor-enigma-2022-special-edition",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Signature Line Coast (Protoype)",
-      "price": 229,
-      "url": "https://www.starframe.no/products/signature-line-coast-protoype",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "DGA Tour Series Hypercane (Andrew Miranda 2026)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/dga-tour-series-hypercane-andrew-miranda-2026",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "DGA Tour Series Aftershock (Cole Redalen 2026)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/dga-tour-series-aftershock-cole-redalen-2026",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "DGA Tour Series Blast (Sullivan Tipton 2026)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/dga-tour-series-blast-sullivan-tipton-2026",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "G-Blend Dynasty",
-      "price": 199,
-      "url": "https://www.starframe.no/products/g-blend-dynasty",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Glow Nuance",
-      "price": 279,
-      "url": "https://www.starframe.no/products/glow-nuance",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "K1 Glow Älva 2024",
-      "price": 229,
-      "url": "https://www.starframe.no/products/k1-glow-alva-2024",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Neutron Boost",
-      "price": 209,
-      "url": "https://www.starframe.no/products/neutron-boost",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Atmos Vortex (Catrina Allen 2X)",
-      "price": 219,
-      "url": "https://www.starframe.no/products/atmos-vortex-catrina-allen-2x",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "TI Colorshift Impact (Ledgestone)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/ti-colorshift-impact-ledgestone",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Z Glo Lite Xtreme (Ledgestone)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/z-glo-lite-xtreme-ledgestone",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Jawbreaker Z Flx Hallux (Ledgestone)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/jawbreaker-z-flx-hallux-ledgestone",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Parallel Requiem",
-      "price": 269,
-      "url": "https://www.starframe.no/products/parallel-requiem",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "ESP Hallux (First Run Ricky Wysocki)",
-      "price": 235,
-      "url": "https://www.starframe.no/products/esp-hallux-first-run-ricky-wysocki",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "K1 Älva (Moomin Group)",
-      "price": 225,
-      "url": "https://www.starframe.no/products/k1-alva-moomin-group",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Dune",
-      "price": 255,
-      "url": "https://www.starframe.no/products/premium-dune",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Ignition Bunker Buster (Prototype)",
-      "price": 239,
-      "url": "https://www.starframe.no/products/ignition-bunker-buster-prototype",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Isolation Crisis (EC)",
-      "price": 249,
-      "url": "https://www.starframe.no/products/isolation-crisis-ec",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Composite Era (Drew Gibson)",
-      "price": 259,
-      "url": "https://www.starframe.no/products/composite-era-drew-gibson",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Atmos Rift",
-      "price": 219,
-      "url": "https://www.starframe.no/products/atmos-rift",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Toxic Waste Famine",
-      "price": 219,
-      "url": "https://www.starframe.no/products/toxic-waste-famine",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Vex Vessel (James Proctor)",
-      "price": 295,
-      "url": "https://www.starframe.no/products/vex-vessel-james-proctor",
-      "inStock": true
-    },
     {
       "store": "wearediscgolf",
       "rawName": "Champion Xcaliber",
@@ -1284,13 +605,6 @@
     },
     {
       "store": "wearediscgolf",
-      "rawName": "DuraFlex P Model S",
-      "price": 165,
-      "url": "https://wearediscgolf.no/produkt/duraflex-p-model-s/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
       "rawName": "Forged Rally First Run",
       "price": 199,
       "url": "https://wearediscgolf.no/produkt/forged-rally-first-run/",
@@ -1707,13 +1021,6 @@
       "rawName": "Composite Chicane",
       "price": 199,
       "url": "https://wearediscgolf.no/produkt/composite-chicane/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "MVP Disc Station II",
-      "price": 899,
-      "url": "https://wearediscgolf.no/produkt/mvp-disc-station-ii/",
       "inStock": true
     },
     {
@@ -5826,6 +5133,685 @@
       "inStock": true
     },
     {
+      "store": "frisbeebutikken",
+      "rawName": "BT Soft Swan",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "DX Sync",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/dx-sync",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NEO Enigma",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/neo-enigma",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Neutron Boost",
+      "price": 209,
+      "url": "https://frisbeebutikken.no/products/neutron-boost",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium SLAIDi",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Titan",
+      "price": 259,
+      "url": "https://frisbeebutikken.no/products/ultrium-titan",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Star Sync",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/star-sync",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Gamma-Solid Titanium",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Treasure Hunt (C-Plastikk)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/treasure-hunt-c-plastikk",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Treasure Hunt (Premium Plastikk)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/treasure-hunt-premium-plastikk",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "ACE Line Diskgolf Startsett",
+      "price": 399,
+      "url": "https://www.starframe.no/products/ace-line-diskgolf-startsett",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Chrome Cosmic",
+      "price": 199,
+      "url": "https://www.starframe.no/products/chrome-cosmic",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Clandestine Area 51",
+      "price": 249,
+      "url": "https://www.starframe.no/products/clandestne-area-51",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Composite Torque",
+      "price": 199,
+      "url": "https://www.starframe.no/products/composte-torque",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Discmania Fanatic Go Bag",
+      "price": 329,
+      "url": "https://www.starframe.no/products/discmania-fanatic-go-bag",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "DX Sync",
+      "price": 149,
+      "url": "https://www.starframe.no/products/dx-sync",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Forged Daytona",
+      "price": 199,
+      "url": "https://www.starframe.no/products/forgd-daytona",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Glaze X Fu Xi",
+      "price": 209,
+      "url": "https://www.starframe.no/products/glaze-x-fu-xi",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "I-Blend Khonsu (Run 1)",
+      "price": 185,
+      "url": "https://www.starframe.no/products/i-blend-khonsu-run-1",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Inner Colour Tian Shi",
+      "price": 189,
+      "url": "https://www.starframe.no/products/inner-colour-tian-shi",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Innova Discover Disc Golf Backpack",
+      "price": 349,
+      "url": "https://www.starframe.no/products/innova-discover-disc-golf-backpack",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Älva",
+      "price": 215,
+      "url": "https://www.starframe.no/products/k1-alva",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "NEO Enigma",
+      "price": 199,
+      "url": "https://www.starframe.no/products/neo-enigma",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Opto Ice Halo",
+      "price": 249,
+      "url": "https://www.starframe.no/products/opto-ice-halo",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Phoenix Line FU",
+      "price": 199,
+      "url": "https://www.starframe.no/products/phoenix-line-fu",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Phoenix Line YAO",
+      "price": 199,
+      "url": "https://www.starframe.no/products/phoenix-line-yao",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Planty Berry",
+      "price": 255,
+      "url": "https://www.starframe.no/products/planty-berry",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Planty Millet",
+      "price": 255,
+      "url": "https://www.starframe.no/products/planty-millet",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Planty Vanilla",
+      "price": 255,
+      "url": "https://www.starframe.no/products/planty-vanilla",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Planty Wild Honey",
+      "price": 255,
+      "url": "https://www.starframe.no/products/planty-wild-honey",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Fasti",
+      "price": 219,
+      "url": "https://www.starframe.no/products/premium-fasti",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Prominent Line Impetus (First Run)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/prominent-line-impetus-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Softy Mint",
+      "price": 159,
+      "url": "https://www.starframe.no/products/softy-mint",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Special Blend Lotus (Nate Perkins Tour Series 2023)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/special-blend-lotus-nate-perkins-2023",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Star Sync",
+      "price": 219,
+      "url": "https://www.starframe.no/products/star-sync",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Sunny Berry (Scott Withers Tour Series 2023)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/sunny-berry-scott-withers-tour-series-2023",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Sunny Mint (Evan Smith Tour Series 2023)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/sunny-mint-evan-smith-tour-series-2023",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Sunny Peach (Erika Stinchomb Tour Series 2023)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/sunny-peach-erika-stinchomb-tour-series-2023",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Sunny Peppermint (Jacob Courtis Tour Series 2023)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/sunny-peppermint-jacob-courtis-tour-series-2023",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Survival Midlife Crisis",
+      "price": 249,
+      "url": "https://www.starframe.no/products/survival-midlife-crisis",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Tiger Line VIEW",
+      "price": 139,
+      "url": "https://www.starframe.no/products/tiger-line-view",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Z Terminator (First Run)",
+      "price": 209,
+      "url": "https://www.starframe.no/products/z-terminator-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Dragon Line GUI",
+      "price": 199,
+      "url": "https://www.starframe.no/products/dragon-line-gui",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Victory Line Osprey (Proto)",
+      "price": 229,
+      "url": "https://www.starframe.no/products/victory-line-osprey-proto",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Rubber Canyon",
+      "price": 179,
+      "url": "https://www.starframe.no/products/rubber-canyon",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Survival Lockdown",
+      "price": 249,
+      "url": "https://www.starframe.no/products/survival-lockdown",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Canyon",
+      "price": 269,
+      "url": "https://www.starframe.no/products/premium-canyon",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Canyon  (Phone Case)",
+      "price": 269,
+      "url": "https://www.starframe.no/products/premium-canyonphone-case",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Procyon",
+      "price": 269,
+      "url": "https://www.starframe.no/products/premium-procyon",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Ozone",
+      "price": 269,
+      "url": "https://www.starframe.no/products/premium-ozone",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Metal Flake Ozone (Retailer Exclusive)",
+      "price": 269,
+      "url": "https://www.starframe.no/products/metal-flake-ozone-retailer-exclusive",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "D Model OS Duraflex",
+      "price": 199,
+      "url": "https://www.starframe.no/products/d-model-os-duraflex",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "GEO Function",
+      "price": 129,
+      "url": "https://www.starframe.no/products/geo-function",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "D Model S Duraflex",
+      "price": 199,
+      "url": "https://www.starframe.no/products/d-model-s-duraflex",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Parallel Persona",
+      "price": 269,
+      "url": "https://www.starframe.no/products/parallel-persona",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Shimmer Parallel Expanse",
+      "price": 269,
+      "url": "https://www.starframe.no/products/shimmer-parallel-expanse",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Crystal Line Snoopy (First Run)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/snoopy-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Egg Shell Diplodocus",
+      "price": 199,
+      "url": "https://www.starframe.no/products/egg-shell-diplodocus",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Mellow (Prototype)",
+      "price": 219,
+      "url": "https://www.starframe.no/products/premium-mellow-prototype",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "H1v2 400",
+      "price": 205,
+      "url": "https://www.starframe.no/products/h1v2-400",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "H2v2 750",
+      "price": 219,
+      "url": "https://www.starframe.no/products/h2v2-750",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "DGA Tour Series Swirl Sonar (JomezPro x DGA &amp;#8217;26)",
+      "price": 279,
+      "url": "https://www.starframe.no/products/dga-tour-series-swirl-sonar-jomezpro-x-dga-26",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Hardy Butter",
+      "price": 159,
+      "url": "https://www.starframe.no/products/hardy-butter",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Hardy Mint",
+      "price": 159,
+      "url": "https://www.starframe.no/products/hardy-mint",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Prominent Line Gain (First Run)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/prominent-line-gain-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Lux Vapor Function (Special Edition)",
+      "price": 209,
+      "url": "https://www.starframe.no/products/lux-vapor-function-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Eminent Stiff Gain (First Run)",
+      "price": 159,
+      "url": "https://www.starframe.no/products/eminent-stiff-gain-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Latitude 64 Swift HEX Backpack",
+      "price": 499,
+      "url": "https://www.starframe.no/products/latitude-64-swift-hex-backpack",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Crystal Line Snoopy",
+      "price": 199,
+      "url": "https://www.starframe.no/products/crystal-line-snoopy",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Supreme Intent (First Run)",
+      "price": 229,
+      "url": "https://www.starframe.no/products/supreme-intent-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Hardy Fudge",
+      "price": 159,
+      "url": "https://www.starframe.no/products/hardy-fudge",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Lux Vapor Enigma (2022 Special Edition)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/lux-vapor-enigma-2022-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Signature Line Coast (Protoype)",
+      "price": 229,
+      "url": "https://www.starframe.no/products/signature-line-coast-protoype",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "DGA Tour Series Hypercane (Andrew Miranda 2026)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/dga-tour-series-hypercane-andrew-miranda-2026",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "DGA Tour Series Aftershock (Cole Redalen 2026)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/dga-tour-series-aftershock-cole-redalen-2026",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "DGA Tour Series Blast (Sullivan Tipton 2026)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/dga-tour-series-blast-sullivan-tipton-2026",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "G-Blend Dynasty",
+      "price": 199,
+      "url": "https://www.starframe.no/products/g-blend-dynasty",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Glow Nuance",
+      "price": 279,
+      "url": "https://www.starframe.no/products/glow-nuance",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Glow Älva 2024",
+      "price": 229,
+      "url": "https://www.starframe.no/products/k1-glow-alva-2024",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Neutron Boost",
+      "price": 209,
+      "url": "https://www.starframe.no/products/neutron-boost",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Atmos Vortex (Catrina Allen 2X)",
+      "price": 219,
+      "url": "https://www.starframe.no/products/atmos-vortex-catrina-allen-2x",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "TI Colorshift Impact (Ledgestone)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/ti-colorshift-impact-ledgestone",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Z Glo Lite Xtreme (Ledgestone)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/z-glo-lite-xtreme-ledgestone",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Jawbreaker Z Flx Hallux (Ledgestone)",
+      "price": 309,
+      "url": "https://www.starframe.no/products/jawbreaker-z-flx-hallux-ledgestone",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Parallel Requiem",
+      "price": 269,
+      "url": "https://www.starframe.no/products/parallel-requiem",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "ESP Hallux (First Run Ricky Wysocki)",
+      "price": 235,
+      "url": "https://www.starframe.no/products/esp-hallux-first-run-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Älva (Moomin Group)",
+      "price": 225,
+      "url": "https://www.starframe.no/products/k1-alva-moomin-group",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Premium Dune",
+      "price": 255,
+      "url": "https://www.starframe.no/products/premium-dune",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Ignition Bunker Buster (Prototype)",
+      "price": 239,
+      "url": "https://www.starframe.no/products/ignition-bunker-buster-prototype",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Isolation Crisis (EC)",
+      "price": 249,
+      "url": "https://www.starframe.no/products/isolation-crisis-ec",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Composite Era (Drew Gibson)",
+      "price": 259,
+      "url": "https://www.starframe.no/products/composite-era-drew-gibson",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Atmos Rift",
+      "price": 219,
+      "url": "https://www.starframe.no/products/atmos-rift",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Toxic Waste Famine",
+      "price": 219,
+      "url": "https://www.starframe.no/products/toxic-waste-famine",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Vex Vessel (James Proctor)",
+      "price": 295,
+      "url": "https://www.starframe.no/products/vex-vessel-james-proctor",
+      "inStock": true
+    },
+    {
       "store": "golfdiscer",
       "rawName": "Latitude 64 Easy-Go E2. FØR 1699,- Nå 999,-",
       "price": 999,
@@ -7097,7 +7083,7 @@
       "rawName": "Discaft - Innova -The 2026 Worlds Edition - Collector Sets",
       "price": 546,
       "url": "https://www.discexpress.se/products/discaft-innova-the-2026-worlds-edition-collector-sets",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "discexpress",
@@ -7200,7 +7186,7 @@
     {
       "store": "discexpress",
       "rawName": "MVP Voyager Lite",
-      "price": 1270,
+      "price": 1269,
       "url": "https://www.discexpress.se/products/mvp-voyager-lite",
       "inStock": true
     },
@@ -7326,7 +7312,7 @@
     {
       "store": "discexpress",
       "rawName": "Discmania - Tour Bag",
-      "price": 1954,
+      "price": 1953,
       "url": "https://www.discexpress.se/products/discmania-tour-bag",
       "inStock": true
     },
@@ -7431,7 +7417,7 @@
     {
       "store": "discexpress",
       "rawName": "Voyager - James Conrad Signature Edition",
-      "price": 1945,
+      "price": 1944,
       "url": "https://www.discexpress.se/products/voyager-james-conrad-signature-edition",
       "inStock": false
     },
@@ -7445,14 +7431,14 @@
     {
       "store": "discexpress",
       "rawName": "Axiom Voyager Lite",
-      "price": 1270,
+      "price": 1269,
       "url": "https://www.discexpress.se/products/axiom-voyager-lite",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "MVP Voyager Lite – Ripstop",
-      "price": 1270,
+      "price": 1269,
       "url": "https://www.discexpress.se/products/mvp-voyager-lite-ripstop",
       "inStock": false
     },
@@ -7634,14 +7620,14 @@
     {
       "store": "discexpress",
       "rawName": "Discgolfkalender 2025 - 24 Överraskningar för Discgolfentusiasten",
-      "price": 2930,
+      "price": 2929,
       "url": "https://www.discexpress.se/products/discgolf-adventskalender-2025-24-overraskningar-for-discgolf-entusiasten",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Luxury E5 Backpack",
-      "price": 1945,
+      "price": 1944,
       "url": "https://www.discexpress.se/products/core-pro-e5-backpack",
       "inStock": true
     },
@@ -7739,7 +7725,7 @@
     {
       "store": "discexpress",
       "rawName": "Sigr - Odin",
-      "price": 2736,
+      "price": 2735,
       "url": "https://www.discexpress.se/products/sigr-odin",
       "inStock": true
     },
@@ -7914,28 +7900,28 @@
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Putt",
-      "price": 3869,
+      "price": 3868,
       "url": "https://www.discexpress.se/products/tech-disc-putt",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Midrange",
-      "price": 3869,
+      "price": 3868,
       "url": "https://www.discexpress.se/products/tech-disc-midrange",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Disctance Driver",
-      "price": 3869,
+      "price": 3868,
       "url": "https://www.discexpress.se/products/tech-disc-disctance-driver",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Fairway Driver",
-      "price": 3869,
+      "price": 3868,
       "url": "https://www.discexpress.se/products/tech-disc-fairway-driver",
       "inStock": true
     },
@@ -7998,7 +7984,7 @@
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Go backpack",
-      "price": 322,
+      "price": 321,
       "url": "https://www.discexpress.se/products/discmania-fanatic-go-backpack",
       "inStock": true
     },
@@ -8033,7 +8019,7 @@
     {
       "store": "discexpress",
       "rawName": "ZÜCA - Insert Bag, black (Compact Disc Golf)",
-      "price": 879,
+      "price": 878,
       "url": "https://www.discexpress.se/products/zuca-insert-bag-black-compact-disc-golf",
       "inStock": false
     },
@@ -8124,7 +8110,7 @@
     {
       "store": "discexpress",
       "rawName": "Rack - All Terrain - Zuca",
-      "price": 537,
+      "price": 536,
       "url": "https://www.discexpress.se/products/rack-all-terrain-zuca",
       "inStock": true
     },
@@ -8285,7 +8271,7 @@
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Fly Backpack",
-      "price": 537,
+      "price": 536,
       "url": "https://www.discexpress.se/products/discmania-fanatic-fly-backpack",
       "inStock": false
     },
@@ -8369,7 +8355,7 @@
     {
       "store": "discexpress",
       "rawName": "Cuff Beanie Paul Mcbeth 2 Tone",
-      "price": 322,
+      "price": 321,
       "url": "https://www.discexpress.se/products/cuff-beanie-paul-mcbeth-2-tone",
       "inStock": true
     },
@@ -8509,7 +8495,7 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4397,
+      "price": 4396,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
@@ -8537,7 +8523,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart",
-      "price": 2931,
+      "price": 2930,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart",
       "inStock": false
     },
@@ -8747,7 +8733,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4495,
+      "price": 4494,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
@@ -8817,14 +8803,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart LG",
-      "price": 3322,
+      "price": 3321,
       "url": "https://www.discexpress.se/products/backpack-cart-lg",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart and Insert Bag",
-      "price": 4104,
+      "price": 4103,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-backpack-cart-with-insert",
       "inStock": true
     },
@@ -8901,7 +8887,7 @@
     {
       "store": "discexpress",
       "rawName": "Upper Park The Trainer",
-      "price": 537,
+      "price": 536,
       "url": "https://www.discexpress.se/products/upper-park-the-trainer",
       "inStock": false
     },
@@ -8957,7 +8943,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - BP-2 V3",
-      "price": 879,
+      "price": 878,
       "url": "https://www.discexpress.se/products/prodigy-bp-2-v2",
       "inStock": false
     },
@@ -9146,7 +9132,7 @@
     {
       "store": "discexpress",
       "rawName": "Friction Warm Pair",
-      "price": 410,
+      "price": 409,
       "url": "https://www.discexpress.se/products/friction-warm-pair",
       "inStock": true
     },
@@ -9188,77 +9174,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
@@ -9734,21 +9720,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
@@ -10434,13 +10420,6 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 205,
-      "url": "https://rocketdiscs.com/axiom-bokeh",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Neutron - Axiom Bokeh",
       "price": 227,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
@@ -10735,49 +10714,49 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
@@ -11260,21 +11239,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
@@ -11421,7 +11400,7 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
@@ -11505,7 +11484,7 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
@@ -11547,322 +11526,322 @@
     {
       "store": "rocketdiscs",
       "rawName": "Neutron - Axiom Bokeh",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/axiom-bokeh",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Q-Line Cloud Breaker",
-      "price": 271,
+      "price": 270,
       "url": "https://rocketdiscs.com/discmania-cloudbreaker",
       "inStock": true
     },
@@ -17706,8 +17685,92 @@
     },
     {
       "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
       "rawName": "Vex Expanse",
       "price": 281,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 281,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 281,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 281,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
@@ -17797,8 +17860,78 @@
     },
     {
       "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 281,
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
@@ -17867,15 +18000,36 @@
     },
     {
       "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 281,
+      "rawName": "Parallel Expanse",
+      "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 281,
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
@@ -17909,7 +18063,49 @@
     },
     {
       "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
       "rawName": "Vex Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
       "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
@@ -18007,7 +18203,14 @@
     },
     {
       "store": "rocketdiscs",
-      "rawName": "Vex Persona",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
       "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
@@ -18070,7 +18273,28 @@
     },
     {
       "store": "rocketdiscs",
-      "rawName": "Vex Persona",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
       "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
@@ -18078,6 +18302,41 @@
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
+      "price": 260,
+      "url": "https://rocketdiscs.com/thought-space-athletics-persona",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Persona",
       "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
@@ -18219,13 +18478,6 @@
       "store": "rocketdiscs",
       "rawName": "Neutron SL Boost",
       "price": 216,
-      "url": "https://rocketdiscs.com/streamline-boost",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Neutron SL Boost",
-      "price": 184,
       "url": "https://rocketdiscs.com/streamline-boost",
       "inStock": true
     },
@@ -18798,16 +19050,16 @@
     },
     {
       "store": "discsport",
-      "rawName": "Signature Blunt Gumbputt",
+      "rawName": "Signature Blowfly 1",
       "price": 185,
-      "url": "https://discsport.se/discar/mold/gumbputt",
+      "url": "https://discsport.se/discar/mold/blowfly-i",
       "inStock": true
     },
     {
       "store": "discsport",
-      "rawName": "Signature Blowfly 1",
+      "rawName": "Signature Blunt Gumbputt",
       "price": 185,
-      "url": "https://discsport.se/discar/mold/blowfly-i",
+      "url": "https://discsport.se/discar/mold/gumbputt",
       "inStock": true
     },
     {
@@ -19036,6 +19288,13 @@
     },
     {
       "store": "discsport",
+      "rawName": "Sky-Styler Discraft",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/sky-styler",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "J Star Junior Ultimate Discraft",
       "price": 107,
       "url": "https://discsport.se/discar/mold/j-star",
@@ -19043,10 +19302,24 @@
     },
     {
       "store": "discsport",
-      "rawName": "Sky-Styler Discraft",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/sky-styler",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/function",
       "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Alloy Function - Gannon Buhr",
+      "price": 282,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Geo Function",
+      "price": 107,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": false
     },
     {
       "store": "discsport",
@@ -19089,27 +19362,6 @@
       "price": 253,
       "url": "https://discsport.se/discar/mold/aelva",
       "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Lux Vapor Function - Special Edition",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/function",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Alloy Function - Gannon Buhr",
-      "price": 282,
-      "url": "https://discsport.se/discar/mold/function",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Geo Function",
-      "price": 107,
-      "url": "https://discsport.se/discar/mold/function",
-      "inStock": false
     },
     {
       "store": "discsport",
@@ -19183,16 +19435,16 @@
     },
     {
       "store": "discsport",
-      "rawName": "Atmos Rift",
+      "rawName": "Atmos Vortex",
       "price": 224,
-      "url": "https://discsport.se/discar/mold/rift",
+      "url": "https://discsport.se/discar/mold/vortex",
       "inStock": true
     },
     {
       "store": "discsport",
-      "rawName": "Atmos Vortex",
+      "rawName": "Atmos Rift",
       "price": 224,
-      "url": "https://discsport.se/discar/mold/vortex",
+      "url": "https://discsport.se/discar/mold/rift",
       "inStock": true
     },
     {
@@ -19211,10 +19463,45 @@
     },
     {
       "store": "discsport",
-      "rawName": "DL Blast",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/blast",
+      "rawName": "BITEaLOT 230 DISCaLOT",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/bite-a-lot",
       "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prototype Fossil - Ricky Wysocki",
+      "price": 234,
+      "url": "https://discsport.se/discar/mold/fossil",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Z Colorshift Fossil - First Run",
+      "price": 234,
+      "url": "https://discsport.se/discar/mold/fossil",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "ESP Hallux - First Run",
+      "price": 234,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prototype Hallux - Ricky Wysocki",
+      "price": 234,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": false
     },
     {
       "store": "discsport",
@@ -19228,6 +19515,13 @@
       "rawName": "Hero SuperStar 235 Hero Disc",
       "price": 234,
       "url": "https://discsport.se/discar/mold/super-star",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "First Flight Typhoon - Catrina Allen",
+      "price": 243,
+      "url": "https://discsport.se/discar/mold/typhoon",
       "inStock": true
     },
     {
@@ -19253,55 +19547,6 @@
     },
     {
       "store": "discsport",
-      "rawName": "ESP Hallux - First Run",
-      "price": 234,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Prototype Hallux - Ricky Wysocki",
-      "price": 234,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Prototype Fossil - Ricky Wysocki",
-      "price": 234,
-      "url": "https://discsport.se/discar/mold/fossil",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Z Colorshift Fossil - First Run",
-      "price": 234,
-      "url": "https://discsport.se/discar/mold/fossil",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "BITEaLOT 230 DISCaLOT",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/bite-a-lot",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "First Flight Typhoon - Catrina Allen",
-      "price": 243,
-      "url": "https://discsport.se/discar/mold/typhoon",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
       "rawName": "Trophy Champ",
       "price": 185,
       "url": "https://discsport.se/discar/mold/champ",
@@ -19312,27 +19557,6 @@
       "rawName": "Trophy Soft Champ",
       "price": 185,
       "url": "https://discsport.se/discar/mold/champ",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Victory Streak",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/streak",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Major Streak",
-      "price": 224,
-      "url": "https://discsport.se/discar/mold/streak",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Signature Streak",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/streak",
       "inStock": true
     },
     {
@@ -19358,6 +19582,34 @@
     },
     {
       "store": "discsport",
+      "rawName": "Victory Streak",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Major Streak",
+      "price": 224,
+      "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Signature Streak",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DL Blast",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/blast",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
       "rawName": "Trophy Cliff - Prototype",
       "price": 185,
       "url": "https://discsport.se/discar/mold/cliff",
@@ -19365,16 +19617,16 @@
     },
     {
       "store": "discsport",
-      "rawName": "Q-Line Horizon Cloud Breaker - Gannon Buhr 2026",
-      "price": 273,
-      "url": "https://discsport.se/discar/mold/premier-cloudbreaker",
+      "rawName": "ESP Captains Caliber - Test Flight (Seppo Paju)",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/captains-caliber",
       "inStock": false
     },
     {
       "store": "discsport",
-      "rawName": "ESP Captains Caliber - Test Flight (Seppo Paju)",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/captains-caliber",
+      "rawName": "Q-Line Horizon Cloud Breaker - Gannon Buhr 2026",
+      "price": 273,
+      "url": "https://discsport.se/discar/mold/premier-cloudbreaker",
       "inStock": false
     },
     {
@@ -19492,7 +19744,7 @@
     {
       "store": "ugglans",
       "rawName": "Discmania Tour Bag",
-      "price": 1954,
+      "price": 1953,
       "url": "https://ugglansdiscgolf.se/products/discmania-tour-bag",
       "inStock": false
     },
@@ -19611,7 +19863,7 @@
     {
       "store": "ugglans",
       "rawName": "Luxury E5 Backpack",
-      "price": 1954,
+      "price": 1953,
       "url": "https://ugglansdiscgolf.se/products/luxury-e5-backpack",
       "inStock": false
     },
@@ -19674,7 +19926,7 @@
     {
       "store": "ugglans",
       "rawName": "Fanatic Go Backpack",
-      "price": 322,
+      "price": 321,
       "url": "https://ugglansdiscgolf.se/products/fanatic-go-backpack",
       "inStock": false
     },
@@ -19744,14 +19996,14 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Odin",
-      "price": 2736,
+      "price": 2735,
       "url": "https://ugglansdiscgolf.se/products/sigr-odin",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2345,
+      "price": 2344,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": true
     },
@@ -19793,14 +20045,14 @@
     {
       "store": "ugglans",
       "rawName": "Framtid",
-      "price": 3420,
+      "price": 3419,
       "url": "https://ugglansdiscgolf.se/products/framtid",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "European Birdies - Frid 2",
-      "price": 4398,
+      "price": 4397,
       "url": "https://ugglansdiscgolf.se/products/frid-2-european-birdie-turkos",
       "inStock": false
     },
@@ -19863,7 +20115,7 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Apex XL",
-      "price": 2434,
+      "price": 2433,
       "url": "https://ugglansdiscgolf.se/products/prodigy-apex-xl",
       "inStock": true
     },
@@ -19919,7 +20171,7 @@
     {
       "store": "ugglans",
       "rawName": "Grip Bx3",
-      "price": 2931,
+      "price": 2930,
       "url": "https://ugglansdiscgolf.se/products/grip-bx3",
       "inStock": true
     },
