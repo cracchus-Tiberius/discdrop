@@ -20,6 +20,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
+import discDescriptions from "@/data/disc-descriptions.json";
 import { getDiscImage } from "@/lib/disc-utils";
 import { dropsLabel } from "@/lib/pluralize";
 
@@ -143,6 +144,8 @@ export type SignalRow = {
   hasShippingData: boolean;
   storeCount: number;
   stores: SignalStoreEntry[];
+  /** From data/disc-descriptions.json — the "Ny disk" spotlight card's only consumer today. Null if this disc has none yet. */
+  description: string | null;
 };
 
 export type StoreArrivalGroup = {
@@ -204,6 +207,7 @@ function buildSignalRow(s: RawSignal): SignalRow {
     price: cheapest?.price ?? s.price,
     hasShippingData: cheapest?.hasShippingData ?? false,
     storeCount: stores.length,
+    description: (discDescriptions as Record<string, string>)[s.discId] ?? null,
     stores,
   };
 }
