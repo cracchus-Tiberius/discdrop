@@ -73,6 +73,34 @@ Package manager: pnpm (always use pnpm, never npm).
 - Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
   serve them) — see wrangler.toml for the D1 binding.
 
+## Launch: /nytt public release ("uke 35-lanseringen")
+"Uke 35-lanseringen" = making the /nytt ("Nytt i butikk") feed page public — it's
+been live but unlinked (launch-gated) since week 34, waiting for 1-2 weeks of
+stable signal counts before linking it from nav/sitemap. Update this checklist's
+status as items get resolved; keep it here until the launch actually ships, then
+delete this section.
+
+**Launch gate** (must report clean before flipping the gate):
+1. /nytt signal counts for ISO weeks 34 and 35 per type (new-disc / new-release /
+   new-at-store) + any mass-reset suppression events. Target: ~5-25 signals/week,
+   no leaks. Source: data/new-in-stores.json (rebuilt every scrape).
+2. Any price below the 50 NOK floor (MIN_VALID_PRICE_NOK) — confirm which
+   store/currency, confirm data/rejected-prices.json + lib/disc-utils.ts actually
+   rejected it from display, fix any reporting path that doesn't apply the floor.
+3. Spot-check a sample of a single store's week-over-week price drops against the
+   live store to rule out currency-conversion drift vs a real sale.
+
+**Launch tasks** (ship work, independent of the gate):
+4. Add "Nytt i butikk" to main nav (components/SiteHeader.tsx's NAV_LINKS) + to
+   app/sitemap.ts's static entries — currently unlinked from both.
+5. /nytt redesign per the Claude Design mockup ("Nytt i butikk").
+6. Homepage hero store count → derived from data, not hardcoded.
+7. Favicon set (app/favicon.ico, app/icon.svg, app/apple-icon.png,
+   public/icon-192.png, public/icon-512.png, public/site.webmanifest) matches
+   current DiscDrop branding.
+8. og:image (public/og.png, referenced from app/layout.tsx's openGraph/twitter
+   metadata) matches the current 1b Pop redesign — not a pre-redesign screenshot.
+
 ## Deploy
 npx wrangler pages deploy out --project-name=discdrop --commit-dirty=true
 Automated via GitHub Actions after each daily scrape.
