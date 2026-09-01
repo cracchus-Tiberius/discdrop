@@ -262,9 +262,7 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
   const newAtStoreCountByStoreWeek = new Map();
   for (const s of rawSignals) {
     if (s.type !== 'new-at-store') continue;
-    const { isoYear, weekNumber } = getIsoWeek(new Date(s.firstSeenMs));
-    const weekKey = `${isoYear}-W${String(weekNumber).padStart(2, '0')}`;
-    const key = `${s.store}|${weekKey}`;
+    const key = `${s.store}|${isoWeekKey(s.firstSeenMs)}`;
     newAtStoreCountByStoreWeek.set(key, (newAtStoreCountByStoreWeek.get(key) || 0) + 1);
   }
   const weeklyCapKeys = new Set();
@@ -280,9 +278,7 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
 
   const cappedSignals = rawSignals.filter((s) => {
     if (s.type !== 'new-at-store') return true;
-    const { isoYear, weekNumber } = getIsoWeek(new Date(s.firstSeenMs));
-    const weekKey = `${isoYear}-W${String(weekNumber).padStart(2, '0')}`;
-    return !weeklyCapKeys.has(`${s.store}|${weekKey}`);
+    return !weeklyCapKeys.has(`${s.store}|${isoWeekKey(s.firstSeenMs)}`);
   });
 
   // Merge same disc + same signal type into one entry with a stores list —
@@ -350,6 +346,12 @@ function getIsoWeek(date) {
   return { isoYear, weekNumber };
 }
 
+/** "2026-W35"-style key for a given ms timestamp. */
+function isoWeekKey(ms) {
+  const { isoYear, weekNumber } = getIsoWeek(new Date(ms));
+  return `${isoYear}-W${String(weekNumber).padStart(2, '0')}`;
+}
+
 /** Monday 00:00 UTC of the ISO week containing `date`. */
 function getIsoWeekStart(date) {
   const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
@@ -372,7 +374,7 @@ function groupSignalsByWeek(signals) {
   for (const s of signals) {
     const date = new Date(s.firstSeenMs);
     const { isoYear, weekNumber } = getIsoWeek(date);
-    const key = `${isoYear}-W${String(weekNumber).padStart(2, '0')}`;
+    const key = isoWeekKey(s.firstSeenMs);
     if (!weeks.has(key)) {
       const weekStart = getIsoWeekStart(date);
       const weekEnd = new Date(weekStart);
@@ -391,6 +393,47 @@ function groupSignalsByWeek(signals) {
   return [...weeks.values()].sort((a, b) => b.isoWeek.localeCompare(a.isoWeek));
 }
 
+// ── Week freezing ────────────────────────────────────────────────────────
+// A completed ISO week's signals must never change again once the week has
+// ended — but SIGNAL_WINDOW_MS classifies every entry relative to `asOfMs`
+// ("now"), so re-running this same computation a week later against a LATER
+// asOfMs silently reclassifies past weeks too (confirmed in production
+// 2026-08-31: re-running the classifier one day later than an earlier
+// report changed a past week's new-release count from 13 to 9 — nothing
+// about that week's real-world news changed, only how far "now" had moved
+// past its listings' SIGNAL_WINDOW_MS cutoff). Freezing fixes this by
+// writing a completed week's file exactly once (the first run after that
+// week ends) and never touching it again — this function only decides
+// WHICH computed weeks get (re)written; the caller (build-new-in-stores.js)
+// is responsible for actually skipping the disk write for anything in
+// `toSkip`, which is what makes a frozen week's file byte-identical across
+// runs no matter how asOfMs moves.
+
+/**
+ * @param {{weeks: object[], currentIsoWeek: string, frozenIsoWeeks: Set<string>|string[], forceRefreezeIsoWeeks?: Set<string>|string[]}} args
+ * @returns {{toWrite: object[], toSkip: string[]}}
+ */
+function partitionWeeksForFreezing({ weeks, currentIsoWeek, frozenIsoWeeks, forceRefreezeIsoWeeks }) {
+  const frozen = frozenIsoWeeks instanceof Set ? frozenIsoWeeks : new Set(frozenIsoWeeks || []);
+  const forced = forceRefreezeIsoWeeks instanceof Set ? forceRefreezeIsoWeeks : new Set(forceRefreezeIsoWeeks || []);
+  const toWrite = [];
+  const toSkip = [];
+  for (const week of weeks) {
+    const isLive = week.isoWeek === currentIsoWeek;
+    const alreadyFrozen = frozen.has(week.isoWeek) && !forced.has(week.isoWeek);
+    if (alreadyFrozen) {
+      toSkip.push(week.isoWeek);
+      continue;
+    }
+    // A week is "frozen" going forward the moment it's no longer live —
+    // this write (the first one after the week ends) IS what freezes it;
+    // the caller persists frozen:true so the NEXT run's frozenIsoWeeks
+    // includes it and hits the toSkip branch above instead.
+    toWrite.push({ ...week, frozen: !isLive });
+  }
+  return { toWrite, toSkip };
+}
+
 module.exports = {
   SIGNAL_WINDOW_MS,
   STORE_QUARANTINE_MS,
@@ -401,5 +444,7 @@ module.exports = {
   buildNewInStoresSignals,
   getIsoWeek,
   getIsoWeekStart,
+  isoWeekKey,
   groupSignalsByWeek,
+  partitionWeeksForFreezing,
 };

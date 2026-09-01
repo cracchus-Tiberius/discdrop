@@ -12,7 +12,7 @@ export const BADGE_STYLES: Record<string, BadgeStyle> = {
   "first-run": { bg: "#101C14", text: "#B8E04A", label: "FIRST RUN" },
   "sold-out": { bg: "#88888D", text: "#FFFFFF", label: "UTSOLGT" },
   upcoming: { bg: "#F1EFE6", text: "#101C14", label: "KOMMENDE" },
-  // "Nytt i butikk" feature (data/new-in-stores.json, lib/new-in-stores.ts).
+  // "Nytt i butikk" feature (data/new-in-stores/, lib/new-in-stores.ts).
   // new-disc reuses the lime "new-drop" look (it IS a new-drop, just a
   // stronger claim — first time this mold has ever been seen); new-edition
   // gets the brand's primary green (CLAUDE.md's #2D6A4F) instead of lime, so

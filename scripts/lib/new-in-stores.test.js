@@ -12,7 +12,9 @@ const {
   buildNewInStoresSignals,
   getIsoWeek,
   getIsoWeekStart,
+  isoWeekKey,
   groupSignalsByWeek,
+  partitionWeeksForFreezing,
 } = require('./new-in-stores');
 
 const DAY = 24 * 60 * 60 * 1000;
@@ -505,4 +507,94 @@ test('buildNewInStoresSignals: mass-reset edition evidence still counts as a bas
   // The Halo Star plastic is what's new here — Tour Series was already
   // established (even if only via a mass-reset-suppressed entry).
   assert.equal(signals[0].type, 'new-release');
+});
+
+// ── Week freezing (2026-08-31) ───────────────────────────────────────────
+
+test('partitionWeeksForFreezing: live week is always written, past unfrozen week is written once, already-frozen week is skipped', () => {
+  const weeks = [
+    { isoWeek: '2026-W34', signals: [] },
+    { isoWeek: '2026-W33', signals: [] },
+    { isoWeek: '2026-W32', signals: [] },
+  ];
+  const { toWrite, toSkip } = partitionWeeksForFreezing({
+    weeks,
+    currentIsoWeek: '2026-W34',
+    frozenIsoWeeks: new Set(['2026-W32']), // W32 was frozen by an earlier run; W33 never got its first freeze yet
+  });
+  assert.deepEqual(
+    toWrite.map((w) => [w.isoWeek, w.frozen]),
+    [['2026-W34', false], ['2026-W33', true]]
+  );
+  assert.deepEqual(toSkip, ['2026-W32']);
+});
+
+test('partitionWeeksForFreezing: forceRefreezeIsoWeeks overrides an already-frozen skip', () => {
+  const weeks = [{ isoWeek: '2026-W32', signals: [] }];
+  const { toWrite, toSkip } = partitionWeeksForFreezing({
+    weeks,
+    currentIsoWeek: '2026-W34',
+    frozenIsoWeeks: new Set(['2026-W32']),
+    forceRefreezeIsoWeeks: new Set(['2026-W32']),
+  });
+  assert.equal(toSkip.length, 0);
+  assert.deepEqual(toWrite.map((w) => [w.isoWeek, w.frozen]), [['2026-W32', true]]);
+});
+
+test('freezing makes a frozen week byte-identical on a simulated disk across two runs with different asOfMs', () => {
+  // entryFirstSeen is 10 days before NOW -> 2026-W32, already two ISO weeks
+  // in the past relative to NOW (2026-W34) and relative to NOW+7d
+  // (2026-W35) alike — confirmed via isoWeekKey, not assumed.
+  const entryFirstSeenMs = NOW - 10 * DAY;
+  assert.equal(isoWeekKey(entryFirstSeenMs), '2026-W32');
+  assert.equal(isoWeekKey(NOW), '2026-W34');
+  assert.equal(isoWeekKey(NOW + 7 * DAY), '2026-W35');
+
+  const prices = {
+    ...ANCHOR,
+    'innova-destroyer': [
+      { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(60 * DAY), url: 'a.no' },
+      {
+        store: 'b',
+        price: 220,
+        inStock: true,
+        plastic: 'Halo Star',
+        firstSeen: new Date(entryFirstSeenMs).toISOString(),
+        url: 'b.no',
+      },
+    ],
+  };
+  const snapshot = { stores: STORES, prices };
+
+  // Stand-in for the real filesystem: isoWeek -> the exact string that
+  // would have been written to data/new-in-stores/<isoWeek>.json.
+  const disk = new Map();
+  const frozenIsoWeeks = new Set();
+
+  function runPipeline(asOfMs, currentIsoWeek) {
+    const { signals } = buildNewInStoresSignals({ snapshot, catalog: CATALOG, asOfMs });
+    const weeks = groupSignalsByWeek(signals);
+    const { toWrite } = partitionWeeksForFreezing({ weeks, currentIsoWeek, frozenIsoWeeks });
+    for (const week of toWrite) {
+      disk.set(week.isoWeek, JSON.stringify({ ...week, generated: `run-at-${asOfMs}` }));
+      if (week.frozen) frozenIsoWeeks.add(week.isoWeek);
+    }
+  }
+
+  // Run 1: W32's Halo Star entry is 10 days old, inside the 14-day
+  // SIGNAL_WINDOW_MS -> produces a signal, W32 isn't live (W34 is) and
+  // isn't frozen yet -> gets written and frozen for the first time.
+  runPipeline(NOW, '2026-W34');
+  const w32AfterRun1 = disk.get('2026-W32');
+  assert.ok(w32AfterRun1);
+  assert.match(w32AfterRun1, /"signals":\[\{/); // sanity: it actually has a signal in it
+
+  // Run 2, one week later: the SAME entry is now 17 days old — past the
+  // window — so a naive recompute would silently DROP it (the exact bug
+  // freezing exists to prevent). But W32 is already frozen, so the pipeline
+  // skips it entirely; whatever run 1 wrote is still what's "on disk".
+  runPipeline(NOW + 7 * DAY, '2026-W35');
+  const w32AfterRun2 = disk.get('2026-W32');
+
+  assert.equal(w32AfterRun2, w32AfterRun1);
 });

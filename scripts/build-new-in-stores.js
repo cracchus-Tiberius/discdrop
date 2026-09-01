@@ -10,27 +10,65 @@
 // and never touched once set, so a single snapshot is enough to classify
 // what's new).
 //
-// Writes data/new-in-stores.json: every recent listing classified as
-// new-disc / new-release / new-at-store, grouped by ISO week.
+// Writes one file per ISO week to data/new-in-stores/2026-W35.json (every
+// recent listing classified as new-disc / new-release / new-at-store), plus
+// data/new-in-stores/_meta.json (cross-week observability: which week is
+// live, quarantine/suppression logs). A week's file is written ONCE, the
+// first run after that week ends — see scripts/lib/new-in-stores.js's
+// "Week freezing" section for why re-running the classifier later would
+// otherwise silently change a past week's numbers. Pass
+// --force-refreeze=2026-W35[,2026-W34] to deliberately rewrite an
+// already-frozen week (for a genuine bug fix only — not routine use), or
+// --force-refreeze-all to rewrite every currently-frozen week.
 
 const fs = require('fs');
 const path = require('path');
 
-const { buildNewInStoresSignals, groupSignalsByWeek } = require('./lib/new-in-stores');
+const { buildNewInStoresSignals, groupSignalsByWeek, isoWeekKey, partitionWeeksForFreezing } = require('./lib/new-in-stores');
 const { discs: SOURCE_DISCS } = require('../data/discs.js');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SCRAPED_PRICES_PATH = path.join(REPO_ROOT, 'data', 'scraped-prices.json');
-const OUTPUT_PATH = path.join(REPO_ROOT, 'data', 'new-in-stores.json');
+const WEEKS_DIR = path.join(REPO_ROOT, 'data', 'new-in-stores');
+const META_PATH = path.join(WEEKS_DIR, '_meta.json');
+const WEEK_FILE_RE = /^(\d{4}-W\d{2})\.json$/;
 
 const CATALOG = SOURCE_DISCS.map(({ id, name, brand, image }) => ({ id, name, brand, image }));
 
+function parseForceRefreezeArgs(argv) {
+  if (argv.includes('--force-refreeze-all')) return { all: true, weeks: new Set() };
+  const flag = argv.find((a) => a.startsWith('--force-refreeze='));
+  if (!flag) return { all: false, weeks: new Set() };
+  const weeks = flag.slice('--force-refreeze='.length).split(',').map((s) => s.trim()).filter(Boolean);
+  return { all: false, weeks: new Set(weeks) };
+}
+
+/** Reads every already-written week file's {isoWeek, frozen} — cheap, no signals parsing needed for the freeze decision. */
+function readExistingWeekStates() {
+  if (!fs.existsSync(WEEKS_DIR)) return new Map();
+  const states = new Map();
+  for (const filename of fs.readdirSync(WEEKS_DIR)) {
+    const match = WEEK_FILE_RE.exec(filename);
+    if (!match) continue;
+    const week = JSON.parse(fs.readFileSync(path.join(WEEKS_DIR, filename), 'utf8'));
+    states.set(match[1], { frozen: !!week.frozen });
+  }
+  return states;
+}
+
 function main() {
+  const { all: forceAll, weeks: forceWeeksArg } = parseForceRefreezeArgs(process.argv.slice(2));
   const snapshot = JSON.parse(fs.readFileSync(SCRAPED_PRICES_PATH, 'utf8'));
 
   // Prefer the snapshot's own lastUpdated over the wall clock so re-running
   // this script against the same data always produces the same output.
   const asOfMs = snapshot.lastUpdated ? new Date(snapshot.lastUpdated).getTime() : Date.now();
+  const currentIsoWeek = isoWeekKey(asOfMs);
+
+  fs.mkdirSync(WEEKS_DIR, { recursive: true });
+  const existingStates = readExistingWeekStates();
+  const frozenIsoWeeks = new Set([...existingStates].filter(([, s]) => s.frozen).map(([isoWeek]) => isoWeek));
+  const forceRefreezeIsoWeeks = forceAll ? frozenIsoWeeks : forceWeeksArg;
 
   const { signals, quarantinedStores, massResetEvents, weeklyCapEvents } = buildNewInStoresSignals({
     snapshot,
@@ -39,11 +77,46 @@ function main() {
   });
   const weeks = groupSignalsByWeek(signals);
 
+  const { toWrite, toSkip } = partitionWeeksForFreezing({
+    weeks,
+    currentIsoWeek,
+    frozenIsoWeeks,
+    forceRefreezeIsoWeeks,
+  });
+
+  const generatedAt = new Date().toISOString();
+  for (const week of toWrite) {
+    const filePath = path.join(WEEKS_DIR, `${week.isoWeek}.json`);
+    const body = { ...week, generated: generatedAt };
+    fs.writeFileSync(filePath, JSON.stringify(body, null, 2) + '\n');
+  }
+
+  // Rebuild the week index from EVERY file now on disk, not just this run's
+  // toWrite — a frozen week from a month ago may have aged out of
+  // SIGNAL_WINDOW_MS entirely and no longer appear in `weeks` above, but its
+  // file (and its slot in the index) must still be there.
+  const weekIndex = [];
+  for (const filename of fs.readdirSync(WEEKS_DIR)) {
+    const match = WEEK_FILE_RE.exec(filename);
+    if (!match) continue;
+    const week = JSON.parse(fs.readFileSync(path.join(WEEKS_DIR, filename), 'utf8'));
+    weekIndex.push({
+      isoWeek: week.isoWeek,
+      year: week.year,
+      weekNumber: week.weekNumber,
+      startDate: week.startDate,
+      endDate: week.endDate,
+      frozen: !!week.frozen,
+    });
+  }
+  weekIndex.sort((a, b) => b.isoWeek.localeCompare(a.isoWeek));
+
   const counts = { 'new-disc': 0, 'new-release': 0, 'new-at-store': 0 };
   for (const s of signals) counts[s.type]++;
 
-  const output = {
-    generated: new Date().toISOString(),
+  const meta = {
+    generated: generatedAt,
+    currentIsoWeek,
     summary: {
       totalSignals: signals.length,
       newDiscs: counts['new-disc'],
@@ -62,16 +135,19 @@ function main() {
       // scripts/lib/new-in-stores.js. new-disc/new-release are never capped.
       suppressedWeeklyCapEvents: weeklyCapEvents,
     },
-    weeks,
+    weeks: weekIndex,
   };
-
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2) + '\n');
+  fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2) + '\n');
 
   console.log(
-    `new-in-stores.json: ${signals.length} signals (${counts['new-disc']} new-disc, ` +
+    `new-in-stores: ${signals.length} signals (${counts['new-disc']} new-disc, ` +
       `${counts['new-release']} new-release, ${counts['new-at-store']} new-at-store) ` +
-      `across ${weeks.length} week(s). Quarantined stores: ${quarantinedStores.join(', ') || 'none'}.`
+      `across ${weeks.length} computed week(s). Quarantined stores: ${quarantinedStores.join(', ') || 'none'}.`
   );
+  console.log(`Live week: ${currentIsoWeek}. Written: ${toWrite.map((w) => w.isoWeek).join(', ') || 'none'}.`);
+  if (toSkip.length > 0) {
+    console.log(`Skipped (already frozen): ${toSkip.join(', ')}.`);
+  }
   if (massResetEvents.length > 0) {
     console.log('Suppressed mass-reset events (scraper/matching churn, not real news):');
     for (const e of massResetEvents) {

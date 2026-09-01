@@ -3,13 +3,22 @@
 // two never join against the catalog differently.
 //
 // All classification (new-disc / new-release / new-at-store, mass-reset
-// churn suppression, edition-marker normalization) happens once, daily, in
-// scripts/build-new-in-stores.js -> data/new-in-stores.json. This file only
-// joins that already-classified data against the live catalog for
+// churn suppression, edition-marker normalization, week freezing) happens
+// once, daily, in scripts/build-new-in-stores.js -> one file per ISO week
+// under data/new-in-stores/ (2026-W35.json, ...) plus data/new-in-stores/
+// _meta.json for cross-week bookkeeping. This file only joins that
+// already-classified, already-frozen data against the live catalog for
 // rendering — it never recomputes signals, same pattern as lib/price-drops.ts
 // does for price-changes.json.
+//
+// Read via fs, not a static `import ... from "@/data/..."`, because the set
+// of week files isn't known at bundle time. Safe here specifically because
+// this module is only ever imported by Server Components (app/nytt/page.tsx,
+// app/nytt/[weekSlug]/page.tsx) that run during `next build`'s static
+// export — never bundled for the client.
+import fs from "node:fs";
+import path from "node:path";
 import { discs } from "@/data/discs.js";
-import newInStores from "@/data/new-in-stores.json";
 import scrapedPrices from "@/data/scraped-prices.json";
 import { getDiscImage } from "@/lib/disc-utils";
 
@@ -40,11 +49,14 @@ type RawWeek = {
   weekNumber: number;
   startDate: string;
   endDate: string;
+  frozen: boolean;
+  generated: string;
   signals: RawSignal[];
 };
 
-type NewInStoresData = {
+type NewInStoresMeta = {
   generated: string;
+  currentIsoWeek: string;
   summary: {
     totalSignals: number;
     newDiscs: number;
@@ -53,11 +65,38 @@ type NewInStoresData = {
     weeksIncluded: number;
     quarantinedStores: string[];
     suppressedMassResetEvents: { store: string; date: string; count: number }[];
+    suppressedWeeklyCapEvents: { store: string; isoWeek: string; count: number }[];
   };
-  weeks: RawWeek[];
+  weeks: { isoWeek: string; year: number; weekNumber: number; startDate: string; endDate: string; frozen: boolean }[];
 };
 
-const data = newInStores as NewInStoresData;
+const WEEKS_DIR = path.join(process.cwd(), "data", "new-in-stores");
+const WEEK_FILE_RE = /^(\d{4}-W\d{2})\.json$/;
+
+function loadMeta(): NewInStoresMeta | null {
+  const metaPath = path.join(WEEKS_DIR, "_meta.json");
+  if (!fs.existsSync(metaPath)) return null;
+  return JSON.parse(fs.readFileSync(metaPath, "utf8")) as NewInStoresMeta;
+}
+
+/** Every week file on disk, newest ISO week first. Empty if the pipeline has never run. */
+function loadWeeks(): RawWeek[] {
+  if (!fs.existsSync(WEEKS_DIR)) return [];
+  const weeks: RawWeek[] = [];
+  for (const filename of fs.readdirSync(WEEKS_DIR)) {
+    if (!WEEK_FILE_RE.test(filename)) continue;
+    const raw = fs.readFileSync(path.join(WEEKS_DIR, filename), "utf8");
+    weeks.push(JSON.parse(raw) as RawWeek);
+  }
+  weeks.sort((a, b) => b.isoWeek.localeCompare(a.isoWeek));
+  return weeks;
+}
+
+// Read once per build — this module is evaluated once and its exports
+// reused across every page/route that imports it, same as the old static
+// JSON import did.
+const meta = loadMeta();
+const allWeeks = loadWeeks();
 const discById = new Map((discs as Disc[]).map((d) => [d.id, d]));
 const storesMeta = scrapedPrices.stores as Record<string, StoreMeta>;
 
@@ -136,9 +175,9 @@ export type Week = {
   storeCount: number;
 };
 
-export const newInStoresGenerated: string = data.generated;
-export const newInStoresSummary = data.summary;
-export const hasNewInStoresData: boolean = data.weeks.length > 0;
+export const newInStoresGenerated: string = meta?.generated ?? "";
+export const newInStoresSummary = meta?.summary ?? null;
+export const hasNewInStoresData: boolean = allWeeks.length > 0;
 
 function enrichStore(s: RawStoreEntry): SignalStoreEntry {
   return { ...s, hasShippingData: hasKnownShipping(s.store) };
@@ -230,22 +269,29 @@ export function parseWeekSlug(slug: string): { year: number; weekNumber: number 
   return { year: Number(match[1]), weekNumber: Number(match[2]) };
 }
 
-/** All weeks with data, newest first (already sorted this way in the source JSON). */
+/** All weeks with data, newest first (already sorted this way on disk). */
 export function getAllWeeks(): Week[] {
-  return data.weeks.map(buildWeek);
+  return allWeeks.map(buildWeek);
 }
 
-/** The most recent week with any signals, or null if the pipeline has never run/produced data. */
+/**
+ * The live current ISO week (matches _meta.json's currentIsoWeek — the one
+ * week that's still being recomputed every run, never frozen), or null if
+ * the pipeline has never run/produced data. Falls back to the newest week
+ * on disk if the meta file is somehow missing or stale, so /nytt still
+ * renders something rather than going blank.
+ */
 export function getLatestWeek(): Week | null {
-  const [first] = data.weeks;
-  return first ? buildWeek(first) : null;
+  const live = meta ? allWeeks.find((w) => w.isoWeek === meta.currentIsoWeek) : undefined;
+  const raw = live ?? allWeeks[0];
+  return raw ? buildWeek(raw) : null;
 }
 
 /** A specific week by its "2026-uke-34" slug, or null if that week has no data. */
 export function getWeekBySlug(slug: string): Week | null {
   const parsed = parseWeekSlug(slug);
   if (!parsed) return null;
-  const raw = data.weeks.find((w) => w.year === parsed.year && w.weekNumber === parsed.weekNumber);
+  const raw = allWeeks.find((w) => w.year === parsed.year && w.weekNumber === parsed.weekNumber);
   return raw ? buildWeek(raw) : null;
 }
 
@@ -260,7 +306,7 @@ export function getWeekIndex(): {
   newAtStore: number;
   highlight: string;
 }[] {
-  return data.weeks.map((w) => {
+  return allWeeks.map((w) => {
     const releases = w.signals.filter((s) => s.type === "new-release");
     const highlightSignals = w.signals.filter((s) => s.type !== "new-at-store");
     return {

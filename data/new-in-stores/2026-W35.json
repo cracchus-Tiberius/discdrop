@@ -1,0 +1,624 @@
+{
+  "isoWeek": "2026-W35",
+  "year": 2026,
+  "weekNumber": 35,
+  "startDate": "2026-08-24",
+  "endDate": "2026-08-30",
+  "signals": [
+    {
+      "discId": "discmania-essence",
+      "name": "Essence",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Horizon",
+      "edition": "Cadence Burge",
+      "firstSeenMs": 1787942494148,
+      "price": 273,
+      "stores": [
+        {
+          "store": "discsport",
+          "storeName": "Discsport",
+          "price": 273,
+          "url": "https://discsport.se/discar/mold/essence"
+        }
+      ]
+    },
+    {
+      "discId": "westside-ahti",
+      "name": "Ahti",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": null,
+      "edition": null,
+      "firstSeenMs": 1787942494148,
+      "price": 263,
+      "stores": [
+        {
+          "store": "discsport",
+          "storeName": "Discsport",
+          "price": 263,
+          "url": "https://discsport.se/discar/mold/ahti"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-hex",
+      "name": "Hex",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Cosmic Neutron",
+      "edition": null,
+      "firstSeenMs": 1787852059492,
+      "price": 272,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 272,
+          "url": "https://rocketdiscs.com/axiom-hex"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-orbital",
+      "name": "Orbital",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Fission",
+      "edition": null,
+      "firstSeenMs": 1787852059492,
+      "price": 294,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 294,
+          "url": "https://rocketdiscs.com/mvp-orbital"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-watt",
+      "name": "Watt",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Plasma",
+      "edition": null,
+      "firstSeenMs": 1787727975145,
+      "price": 284,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 284,
+          "url": "https://www.discexpress.se/products/watt-plasma-plc-white-rim"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-tempo",
+      "name": "Tempo",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Neutron Soft",
+      "edition": null,
+      "firstSeenMs": 1787727975145,
+      "price": 274,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 274,
+          "url": "https://www.discexpress.se/products/tempo-neutron-soft-plc-white-rim"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-pa-5",
+      "name": "PA-5",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-release",
+      "plastic": "350G",
+      "edition": null,
+      "firstSeenMs": 1787727975145,
+      "price": 216,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 216,
+          "url": "https://www.discexpress.se/products/pa-5-350g"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-rainmaker",
+      "name": "Rainmaker",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "D-Line",
+      "edition": "Eagle McMahon",
+      "firstSeenMs": 1787727965026,
+      "price": 274,
+      "stores": [
+        {
+          "store": "discshopen",
+          "storeName": "DiscShopen",
+          "price": 274,
+          "url": "https://discshopen.no/produkt/glow-d-line-flex-1-rainmaker-eagle-mcmahon-creator-series/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-trail",
+      "name": "Trail",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Fission",
+      "edition": "Special Edition",
+      "firstSeenMs": 1787641071999,
+      "price": 344,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 344,
+          "url": "https://frisbeebutikken.no/products/fission-trail-special-edition"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-mana",
+      "name": "Mana",
+      "brand": "Thought Space Athletics",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Nebula Aura",
+      "edition": null,
+      "firstSeenMs": 1788089640038,
+      "price": 337,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 337,
+          "url": "https://rocketdiscs.com/thought-space-athletics-mana"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-gatekeeper",
+      "name": "Gatekeeper",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "VIP",
+      "edition": null,
+      "firstSeenMs": 1788089600341,
+      "price": 225,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 225,
+          "url": "https://www.discexpress.se/products/gatekeeper-vip"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-roach",
+      "name": "Roach",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line",
+      "edition": null,
+      "firstSeenMs": 1788089564093,
+      "price": 184,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 184,
+          "url": "https://www.frisbeesor.no/produkt/putter-line-roach/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-banger-gt",
+      "name": "Banger GT",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line",
+      "edition": null,
+      "firstSeenMs": 1788089564093,
+      "price": 190,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 190,
+          "url": "https://www.frisbeesor.no/produkt/putter-line-banger-gt/"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-time-lapse",
+      "name": "Time-Lapse",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": "Special Edition",
+      "firstSeenMs": 1788089564093,
+      "price": 294,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 294,
+          "url": "https://www.frisbeesor.no/produkt/time-lapse-neutron-special-edition/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-terra",
+      "name": "Terra",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1787942012049,
+      "price": 294,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 294,
+          "url": "https://rocketdiscs.com/mvp-terra"
+        }
+      ]
+    },
+    {
+      "discId": "innova-roc",
+      "name": "Roc",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": "USDGC",
+      "firstSeenMs": 1787940757735,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-roc/"
+        },
+        {
+          "store": "kvamdgs",
+          "storeName": "Kvam DGS",
+          "price": 224,
+          "url": "https://kvamdgs.no/products/kc-pro-roc"
+        }
+      ]
+    },
+    {
+      "discId": "innova-leopard3",
+      "name": "Leopard3",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Star",
+      "edition": null,
+      "firstSeenMs": 1787940757735,
+      "price": 274,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 274,
+          "url": "https://wearediscgolf.no/produkt/star-splatter-leopard3-bug-out-vtx/"
+        }
+      ]
+    },
+    {
+      "discId": "dynamic-captain",
+      "name": "Captain",
+      "brand": "Dynamic Discs",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": null,
+      "edition": "First Run",
+      "firstSeenMs": 1787940757735,
+      "price": 334,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 334,
+          "url": "https://wearediscgolf.no/produkt/z-jawbreaker-captains-caliber-first-run/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-zone-ss",
+      "name": "Zone SS",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Jawbreaker",
+      "edition": null,
+      "firstSeenMs": 1787852943191,
+      "price": 210,
+      "stores": [
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 210,
+          "url": "https://ugglansdiscgolf.se/products/jawbreaker-zone-ss"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-ares",
+      "name": "Ares",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "ESP",
+      "edition": "First Run",
+      "firstSeenMs": 1787852943191,
+      "price": 268,
+      "stores": [
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 268,
+          "url": "https://ugglansdiscgolf.se/products/esp-ares-first-run-paul-mcbeth"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-nuke-ss",
+      "name": "Nuke SS",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "ESP",
+      "edition": null,
+      "firstSeenMs": 1787852943191,
+      "price": 259,
+      "stores": [
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 259,
+          "url": "https://ugglansdiscgolf.se/products/esp-nuke-ss"
+        }
+      ]
+    },
+    {
+      "discId": "innova-teebird3",
+      "name": "Teebird3",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "GStar",
+      "edition": null,
+      "firstSeenMs": 1787852526178,
+      "price": 224,
+      "stores": [
+        {
+          "store": "discsport",
+          "storeName": "Discsport",
+          "price": 224,
+          "url": "https://discsport.se/discar/mold/teebird3"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-hex",
+      "name": "Hex",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Plasma",
+      "edition": null,
+      "firstSeenMs": 1787852059492,
+      "price": 294,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 294,
+          "url": "https://rocketdiscs.com/axiom-hex"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-signal",
+      "name": "Signal",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Fission",
+      "edition": null,
+      "firstSeenMs": 1787851209845,
+      "price": 274,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 274,
+          "url": "https://wearediscgolf.no/produkt/fission-signal-white-rim/"
+        },
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 294,
+          "url": "https://rocketdiscs.com/mvp-signal"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-echo",
+      "name": "Echo",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron Soft",
+      "edition": null,
+      "firstSeenMs": 1787851209845,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/neutron-soft-echo/"
+        }
+      ]
+    },
+    {
+      "discId": "westside-giant",
+      "name": "Giant",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Tournament",
+      "edition": null,
+      "firstSeenMs": 1787851209845,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/tournament-giant-reborn/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-nuke",
+      "name": "Nuke",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Z Lite",
+      "edition": null,
+      "firstSeenMs": 1787728942713,
+      "price": 239,
+      "stores": [
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 239,
+          "url": "https://ugglansdiscgolf.se/products/z-lite-nuke"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-p2x",
+      "name": "P2X",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "P-Line",
+      "edition": "Gannon Buhr",
+      "firstSeenMs": 1787728511070,
+      "price": 244,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/p-line-glow-flex-3-p2x-gannon-buhr/"
+        },
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 261,
+          "url": "https://rocketdiscs.com/discmania-p2x"
+        },
+        {
+          "store": "discsport",
+          "storeName": "Discsport",
+          "price": 263,
+          "url": "https://discsport.se/discar/mold/p2x"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-kaxe-z",
+      "name": "Kaxe Z",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "K3",
+      "edition": null,
+      "firstSeenMs": 1787727975145,
+      "price": 186,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 186,
+          "url": "https://www.discexpress.se/products/kaxe-z-k3"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-control",
+      "name": "Control",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1787640673221,
+      "price": 270,
+      "stores": [
+        {
+          "store": "aceshop",
+          "storeName": "Aceshop",
+          "price": 270,
+          "url": "https://aceshop.no/product/mvp-neutron-control-2/"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-crave",
+      "name": "Crave",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Fission",
+      "edition": null,
+      "firstSeenMs": 1787554961036,
+      "price": 270,
+      "stores": [
+        {
+          "store": "aceshop",
+          "storeName": "Aceshop",
+          "price": 270,
+          "url": "https://aceshop.no/product/axiom-neutron-crave-sarah-hokom/"
+        }
+      ]
+    }
+  ],
+  "frozen": true,
+  "generated": "2026-09-01T07:39:51.827Z"
+}

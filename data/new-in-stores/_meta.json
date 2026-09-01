@@ -1,0 +1,207 @@
+{
+  "generated": "2026-09-01T07:40:03.762Z",
+  "currentIsoWeek": "2026-W36",
+  "summary": {
+    "totalSignals": 107,
+    "newDiscs": 0,
+    "newReleases": 32,
+    "newAtStore": 75,
+    "weeksIncluded": 3,
+    "quarantinedStores": [
+      "hyzershop",
+      "discgolfdynasty",
+      "starframe",
+      "discsor"
+    ],
+    "suppressedMassResetEvents": [
+      {
+        "store": "rocketdiscs",
+        "date": "2026-07-24",
+        "count": 1326
+      },
+      {
+        "store": "discsport",
+        "date": "2026-07-24",
+        "count": 1154
+      },
+      {
+        "store": "discexpress",
+        "date": "2026-07-24",
+        "count": 1143
+      },
+      {
+        "store": "nydisk",
+        "date": "2026-07-26",
+        "count": 802
+      },
+      {
+        "store": "ugglans",
+        "date": "2026-07-26",
+        "count": 786
+      },
+      {
+        "store": "starframe",
+        "date": "2026-08-19",
+        "count": 664
+      },
+      {
+        "store": "wearediscgolf",
+        "date": "2026-08-16",
+        "count": 510
+      },
+      {
+        "store": "wearediscgolf",
+        "date": "2026-08-11",
+        "count": 462
+      },
+      {
+        "store": "frisbeesor",
+        "date": "2026-07-24",
+        "count": 288
+      },
+      {
+        "store": "hyzershop",
+        "date": "2026-08-22",
+        "count": 288
+      },
+      {
+        "store": "kvamdgs",
+        "date": "2026-07-24",
+        "count": 244
+      },
+      {
+        "store": "discgolfdynasty",
+        "date": "2026-08-22",
+        "count": 244
+      },
+      {
+        "store": "discsor",
+        "date": "2026-08-22",
+        "count": 185
+      },
+      {
+        "store": "arcticdisc",
+        "date": "2026-07-24",
+        "count": 170
+      },
+      {
+        "store": "golfdiscer",
+        "date": "2026-07-24",
+        "count": 146
+      },
+      {
+        "store": "aceshop",
+        "date": "2026-08-28",
+        "count": 128
+      },
+      {
+        "store": "discexpress",
+        "date": "2026-07-26",
+        "count": 98
+      },
+      {
+        "store": "aceshop",
+        "date": "2026-07-24",
+        "count": 86
+      },
+      {
+        "store": "discsport",
+        "date": "2026-07-26",
+        "count": 84
+      },
+      {
+        "store": "discshopen",
+        "date": "2026-07-26",
+        "count": 83
+      },
+      {
+        "store": "aceshop",
+        "date": "2026-08-04",
+        "count": 81
+      },
+      {
+        "store": "wearediscgolf",
+        "date": "2026-07-24",
+        "count": 79
+      },
+      {
+        "store": "rocketdiscs",
+        "date": "2026-07-26",
+        "count": 78
+      },
+      {
+        "store": "hyzershop",
+        "date": "2026-08-31",
+        "count": 66
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-13",
+        "count": 48
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-27",
+        "count": 46
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-08-31",
+        "count": 35
+      },
+      {
+        "store": "rocketdiscs",
+        "date": "2026-08-21",
+        "count": 34
+      },
+      {
+        "store": "rocketdiscs",
+        "date": "2026-07-28",
+        "count": 31
+      }
+    ],
+    "suppressedWeeklyCapEvents": [
+      {
+        "store": "frisbeebutikken",
+        "isoWeek": "2026-W35",
+        "count": 57
+      },
+      {
+        "store": "frisbeebutikken",
+        "isoWeek": "2026-W34",
+        "count": 54
+      },
+      {
+        "store": "rocketdiscs",
+        "isoWeek": "2026-W34",
+        "count": 29
+      }
+    ]
+  },
+  "weeks": [
+    {
+      "isoWeek": "2026-W36",
+      "year": 2026,
+      "weekNumber": 36,
+      "startDate": "2026-08-31",
+      "endDate": "2026-09-06",
+      "frozen": false
+    },
+    {
+      "isoWeek": "2026-W35",
+      "year": 2026,
+      "weekNumber": 35,
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-30",
+      "frozen": true
+    },
+    {
+      "isoWeek": "2026-W34",
+      "year": 2026,
+      "weekNumber": 34,
+      "startDate": "2026-08-17",
+      "endDate": "2026-08-23",
+      "frozen": true
+    }
+  ]
+}
