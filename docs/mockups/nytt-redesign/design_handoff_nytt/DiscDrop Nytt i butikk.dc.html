@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+        <meta name="design_doc_mode" content="canvas" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&amp;display=swap" rel="stylesheet" />
+        <style>
+          body { margin: 0; background: #f0eee9; font-family: system-ui, sans-serif; }
+          a { color: #2d6a4f; }
+          a:hover { color: #1e3d2f; }
+          .dv-turn { padding: 40px 44px 32px; scroll-margin-top: 16px; }
+          .dv-thd { display: flex; align-items: baseline; gap: 10px; margin: 0 0 14px; }
+          .dv-tid { font: 600 10px ui-monospace, Menlo, monospace; padding: 3px 7px; background: #1a1a1a; color: #fff; border-radius: 4px; text-decoration: none; }
+          .dv-tname { font: 600 13px/1.2 system-ui, sans-serif; color: #1a1a1a; }
+          .dv-opts { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+          .dv-opt { flex: none; display: flex; flex-direction: column; gap: 9px; scroll-margin-top: 16px; }
+          .dv-oid { font: 600 10.5px ui-monospace, Menlo, monospace; padding: 3px 7px; background: rgba(0,0,0,0.08); color: #1a1a1a; border-radius: 5px; text-decoration: none; }
+          .dv-olabel { display: flex; align-items: baseline; gap: 8px; font: 400 11px/1.35 system-ui, sans-serif; color: rgba(0,0,0,0.55); max-width: 1200px; }
+          .dv-card { max-width: 100%; background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden; }
+          .dv-opt:target .dv-oid { background: #2a78d6; color: #fff; }
+          .dv-next { margin: 22px 0 0; font: 12px/1.6 system-ui, sans-serif; color: rgba(0,0,0,0.5); }
+          .dv-note { max-width: 780px; font: 13px/1.6 system-ui, sans-serif; color: rgba(0,0,0,0.65); margin: 0 0 24px; }
+          .dv-sub { font: 600 10px ui-monospace, Menlo, monospace; color: rgba(0,0,0,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin: 8px 0 0; }
+        </style>
+      </helmet>
+
+      <section class="dv-turn" id="t9">
+        <div class="dv-thd">
+          <a class="dv-tid" href="#t9">9</a>
+          <span class="dv-tname">/nytt — «Nytt i butikk» som ukentlig utgivelsesuke, desktop 1200 + mobil 375</span>
+        </div>
+        <p class="dv-note">
+          Tre nivåer i stedet for én flat liste: <strong>Ny disk</strong> (øverste nivå, full bredde — vises bare når
+          det finnes en; slå den av i Tweaks for å se uka uten), <strong>Nye drops</strong> (redaksjonelle spotlight-kort)
+          og <strong>Nytt i butikkutvalget</strong> (butikk-klynger med synlige miniatyrer før man utvider).
+          Butikk-klyngene er klikkbare — trykk på en for å utvide. Uke-arkivet er flyttet opp som egen navigasjon.
+        </p>
+
+        <div class="dv-opts">
+          <div class="dv-opt" id="9a">
+            <div class="dv-olabel"><a class="dv-oid" href="#9a">9a</a>Desktop 1200 px</div>
+            <div class="dv-card" style="width:1200px;">
+              <div data-screen-label="9a Nytt desktop" style="box-sizing:border-box; width:1200px; background:#FFFDF6; font-family:'Bricolage Grotesque',sans-serif; color:#101C14;">
+
+                <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid #101C14; padding:14px 40px;">
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="#B8E04A"></rect><circle cx="20" cy="17" r="10" fill="#101C14"></circle><circle cx="20" cy="17" r="3.5" fill="#B8E04A"></circle><circle cx="29" cy="30" r="3" fill="#101C14"></circle></svg>
+                    <span style="font-weight:800; font-size:20px; letter-spacing:-0.03em;">discdrop</span>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:4px;">
+                    <a href="#9a" style="border-radius:999px; padding:8px 14px; font-size:14px; font-weight:600; text-decoration:none; color:#101C14;">Hjem</a>
+                    <a href="#9a" style="border-radius:999px; padding:8px 14px; font-size:14px; font-weight:600; text-decoration:none; color:#101C14;">Hot Drops</a>
+                    <a href="#9a" style="border-radius:999px; padding:8px 14px; font-size:14px; font-weight:600; text-decoration:none; color:#101C14;">Prisfall</a>
+                    <a href="#9a" style="border-radius:999px; padding:8px 14px; font-size:14px; font-weight:600; text-decoration:none; background:#101C14; color:#FFFDF6;">Nytt i butikk</a>
+                    <a href="#9a" style="border-radius:999px; padding:8px 14px; font-size:14px; font-weight:600; text-decoration:none; color:#101C14;">Alle disker</a>
+                    <a href="#9a" style="border-radius:999px; padding:8px 14px; font-size:14px; font-weight:600; text-decoration:none; color:#101C14;">Bygg min bag</a>
+                  </div>
+                </div>
+
+                <div style="border-bottom:2px solid #101C14; padding:48px 40px 0;">
+                  <div style="max-width:1120px; margin:0 auto;">
+                    <div style="display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:end;">
+                      <div style="border:2px solid #101C14; border-radius:20px; background:#B8E04A; box-shadow:5px 5px 0 #101C14; padding:16px 26px 18px; text-align:center;">
+                        <div style="font-size:12px; font-weight:800; letter-spacing:0.16em;">UKE</div>
+                        <div style="font-size:76px; font-weight:800; line-height:0.86; letter-spacing:-0.05em; margin-top:2px;">34</div>
+                        <div style="font-size:13px; font-weight:700; margin-top:6px;">2026</div>
+                      </div>
+                      <div>
+                        <p style="margin:0 0 10px; font-size:14px; font-weight:800; letter-spacing:0.14em; color:#101C1499;">17.–23. AUGUST · DENNE UKA</p>
+                        <h1 style="margin:0; font-size:64px; font-weight:800; line-height:0.96; letter-spacing:-0.035em;">Ukas drops er <span style="background-image:linear-gradient(transparent 62%, #B8E04A 62%);">landet.</span></h1>
+                        <p style="margin:14px 0 0; max-width:62ch; font-size:18px; line-height:1.55; color:#101C14b3;">Nye disker, nye drops av kjente disker og nye lagerføringer vi har fanget opp hos butikkene vi følger — samlet uke for uke.</p>
+                      </div>
+                    </div>
+                    <div style="display:flex; align-items:stretch; gap:0; margin-top:36px; border:2px solid #101C14; border-bottom:none; border-radius:18px 18px 0 0; background:#1E3D2F; color:#FFFDF6; overflow:hidden;">
+                      <div style="flex:1; padding:20px 26px; display:flex; align-items:baseline; gap:10px;">
+                        <span style="font-size:34px; font-weight:800; letter-spacing:-0.03em; color:#B8E04A;">3</span>
+                        <span style="font-size:15px; font-weight:600; color:#FFFDF6cc;">nye drops</span>
+                      </div>
+                      <div style="flex:1; padding:20px 26px; display:flex; align-items:baseline; gap:10px; border-left:1px solid #FFFDF62a;">
+                        <span style="font-size:34px; font-weight:800; letter-spacing:-0.03em;">18</span>
+                        <span style="font-size:15px; font-weight:600; color:#FFFDF6cc;">nye lagerføringer</span>
+                      </div>
+                      <div style="flex:1; padding:20px 26px; display:flex; align-items:baseline; gap:10px; border-left:1px solid #FFFDF62a;">
+                        <span style="font-size:34px; font-weight:800; letter-spacing:-0.03em;">7</span>
+                        <span style="font-size:15px; font-weight:600; color:#FFFDF6cc;">butikker</span>
+                      </div>
+                      <div style="flex:none; display:flex; align-items:center; gap:9px; padding:20px 26px; border-left:1px solid #FFFDF62a; font-size:13px; font-weight:600; color:#FFFDF677;">
+                        <span style="width:8px; height:8px; border-radius:999px; background:#B8E04A;"></span>
+                        Sist sjekket i dag kl. 06:12
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <sc-if value="{{ visNyDisk }}" hint-placeholder-val="{{ true }}">
+                  <div style="border-bottom:2px solid #101C14; padding:56px 40px; background:#FFFDF6;">
+                    <div style="max-width:1120px; margin:0 auto;">
+                      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:20px;">
+                        <h2 style="margin:0; font-size:26px; font-weight:800; letter-spacing:-0.025em;">Ny disk</h2>
+                        <span style="font-size:15px; color:#101C1499;">Aldri sett i norsk butikk før denne uka.</span>
+                      </div>
+                      <div style="{{ nyDiskGrid }}">
+                        <sc-for list="{{ nyeDisker }}" as="d" hint-placeholder-count="1">
+                          <a href="#9a" style="display:grid; grid-template-columns:{{ d.bildeKol }} 1fr; text-decoration:none; color:#101C14; border:2px solid #101C14; border-radius:20px; background:#fff; box-shadow:5px 5px 0 #B8E04A; overflow:hidden;">
+                            <div style="background:#F1EFE6; border-right:2px solid #101C14; display:flex; align-items:center; justify-content:center; padding:20px;">
+                              <div style="width:150px; height:150px; border-radius:999px; background:#FFFDF6; border:2px solid #101C14; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                                <svg viewBox="{{ d.vb }}" style="height:100%; max-width:100%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ d.rx }}" ry="{{ d.ry }}" fill="{{ d.farge }}"></ellipse><ellipse cx="0" cy="0" rx="{{ d.rx2 }}" ry="{{ d.ry2 }}" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></ellipse><ellipse cx="0" cy="{{ d.pcy }}" rx="{{ d.prx }}" ry="{{ d.pry }}" fill="rgba(255,255,255,0.18)"></ellipse><text x="0" y="0" text-anchor="middle" dominant-baseline="central" fill="#fff" font-size="{{ d.fs }}" font-weight="700" letter-spacing="1.5" opacity="0.9">{{ d.init }}</text></svg>
+                              </div>
+                            </div>
+                            <div style="padding:20px 24px; display:flex; flex-direction:column; gap:11px;">
+                              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+                                <span style="display:inline-block; width:fit-content; background:#B8E04A; color:#101C14; font-weight:800; font-size:12px; letter-spacing:0.1em; border-radius:9px; padding:5px 11px; transform:rotate(-2deg); box-shadow:2px 2px 0 #101C14;">{{ d.sticker }}</span>
+                                <div style="display:flex; gap:6px;">
+                                  <span style="flex:none; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:6px 13px;"><span style="font-size:16px; font-weight:800;">{{ d.speed }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">SPEED</span></span>
+                                  <span style="flex:none; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:6px 13px;"><span style="font-size:16px; font-weight:800;">{{ d.glide }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">GLIDE</span></span>
+                                  <span style="flex:none; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:6px 13px;"><span style="font-size:16px; font-weight:800;">{{ d.turn }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">TURN</span></span>
+                                  <span style="flex:none; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:6px 13px;"><span style="font-size:16px; font-weight:800;">{{ d.fade }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">FADE</span></span>
+                                </div>
+                              </div>
+                              <div>
+                                <h3 style="margin:0; font-size:30px; font-weight:800; line-height:1; letter-spacing:-0.035em;">{{ d.navn }}</h3>
+                                <p style="margin:5px 0 0; font-size:15px; color:#101C1499;">{{ d.meta }}</p>
+                              </div>
+                              <p style="{{ d.beskrStil }}">{{ d.beskrivelse }}</p>
+                              <div style="margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:16px; border-top:2px solid #F1EFE6; padding-top:14px;">
+                                <div style="min-width:0;">
+                                  <p style="margin:0; font-size:12px; color:#101C1477;">Dukket opp hos</p>
+                                  <p style="margin:2px 0 0; font-size:15px; font-weight:700;">{{ d.butikker }}</p>
+                                </div>
+                                <div style="flex:none; display:flex; align-items:center; gap:14px;">
+                                  <div>
+                                    <p style="margin:0; font-size:11px; color:#101C1477;">fra, inkl. frakt</p>
+                                    <p style="margin:1px 0 0; font-size:24px; font-weight:800; letter-spacing:-0.03em;">{{ d.pris }},-</p>
+                                  </div>
+                                  <span style="display:inline-flex; align-items:center; justify-content:center; background:#B8E04A; color:#101C14; font-weight:800; font-size:14px; border:2px solid #101C14; border-radius:14px; padding:11px 20px; min-height:44px; box-shadow:3px 3px 0 #101C14;">Se pris</span>
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </div>
+                </sc-if>
+
+                <div style="border-bottom:2px solid #101C14; padding:56px 40px; background:#FFFDF6;">
+                  <div style="max-width:1120px; margin:0 auto;">
+                    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:22px;">
+                      <div style="display:flex; align-items:baseline; gap:14px;">
+                        <h2 style="margin:0; font-size:26px; font-weight:800; letter-spacing:-0.025em;">Nye drops</h2>
+                        <span style="font-size:15px; color:#101C1499;">Kjent form, ny plast eller ny serie.</span>
+                      </div>
+                      <span style="font-size:14px; font-weight:700; color:#101C1499;">3 denne uka</span>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:20px;">
+                      <sc-for list="{{ utgaver }}" as="u" hint-placeholder-count="3">
+                        <a href="#9a" style="display:flex; flex-direction:column; text-decoration:none; color:#101C14; border:2px solid #101C14; border-radius:20px; background:#fff; box-shadow:5px 5px 0 #B8E04A; overflow:hidden;">
+                          <div style="position:relative; background:#F1EFE6; border-bottom:2px solid #101C14; padding:26px 0; display:flex; align-items:center; justify-content:center; height:200px;">
+                            <svg viewBox="{{ u.vb }}" style="height:100%; max-width:82%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ u.rx }}" ry="{{ u.ry }}" fill="{{ u.farge }}"></ellipse><ellipse cx="0" cy="0" rx="{{ u.rx2 }}" ry="{{ u.ry2 }}" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></ellipse><ellipse cx="0" cy="{{ u.pcy }}" rx="{{ u.prx }}" ry="{{ u.pry }}" fill="rgba(255,255,255,0.18)"></ellipse><text x="0" y="0" text-anchor="middle" dominant-baseline="central" fill="#fff" font-size="{{ u.fs }}" font-weight="700" letter-spacing="1.5" opacity="0.9">{{ u.init }}</text></svg>
+                            <span style="position:absolute; top:14px; left:14px; background:#101C14; color:#B8E04A; font-weight:800; font-size:11px; letter-spacing:0.1em; border-radius:8px; padding:5px 10px; transform:rotate(-2deg); box-shadow:2px 2px 0 #B8E04A;">NY DROP</span>
+                            <span style="position:absolute; top:16px; right:14px; font-size:11px; font-weight:800; letter-spacing:0.1em; color:#101C1477;">{{ u.dag }}</span>
+                          </div>
+                          <div style="padding:18px 20px 20px; display:flex; flex-direction:column; gap:14px; flex:1;">
+                            <div>
+                              <h3 style="margin:0; font-size:28px; font-weight:800; line-height:1.02; letter-spacing:-0.03em;">{{ u.navn }}</h3>
+                              <p style="margin:5px 0 0; font-size:15px; color:#101C1499;">{{ u.merke }} · {{ u.plast }}</p>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:9px;">
+                              <span style="width:26px; height:26px; flex:none; border-radius:999px; border:2px solid #101C14; background:#F1EFE6; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:800;">{{ u.butikkInit }}</span>
+                              <span style="font-size:14px; font-weight:700;">{{ u.butikk }}</span>
+                              <span style="font-size:13px; color:#101C1477;">{{ u.butikkMer }}</span>
+                            </div>
+                            <div style="margin-top:auto; display:flex; align-items:flex-end; justify-content:space-between; gap:12px; border-top:2px solid #F1EFE6; padding-top:14px;">
+                              <div>
+                                <p style="margin:0; font-size:11px; color:#101C1477;">fra, inkl. frakt</p>
+                                <p style="margin:1px 0 0; font-size:24px; font-weight:800; letter-spacing:-0.03em;">{{ u.pris }},-</p>
+                              </div>
+                              <span style="display:inline-flex; align-items:center; justify-content:center; background:#B8E04A; color:#101C14; font-weight:800; font-size:14px; border:2px solid #101C14; border-radius:14px; padding:11px 18px; min-height:44px; box-shadow:3px 3px 0 #101C14;">Se pris</span>
+                            </div>
+                          </div>
+                        </a>
+                      </sc-for>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="border-bottom:2px solid #101C14; padding:56px 40px; background:#FFFDF6;">
+                  <div style="max-width:1120px; margin:0 auto;">
+                    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:22px;">
+                      <div style="display:flex; align-items:baseline; gap:14px;">
+                        <h2 style="margin:0; font-size:26px; font-weight:800; letter-spacing:-0.025em;">Nytt i butikkutvalget</h2>
+                        <span style="font-size:15px; color:#101C1499;">Kjente disker som dukket opp hos en ny butikk.</span>
+                      </div>
+                      <span style="font-size:14px; font-weight:700; color:#101C1499;">18 hos 7 butikker</span>
+                    </div>
+                    <div style="columns:2; column-gap:16px;">
+                      <sc-for list="{{ butikker }}" as="b" hint-placeholder-count="6">
+                        <div style="break-inside:avoid; margin-bottom:16px; border:2px solid #101C14; border-radius:18px; background:#fff; box-shadow:4px 4px 0 #101C14; overflow:hidden;">
+                          <div onClick="{{ b.toggle }}" role="button" style="cursor:pointer; padding:16px 18px; display:flex; align-items:center; gap:14px; min-height:44px;">
+                            <span style="width:44px; height:44px; flex:none; border-radius:12px; border:2px solid #101C14; background:#B8E04A; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800;">{{ b.init }}</span>
+                            <div style="flex:1; min-width:0;">
+                              <p style="margin:0; font-size:17px; font-weight:800; letter-spacing:-0.02em;">{{ b.navn }}</p>
+                              <p style="margin:2px 0 0; font-size:13px; color:#101C1499;">{{ b.antallTekst }}</p>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:-6px; flex:none;">
+                              <sc-for list="{{ b.miniatyrer }}" as="m" hint-placeholder-count="3">
+                                <span style="width:34px; height:34px; margin-left:-8px; border-radius:999px; border:2px solid #101C14; background:#F1EFE6; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                                  <svg viewBox="{{ m.vb }}" style="height:100%; max-width:100%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ m.rx }}" ry="{{ m.ry }}" fill="{{ m.farge }}"></ellipse><ellipse cx="0" cy="{{ m.pcy }}" rx="{{ m.prx }}" ry="{{ m.pry }}" fill="rgba(255,255,255,0.18)"></ellipse></svg>
+                                </span>
+                              </sc-for>
+                              <span style="{{ b.plussStil }}">{{ b.pluss }}</span>
+                            </div>
+                            <span style="width:32px; height:32px; flex:none; border-radius:999px; background:#F1EFE6; display:flex; align-items:center; justify-content:center; transform:{{ b.rotasjon }};">
+                              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#101C14" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                            </span>
+                          </div>
+                          <div style="display:{{ b.vis }}; border-top:2px solid #F1EFE6;">
+                            <sc-for list="{{ b.disker }}" as="d" hint-placeholder-count="3">
+                              <a href="#9a" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:#101C14; padding:11px 18px; border-bottom:1px solid #F1EFE6; min-height:56px;">
+                                <span style="width:40px; height:40px; flex:none; border-radius:10px; background:#F1EFE6; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                                  <svg viewBox="{{ d.vb }}" style="height:100%; max-width:100%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ d.rx }}" ry="{{ d.ry }}" fill="{{ d.farge }}"></ellipse><ellipse cx="0" cy="{{ d.pcy }}" rx="{{ d.prx }}" ry="{{ d.pry }}" fill="rgba(255,255,255,0.18)"></ellipse></svg>
+                                </span>
+                                <span style="flex:1; min-width:0;">
+                                  <span style="display:block; font-size:15px; font-weight:800;">{{ d.navn }}</span>
+                                  <span style="display:block; font-size:12px; color:#101C1499;">{{ d.merke }} · {{ d.plast }}</span>
+                                </span>
+                                <span style="flex:none; font-size:16px; font-weight:800;">{{ d.pris }},-</span>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#101C1466" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+                              </a>
+                            </sc-for>
+                          </div>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="padding:56px 40px; background:#FFFDF6;">
+                  <div style="max-width:1120px; margin:0 auto;">
+                    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:20px;">
+                      <div style="display:flex; align-items:baseline; gap:14px;">
+                        <h2 style="margin:0; font-size:26px; font-weight:800; letter-spacing:-0.025em;">Bla i tidligere uker</h2>
+                        <span style="font-size:15px; color:#101C1499;">Hver uke siden vi startet å følge butikkene.</span>
+                      </div>
+                      <a href="#9a" style="font-size:14px; font-weight:700; color:#101C14; text-decoration:none; border-bottom:2px solid #B8E04A; padding-bottom:3px;">Hele arkivet →</a>
+                    </div>
+                    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+                      <sc-for list="{{ arkiv }}" as="a" hint-placeholder-count="4">
+                        <a href="#9a" style="display:flex; flex-direction:column; gap:12px; text-decoration:none; color:#101C14; border:2px solid #101C14; border-radius:16px; background:#fff; padding:16px; box-shadow:3px 3px 0 #101C14; min-height:44px;">
+                          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:10px;">
+                            <span style="font-size:22px; font-weight:800; letter-spacing:-0.03em;">Uke {{ a.uke }}</span>
+                            <span style="font-size:12px; font-weight:700; color:#101C1477;">{{ a.datoer }}</span>
+                          </div>
+                          <div style="display:flex; gap:7px; flex-wrap:wrap;">
+                            <span style="background:#B8E04A; color:#101C14; font-size:12px; font-weight:800; border-radius:8px; padding:4px 9px;">{{ a.utgaver }} drops</span>
+                            <span style="background:#F1EFE6; color:#101C14; font-size:12px; font-weight:800; border-radius:8px; padding:4px 9px;">{{ a.lager }} lagerføringer</span>
+                          </div>
+                          <span style="display:flex; align-items:center; gap:6px; font-size:13px; font-weight:700; color:#101C1499;">{{ a.topp }}</span>
+                        </a>
+                      </sc-for>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="border-top:2px solid #101C14; background:#101C14; color:#FFFDF6; padding:24px 40px;">
+                  <div style="max-width:1120px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 24px; font-size:12px; color:#FFFDF699;">
+                    <span>© 2026 discdrop · Laget av <span style="color:#B8E04A;">Kviist</span></span>
+                    <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+                    <div style="display:flex; gap:16px;"><span>Butikker</span><span>Personvern</span><span>Kontakt</span><span>kontakt@discdrop.net</span></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <p class="dv-sub">Mobil 375 px</p>
+            <div class="dv-card" style="width:375px;">
+              <div data-screen-label="9a Nytt mobil" style="box-sizing:border-box; width:375px; background:#FFFDF6; font-family:'Bricolage Grotesque',sans-serif; color:#101C14;">
+
+                <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:2px solid #101C14; padding:14px 20px;">
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="11" fill="#B8E04A"></rect><circle cx="20" cy="17" r="10" fill="#101C14"></circle><circle cx="20" cy="17" r="3.5" fill="#B8E04A"></circle><circle cx="29" cy="30" r="3" fill="#101C14"></circle></svg>
+                    <span style="font-weight:800; font-size:18px; letter-spacing:-0.03em;">discdrop</span>
+                  </div>
+                  <span style="width:44px; height:44px; border:2px solid #101C14; border-radius:12px; background:#fff; box-shadow:2px 2px 0 #101C14; display:flex; align-items:center; justify-content:center;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101C14" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h16"></path></svg>
+                  </span>
+                </div>
+
+                <div style="border-bottom:2px solid #101C14; padding:28px 20px 0;">
+                  <div style="display:flex; align-items:center; gap:14px;">
+                    <div style="flex:none; border:2px solid #101C14; border-radius:16px; background:#B8E04A; box-shadow:4px 4px 0 #101C14; padding:10px 16px 12px; text-align:center;">
+                      <div style="font-size:10px; font-weight:800; letter-spacing:0.16em;">UKE</div>
+                      <div style="font-size:40px; font-weight:800; line-height:0.86; letter-spacing:-0.05em;">34</div>
+                    </div>
+                    <div>
+                      <p style="margin:0; font-size:12px; font-weight:800; letter-spacing:0.14em; color:#101C1499;">17.–23. AUGUST</p>
+                      <p style="margin:4px 0 0; font-size:14px; font-weight:700; color:#101C14;">Denne uka · 2026</p>
+                    </div>
+                  </div>
+                  <h1 style="margin:18px 0 0; font-size:40px; font-weight:800; line-height:0.98; letter-spacing:-0.035em;">Ukas drops er <span style="background-image:linear-gradient(transparent 62%, #B8E04A 62%);">landet.</span></h1>
+                  <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:#101C14b3;">Nye disker, nye drops av kjente disker og nye lagerføringer vi har fanget opp hos butikkene vi følger.</p>
+                  <div style="margin-top:24px; border:2px solid #101C14; border-bottom:none; border-radius:16px 16px 0 0; background:#1E3D2F; color:#FFFDF6; padding:16px 18px; display:flex; flex-direction:column; gap:12px;">
+                    <div style="display:flex; align-items:stretch;">
+                      <div style="flex:1;">
+                        <div style="font-size:26px; font-weight:800; letter-spacing:-0.03em; color:#B8E04A;">3</div>
+                        <div style="font-size:11px; font-weight:600; color:#FFFDF699; line-height:1.25;">nye drops</div>
+                      </div>
+                      <div style="flex:1; border-left:1px solid #FFFDF62a; padding-left:14px;">
+                        <div style="font-size:26px; font-weight:800; letter-spacing:-0.03em;">18</div>
+                        <div style="font-size:11px; font-weight:600; color:#FFFDF699; line-height:1.25;">lager&shy;føringer</div>
+                      </div>
+                      <div style="flex:1; border-left:1px solid #FFFDF62a; padding-left:14px;">
+                        <div style="font-size:26px; font-weight:800; letter-spacing:-0.03em;">7</div>
+                        <div style="font-size:11px; font-weight:600; color:#FFFDF699; line-height:1.25;">butikker</div>
+                      </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px; font-size:12px; font-weight:600; color:#FFFDF677; border-top:1px solid #FFFDF62a; padding-top:11px;">
+                      <span style="width:7px; height:7px; border-radius:999px; background:#B8E04A;"></span>
+                      Sist sjekket i dag kl. 06:12
+                    </div>
+                  </div>
+                </div>
+
+                <sc-if value="{{ visNyDisk }}" hint-placeholder-val="{{ true }}">
+                  <div style="border-bottom:2px solid #101C14; padding:36px 20px;">
+                    <h2 style="margin:0; font-size:22px; font-weight:800; letter-spacing:-0.025em;">Ny disk</h2>
+                    <p style="margin:6px 0 16px; font-size:14px; color:#101C1499;">Aldri sett i norsk butikk før denne uka.</p>
+                    <div style="display:flex; flex-direction:column; gap:16px;">
+                      <sc-for list="{{ nyeDisker }}" as="d" hint-placeholder-count="1">
+                        <a href="#9a" style="display:block; text-decoration:none; color:#101C14; border:2px solid #101C14; border-radius:18px; background:#fff; box-shadow:4px 4px 0 #B8E04A; overflow:hidden;">
+                          <div style="position:relative; background:#F1EFE6; border-bottom:2px solid #101C14; height:150px; display:flex; align-items:center; justify-content:center;">
+                            <svg viewBox="{{ d.vb }}" style="height:100%; max-width:78%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ d.rx }}" ry="{{ d.ry }}" fill="{{ d.farge }}"></ellipse><ellipse cx="0" cy="0" rx="{{ d.rx2 }}" ry="{{ d.ry2 }}" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></ellipse><ellipse cx="0" cy="{{ d.pcy }}" rx="{{ d.prx }}" ry="{{ d.pry }}" fill="rgba(255,255,255,0.18)"></ellipse><text x="0" y="0" text-anchor="middle" dominant-baseline="central" fill="#fff" font-size="{{ d.fs }}" font-weight="700" letter-spacing="1.5" opacity="0.9">{{ d.init }}</text></svg>
+                            <span style="position:absolute; top:12px; left:12px; background:#B8E04A; color:#101C14; font-weight:800; font-size:10px; letter-spacing:0.1em; border-radius:8px; padding:5px 9px; transform:rotate(-2deg); box-shadow:2px 2px 0 #101C14;">NY DISK</span>
+                          </div>
+                          <div style="padding:16px; display:flex; flex-direction:column; gap:12px;">
+                            <div>
+                              <h3 style="margin:0; font-size:26px; font-weight:800; line-height:1; letter-spacing:-0.035em;">{{ d.navn }}</h3>
+                              <p style="margin:5px 0 0; font-size:14px; color:#101C1499;">{{ d.meta }}</p>
+                            </div>
+                            <p style="margin:0; font-size:14px; line-height:1.5; color:#101C14b3; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;">{{ d.beskrivelse }}</p>
+                            <div style="display:flex; gap:6px;">
+                              <span style="flex:1; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:7px 0;"><span style="font-size:16px; font-weight:800;">{{ d.speed }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">SPEED</span></span>
+                              <span style="flex:1; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:7px 0;"><span style="font-size:16px; font-weight:800;">{{ d.glide }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">GLIDE</span></span>
+                              <span style="flex:1; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:7px 0;"><span style="font-size:16px; font-weight:800;">{{ d.turn }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">TURN</span></span>
+                              <span style="flex:1; display:flex; flex-direction:column; align-items:center; gap:1px; border-radius:10px; background:#F1EFE6; padding:7px 0;"><span style="font-size:16px; font-weight:800;">{{ d.fade }}</span><span style="font-size:8px; font-weight:600; letter-spacing:0.08em; color:#101C1488;">FADE</span></span>
+                            </div>
+                            <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; border-top:2px solid #F1EFE6; padding-top:12px;">
+                              <div style="min-width:0;">
+                                <p style="margin:0; font-size:11px; color:#101C1477;">fra, inkl. frakt · hos {{ d.butikker }}</p>
+                                <p style="margin:2px 0 0; font-size:22px; font-weight:800; letter-spacing:-0.03em;">{{ d.pris }},-</p>
+                              </div>
+                              <span style="flex:none; display:inline-flex; align-items:center; justify-content:center; background:#B8E04A; color:#101C14; font-weight:800; font-size:15px; border:2px solid #101C14; border-radius:14px; padding:11px 20px; min-height:46px; box-shadow:3px 3px 0 #101C14;">Se pris</span>
+                            </div>
+                          </div>
+                        </a>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-if>
+
+                <div style="border-bottom:2px solid #101C14; padding:36px 20px;">
+                  <h2 style="margin:0; font-size:22px; font-weight:800; letter-spacing:-0.025em;">Nye drops</h2>
+                  <p style="margin:6px 0 16px; font-size:14px; color:#101C1499;">Kjent form, ny plast eller ny serie. 3 denne uka.</p>
+                  <div style="display:flex; flex-direction:column; gap:16px;">
+                    <sc-for list="{{ utgaver }}" as="u" hint-placeholder-count="3">
+                      <a href="#9a" style="display:flex; flex-direction:column; text-decoration:none; color:#101C14; border:2px solid #101C14; border-radius:18px; background:#fff; box-shadow:4px 4px 0 #B8E04A; overflow:hidden;">
+                        <div style="position:relative; background:#F1EFE6; border-bottom:2px solid #101C14; height:150px; display:flex; align-items:center; justify-content:center;">
+                          <svg viewBox="{{ u.vb }}" style="height:100%; max-width:78%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ u.rx }}" ry="{{ u.ry }}" fill="{{ u.farge }}"></ellipse><ellipse cx="0" cy="0" rx="{{ u.rx2 }}" ry="{{ u.ry2 }}" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4"></ellipse><ellipse cx="0" cy="{{ u.pcy }}" rx="{{ u.prx }}" ry="{{ u.pry }}" fill="rgba(255,255,255,0.18)"></ellipse><text x="0" y="0" text-anchor="middle" dominant-baseline="central" fill="#fff" font-size="{{ u.fs }}" font-weight="700" letter-spacing="1.5" opacity="0.9">{{ u.init }}</text></svg>
+                          <span style="position:absolute; top:12px; left:12px; background:#101C14; color:#B8E04A; font-weight:800; font-size:10px; letter-spacing:0.1em; border-radius:8px; padding:5px 9px; transform:rotate(-2deg); box-shadow:2px 2px 0 #B8E04A;">NY DROP</span>
+                          <span style="position:absolute; top:14px; right:12px; font-size:10px; font-weight:800; letter-spacing:0.1em; color:#101C1477;">{{ u.dag }}</span>
+                        </div>
+                        <div style="padding:16px 16px 18px; display:flex; flex-direction:column; gap:12px;">
+                          <div>
+                            <h3 style="margin:0; font-size:24px; font-weight:800; line-height:1.02; letter-spacing:-0.03em;">{{ u.navn }}</h3>
+                            <p style="margin:4px 0 0; font-size:14px; color:#101C1499;">{{ u.merke }} · {{ u.plast }}</p>
+                          </div>
+                          <div style="display:flex; align-items:center; gap:8px;">
+                            <span style="width:24px; height:24px; flex:none; border-radius:999px; border:2px solid #101C14; background:#F1EFE6; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800;">{{ u.butikkInit }}</span>
+                            <span style="font-size:13px; font-weight:700;">{{ u.butikk }}</span>
+                            <span style="font-size:12px; color:#101C1477;">{{ u.butikkMer }}</span>
+                          </div>
+                          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; border-top:2px solid #F1EFE6; padding-top:12px;">
+                            <div>
+                              <p style="margin:0; font-size:11px; color:#101C1477;">fra, inkl. frakt</p>
+                              <p style="margin:1px 0 0; font-size:22px; font-weight:800; letter-spacing:-0.03em;">{{ u.pris }},-</p>
+                            </div>
+                            <span style="display:inline-flex; align-items:center; justify-content:center; background:#B8E04A; color:#101C14; font-weight:800; font-size:15px; border:2px solid #101C14; border-radius:14px; padding:11px 20px; min-height:46px; box-shadow:3px 3px 0 #101C14;">Se pris</span>
+                          </div>
+                        </div>
+                      </a>
+                    </sc-for>
+                  </div>
+                </div>
+
+                <div style="border-bottom:2px solid #101C14; padding:36px 20px;">
+                  <h2 style="margin:0; font-size:22px; font-weight:800; letter-spacing:-0.025em;">Nytt i butikkutvalget</h2>
+                  <p style="margin:6px 0 16px; font-size:14px; color:#101C1499;">18 kjente disker dukket opp hos 7 butikker.</p>
+                  <div style="display:flex; flex-direction:column; gap:12px;">
+                    <sc-for list="{{ butikker }}" as="b" hint-placeholder-count="4">
+                      <div style="border:2px solid #101C14; border-radius:16px; background:#fff; box-shadow:3px 3px 0 #101C14; overflow:hidden;">
+                        <div onClick="{{ b.toggle }}" role="button" style="cursor:pointer; padding:12px 14px; display:flex; align-items:center; gap:12px; min-height:56px;">
+                          <span style="width:40px; height:40px; flex:none; border-radius:11px; border:2px solid #101C14; background:#B8E04A; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:800;">{{ b.init }}</span>
+                          <div style="flex:1; min-width:0;">
+                            <p style="margin:0; font-size:16px; font-weight:800; letter-spacing:-0.02em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{{ b.navn }}</p>
+                            <p style="margin:1px 0 0; font-size:12px; color:#101C1499;">{{ b.antallTekst }}</p>
+                          </div>
+                          <div style="display:flex; align-items:center; flex:none;">
+                            <sc-for list="{{ b.miniatyrerM }}" as="m" hint-placeholder-count="2">
+                              <span style="width:30px; height:30px; margin-left:-8px; border-radius:999px; border:2px solid #101C14; background:#F1EFE6; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                                <svg viewBox="{{ m.vb }}" style="height:100%; max-width:100%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ m.rx }}" ry="{{ m.ry }}" fill="{{ m.farge }}"></ellipse><ellipse cx="0" cy="{{ m.pcy }}" rx="{{ m.prx }}" ry="{{ m.pry }}" fill="rgba(255,255,255,0.18)"></ellipse></svg>
+                              </span>
+                            </sc-for>
+                          </div>
+                          <span style="width:30px; height:30px; flex:none; border-radius:999px; background:#F1EFE6; display:flex; align-items:center; justify-content:center; transform:{{ b.rotasjon }};">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#101C14" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                          </span>
+                        </div>
+                        <div style="display:{{ b.vis }}; border-top:2px solid #F1EFE6;">
+                          <sc-for list="{{ b.disker }}" as="d" hint-placeholder-count="3">
+                            <a href="#9a" style="display:flex; align-items:center; gap:11px; text-decoration:none; color:#101C14; padding:11px 14px; border-bottom:1px solid #F1EFE6; min-height:60px;">
+                              <span style="width:40px; height:40px; flex:none; border-radius:10px; background:#F1EFE6; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+                                <svg viewBox="{{ d.vb }}" style="height:100%; max-width:100%; display:block;" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><ellipse cx="0" cy="0" rx="{{ d.rx }}" ry="{{ d.ry }}" fill="{{ d.farge }}"></ellipse><ellipse cx="0" cy="{{ d.pcy }}" rx="{{ d.prx }}" ry="{{ d.pry }}" fill="rgba(255,255,255,0.18)"></ellipse></svg>
+                              </span>
+                              <span style="flex:1; min-width:0;">
+                                <span style="display:block; font-size:15px; font-weight:800;">{{ d.navn }}</span>
+                                <span style="display:block; font-size:12px; color:#101C1499;">{{ d.merke }} · {{ d.plast }}</span>
+                              </span>
+                              <span style="flex:none; font-size:16px; font-weight:800;">{{ d.pris }},-</span>
+                            </a>
+                          </sc-for>
+                        </div>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+
+                <div style="padding:36px 20px;">
+                  <h2 style="margin:0; font-size:22px; font-weight:800; letter-spacing:-0.025em;">Bla i tidligere uker</h2>
+                  <p style="margin:6px 0 16px; font-size:14px; color:#101C1499;">Hver uke siden vi startet å følge butikkene.</p>
+                  <div style="display:flex; flex-direction:column; gap:12px;">
+                    <sc-for list="{{ arkivM }}" as="a" hint-placeholder-count="3">
+                      <a href="#9a" style="display:flex; align-items:center; gap:14px; text-decoration:none; color:#101C14; border:2px solid #101C14; border-radius:14px; background:#fff; padding:14px; box-shadow:3px 3px 0 #101C14; min-height:56px;">
+                        <span style="flex:none; font-size:20px; font-weight:800; letter-spacing:-0.03em;">Uke {{ a.uke }}</span>
+                        <span style="flex:1; min-width:0;">
+                          <span style="display:block; font-size:12px; font-weight:700; color:#101C1477;">{{ a.datoer }}</span>
+                          <span style="display:block; font-size:13px; font-weight:700; color:#101C1499;">{{ a.oppsummering }}</span>
+                        </span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#101C14" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+                      </a>
+                    </sc-for>
+                    <span style="display:flex; align-items:center; justify-content:center; min-height:44px; font-size:15px; font-weight:700;">Hele arkivet →</span>
+                  </div>
+                </div>
+
+                <div style="border-top:2px solid #101C14; background:#101C14; color:#FFFDF6; padding:24px 20px; display:flex; flex-direction:column; gap:10px; font-size:12px; color:#FFFDF699;">
+                  <span>© 2026 discdrop · Laget av <span style="color:#B8E04A;">Kviist</span></span>
+                  <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>
+                  <div style="display:flex; flex-wrap:wrap; gap:14px;"><span>Butikker</span><span>Personvern</span><span>Kontakt</span></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="dv-next">
+          Neste: «bygg /prisfall-siden i samme språk» · «vis /nytt uten Ny disk-nivået» (eller slå av <em>visNyDisk</em> i Tweaks) ·
+          «legg /nytt inn i handoff-pakken»
+        </p>
+      </section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200},&quot;visNyDisk&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Uke&quot;},&quot;antallNyeDisker&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:1,&quot;min&quot;:1,&quot;max&quot;:2,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Uke&quot;}}">
+class Component extends DCLogic {
+  state = { åpne: { discexpress: true } };
+
+  disk(merke, type) {
+    const FARGER = { Innova: '#2D6A4F', Discraft: '#1a3a5c', 'Dynamic Discs': '#4a1f6e', 'Latitude 64': '#8B0000', Kastaplast: '#FF6B00', MVP: '#1a1a2e', Axiom: '#1a1a2e', Discmania: '#c41e3a', Prodigy: '#2c5f2e', Westside: '#4a3728' };
+    const FORMER = { driver: [90, 20, 42, 9], distance: [90, 20, 42, 9], fairway: [84, 28, 40, 13], midrange: [76, 37, 36, 17], putter: [65, 47, 32, 22] };
+    const [rx, ry, prx, pry] = FORMER[type] ?? FORMER.driver;
+    const ord = merke.split(' ');
+    const init = (ord.length >= 2 ? ord[0][0] + ord[1][0] : merke.slice(0, 2)).toUpperCase();
+    return {
+      farge: FARGER[merke] ?? '#2D6A4F', init, rx, ry, prx, pry,
+      rx2: rx - 5, ry2: ry - 3, pcy: -(ry * 0.28),
+      fs: Math.max(10, Math.min(20, ry * 0.55)),
+      vb: '-100 ' + -(ry + 8) + ' 200 ' + (ry + 8) * 2
+    };
+  }
+
+  initialer(navn) {
+    const ord = navn.replace(/[^A-Za-zÆØÅæøå ]/g, '').split(' ').filter(Boolean);
+    return (ord.length >= 2 ? ord[0][0] + ord[1][0] : navn.slice(0, 2)).toUpperCase();
+  }
+
+  renderVals() {
+    const utgaver = [
+      { navn: 'Watt', merke: 'MVP', type: 'driver', plast: 'Proton', pris: 278, butikk: 'Discexpress', butikkMer: '', dag: 'TIRSDAG' },
+      { navn: 'Stratus', merke: 'Discraft', type: 'fairway', plast: 'X Line', pris: 204, butikk: 'NyDisk', butikkMer: '+ 1 butikk', dag: 'ONSDAG' },
+      { navn: 'Raider', merke: 'Dynamic Discs', type: 'distance', plast: 'Lucid X', pris: 185, butikk: 'NyDisk', butikkMer: '', dag: 'FREDAG' }
+    ].map(u => Object.assign({}, u, this.disk(u.merke, u.type), { butikkInit: this.initialer(u.butikk) }));
+
+    const rå = [
+      { id: 'discexpress', navn: 'Discexpress', disker: [
+        { navn: 'Destroyer', merke: 'Innova', type: 'distance', plast: 'Star', pris: 189 },
+        { navn: 'Buzzz', merke: 'Discraft', type: 'midrange', plast: 'Z', pris: 165 },
+        { navn: 'Berg', merke: 'Kastaplast', type: 'putter', plast: 'K1', pris: 209 },
+        { navn: 'Hex', merke: 'Axiom', type: 'midrange', plast: 'Neutron', pris: 199 },
+        { navn: 'Diamond', merke: 'Latitude 64', type: 'fairway', plast: 'Opto', pris: 155 },
+        { navn: 'Zone', merke: 'Discraft', type: 'putter', plast: 'Big Z', pris: 179 },
+        { navn: 'Teebird', merke: 'Innova', type: 'fairway', plast: 'Champion', pris: 185 },
+        { navn: 'Envy', merke: 'Axiom', type: 'putter', plast: 'Fission', pris: 195 }
+      ] },
+      { id: 'nydisk', navn: 'NyDisk', disker: [
+        { navn: 'Luna', merke: 'Discraft', type: 'putter', plast: 'Jawbreaker', pris: 214 },
+        { navn: 'Wraith', merke: 'Innova', type: 'distance', plast: 'Star', pris: 172 },
+        { navn: 'Trail', merke: 'MVP', type: 'fairway', plast: 'Neutron', pris: 205 }
+      ] },
+      { id: 'frisbeesor', navn: 'Frisbee Sør', disker: [
+        { navn: 'Glitch', merke: 'MVP', type: 'putter', plast: 'Neutron Soft', pris: 179 },
+        { navn: 'Roc3', merke: 'Innova', type: 'midrange', plast: 'Champion', pris: 169 }
+      ] },
+      { id: 'golfdiscer', navn: 'GolfDiscer', disker: [
+        { navn: 'Reko', merke: 'Kastaplast', type: 'putter', plast: 'K3', pris: 149 },
+        { navn: 'Sockibomb Slammer', merke: 'Discmania', type: 'putter', plast: 'D-Line', pris: 189 }
+      ] },
+      { id: 'ugglans', navn: 'Ugglans Discgolf', disker: [
+        { navn: 'Grym X', merke: 'Kastaplast', type: 'distance', plast: 'K1', pris: 219 }
+      ] },
+      { id: 'rocketdiscs', navn: 'Rocketdiscs', disker: [
+        { navn: 'Aviar', merke: 'Innova', type: 'putter', plast: 'DX', pris: 89 }
+      ] },
+      { id: 'kvamdgs', navn: 'Kvam DGS', disker: [
+        { navn: 'Ballista Pro', merke: 'Latitude 64', type: 'distance', plast: 'Opto', pris: 235 }
+      ] }
+    ];
+
+    const butikker = rå.map(b => {
+      const disker = b.disker.map(d => Object.assign({}, d, this.disk(d.merke, d.type)));
+      const åpen = !!this.state.åpne[b.id];
+      const synlige = disker.slice(0, 4);
+      const rest = disker.length - synlige.length;
+      return {
+        navn: b.navn,
+        init: this.initialer(b.navn),
+        antallTekst: disker.length === 1 ? '1 kjent disk inn denne uka' : disker.length + ' kjente disker inn denne uka',
+        miniatyrer: synlige,
+        miniatyrerM: disker.slice(0, 2),
+        pluss: rest > 0 ? '+' + rest : '',
+        plussStil: rest > 0
+          ? { width: '34px', height: '34px', marginLeft: '-8px', borderRadius: '999px', border: '2px solid #101C14', background: '#101C14', color: '#B8E04A', fontSize: '11px', fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center' }
+          : { display: 'none' },
+        disker,
+        vis: åpen ? 'block' : 'none',
+        rotasjon: åpen ? 'rotate(180deg)' : 'rotate(0deg)',
+        toggle: () => this.setState(s => ({ åpne: Object.assign({}, s.åpne, { [b.id]: !s.åpne[b.id] }) }))
+      };
+    });
+
+    const arkiv = [
+      { uke: '33', datoer: '10.–16. aug', utgaver: 2, lager: 11, topp: 'Discraft Luna · Kastaplast Reko' },
+      { uke: '32', datoer: '3.–9. aug', utgaver: 4, lager: 22, topp: 'MVP Glitch · Innova Firebird' },
+      { uke: '31', datoer: '27. juli–2. aug', utgaver: 1, lager: 9, topp: 'Latitude 64 Diamond' },
+      { uke: '30', datoer: '20.–26. juli', utgaver: 3, lager: 14, topp: 'Axiom Envy · Innova Roc3' }
+    ];
+
+    const nyeRå = [
+      { navn: 'Svea', merke: 'Kastaplast', type: 'fairway', meta: 'Kastaplast · K3 Hybrid · fairway driver', speed: '8', glide: '5', turn: '−1', fade: '2', pris: 249, butikker: 'Discexpress · Frisbee Sør',
+        beskrivelse: 'Svea er en rett fairway-driver med myk fade — bygget for kontrollerte linjer i skogen mer enn råe lengder. K3 Hybrid-plasten gir godt grep også i regn, og formen skal være lett å kaste for både nye og erfarne spillere.' },
+      { navn: 'Tempo', merke: 'Axiom', type: 'fairway', meta: 'Axiom · Prolux · fairway driver', speed: '9', glide: '4', turn: '0', fade: '3', pris: 259, butikker: 'NyDisk',
+        beskrivelse: 'Overstabil fairway-driver for vind og skanker — holder linja når alt annet vipper over.' }
+    ];
+    const antallNye = Math.max(1, Math.min(nyeRå.length, this.props.antallNyeDisker ?? 1));
+    const enNy = antallNye === 1;
+    const beskrFull = { margin: 0, maxWidth: '64ch', fontSize: '15px', lineHeight: 1.55, color: '#101C14b3' };
+    const beskrKlippet = { margin: 0, fontSize: '14px', lineHeight: 1.5, color: '#101C14b3', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' };
+    const nyeDisker = nyeRå.slice(0, antallNye).map(d => Object.assign({}, d, this.disk(d.merke, d.type), {
+      bildeKol: enNy ? '230px' : '150px',
+      sticker: 'NY DISK',
+      beskrStil: enNy ? beskrFull : beskrKlippet
+    }));
+
+    return {
+      visNyDisk: this.props.visNyDisk ?? true,
+      nyeDisker,
+      nyDiskGrid: { display: 'grid', gridTemplateColumns: enNy ? '1fr' : '1fr 1fr', gap: '20px' },
+      utgaver, butikker, arkiv,
+      arkivM: arkiv.slice(0, 3).map(a => Object.assign({}, a, {
+        oppsummering: a.utgaver + ' drops · ' + a.lager + ' lagerføringer'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
