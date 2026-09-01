@@ -28,14 +28,11 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { priceChangesLabel, dropsLabel, storesLabel } from "@/lib/pluralize";
 import { RelativeTime } from "@/components/RelativeTime";
 import { PriceSparkline } from "@/components/PriceSparkline";
-import { PriceAlertInline } from "@/components/PriceAlertInline";
 import {
   getPriceDropRows,
   capPerBrand,
-  getTotalDrops,
   priceChangesSummary,
   hasPriceDropsData,
-  type PriceChangePeriod,
 } from "@/lib/price-drops";
 
 // ── Types ──────────────────────────────────────────────────────────────────
@@ -595,7 +592,7 @@ function LatestDrops() {
 // ── Prisfall ──────────────────────────────────────────────────────────────
 // All visible numbers (pct, prices, totals) come straight from
 // lib/price-drops.ts (data/price-changes.json) — never recomputed here.
-const PRICE_DROP_CARD_COUNT = 6;
+const PRICE_DROP_CARD_COUNT = 3;
 
 function PriceDropCard({ row }: { row: ReturnType<typeof getPriceDropRows>[number] }) {
   return (
@@ -604,9 +601,16 @@ function PriceDropCard({ row }: { row: ReturnType<typeof getPriceDropRows>[numbe
       className="flex flex-col gap-3 rounded-2xl border-2 border-[#101C14] bg-white p-4 shadow-[4px_4px_0_#B8E04A] transition-transform duration-150 ease-out hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[7px_7px_0_#B8E04A]"
     >
       <div className="flex items-start justify-between gap-2">
-        <span className="inline-flex w-fit -rotate-2 items-center rounded-[10px] bg-[#B8E04A] px-[11px] py-[5px] text-[15px] font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
-          −{Math.abs(row.pct)} %
-        </span>
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="inline-flex w-fit -rotate-2 items-center rounded-[10px] bg-[#B8E04A] px-[11px] py-[5px] text-[15px] font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
+            −{Math.abs(row.pct)} %
+          </span>
+          {row.bucket === "today" && (
+            <span className="inline-flex w-fit items-center rounded-[10px] bg-[#101C14] px-[9px] py-1 text-[11px] font-extrabold tracking-[0.06em] text-[#B8E04A]">
+              I DAG
+            </span>
+          )}
+        </div>
         <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-[#F1EFE6]">
           <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
         </div>
@@ -636,69 +640,36 @@ function PriceDropCard({ row }: { row: ReturnType<typeof getPriceDropRows>[numbe
 }
 
 function PriceDrops() {
-  const [period, setPeriod] = useState<PriceChangePeriod>("day");
-
-  const dayRows = useMemo(() => capPerBrand(getPriceDropRows("day")).slice(0, PRICE_DROP_CARD_COUNT), []);
-  const weekRows = useMemo(() => capPerBrand(getPriceDropRows("week")).slice(0, PRICE_DROP_CARD_COUNT), []);
-  const rows = period === "day" ? dayRows : weekRows;
-  const total = getTotalDrops(period);
-
-  const alertDiscs = useMemo(
-    () => rows.map((r) => ({ discId: r.discId, name: r.name, brand: r.brand, newPrice: r.newPrice })),
-    [rows]
+  // "Denne uka" here already means today + yesterday + earlier-this-week
+  // (see lib/price-drops.ts's getPriceDropRows) — every row already cleared
+  // the trailing-7-day-minimum rule, so these are genuine new lows, not
+  // just "lower than yesterday". Sorted by pct ascending (biggest cut
+  // first) and capped to 3 — this teaser's whole job is a taste of what's
+  // on /prisfall, not the full list.
+  const rows = useMemo(
+    () => capPerBrand(getPriceDropRows("week")).sort((a, b) => a.pct - b.pct).slice(0, PRICE_DROP_CARD_COUNT),
+    []
   );
 
-  if (!hasPriceDropsData) return null;
+  if (!hasPriceDropsData || rows.length === 0) return null;
 
   return (
     <section id="prisfall" className="w-full border-b-2 border-[#101C14] bg-[#FFFDF6] px-5 py-14 md:px-10 md:py-16" style={{ scrollMarginTop: "72px" }}>
       <div className="mx-auto max-w-6xl">
-        <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-6">
-          <div>
-            <h2 className="text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">Prisfall</h2>
-            <p className="mt-2 text-base text-[#101C1499]">Største priskutt vi har fanget opp — totalpris med frakt.</p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-            <div className="flex gap-[3px] rounded-full bg-[#F1EFE6] p-1">
-              {(["day", "week"] as const).map((p) => (
-                <button
-                  key={p}
-                  type="button"
-                  onClick={() => setPeriod(p)}
-                  className={`min-h-[40px] flex-1 rounded-full px-5 text-sm font-extrabold transition-colors sm:min-h-[36px] ${
-                    period === p ? "bg-[#101C14] text-[#B8E04A]" : "bg-transparent text-[#101C1499]"
-                  }`}
-                >
-                  {p === "day" ? "I dag" : "Denne uka"}
-                </button>
-              ))}
-            </div>
-            {total > 0 && (
-              <Link href="/prisfall" className="hidden text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4 sm:inline">
-                Se alle {total} →
-              </Link>
-            )}
-          </div>
+        <div className="mb-8">
+          <h2 className="text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">Prisfall</h2>
+          <p className="mt-2 text-base text-[#101C1499]">Største priskutt vi har fanget opp denne uka — totalpris med frakt.</p>
         </div>
 
-        {rows.length === 0 ? (
-          <p className="text-sm text-[#101C1499]">Ingen store prisfall i denne perioden akkurat nå — sjekk igjen senere.</p>
-        ) : (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {rows.map((row) => (
-              <PriceDropCard key={`${row.discId}-${period}`} row={row} />
-            ))}
-          </div>
-        )}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {rows.map((row) => (
+            <PriceDropCard key={row.discId} row={row} />
+          ))}
+        </div>
 
-        {total > 0 && (
-          <Link href="/prisfall" className="mt-6 flex min-h-[44px] items-center justify-center text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4 sm:hidden">
-            Se alle {total} prisfall →
-          </Link>
-        )}
-
-        {alertDiscs.length > 0 && <PriceAlertInline discs={alertDiscs} />}
+        <Link href="/prisfall" className="mt-6 flex min-h-[44px] items-center justify-center text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4">
+          Se alle prisfall →
+        </Link>
       </div>
     </section>
   );
