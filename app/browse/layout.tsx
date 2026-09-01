@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { discs } from "@/data/discs.js";
+import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
 const brandCount = new Set(discs.map((d) => d.brand)).size;
 
@@ -13,6 +14,8 @@ export const metadata: Metadata = {
     title: "Alle disker — Diskgolf prissammenligning | DiscDrop",
     description: `Bla gjennom ${discs.length} diskgolfdisker fra ${brandCount} merker. Filtrer på type, merke og pris.`,
     url: "https://discdrop.net/browse",
+    type: OG_TYPE_WEBSITE,
+    images: [BRAND_OG_IMAGE],
   },
 };
 

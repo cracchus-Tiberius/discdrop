@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -37,15 +38,15 @@ export const metadata: Metadata = {
     description:
       "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus.",
     url: "https://discdrop.net",
-    type: "website",
-    images: [{ url: "https://discdrop.net/og.png", width: 1200, height: 630, alt: "DiscDrop — Sammenlign diskgolfpriser i Norge" }],
+    type: OG_TYPE_WEBSITE,
+    images: [BRAND_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "DiscDrop — Sammenlign diskgolfpriser i Norge",
     description:
       "Finn beste pris på diskgolfdisker fra norske butikker. Sammenlign priser, frakt og lagerstatus.",
-    images: ["https://discdrop.net/og.png"],
+    images: [BRAND_OG_IMAGE.url],
   },
 };
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Bygg din bag — Få personlige diskgolfanbefalinger | DiscDrop",
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
     description:
       "Svar på 4 spørsmål og få AI-drevne anbefalinger for din diskgolfbag. Tilpasset ditt nivå og kastestil.",
     url: "https://discdrop.net/bag/build",
+    type: OG_TYPE_WEBSITE,
+    images: [BRAND_OG_IMAGE],
   },
 };
 

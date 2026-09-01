@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import {
   DiscHeroSection,
 } from "./DiscDetailClient";
+import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
@@ -45,7 +46,12 @@ export async function generateMetadata({
       title: ogTitle,
       description,
       url: canonical,
-      images: image !== "/disc-placeholder.svg" ? [{ url: image }] : [],
+      type: OG_TYPE_WEBSITE,
+      // Real per-disc photo when we have one — otherwise fall back to the
+      // brand image instead of no og:image at all (confirmed: an empty
+      // array here meant zero social preview image for the ~55 discs still
+      // on the generic placeholder).
+      images: image !== "/disc-placeholder.svg" ? [{ url: image }] : [BRAND_OG_IMAGE],
     },
   };
 }

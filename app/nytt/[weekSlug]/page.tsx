@@ -8,6 +8,7 @@ import { NewDiscTier } from "@/components/nytt/NewDiscTier";
 import { NewReleases } from "@/components/nytt/NewReleaseCard";
 import { StoreClusters } from "@/components/nytt/StoreCluster";
 import { WeekArchive } from "@/components/nytt/WeekArchive";
+import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getWeekIndex().map((w) => ({ weekSlug: w.slug }));
@@ -30,7 +31,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical },
+    openGraph: { title, description, url: canonical, type: OG_TYPE_WEBSITE, images: [BRAND_OG_IMAGE] },
   };
 }
 

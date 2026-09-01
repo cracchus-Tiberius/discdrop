@@ -7,6 +7,7 @@ import { NewDiscTier } from "@/components/nytt/NewDiscTier";
 import { NewReleases } from "@/components/nytt/NewReleaseCard";
 import { StoreClusters } from "@/components/nytt/StoreCluster";
 import { WeekArchive } from "@/components/nytt/WeekArchive";
+import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Nytt i butikk — Diskgolf-disker | DiscDrop",
@@ -17,6 +18,8 @@ export const metadata: Metadata = {
     title: "Nytt i butikk — Diskgolf-disker | DiscDrop",
     description: "Nye disker og nye drops vi har fanget opp hos norske og nordiske diskgolf-butikker.",
     url: "https://discdrop.net/nytt/",
+    type: OG_TYPE_WEBSITE,
+    images: [BRAND_OG_IMAGE],
   },
 };
 
