@@ -53,6 +53,19 @@ const STORE_QUARANTINE_MS = 21 * 24 * 60 * 60 * 1000;
 // were real — we have no way to tell them apart once firstSeen is reset.
 const MASS_RESET_THRESHOLD = 30;
 
+// A second, weekly suppression rule alongside MASS_RESET_THRESHOLD's daily
+// one. Confirmed in production 2026-08-31: W34/W35 produced 126 and 68
+// signals respectively against a ~5-25/week target for the public /nytt
+// feed, and the excess was almost entirely new-at-store — an established
+// store's routine restocking spread across several days, each day too small
+// to trip the >30-in-one-day mass-reset check, but adding up to real noise
+// over a week. Scoped to new-at-store only: new-disc and new-release are
+// per-mold/per-edition events, genuinely rare, and a store legitimately
+// could (rarely) launch 20+ new discs or editions in one week — that IS
+// news, unlike restocking 20+ already-known plastics one store had never
+// carried before.
+const WEEKLY_NEW_AT_STORE_CAP = 20;
+
 const SIGNAL_TYPE_RANK = { 'new-disc': 0, 'new-release': 1, 'new-at-store': 2 };
 
 function ageMs(isoDate, asOfMs) {
@@ -238,6 +251,40 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
     }
   }
 
+  // Weekly per-store cap: count new-at-store raw signals by (store, ISO
+  // week of firstSeen), and drop that store's new-at-store entries for any
+  // week where it exceeds WEEKLY_NEW_AT_STORE_CAP. Unlike quarantine, the
+  // underlying entries are untouched — they stay in `entries` above as
+  // baseline evidence (a plastic/edition capped out of a signal this week
+  // still correctly counts as "already seen" later) — only rawSignals is
+  // filtered, same as isMassReset() above but scoped to a week+store
+  // instead of a day+store, and to new-at-store instead of every type.
+  const newAtStoreCountByStoreWeek = new Map();
+  for (const s of rawSignals) {
+    if (s.type !== 'new-at-store') continue;
+    const { isoYear, weekNumber } = getIsoWeek(new Date(s.firstSeenMs));
+    const weekKey = `${isoYear}-W${String(weekNumber).padStart(2, '0')}`;
+    const key = `${s.store}|${weekKey}`;
+    newAtStoreCountByStoreWeek.set(key, (newAtStoreCountByStoreWeek.get(key) || 0) + 1);
+  }
+  const weeklyCapKeys = new Set();
+  const weeklyCapEvents = [];
+  for (const [key, count] of newAtStoreCountByStoreWeek) {
+    if (count > WEEKLY_NEW_AT_STORE_CAP) {
+      weeklyCapKeys.add(key);
+      const [store, isoWeek] = key.split('|');
+      weeklyCapEvents.push({ store, isoWeek, count });
+    }
+  }
+  weeklyCapEvents.sort((a, b) => b.count - a.count);
+
+  const cappedSignals = rawSignals.filter((s) => {
+    if (s.type !== 'new-at-store') return true;
+    const { isoYear, weekNumber } = getIsoWeek(new Date(s.firstSeenMs));
+    const weekKey = `${isoYear}-W${String(weekNumber).padStart(2, '0')}`;
+    return !weeklyCapKeys.has(`${s.store}|${weekKey}`);
+  });
+
   // Merge same disc + same signal type into one entry with a stores list —
   // e.g. a disc appearing at 3 stores in one week is ONE "new-disc" entry,
   // not 3. A disc that's simultaneously new-release (say, a Tour Series
@@ -245,7 +292,7 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
   // store) stays two entries — that's genuinely two different pieces of
   // news.
   const grouped = new Map();
-  for (const s of rawSignals) {
+  for (const s of cappedSignals) {
     const key = `${s.discId}|${s.type}`;
     if (!grouped.has(key)) {
       grouped.set(key, {
@@ -289,7 +336,7 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
     return rankDiff !== 0 ? rankDiff : b.firstSeenMs - a.firstSeenMs;
   });
 
-  return { signals, quarantinedStores: [...quarantinedStores], massResetEvents };
+  return { signals, quarantinedStores: [...quarantinedStores], massResetEvents, weeklyCapEvents };
 }
 
 /** ISO-8601 week number + week-numbering year (Monday start) for a UTC date. */
@@ -348,6 +395,7 @@ module.exports = {
   SIGNAL_WINDOW_MS,
   STORE_QUARANTINE_MS,
   MASS_RESET_THRESHOLD,
+  WEEKLY_NEW_AT_STORE_CAP,
   findQuarantinedStores,
   findMassResetEvents,
   buildNewInStoresSignals,

@@ -32,7 +32,7 @@ function main() {
   // this script against the same data always produces the same output.
   const asOfMs = snapshot.lastUpdated ? new Date(snapshot.lastUpdated).getTime() : Date.now();
 
-  const { signals, quarantinedStores, massResetEvents } = buildNewInStoresSignals({
+  const { signals, quarantinedStores, massResetEvents, weeklyCapEvents } = buildNewInStoresSignals({
     snapshot,
     catalog: CATALOG,
     asOfMs,
@@ -57,6 +57,10 @@ function main() {
       // Logged here (not just console output) so anyone looking at the JSON
       // later can see what got filtered and why, without re-running this.
       suppressedMassResetEvents: massResetEvents,
+      // Store+ISO-week combos where a single store's new-at-store signals
+      // exceeded WEEKLY_NEW_AT_STORE_CAP — see that constant's comment in
+      // scripts/lib/new-in-stores.js. new-disc/new-release are never capped.
+      suppressedWeeklyCapEvents: weeklyCapEvents,
     },
     weeks,
   };
@@ -72,6 +76,12 @@ function main() {
     console.log('Suppressed mass-reset events (scraper/matching churn, not real news):');
     for (const e of massResetEvents) {
       console.log(`  ${e.store} ${e.date}: ${e.count} listings suppressed`);
+    }
+  }
+  if (weeklyCapEvents.length > 0) {
+    console.log('Suppressed weekly new-at-store caps (routine restocking noise, not real news):');
+    for (const e of weeklyCapEvents) {
+      console.log(`  ${e.store} ${e.isoWeek}: ${e.count} new-at-store signals suppressed`);
     }
   }
 }

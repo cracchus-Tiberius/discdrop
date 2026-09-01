@@ -332,6 +332,84 @@ test('buildNewInStoresSignals: a mass-reset event at one store does not suppress
   assert.equal(signals[0].discId, 'innova-destroyer');
 });
 
+// ── Weekly per-store new-at-store cap (2026-08-31) ──────────────────────────
+
+test('buildNewInStoresSignals: >20 new-at-store signals from one store in a week are suppressed', () => {
+  const prices = { ...ANCHOR };
+  // 21 already-established discs (known plastic at store a) newly arriving
+  // at store b, spread across the week rather than one day -> never trips
+  // the >30-in-one-day mass-reset check, but should trip the weekly cap.
+  for (let i = 0; i < 21; i++) {
+    prices[`flood-disc-${i}`] = [
+      { store: 'a', price: 150, inStock: true, plastic: 'DX', firstSeen: iso(60 * DAY), url: `a-${i}.no` },
+      { store: 'b', price: 145, inStock: true, plastic: 'DX', firstSeen: iso(2 * DAY), url: `b-${i}.no` },
+    ];
+  }
+  const catalog = [
+    ...CATALOG,
+    ...Array.from({ length: 21 }, (_, i) => ({ id: `flood-disc-${i}`, name: `Flood ${i}`, brand: 'Innova' })),
+  ];
+  const snapshot = { stores: STORES, prices };
+  const { signals, weeklyCapEvents } = buildNewInStoresSignals({ snapshot, catalog, asOfMs: NOW });
+  assert.equal(signals.length, 0);
+  assert.equal(weeklyCapEvents.length, 1);
+  assert.equal(weeklyCapEvents[0].store, 'b');
+  assert.equal(weeklyCapEvents[0].count, 21);
+});
+
+test('buildNewInStoresSignals: weekly new-at-store cap does not touch new-disc or new-release', () => {
+  const prices = { ...ANCHOR };
+  for (let i = 0; i < 21; i++) {
+    prices[`flood-disc-${i}`] = [
+      { store: 'a', price: 150, inStock: true, plastic: 'DX', firstSeen: iso(60 * DAY), url: `a-${i}.no` },
+      { store: 'b', price: 145, inStock: true, plastic: 'DX', firstSeen: iso(2 * DAY), url: `b-${i}.no` },
+    ];
+  }
+  // Same store, same week, already over the new-at-store cap — but a
+  // brand-new plastic (new-release) and a brand-new disc (new-disc) at
+  // store b must still come through uncapped, since the cap is scoped to
+  // new-at-store only.
+  prices['innova-destroyer'] = [
+    { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(60 * DAY), url: 'a.no' },
+    { store: 'b', price: 199, inStock: true, plastic: 'Proto Glow', firstSeen: iso(2 * DAY), url: 'b-glow.no' },
+  ];
+  prices['brand-new-disc'] = [
+    { store: 'b', price: 100, inStock: true, plastic: 'DX', firstSeen: iso(2 * DAY), url: 'b-new.no' },
+  ];
+  const catalog = [
+    ...CATALOG,
+    { id: 'brand-new-disc', name: 'Brand New', brand: 'Innova' },
+    ...Array.from({ length: 21 }, (_, i) => ({ id: `flood-disc-${i}`, name: `Flood ${i}`, brand: 'Innova' })),
+  ];
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog, asOfMs: NOW });
+  const types = signals.map((s) => s.type).sort();
+  assert.deepEqual(types, ['new-disc', 'new-release']);
+});
+
+test('buildNewInStoresSignals: weekly cap at one store does not suppress another store under the cap', () => {
+  const prices = { ...ANCHOR };
+  for (let i = 0; i < 21; i++) {
+    prices[`flood-disc-${i}`] = [
+      { store: 'a', price: 150, inStock: true, plastic: 'DX', firstSeen: iso(60 * DAY), url: `a-${i}.no` },
+      { store: 'b', price: 145, inStock: true, plastic: 'DX', firstSeen: iso(2 * DAY), url: `b-${i}.no` },
+    ];
+  }
+  prices['innova-destroyer'] = [
+    { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(60 * DAY), url: 'a.no' },
+    { store: 'c', price: 195, inStock: true, plastic: 'Star', firstSeen: iso(2 * DAY), url: 'c.no' },
+  ];
+  const catalog = [
+    ...CATALOG,
+    ...Array.from({ length: 21 }, (_, i) => ({ id: `flood-disc-${i}`, name: `Flood ${i}`, brand: 'Innova' })),
+  ];
+  const snapshot = { stores: STORES, prices };
+  const { signals } = buildNewInStoresSignals({ snapshot, catalog, asOfMs: NOW });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].discId, 'innova-destroyer');
+  assert.equal(signals[0].stores[0].store, 'c');
+});
+
 // ── Edition-marker-driven new-release (2026-08-18 taxonomy change) ─────────
 // Players define "new" by purchasability, not mold: a Tour Series or
 // dated-year stamp on a mold we've long sold in a known plastic is still a
