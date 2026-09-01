@@ -1,12 +1,54 @@
 {
-  "generated": "2026-09-01T08:20:44.740Z",
+  "generated": "2026-09-01T11:44:49.283Z",
   "summary": {
-    "priceChanges24h": 3,
+    "priceChanges24h": 1,
     "newDiscs24h": 0,
     "storesChecked": 18
   },
   "drops": [
     {
+      "discId": "discraft-drone",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "ESP FLX",
+      "oldPrice": 305,
+      "newPrice": 284,
+      "pct": -7,
+      "changedAt": "2026-09-01T11:23:21.349Z",
+      "period": "day",
+      "history": [
+        284,
+        284,
+        284,
+        305,
+        284,
+        305,
+        284
+      ],
+      "url": "https://frisbeebutikken.no/products/esp-flx-drone"
+    },
+    {
+      "discId": "innova-rhynox",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "XT",
+      "oldPrice": 214,
+      "newPrice": 204,
+      "pct": -5,
+      "changedAt": "2026-09-01T11:12:19.175Z",
+      "period": "week",
+      "history": [
+        214,
+        204,
+        204,
+        204,
+        204,
+        204,
+        204
+      ],
+      "url": "https://aceshop.no/product/xt-rhyno-x/"
+    },
+    {
       "discId": "mvp-uplink",
       "store": "rocketdiscs",
       "storeName": "Rocketdiscs",
@@ -14,566 +56,41 @@
       "oldPrice": 218,
       "newPrice": 207,
       "pct": -5,
-      "changedAt": "2026-09-01T08:04:08.917Z",
-      "period": "day",
+      "changedAt": "2026-09-01T11:25:54.100Z",
+      "period": "week",
       "history": [
         218,
         218,
         218,
         218,
         218,
-        218,
+        207,
         207
       ],
       "url": "https://rocketdiscs.com/mvp-uplink"
     },
     {
-      "discId": "mvp-nomad",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron",
+      "discId": "westside-voodoo",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": null,
       "oldPrice": 204,
-      "newPrice": 177,
-      "pct": -13,
-      "changedAt": "2026-09-01T08:03:27.725Z",
+      "newPrice": 194,
+      "pct": -5,
+      "changedAt": "2026-09-01T11:12:19.175Z",
       "period": "week",
       "history": [
         204,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
+        194,
+        194,
+        194,
+        194,
+        194,
+        194
       ],
-      "url": "https://www.discexpress.se/products/nomad-electron-medium"
-    },
-    {
-      "discId": "axiom-proxy",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron Firm",
-      "oldPrice": 200,
-      "newPrice": 177,
-      "pct": -11,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        200,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
-      ],
-      "url": "https://www.discexpress.se/products/proxy-electron-firmcosmic"
-    },
-    {
-      "discId": "mvp-matrix",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron",
-      "oldPrice": 200,
-      "newPrice": 177,
-      "pct": -11,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        200,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
-      ],
-      "url": "https://www.discexpress.se/products/matrix-electron"
-    },
-    {
-      "discId": "mvp-ion",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron",
-      "oldPrice": 200,
-      "newPrice": 177,
-      "pct": -11,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        200,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
-      ],
-      "url": "https://www.discexpress.se/products/ion-electron-medium"
-    },
-    {
-      "discId": "axiom-envy",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron",
-      "oldPrice": 196,
-      "newPrice": 177,
-      "pct": -10,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        196,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
-      ],
-      "url": "https://www.discexpress.se/products/envy-electron-cosmic-medium"
-    },
-    {
-      "discId": "mvp-entropy",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron Soft",
-      "oldPrice": 196,
-      "newPrice": 177,
-      "pct": -10,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        196,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
-      ],
-      "url": "https://www.discexpress.se/products/entropy-electron-soft"
-    },
-    {
-      "discId": "mvp-deflector",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/deflector-neutron"
-    },
-    {
-      "discId": "mvp-tantrum",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/tantrum-neutron"
-    },
-    {
-      "discId": "mvp-relay",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/relay-neutron-cosmic"
-    },
-    {
-      "discId": "mvp-trance",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Prism Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/trance-prism-neutron"
-    },
-    {
-      "discId": "axiom-insanity",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/insanity-neutron"
-    },
-    {
-      "discId": "axiom-delirium",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/delirium-neutron"
-    },
-    {
-      "discId": "mvp-octane",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/octane-neutron"
-    },
-    {
-      "discId": "mvp-relativity",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/dimension-relativity"
-    },
-    {
-      "discId": "mvp-zenith",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/zenith-neutron"
-    },
-    {
-      "discId": "axiom-panic",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/panic-neutron"
-    },
-    {
-      "discId": "axiom-mayhem",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/mayhem-neutron-classic"
-    },
-    {
-      "discId": "mvp-nitro",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/nitro-neutron"
-    },
-    {
-      "discId": "mvp-energy",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/energy-neutron"
-    },
-    {
-      "discId": "mvp-phase",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/phase-neutron"
-    },
-    {
-      "discId": "mvp-ohm",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 237,
-      "newPrice": 216,
-      "pct": -9,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        237,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/ohm-neutron"
-    },
-    {
-      "discId": "mvp-anode",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Electron Soft",
-      "oldPrice": 190,
-      "newPrice": 177,
-      "pct": -7,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        190,
-        177,
-        177,
-        177,
-        177,
-        177,
-        177
-      ],
-      "url": "https://www.discexpress.se/products/anode-electron-soft"
-    },
-    {
-      "discId": "mvp-wave",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 229,
-      "newPrice": 216,
-      "pct": -6,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        229,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/wave-neutron-cosmic"
-    },
-    {
-      "discId": "mvp-virus",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 229,
-      "newPrice": 216,
-      "pct": -6,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        229,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/virus-neutron"
-    },
-    {
-      "discId": "axiom-fireball",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Neutron",
-      "oldPrice": 229,
-      "newPrice": 216,
-      "pct": -6,
-      "changedAt": "2026-09-01T08:03:27.725Z",
-      "period": "week",
-      "history": [
-        229,
-        217,
-        216,
-        216,
-        216,
-        216,
-        216
-      ],
-      "url": "https://www.discexpress.se/products/fireball-neutron"
-    },
-    {
-      "discId": "mvp-uplink",
-      "store": "rocketdiscs",
-      "storeName": "Rocketdiscs",
-      "plastic": "R2 Neutron",
-      "oldPrice": 218,
-      "newPrice": 207,
-      "pct": -5,
-      "changedAt": "2026-09-01T08:04:08.917Z",
-      "period": "week",
-      "history": [
-        218,
-        218,
-        218,
-        218,
-        218,
-        218,
-        207
-      ],
-      "url": "https://rocketdiscs.com/mvp-uplink"
+      "url": "https://aceshop.no/product/voodoo-super-soft/"
     }
   ],
   "totalDrops": 1,
-  "totalDropsWeek": 26
+  "totalDropsWeek": 3
 }

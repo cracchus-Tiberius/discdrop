@@ -1,6 +1,643 @@
 {
-  "lastUpdated": "2026-09-01T08:20:16.612Z",
+  "lastUpdated": "2026-09-01T11:44:25.785Z",
   "products": [
+    {
+      "store": "discsport",
+      "rawName": "Jawbreaker Z FLX Glide - Worlds",
+      "price": 272,
+      "url": "https://discsport.se/discar/mold/glide",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Opto-Ice Halo",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/halo",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Dog Elevation Frisbee Fastback DTW",
+      "price": 67,
+      "url": "https://discsport.se/discar/mold/fastback",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Dog Pursuit Fastback DTW",
+      "price": 67,
+      "url": "https://discsport.se/discar/mold/fastback",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Neutron Boost",
+      "price": 175,
+      "url": "https://discsport.se/discar/mold/boost",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Signature Blowfly 1",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/blowfly-i",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Signature Blunt Gumbputt",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/gumbputt",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Confetti Tsunami - Cole Redalen",
+      "price": 262,
+      "url": "https://discsport.se/discar/mold/tsunami",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Atmos Breaker",
+      "price": 223,
+      "url": "https://discsport.se/discar/mold/breaker",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DL Breaker",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/breaker",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "NEW Tournament Rill Sampo",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/sampo",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Tournament Orbit Sampo - Kalevala Celebration",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/sampo",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "VIP Moonshine Catapult",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/catapult",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Marshal Classic Blend",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/marshal",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "500 X2",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/x2",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "VIP-X Orbit Pine - Lucas Oberholtzer Hess",
+      "price": 243,
+      "url": "https://discsport.se/discar/mold/pine",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Tournament Pine",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/pine",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "VIP Pine",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/pine",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Active Premium Sea Serpent - LED",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/mentor",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Quantum Falcon",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/falcon",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Sirius Falcon Philo Brathwaite",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/falcon",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "ProFlex F Model S",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/f-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Neo Enigma",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/enigma",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "30% Neo Enigma (Set of 5) Discmania",
+      "price": 970,
+      "url": "https://discsport.se/discar/mold/enigma",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "ProFlex D Model S",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/d-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DuraFlex D Model S",
+      "price": 155,
+      "url": "https://discsport.se/discar/mold/d-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Proflex P Model S",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/p-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "BaseGrip P Model S - Cale Leiviska Bottom Stamp",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/p-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DuraFlex P Model S Cale Leiviska Bottom Stamp",
+      "price": 165,
+      "url": "https://discsport.se/discar/mold/p-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DuraFlex P Model S",
+      "price": 155,
+      "url": "https://discsport.se/discar/mold/p-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DuraFlex GLOW P Model S",
+      "price": 175,
+      "url": "https://discsport.se/discar/mold/p-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "BaseGrip GLOW P Model S",
+      "price": 145,
+      "url": "https://discsport.se/discar/mold/p-model-s",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "ProFlex D Model OS",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/d-model-os",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DuraFlex D Model OS",
+      "price": 155,
+      "url": "https://discsport.se/discar/mold/d-model-os",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "ProFlex M Model S",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/m-model-s",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "BaseGrip M Model S",
+      "price": 106,
+      "url": "https://discsport.se/discar/mold/m-model-s",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Big Kahuna INNmold Beach Frisbee Innova",
+      "price": 155,
+      "url": "https://discsport.se/discar/mold/big-kahuna",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Pulsar Ultimate Disc Innova",
+      "price": 106,
+      "url": "https://discsport.se/discar/mold/pulsar",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Ultimate Catch Latitude 64",
+      "price": 175,
+      "url": "https://discsport.se/discar/mold/ultimate-catch",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "J Star Junior Ultimate Discraft",
+      "price": 106,
+      "url": "https://discsport.se/discar/mold/j-star",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Sky-Styler Discraft",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/sky-styler",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Alloy Function - Gannon Buhr",
+      "price": 282,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Geo Function",
+      "price": 106,
+      "url": "https://discsport.se/discar/mold/function",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "K1 Älva",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/aelva",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "K1 Grind Älva",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/aelva",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "K1 Grind Älva - Moomin",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/aelva",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "K1 Älva - Moomin Group",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/aelva",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "K1 Hard Älva - Clay Edwards 2025",
+      "price": 243,
+      "url": "https://discsport.se/discar/mold/aelva",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "K1 Glow Älva",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/aelva",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "SETI Hard M1.0 - Prototype",
+      "price": 171,
+      "url": "https://discsport.se/discar/mold/m10",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "SETI Soft M1.0 - Prototype",
+      "price": 171,
+      "url": "https://discsport.se/discar/mold/m10",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "SETI Hard M1.0 - First Run",
+      "price": 171,
+      "url": "https://discsport.se/discar/mold/m10",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "SETI Soft M1.0 - First Run",
+      "price": 171,
+      "url": "https://discsport.se/discar/mold/m10",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prominent Line Impetus",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/impetus",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Pacific Sea Turtle",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/sea-turtle",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Atlantic Swirl Sea Turtle",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/sea-turtle",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Transcendent Line Rush",
+      "price": 214,
+      "url": "https://discsport.se/discar/mold/rush",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Razor Claw - Kyle Klein (P-line Swirl P4)",
+      "price": 214,
+      "url": "https://discsport.se/discar/mold/p4",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Granite Sail - Catrina Allen 2025",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/sail",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Atmos Rift",
+      "price": 223,
+      "url": "https://discsport.se/discar/mold/rift",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Atmos Vortex",
+      "price": 223,
+      "url": "https://discsport.se/discar/mold/vortex",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DL Surf",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/surf",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DL Stone Surf",
+      "price": 155,
+      "url": "https://discsport.se/discar/mold/surf",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "DL Blast",
+      "price": 136,
+      "url": "https://discsport.se/discar/mold/blast",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Hero Halo SuperStar 235 Hero Disc",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/super-star",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Hero SuperStar 235 Hero Disc",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/super-star",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Hero SuperHero Proto Glow 235 Hero Disc",
+      "price": 262,
+      "url": "https://discsport.se/discar/mold/super-hero",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Hero Xtra 235 Distance Hero Disc",
+      "price": 116,
+      "url": "https://discsport.se/discar/mold/super-hero",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Hero SuperHero 235 Hero Disc",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/super-hero",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "BITEaLOT 230 DISCaLOT",
+      "price": 194,
+      "url": "https://discsport.se/discar/mold/bite-a-lot",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prototype Fossil - Ricky Wysocki",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/fossil",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Z Colorshift Fossil - First Run",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/fossil",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "ESP Hallux - First Run",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Prototype Hallux - Ricky Wysocki",
+      "price": 233,
+      "url": "https://discsport.se/discar/mold/hallux",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "First Flight Typhoon - Catrina Allen",
+      "price": 243,
+      "url": "https://discsport.se/discar/mold/typhoon",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Trophy Champ",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/champ",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Trophy Soft Champ",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/champ",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Signature Osprey",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/osprey",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Victory Osprey",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/osprey",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Major Osprey",
+      "price": 223,
+      "url": "https://discsport.se/discar/mold/osprey",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Victory Streak",
+      "price": 204,
+      "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Major Streak",
+      "price": 223,
+      "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Signature Streak",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/streak",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Trophy Cliff - Prototype",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/cliff",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Q-Line Horizon Cloud Breaker - Gannon Buhr 2026",
+      "price": 272,
+      "url": "https://discsport.se/discar/mold/premier-cloudbreaker",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "ESP Captains Caliber - Test Flight (Seppo Paju)",
+      "price": 292,
+      "url": "https://discsport.se/discar/mold/captains-caliber",
+      "inStock": false
+    },
+    {
+      "store": "discsport",
+      "rawName": "Supreme Intent - First Run",
+      "price": 223,
+      "url": "https://discsport.se/discar/mold/intent",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "Signature Coast - Prototype",
+      "price": 253,
+      "url": "https://discsport.se/discar/mold/coast",
+      "inStock": true
+    },
+    {
+      "store": "discsport",
+      "rawName": "3 Sep Lucid Cavalry - First Run",
+      "price": 184,
+      "url": "https://discsport.se/discar/mold/cavalry",
+      "inStock": true
+    },
     {
       "store": "wearediscgolf",
       "rawName": "Champion Xcaliber",
@@ -125,13 +762,6 @@
       "rawName": "ET Omega4",
       "price": 219,
       "url": "https://wearediscgolf.no/produkt/et-omega4/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "I-Dye Poly",
-      "price": 89,
-      "url": "https://wearediscgolf.no/produkt/i-dye-poly/",
       "inStock": true
     },
     {
@@ -1130,6 +1760,13 @@
     },
     {
       "store": "wearediscgolf",
+      "rawName": "Latitude 64 Luxury E5 Backpack",
+      "price": 1999,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-luxury-e5-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
       "rawName": "We Are Forundringspakke 2025",
       "price": 549,
       "url": "https://wearediscgolf.no/produkt/we-are-forundringspakke-2025/",
@@ -1434,6 +2071,13 @@
       "rawName": "Star Arachind We Are Stamp",
       "price": 209,
       "url": "https://wearediscgolf.no/produkt/star-arachind-we-are-stamp/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discmania Tour Bag",
+      "price": 1999,
+      "url": "https://wearediscgolf.no/produkt/discmania-tour-bag/",
       "inStock": true
     },
     {
@@ -1868,6 +2512,34 @@
       "rawName": "Lucid Cavalry First Run",
       "price": 189,
       "url": "https://wearediscgolf.no/produkt/lucid-cavalry-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Logo Patch",
+      "price": 79,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-logo-patch/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Latitude 64 Microfiber Waffle Towel",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/latitude-64-microfiber-waffle-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Westside Discs Microfiber Waffle Towel",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/westside-discs-microfiber-waffle-towel/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "Discmania Microfiber Waffle Towel",
+      "price": 149,
+      "url": "https://wearediscgolf.no/produkt/discmania-microfiber-waffle-towel/",
       "inStock": true
     },
     {
@@ -5190,9 +5862,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Gamma-Solid Titanium",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/gamma-solid-titanium",
+      "rawName": "DX Sync",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/dx-sync",
       "inStock": true
     },
     {
@@ -5204,9 +5876,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
       "inStock": true
     },
     {
@@ -5225,9 +5897,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "rawName": "Star Sync",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/star-sync",
       "inStock": true
     },
     {
@@ -5239,9 +5911,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Star Sync",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/star-sync",
+      "rawName": "Premium Titan",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
       "inStock": true
     },
     {
@@ -17657,13 +18329,6 @@
     },
     {
       "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 259,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
       "rawName": "Vex Expanse",
       "price": 281,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
@@ -18871,643 +19536,6 @@
       "rawName": "Basic Respecti",
       "price": 118,
       "url": "https://rocketdiscs.com/prodiscus-respecti",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Jawbreaker Z FLX Glide - Worlds",
-      "price": 272,
-      "url": "https://discsport.se/discar/mold/glide",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Opto-Ice Halo",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/halo",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Dog Elevation Frisbee Fastback DTW",
-      "price": 67,
-      "url": "https://discsport.se/discar/mold/fastback",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Dog Pursuit Fastback DTW",
-      "price": 67,
-      "url": "https://discsport.se/discar/mold/fastback",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Neutron Boost",
-      "price": 175,
-      "url": "https://discsport.se/discar/mold/boost",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Signature Blowfly 1",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/blowfly-i",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Signature Blunt Gumbputt",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/gumbputt",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Confetti Tsunami - Cole Redalen",
-      "price": 262,
-      "url": "https://discsport.se/discar/mold/tsunami",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Atmos Breaker",
-      "price": 223,
-      "url": "https://discsport.se/discar/mold/breaker",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DL Breaker",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/breaker",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "NEW Tournament Rill Sampo",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/sampo",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Tournament Orbit Sampo - Kalevala Celebration",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/sampo",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "VIP Moonshine Catapult",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/catapult",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Marshal Classic Blend",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/marshal",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "500 X2",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/x2",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "VIP-X Orbit Pine - Lucas Oberholtzer Hess",
-      "price": 243,
-      "url": "https://discsport.se/discar/mold/pine",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Tournament Pine",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/pine",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "VIP Pine",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/pine",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Active Premium Sea Serpent - LED",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/mentor",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Quantum Falcon",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/falcon",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Sirius Falcon Philo Brathwaite",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/falcon",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "ProFlex F Model S",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/f-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Neo Enigma",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/enigma",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "30% Neo Enigma (Set of 5) Discmania",
-      "price": 970,
-      "url": "https://discsport.se/discar/mold/enigma",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "ProFlex D Model S",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/d-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DuraFlex D Model S",
-      "price": 155,
-      "url": "https://discsport.se/discar/mold/d-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Proflex P Model S",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/p-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "BaseGrip P Model S - Cale Leiviska Bottom Stamp",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/p-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DuraFlex P Model S Cale Leiviska Bottom Stamp",
-      "price": 165,
-      "url": "https://discsport.se/discar/mold/p-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DuraFlex P Model S",
-      "price": 155,
-      "url": "https://discsport.se/discar/mold/p-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DuraFlex GLOW P Model S",
-      "price": 175,
-      "url": "https://discsport.se/discar/mold/p-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "BaseGrip GLOW P Model S",
-      "price": 145,
-      "url": "https://discsport.se/discar/mold/p-model-s",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "ProFlex D Model OS",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/d-model-os",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DuraFlex D Model OS",
-      "price": 155,
-      "url": "https://discsport.se/discar/mold/d-model-os",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "ProFlex M Model S",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/m-model-s",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "BaseGrip M Model S",
-      "price": 106,
-      "url": "https://discsport.se/discar/mold/m-model-s",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Big Kahuna INNmold Beach Frisbee Innova",
-      "price": 155,
-      "url": "https://discsport.se/discar/mold/big-kahuna",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Pulsar Ultimate Disc Innova",
-      "price": 106,
-      "url": "https://discsport.se/discar/mold/pulsar",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Ultimate Catch Latitude 64",
-      "price": 175,
-      "url": "https://discsport.se/discar/mold/ultimate-catch",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "J Star Junior Ultimate Discraft",
-      "price": 106,
-      "url": "https://discsport.se/discar/mold/j-star",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Sky-Styler Discraft",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/sky-styler",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Lux Vapor Function - Special Edition",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/function",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Alloy Function - Gannon Buhr",
-      "price": 282,
-      "url": "https://discsport.se/discar/mold/function",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Geo Function",
-      "price": 106,
-      "url": "https://discsport.se/discar/mold/function",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "K1 Älva",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/aelva",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "K1 Grind Älva",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/aelva",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "K1 Grind Älva - Moomin",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/aelva",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "K1 Älva - Moomin Group",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/aelva",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "K1 Hard Älva - Clay Edwards 2025",
-      "price": 243,
-      "url": "https://discsport.se/discar/mold/aelva",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "K1 Glow Älva",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/aelva",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "SETI Hard M1.0 - Prototype",
-      "price": 171,
-      "url": "https://discsport.se/discar/mold/m10",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "SETI Soft M1.0 - Prototype",
-      "price": 171,
-      "url": "https://discsport.se/discar/mold/m10",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "SETI Hard M1.0 - First Run",
-      "price": 171,
-      "url": "https://discsport.se/discar/mold/m10",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "SETI Soft M1.0 - First Run",
-      "price": 171,
-      "url": "https://discsport.se/discar/mold/m10",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Prominent Line Impetus",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/impetus",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Pacific Sea Turtle",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/sea-turtle",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Atlantic Swirl Sea Turtle",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/sea-turtle",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Transcendent Line Rush",
-      "price": 214,
-      "url": "https://discsport.se/discar/mold/rush",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Razor Claw - Kyle Klein (P-line Swirl P4)",
-      "price": 214,
-      "url": "https://discsport.se/discar/mold/p4",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Granite Sail - Catrina Allen 2025",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/sail",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Atmos Rift",
-      "price": 223,
-      "url": "https://discsport.se/discar/mold/rift",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Atmos Vortex",
-      "price": 223,
-      "url": "https://discsport.se/discar/mold/vortex",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DL Surf",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/surf",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DL Stone Surf",
-      "price": 155,
-      "url": "https://discsport.se/discar/mold/surf",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "DL Blast",
-      "price": 136,
-      "url": "https://discsport.se/discar/mold/blast",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Hero Halo SuperStar 235 Hero Disc",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/super-star",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Hero SuperStar 235 Hero Disc",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/super-star",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Hero SuperHero Proto Glow 235 Hero Disc",
-      "price": 262,
-      "url": "https://discsport.se/discar/mold/super-hero",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Hero Xtra 235 Distance Hero Disc",
-      "price": 116,
-      "url": "https://discsport.se/discar/mold/super-hero",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Hero SuperHero 235 Hero Disc",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/super-hero",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "BITEaLOT 230 DISCaLOT",
-      "price": 194,
-      "url": "https://discsport.se/discar/mold/bite-a-lot",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Prototype Fossil - Ricky Wysocki",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/fossil",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Z Colorshift Fossil - First Run",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/fossil",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "ESP Hallux - First Run",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Titanium Big Z Special Blend Hallux - Ricky Wysocki 2026",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Prototype Hallux - Ricky Wysocki",
-      "price": 233,
-      "url": "https://discsport.se/discar/mold/hallux",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "First Flight Typhoon - Catrina Allen",
-      "price": 243,
-      "url": "https://discsport.se/discar/mold/typhoon",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Trophy Champ",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/champ",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Trophy Soft Champ",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/champ",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Signature Osprey",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/osprey",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Victory Osprey",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/osprey",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Major Osprey",
-      "price": 223,
-      "url": "https://discsport.se/discar/mold/osprey",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Victory Streak",
-      "price": 204,
-      "url": "https://discsport.se/discar/mold/streak",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Major Streak",
-      "price": 223,
-      "url": "https://discsport.se/discar/mold/streak",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Signature Streak",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/streak",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Trophy Cliff - Prototype",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/cliff",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Q-Line Horizon Cloud Breaker - Gannon Buhr 2026",
-      "price": 272,
-      "url": "https://discsport.se/discar/mold/premier-cloudbreaker",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "ESP Captains Caliber - Test Flight (Seppo Paju)",
-      "price": 292,
-      "url": "https://discsport.se/discar/mold/captains-caliber",
-      "inStock": false
-    },
-    {
-      "store": "discsport",
-      "rawName": "Supreme Intent - First Run",
-      "price": 223,
-      "url": "https://discsport.se/discar/mold/intent",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "Signature Coast - Prototype",
-      "price": 253,
-      "url": "https://discsport.se/discar/mold/coast",
-      "inStock": true
-    },
-    {
-      "store": "discsport",
-      "rawName": "3 Sep Lucid Cavalry - First Run",
-      "price": 184,
-      "url": "https://discsport.se/discar/mold/cavalry",
       "inStock": true
     },
     {
