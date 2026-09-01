@@ -1,12 +1,25 @@
 "use client";
 
-import { useRef, useState, useEffect, useMemo } from "react";
+import { useRef, useState, useEffect, useMemo, Fragment } from "react";
 import Link from "next/link";
 import { DiscImage } from "./DiscImage";
 import { discs } from "@/data/discs.js";
 import { getScrapedPrice, getDiscImage, getDiscPlastics } from "@/lib/disc-utils";
+import { searchDiscs, type SearchableDisc, type SearchResult } from "@/lib/search";
 
 type Disc = (typeof discs)[number];
+
+/** Wraps the matched substring (by index/length, from lib/search.ts) in a highlight span. No-op if there's nothing to highlight. */
+function Highlighted({ text, start, length }: { text: string; start: number; length: number }) {
+  if (length <= 0 || start < 0 || start + length > text.length) return <>{text}</>;
+  return (
+    <Fragment>
+      {text.slice(0, start)}
+      <mark className="rounded-[2px] bg-[#B8E04A]/60 text-inherit">{text.slice(start, start + length)}</mark>
+      {text.slice(start + length)}
+    </Fragment>
+  );
+}
 
 const TYPE_LABEL: Record<string, string> = {
   distance: "Distance Driver",
@@ -57,46 +70,44 @@ export function SearchInput({
     []
   );
 
-  // Results: combines typed query + chip filters
+  // Results: combines typed query + chip filters. Ranking (field priority,
+  // diacritic-insensitivity, the 3-char floor for plastic/player matching)
+  // lives in lib/search.ts — see that file for why, and its test file for
+  // the exact ranking guarantees.
   const results = useMemo(() => {
     const hasQuery = value.trim().length >= 2;
     const hasChip = quickType !== null || quickBrand !== null;
     if (!hasQuery && !hasChip) return [];
 
-    const q = value.toLowerCase();
+    const chipFiltered = (discs as Disc[]).filter((d) => {
+      if (quickType && d.type !== quickType) return false;
+      if (quickBrand && d.brand !== quickBrand) return false;
+      return true;
+    });
 
-    return (discs as Disc[])
-      .filter((d) => {
-        // Type filter (chip)
-        if (quickType && d.type !== quickType) return false;
-        // Brand filter (chip)
-        if (quickBrand && d.brand !== quickBrand) return false;
-        // Text query
-        if (hasQuery) {
-          const playerMatch =
-            "player" in d && (d as { player?: string }).player?.toLowerCase().includes(q);
-          const plasticMatch = getDiscPlastics(d.id).some((p) => p.toLowerCase().includes(q));
-          return (
-            d.name.toLowerCase().includes(q) ||
-            d.brand.toLowerCase().includes(q) ||
-            d.type.toLowerCase().includes(q) ||
-            !!playerMatch ||
-            plasticMatch
-          );
-        }
-        return true;
-      })
+    if (!hasQuery) {
+      return chipFiltered.slice(0, 8).map((d) => ({ disc: d, matchedPlastic: null as string | null, matchStart: -1, matchLength: 0, matchedField: null as SearchResult<SearchableDisc>["matchedField"] | null }));
+    }
+
+    const searchable: SearchableDisc[] = chipFiltered.map((d) => ({
+      id: d.id,
+      name: d.name,
+      brand: d.brand,
+      plastics: getDiscPlastics(d.id),
+      player: "player" in d ? ((d as { player?: string }).player ?? null) : null,
+    }));
+
+    return searchDiscs(value, searchable)
       .slice(0, 8)
-      .map((d) => {
-        const nameOrBrandMatch =
-          hasQuery && (d.name.toLowerCase().includes(q) || d.brand.toLowerCase().includes(q));
-        // Only surface the plastic as a hint when it's *why* the disc matched —
-        // otherwise every result would redundantly show its plastic.
-        const matchedPlastic =
-          hasQuery && !nameOrBrandMatch
-            ? getDiscPlastics(d.id).find((p) => p.toLowerCase().includes(q)) ?? null
-            : null;
-        return { disc: d, matchedPlastic };
+      .map((r) => {
+        const disc = chipFiltered.find((d) => d.id === r.disc.id)!;
+        return {
+          disc,
+          matchedPlastic: r.matchedPlastic,
+          matchStart: r.matchStart,
+          matchLength: r.matchLength,
+          matchedField: r.matchedField,
+        };
       });
   }, [value, quickType, quickBrand]);
 
@@ -268,7 +279,7 @@ export function SearchInput({
                   {quickBrand && ` · ${quickBrand}`}
                 </div>
               )}
-              {results.map(({ disc: d, matchedPlastic }) => {
+              {results.map(({ disc: d, matchedPlastic, matchStart, matchLength, matchedField }) => {
                 const price = getScrapedPrice(d.id).price;
                 return (
                   <Link
@@ -291,10 +302,30 @@ export function SearchInput({
                         />
                       </div>
                       <div className="min-w-0">
-                        <span className="block truncate font-semibold text-[#101C14]">{d.name}</span>
+                        <span className="block truncate font-semibold text-[#101C14]">
+                          {matchedField === "name" ? (
+                            <Highlighted text={d.name} start={matchStart} length={matchLength} />
+                          ) : (
+                            d.name
+                          )}
+                        </span>
                         <span className="block truncate text-xs text-[#101C1499]">
-                          {d.brand}
-                          {matchedPlastic && ` · ${matchedPlastic} plast`}
+                          {matchedField === "brand" ? (
+                            <Highlighted text={d.brand} start={matchStart} length={matchLength} />
+                          ) : (
+                            d.brand
+                          )}
+                          {matchedPlastic && (
+                            <>
+                              {" · "}
+                              {matchedField === "plastic" ? (
+                                <Highlighted text={matchedPlastic} start={matchStart} length={matchLength} />
+                              ) : (
+                                matchedPlastic
+                              )}
+                              {" plast"}
+                            </>
+                          )}
                         </span>
                       </div>
                     </div>

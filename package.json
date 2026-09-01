@@ -31,7 +31,7 @@
     "build:price-changes": "node scripts/build-price-changes.js",
     "build:new-in-stores": "node scripts/build-new-in-stores.js",
     "audit:price-caps": "node scripts/audit-price-caps.js",
-    "test": "node --test 'scripts/**/*.test.js'"
+    "test": "node --test 'scripts/**/*.test.js' 'lib/**/*.test.ts'"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.80.0",

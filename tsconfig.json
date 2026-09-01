@@ -37,7 +37,8 @@
     "**/*.mts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "lib/**/*.test.ts"
   ],
   "extends": "expo/tsconfig.base"
 }
