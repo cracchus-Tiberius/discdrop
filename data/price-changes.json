@@ -1,53 +1,11 @@
 {
-  "generated": "2026-09-01T11:44:49.283Z",
+  "generated": "2026-09-01T18:17:00.872Z",
   "summary": {
-    "priceChanges24h": 1,
+    "priceChanges24h": 2,
     "newDiscs24h": 0,
     "storesChecked": 18
   },
-  "drops": [
-    {
-      "discId": "discraft-drone",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "ESP FLX",
-      "oldPrice": 305,
-      "newPrice": 284,
-      "pct": -7,
-      "changedAt": "2026-09-01T11:23:21.349Z",
-      "period": "day",
-      "history": [
-        284,
-        284,
-        284,
-        305,
-        284,
-        305,
-        284
-      ],
-      "url": "https://frisbeebutikken.no/products/esp-flx-drone"
-    },
-    {
-      "discId": "innova-rhynox",
-      "store": "aceshop",
-      "storeName": "Aceshop",
-      "plastic": "XT",
-      "oldPrice": 214,
-      "newPrice": 204,
-      "pct": -5,
-      "changedAt": "2026-09-01T11:12:19.175Z",
-      "period": "week",
-      "history": [
-        214,
-        204,
-        204,
-        204,
-        204,
-        204,
-        204
-      ],
-      "url": "https://aceshop.no/product/xt-rhyno-x/"
-    },
+  "timeline": [
     {
       "discId": "mvp-uplink",
       "store": "rocketdiscs",
@@ -56,41 +14,586 @@
       "oldPrice": 218,
       "newPrice": 207,
       "pct": -5,
-      "changedAt": "2026-09-01T11:25:54.100Z",
-      "period": "week",
+      "date": "2026-09-01",
+      "bucket": "today",
+      "url": "https://rocketdiscs.com/mvp-uplink",
       "history": [
         218,
         218,
         218,
         218,
         218,
-        207,
+        218,
         207
-      ],
-      "url": "https://rocketdiscs.com/mvp-uplink"
+      ]
     },
     {
-      "discId": "westside-voodoo",
-      "store": "aceshop",
-      "storeName": "Aceshop",
+      "discId": "discraft-crush",
+      "store": "nydisk",
+      "storeName": "NyDisk",
       "plastic": null,
+      "oldPrice": 316,
+      "newPrice": 295,
+      "pct": -7,
+      "date": "2026-08-28",
+      "bucket": "last-week",
+      "url": "https://nydisk.no/products/discmania-c-line-cd1-the-crush-boys-3",
+      "history": [
+        316,
+        316,
+        295,
+        316,
+        316,
+        316,
+        315
+      ]
+    },
+    {
+      "discId": "mvp-nomad",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
       "oldPrice": 204,
-      "newPrice": 194,
-      "pct": -5,
-      "changedAt": "2026-09-01T11:12:19.175Z",
-      "period": "week",
+      "newPrice": 177,
+      "pct": -13,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/nomad-electron-medium",
       "history": [
         204,
-        194,
-        194,
-        194,
-        194,
-        194,
-        194
-      ],
-      "url": "https://aceshop.no/product/voodoo-super-soft/"
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "axiom-proxy",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron Firm",
+      "oldPrice": 200,
+      "newPrice": 177,
+      "pct": -11,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/proxy-electron-firmcosmic",
+      "history": [
+        200,
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "mvp-matrix",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
+      "oldPrice": 200,
+      "newPrice": 177,
+      "pct": -11,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/matrix-electron",
+      "history": [
+        200,
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "mvp-ion",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
+      "oldPrice": 200,
+      "newPrice": 177,
+      "pct": -11,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/ion-electron-medium",
+      "history": [
+        200,
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "axiom-envy",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
+      "oldPrice": 196,
+      "newPrice": 177,
+      "pct": -10,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/envy-electron-cosmic-medium",
+      "history": [
+        196,
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "mvp-entropy",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron Soft",
+      "oldPrice": 196,
+      "newPrice": 177,
+      "pct": -10,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/entropy-electron-soft",
+      "history": [
+        196,
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "mvp-deflector",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/deflector-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-tantrum",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/tantrum-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-relay",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/relay-neutron-cosmic",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-trance",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Prism Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/trance-prism-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "axiom-insanity",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/insanity-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "axiom-delirium",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/delirium-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-octane",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/octane-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-relativity",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/dimension-relativity",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-zenith",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/zenith-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "axiom-panic",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/panic-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "axiom-mayhem",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/mayhem-neutron-classic",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-nitro",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/nitro-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-energy",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/energy-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-phase",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/phase-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-excite",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/excite-neutron",
+      "history": [
+        237,
+        217,
+        254,
+        254,
+        254,
+        254,
+        254
+      ]
+    },
+    {
+      "discId": "mvp-ohm",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 237,
+      "newPrice": 217,
+      "pct": -8,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/ohm-neutron",
+      "history": [
+        237,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-anode",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron Soft",
+      "oldPrice": 190,
+      "newPrice": 177,
+      "pct": -7,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/anode-electron-soft",
+      "history": [
+        190,
+        177,
+        177,
+        177,
+        177,
+        177,
+        177
+      ]
+    },
+    {
+      "discId": "mvp-wave",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 229,
+      "newPrice": 217,
+      "pct": -5,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/wave-neutron-cosmic",
+      "history": [
+        229,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "mvp-virus",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 229,
+      "newPrice": 217,
+      "pct": -5,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/virus-neutron",
+      "history": [
+        229,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
+    },
+    {
+      "discId": "axiom-fireball",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 229,
+      "newPrice": 217,
+      "pct": -5,
+      "date": "2026-08-27",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/fireball-neutron",
+      "history": [
+        229,
+        217,
+        216,
+        216,
+        216,
+        216,
+        216
+      ]
     }
   ],
-  "totalDrops": 1,
-  "totalDropsWeek": 3
+  "totalDrops": 28
 }

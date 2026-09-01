@@ -1,18 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DiscImage } from "@/components/DiscImage";
 import { PriceSparkline } from "@/components/PriceSparkline";
 import { PriceAlertInline } from "@/components/PriceAlertInline";
 import {
-  getPriceDropRows,
+  getPriceDropGroups,
+  getWeekStats,
+  dropRowWeekdayLabel,
   hasPriceDropsData,
-  type PriceChangePeriod,
   type PriceDropRow,
 } from "@/lib/price-drops";
+import { storesLabel } from "@/lib/pluralize";
 
 function BellButton({ open, onClick }: { open: boolean; onClick: () => void }) {
   return (
@@ -33,6 +35,7 @@ function BellButton({ open, onClick }: { open: boolean; onClick: () => void }) {
   );
 }
 
+/** Today's group — the full row: image, sparkline, alert bell. */
 function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
   const [alertOpen, setAlertOpen] = useState(false);
 
@@ -89,12 +92,44 @@ function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
   );
 }
 
-export default function PrisfallPage() {
-  const [period, setPeriod] = useState<PriceChangePeriod>("day");
+/** Older groups — compact row: no sparkline, no alert bell, smaller image. Optional weekday label for "Tidligere denne uka", which can span several distinct days. */
+function CompactPriceDropRow({ row, showWeekday }: { row: PriceDropRow; showWeekday: boolean }) {
+  return (
+    <li className="border-b-2 border-[#101C14] last:border-b-0">
+      <Link href={`/disc/${row.discId}`} className="flex items-center gap-3 py-3 hover:bg-[#F1EFE6]/40">
+        {showWeekday && (
+          <span className="w-16 shrink-0 text-xs font-extrabold uppercase tracking-[0.06em] text-[#101C1477]">
+            {dropRowWeekdayLabel(row.date)}
+          </span>
+        )}
 
-  const dayRows = useMemo(() => getPriceDropRows("day"), []);
-  const weekRows = useMemo(() => getPriceDropRows("week"), []);
-  const rows = period === "day" ? dayRows : weekRows;
+        <div className="h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-[#F1EFE6]">
+          <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
+        </div>
+
+        <div className="min-w-0 flex-1">
+          <h3 className="truncate text-sm font-extrabold text-[#101C14]">{row.name}</h3>
+          <p className="truncate text-xs text-[#101C1499]">
+            {row.brand}{row.plastic ? ` · ${row.plastic}` : ""} · {row.storeName}
+          </p>
+        </div>
+
+        <span className="shrink-0 rounded-lg bg-[#F1EFE6] px-2 py-1 text-xs font-extrabold text-[#101C14]">
+          −{Math.abs(row.pct)} %
+        </span>
+
+        <div className="shrink-0 text-right">
+          <span className="text-xs text-[#101C1477] line-through">{row.oldPrice}</span>{" "}
+          <span className="text-sm font-extrabold text-[#101C14]">{row.newPrice},-</span>
+        </div>
+      </Link>
+    </li>
+  );
+}
+
+export default function PrisfallPage() {
+  const groups = getPriceDropGroups();
+  const weekStats = getWeekStats();
 
   return (
     <div className="min-h-screen bg-[#FFFDF6]">
@@ -106,40 +141,46 @@ export default function PrisfallPage() {
             <p className="mt-3 max-w-[60ch] text-base text-[#101C1499]">
               De største priskuttene vi har fanget opp, rangert fra størst til minst. Totalpris inkludert frakt.
             </p>
-
-            <div className="mt-6 flex gap-[3px] rounded-full bg-[#F1EFE6] p-1 sm:w-fit">
-              {(["day", "week"] as const).map((p) => (
-                <button
-                  key={p}
-                  type="button"
-                  onClick={() => setPeriod(p)}
-                  className={`min-h-[44px] flex-1 rounded-full px-5 text-sm font-extrabold transition-colors sm:flex-none ${
-                    period === p ? "bg-[#101C14] text-[#B8E04A]" : "bg-transparent text-[#101C1499]"
-                  }`}
-                >
-                  {p === "day" ? "I dag" : "Denne uka"}
-                </button>
-              ))}
-            </div>
+            {weekStats && (
+              <p className="mt-4 text-sm font-bold text-[#101C14]">
+                Denne uka: {weekStats.count} prisfall · største −{Math.abs(weekStats.biggestPct)} % · {weekStats.storeCount} {storesLabel(weekStats.storeCount)}
+              </p>
+            )}
           </div>
         </section>
 
         <section className="w-full bg-[#FFFDF6] px-5 py-10 md:px-10 md:py-14">
           <div className="mx-auto max-w-4xl">
-            {!hasPriceDropsData || rows.length === 0 ? (
+            {!hasPriceDropsData || groups.length === 0 ? (
               <p className="py-10 text-center text-sm text-[#101C1499]">
-                Ingen store prisfall i denne perioden akkurat nå — sjekk igjen senere.
+                Ingen store prisfall akkurat nå — sjekk igjen senere.
               </p>
             ) : (
-              <ul>
-                {rows.map((row, i) => (
-                  <PriceDropListRow key={`${row.discId}-${period}`} row={row} rank={i + 1} />
+              <div className="flex flex-col gap-10">
+                {groups.map((group) => (
+                  <div key={group.bucket}>
+                    <h2 className="mb-1 text-lg font-extrabold tracking-tight text-[#101C14]">{group.label}</h2>
+                    {group.bucket === "today" ? (
+                      <ul>
+                        {group.rows.map((row, i) => (
+                          <PriceDropListRow key={row.discId} row={row} rank={i + 1} />
+                        ))}
+                      </ul>
+                    ) : (
+                      <ul>
+                        {group.rows.map((row) => (
+                          <CompactPriceDropRow key={row.discId} row={row} showWeekday={group.bucket === "earlier-this-week"} />
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 ))}
-              </ul>
+              </div>
             )}
 
             <p className="mt-10 max-w-[70ch] text-xs leading-relaxed text-[#101C1477]">
-              Prisene er totalpris levert. Grafene bygger på våre egne målinger, ikke butikkenes «førpris».
+              Prisene er totalpris levert. Grafene bygger på våre egne målinger, ikke butikkenes «førpris». Et prisfall
+              telles kun når det er en ny bunnotering de siste 7 dagene, ikke bare lavere enn dagen før.
             </p>
           </div>
         </section>

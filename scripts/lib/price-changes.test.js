@@ -8,11 +8,14 @@ const {
   MAX_VALID_PRICE_NOK,
   entryLandedNOK,
   bestLandedEntry,
+  trailingMinLanded,
   pctChange,
   computeChanges,
   capPerBrand,
   buildHistory,
+  classifyDropBucket,
 } = require('./price-changes');
+const { getIsoWeekStart } = require('./new-in-stores');
 
 test('entryLandedNOK adds shipping unless the price clears freeShippingOver', () => {
   // No freeShippingOver at all (how every international store is configured
@@ -229,6 +232,65 @@ test('computeChanges sorts drops by pct ascending (biggest cut first)', () => {
   assert.deepEqual(dropsRaw.map((d) => d.discId), ['disc-big', 'disc-small']);
 });
 
+test('trailingMinLanded finds the lowest landed price across snapshots, ignoring ones with no valid price', () => {
+  const storesMeta = { s1: { country: 'NO' } };
+  const snapshots = [
+    { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 284, inStock: true }] } },
+    { stores: storesMeta, prices: {} }, // no price this day
+    { stores: storesMeta, prices: { 'disc-a': [{ store: 's1', price: 305, inStock: true }] } },
+  ];
+  assert.equal(trailingMinLanded('disc-a', snapshots), 284);
+  assert.equal(trailingMinLanded('disc-nonexistent', snapshots), null);
+});
+
+test('computeChanges rejects a rebound-to-baseline as a drop: 284 -> 305 -> 284 is not a new low', () => {
+  // Reproduces the Drone bug found in production: yesterday's price (305)
+  // was itself a temporary bump above a price (284) already seen 2 days
+  // ago. Comparing only yesterday to today says "-7%, a prisfall!" — but
+  // today's 284 is nothing new, just a return to where it already was.
+  const catalog = [{ id: 'drone', brand: 'Discmania' }];
+  const storesMeta = { s1: { country: 'NO' } };
+  const twoDaysAgo = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 284, inStock: true }] } };
+  const yesterday = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 305, inStock: true }] } };
+  const today = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 284, inStock: true }] } };
+
+  const { dropsRaw } = computeChanges({
+    oldSnapshot: yesterday,
+    newSnapshot: today,
+    catalog,
+    period: 'day',
+    trailingSnapshots: [twoDaysAgo, yesterday],
+  });
+  assert.equal(dropsRaw.length, 0);
+});
+
+test('computeChanges still accepts a genuine new low below the whole trailing window', () => {
+  const catalog = [{ id: 'drone', brand: 'Discmania' }];
+  const storesMeta = { s1: { country: 'NO' } };
+  const twoDaysAgo = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 284, inStock: true }] } };
+  const yesterday = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 305, inStock: true }] } };
+  const today = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 270, inStock: true }] } }; // below 284 too
+
+  const { dropsRaw } = computeChanges({
+    oldSnapshot: yesterday,
+    newSnapshot: today,
+    catalog,
+    period: 'day',
+    trailingSnapshots: [twoDaysAgo, yesterday],
+  });
+  assert.equal(dropsRaw.length, 1);
+  assert.equal(dropsRaw[0].newPrice, 270);
+});
+
+test('computeChanges without trailingSnapshots keeps the old (no rebound check) behavior', () => {
+  const catalog = [{ id: 'drone', brand: 'Discmania' }];
+  const storesMeta = { s1: { country: 'NO' } };
+  const yesterday = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 305, inStock: true }] } };
+  const today = { stores: storesMeta, prices: { drone: [{ store: 's1', price: 284, inStock: true }] } };
+  const { dropsRaw } = computeChanges({ oldSnapshot: yesterday, newSnapshot: today, catalog, period: 'day' });
+  assert.equal(dropsRaw.length, 1); // no trailingSnapshots given -> unchanged legacy behavior
+});
+
 test('capPerBrand keeps at most `max` per brand, preserving sort order', () => {
   const drops = [
     { discId: 'a1', brand: 'A', pct: -50 },
@@ -265,4 +327,15 @@ test('buildHistory backfills leading gaps and pads short windows', () => {
 test('buildHistory returns null when a disc never had a price in the window', () => {
   const snapshots = [{ stores: {}, prices: {} }, { stores: {}, prices: {} }];
   assert.equal(buildHistory('disc-a', snapshots, 7), null);
+});
+
+test('classifyDropBucket groups a date relative to today into today/yesterday/earlier-this-week/last-week', () => {
+  const TODAY = '2026-08-19'; // a Wednesday
+  const mondayMs = getIsoWeekStart(new Date(`${TODAY}T00:00:00Z`)).getTime();
+
+  assert.equal(classifyDropBucket('2026-08-19', TODAY, mondayMs), 'today');
+  assert.equal(classifyDropBucket('2026-08-18', TODAY, mondayMs), 'yesterday');
+  assert.equal(classifyDropBucket('2026-08-17', TODAY, mondayMs), 'earlier-this-week'); // Monday of this week
+  assert.equal(classifyDropBucket('2026-08-16', TODAY, mondayMs), 'last-week'); // Sunday, previous ISO week
+  assert.equal(classifyDropBucket('2026-08-10', TODAY, mondayMs), 'last-week');
 });

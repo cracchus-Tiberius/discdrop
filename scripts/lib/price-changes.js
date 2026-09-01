@@ -89,6 +89,20 @@ function bestLandedEntry(entries, storesMeta) {
 }
 
 /**
+ * Lowest landed price for a disc across a set of snapshots, or null if the
+ * disc has no valid in-stock price in any of them. Snapshot order doesn't
+ * matter here — every snapshot is checked.
+ */
+function trailingMinLanded(discId, snapshots) {
+  let min = null;
+  for (const snap of snapshots) {
+    const best = bestLandedEntry((snap && snap.prices || {})[discId], (snap && snap.stores) || {});
+    if (best && (min == null || best.landed < min)) min = best.landed;
+  }
+  return min;
+}
+
+/**
  * Round a percentage change per the design spec's convention:
  * Math.round((newPrice / oldPrice - 1) * 100), always negative for a drop.
  */
@@ -111,8 +125,19 @@ function pctChange(oldPrice, newPrice) {
  *     (biggest cut first), BEFORE the per-brand cap — this is what
  *     `totalDrops` should count, since that number promises "all the drops
  *     we found", not just the ones that fit the grid.
+ *
+ * `trailingSnapshots`, if given, gates dropsRaw further: a disc only
+ * qualifies as a genuine drop if newBest.landed is strictly BELOW the
+ * lowest price seen across every snapshot in trailingSnapshots — not just
+ * below oldSnapshot. Confirmed in production: a disc whose price went
+ * 284 -> 305 -> 284 (a temporary bump, then a return to the same price)
+ * showed as a fake "-7%" prisfall comparing only yesterday(305) to
+ * today(284), even though 284 was already that disc's price 2 days
+ * earlier — not a new low, just noise reverting. Doesn't affect
+ * changedDiscCount (that's still "did the price move at all", not "is
+ * this a new low") — only whether the disc makes it into dropsRaw.
  */
-function computeChanges({ oldSnapshot, newSnapshot, catalog, period }) {
+function computeChanges({ oldSnapshot, newSnapshot, catalog, period, trailingSnapshots }) {
   const oldPrices = (oldSnapshot && oldSnapshot.prices) || {};
   const newPrices = (newSnapshot && newSnapshot.prices) || {};
   const storesMeta = (newSnapshot && newSnapshot.stores) || {};
@@ -145,6 +170,10 @@ function computeChanges({ oldSnapshot, newSnapshot, catalog, period }) {
 
       changedDiscCount++;
       if (pct <= MIN_DROP_PCT) {
+        if (trailingSnapshots) {
+          const trailingMin = trailingMinLanded(discId, trailingSnapshots);
+          if (trailingMin != null && newBest.landed >= trailingMin) continue; // not a new low — a rebound, not news
+        }
         dropsRaw.push({
           discId,
           brand: disc.brand,
@@ -216,6 +245,23 @@ function buildHistory(discId, snapshots, targetLength = 7) {
   return points.slice(-targetLength);
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * Classifies a drop's calendar date ("YYYY-MM-DD") relative to today into
+ * one of the /prisfall page's four groups. `mondayOfThisWeekMs` is the
+ * epoch ms of 00:00 UTC on the Monday starting today's ISO week (see
+ * scripts/lib/new-in-stores.js's getIsoWeekStart, same convention).
+ */
+function classifyDropBucket(dateStr, todayStr, mondayOfThisWeekMs) {
+  if (dateStr === todayStr) return 'today';
+  const dateMs = new Date(`${dateStr}T00:00:00Z`).getTime();
+  const todayMs = new Date(`${todayStr}T00:00:00Z`).getTime();
+  if (dateMs === todayMs - DAY_MS) return 'yesterday';
+  if (dateMs >= mondayOfThisWeekMs) return 'earlier-this-week';
+  return 'last-week';
+}
+
 module.exports = {
   MIN_VALID_PRICE_NOK,
   MAX_VALID_PRICE_NOK,
@@ -225,8 +271,10 @@ module.exports = {
   NOISE_MIN_ABS_NOK,
   entryLandedNOK,
   bestLandedEntry,
+  trailingMinLanded,
   pctChange,
   computeChanges,
   capPerBrand,
   buildHistory,
+  classifyDropBucket,
 };
