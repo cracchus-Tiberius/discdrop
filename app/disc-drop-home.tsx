@@ -25,6 +25,7 @@ import {
   ALL_EDITION_KEYWORDS,
 } from "@/scripts/lib/edition-keywords.js";
 import { SiteFooter } from "@/components/SiteFooter";
+import { priceChangesLabel, dropsLabel, storesLabel } from "@/lib/pluralize";
 import { RelativeTime } from "@/components/RelativeTime";
 import { PriceSparkline } from "@/components/PriceSparkline";
 import { PriceAlertInline } from "@/components/PriceAlertInline";
@@ -312,9 +313,9 @@ function PulseTicker({ newDropsThisWeek }: { newDropsThisWeek: number }) {
   const { priceChanges24h, storesChecked } = priceChangesSummary;
 
   const chips = [
-    { value: priceChanges24h, label: "prisendringer", highlight: true },
-    { value: newDropsThisWeek, label: "nye drops", highlight: false },
-    { value: storesChecked, label: "butikker sjekket", highlight: false },
+    { value: priceChanges24h, label: priceChangesLabel(priceChanges24h), highlight: true },
+    { value: newDropsThisWeek, label: dropsLabel(newDropsThisWeek), highlight: false },
+    { value: storesChecked, label: `${storesLabel(storesChecked)} sjekket`, highlight: false },
   ].filter((c) => c.value > 0);
 
   // No longer a single <Link> wrapping the whole band — it now needs two
@@ -356,7 +357,7 @@ function PulseTicker({ newDropsThisWeek }: { newDropsThisWeek: number }) {
         <span className="flex shrink-0 items-center gap-4">
           <Link
             href="/prisfall"
-            aria-label={`Se alle prisfall — ${priceChanges24h} prisendringer siste døgn`}
+            aria-label={`Se alle prisfall — ${priceChanges24h} ${priceChangesLabel(priceChanges24h)} siste døgn`}
             className="flex items-center gap-1.5 text-sm font-extrabold hover:underline"
           >
             Se alle prisfall
@@ -432,7 +433,7 @@ function Hero() {
             </span>
           </h1>
           <p className="mb-8 mt-4 max-w-[46ch] text-base leading-relaxed text-[#101C14]/70 md:text-lg">
-            Norges prissammenligning for diskgolf — {storeCount} butikker, oppdatert daglig.
+            Norges prissammenligning for diskgolf — {storeCount} {storesLabel(storeCount)}, oppdatert daglig.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:max-w-xl">
@@ -520,7 +521,7 @@ function HotDrops() {
                   <p className="text-xl font-extrabold text-[#101C14]">
                     {row.price != null ? `${row.price},-` : "—"}
                   </p>
-                  <p className="text-[11px] text-[#101C1499]">inkl. frakt · {row.storeCount} {row.storeCount === 1 ? "butikk" : "butikker"}</p>
+                  <p className="text-[11px] text-[#101C1499]">inkl. frakt · {row.storeCount} {storesLabel(row.storeCount)}</p>
                 </div>
                 <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
               </div>

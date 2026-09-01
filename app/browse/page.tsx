@@ -10,6 +10,7 @@ import { getScrapedPrice, getDiscImage, getDiscLastScraped, getDiscPlastics, isN
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
+import { discsLabel, storesLabel } from "@/lib/pluralize";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 
@@ -414,7 +415,7 @@ function BrowseContent() {
             <span className="ml-auto shrink-0 text-sm font-semibold text-[#101C1499]">
               {visibleCount < filtered.length
                 ? `Viser ${visibleCount} av ${filtered.length} disker`
-                : `Viser ${filtered.length} disk${filtered.length === 1 ? "" : "er"}`}
+                : `Viser ${filtered.length} ${discsLabel(filtered.length)}`}
             </span>
           </div>
         </div>
@@ -526,8 +527,7 @@ function BrowseContent() {
                         </p>
                         {storeCount(d) > 0 && (
                           <p className="text-xs text-[#101C1499]">
-                            {storeCount(d)} butikk
-                            {storeCount(d) === 1 ? "" : "er"}
+                            {storeCount(d)} {storesLabel(storeCount(d))}
                           </p>
                         )}
                       </>

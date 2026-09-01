@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import type { StoreArrivalGroup } from "@/lib/new-in-stores";
+import { knownDiscsLabel, storesLabel } from "@/lib/pluralize";
 
 function storeInitials(name: string): string {
   const words = name.trim().split(/\s+/);
@@ -56,7 +57,7 @@ function Cluster({ group, defaultOpen }: { group: StoreArrivalGroup; defaultOpen
         <span className="min-w-0 flex-1">
           <span className="block truncate text-[17px] font-extrabold text-[#101C14]">{group.storeName}</span>
           <span className="block text-[13px] text-[#101C1499]">
-            {count} kjent{count === 1 ? "" : "e"} disk{count === 1 ? "" : "er"} inn denne uka
+            {count} {knownDiscsLabel(count)} inn denne uka
           </span>
         </span>
 
@@ -154,7 +155,7 @@ export function StoreClusters({ groups }: { groups: StoreArrivalGroup[] }) {
             <p className="text-[15px] text-[#101C1499]">Kjente disker som dukket opp hos en ny butikk.</p>
           </div>
           <p className="text-sm font-bold text-[#101C1499]">
-            {totalDiscs} hos {groups.length} butikk{groups.length === 1 ? "" : "er"}
+            {totalDiscs} hos {groups.length} {storesLabel(groups.length)}
           </p>
         </div>
 

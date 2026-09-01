@@ -1,6 +1,7 @@
 import type { Week } from "@/lib/new-in-stores";
 import { formatWeekDateRange, weekHeroHeadline, formatCheckedAtTime } from "@/lib/new-in-stores";
 import { scrapedLastUpdated } from "@/lib/disc-utils";
+import { dropsLabel, storesLabel, stockingsLabel } from "@/lib/pluralize";
 
 /** "Uka som event" — calendar block, headline, and a dark stats strip glued to the section's bottom edge. */
 export function WeekHero({
@@ -49,9 +50,9 @@ export function WeekHero({
         {/* Stats strip — glued to the section's bottom edge (no bottom padding on the section itself). */}
         <div className="mt-9 overflow-hidden rounded-t-[18px] border-2 border-b-0 border-[#101C14] bg-[#1E3D2F] text-[#FFFDF6]">
           <div className="flex md:hidden">
-            <StatCellMobile value={week.newReleaseSignals.length} label="nye drops" />
-            <StatCellMobile value={week.totalStoreArrivals} label="nye lager&shy;føringer" border />
-            <StatCellMobile value={week.storeCount} label="butikker" border />
+            <StatCellMobile value={week.newReleaseSignals.length} label={dropsLabel(week.newReleaseSignals.length)} />
+            <StatCellMobile value={week.totalStoreArrivals} label={stockingsLabel(week.totalStoreArrivals)} border />
+            <StatCellMobile value={week.storeCount} label={storesLabel(week.storeCount)} border />
           </div>
           {checkedAt && (
             <div className="border-t border-[#FFFDF6]/[0.16] px-[18px] pb-[11px] pt-[11px] text-[13px] font-semibold text-[#FFFDF677] md:hidden">
@@ -60,9 +61,9 @@ export function WeekHero({
           )}
 
           <div className="hidden md:flex">
-            <StatCellDesktop value={week.newReleaseSignals.length} label="nye drops" accent />
-            <StatCellDesktop value={week.totalStoreArrivals} label="nye lagerføringer" border />
-            <StatCellDesktop value={week.storeCount} label="butikker" border />
+            <StatCellDesktop value={week.newReleaseSignals.length} label={dropsLabel(week.newReleaseSignals.length)} accent />
+            <StatCellDesktop value={week.totalStoreArrivals} label={stockingsLabel(week.totalStoreArrivals)} border />
+            <StatCellDesktop value={week.storeCount} label={storesLabel(week.storeCount)} border />
             {checkedAt && (
               <div className="ml-auto flex shrink-0 items-center gap-2.5 border-l border-[#FFFDF6]/[0.16] px-[26px] py-5">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
@@ -91,10 +92,7 @@ function StatCellMobile({ value, label, border }: { value: number; label: string
   return (
     <div className={`flex-1 px-[14px] py-4 ${border ? "border-l border-[#FFFDF6]/[0.16]" : ""}`}>
       <div className="text-[26px] font-extrabold text-[#FFFDF6]">{value}</div>
-      <div
-        className="text-[11px] font-semibold text-[#FFFDF699]"
-        dangerouslySetInnerHTML={{ __html: label }}
-      />
+      <div className="text-[11px] font-semibold text-[#FFFDF699]">{label}</div>
     </div>
   );
 }

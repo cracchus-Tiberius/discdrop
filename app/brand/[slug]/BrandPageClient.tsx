@@ -8,6 +8,7 @@ import { getScrapedPrice, getDiscImage } from "@/lib/disc-utils";
 import { BADGE_STYLES } from "@/lib/badge-styles";
 import { FlightBoxes } from "@/components/FlightBoxes";
 import { SiteFooter } from "@/components/SiteFooter";
+import { storesLabel } from "@/lib/pluralize";
 import { discs } from "@/data/discs.js";
 import topSellers from "@/data/top-sellers.json";
 
@@ -222,7 +223,7 @@ export default function BrandPageClient({
                       <p className="text-lg font-extrabold text-[#101C14]">fra kr {price}</p>
                       {getScrapedPrice(d.id).inStockCount > 0 && (
                         <p className="text-xs text-[#101C1499]">
-                          {getScrapedPrice(d.id).inStockCount} butikk{getScrapedPrice(d.id).inStockCount === 1 ? "" : "er"}
+                          {getScrapedPrice(d.id).inStockCount} {storesLabel(getScrapedPrice(d.id).inStockCount)}
                         </p>
                       )}
                     </>

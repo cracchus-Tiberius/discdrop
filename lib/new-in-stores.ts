@@ -21,6 +21,7 @@ import path from "node:path";
 import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import { getDiscImage } from "@/lib/disc-utils";
+import { dropsLabel } from "@/lib/pluralize";
 
 type Disc = (typeof discs)[number];
 type StoreMeta = { name: string; shipping?: number; freeShippingOver?: number };
@@ -355,7 +356,7 @@ export function weekHeroHeadline(week: Week, weekIndexInList: number): string {
   const n = week.newReleaseSignals.length;
   const variants = [
     "Ukas drops er landet.",
-    n > 0 ? `Denne uka droppet det ${n} ${n === 1 ? "ny drop" : "nye drops"}.` : "Ukas drops er landet.",
+    n > 0 ? `Denne uka droppet det ${n} ${dropsLabel(n)}.` : "Ukas drops er landet.",
     "Nytt på hyllene denne uka.",
   ];
   return variants[weekIndexInList % variants.length];

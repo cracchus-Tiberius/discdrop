@@ -2,6 +2,7 @@ import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import type { SignalRow } from "@/lib/new-in-stores";
 import { weekdayLabel } from "@/lib/new-in-stores";
+import { storesLabel } from "@/lib/pluralize";
 
 function storeInitials(name: string): string {
   const words = name.trim().split(/\s+/);
@@ -49,7 +50,7 @@ function ReleaseCard({ signal }: { signal: SignalRow }) {
             <span className="text-sm font-bold text-[#101C14]">{primaryStore.storeName}</span>
             {otherStores.length > 0 && (
               <span className="text-[13px] text-[#101C1477]">
-                + {otherStores.length} butikk{otherStores.length === 1 ? "" : "er"}
+                + {otherStores.length} {storesLabel(otherStores.length)}
               </span>
             )}
           </div>

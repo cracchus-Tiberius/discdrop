@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getWeekIndex } from "@/lib/new-in-stores";
+import { bareDropsLabel, bareStockingsLabel } from "@/lib/pluralize";
 
 const SHORT_MONTHS = [
   "jan", "feb", "mar", "apr", "mai", "jun",
@@ -53,12 +54,12 @@ export function WeekArchive({ currentSlug }: { currentSlug: string }) {
               <div className="flex flex-wrap gap-1.5">
                 {w.newReleases > 0 && (
                   <span className="rounded-lg bg-[#B8E04A] px-[9px] py-1 text-xs font-extrabold text-[#101C14]">
-                    {w.newReleases} {w.newReleases === 1 ? "drop" : "drops"}
+                    {w.newReleases} {bareDropsLabel(w.newReleases)}
                   </span>
                 )}
                 {w.newAtStore > 0 && (
                   <span className="rounded-lg bg-[#F1EFE6] px-[9px] py-1 text-xs font-extrabold text-[#101C14]">
-                    {w.newAtStore} lagerføringer
+                    {w.newAtStore} {bareStockingsLabel(w.newAtStore)}
                   </span>
                 )}
               </div>
@@ -79,9 +80,9 @@ export function WeekArchive({ currentSlug }: { currentSlug: string }) {
                 <p className="text-[20px] font-extrabold text-[#101C14]">Uke {w.weekNumber}</p>
                 <p className="truncate text-xs text-[#101C1499]">
                   {shortDateRange(w.startDate, w.endDate)} ·{" "}
-                  {w.newReleases > 0 ? `${w.newReleases} ${w.newReleases === 1 ? "drop" : "drops"}` : null}
+                  {w.newReleases > 0 ? `${w.newReleases} ${bareDropsLabel(w.newReleases)}` : null}
                   {w.newReleases > 0 && w.newAtStore > 0 ? " · " : ""}
-                  {w.newAtStore > 0 ? `${w.newAtStore} lagerføringer` : null}
+                  {w.newAtStore > 0 ? `${w.newAtStore} ${bareStockingsLabel(w.newAtStore)}` : null}
                 </p>
               </div>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#101C1466" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="shrink-0" aria-hidden>
