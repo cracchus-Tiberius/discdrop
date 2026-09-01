@@ -477,6 +477,16 @@ const NON_DISC_PHRASES = [
   'pro rainfly', 'slim rainfly', 'rain fly',
   // Apparel
   'hand warmers', 'hettegenser',
+  // Dog frisbees — confirmed in production 2026-08-31: Discsport's
+  // "/discar/mold/fastback" page (no real "Fastback" mold exists in our
+  // catalog) turned out to be entirely dog-toy inventory from the brand
+  // "Dog Eat Disc", not disc golf discs. One of them, "Dog Eat Disc World
+  // Fastback Frisbee", matched catalog id westside-world purely because the
+  // word "World" appears in its name, making a 67 kr dog toy show up as the
+  // cheapest "World" price site-wide. "hundfrisbee"/"chomper" alone would
+  // only catch some of that store's dog-toy lineup (see NON_DISC_WORDS) —
+  // this phrase catches the rest that don't use those words.
+  'dog eat disc',
 ];
 
 // Single words / regex tokens that mean the product is NOT a disc.
@@ -504,6 +514,9 @@ const NON_DISC_WORDS = [
   'startpakkett', 'gyropalooza',
   // Ultimate frisbee — different sport
   'ultrastar', 'umax', 'wham-o', 'whamo',
+  // Dog frisbees — see NON_DISC_PHRASES's "dog eat disc" comment above for
+  // the westside-world incident this covers the other half of.
+  'hundfrisbee', 'chomper',
 ];
 
 function isNonDiscProduct(rawName) {
