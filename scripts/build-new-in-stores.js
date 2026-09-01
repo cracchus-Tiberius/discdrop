@@ -23,8 +23,9 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
-const { buildNewInStoresSignals, groupSignalsByWeek, isoWeekKey, partitionWeeksForFreezing } = require('./lib/new-in-stores');
+const { buildNewInStoresSignals, groupSignalsByWeek, isoWeekKey, partitionWeeksForFreezing, SIGNAL_WINDOW_MS } = require('./lib/new-in-stores');
 const { discs: SOURCE_DISCS } = require('../data/discs.js');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -32,8 +33,48 @@ const SCRAPED_PRICES_PATH = path.join(REPO_ROOT, 'data', 'scraped-prices.json');
 const WEEKS_DIR = path.join(REPO_ROOT, 'data', 'new-in-stores');
 const META_PATH = path.join(WEEKS_DIR, '_meta.json');
 const WEEK_FILE_RE = /^(\d{4}-W\d{2})\.json$/;
+const RELATIVE_DISCS_PATH = 'data/discs.js';
+const GIT_MAX_BUFFER = 16 * 1024 * 1024;
 
-const CATALOG = SOURCE_DISCS.map(({ id, name, brand, image }) => ({ id, name, brand, image }));
+const CATALOG = SOURCE_DISCS.map(({ id, name, brand, image, catalogAddedAt }) => ({ id, name, brand, image, catalogAddedAt }));
+
+/** Every disc id literally present in a discs.js source string — a plain regex match, not a full eval, so it's safe on arbitrary historical revisions of the file. */
+function extractDiscIds(discsJsSource) {
+  const ids = new Set();
+  const re = /\{\s*id:"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(discsJsSource))) ids.add(m[1]);
+  return ids;
+}
+
+/**
+ * Disc ids already in data/discs.js as of `dateIso` — the git-history half
+ * of the new-disc-catalog check (see scripts/lib/new-in-stores.js's
+ * isGenuinelyNewToCatalog). Falls back to the CURRENT catalog's ids (i.e.
+ * every id currently in discs.js) if git lookup fails for any reason —
+ * that's the conservative direction: it suppresses new-disc detection
+ * entirely for this run rather than risk reverting to the false-positive
+ * bug this whole mechanism exists to fix.
+ */
+function catalogIdsAsOf(dateIso) {
+  try {
+    const sha = execFileSync(
+      'git',
+      ['log', '--before', dateIso, '-1', '--format=%H', '--', RELATIVE_DISCS_PATH],
+      { cwd: REPO_ROOT, encoding: 'utf8', maxBuffer: GIT_MAX_BUFFER }
+    ).trim();
+    if (!sha) return new Set(CATALOG.map((d) => d.id)); // no history that far back — treat everything current as "already existed"
+    const source = execFileSync('git', ['show', `${sha}:${RELATIVE_DISCS_PATH}`], {
+      cwd: REPO_ROOT,
+      encoding: 'utf8',
+      maxBuffer: GIT_MAX_BUFFER,
+    });
+    return extractDiscIds(source);
+  } catch (err) {
+    console.warn(`  Could not read discs.js history for the new-disc catalog check (${err.message}) — suppressing new-disc detection this run as a conservative fallback.`);
+    return new Set(CATALOG.map((d) => d.id));
+  }
+}
 
 function parseForceRefreezeArgs(argv) {
   if (argv.includes('--force-refreeze-all')) return { all: true, weeks: new Set() };
@@ -70,10 +111,13 @@ function main() {
   const frozenIsoWeeks = new Set([...existingStates].filter(([, s]) => s.frozen).map(([isoWeek]) => isoWeek));
   const forceRefreezeIsoWeeks = forceAll ? frozenIsoWeeks : forceWeeksArg;
 
+  const oldCatalogIds = catalogIdsAsOf(new Date(asOfMs - SIGNAL_WINDOW_MS).toISOString());
+
   const { signals, quarantinedStores, massResetEvents, weeklyCapEvents } = buildNewInStoresSignals({
     snapshot,
     catalog: CATALOG,
     asOfMs,
+    oldCatalogIds,
   });
   const weeks = groupSignalsByWeek(signals);
 

@@ -6,44 +6,6 @@
   "endDate": "2026-09-06",
   "signals": [
     {
-      "discId": "discmania-laseri",
-      "name": "Laseri",
-      "brand": "Prodiscus",
-      "image": "",
-      "type": "new-disc",
-      "plastic": null,
-      "edition": null,
-      "firstSeenMs": 1788180935618,
-      "price": 274,
-      "stores": [
-        {
-          "store": "frisbeebutikken",
-          "storeName": "Frisbeebutikken",
-          "price": 274,
-          "url": "https://frisbeebutikken.no/products/premium-laseri"
-        }
-      ]
-    },
-    {
-      "discId": "discmania-talisman",
-      "name": "Talisman",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-disc",
-      "plastic": null,
-      "edition": null,
-      "firstSeenMs": 1788180935618,
-      "price": 274,
-      "stores": [
-        {
-          "store": "frisbeebutikken",
-          "storeName": "Frisbeebutikken",
-          "price": 274,
-          "url": "https://frisbeebutikken.no/products/premium-talisman"
-        }
-      ]
-    },
-    {
       "discId": "discraft-stratus",
       "name": "Stratus",
       "brand": "Discraft",
@@ -230,6 +192,44 @@
           "storeName": "Frisbeebutikken",
           "price": 294,
           "url": "https://frisbeebutikken.no/products/premium-jokeri-roland-kur-signature-series"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-laseri",
+      "name": "Laseri",
+      "brand": "Prodiscus",
+      "image": "",
+      "type": "new-release",
+      "plastic": null,
+      "edition": null,
+      "firstSeenMs": 1788180935618,
+      "price": 274,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 274,
+          "url": "https://frisbeebutikken.no/products/premium-laseri"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-talisman",
+      "name": "Talisman",
+      "brand": "Prodiscus",
+      "image": "",
+      "type": "new-release",
+      "plastic": null,
+      "edition": null,
+      "firstSeenMs": 1788180935618,
+      "price": 274,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 274,
+          "url": "https://frisbeebutikken.no/products/premium-talisman"
         }
       ]
     },
@@ -975,5 +975,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-09-01T11:44:49.730Z"
+  "generated": "2026-09-01T18:26:18.721Z"
 }

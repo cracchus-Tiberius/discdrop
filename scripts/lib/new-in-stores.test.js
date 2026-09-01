@@ -90,6 +90,105 @@ test('buildNewInStoresSignals: disc with only recent entries everywhere -> new-d
   assert.equal(signals[0].price, 200); // cheapest of the group
 });
 
+test('buildNewInStoresSignals: disc already in the catalog, delisted then restocked -> not new-disc even though every listing is fresh', () => {
+  // Reproduces the Laseri/Talisman bug: the disc vanished from
+  // scraped-prices.json entirely for a while (so every current listing's
+  // firstSeen looks brand new), but it was already a data/discs.js entry
+  // well before this week — oldCatalogIds is how the caller (git history)
+  // tells us that.
+  const snapshot = {
+    stores: STORES,
+    prices: {
+      ...ANCHOR,
+      'innova-destroyer': [
+        { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(3 * DAY), url: 'a.no' },
+      ],
+    },
+  };
+  const { signals } = buildNewInStoresSignals({
+    snapshot,
+    catalog: CATALOG,
+    asOfMs: NOW,
+    oldCatalogIds: new Set(['innova-destroyer']),
+  });
+  assert.equal(signals.length, 1);
+  // Not new-disc — that's the actual bug fix. It falls to new-release here
+  // specifically because this fixture has no OTHER entry left proving the
+  // Star plastic was already known (every listing vanished and came back
+  // fresh) — a real restock with a still-known plastic elsewhere would
+  // correctly land on new-at-store instead, per the existing baseline
+  // logic below this branch.
+  assert.notEqual(signals[0].type, 'new-disc');
+  assert.equal(signals[0].type, 'new-release');
+});
+
+test('buildNewInStoresSignals: restocked disc lands on new-at-store when a surviving old listing proves the plastic isn\'t new', () => {
+  const snapshot = {
+    stores: STORES,
+    prices: {
+      ...ANCHOR,
+      'innova-destroyer': [
+        { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(60 * DAY), url: 'a.no' }, // survived, old evidence
+        { store: 'b', price: 210, inStock: true, plastic: 'Star', firstSeen: iso(3 * DAY), url: 'b.no' }, // just restocked here
+      ],
+    },
+  };
+  const { signals } = buildNewInStoresSignals({
+    snapshot,
+    catalog: CATALOG,
+    asOfMs: NOW,
+    oldCatalogIds: new Set(['innova-destroyer']),
+  });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].type, 'new-at-store');
+});
+
+test('buildNewInStoresSignals: genuinely new catalog id (absent from oldCatalogIds) is still new-disc', () => {
+  const snapshot = {
+    stores: STORES,
+    prices: {
+      ...ANCHOR,
+      'innova-destroyer': [
+        { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(3 * DAY), url: 'a.no' },
+      ],
+    },
+  };
+  const { signals } = buildNewInStoresSignals({
+    snapshot,
+    catalog: CATALOG,
+    asOfMs: NOW,
+    oldCatalogIds: new Set(), // innova-destroyer was NOT in the catalog before -> genuinely new
+  });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].type, 'new-disc');
+});
+
+test('buildNewInStoresSignals: catalogAddedAt overrides oldCatalogIds when present', () => {
+  const recentCatalog = [
+    ...CATALOG.filter((d) => d.id !== 'innova-destroyer'),
+    { id: 'innova-destroyer', name: 'Destroyer', brand: 'Innova', catalogAddedAt: iso(3 * DAY) },
+  ];
+  const snapshot = {
+    stores: STORES,
+    prices: {
+      ...ANCHOR,
+      'innova-destroyer': [
+        { store: 'a', price: 200, inStock: true, plastic: 'Star', firstSeen: iso(3 * DAY), url: 'a.no' },
+      ],
+    },
+  };
+  // Even though oldCatalogIds says it was already there, an explicit recent
+  // catalogAddedAt wins — this is the "add the field going forward" path.
+  const { signals } = buildNewInStoresSignals({
+    snapshot,
+    catalog: recentCatalog,
+    asOfMs: NOW,
+    oldCatalogIds: new Set(['innova-destroyer']),
+  });
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].type, 'new-disc');
+});
+
 test('buildNewInStoresSignals: known disc, brand-new plastic at any store -> new-release', () => {
   const snapshot = {
     stores: STORES,

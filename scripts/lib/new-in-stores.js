@@ -136,11 +136,18 @@ function findMassResetEvents(prices, threshold = MASS_RESET_THRESHOLD) {
  * undersell it.
  *
  * @param {{prices: object, stores: object}} snapshot - scraped-prices.json shape
- * @param {{id: string, name: string, brand: string, image?: string}[]} catalog
+ * @param {{id: string, name: string, brand: string, image?: string, catalogAddedAt?: string}[]} catalog
  * @param {number} asOfMs - "now", in ms (pass scraped-prices.json's lastUpdated
  *   for reproducible output instead of the wall clock at build time)
+ * @param {Set<string>} [oldCatalogIds] - disc ids that were ALREADY in
+ *   data/discs.js as of asOfMs - SIGNAL_WINDOW_MS (see
+ *   scripts/build-new-in-stores.js's git-history lookup). A disc in this
+ *   set can never be classified new-disc even if every one of its current
+ *   store listings looks fresh — see isGenuinelyNewToCatalog() below for
+ *   why this matters. Omit only for tests that don't care about this axis;
+ *   omitting it in production would silently revert to the old bug.
  */
-function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
+function buildNewInStoresSignals({ snapshot, catalog, asOfMs, oldCatalogIds }) {
   const prices = (snapshot && snapshot.prices) || {};
   const storesMeta = (snapshot && snapshot.stores) || {};
   const catalogById = new Map(catalog.map((d) => [d.id, d]));
@@ -191,7 +198,27 @@ function buildNewInStoresSignals({ snapshot, catalog, asOfMs }) {
     // itself BE the new thing).
     const effectiveAge = (e) => (isMassReset(e) ? Infinity : ageMs(e.firstSeen, asOfMs));
 
-    const isDiscEntirelyNew = entries.every((e) => effectiveAge(e) < SIGNAL_WINDOW_MS);
+    // Every store listing looking fresh is NOT enough to prove a disc is
+    // genuinely new — a disc that's been in the catalog for years but had
+    // zero in-stock listings anywhere for a while (temporarily delisted,
+    // then restocked) gets a brand-new firstSeen at every store the moment
+    // it reappears, which used to misclassify it as new-disc. Confirmed in
+    // production 2026-09-01: Discmania Laseri and Talisman both vanished
+    // from scraped-prices.json for about a week and came back flagged as
+    // "new-disc" purely from fresh firstSeen timestamps. A disc with an
+    // explicit catalogAddedAt (set going forward for genuinely new catalog
+    // additions) is checked against that directly; everything else falls
+    // back to "was this id already in data/discs.js SIGNAL_WINDOW_MS ago"
+    // via oldCatalogIds (git history) — if oldCatalogIds isn't supplied at
+    // all, this check is skipped (old behavior), which production code
+    // must never do.
+    const isGenuinelyNewToCatalog = () => {
+      if (disc.catalogAddedAt) return ageMs(disc.catalogAddedAt, asOfMs) < SIGNAL_WINDOW_MS;
+      if (oldCatalogIds) return !oldCatalogIds.has(discId);
+      return true;
+    };
+
+    const isDiscEntirelyNew = entries.every((e) => effectiveAge(e) < SIGNAL_WINDOW_MS) && isGenuinelyNewToCatalog();
 
     for (const entry of entries) {
       if (isMassReset(entry)) continue; // churn, not news — never itself a signal
