@@ -38,7 +38,7 @@ export default function NyttPage() {
           </section>
         ) : (
           <>
-            <WeekHero week={week} weekIndexInList={0} isArchive={false} />
+            <WeekHero week={week} isArchive={false} />
             <NewDiscTier signals={week.newDiscSignals} />
             <NewReleases signals={week.newReleaseSignals} />
             <StoreClusters groups={week.storeArrivals} />

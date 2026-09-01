@@ -6,18 +6,16 @@ import { dropsLabel, storesLabel, stockingsLabel } from "@/lib/pluralize";
 /** "Uka som event" — calendar block, headline, and a dark stats strip glued to the section's bottom edge. */
 export function WeekHero({
   week,
-  weekIndexInList,
   isArchive,
 }: {
   week: Week;
-  weekIndexInList: number;
   isArchive: boolean;
 }) {
   const dateRange = formatWeekDateRange(week.startDate, week.endDate);
   const kicker = isArchive ? `${dateRange} ${week.year}` : `${dateRange} · DENNE UKA`;
   const isQuietWeek =
     week.newDiscSignals.length === 0 && week.newReleaseSignals.length === 0 && week.storeArrivals.length === 0;
-  const headline = isQuietWeek ? "Rolig uke. Ingen nye drops fanget opp." : weekHeroHeadline(week, weekIndexInList);
+  const headline = isQuietWeek ? "Rolig uke. Ingen nye drops fanget opp." : weekHeroHeadline();
   const [firstLine, ...rest] = headline.split(" ");
   const lastWord = rest.pop();
   const checkedAt = !isArchive ? formatCheckedAtTime(scrapedLastUpdated) : null;

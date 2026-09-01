@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { getAllWeeks, getWeekBySlug, getWeekIndex } from "@/lib/new-in-stores";
+import { getWeekBySlug, getWeekIndex } from "@/lib/new-in-stores";
 import { WeekHero } from "@/components/nytt/WeekHero";
 import { NewDiscTier } from "@/components/nytt/NewDiscTier";
 import { NewReleases } from "@/components/nytt/NewReleaseCard";
@@ -44,13 +44,11 @@ export default async function NyttWeekPage({
   const week = getWeekBySlug(slug);
   if (!week) notFound();
 
-  const weekIndexInList = getAllWeeks().findIndex((w) => w.slug === slug);
-
   return (
     <div className="min-h-screen bg-[#FFFDF6]">
       <SiteHeader />
       <main>
-        <WeekHero week={week} weekIndexInList={weekIndexInList} isArchive />
+        <WeekHero week={week} isArchive />
         <NewDiscTier signals={week.newDiscSignals} />
         <NewReleases signals={week.newReleaseSignals} />
         <StoreClusters groups={week.storeArrivals} />

@@ -22,7 +22,6 @@ import { discs } from "@/data/discs.js";
 import scrapedPrices from "@/data/scraped-prices.json";
 import discDescriptions from "@/data/disc-descriptions.json";
 import { getDiscImage } from "@/lib/disc-utils";
-import { dropsLabel } from "@/lib/pluralize";
 
 type Disc = (typeof discs)[number];
 type StoreMeta = { name: string; shipping?: number; freeShippingOver?: number };
@@ -351,19 +350,9 @@ export function weekdayLabel(ms: number): string {
   return NORWEGIAN_WEEKDAYS[new Date(ms).getUTCDay()].toUpperCase();
 }
 
-/**
- * Deterministic (not random — avoids hydration mismatch) hero headline that
- * varies by week, per design_handoff_nytt/README.md. `weekIndexInList` is
- * the week's position in the newest-first week list (0 = latest).
- */
-export function weekHeroHeadline(week: Week, weekIndexInList: number): string {
-  const n = week.newReleaseSignals.length;
-  const variants = [
-    "Ukas drops er landet.",
-    n > 0 ? `Denne uka droppet det ${n} ${dropsLabel(n)}.` : "Ukas drops er landet.",
-    "Nytt på hyllene denne uka.",
-  ];
-  return variants[weekIndexInList % variants.length];
+/** Fixed hero headline — same on the live week and every archive week page. "DiscDrops" keeps its brand capitalization (capital D twice). */
+export function weekHeroHeadline(): string {
+  return "Ukas ferske DiscDrops.";
 }
 
 /** "kl. 06:12" style time, formatted in Norwegian time from the build's ASOF snapshot — never Date.now(). */
