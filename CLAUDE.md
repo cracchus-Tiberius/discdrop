@@ -16,6 +16,15 @@ Package manager: pnpm (always use pnpm, never npm).
 - Always run pnpm build before finishing any task
 - Commit message format: short description of what changed
 
+## Hard-earned rules
+- Frozen weeks are immutable: files in data/new-in-stores/<year>-W<week>.json
+  for completed ISO weeks must never be regenerated, "cleaned up", or
+  rewritten — they are the public archive behind /nytt/[year]-uke-[week]
+  and are indexed by Google. Only the current live week is recomputed.
+  `--force-refreeze` exists solely for deliberate bug fixes and requires
+  an explicit decision from Tobba in the session — never run it as part
+  of routine maintenance, refactors, or "tidying".
+
 ## Design System
 - Background: #F5F2EB
 - Primary green: #2D6A4F
