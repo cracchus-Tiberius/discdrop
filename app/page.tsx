@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DiscDropHome } from "./disc-drop-home";
+import { getLatestWeek } from "@/lib/new-in-stores";
 
 export const metadata: Metadata = {
   title: "DiscDrop — Sammenlign diskgolfpriser i Norge",
@@ -18,5 +19,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <DiscDropHome />;
+  // Post-suppression (mass-reset + weekly-cap) new-release count for the
+  // live current week — same number /nytt itself shows, just surfaced here
+  // as the "nye drops" chip. See lib/new-in-stores.ts / scripts/lib/
+  // new-in-stores.js for how the underlying signal is classified.
+  const newDropsThisWeek = getLatestWeek()?.newReleaseSignals.length ?? 0;
+  return <DiscDropHome newDropsThisWeek={newDropsThisWeek} />;
 }

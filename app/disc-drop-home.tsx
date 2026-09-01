@@ -307,22 +307,23 @@ function TickerArrow({ size }: { size: number }) {
   );
 }
 
-function PulseTicker() {
+function PulseTicker({ newDropsThisWeek }: { newDropsThisWeek: number }) {
   if (!hasPriceDropsData) return null;
-  const { priceChanges24h, newDiscs24h, storesChecked } = priceChangesSummary;
+  const { priceChanges24h, storesChecked } = priceChangesSummary;
 
   const chips = [
     { value: priceChanges24h, label: "prisendringer", highlight: true },
-    { value: newDiscs24h, label: "nye disker", highlight: false },
+    { value: newDropsThisWeek, label: "nye drops", highlight: false },
     { value: storesChecked, label: "butikker sjekket", highlight: false },
   ].filter((c) => c.value > 0);
 
+  // No longer a single <Link> wrapping the whole band — it now needs two
+  // distinct destinations (Prisfall, /nytt), and links can't nest. Hover
+  // feedback stays on the outer <div> (CSS :hover works on any element,
+  // not just interactive ones); the chips are informational only now, the
+  // two CTAs at the end are the actual click targets.
   return (
-    <Link
-      href="/prisfall"
-      aria-label={`Se alle prisfall — ${priceChanges24h} prisendringer siste døgn`}
-      className="block w-full border-b-2 border-[#101C14] bg-[#1E3D2F] text-[#FFFDF6] transition-colors duration-150 hover:bg-[#24483a]"
-    >
+    <div className="w-full border-b-2 border-[#101C14] bg-[#1E3D2F] text-[#FFFDF6] transition-colors duration-150 hover:bg-[#24483a]">
       {/* Desktop — compact, left-aligned: on a quiet day (few/no chips) this
           still reads as a deliberately trim status line, not a big empty
           banner. Height and type scale are intentionally smaller than the
@@ -352,24 +353,40 @@ function PulseTicker() {
           </span>
         </span>
 
-        <span className="flex shrink-0 items-center gap-1.5 text-sm font-extrabold">
-          Se alle prisfall
-          <TickerArrow size={16} />
+        <span className="flex shrink-0 items-center gap-4">
+          <Link
+            href="/prisfall"
+            aria-label={`Se alle prisfall — ${priceChanges24h} prisendringer siste døgn`}
+            className="flex items-center gap-1.5 text-sm font-extrabold hover:underline"
+          >
+            Se alle prisfall
+            <TickerArrow size={16} />
+          </Link>
+          <Link href="/nytt" className="flex items-center gap-1.5 text-sm font-extrabold hover:underline">
+            Se ukas drops
+            <TickerArrow size={16} />
+          </Link>
         </span>
       </div>
 
       {/* Mobile — kept as two compact rows (unlike desktop) since "I DAG" +
-          every chip + "Se alle prisfall" genuinely don't fit one line at
-          375px without truncating something. */}
+          every chip + both CTAs genuinely don't fit one line at 375px
+          without truncating something. */}
       <div className="px-5 py-2.5 md:hidden">
         <div className="mb-1.5 flex items-center justify-between">
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
             <span className="text-[11px] font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
           </span>
-          <span className="flex items-center gap-1 text-xs font-extrabold">
-            Se alle prisfall
-            <TickerArrow size={13} />
+          <span className="flex items-center gap-3">
+            <Link href="/prisfall" className="flex items-center gap-1 text-xs font-extrabold">
+              Se alle prisfall
+              <TickerArrow size={13} />
+            </Link>
+            <Link href="/nytt" className="flex items-center gap-1 text-xs font-extrabold">
+              Se ukas drops
+              <TickerArrow size={13} />
+            </Link>
           </span>
         </div>
         <span className="flex items-center">
@@ -386,7 +403,7 @@ function PulseTicker() {
           ))}
         </span>
       </div>
-    </Link>
+    </div>
   );
 }
 
@@ -469,8 +486,8 @@ function HotDrops() {
           <h2 className="text-2xl font-extrabold tracking-tight text-[#101C14] md:text-3xl">
             Hot Drops
           </h2>
-          <Link href="/browse" className="text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4">
-            Se alle disker →
+          <Link href="/nytt" className="text-sm font-bold text-[#101C14] underline decoration-[#B8E04A] decoration-2 underline-offset-4">
+            Se alle drops →
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -821,7 +838,7 @@ function PopularDiscs() {
 }
 
 // ── Page ───────────────────────────────────────────────────────────────────
-export function DiscDropHome() {
+export function DiscDropHome({ newDropsThisWeek }: { newDropsThisWeek: number }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -841,7 +858,7 @@ export function DiscDropHome() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SiteHeader />
-      <PulseTicker />
+      <PulseTicker newDropsThisWeek={newDropsThisWeek} />
       <main>
         <Hero />
         <PopularDiscs />
