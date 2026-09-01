@@ -67,7 +67,7 @@ jobs:
         # data/scraped-prices.json on disk is today's fresh scrape, which is
         # exactly the day-over-day diff the Prisfall feature needs.
 
-      - name: Build new-in-stores.json
+      - name: Build new-in-stores weekly files
         run: pnpm build:new-in-stores
         # "Nytt i butikk" feature — unlike build-price-changes.js this only
         # needs today's scraped-prices.json (firstSeen is already tracked

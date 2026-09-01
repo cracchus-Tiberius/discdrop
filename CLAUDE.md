@@ -83,7 +83,8 @@ delete this section.
 **Launch gate** (must report clean before flipping the gate):
 1. /nytt signal counts for ISO weeks 34 and 35 per type (new-disc / new-release /
    new-at-store) + any mass-reset suppression events. Target: ~5-25 signals/week,
-   no leaks. Source: data/new-in-stores.json (rebuilt every scrape).
+   no leaks. Source: data/new-in-stores/ (one frozen file per ISO week,
+   rebuilt every scrape — see scripts/lib/new-in-stores.js's "Week freezing").
 2. Any price below the 50 NOK floor (MIN_VALID_PRICE_NOK) — confirm which
    store/currency, confirm data/rejected-prices.json + lib/disc-utils.ts actually
    rejected it from display, fix any reporting path that doesn't apply the floor.
