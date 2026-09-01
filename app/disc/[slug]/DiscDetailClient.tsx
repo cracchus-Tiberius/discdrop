@@ -6,6 +6,7 @@ import { DiscImage } from "@/components/DiscImage";
 import { entryLandedNOK, type RichStoreEntry } from "@/lib/disc-utils";
 import { RelativeTime } from "@/components/RelativeTime";
 import { BADGE_STYLES as BADGE_STYLES_CLIENT } from "@/lib/badge-styles";
+import { PriceThresholdInput, validatePriceThreshold } from "@/components/PriceThresholdInput";
 
 // ── Plastic normalization ────────────────────────────────────────────────────
 // Scrapers sometimes emit word-swapped names (e.g. "Horizon C-Line" vs "C-Line Horizon").
@@ -796,7 +797,7 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email || !consent) return;
+    if (!email || !consent || validatePriceThreshold(targetPrice)) return;
     setLoading(true);
     setError(null);
     try {
@@ -843,27 +844,26 @@ export function PriceAlertSignup({ discId, discName, inline }: { discId: string;
                 La prisfeltet stå tomt for å bli varslet så snart disken er tilgjengelig, uansett pris.
               </p>
               <form onSubmit={handleSubmit}>
-                <div className="flex flex-wrap items-end gap-3 md:flex-nowrap">
-                  <input
-                    type="email"
-                    required
-                    placeholder="din@epost.no"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
-                  />
-                  <input
-                    type="number"
-                    min="1"
-                    placeholder="Ønsket pris (valgfritt)"
-                    value={targetPrice}
-                    onChange={(e) => setTargetPrice(e.target.value)}
-                    className="w-48 rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
-                  />
+                <div className="flex flex-wrap items-start gap-3 md:flex-nowrap">
+                  <div className="min-w-0 flex-1">
+                    <label htmlFor="alert-email" className="mb-1 block text-xs font-semibold text-[#FFFDF6]/70">
+                      E-post
+                    </label>
+                    <input
+                      id="alert-email"
+                      type="email"
+                      required
+                      placeholder="din@epost.no"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="min-h-[44px] w-full rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm text-[#FFFDF6] placeholder:text-[#FFFDF6]/50 outline-none focus:border-[#B8E04A]/60"
+                    />
+                  </div>
+                  <PriceThresholdInput value={targetPrice} onChange={setTargetPrice} variant="dark" className="w-48 shrink-0" />
                   <button
                     type="submit"
-                    disabled={!consent || loading}
-                    className="dd-cta whitespace-nowrap px-5 py-3 text-sm disabled:cursor-not-allowed disabled:opacity-40"
+                    disabled={!consent || loading || validatePriceThreshold(targetPrice) != null}
+                    className="dd-cta mt-[21px] whitespace-nowrap px-5 py-3 text-sm disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     {loading ? "Lagrer…" : "Varsle meg"}
                   </button>

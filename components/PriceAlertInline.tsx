@@ -10,6 +10,7 @@
 // design_handoff_prisfall/README.md, "Skjerm 3".
 
 import { useState } from "react";
+import { PriceThresholdInput, validatePriceThreshold } from "@/components/PriceThresholdInput";
 
 export type AlertDiscOption = {
   discId: string;
@@ -18,17 +19,14 @@ export type AlertDiscOption = {
   newPrice: number;
 };
 
-function suggestedThreshold(price: number): number {
-  return Math.max(10, Math.round((price * 0.9) / 10) * 10);
-}
-
 export function PriceAlertInline({ discs }: { discs: AlertDiscOption[] }) {
   const [discId, setDiscId] = useState(discs[0]?.discId ?? "");
   const selected = discs.find((d) => d.discId === discId) ?? discs[0];
 
-  const [threshold, setThreshold] = useState(() =>
-    selected ? String(suggestedThreshold(selected.newPrice)) : ""
-  );
+  // Starts empty, not a "suggested" price — a live default reads as if
+  // we've already decided a price for the user, and this field's whole
+  // point is "leave it blank to be notified at any price".
+  const [threshold, setThreshold] = useState("");
   const [showEmail, setShowEmail] = useState(false);
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
@@ -40,12 +38,11 @@ export function PriceAlertInline({ discs }: { discs: AlertDiscOption[] }) {
 
   function handleDiscChange(id: string) {
     setDiscId(id);
-    const disc = discs.find((d) => d.discId === id);
-    if (disc) setThreshold(String(suggestedThreshold(disc.newPrice)));
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (validatePriceThreshold(threshold)) return;
     if (!showEmail) {
       setShowEmail(true);
       return;
@@ -81,7 +78,9 @@ export function PriceAlertInline({ discs }: { discs: AlertDiscOption[] }) {
       <div className="mt-5 flex items-center gap-4 rounded-2xl border-2 border-[#101C14] bg-[#101C14] px-5 py-4 shadow-[4px_4px_0_#B8E04A]">
         <span className="dd-sticker shrink-0">Varsel er på ✓</span>
         <p className="text-sm text-[#FFFDF6]/80">
-          Vi sier fra når {selected.name} er under {threshold} kr.
+          {threshold
+            ? `Vi sier fra når ${selected.name} er under ${threshold} kr.`
+            : `Vi sier fra så snart ${selected.name} er tilgjengelig, uansett pris.`}
         </p>
       </div>
     );
@@ -120,16 +119,10 @@ export function PriceAlertInline({ discs }: { discs: AlertDiscOption[] }) {
 
         <div className="flex items-center gap-2.5">
           <span className="text-[15px] font-bold text-[#FFFDF6]/80">er under</span>
-          <div className="flex min-h-[44px] items-center gap-1 rounded-xl bg-[#FFFDF6] px-4 py-[11px]">
-            <input
-              type="number"
-              min={1}
-              value={threshold}
-              onChange={(e) => setThreshold(e.target.value)}
-              className="w-16 bg-transparent text-[17px] font-extrabold text-[#101C14] outline-none"
-            />
-            <span className="text-sm font-semibold text-[#101C1499]">kr</span>
-          </div>
+          {/* Label hidden visually (still present for screen readers) — the
+              surrounding "Varsle meg når [disk] er under [___] kr" sentence
+              already reads as its own label. */}
+          <PriceThresholdInput value={threshold} onChange={setThreshold} variant="light" showLabel={false} className="w-[132px]" />
         </div>
 
         {showEmail && (
@@ -159,7 +152,7 @@ export function PriceAlertInline({ discs }: { discs: AlertDiscOption[] }) {
         )}
       </div>
 
-      <button type="submit" disabled={loading || (showEmail && (!email || !consent))} className="dd-cta shrink-0 px-[22px] py-2.5 text-sm disabled:cursor-not-allowed disabled:opacity-40">
+      <button type="submit" disabled={loading || validatePriceThreshold(threshold) != null || (showEmail && (!email || !consent))} className="dd-cta shrink-0 px-[22px] py-2.5 text-sm disabled:cursor-not-allowed disabled:opacity-40">
         {loading ? "Lagrer…" : "Slå på"}
       </button>
 
