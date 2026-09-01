@@ -9,10 +9,6 @@ import { NewReleases } from "@/components/nytt/NewReleaseCard";
 import { StoreClusters } from "@/components/nytt/StoreCluster";
 import { WeekArchive } from "@/components/nytt/WeekArchive";
 
-// See app/nytt/page.tsx's header comment — these archive pages are live and
-// statically generated for every week we have data for, but not linked from
-// anywhere outside the /nytt/ cluster itself until the feature is promoted.
-
 export function generateStaticParams() {
   return getWeekIndex().map((w) => ({ weekSlug: w.slug }));
 }

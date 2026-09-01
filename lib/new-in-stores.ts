@@ -302,6 +302,7 @@ export function getWeekIndex(): {
   year: number;
   startDate: string;
   endDate: string;
+  frozen: boolean;
   newReleases: number;
   newAtStore: number;
   highlight: string;
@@ -315,6 +316,7 @@ export function getWeekIndex(): {
       year: w.year,
       startDate: w.startDate,
       endDate: w.endDate,
+      frozen: w.frozen,
       newReleases: releases.length,
       newAtStore: w.signals.filter((s) => s.type === "new-at-store").length,
       highlight: highlightSignals

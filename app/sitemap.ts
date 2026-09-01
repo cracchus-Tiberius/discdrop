@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { discs } from "@/data/discs.js";
 import { SLUG_TO_BRAND } from "@/app/brand/[slug]/page";
+import { getWeekIndex } from "@/lib/new-in-stores";
 
 export const dynamic = "force-static";
 
@@ -27,6 +28,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // A frozen week's file is immutable once written (see CLAUDE.md's
+  // "Hard-earned rules") — "never" is the accurate changeFrequency, not a
+  // guess. The live current week still updates daily.
+  const nyttWeekEntries: MetadataRoute.Sitemap = getWeekIndex().map((w) => ({
+    url: `${base}/nytt/${w.slug}/`,
+    changeFrequency: w.frozen ? "never" : "daily",
+    priority: 0.6,
+  }));
+
   return [
     {
       url: `${base}/`,
@@ -40,6 +50,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${base}/prisfall/`,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/nytt/`,
       changeFrequency: "daily",
       priority: 0.9,
     },
@@ -64,6 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     ...brandEntries,
+    ...nyttWeekEntries,
     ...discEntries,
   ];
 }

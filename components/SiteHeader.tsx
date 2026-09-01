@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: "/", label: "Hjem" },
   { href: "/#hot-drops", label: "Hot Drops" },
   { href: "/prisfall", label: "Prisfall" },
+  { href: "/nytt", label: "Nytt" },
   { href: "/browse", label: "Alle disker" },
   { href: "/bag/build", label: "Bygg min bag" },
 ];

@@ -8,13 +8,6 @@ import { NewReleases } from "@/components/nytt/NewReleaseCard";
 import { StoreClusters } from "@/components/nytt/StoreCluster";
 import { WeekArchive } from "@/components/nytt/WeekArchive";
 
-// Deliberately not linked from SiteHeader's nav or app/sitemap.ts yet — see
-// scripts/lib/new-in-stores.js's header comment: the underlying firstSeen
-// signal only became trustworthy after the mass-reset suppression fix
-// landed 2026-08-17, and needs 1-2 weeks of stable counts before this is
-// promoted. The page is fully live and functional at /nytt/ regardless —
-// gating is "don't point people at it yet," not "hide it."
-
 export const metadata: Metadata = {
   title: "Nytt i butikk — Diskgolf-disker | DiscDrop",
   description:
