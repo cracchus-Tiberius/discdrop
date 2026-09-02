@@ -1,0 +1,43 @@
+name: Scrape Freshness Alert
+
+# A separate, single-purpose check from daily-scrape.yml's own two crons on
+# purpose — that workflow failing already alerts on its own (a real scraper
+# crash), but a MISSED run (both the primary and catch-up crons somehow not
+# landing, e.g. GitHub's scheduler itself being down) produces no failure
+# for anyone to see. This job's only job is: is the live data actually
+# fresh? If not, fail loudly — a failed scheduled workflow run triggers
+# GitHub's own failure-email notification to the repo owner, with no
+# separate alerting infrastructure needed.
+#
+# Runs after both daily-scrape.yml crons (04:30 primary, 09:00 catch-up)
+# have had their chance, so a real problem — not just a late run — is what
+# trips this.
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 10:00 UTC
+  workflow_dispatch:
+
+jobs:
+  check-freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fail if scraped data is stale
+        run: |
+          LAST_UPDATED=$(node -e "console.log(require('./data/scraped-prices.json').lastUpdated || '')")
+          if [ -z "$LAST_UPDATED" ]; then
+            echo "::error::data/scraped-prices.json has no lastUpdated field — cannot confirm freshness."
+            exit 1
+          fi
+
+          AGE_HOURS=$(( ( $(date -u +%s) - $(date -u -d "$LAST_UPDATED" +%s) ) / 3600 ))
+          echo "Scraped data is $AGE_HOURS hours old (last updated $LAST_UPDATED)."
+
+          if [ "$AGE_HOURS" -gt 26 ]; then
+            echo "::error::Scraped data is $AGE_HOURS hours old (>26h) — both the primary (04:30 UTC) and catch-up (09:00 UTC) daily-scrape runs appear to have failed or not landed. Check the 'Daily Scrape & Deploy' workflow's recent runs."
+            exit 1
+          fi
+
+          echo "Data freshness OK."

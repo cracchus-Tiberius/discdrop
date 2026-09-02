@@ -1,12 +1,67 @@
 name: Daily Scrape & Deploy
 
+# Two cron triggers, not one — confirmed in production 2026-09-02: GitHub's
+# scheduler has been running the single 06:00 UTC cron hours late (once not
+# firing at all before 07:18 UTC the next check), so the live site sat a
+# full day stale into Norwegian morning with nothing self-correcting it.
+# '30 4 * * *' is the primary run, moved earlier so even a few hours of
+# GitHub-side drift still lands before Norway wakes up. '0 9 * * *' is a
+# catch-up: the check-staleness job below only lets it actually scrape if
+# the primary run never landed (or landed but the data is still stale for
+# some other reason) — see that job for the exact rule. A third workflow,
+# scrape-freshness-alert.yml, fails loudly (GitHub's own failure-email
+# notification) if data is still >26h old after both of these have had
+# their chance — that's the "something is actually broken, not just late"
+# signal.
 on:
   schedule:
-    - cron: '0 6 * * *'  # 06:00 UTC = 08:00 Norway time
+    - cron: '30 4 * * *'  # primary — 04:30 UTC
+    - cron: '0 9 * * *'   # catch-up — only scrapes if the primary didn't land
   workflow_dispatch:
 
 jobs:
+  # Gates the real work below to the catch-up cron only — the primary cron
+  # and any manual workflow_dispatch always proceed unconditionally. Kept as
+  # its own job (rather than an early-exit step inside scrape-and-deploy) so
+  # a skip shows up as a clean "skipped" job in the Actions UI, not a
+  # half-run one.
+  check-staleness:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Decide whether to run
+        id: check
+        run: |
+          if [ "${{ github.event.schedule }}" != "0 9 * * *" ]; then
+            echo "Primary cron or manual run — always scraping."
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          LAST_UPDATED=$(node -e "console.log(require('./data/scraped-prices.json').lastUpdated || '')")
+          if [ -z "$LAST_UPDATED" ]; then
+            echo "No lastUpdated found in data/scraped-prices.json — scraping to be safe."
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          AGE_HOURS=$(( ( $(date -u +%s) - $(date -u -d "$LAST_UPDATED" +%s) ) / 3600 ))
+          echo "Catch-up cron: last scrape is $AGE_HOURS hours old."
+          if [ "$AGE_HOURS" -ge 20 ]; then
+            echo "Stale (>=20h) — the primary run must have missed. Catching up now."
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Fresh enough — primary run already landed today. Skipping, no duplicate work."
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
   scrape-and-deploy:
+    needs: check-staleness
+    if: needs.check-staleness.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     # No job-level timeout means GitHub's default of 360 minutes (6 hours) —
     # confirmed in production 2026-08-19: "Install Playwright browsers" hung

@@ -65,8 +65,16 @@ Package manager: pnpm (always use pnpm, never npm).
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.
-- Scraping is automated via GitHub Actions (.github/workflows/daily-scrape.yml)
-  Runs daily at 06:00 UTC (08:00 Norway). Manual runs only needed for testing.
+- Scraping is automated via GitHub Actions (.github/workflows/daily-scrape.yml).
+  Two crons, not one: a primary run at 04:30 UTC, and a 09:00 UTC catch-up
+  that only actually scrapes if the primary didn't land (data still >=20h
+  old) — added 2026-09-02 after GitHub's own scheduler ran hours late/
+  missed a day outright, leaving the live site stale with nothing self-
+  correcting it. .github/workflows/scrape-freshness-alert.yml is a separate
+  10:00 UTC check that fails loudly (GitHub's normal failure-email) if data
+  is still >26h old after both crons have had their chance — that's the
+  "something is actually broken" signal, distinct from "just running late".
+  Manual runs only needed for testing.
 - Run manually with: pnpm scrape:all (or pnpm scrape:nydisk / pnpm scrape:discshopen
   etc. for a single store)
 - Output: data/scraped-prices.json + data/unmatched-products.json
