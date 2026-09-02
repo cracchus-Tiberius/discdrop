@@ -369,36 +369,38 @@ function PulseTicker({ newDropsThisWeek }: { newDropsThisWeek: number }) {
 
       {/* Mobile — kept as two compact rows (unlike desktop) since "I DAG" +
           every chip + both CTAs genuinely don't fit one line at 375px
-          without truncating something. */}
+          without truncating something. Stats always come first, links
+          always second — the band's whole job is a status readout, and a
+          link row above unread numbers reads backwards. */}
       <div className="px-5 py-2.5 md:hidden">
-        <div className="mb-1.5 flex items-center justify-between">
-          <span className="flex items-center gap-2">
+        <div className="mb-1.5 flex items-center">
+          <span className="mr-3 flex shrink-0 items-center gap-1.5">
             <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
             <span className="text-[11px] font-extrabold tracking-[0.14em] text-[#B8E04A]">I DAG</span>
           </span>
-          <span className="flex items-center gap-3">
-            <Link href="/prisfall" className="flex items-center gap-1 text-xs font-extrabold">
-              Se alle prisfall
-              <TickerArrow size={13} />
-            </Link>
-            <Link href="/nytt" className="flex items-center gap-1 text-xs font-extrabold">
-              Se ukas drops
-              <TickerArrow size={13} />
-            </Link>
+          <span className="flex min-w-0 flex-1 items-center overflow-x-auto">
+            {chips.map((chip, i) => (
+              <span
+                key={chip.label}
+                className={`flex shrink-0 items-baseline gap-1 pr-3 first:pl-0 ${i > 0 ? "border-l border-[#FFFDF6]/[0.16] pl-3" : ""}`}
+              >
+                <span className="text-sm font-extrabold" style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}>
+                  {chip.value}
+                </span>
+                <span className="text-[11px] font-semibold text-[#FFFDF699]">{chip.label}</span>
+              </span>
+            ))}
           </span>
         </div>
-        <span className="flex items-center">
-          {chips.map((chip, i) => (
-            <span
-              key={chip.label}
-              className={`flex items-baseline gap-1 pr-3 first:pl-0 ${i > 0 ? "border-l border-[#FFFDF6]/[0.16] pl-3" : ""}`}
-            >
-              <span className="text-sm font-extrabold" style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}>
-                {chip.value}
-              </span>
-              <span className="text-[11px] font-semibold text-[#FFFDF699]">{chip.label}</span>
-            </span>
-          ))}
+        <span className="flex items-center gap-4">
+          <Link href="/prisfall" className="flex items-center gap-1 text-xs font-extrabold">
+            Se alle prisfall
+            <TickerArrow size={13} />
+          </Link>
+          <Link href="/nytt" className="flex items-center gap-1 text-xs font-extrabold">
+            Se ukas drops
+            <TickerArrow size={13} />
+          </Link>
         </span>
       </div>
     </div>

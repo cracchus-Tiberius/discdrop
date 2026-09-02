@@ -92,7 +92,7 @@ export default function ButikkerPage() {
                 <a
                   href={store.url}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener"
                   className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border-2 border-[#101C14] bg-[#101C14] px-4 py-2 text-sm font-semibold text-[#FFFDF6] transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
                 >
                   Besøk butikken ↗

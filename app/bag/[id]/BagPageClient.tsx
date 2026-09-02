@@ -643,6 +643,8 @@ export function BagPageClient() {
                 <a
                   key={gear.name}
                   href={gear.url}
+                  target="_blank"
+                  rel="noopener"
                   className="flex flex-col rounded-2xl border-2 border-[#101C14] bg-white p-5 transition-all hover:-translate-y-0.5 hover:shadow-[3px_3px_0_#B8E04A]"
                 >
                   <div className="mb-2 flex items-start justify-between gap-2">

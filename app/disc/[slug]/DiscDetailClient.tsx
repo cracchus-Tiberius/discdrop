@@ -154,7 +154,7 @@ export function PriceTable({
                           <a
                             href={row.url}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noopener"
                             className={`dd-cta text-xs ${inline ? "px-3 py-1.5" : "px-4 py-2"}`}
                           >
                             {inline ? "Kjøp" : "Gå til butikk"}
@@ -214,7 +214,7 @@ export function PriceTable({
                     <a
                       href={row.url}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="noopener"
                       className="dd-cta block w-full py-2.5 text-center text-sm"
                     >
                       Gå til butikk
@@ -766,13 +766,13 @@ export function DiscHeroSection({
           <a
             href={bestEntry.url}
             target="_blank"
-            rel="noopener noreferrer"
-            className="dd-cta flex w-full items-center justify-between px-5 py-3.5"
+            rel="noopener"
+            className="dd-cta flex w-full items-center gap-3 px-5 py-3.5"
           >
-            <span className="text-sm font-semibold opacity-90">
+            <span className="min-w-0 flex-1 truncate text-sm font-semibold opacity-90">
               Beste pris: <span className="font-extrabold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
             </span>
-            <span className="flex items-center gap-1 text-sm font-extrabold">
+            <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold">
               Kjøp
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
                 <path d="M5 12h14M12 5l7 7-7 7" />
