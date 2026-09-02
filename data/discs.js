@@ -139,7 +139,29 @@ export const discs = [
   { id:"mvp-relay", name:"Relay", brand:"MVP", type:"fairway", flight:{speed:6,glide:5,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"mvp-servo", name:"Servo", brand:"MVP", type:"fairway", flight:{speed:6.5,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"mvp-tesla", name:"Tesla", brand:"MVP", type:"distance", flight:{speed:9,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-active", name:"Active", brand:"Discmania", type:"midrange", flight:{speed:5,glide:5,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  // "Active"/"Active Premium"/"Active Soft"/"Active Premium Glow" are
+  // Discmania's beginner-focused PLASTIC LINE (see docs/DiscDrop_Knowledge_
+  // Base.md's "Active Line" section), not a mold — there is no disc called
+  // just "Active". The old discmania-active catalog entry wrongly treated
+  // it as one mold, which made it a catch-all: matchDisc()'s substring
+  // matching found "active" in every Active-line product title (since none
+  // of the REAL molds below had their own catalog entry to win against),
+  // so listings for at least 9 different real discs — with 9 different
+  // real flight numbers — all landed on one wrong id with one wrong image.
+  // Confirmed in production 2026-09-02 (routine-flagged): a scraped
+  // "Active Premium Rockstar" listing displayed as "Active" with a
+  // Rockstar product photo. Split into the real Active-line molds, flight
+  // numbers from discmania.net's own product pages:
+  { id:"discmania-astronaut", name:"Astronaut", brand:"Discmania", type:"distance", flight:{speed:12,glide:6,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-genius", name:"Genius", brand:"Discmania", type:"fairway", flight:{speed:7,glide:5,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-maestro", name:"Maestro", brand:"Discmania", type:"midrange", flight:{speed:4,glide:3,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-magician", name:"Magician", brand:"Discmania", type:"fairway", flight:{speed:6,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-majesty", name:"Majesty", brand:"Discmania", type:"distance", flight:{speed:13,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-mentor", name:"Mentor", brand:"Discmania", type:"distance", flight:{speed:11,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-mermaid", name:"Mermaid", brand:"Discmania", type:"fairway", flight:{speed:7,glide:4,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-rockstar", name:"Rockstar", brand:"Discmania", type:"fairway", flight:{speed:8,glide:5,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-sensei", name:"Sensei", brand:"Discmania", type:"putter", flight:{speed:3,glide:3,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"discmania-shogun", name:"Shogun", brand:"Discmania", type:"putter", flight:{speed:2,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"discmania-cd", name:"CD", brand:"Discmania", type:"distance", flight:{speed:10,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"discmania-cd2", name:"CD2", brand:"Discmania", type:"fairway", flight:{speed:9,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"discmania-cd3", name:"CD3", brand:"Discmania", type:"distance", flight:{speed:11,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
