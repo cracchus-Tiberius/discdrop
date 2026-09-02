@@ -6,59 +6,21 @@
   "endDate": "2026-09-06",
   "signals": [
     {
-      "discId": "discraft-stratus",
-      "name": "Stratus",
-      "brand": "Discraft",
+      "discId": "axiom-rhythm",
+      "name": "Rhythm",
+      "brand": "Axiom",
       "image": "",
       "type": "new-release",
-      "plastic": "X Line",
+      "plastic": "Cosmic Neutron",
       "edition": null,
-      "firstSeenMs": 1788261855813,
-      "price": 204,
+      "firstSeenMs": 1788334524370,
+      "price": 282,
       "stores": [
         {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 204,
-          "url": "https://nydisk.no/products/discraft-x-line-stratus"
-        }
-      ]
-    },
-    {
-      "discId": "dynamic-enforcer",
-      "name": "Enforcer",
-      "brand": "Dynamic Discs",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Lucid Ice",
-      "edition": "Sockibomb",
-      "firstSeenMs": 1788261855813,
-      "price": 185,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 185,
-          "url": "https://nydisk.no/products/dynamic-discs-lucid-ice-enforcer-sockibomb"
-        }
-      ]
-    },
-    {
-      "discId": "dynamic-raider",
-      "name": "Raider",
-      "brand": "Dynamic Discs",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Lucid X",
-      "edition": "Ricky Wysocki",
-      "firstSeenMs": 1788261855813,
-      "price": 185,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 185,
-          "url": "https://nydisk.no/products/dynamic-discs-lucid-x-chameleon-raider-ricky-wysocki"
+          "store": "discsport",
+          "storeName": "Discsport",
+          "price": 282,
+          "url": "https://discsport.se/discar/mold/rhythm"
         }
       ]
     },
@@ -70,7 +32,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1788260833457,
+      "firstSeenMs": 1788333587997,
       "price": 214,
       "stores": [
         {
@@ -90,12 +52,12 @@
       "plastic": "Prism Proton",
       "edition": "2026",
       "firstSeenMs": 1788250341774,
-      "price": 283,
+      "price": 282,
       "stores": [
         {
           "store": "discsport",
           "storeName": "Discsport",
-          "price": 283,
+          "price": 282,
           "url": "https://discsport.se/discar/mold/insanity"
         }
       ]
@@ -109,12 +71,12 @@
       "plastic": "Opto-X Glimmer",
       "edition": null,
       "firstSeenMs": 1788249848917,
-      "price": 294,
+      "price": 293,
       "stores": [
         {
           "store": "rocketdiscs",
           "storeName": "Rocketdiscs",
-          "price": 294,
+          "price": 293,
           "url": "https://rocketdiscs.com/latitude-64-fuse"
         }
       ]
@@ -241,14 +203,33 @@
       "type": "new-at-store",
       "plastic": "Jawbreaker",
       "edition": "Paul McBeth",
-      "firstSeenMs": 1788263043814,
-      "price": 268,
+      "firstSeenMs": 1788334941577,
+      "price": 267,
       "stores": [
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
-          "price": 268,
+          "price": 267,
           "url": "https://ugglansdiscgolf.se/products/jawbreaker-luna-paul-mcbeth"
+        }
+      ]
+    },
+    {
+      "discId": "innova-valkyrie",
+      "name": "Valkyrie",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Star",
+      "edition": null,
+      "firstSeenMs": 1788334524370,
+      "price": 233,
+      "stores": [
+        {
+          "store": "discsport",
+          "storeName": "Discsport",
+          "price": 233,
+          "url": "https://discsport.se/discar/mold/valkyrie"
         }
       ]
     },
@@ -260,13 +241,13 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1788261882708,
-      "price": 284,
+      "firstSeenMs": 1788334013824,
+      "price": 283,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 284,
+          "price": 283,
           "url": "https://www.discexpress.se/products/fuse-project-grip"
         }
       ]
@@ -279,13 +260,13 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": "Anthony Barela",
-      "firstSeenMs": 1788261882708,
-      "price": 245,
+      "firstSeenMs": 1788334013824,
+      "price": 244,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 245,
+          "price": 244,
           "url": "https://www.discexpress.se/products/cigarra-z-first-run-anthony-barela"
         }
       ]
@@ -298,13 +279,13 @@
       "type": "new-at-store",
       "plastic": "Halo Champion Proto Glow",
       "edition": "Tour Series",
-      "firstSeenMs": 1788261882708,
-      "price": 381,
+      "firstSeenMs": 1788334013824,
+      "price": 380,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 381,
+          "price": 380,
           "url": "https://www.discexpress.se/products/gorgon-halo-champion-proto-glow-dennis-augustsson-copy"
         }
       ]
@@ -317,13 +298,13 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1788261882708,
-      "price": 313,
+      "firstSeenMs": 1788334013824,
+      "price": 312,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 313,
+          "price": 312,
           "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
         }
       ]
@@ -336,13 +317,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1788261882708,
-      "price": 264,
+      "firstSeenMs": 1788334013824,
+      "price": 263,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 264,
+          "price": 263,
           "url": "https://www.discexpress.se/products/destiny-tournament-x-ring"
         }
       ]
@@ -355,13 +336,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1788261882708,
-      "price": 264,
+      "firstSeenMs": 1788334013824,
+      "price": 263,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 264,
+          "price": 263,
           "url": "https://www.discexpress.se/products/prince-tournament-x"
         }
       ]
@@ -374,13 +355,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1788261882708,
-      "price": 264,
+      "firstSeenMs": 1788334013824,
+      "price": 263,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 264,
+          "price": 263,
           "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
         }
       ]
@@ -393,52 +374,14 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1788261882708,
-      "price": 264,
+      "firstSeenMs": 1788334013824,
+      "price": 263,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 264,
+          "price": 263,
           "url": "https://www.discexpress.se/products/sword-tournament-x"
-        }
-      ]
-    },
-    {
-      "discId": "latitude-anchor",
-      "name": "Anchor",
-      "brand": "Latitude 64",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Gold Ice",
-      "edition": null,
-      "firstSeenMs": 1788261855813,
-      "price": 274,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 274,
-          "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
-        }
-      ]
-    },
-    {
-      "discId": "westside-stag",
-      "name": "Stag",
-      "brand": "Westside Discs",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "VIP",
-      "edition": "2025",
-      "firstSeenMs": 1788261855813,
-      "price": 294,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 294,
-          "url": "https://nydisk.no/products/westside-discs-vip-x-ring-stag-heidi-laine-2025"
         }
       ]
     },
@@ -450,7 +393,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1788261845058,
+      "firstSeenMs": 1788333960933,
       "price": 184,
       "stores": [
         {
@@ -469,7 +412,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1788261845058,
+      "firstSeenMs": 1788333960933,
       "price": 190,
       "stores": [
         {
@@ -488,7 +431,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1788261845058,
+      "firstSeenMs": 1788333960933,
       "price": 294,
       "stores": [
         {
@@ -507,7 +450,7 @@
       "type": "new-at-store",
       "plastic": "JK Pro",
       "edition": null,
-      "firstSeenMs": 1788260833457,
+      "firstSeenMs": 1788333587997,
       "price": 214,
       "stores": [
         {
@@ -532,7 +475,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1788260833457,
+      "firstSeenMs": 1788333587997,
       "price": 214,
       "stores": [
         {
@@ -551,7 +494,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1788260833457,
+      "firstSeenMs": 1788333587997,
       "price": 214,
       "stores": [
         {
@@ -576,7 +519,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1788260833457,
+      "firstSeenMs": 1788333587997,
       "price": 214,
       "stores": [
         {
@@ -584,6 +527,25 @@
           "storeName": "We Are Disc Golf",
           "price": 214,
           "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-gatekeeper",
+      "name": "Gatekeeper",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "VIP",
+      "edition": null,
+      "firstSeenMs": 1788261882708,
+      "price": 225,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 225,
+          "url": "https://www.discexpress.se/products/gatekeeper-vip"
         }
       ]
     },
@@ -615,12 +577,12 @@
       "plastic": "Neutron",
       "edition": null,
       "firstSeenMs": 1788250341774,
-      "price": 263,
+      "price": 262,
       "stores": [
         {
           "store": "discsport",
           "storeName": "Discsport",
-          "price": 263,
+          "price": 262,
           "url": "https://discsport.se/discar/mold/insanity"
         }
       ]
@@ -634,32 +596,13 @@
       "plastic": "Neutron",
       "edition": null,
       "firstSeenMs": 1788250341774,
-      "price": 215,
+      "price": 214,
       "stores": [
         {
           "store": "discsport",
           "storeName": "Discsport",
-          "price": 215,
+          "price": 214,
           "url": "https://discsport.se/discar/mold/wrath"
-        }
-      ]
-    },
-    {
-      "discId": "latitude-gatekeeper",
-      "name": "Gatekeeper",
-      "brand": "Latitude 64",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "VIP",
-      "edition": null,
-      "firstSeenMs": 1788249807725,
-      "price": 225,
-      "stores": [
-        {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 225,
-          "url": "https://www.discexpress.se/products/gatekeeper-vip"
         }
       ]
     },
@@ -729,12 +672,12 @@
       "plastic": "Z",
       "edition": null,
       "firstSeenMs": 1788182064046,
-      "price": 268,
+      "price": 267,
       "stores": [
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
-          "price": 268,
+          "price": 267,
           "url": "https://ugglansdiscgolf.se/products/z-sled"
         }
       ]
@@ -957,7 +900,7 @@
       "plastic": "VIP",
       "edition": null,
       "firstSeenMs": 1788180193979,
-      "price": 264,
+      "price": 263,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -968,12 +911,12 @@
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 264,
+          "price": 263,
           "url": "https://www.discexpress.se/products/vip-x-orbit-ahti-westside-fishing"
         }
       ]
     }
   ],
   "frozen": false,
-  "generated": "2026-09-01T18:26:18.721Z"
+  "generated": "2026-09-02T07:43:06.141Z"
 }
