@@ -355,10 +355,3 @@ export function weekHeroHeadline(): string {
   return "Ukas ferske DiscDrops.";
 }
 
-/** "kl. 06:12" style time, formatted in Norwegian time from the build's ASOF snapshot — never Date.now(). */
-export function formatCheckedAtTime(iso: string | null): string | null {
-  if (!iso) return null;
-  return new Intl.DateTimeFormat("nb-NO", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" }).format(
-    new Date(iso)
-  );
-}

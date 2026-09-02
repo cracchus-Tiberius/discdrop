@@ -5,7 +5,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { SearchInput } from "@/components/SearchInput";
+import { CheckedAtLabel } from "@/components/CheckedAtLabel";
 import { discs } from "@/data/discs.js";
+import { scrapedLastUpdated } from "@/lib/disc-utils";
 
 const NAV_LINKS = [
   { href: "/", label: "Hjem" },
@@ -109,11 +111,13 @@ export function SiteHeader() {
               </Link>
             ))}
 
-            <div className="mt-7">
-              <span className="inline-block -rotate-3 rounded-lg bg-[#B8E04A] px-2.5 py-1.5 text-xs font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
-                Oppdatert i dag ✓
-              </span>
-            </div>
+            {scrapedLastUpdated && (
+              <div className="mt-7">
+                <span className="inline-block -rotate-3 rounded-lg bg-[#B8E04A] px-2.5 py-1.5 text-xs font-extrabold text-[#101C14] shadow-[2px_2px_0_#101C14]">
+                  Oppdatert <CheckedAtLabel iso={scrapedLastUpdated} />
+                </span>
+              </div>
+            )}
             <p className="mt-6 text-xs text-white/40">
               <Link href="/butikker" onClick={() => setMenuOpen(false)} className="hover:text-white/70">Butikker</Link>
               {" · "}

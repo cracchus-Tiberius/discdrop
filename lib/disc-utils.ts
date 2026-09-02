@@ -268,3 +268,38 @@ export function formatRelativeTime(iso: string): string {
   const days = Math.floor(hours / 24);
   return days === 1 ? "for 1 dag siden" : `for ${days} dager siden`;
 }
+
+/** "YYYY-MM-DD" for a Date in Europe/Oslo — used only to compare calendar days, not for display. */
+function osloDayString(d: Date): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit" }).format(d);
+}
+
+/**
+ * "i dag kl. 13:44" / "i går kl. 13:44" / "31. august kl. 13:44" — Norway-
+ * calendar-day-aware, not a fixed elapsed-time duration. Must be called with
+ * a real client-side `now` (defaults to `new Date()`, i.e. call this from a
+ * client component after mount) — the site is a static export, so "i dag"
+ * baked in at build/scrape time goes stale and stays stale on the live page
+ * until the next deploy, however long that takes. Confirmed in production
+ * 2026-09-02: a delayed scheduled scrape meant "i dag kl. 13:44" was still
+ * showing a full day later, because that string was rendered once, at
+ * build time, and never revisited.
+ */
+export function formatCheckedAtLabel(iso: string, now: Date = new Date()): string {
+  const scraped = new Date(iso);
+  const time = new Intl.DateTimeFormat("nb-NO", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Oslo" }).format(scraped);
+
+  const scrapedDay = osloDayString(scraped);
+  const nowDay = osloDayString(now);
+  if (scrapedDay === nowDay) return `i dag kl. ${time}`;
+
+  // Yesterday, computed from nowDay's own Y-M-D components (not by
+  // subtracting a raw 24h in ms from `now`) so a DST transition can't shift
+  // the comparison onto the wrong calendar day.
+  const [ny, nm, nd] = nowDay.split("-").map(Number);
+  const yesterday = new Date(Date.UTC(ny, nm - 1, nd - 1));
+  if (scrapedDay === osloDayString(yesterday)) return `i går kl. ${time}`;
+
+  const dateStr = new Intl.DateTimeFormat("nb-NO", { day: "numeric", month: "long", timeZone: "Europe/Oslo" }).format(scraped);
+  return `${dateStr} kl. ${time}`;
+}

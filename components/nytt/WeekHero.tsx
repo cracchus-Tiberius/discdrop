@@ -1,7 +1,8 @@
 import type { Week } from "@/lib/new-in-stores";
-import { formatWeekDateRange, weekHeroHeadline, formatCheckedAtTime } from "@/lib/new-in-stores";
+import { formatWeekDateRange, weekHeroHeadline } from "@/lib/new-in-stores";
 import { scrapedLastUpdated } from "@/lib/disc-utils";
 import { dropsLabel, storesLabel, stockingsLabel } from "@/lib/pluralize";
+import { CheckedAtLabel } from "@/components/CheckedAtLabel";
 
 /** "Uka som event" — calendar block, headline, and a dark stats strip glued to the section's bottom edge. */
 export function WeekHero({
@@ -18,7 +19,7 @@ export function WeekHero({
   const headline = isQuietWeek ? "Rolig uke. Ingen nye drops fanget opp." : weekHeroHeadline();
   const [firstLine, ...rest] = headline.split(" ");
   const lastWord = rest.pop();
-  const checkedAt = !isArchive ? formatCheckedAtTime(scrapedLastUpdated) : null;
+  const showCheckedAt = !isArchive && scrapedLastUpdated != null;
 
   return (
     <section className="w-full border-b-2 border-[#101C14] bg-[#FFFDF6] px-5 pt-7 md:px-10 md:pt-12">
@@ -52,9 +53,9 @@ export function WeekHero({
             <StatCellMobile value={week.totalStoreArrivals} label={stockingsLabel(week.totalStoreArrivals)} border />
             <StatCellMobile value={week.storeCount} label={storesLabel(week.storeCount)} border />
           </div>
-          {checkedAt && (
+          {showCheckedAt && (
             <div className="border-t border-[#FFFDF6]/[0.16] px-[18px] pb-[11px] pt-[11px] text-[13px] font-semibold text-[#FFFDF677] md:hidden">
-              Sist sjekket i dag kl. {checkedAt}
+              Sist sjekket <CheckedAtLabel iso={scrapedLastUpdated!} />
             </div>
           )}
 
@@ -62,10 +63,12 @@ export function WeekHero({
             <StatCellDesktop value={week.newReleaseSignals.length} label={dropsLabel(week.newReleaseSignals.length)} accent />
             <StatCellDesktop value={week.totalStoreArrivals} label={stockingsLabel(week.totalStoreArrivals)} border />
             <StatCellDesktop value={week.storeCount} label={storesLabel(week.storeCount)} border />
-            {checkedAt && (
+            {showCheckedAt && (
               <div className="ml-auto flex shrink-0 items-center gap-2.5 border-l border-[#FFFDF6]/[0.16] px-[26px] py-5">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-[#B8E04A]" aria-hidden />
-                <span className="text-[13px] font-semibold text-[#FFFDF677]">Sist sjekket i dag kl. {checkedAt}</span>
+                <span className="text-[13px] font-semibold text-[#FFFDF677]">
+                  Sist sjekket <CheckedAtLabel iso={scrapedLastUpdated!} />
+                </span>
               </div>
             )}
           </div>
