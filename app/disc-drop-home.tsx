@@ -386,10 +386,10 @@ function PulseTicker({ newDropsThisWeek }: { newDropsThisWeek: number }) {
             <span className="text-[10px] font-extrabold tracking-[0.1em] text-[#B8E04A]">I DAG</span>
           </span>
           <span className="flex min-w-0 flex-1 items-center overflow-hidden">
-            {chips.map((chip, i) => (
+            {chips.map((chip) => (
               <span
                 key={chip.label}
-                className={`flex min-w-0 shrink items-baseline gap-1 pr-2 first:pl-0 ${i > 0 ? "border-l border-[#FFFDF6]/[0.16] pl-2" : ""}`}
+                className="flex min-w-0 shrink items-center gap-1 border-l border-[#FFFDF6]/[0.16] pl-2 pr-2"
               >
                 <span className="shrink-0 text-sm font-extrabold" style={{ color: chip.highlight ? "#B8E04A" : "#FFFDF6" }}>
                   {chip.value}
