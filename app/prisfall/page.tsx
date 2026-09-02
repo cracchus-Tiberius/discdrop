@@ -37,7 +37,8 @@ function BellButton({ open, onClick }: { open: boolean; onClick: () => void }) {
 /**
  * Today's group. Two genuinely different layouts, not one responsive one —
  * mobile is a single tappable row (thumbnail · name/brand/price-line ·
- * badge+price+"Se pris"), desktop keeps the larger row with the alert bell.
+ * badge/price/"Se disk →" stacked at right), desktop keeps the larger row
+ * with the alert bell.
  * Confirmed in production 2026-09-02: the old flex-col-on-mobile layout
  * stacked every element (rank, image, name, sparkline all full-width), so
  * one drop consumed a full screen; mobile drops the sparkline and the bell
@@ -67,14 +68,12 @@ function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
           </p>
         </div>
 
-        <div className="flex shrink-0 flex-col items-end gap-1.5">
-          <div className="flex items-baseline gap-1.5">
-            <span className="inline-flex w-fit -rotate-2 items-center rounded-lg bg-[#B8E04A] px-[7px] py-[3px] text-[11px] font-extrabold text-[#101C14] shadow-[1.5px_1.5px_0_#101C14]">
-              −{Math.abs(row.pct)} %
-            </span>
-            <span className="text-[15px] font-extrabold text-[#101C14]">{row.newPrice},-</span>
-          </div>
-          <span className="dd-cta px-2.5 py-1 text-[11px]">Se pris</span>
+        <div className="flex shrink-0 flex-col items-end gap-2">
+          <span className="inline-flex w-fit -rotate-2 items-center rounded-lg bg-[#B8E04A] px-[7px] py-[3px] text-[11px] font-extrabold text-[#101C14] shadow-[1.5px_1.5px_0_#101C14]">
+            −{Math.abs(row.pct)} %
+          </span>
+          <span className="text-[15px] font-extrabold text-[#101C14]">{row.newPrice},-</span>
+          <span className="dd-cta px-2.5 py-1 text-[11px]">Se disk →</span>
         </div>
       </Link>
 
@@ -112,7 +111,7 @@ function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
         <div className="flex shrink-0 items-center gap-2">
           <BellButton open={alertOpen} onClick={() => setAlertOpen((v) => !v)} />
           <Link href={`/disc/${row.discId}`} className="dd-cta px-4 py-2 text-sm">
-            Se pris
+            Se disk →
           </Link>
         </div>
       </div>
