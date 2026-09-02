@@ -77,7 +77,7 @@ function NewDiscCard({ signal, compact }: { signal: SignalRow; compact: boolean 
               <p className="text-[11px] text-[#101C1477]">{signal.hasShippingData ? "fra, inkl. frakt" : "fra"}</p>
               <p className={`font-extrabold text-[#101C14] ${compact ? "text-xl" : "text-2xl"}`}>{signal.price},-</p>
             </div>
-            <span className="dd-cta min-h-[44px] px-5 text-sm">Se pris</span>
+            <span className="dd-cta min-h-[44px] px-5 text-sm">Se disk →</span>
           </div>
         </div>
       </div>

@@ -61,7 +61,7 @@ function ReleaseCard({ signal }: { signal: SignalRow }) {
             <p className="text-[11px] text-[#101C1477]">{signal.hasShippingData ? "fra, inkl. frakt" : "fra"}</p>
             <p className="text-2xl font-extrabold text-[#101C14]">kr {signal.price}</p>
           </div>
-          <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
+          <span className="dd-cta px-4 py-2 text-sm">Se disk →</span>
         </div>
       </div>
     </Link>

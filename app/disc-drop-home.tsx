@@ -529,7 +529,7 @@ function HotDrops() {
                   </p>
                   <p className="text-[11px] text-[#101C1499]">inkl. frakt · {row.storeCount} {storesLabel(row.storeCount)}</p>
                 </div>
-                <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
+                <span className="dd-cta px-4 py-2 text-sm">Se disk →</span>
               </div>
             </Link>
           ))}
@@ -588,7 +588,7 @@ function LatestDrops() {
                   </p>
                   <p className="text-[11px] text-[#101C1499]"><RelativeTime iso={row.firstSeen} /></p>
                 </div>
-                <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
+                <span className="dd-cta px-4 py-2 text-sm">Se disk →</span>
               </div>
             </Link>
           ))}
@@ -642,7 +642,7 @@ function PriceDropCard({ row }: { row: ReturnType<typeof getPriceDropRows>[numbe
           </div>
           <p className="text-[11px] text-[#101C1499]">inkl. frakt · {row.storeName}</p>
         </div>
-        <span className="dd-cta px-4 py-2 text-sm">Se pris</span>
+        <span className="dd-cta px-4 py-2 text-sm">Se disk →</span>
       </div>
     </Link>
   );
