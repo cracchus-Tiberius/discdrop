@@ -59,3 +59,14 @@
 /disc/latitude-origin/       /disc/discmania-origin/    301
 /disc/latitude-splice        /disc/discmania-splice/    301
 /disc/latitude-splice/       /disc/discmania-splice/    301
+
+# discmania-active removed (2026-09-02) — it was a catch-all keyed on
+# Discmania's "Active" plastic LINE, not a mold, so it doesn't map to one
+# specific successor disc (see data/discs.js's comment above the new
+# discmania-{maestro,rockstar,mentor,...} entries). Redirect to the brand
+# page rather than guessing at a single mold. No confirmed evidence this
+# URL was indexed (a site: search turned up nothing), but it had lived
+# with real scraped prices for a while, so keeping the redirect is cheap
+# insurance against stale backlinks/cached results.
+/disc/discmania-active        /brand/discmania/          301
+/disc/discmania-active/       /brand/discmania/          301
