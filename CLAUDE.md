@@ -48,6 +48,19 @@ Package manager: pnpm (always use pnpm, never npm).
   Berg is pinned at the top regardless of the feed — a US retailer's ranking won't
   surface a Scandinavian-market favorite. Run manually with: pnpm scrape:top-sellers
 
+## Matcher-regler
+- Mold-matching skal være case-insensitiv og mellomrom/bindestrek-insensitiv
+  (Cloud Breaker = CloudBreaker = Cloudbreaker). Sammenlign på ordgrense-vindu,
+  ikke fri substring: å strippe mellomrom globalt og så gjøre `includes()` gir
+  falske treff ("wasp" i "glow aspect", "nova" i "innova", "fire" i "hellfire").
+  Normaliser hvert n-gram-vindu av produkttittelen og krev likhet mot
+  katalognavnet.
+- Ved umatchede produkter: klassifiser alltid (a) ekte ny mold → ny
+  discs.js-oppføring vs (b) skrivevariant → alias/normalisering i matcher.
+  Aldri duplikat-oppføringer.
+- Kjente alias-feller: Cloudbreaker, Q-Line/Q-Line Premier, Kaxe Z,
+  nickname-first Discmania-titler.
+
 ## Scraper
 - scripts/scrape-all.js runs every store scraper in sequence (10-min timeout each,
   20 min for Aceshop — see comment there). One failure doesn't block the rest.

@@ -241,6 +241,29 @@ function matchDiscCandidate(rawProductName) {
   normalisedNoSplit = normalisedNoSplit.replace(/^20\d{2}\s+/, '');
   normalisedNoSplit = normalisedNoSplit.replace(/([a-z])(\d)/g, '$1 $2');
 
+  // Separator-insensitive index of the product title: every 1-3 word window,
+  // joined with its spaces and hyphens removed. Lets a catalog name written as
+  // one word match a store that writes it as two ("Cloudbreaker" vs Discmania's
+  // own "Cloud Breaker", 55 live listings across the store network) without
+  // resorting to a bare substring test on a space-stripped title — that test
+  // reports "wasp" inside "glow aspect", "nova" inside "innova", "fire" inside
+  // "hellfire" and "spark" inside "sparkle". Windows preserve word boundaries,
+  // so only a real name-shaped run of words can match. See CLAUDE.md's
+  // "Matcher-regler".
+  const sepFreeWindows = new Set();
+  for (const text of normalisedNoSplit !== normalised ? [normalised, normalisedNoSplit] : [normalised]) {
+    const words = text.split(/\s+/).filter(Boolean);
+    for (let i = 0; i < words.length; i++) {
+      for (let j = i + 1; j <= Math.min(i + 3, words.length); j++) {
+        sepFreeWindows.add(words.slice(i, j).join(''));
+      }
+    }
+  }
+  // Guarded to names of 5+ characters. Shorter ones are exactly where joining
+  // adjacent words starts producing accidents, and they are already the case
+  // the brand check below exists for.
+  const MIN_SEP_FREE_LEN = 5;
+
   let bestMatch = null;
   let bestScore = 0;
 
@@ -251,7 +274,9 @@ function matchDiscCandidate(rawProductName) {
       '(?:^|\\s)' + discName.replace(/\s+/g, '\\s+') + '(?:\\s|$)',
       'i'
     );
-    if (pattern.test(normalised) || (normalisedNoSplit !== normalised && pattern.test(normalisedNoSplit))) {
+    const discNameSepFree = discName.replace(/\s+/g, '');
+    const sepFreeHit = discNameSepFree.length >= MIN_SEP_FREE_LEN && sepFreeWindows.has(discNameSepFree);
+    if (pattern.test(normalised) || (normalisedNoSplit !== normalised && pattern.test(normalisedNoSplit)) || sepFreeHit) {
       // Very short disc names (<= 3 chars, e.g. "Spy", "H1", "P2") require the
       // brand name to also appear — otherwise a short, generic-looking name
       // can match a completely unrelated product from a different brand that
