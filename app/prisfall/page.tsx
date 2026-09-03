@@ -36,14 +36,17 @@ function BellButton({ open, onClick }: { open: boolean; onClick: () => void }) {
 
 /**
  * Today's group. Two genuinely different layouts, not one responsive one —
- * mobile is a single tappable row (thumbnail · name/brand/price-line ·
- * badge/price/"Se disk →" stacked at right), desktop keeps the larger row
- * with the alert bell.
+ * mobile is a single tappable row (thumbnail with the pct badge pinned to
+ * its top-left corner and rank pinned to its bottom-left · name/brand/
+ * price-line · price/"Se disk →" stacked at right), desktop keeps the
+ * larger row with the alert bell.
  * Confirmed in production 2026-09-02: the old flex-col-on-mobile layout
  * stacked every element (rank, image, name, sparkline all full-width), so
- * one drop consumed a full screen; mobile drops the sparkline and the bell
- * (rank sits as a small badge over the thumbnail instead of its own column)
- * to keep the row compact and the tap target unambiguous.
+ * one drop consumed a full screen; a follow-up put the badge inline next
+ * to the price, which then collided with it on wide badges/long prices.
+ * Pinning the badge to the thumbnail frees the right column down to just
+ * price + CTA, sidesteps that collision, and drops the bell (didn't fit
+ * cleanly on mobile) so the row is one clean tap target.
  */
 function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
   const [alertOpen, setAlertOpen] = useState(false);
@@ -53,9 +56,14 @@ function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
     <li className="border-b-2 border-[#101C14] last:border-b-0">
       {/* Mobile compact row */}
       <Link href={`/disc/${row.discId}`} className="flex items-center gap-2.5 py-2.5 sm:hidden">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-[#F1EFE6]">
-          <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
-          <span className="absolute -left-1 -top-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#FFFDF6] bg-[#101C14] text-[9px] font-extrabold text-[#FFFDF6]">
+        <div className="relative h-14 w-14 shrink-0">
+          <div className="h-full w-full overflow-hidden rounded-xl bg-[#F1EFE6]">
+            <DiscImage src={row.image ?? ""} name={row.name} brand={row.brand} type={row.type} fit="cover" />
+          </div>
+          <span className="absolute -left-1.5 -top-1.5 z-10 inline-flex w-fit -rotate-[8deg] items-center rounded-md bg-[#B8E04A] px-[6px] py-[2px] text-[10px] font-extrabold text-[#101C14] shadow-[1.5px_1.5px_0_#101C14]">
+            −{Math.abs(row.pct)} %
+          </span>
+          <span className="absolute -bottom-1 -left-1 flex h-[16px] w-[16px] items-center justify-center rounded-full border border-[#FFFDF6] bg-[#101C14] text-[8px] font-extrabold text-[#FFFDF6]">
             {rank}
           </span>
         </div>
@@ -68,10 +76,7 @@ function PriceDropListRow({ row, rank }: { row: PriceDropRow; rank: number }) {
           </p>
         </div>
 
-        <div className="flex shrink-0 flex-col items-end gap-2">
-          <span className="inline-flex w-fit -rotate-2 items-center rounded-lg bg-[#B8E04A] px-[7px] py-[3px] text-[11px] font-extrabold text-[#101C14] shadow-[1.5px_1.5px_0_#101C14]">
-            −{Math.abs(row.pct)} %
-          </span>
+        <div className="flex shrink-0 flex-col items-end gap-1">
           <span className="text-[15px] font-extrabold text-[#101C14]">{row.newPrice},-</span>
           <span className="dd-cta px-2.5 py-1 text-[11px]">Se disk →</span>
         </div>
