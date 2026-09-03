@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-02T07:43:05.724Z",
+  "generated": "2026-09-03T09:25:08.170Z",
   "summary": {
-    "priceChanges24h": 3,
-    "newDiscs24h": 0,
+    "priceChanges24h": 1,
+    "newDiscs24h": 10,
     "storesChecked": 18
   },
   "timeline": [
@@ -15,7 +15,7 @@
       "newPrice": 295,
       "pct": -6,
       "date": "2026-09-02",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://nydisk.no/products/discmania-c-line-cd1-the-crush-boys-3",
       "history": [
         315,
@@ -23,31 +23,10 @@
         315,
         315,
         315,
-        315,
+        295,
         295
-      ]
-    },
-    {
-      "discId": "discmania-active",
-      "store": "discsport",
-      "storeName": "Discsport",
-      "plastic": "Active",
-      "oldPrice": 132,
-      "newPrice": 126,
-      "pct": -5,
-      "date": "2026-09-02",
-      "bucket": "today",
-      "url": "https://discsport.se/discar/mold/magician",
-      "history": [
-        132,
-        132,
-        132,
-        132,
-        132,
-        132,
-        126
       ]
     }
   ],
-  "totalDrops": 2
+  "totalDrops": 1
 }
