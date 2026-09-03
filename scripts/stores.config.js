@@ -354,6 +354,30 @@ function matchDiscCandidate(rawProductName) {
 const DROP_GUARD_RATIO = 0.5;
 const MIN_BASELINE_FOR_DROP_GUARD = 20;
 
+// firstSeenByKey below is keyed by discId, so a catalog id RENAME (split or
+// otherwise) makes every one of that disc's listings look brand new on the
+// next scrape — same store, same plastic, but a key the old data never had.
+// That's not just cosmetic: new-in-stores.js treats a fresh firstSeen as
+// "just arrived" and would flag these as new-disc/new-at-store even though
+// they're long-standing market discs, not new arrivals. Map new id -> old
+// id here for any rename where that matters (i.e. one that happens while
+// the new-in-stores pipeline is live) so the firstSeen lookup falls back to
+// the old key instead of resetting. discmania-active (2026-09-02): a
+// catch-all keyed on the "Active" plastic line, split into its 10 real
+// molds — see data/discs.js's comment above the discmania-active removal.
+const FIRST_SEEN_ID_ALIASES = {
+  'discmania-maestro': 'discmania-active',
+  'discmania-rockstar': 'discmania-active',
+  'discmania-mentor': 'discmania-active',
+  'discmania-magician': 'discmania-active',
+  'discmania-genius': 'discmania-active',
+  'discmania-astronaut': 'discmania-active',
+  'discmania-sensei': 'discmania-active',
+  'discmania-majesty': 'discmania-active',
+  'discmania-shogun': 'discmania-active',
+  'discmania-mermaid': 'discmania-active',
+};
+
 function countEntriesForKeys(prices, keySet) {
   let count = 0;
   for (const entries of Object.values(prices)) {
@@ -413,6 +437,8 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
       );
       if (!existing) {
         const key = `${disc.id}|${product.store}|${variant.plastic}`;
+        const aliasId = FIRST_SEEN_ID_ALIASES[disc.id];
+        const aliasKey = aliasId ? `${aliasId}|${product.store}|${variant.plastic}` : null;
         data.prices[disc.id].push({
           store: product.store,
           price: product.price,
@@ -422,7 +448,7 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
           plastic: variant.plastic,
           edition: variant.edition,
           lastScraped: now,
-          firstSeen: firstSeenByKey.get(key) || now,
+          firstSeen: firstSeenByKey.get(key) || (aliasKey ? firstSeenByKey.get(aliasKey) : undefined) || now,
         });
       } else if (product.price < existing.price) {
         existing.price = product.price;
