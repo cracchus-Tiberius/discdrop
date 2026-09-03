@@ -151,17 +151,28 @@ export const discs = [
   // Confirmed in production 2026-09-02 (routine-flagged): a scraped
   // "Active Premium Rockstar" listing displayed as "Active" with a
   // Rockstar product photo. Split into the real Active-line molds, flight
-  // numbers from discmania.net's own product pages:
-  { id:"discmania-astronaut", name:"Astronaut", brand:"Discmania", type:"distance", flight:{speed:12,glide:6,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-genius", name:"Genius", brand:"Discmania", type:"fairway", flight:{speed:7,glide:5,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-maestro", name:"Maestro", brand:"Discmania", type:"midrange", flight:{speed:4,glide:3,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-magician", name:"Magician", brand:"Discmania", type:"fairway", flight:{speed:6,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-majesty", name:"Majesty", brand:"Discmania", type:"distance", flight:{speed:13,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-mentor", name:"Mentor", brand:"Discmania", type:"distance", flight:{speed:11,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-mermaid", name:"Mermaid", brand:"Discmania", type:"fairway", flight:{speed:7,glide:4,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-rockstar", name:"Rockstar", brand:"Discmania", type:"fairway", flight:{speed:8,glide:5,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-sensei", name:"Sensei", brand:"Discmania", type:"putter", flight:{speed:3,glide:3,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"discmania-shogun", name:"Shogun", brand:"Discmania", type:"putter", flight:{speed:2,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  // numbers from discmania.net's own product pages. Each carries an
+  // explicit catalogAddedAt (earliest known firstSeen among discmania-
+  // active's pre-split listings, 2026-07-24) so scripts/lib/new-in-
+  // stores.js's isGenuinelyNewToCatalog() never classifies these as
+  // "new-disc" — without it, a split child with zero surviving pre-split
+  // listings (e.g. a store match that only starts working now that its own
+  // mold has a catalog entry) has no old firstSeen to fall back on and
+  // looks brand new, even though the disc itself has been on the market
+  // and tracked under discmania-active for months. Confirmed in production
+  // 2026-09-03: without this field, Shogun/Genius/Mermaid — 3 of the 10
+  // splits whose only listings are brand-new store matches — surfaced as
+  // false "new-disc" signals in that week's /nytt feed.
+  { id:"discmania-astronaut", name:"Astronaut", brand:"Discmania", type:"distance", flight:{speed:12,glide:6,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-genius", name:"Genius", brand:"Discmania", type:"fairway", flight:{speed:7,glide:5,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-maestro", name:"Maestro", brand:"Discmania", type:"midrange", flight:{speed:4,glide:3,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-magician", name:"Magician", brand:"Discmania", type:"fairway", flight:{speed:6,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-majesty", name:"Majesty", brand:"Discmania", type:"distance", flight:{speed:13,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-mentor", name:"Mentor", brand:"Discmania", type:"distance", flight:{speed:11,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-mermaid", name:"Mermaid", brand:"Discmania", type:"fairway", flight:{speed:7,glide:4,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-rockstar", name:"Rockstar", brand:"Discmania", type:"fairway", flight:{speed:8,glide:5,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-sensei", name:"Sensei", brand:"Discmania", type:"putter", flight:{speed:3,glide:3,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-shogun", name:"Shogun", brand:"Discmania", type:"putter", flight:{speed:2,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
   { id:"discmania-cd", name:"CD", brand:"Discmania", type:"distance", flight:{speed:10,glide:5,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"discmania-cd2", name:"CD2", brand:"Discmania", type:"fairway", flight:{speed:9,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"discmania-cd3", name:"CD3", brand:"Discmania", type:"distance", flight:{speed:11,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },

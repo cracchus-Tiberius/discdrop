@@ -6,6 +6,25 @@
   "endDate": "2026-09-06",
   "signals": [
     {
+      "discId": "discmania-rockstar",
+      "name": "Rockstar",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Active Premium Glow",
+      "edition": null,
+      "firstSeenMs": 1788426967414,
+      "price": 217,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 217,
+          "url": "https://rocketdiscs.com/discmania-rockstar"
+        }
+      ]
+    },
+    {
       "discId": "discmania-shogun",
       "name": "Shogun",
       "brand": "Discmania",
@@ -21,6 +40,25 @@
           "storeName": "Rocketdiscs",
           "price": 152,
           "url": "https://rocketdiscs.com/discmania-shogun"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-majesty",
+      "name": "Majesty",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1788426930528,
+      "price": 185,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 185,
+          "url": "https://www.discexpress.se/products/majesty-premium-active"
         }
       ]
     },
@@ -46,6 +84,31 @@
           "storeName": "Rocketdiscs",
           "price": 217,
           "url": "https://rocketdiscs.com/discmania-genius"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-sensei",
+      "name": "Sensei",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1788426930528,
+      "price": 127,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 127,
+          "url": "https://www.discexpress.se/products/guardian-lion-active"
+        },
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 152,
+          "url": "https://rocketdiscs.com/discmania-sensei"
         }
       ]
     },
@@ -126,74 +189,6 @@
       ]
     },
     {
-      "discId": "discmania-rockstar",
-      "name": "Rockstar",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Active Premium",
-      "edition": null,
-      "firstSeenMs": 1788426874611,
-      "price": 193,
-      "stores": [
-        {
-          "store": "frisbeesor",
-          "storeName": "Frisbee Sør",
-          "price": 224,
-          "url": "https://www.frisbeesor.no/produkt/active-premium-rockstar/"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 217,
-          "url": "https://rocketdiscs.com/discmania-rockstar"
-        },
-        {
-          "store": "discace",
-          "storeName": "Discace of Sweden",
-          "price": 193,
-          "url": "https://discaceofsweden.com/produkt/discmania-active-premium-rockstar/"
-        }
-      ]
-    },
-    {
-      "discId": "discmania-sensei",
-      "name": "Sensei",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Active Premium",
-      "edition": null,
-      "firstSeenMs": 1788426868321,
-      "price": 127,
-      "stores": [
-        {
-          "store": "golfdiscer",
-          "storeName": "GolfDiscer",
-          "price": 224,
-          "url": "https://golfdiscer.no/products/active-premium-sensei"
-        },
-        {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 127,
-          "url": "https://www.discexpress.se/products/guardian-lion-active"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 152,
-          "url": "https://rocketdiscs.com/discmania-sensei"
-        },
-        {
-          "store": "ugglans",
-          "storeName": "Ugglans Discgolf",
-          "price": 189,
-          "url": "https://ugglansdiscgolf.se/products/active-premium-glow-sensei-undead-samurai-2"
-        }
-      ]
-    },
-    {
       "discId": "innova-xero",
       "name": "Xero",
       "brand": "Innova",
@@ -213,49 +208,6 @@
       ]
     },
     {
-      "discId": "discmania-maestro",
-      "name": "Maestro",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Active Premium",
-      "edition": null,
-      "firstSeenMs": 1788426327422,
-      "price": 127,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 154,
-          "url": "https://wearediscgolf.no/produkt/active-maestro/"
-        },
-        {
-          "store": "golfdiscer",
-          "storeName": "GolfDiscer",
-          "price": 224,
-          "url": "https://golfdiscer.no/products/active-premium-maestro"
-        },
-        {
-          "store": "discshopen",
-          "storeName": "DiscShopen",
-          "price": 164,
-          "url": "https://discshopen.no/produkt/active-maestro/"
-        },
-        {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 127,
-          "url": "https://www.discexpress.se/products/spring-ox-active"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 152,
-          "url": "https://rocketdiscs.com/discmania-maestro"
-        }
-      ]
-    },
-    {
       "discId": "discmania-magician",
       "name": "Magician",
       "brand": "Discmania",
@@ -264,7 +216,7 @@
       "plastic": "Active Premium",
       "edition": null,
       "firstSeenMs": 1788426327422,
-      "price": 127,
+      "price": 214,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -273,96 +225,10 @@
           "url": "https://wearediscgolf.no/produkt/active-premium-magician/"
         },
         {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 127,
-          "url": "https://www.discexpress.se/products/fox-spirit-active"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 152,
-          "url": "https://rocketdiscs.com/discmania-magician"
-        },
-        {
-          "store": "ugglans",
-          "storeName": "Ugglans Discgolf",
-          "price": 131,
-          "url": "https://ugglansdiscgolf.se/products/active-magician"
-        }
-      ]
-    },
-    {
-      "discId": "discmania-majesty",
-      "name": "Majesty",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Active Premium",
-      "edition": null,
-      "firstSeenMs": 1788426327422,
-      "price": 185,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/active-premium-majesty/"
-        },
-        {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 185,
-          "url": "https://www.discexpress.se/products/majesty-premium-active"
-        },
-        {
           "store": "rocketdiscs",
           "storeName": "Rocketdiscs",
           "price": 217,
-          "url": "https://rocketdiscs.com/discmania-majesty"
-        },
-        {
-          "store": "ugglans",
-          "storeName": "Ugglans Discgolf",
-          "price": 189,
-          "url": "https://ugglansdiscgolf.se/products/active-premium-majesty"
-        }
-      ]
-    },
-    {
-      "discId": "discmania-mentor",
-      "name": "Mentor",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Active Premium",
-      "edition": null,
-      "firstSeenMs": 1788426327422,
-      "price": 127,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/active-premium-mentor-se/"
-        },
-        {
-          "store": "discshopen",
-          "storeName": "DiscShopen",
-          "price": 164,
-          "url": "https://discshopen.no/produkt/active-mentor/"
-        },
-        {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 127,
-          "url": "https://www.discexpress.se/products/sea-serpent-active"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 152,
-          "url": "https://rocketdiscs.com/discmania-mentor"
+          "url": "https://rocketdiscs.com/discmania-magician"
         }
       ]
     },
@@ -388,12 +254,6 @@
           "storeName": "Discexpress",
           "price": 185,
           "url": "https://www.discexpress.se/products/astronaut-premium-active"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 217,
-          "url": "https://rocketdiscs.com/discmania-astronaut"
         }
       ]
     },
@@ -613,6 +473,44 @@
       ]
     },
     {
+      "discId": "discmania-rockstar",
+      "name": "Rockstar",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active Premium",
+      "edition": null,
+      "firstSeenMs": 1788426967414,
+      "price": 217,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 217,
+          "url": "https://rocketdiscs.com/discmania-rockstar"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-sensei",
+      "name": "Sensei",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active Premium",
+      "edition": null,
+      "firstSeenMs": 1788426967414,
+      "price": 217,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 217,
+          "url": "https://rocketdiscs.com/discmania-sensei"
+        }
+      ]
+    },
+    {
       "discId": "latitude-fuse",
       "name": "Fuse",
       "brand": "Latitude 64",
@@ -765,6 +663,31 @@
       ]
     },
     {
+      "discId": "discmania-magician",
+      "name": "Magician",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1788426930528,
+      "price": 127,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 127,
+          "url": "https://www.discexpress.se/products/fox-spirit-active"
+        },
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 152,
+          "url": "https://rocketdiscs.com/discmania-magician"
+        }
+      ]
+    },
+    {
       "discId": "latitude-anchor",
       "name": "Anchor",
       "brand": "Latitude 64",
@@ -860,6 +783,43 @@
       ]
     },
     {
+      "discId": "discmania-maestro",
+      "name": "Maestro",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active Premium",
+      "edition": null,
+      "firstSeenMs": 1788426868321,
+      "price": 127,
+      "stores": [
+        {
+          "store": "golfdiscer",
+          "storeName": "GolfDiscer",
+          "price": 224,
+          "url": "https://golfdiscer.no/products/active-premium-maestro"
+        },
+        {
+          "store": "discshopen",
+          "storeName": "DiscShopen",
+          "price": 164,
+          "url": "https://discshopen.no/produkt/active-maestro/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 127,
+          "url": "https://www.discexpress.se/products/spring-ox-active"
+        },
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 152,
+          "url": "https://rocketdiscs.com/discmania-maestro"
+        }
+      ]
+    },
+    {
       "discId": "innova-aviar",
       "name": "Aviar",
       "brand": "Innova",
@@ -944,6 +904,50 @@
           "storeName": "We Are Disc Golf",
           "price": 214,
           "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-majesty",
+      "name": "Majesty",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active Premium",
+      "edition": null,
+      "firstSeenMs": 1788426327422,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/active-premium-majesty/"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-mentor",
+      "name": "Mentor",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active Premium",
+      "edition": null,
+      "firstSeenMs": 1788426327422,
+      "price": 127,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/active-premium-mentor-se/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 127,
+          "url": "https://www.discexpress.se/products/sea-serpent-active"
         }
       ]
     },
@@ -1373,5 +1377,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-09-03T09:25:08.609Z"
+  "generated": "2026-09-03T16:28:10.170Z"
 }
