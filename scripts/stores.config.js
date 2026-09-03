@@ -391,6 +391,10 @@ const MIN_BASELINE_FOR_DROP_GUARD = 20;
 // catch-all keyed on the "Active" plastic line, split into its 10 real
 // molds — see data/discs.js's comment above the discmania-active removal.
 const FIRST_SEEN_ID_ALIASES = {
+  // latitude-function -> discmania-function (2026-09-03): the id said
+  // Latitude 64, but all 10 of its store listings were Discmania Neo
+  // Function. See data/discs.js's comment on the entry.
+  'discmania-function': 'latitude-function',
   'discmania-maestro': 'discmania-active',
   'discmania-rockstar': 'discmania-active',
   'discmania-mentor': 'discmania-active',

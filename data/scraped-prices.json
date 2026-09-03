@@ -95687,118 +95687,6 @@
         "firstSeen": "2026-07-28T08:38:00.341Z"
       }
     ],
-    "latitude-function": [
-      {
-        "store": "frisbeebutikken",
-        "price": 219,
-        "inStock": true,
-        "url": "https://frisbeebutikken.no/products/neo-function",
-        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/9D8UY_Discmania_NEO_Function_1.webp/w665h665.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-01T11:23:21.349Z",
-        "firstSeen": "2026-08-25T06:57:51.999Z"
-      },
-      {
-        "store": "discsport",
-        "price": 193,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/function",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-02T07:35:24.370Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "wearediscgolf",
-        "price": 219,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/neo-function/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/02/Neo-Function.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:05:27.422Z",
-        "firstSeen": "2026-08-16T10:32:12.262Z"
-      },
-      {
-        "store": "kvamdgs",
-        "price": 235,
-        "inStock": true,
-        "url": "https://kvamdgs.no/products/neo-function-storm-breaker-discmania-challenge",
-        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_2456.webp?v=1781867292",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:05:27.422Z",
-        "firstSeen": "2026-07-24T20:34:22.548Z"
-      },
-      {
-        "store": "arcticdisc",
-        "price": 229,
-        "inStock": true,
-        "url": "https://arcticdisc.no/products/neo-function-storm-breaker-discmania-challenge-fundraiser",
-        "image": "https://cdn.shopify.com/s/files/1/0932/8050/2130/files/Function-neo-dmchallenge-storm-breaker-triple-blue.webp?v=1779910672",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:05:27.422Z",
-        "firstSeen": "2026-07-24T20:34:22.548Z"
-      },
-      {
-        "store": "frisbeesor",
-        "price": 229,
-        "inStock": true,
-        "url": "https://www.frisbeesor.no/produkt/neo-function/",
-        "image": "https://www.frisbeesor.no/wp-content/uploads/2025/07/Function-C.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:14:34.611Z",
-        "firstSeen": "2026-07-24T16:46:00.142Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 209,
-        "inStock": false,
-        "url": "https://nydisk.no/products/discmania-neo-function-storm-breaker",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/10_d1192633-0791-4697-8273-8415c0586929.png?v=1781003182",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:14:46.801Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 193,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/function-neo",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Function-neo-dmchallenge-storm-breaker-triple-purple.webp?v=1780483634",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:15:30.528Z",
-        "firstSeen": "2026-07-24T20:58:19.645Z"
-      },
-      {
-        "store": "rocketdiscs",
-        "price": 204,
-        "inStock": true,
-        "url": "https://rocketdiscs.com/discmania-function",
-        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20260606120732730_StockSSP_56802Rocket_1.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:16:07.414Z",
-        "firstSeen": "2026-07-24T20:58:57.598Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 193,
-        "inStock": true,
-        "url": "https://ugglansdiscgolf.se/products/neo-function",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/Function-neo-dmchallenge-storm-breaker-triple-pink.webp?v=1779887483",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-03T09:24:20.267Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      }
-    ],
     "kastaplast-grym-x": [
       {
         "store": "aceshop",
@@ -112434,6 +112322,118 @@
         "edition": null,
         "lastScraped": "2026-09-03T09:16:07.414Z",
         "firstSeen": "2026-07-24T16:46:27.699Z"
+      }
+    ],
+    "discmania-function": [
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-function",
+        "image": "https://frisbeebutikke-i01.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/9D8UY_Discmania_NEO_Function_1.webp/w665h665.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-01T11:23:21.349Z",
+        "firstSeen": "2026-08-25T06:57:51.999Z"
+      },
+      {
+        "store": "discsport",
+        "price": 193,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/function",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-02T07:35:24.370Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "wearediscgolf",
+        "price": 219,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/neo-function/",
+        "image": "https://wearediscgolf.no/content/uploads/2025/02/Neo-Function.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:05:27.422Z",
+        "firstSeen": "2026-08-16T10:32:12.262Z"
+      },
+      {
+        "store": "kvamdgs",
+        "price": 235,
+        "inStock": true,
+        "url": "https://kvamdgs.no/products/neo-function-storm-breaker-discmania-challenge",
+        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_2456.webp?v=1781867292",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:05:27.422Z",
+        "firstSeen": "2026-07-24T20:34:22.548Z"
+      },
+      {
+        "store": "arcticdisc",
+        "price": 229,
+        "inStock": true,
+        "url": "https://arcticdisc.no/products/neo-function-storm-breaker-discmania-challenge-fundraiser",
+        "image": "https://cdn.shopify.com/s/files/1/0932/8050/2130/files/Function-neo-dmchallenge-storm-breaker-triple-blue.webp?v=1779910672",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:05:27.422Z",
+        "firstSeen": "2026-07-24T20:34:22.548Z"
+      },
+      {
+        "store": "frisbeesor",
+        "price": 229,
+        "inStock": true,
+        "url": "https://www.frisbeesor.no/produkt/neo-function/",
+        "image": "https://www.frisbeesor.no/wp-content/uploads/2025/07/Function-C.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:14:34.611Z",
+        "firstSeen": "2026-07-24T16:46:00.142Z"
+      },
+      {
+        "store": "nydisk",
+        "price": 209,
+        "inStock": false,
+        "url": "https://nydisk.no/products/discmania-neo-function-storm-breaker",
+        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/10_d1192633-0791-4697-8273-8415c0586929.png?v=1781003182",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:14:46.801Z",
+        "firstSeen": "2026-07-26T12:03:23.979Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 193,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/function-neo",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Function-neo-dmchallenge-storm-breaker-triple-purple.webp?v=1780483634",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:15:30.528Z",
+        "firstSeen": "2026-07-24T20:58:19.645Z"
+      },
+      {
+        "store": "rocketdiscs",
+        "price": 204,
+        "inStock": true,
+        "url": "https://rocketdiscs.com/discmania-function",
+        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20260606120732730_StockSSP_56802Rocket_1.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:16:07.414Z",
+        "firstSeen": "2026-07-24T20:58:57.598Z"
+      },
+      {
+        "store": "ugglans",
+        "price": 193,
+        "inStock": true,
+        "url": "https://ugglansdiscgolf.se/products/neo-function",
+        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/Function-neo-dmchallenge-storm-breaker-triple-pink.webp?v=1779887483",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-03T09:24:20.267Z",
+        "firstSeen": "2026-07-26T12:24:40.398Z"
       }
     ]
   }

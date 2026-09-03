@@ -70,3 +70,13 @@
 # insurance against stale backlinks/cached results.
 /disc/discmania-active        /brand/discmania/          301
 /disc/discmania-active/       /brand/discmania/          301
+
+# latitude-function -> discmania-function (2026-09-03). The id claimed
+# Latitude 64, but every one of its 10 store listings was a Discmania Neo
+# Function — Discmania's own store confirms Function as an Evolution-line
+# mold (8/6/-4/1). Same Latitude-64-to-Discmania correction as the
+# essence/method/instinct/origin/splice renames above. No speculative
+# Latitude 64 Function entry is created; if real Lat64 listings ever appear,
+# that entry gets made then.
+/disc/latitude-function       /disc/discmania-function/  301
+/disc/latitude-function/      /disc/discmania-function/  301

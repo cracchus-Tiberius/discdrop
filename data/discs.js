@@ -422,7 +422,17 @@ export const discs = [
   { id:"latitude-compass", name:"Compass", brand:"Latitude 64", type:"midrange", flight:{speed:5,glide:5,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-core", name:"Core", brand:"Latitude 64", type:"midrange", flight:{speed:6,glide:5,turn:-0.5,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-founder", name:"Founder", brand:"Latitude 64", type:"fairway", flight:{speed:5,glide:5,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-function", name:"Function", brand:"Latitude 64", type:"fairway", flight:{speed:8,glide:6,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  // Was latitude-function until 2026-09-03. The id claimed Latitude 64, but
+  // all 10 of its store listings were Discmania Neo Function — Discmania's
+  // own store lists Function as an Evolution-line fairway driver at 8/6/-4/1
+  // (our entry had carried turn -1). Same Latitude-64-to-Discmania correction
+  // as essence/method/instinct/origin/splice. firstSeen carries across the id
+  // change via scripts/stores.config.js's FIRST_SEEN_ID_ALIASES; the old URL
+  // redirects from public/_redirects. Deliberately NOT paired with a
+  // speculative Latitude 64 Function entry — Latitude do list one, but we
+  // have never seen a single listing for it, and a catalog entry with no
+  // evidence behind it is how latitude-function went wrong in the first place.
+  { id:"discmania-function", name:"Function", brand:"Discmania", type:"fairway", flight:{speed:8,glide:6,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-fury", name:"Fury", brand:"Latitude 64", type:"fairway", flight:{speed:9,glide:6,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-gladiator", name:"Gladiator", brand:"Latitude 64", type:"distance", flight:{speed:13,glide:5,turn:0,fade:3.5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-glory", name:"Glory", brand:"Latitude 64", type:"fairway", flight:{speed:7,glide:5,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
