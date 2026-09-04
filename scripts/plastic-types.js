@@ -42,6 +42,21 @@ const PLASTIC_TYPES = {
     ],
     suffix: [],
   },
+  // DGA's own store titles, most frequent first: ProLine (24 products),
+  // Spark (17), Atmos (10), SP Line (9), D-Line (5), Signature Line, Stone,
+  // Granite Blend, Confetti. Note D-Line collides with Discmania's D-Line and
+  // Swirl/Glow/Ice are shared with several brands — stores.config.js's
+  // fingerprint computation drops any plastic claimed by more than one brand,
+  // so those are listed here for variant extraction but never used as brand
+  // evidence.
+  DGA: {
+    prefix: [
+      '50 Year Limited Edition', 'Tour Series Swirl', 'Granite Blend',
+      'Signature Line', 'D-Line Stone', 'SP Line', 'ProLine', 'Pro Line',
+      'Confetti', 'D-Line', 'Atmos', 'Spark', 'Stone', 'Swirl', 'Glow', 'Ice',
+    ],
+    suffix: [],
+  },
   Discmania: {
     prefix: [
       'Metal Flake C-Line', 'Metal Flake P-Line', 'Metal Flake',
@@ -80,7 +95,14 @@ const PLASTIC_TYPES = {
       'Zero Soft', 'Zero Medium', 'Zero Hard',
       'BioGold', 'Moonshine',
       'Royal', 'Opto', 'Gold', 'Grand', 'Sense', 'Frost',
-      'Retro', 'Zero', 'VIP', 'Project Grip', 'Clear', 'Neo',
+      // 'VIP' and 'Neo' were listed here and are not Latitude 64 plastics:
+      // VIP is Westside's, Neo is Discmania's Evolution line — which Latitude
+      // 64 manufacture for Discmania, presumably how it crept in. Their
+      // presence made brandPlasticPresent('Latitude 64', ...) true for other
+      // brands' discs, actively confirming the wrong brand, and is the root of
+      // the whole latitude-* mis-attribution family (latitude-function was
+      // 10/10 Discmania Neo; latitude-mutant is 13/16).
+      'Retro', 'Zero', 'Project Grip', 'Clear',
     ],
     suffix: [],
   },

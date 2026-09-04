@@ -141,6 +141,82 @@ function brandPlasticPresent(brand, normalisedText) {
   return false;
 }
 
+// ── Foreign-plastic brand gate ───────────────────────────────────────────────
+//
+// A product title that carries one brand's plastic is that brand's disc, and
+// must not match a same-named mold from another brand. Confirmed repeatedly in
+// production: DGA's "Atmos Hurricane" and "Spark Hurricane" landing on
+// latitude-hurricane (all 5 listings, on a mold Latitude 64 do not make), and
+// Discmania's "Neo Function" landing on latitude-function (all 10). Both were
+// fixed one id at a time; this is the rule that stops the next one.
+//
+// The evidence has to be a plastic only ONE brand uses, so the fingerprint set
+// is computed from PLASTIC_TYPES rather than hand-listed: any plastic name
+// claimed by two or more brands is dropped. That automatically discards the
+// traps — DGA and Discmania both ship a "D-Line", and Swirl/Glow/Ice/Soft are
+// shared by half the catalog — without anyone having to remember them.
+//
+// MVP, Axiom and Streamline are one manufacturer sharing one plastic range
+// (Neutron, Plasma, Proton, Electron, Eclipse, Cosmic, Fission), so they are
+// collapsed into a single fingerprint owner. Without that, every Streamline
+// disc would look like foreign-plastic evidence against every Axiom mold.
+const PLASTIC_BRAND_FAMILY = { MVP: 'MVP-family', Axiom: 'MVP-family', Streamline: 'MVP-family' };
+const familyOf = (brand) => PLASTIC_BRAND_FAMILY[brand] || brand;
+
+const PLASTIC_FINGERPRINTS = (() => {
+  const owners = new Map(); // normalised plastic -> Set of families
+  for (const [brand, entry] of Object.entries(PLASTIC_TYPES)) {
+    for (const w of [...(entry.prefix || []), ...(entry.suffix || [])]) {
+      const wn = norm(w);
+      // One- and two-character tokens are noise, not fingerprints.
+      if (!wn || wn.length < 3) continue;
+      if (!owners.has(wn)) owners.set(wn, new Set());
+      owners.get(wn).add(familyOf(brand));
+    }
+  }
+  const byFamily = new Map();
+  for (const [plastic, fams] of owners) {
+    if (fams.size !== 1) continue; // shared -> proves nothing
+    const fam = [...fams][0];
+    if (!byFamily.has(fam)) byFamily.set(fam, []);
+    byFamily.get(fam).push(plastic);
+  }
+  return byFamily;
+})();
+
+const fingerprintRe = new Map();
+function familyFingerprintPresent(family, text) {
+  const list = PLASTIC_FINGERPRINTS.get(family);
+  if (!list || !list.length) return false;
+  let re = fingerprintRe.get(family);
+  if (!re) {
+    re = new RegExp('(?:^|\\s)(?:' + list.map((p) => p.replace(/\s+/g, '\\s+')).join('|') + ')(?:\\s|$)', 'i');
+    fingerprintRe.set(family, re);
+  }
+  return re.test(text);
+}
+
+/**
+ * True when the title carries another brand-family's exclusive plastic and
+ * nothing at all vouches for this disc's own brand — no brand name, no own
+ * plastic. That combination means the title belongs to the other brand.
+ */
+function foreignPlasticConflict(disc, texts) {
+  const own = familyOf(disc.brand);
+  const brandNorm = norm(disc.brand);
+  const brandRe = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
+
+  for (const text of texts) {
+    if (brandRe.test(text)) return false;
+    if (familyFingerprintPresent(own, text)) return false;
+  }
+  for (const family of PLASTIC_FINGERPRINTS.keys()) {
+    if (family === own) continue;
+    if (texts.some((t) => familyFingerprintPresent(family, t))) return family;
+  }
+  return null;
+}
+
 /** Normalise a string for comparison */
 function norm(s) {
   return s
@@ -328,6 +404,13 @@ function matchDiscCandidate(rawProductName) {
           texts.some((t) => brandPlasticPresent(disc.brand, t));
         if (!hasDiscmaniaPlastic && !hasInnovaPlastic && !hasOtherBrandPlastic && !texts.some((t) => brandPattern.test(t))) continue;
       }
+      // A title carrying another brand-family's exclusive plastic, with nothing
+      // vouching for this disc's brand, belongs to that other brand. Applies to
+      // every candidate, not just the short/listed names the check above
+      // covers — that hand-maintained list is what let latitude-function and
+      // latitude-hurricane through.
+      if (foreignPlasticConflict(disc, normalisedNoSplit !== normalised ? [normalised, normalisedNoSplit] : [normalised])) continue;
+
       const score = discName.length;
       if (score > bestScore) {
         bestScore = score;
@@ -398,6 +481,17 @@ const FIRST_SEEN_ID_ALIASES = {
   // latitude-hurricane -> dga-hurricane (2026-09-04): same mistake, same fix.
   // All 5 listings were DGA; Latitude 64 make no Hurricane.
   'dga-hurricane': 'latitude-hurricane',
+  // 2026-09-04, the same mis-attribution as function/hurricane, found by
+  // scanning every latitude-* entry for store URLs carrying another brand's
+  // plastics. Root cause fixed in the same commit: PLASTIC_TYPES listed 'Neo'
+  // and 'VIP' as Latitude 64 plastics, which they are not.
+  'discmania-mutant': 'latitude-mutant',
+  'discmania-paradigm': 'latitude-paradigm',
+  'discmania-spore': 'latitude-spore',
+  'discmania-founder': 'latitude-founder',
+  'mvp-volt': 'latitude-volt',
+  'westside-northman': 'latitude-northman',
+  'westside-gatekeeper': 'latitude-gatekeeper',
   'discmania-maestro': 'discmania-active',
   'discmania-rockstar': 'discmania-active',
   'discmania-mentor': 'discmania-active',

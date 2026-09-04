@@ -111,3 +111,52 @@ test('Prodigy ACE Line stability suffixes are their own molds', () => {
   assert.strictEqual(id('Prodigy Disc ACE Line F Model US'), 'discmania-f-model');
   assert.strictEqual(id('ACE Line D Model US'), 'discmania-d-model');
 });
+
+// ── Foreign-plastic brand gate ───────────────────────────────────────────────
+
+test('a title carrying another brand\'s plastic does not match that brand\'s mold', () => {
+  // Every one of these was a real production mis-attribution. The molds exist
+  // under both a Latitude 64 id (wrong) and the real brand's id, and the only
+  // thing separating them in a store title is the plastic name.
+  assert.strictEqual(id('Discmania Neo Mutant'), 'discmania-mutant');
+  assert.strictEqual(id('Discmania Neo Soft Spore'), 'discmania-spore');
+  assert.strictEqual(id('Discmania Neo Paradigm'), 'discmania-paradigm');
+  assert.strictEqual(id('Discmania Neo Founder'), 'discmania-founder');
+  assert.strictEqual(id('MVP Disc Sports Neutron Volt'), 'mvp-volt');
+  assert.strictEqual(id('Westside Discs Tournament Northman'), 'westside-northman');
+  assert.strictEqual(id('Westside Discs VIP Gatekeeper'), 'westside-gatekeeper');
+  assert.strictEqual(id('DGA Atmos Hurricane'), 'dga-hurricane');
+});
+
+test('the gate fires on the plastic alone, with no brand word in the title', () => {
+  // Stores routinely omit the brand: "NEO Mutant", "Neutron Volt".
+  assert.strictEqual(id('NEO Mutant'), 'discmania-mutant');
+  assert.strictEqual(id('Neutron Volt'), 'mvp-volt');
+});
+
+test('the gate does not fire on a plastic name two brands share', () => {
+  // D-Line is both DGA's and Discmania's; Swirl, Glow and Ice are shared
+  // several ways. A shared plastic proves nothing, so those must never be
+  // treated as brand evidence — the fingerprint set drops them automatically.
+  assert.strictEqual(id('Discmania D-Line P2'), 'discmania-p2');
+  assert.strictEqual(id('Innova Star Destroyer'), 'innova-destroyer');
+  assert.strictEqual(id('Latitude 64 Opto Explorer'), 'latitude-explorer');
+});
+
+test('MVP, Axiom and Streamline count as one plastic family', () => {
+  // They are one manufacturer sharing one plastic range. Without the family
+  // collapse, every Neutron/Proton title would read as foreign evidence
+  // against the other two brands' molds.
+  assert.strictEqual(id('Axiom Discs Neutron Soft Tempo'), 'axiom-tempo');
+  assert.strictEqual(id('Streamline Neutron Boost'), 'streamline-boost');
+  assert.strictEqual(id('MVP Disc Sports Plasma Watt'), 'mvp-watt');
+});
+
+test('a player or stamp name no longer beats the real mold', () => {
+  // Fallout of the same gate, both confirmed in the live corpus: "Eagle
+  // McMahon" matched innova-eagle, and "2x World Champion" matched
+  // westside-world, because the stamp text outscored the mold name.
+  assert.strictEqual(id('Axiom Discs Fission Pyro - Eagle McMahon Halloween Edition'), 'axiom-pyro');
+  assert.strictEqual(id('Latitude 64 Zero Medium Orbit Peak - 2x World Champion Isaac Robinson'), 'latitude-peak');
+  assert.strictEqual(id('Discraft ESP SuperColor Buzzz - Dark Star Ochestra Beetle'), 'discraft-buzzz');
+});
