@@ -395,6 +395,9 @@ const FIRST_SEEN_ID_ALIASES = {
   // Latitude 64, but all 10 of its store listings were Discmania Neo
   // Function. See data/discs.js's comment on the entry.
   'discmania-function': 'latitude-function',
+  // latitude-hurricane -> dga-hurricane (2026-09-04): same mistake, same fix.
+  // All 5 listings were DGA; Latitude 64 make no Hurricane.
+  'dga-hurricane': 'latitude-hurricane',
   'discmania-maestro': 'discmania-active',
   'discmania-rockstar': 'discmania-active',
   'discmania-mentor': 'discmania-active',

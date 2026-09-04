@@ -80,3 +80,10 @@
 # that entry gets made then.
 /disc/latitude-function       /disc/discmania-function/  301
 /disc/latitude-function/      /disc/discmania-function/  301
+
+# latitude-hurricane -> dga-hurricane (2026-09-04). Same class of error as
+# latitude-function above: all 5 store listings were DGA (HyzerShop's product
+# JSON says vendor "DGA", Discsport's title says "DGA", the rest carry DGA's
+# spark-/atmos- plastics), and Latitude 64 list no Hurricane at all.
+/disc/latitude-hurricane      /disc/dga-hurricane/       301
+/disc/latitude-hurricane/     /disc/dga-hurricane/       301

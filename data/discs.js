@@ -622,7 +622,16 @@ export const discs = [
   { id:"latitude-faith", name:"Faith", brand:"Latitude 64", type:"putter", flight:{speed:2,glide:3,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-squall", name:"Squall", brand:"Latitude 64", type:"midrange", flight:{speed:6,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-rogue", name:"Rogue", brand:"Latitude 64", type:"distance", flight:{speed:11,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-hurricane", name:"Hurricane", brand:"Latitude 64", type:"distance", flight:{speed:12,glide:5,turn:-1,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  // Was latitude-hurricane until 2026-09-04, the same mistake as
+  // latitude-function. All 5 store listings are DGA: HyzerShop's own product
+  // JSON says vendor "DGA", Discsport's page title is "Hurricane Mold -
+  // Distance Driver | DGA", and the other three URLs carry DGA plastics
+  // (spark-, atmos-). Latitude 64 list no Hurricane at all, and the entry
+  // already carried 12/5/-1/3 — DGA's own numbers for it. firstSeen carries
+  // across via FIRST_SEEN_ID_ALIASES; the old URL redirects from
+  // public/_redirects. DGA also make a distinct "Hurricane X" (13/5/0/3); no
+  // store we scrape stocks one, so it gets no speculative entry.
+  { id:"dga-hurricane", name:"Hurricane", brand:"DGA", type:"distance", flight:{speed:12,glide:5,turn:-1,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-pipeline", name:"Pipeline", brand:"Latitude 64", type:"fairway", flight:{speed:8,glide:5,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-avalanche", name:"Avalanche", brand:"Latitude 64", type:"fairway", flight:{speed:9,glide:3,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-quake", name:"Quake", brand:"Latitude 64", type:"midrange", flight:{speed:5,glide:3,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
