@@ -69,14 +69,25 @@ Package manager: pnpm (always use pnpm, never npm).
 - Stores scraped, in run order: WeAreDiscGolf/Kvam DGS/Arctic Disc/HyzerShop/Disc Golf
   Dynasty/Disc Sør (all in scripts/scraper.js — WooCommerce + Shopify JSON APIs;
   HyzerShop/Disc Golf Dynasty are Shopify, Disc Sør is WooCommerce, same as
-  WeAreDiscGolf), Aceshop, Frisbeebutikken, Starframe, GolfDiscer,
+  WeAreDiscGolf), Aceshop, Frisbeebutikken, Starframe, Krokhol, GolfDiscer,
   Frisbee Sør, NyDisk, DiscShopen (Norwegian, NOK — no currency conversion), Discexpress,
   Rocketdiscs, Discsport, Ugglans Discgolf, Discace of Sweden (Swedish/EU — SEK or EUR,
   converted to NOK with a live exchange rate at scrape time, VOEC-registered so MVA is
   included at checkout). Discace runs a "Disc Replay" used-disc category — filtered via
-  USED_KEYWORDS/SKIP_CATEGORY_SLUGS (begagnad*) plus a local slug check. Starframe (Hamar)
-  runs on the same Mystore platform as Frisbeebutikken — same addToCart() JS-object-
-  literal parsing, see scripts/scrape-starframe.js.
+  USED_KEYWORDS/SKIP_CATEGORY_SLUGS (begagnad*) plus a local slug check.
+- 19 stores total. The count is never hardcoded in the UI — /butikker and the
+  homepage chip both derive it from data/scraped-prices.json's `stores` block, so
+  adding a store updates them on the next scrape. data/store-profiles.js is the
+  exception: it carries hand-written tagline/blurb copy and only covers 13 of the
+  stores; /butikker renders a barer card for the rest rather than inventing copy.
+- Mystore stores (Frisbeebutikken, Starframe/Hamar, Krokhol) all run off
+  scripts/lib/mystore.js — one shared implementation, each store a config object
+  (key/name/baseUrl/categoryUrl(s)/shipping/pageUrl). The lib handles both Mystore
+  card renderings: the addToCart() Alpine JS-object-literal form that Frisbeebutikken
+  and Starframe serve, and the server-rendered card markup Krokhol's theme serves
+  (where the brand comes from data-manufacturer, not the visible title). Krokhol has
+  no "all discs" parent category, so it lists five type categories and de-duplicates
+  by product URL.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.

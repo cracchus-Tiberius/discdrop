@@ -158,6 +158,17 @@ function parseServerRenderedCards(html, { baseUrl } = {}) {
   return products;
 }
 
+/**
+ * A store's disc categories. Most Mystore shops put every disc under one
+ * category; Krokhol splits them by type (putter/midrange/fairway/driver) with
+ * no "all discs" parent, so the list form exists for that. Products are
+ * de-duplicated by product URL across categories, which also absorbs the
+ * cross-cutting categories (Krokhol's "lette disker" overlaps the type ones).
+ */
+function categoriesOf(store) {
+  return store.categoryUrls || [store.categoryUrl];
+}
+
 /** Products plus the highest page number the listing links to. */
 function parseListing(html, store) {
   let products = parseAddToCartCards(html);
@@ -238,7 +249,23 @@ async function scrapeWithHeaders(store) {
   const allProducts = [];
   const seenUrls = new Set();
 
-  const firstUrl = store.pageUrl(1);
+  for (const categoryUrl of categoriesOf(store)) {
+    const ok = await scrapeCategoryWithHeaders(store, categoryUrl, allProducts, seenUrls);
+    if (!ok) return null;
+  }
+
+  if (allProducts.length === 0) {
+    console.log('    ✗ No products found — switching to Playwright');
+    return null;
+  }
+
+  console.log(`  Attempt 1 succeeded: ${allProducts.length} products found\n`);
+  return allProducts;
+}
+
+/** Returns false to abort attempt 1 and fall back to Playwright. */
+async function scrapeCategoryWithHeaders(store, categoryUrl, allProducts, seenUrls) {
+  const firstUrl = store.pageUrl(1, categoryUrl);
   console.log(`    ${store.key} p1: ${firstUrl}`);
 
   let html;
@@ -246,14 +273,14 @@ async function scrapeWithHeaders(store) {
     html = await fetchPage(firstUrl, 'https://www.google.no/');
   } catch (err) {
     console.warn(`    ⚠ ${err.message}`);
-    return null;
+    return false;
   }
 
   let { products: firstProducts, maxPage } = parseListing(html, store);
 
   if (isChallengePage(html, firstProducts.length)) {
     console.log('    ✗ Bot protection detected — switching to Playwright');
-    return null;
+    return false;
   }
 
   // Confirmed in production 2026-08-18 (Frisbeebutikken): page 1 loaded fine
@@ -300,26 +327,26 @@ async function scrapeWithHeaders(store) {
   // 1 and falls back to Playwright.
   for (let page = 2; page <= maxPage; page++) {
     await randomDelay(2000, 3000);
-    const url = store.pageUrl(page);
+    const url = store.pageUrl(page, categoryUrl);
     console.log(`    ${store.key} p${page}: ${url}`);
 
     try {
-      html = await fetchPage(url, store.categoryUrl);
+      html = await fetchPage(url, categoryUrl);
     } catch (err) {
       console.warn(`    ⚠ Page ${page}/${maxPage} failed (${allProducts.length} products collected so far): ${err.message}`);
-      return null;
+      return false;
     }
 
     const { products } = parseListing(html, store);
 
     if (isChallengePage(html, products.length)) {
       console.log(`    ✗ Bot protection detected on page ${page}/${maxPage} (${allProducts.length} products collected so far) — switching to Playwright`);
-      return null;
+      return false;
     }
 
     if (products.length === 0) {
       console.warn(`    ⚠ Page ${page}/${maxPage} returned 0 products, but page 1 reported ${maxPage} pages exist (${allProducts.length} products collected so far)`);
-      return null;
+      return false;
     }
 
     for (const p of products) {
@@ -328,13 +355,7 @@ async function scrapeWithHeaders(store) {
     console.log(`    → ${products.length} products (running total: ${allProducts.length})`);
   }
 
-  if (allProducts.length === 0) {
-    console.log('    ✗ No products found — switching to Playwright');
-    return null;
-  }
-
-  console.log(`  Attempt 1 succeeded: ${allProducts.length} products found\n`);
-  return allProducts;
+  return true;
 }
 
 // ── Attempt 2: Playwright headless browser ───────────────────────────────────
@@ -399,36 +420,38 @@ async function scrapeWithPlaywright(store) {
       console.warn(`    ⚠ Warm-up visit to ${store.baseUrl} failed (${err.message}) — continuing to category page anyway`);
     }
 
-    await page.goto(store.pageUrl(1), { waitUntil: 'networkidle', timeout: 30000 });
-    await page.evaluate(NATURAL_SCROLL);
-    await sleep(1000);
+    for (const categoryUrl of categoriesOf(store)) {
+      await page.goto(store.pageUrl(1, categoryUrl), { waitUntil: 'networkidle', timeout: 30000 });
+      await page.evaluate(NATURAL_SCROLL);
+      await sleep(1000);
 
-    const maxPage = await page.evaluate((selector) => {
-      let max = 1;
-      document.querySelectorAll(selector).forEach((a) => {
-        const m = (a.href || '').match(/[?&]page=(\d+)/);
-        if (m) max = Math.max(max, parseInt(m[1], 10));
-      });
-      return max;
-    }, paginationSelector);
+      const maxPage = await page.evaluate((selector) => {
+        let max = 1;
+        document.querySelectorAll(selector).forEach((a) => {
+          const m = (a.href || '').match(/[?&]page=(\d+)/);
+          if (m) max = Math.max(max, parseInt(m[1], 10));
+        });
+        return max;
+      }, paginationSelector);
 
-    for (let p = 1; p <= maxPage; p++) {
-      if (p > 1) {
-        await randomDelay(2000, 4000);
-        await page.goto(store.pageUrl(p), { waitUntil: 'networkidle', timeout: 30000 });
-        await page.evaluate(NATURAL_SCROLL);
-        await sleep(1000);
-      }
-
-      const { products } = parseListing(await page.content(), store);
-
-      for (const prod of products) {
-        if (!seenUrls.has(prod.productUrl)) {
-          seenUrls.add(prod.productUrl);
-          allProducts.push(prod);
+      for (let p = 1; p <= maxPage; p++) {
+        if (p > 1) {
+          await randomDelay(2000, 4000);
+          await page.goto(store.pageUrl(p, categoryUrl), { waitUntil: 'networkidle', timeout: 30000 });
+          await page.evaluate(NATURAL_SCROLL);
+          await sleep(1000);
         }
+
+        const { products } = parseListing(await page.content(), store);
+
+        for (const prod of products) {
+          if (!seenUrls.has(prod.productUrl)) {
+            seenUrls.add(prod.productUrl);
+            allProducts.push(prod);
+          }
+        }
+        console.log(`    p${p}: ${products.length} products (running total: ${allProducts.length})`);
       }
-      console.log(`    p${p}: ${products.length} products (running total: ${allProducts.length})`);
     }
   } finally {
     await browser.close();
@@ -446,7 +469,8 @@ async function scrapeWithPlaywright(store) {
 
 /**
  * store: {
- *   key, name, baseUrl, categoryUrl,
+ *   key, name, baseUrl,
+ *   categoryUrl | categoryUrls,   // one category, or several with no parent
  *   shipping, freeShippingOver?,   // omitted when the store publishes none
  *   pageUrl(page),                 // page 1 is usually the bare category URL
  *   paginationSelector?,           // defaults to both ?page= and ?&page= shapes
