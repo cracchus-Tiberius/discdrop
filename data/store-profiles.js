@@ -22,6 +22,11 @@ const STORE_PROFILES = {
     blurb:
       "Arctic Disc er en norsk nettbutikk drevet fra Olderdalen i Troms, der grunnleggeren «velger ut produkter han selv stoler på og bruker» etter over ti år som konkurransespiller. Løftet deres er personlig: «Handler du hos oss, får du personlig service fra noen som kjenner spillet» – og med snittbehandlingstid på rundt 6 timer går det fort også.",
   },
+  krokhol: {
+    tagline: "100 meter fra tee 1",
+    blurb:
+      "Krokhol Disc Golf Shop kaller seg «en av Norges ledende spesialbutikker for diskgolf», og pro shopen ligger «i 2. etasje over kafeen på Krokhol, kun 100 meter fra tee 1» i Siggerud. Banen deres åpnet i 2018 og fikk i 2022 følge av «Krokhol Blue, en kortere og mer tilgjengelig bane». Hver disk fotograferes og veies individuelt: «vekten du ser i nettbutikken er vekten på akkurat den disken du får levert». 60 dagers fri retur.",
+  },
   golfdiscer: {
     tagline: "Designet for alle",
     blurb:
