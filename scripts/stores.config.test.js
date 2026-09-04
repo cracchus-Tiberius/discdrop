@@ -96,3 +96,18 @@ test('XCaliber survives the Caliber name it contains', () => {
   assert.strictEqual(id('Champion Xcaliber'), 'innova-xcaliber');
   assert.strictEqual(id('Xcaliber - Nate Sexton'), 'innova-xcaliber');
 });
+
+test('Prodigy ACE Line stability suffixes are their own molds', () => {
+  // Prodigy's ACE Line runs three stabilities per model — US (understable),
+  // S (stable), OS (overstable). The catalog had stored the S and OS ones as
+  // "F Model US S" and "F Model US OS", i.e. the US base name with a second
+  // suffix bolted on, which no store writes and which reads as
+  // "understable stable". They matched nothing.
+  assert.strictEqual(id('Prodigy Disc BaseGrip F Model S'), 'discmania-f-model-s');
+  assert.strictEqual(id('Prodigy Disc DuraFlex M Model S'), 'discmania-m-model-s');
+  assert.strictEqual(id('Prodigy Disc DuraFlex D Model OS'), 'discmania-d-model-os');
+  assert.strictEqual(id('DuraFlex GLOW P Model S'), 'discmania-p-model-s');
+  // The US variants still resolve to their own entries.
+  assert.strictEqual(id('Prodigy Disc ACE Line F Model US'), 'discmania-f-model');
+  assert.strictEqual(id('ACE Line D Model US'), 'discmania-d-model');
+});
