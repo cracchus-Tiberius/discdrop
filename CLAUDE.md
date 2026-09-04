@@ -60,6 +60,8 @@ Package manager: pnpm (always use pnpm, never npm).
   Aldri duplikat-oppføringer.
 - Kjente alias-feller: Cloudbreaker, Q-Line/Q-Line Premier, Kaxe Z,
   nickname-first Discmania-titler.
+- Ved katalogutvidelse/butikk-onboarding undertrykkes new-disc-signaler den
+  dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
 
 ## Scraper
 - scripts/scrape-all.js runs every store scraper in sequence (10-min timeout each,

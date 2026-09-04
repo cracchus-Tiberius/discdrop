@@ -706,6 +706,77 @@ export const discs = [
   { id:"streamline-parachute", name:"Parachute", brand:"Streamline", type:"putter", flight:{speed:1,glide:7,turn:0,fade:0.5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"discmania-fisken", name:"Fisken", brand:"Discmania", type:"fairway", flight:{speed:7,glide:7,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
 
+  // ── Catalog expansion 2026-09-04 ────────────────────────────────────────
+  // 32 molds Norwegian and Nordic stores actually sell that had no catalog
+  // entry, found by classifying every unmatched product from the Krokhol
+  // (krokholdgs.no) onboarding probe against the catalog. Each classified
+  // first as (a) a real missing mold or (b) a spelling variant of an entry we
+  // already had — see CLAUDE.md's "Matcher-regler". Only the (a) set is here;
+  // the (b) set was fixed in the matcher instead, never duplicated.
+  //
+  // Flight numbers come from each manufacturer's own site, never a retailer:
+  //   DGA           store.discgolf.com product tags (Speed/Glide/Turn/Fade),
+  //                 cross-checked across 1-14 products per mold
+  //   Climo         climodiscgolf.com product descriptions
+  //   Discmania     discmania.net product tags. NOTE: Discmania give Enigma
+  //                 glide 5; docs/DiscDrop_Knowledge_Base.md said 6, and is
+  //                 corrected in the same commit
+  //   Prodigy       prodigydisc.com product pages
+  //   Innova        innovadiscs.com/disc/{wombat,sync}
+  //   Clash         clashdiscs.com
+  //   Axiom         axiomdiscs.com/discs/aspect
+  //   Streamline    streamlinediscs.com/discs/boost (9.5/2.5 — MVP-family
+  //                 discs carry half-point ratings, as prodigy-h1 already does)
+  //
+  // Discraft's Hallux, Fossil, Terminator and Caliber are deliberately NOT
+  // here. All four are 2026 prototype/test-flight molds, Discraft's own flight
+  // chart is a 2023 image that predates them, and their factory store lists no
+  // numbers. Retailer figures exist but are not the manufacturer's. They get
+  // entries when Discraft publishes.
+  //
+  // catalogAddedAt is backdated to 2026-07-24 — the same reasoning as the
+  // discmania-active split above. These are long-standing market molds; only
+  // our catalog is new. Without the backdate, isGenuinelyNewToCatalog() in
+  // scripts/lib/new-in-stores.js would let all 32 surface as "new-disc" in one
+  // week's /nytt feed, which is our own bookkeeping, not news to a player.
+  //
+  // Ids use dga-* and climo-* prefixes. Climo's two pre-existing entries
+  // (Skyway, Belleair) carry prodiscus-* ids from an older mistake; renaming
+  // those needs redirects and firstSeen aliases, so it is left alone rather
+  // than half-done here.
+  { id:"dga-sail", name:"Sail", brand:"DGA", type:"distance", flight:{speed:11,glide:5,turn:-5,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-surf", name:"Surf", brand:"DGA", type:"putter", flight:{speed:3,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-rift", name:"Rift", brand:"DGA", type:"midrange", flight:{speed:5,glide:4,turn:-1,fade:1.5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-sonar", name:"Sonar", brand:"DGA", type:"putter", flight:{speed:3,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-breaker", name:"Breaker", brand:"DGA", type:"putter", flight:{speed:3,glide:3,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-tsunami", name:"Tsunami", brand:"DGA", type:"distance", flight:{speed:10,glide:3,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-typhoon", name:"Typhoon", brand:"DGA", type:"distance", flight:{speed:12,glide:6,turn:-2,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-aftershock", name:"Aftershock", brand:"DGA", type:"midrange", flight:{speed:5,glide:4,turn:-1,fade:1.5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-blast", name:"Blast", brand:"DGA", type:"putter", flight:{speed:4,glide:2,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-banzai", name:"Banzai", brand:"DGA", type:"fairway", flight:{speed:8,glide:4,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-hellfire", name:"Hellfire", brand:"DGA", type:"fairway", flight:{speed:10,glide:3,turn:0,fade:5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-torrent", name:"Torrent", brand:"DGA", type:"distance", flight:{speed:14,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-tempest", name:"Tempest", brand:"DGA", type:"distance", flight:{speed:13,glide:5,turn:-3,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-tremor", name:"Tremor", brand:"DGA", type:"midrange", flight:{speed:6,glide:5,turn:-4,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-hypercane", name:"Hypercane", brand:"DGA", type:"distance", flight:{speed:13,glide:4,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-blowfly", name:"Blowfly", brand:"DGA", type:"putter", flight:{speed:2,glide:2,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-blunt", name:"Blunt", brand:"DGA", type:"putter", flight:{speed:2,glide:2,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"climo-osprey", name:"Osprey", brand:"Climo Disc Golf", type:"distance", flight:{speed:10,glide:6,turn:-3,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"climo-streak", name:"Streak", brand:"Climo Disc Golf", type:"fairway", flight:{speed:7,glide:5,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"climo-champ", name:"Champ", brand:"Climo Disc Golf", type:"putter", flight:{speed:2,glide:3,turn:0,fade:0}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"climo-cliff", name:"Cliff", brand:"Climo Disc Golf", type:"putter", flight:{speed:2,glide:3,turn:-1,fade:0}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"climo-coast", name:"Coast", brand:"Climo Disc Golf", type:"midrange", flight:{speed:6,glide:6,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-enigma", name:"Enigma", brand:"Discmania", type:"distance", flight:{speed:12,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"discmania-tailor", name:"Tailor", brand:"Discmania", type:"putter", flight:{speed:4,glide:4,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"prodigy-h1v2", name:"H1V2", brand:"Prodigy", type:"fairway", flight:{speed:10,glide:4,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"prodigy-h2v2", name:"H2V2", brand:"Prodigy", type:"fairway", flight:{speed:10,glide:4,turn:-1,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"innova-wombat", name:"Wombat", brand:"Innova", type:"midrange", flight:{speed:5,glide:6,turn:-1,fade:0}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"innova-sync", name:"Sync", brand:"Innova", type:"putter", flight:{speed:3,glide:3,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"clash-mint", name:"Mint", brand:"Clash Discs", type:"putter", flight:{speed:4,glide:3,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"clash-fudge", name:"Fudge", brand:"Clash Discs", type:"putter", flight:{speed:2,glide:3,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"axiom-aspect", name:"Aspect", brand:"Axiom", type:"distance", flight:{speed:9,glide:5,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"streamline-boost", name:"Boost", brand:"Streamline", type:"fairway", flight:{speed:9.5,glide:4,turn:0,fade:2.5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+
   ]
 
   // Hot Drops — curated list for the Hot Drops section

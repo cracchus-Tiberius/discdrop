@@ -53,3 +53,46 @@ test('the catalog stores Bokeh as a mold, not a plastic-prefixed name', () => {
   assert.strictEqual(id('Axiom Neutron Bokeh'), 'axiom-bokeh-lizotte');
   assert.strictEqual(id('Axiom Discs Cosmic Neutron Bokeh - Simon Lizotte'), 'axiom-bokeh-lizotte');
 });
+
+// ── Catalog expansion 2026-09-04 ─────────────────────────────────────────────
+
+test('the newly catalogued molds match real store titles', () => {
+  assert.strictEqual(id('DGA ProLine Sail'), 'dga-sail');
+  assert.strictEqual(id('DGA Tour Series Swirl Aftershock - Cole Redalen 2026'), 'dga-aftershock');
+  assert.strictEqual(id('DGA Signature Line Blunt Gumbputt'), 'dga-blunt');
+  assert.strictEqual(id('Climo Disc Golf Victory Line Osprey'), 'climo-osprey');
+  assert.strictEqual(id('Climo Disc Golf Trophy Line Soft Cliff'), 'climo-cliff');
+  assert.strictEqual(id('Discmania Neo Enigma'), 'discmania-enigma');
+  assert.strictEqual(id('Discmania Active Premium Tailor'), 'discmania-tailor');
+  assert.strictEqual(id('Prodigy Disc 400 Plastic H1v2'), 'prodigy-h1v2');
+  assert.strictEqual(id('Innova Halo Star Wombat'), 'innova-wombat');
+  assert.strictEqual(id('Clash Discs Softy Mint'), 'clash-mint');
+  assert.strictEqual(id('Axiom Discs Eclipse Glow Aspect - Simon Lizotte'), 'axiom-aspect');
+  assert.strictEqual(id('Streamline Neutron Boost'), 'streamline-boost');
+});
+
+test('DGA Hellfire and Breaker do not swallow other brands\' molds', () => {
+  // Both DGA names contain a shorter catalog name as a substring — "fire"
+  // (latitude-fire) and "breaker" (inside discmania-cloudbreaker).
+  assert.strictEqual(id('DGA ProLine Hellfire'), 'dga-hellfire');
+  assert.strictEqual(id('Latitude 64 Opto Fire'), 'latitude-fire');
+  assert.strictEqual(id('DGA D-Line Breaker'), 'dga-breaker');
+  assert.strictEqual(id('Discmania Q-Line Premier Cloud Breaker'), 'discmania-cloudbreaker');
+});
+
+test('Innova Sync and Wombat keep clear of Nova and Wombat3', () => {
+  assert.strictEqual(id('Innova Star Sync'), 'innova-sync');
+  assert.strictEqual(id('Innova DX Nova'), 'innova-nova');
+  assert.strictEqual(id('Innova Halo Star Wombat'), 'innova-wombat');
+  assert.strictEqual(id('Innova Star Wombat3'), 'innova-wombat3');
+});
+
+test('XCaliber survives the Caliber name it contains', () => {
+  // Guards the Discraft Caliber entry that is parked pending manufacturer
+  // flight numbers. norm() splits camelCase, so catalog "XCaliber" becomes
+  // "x caliber" — a bare "Caliber" entry sits one word away from it. These
+  // must keep resolving to Innova when Caliber is eventually added.
+  assert.strictEqual(id('STAR XCALIBER'), 'innova-xcaliber');
+  assert.strictEqual(id('Champion Xcaliber'), 'innova-xcaliber');
+  assert.strictEqual(id('Xcaliber - Nate Sexton'), 'innova-xcaliber');
+});

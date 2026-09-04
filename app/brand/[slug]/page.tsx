@@ -21,6 +21,8 @@ export const SLUG_TO_BRAND: Record<string, string> = {
   "alfa": "Alfa",
   "eggshell-discs": "EggShell Discs",
   "clash-discs": "Clash Discs",
+  "dga": "DGA",
+  "climo-disc-golf": "Climo Disc Golf",
   "prodiscus": "Prodiscus",
   "lone-star-discs": "Lone Star Discs",
   "gateway": "Gateway",

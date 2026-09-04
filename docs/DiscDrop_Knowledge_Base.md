@@ -803,7 +803,7 @@ Norwegian disc golf stores typically list products as:
 | Origin | Evolution | Midrange | 5/5/-2/1 | Understable mid |
 | Mutant | Evolution | Midrange | 5/4/0/3 | Overstable mid |
 | Rockstar | Evolution | Distance | 12/5/0/3 | Overstable distance |
-| Enigma | Evolution | Distance | 12/6/-1/2 | Popular distance |
+| Enigma | Evolution | Distance | 12/5/-1/2 | Popular distance |
 
 ## 7.4 Kastaplast Key Models
 
