@@ -620,8 +620,8 @@ export const discs = [
   { id:"gateway-penrose", name:"Penrose", brand:"EV-7 Disc Golf", type:"putter", flight:{speed:2,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-it", name:"IT", brand:"Innova", type:"fairway", flight:{speed:7,glide:6,turn:-3,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-faith", name:"Faith", brand:"Latitude 64", type:"putter", flight:{speed:2,glide:3,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-squall", name:"Squall", brand:"Latitude 64", type:"midrange", flight:{speed:6,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-rogue", name:"Rogue", brand:"Latitude 64", type:"distance", flight:{speed:11,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"dga-squall", name:"Squall", brand:"DGA", type:"midrange", flight:{speed:6,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"dga-rogue", name:"Rogue", brand:"DGA", type:"distance", flight:{speed:11,glide:4,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   // Was latitude-hurricane until 2026-09-04, the same mistake as
   // latitude-function. All 5 store listings are DGA: HyzerShop's own product
   // JSON says vendor "DGA", Discsport's page title is "Hurricane Mold -
@@ -632,9 +632,9 @@ export const discs = [
   // public/_redirects. DGA also make a distinct "Hurricane X" (13/5/0/3); no
   // store we scrape stocks one, so it gets no speculative entry.
   { id:"dga-hurricane", name:"Hurricane", brand:"DGA", type:"distance", flight:{speed:12,glide:5,turn:-1,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-pipeline", name:"Pipeline", brand:"Latitude 64", type:"fairway", flight:{speed:8,glide:5,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-avalanche", name:"Avalanche", brand:"Latitude 64", type:"fairway", flight:{speed:9,glide:3,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-quake", name:"Quake", brand:"Latitude 64", type:"midrange", flight:{speed:5,glide:3,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"dga-pipeline", name:"Pipeline", brand:"DGA", type:"fairway", flight:{speed:8,glide:5,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"dga-avalanche", name:"Avalanche", brand:"DGA", type:"fairway", flight:{speed:9,glide:3,turn:0,fade:4}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+  { id:"dga-quake", name:"Quake", brand:"DGA", type:"midrange", flight:{speed:5,glide:3,turn:0,fade:3}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-polecat", name:"Polecat", brand:"Innova", type:"putter", flight:{speed:1,glide:3,turn:0,fade:0}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-skeeter", name:"Skeeter", brand:"Innova", type:"midrange", flight:{speed:5,glide:5,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"innova-manta", name:"Manta", brand:"Innova", type:"midrange", flight:{speed:5,glide:5,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
@@ -785,6 +785,16 @@ export const discs = [
   { id:"clash-fudge", name:"Fudge", brand:"Clash Discs", type:"putter", flight:{speed:2,glide:3,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
   { id:"axiom-aspect", name:"Aspect", brand:"Axiom", type:"distance", flight:{speed:9,glide:5,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
   { id:"streamline-boost", name:"Boost", brand:"Streamline", type:"fairway", flight:{speed:9.5,glide:4,turn:0,fade:2.5}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+
+  // DGA Vortex and Steady, added 2026-09-04. Both were hidden rather than
+  // missing: Vortex matched westside-world through the "2x World Champion"
+  // text in its tour-series stamps, and Steady matched discmania-steady.
+  // The foreign-plastic gate stopped both, which is what surfaced them.
+  // Flight numbers from store.discgolf.com's own product tags; brand
+  // confirmed twice over, by HyzerShop's vendor field and by Discsport's
+  // "Vortex Mold - Fairway Driver | DGA" page titles.
+  { id:"dga-vortex", name:"Vortex", brand:"DGA", type:"fairway", flight:{speed:7,glide:6,turn:-3,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
+  { id:"dga-steady", name:"Steady", brand:"DGA", type:"putter", flight:{speed:2,glide:3,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
 
   ]
 

@@ -232,7 +232,12 @@ const PLASTIC_TYPES = {
     prefix: ['Nebula Ethereal', 'Nebula Aura', 'Ethereal', 'Ethos Soft', 'Ethos', 'Aura'],
     suffix: [],
   },
-  'EggShell Discs': {
+  // Keyed 'Dino Discs' to match data/discs.js's brand field, per this file's
+  // header. It was 'EggShell Discs' — a brand that appears nowhere in the
+  // catalog — so brandPlasticPresent() never fired for Dino Discs, and the
+  // foreign-plastic gate read their own "Egg Shell" plastic as another
+  // brand's evidence and rejected their discs outright.
+  'Dino Discs': {
     prefix: ['Egg Shell Glow', 'Egg Shell'],
     suffix: [],
   },

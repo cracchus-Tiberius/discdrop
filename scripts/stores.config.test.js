@@ -160,3 +160,31 @@ test('a player or stamp name no longer beats the real mold', () => {
   assert.strictEqual(id('Latitude 64 Zero Medium Orbit Peak - 2x World Champion Isaac Robinson'), 'latitude-peak');
   assert.strictEqual(id('Discraft ESP SuperColor Buzzz - Dark Star Ochestra Beetle'), 'discraft-buzzz');
 });
+
+test('every PLASTIC_TYPES key names a brand that exists in the catalog', () => {
+  // plastic-types.js's own header requires this, and nothing enforced it.
+  // 'EggShell Discs' was keyed for discs whose brand field says 'Dino Discs',
+  // so brandPlasticPresent() never fired for them — and once the
+  // foreign-plastic gate went in, their own "Egg Shell" plastic read as
+  // another brand's evidence and rejected every Dino Discs listing.
+  const { discs } = require('../data/discs.js');
+  const { PLASTIC_TYPES } = require('./plastic-types.js');
+  const brands = new Set(discs.map((d) => d.brand));
+  const orphans = Object.keys(PLASTIC_TYPES).filter((k) => !brands.has(k));
+  assert.deepStrictEqual(orphans, [], `PLASTIC_TYPES keys with no catalog brand: ${orphans.join(', ')}`);
+});
+
+test('the DGA weather family resolves to DGA, not Latitude 64', () => {
+  assert.strictEqual(id('DGA Atmos Squall'), 'dga-squall');
+  assert.strictEqual(id('DGA ProLine Pipeline'), 'dga-pipeline');
+  assert.strictEqual(id('DGA Spark Avalanche'), 'dga-avalanche');
+  assert.strictEqual(id('DGA Granite Blend Rogue - 2025 Eliezra Midtlyng Tour Series'), 'dga-rogue');
+  assert.strictEqual(id('DGA Atmos Quake'), 'dga-quake');
+  assert.strictEqual(id('DGA ProLine Vortex - Catrina Allen 2x World Champion'), 'dga-vortex');
+  assert.strictEqual(id('DGA Stone Steady'), 'dga-steady');
+});
+
+test('a Dino Discs title is not rejected by its own plastic', () => {
+  assert.strictEqual(id('Egg Shell Tyrannosaurus Rex'), 'eggshell-rex');
+  assert.strictEqual(id('Egg Shell Glow Tyrannosaurus Rex'), 'eggshell-rex');
+});

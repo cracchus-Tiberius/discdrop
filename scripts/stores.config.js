@@ -492,6 +492,14 @@ const FIRST_SEEN_ID_ALIASES = {
   'mvp-volt': 'latitude-volt',
   'westside-northman': 'latitude-northman',
   'westside-gatekeeper': 'latitude-gatekeeper',
+  // The DGA weather family, 2026-09-04. Brand confirmed per mold by two
+  // independent stores (HyzerShop's vendor field, Discsport's page titles),
+  // and Latitude 64's own 339-product store lists none of them.
+  'dga-squall': 'latitude-squall',
+  'dga-pipeline': 'latitude-pipeline',
+  'dga-avalanche': 'latitude-avalanche',
+  'dga-rogue': 'latitude-rogue',
+  'dga-quake': 'latitude-quake',
   'discmania-maestro': 'discmania-active',
   'discmania-rockstar': 'discmania-active',
   'discmania-mentor': 'discmania-active',

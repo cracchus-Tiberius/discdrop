@@ -105,3 +105,17 @@
 /disc/latitude-northman/      /disc/westside-northman/    301
 /disc/latitude-gatekeeper     /disc/westside-gatekeeper/  301
 /disc/latitude-gatekeeper/    /disc/westside-gatekeeper/  301
+
+# DGA weather family, 2026-09-04 — Squall, Pipeline, Avalanche, Rogue and
+# Quake are DGA molds that sat under Latitude 64 ids. Latitude 64 make none
+# of them; both HyzerShop and Discsport name DGA as the brand.
+/disc/latitude-squall         /disc/dga-squall/           301
+/disc/latitude-squall/        /disc/dga-squall/           301
+/disc/latitude-pipeline       /disc/dga-pipeline/         301
+/disc/latitude-pipeline/      /disc/dga-pipeline/         301
+/disc/latitude-avalanche      /disc/dga-avalanche/        301
+/disc/latitude-avalanche/     /disc/dga-avalanche/        301
+/disc/latitude-rogue          /disc/dga-rogue/            301
+/disc/latitude-rogue/         /disc/dga-rogue/            301
+/disc/latitude-quake          /disc/dga-quake/            301
+/disc/latitude-quake/         /disc/dga-quake/            301
