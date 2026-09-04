@@ -391,7 +391,13 @@ function matchDiscCandidate(rawProductName) {
       // and Starframe's "GEO Function" (own JSON-LD brand.name: "Discmania")
       // matched latitude-function. Both are generic enough mold names to
       // collide the same way as motion/flow above.
-      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function']);
+      //
+      // "crush" joins them as a preventive rather than a confirmed incident:
+      // it is an ordinary English word that shows up in stamp and edition
+      // text, and Discraft's Crush is short enough to lose a longest-match
+      // contest against it. Every current listing carries either the brand
+      // name or a Discraft plastic, so the check costs nothing today.
+      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function', 'crush']);
       if (discName.length <= 3 || REQUIRES_BRAND_CHECK.has(discName)) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
