@@ -87,3 +87,21 @@
 # spark-/atmos- plastics), and Latitude 64 list no Hurricane at all.
 /disc/latitude-hurricane      /disc/dga-hurricane/       301
 /disc/latitude-hurricane/     /disc/dga-hurricane/       301
+
+# Latitude 64 mis-attribution sweep, 2026-09-04. Each of these carried
+# another brand's plastic in every store URL that identified one — see
+# data/discs.js and the FIRST_SEEN_ID_ALIASES block.
+/disc/latitude-mutant         /disc/discmania-mutant/     301
+/disc/latitude-mutant/        /disc/discmania-mutant/     301
+/disc/latitude-paradigm       /disc/discmania-paradigm/   301
+/disc/latitude-paradigm/      /disc/discmania-paradigm/   301
+/disc/latitude-spore          /disc/discmania-spore/      301
+/disc/latitude-spore/         /disc/discmania-spore/      301
+/disc/latitude-founder        /disc/discmania-founder/    301
+/disc/latitude-founder/       /disc/discmania-founder/    301
+/disc/latitude-volt           /disc/mvp-volt/             301
+/disc/latitude-volt/          /disc/mvp-volt/             301
+/disc/latitude-northman       /disc/westside-northman/    301
+/disc/latitude-northman/      /disc/westside-northman/    301
+/disc/latitude-gatekeeper     /disc/westside-gatekeeper/  301
+/disc/latitude-gatekeeper/    /disc/westside-gatekeeper/  301

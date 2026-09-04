@@ -21722,129 +21722,6 @@
         "firstSeen": "2026-07-26T12:24:40.398Z"
       }
     ],
-    "latitude-spore": [
-      {
-        "store": "wearediscgolf",
-        "price": 219,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/neo-spore/",
-        "image": "https://wearediscgolf.no/content/uploads/2024/03/60006119.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-16T10:32:12.262Z"
-      },
-      {
-        "store": "hyzershop",
-        "price": 215,
-        "inStock": false,
-        "url": "https://hyzershop.no/products/neo-soft-spore",
-        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/spore_hvit.webp?v=1721657661",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-09-04T05:29:22.372Z"
-      },
-      {
-        "store": "discgolfdynasty",
-        "price": 219,
-        "inStock": false,
-        "url": "https://www.discgolfdynasty.no/products/neo-spore",
-        "image": "https://cdn.shopify.com/s/files/1/0564/5824/8377/files/4F0BF837-07E7-4E00-8EA0-80E805BD2456.png?v=1712061638",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "discsor",
-        "price": 225,
-        "inStock": true,
-        "url": "https://discsor.no/product/neo-soft-spore/",
-        "image": "https://discsor.no/wp-content/uploads/2025/11/DM4A9771_4c658094-8f9a-4a93-8ed4-bc45c0b49f50-scaled.png",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "starframe",
-        "price": 219,
-        "inStock": true,
-        "url": "https://www.starframe.no/products/soft-neo-spore",
-        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/DlVqx_Discmania_Soft_Neo_Spore_1.jpeg/w665h665.jpeg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:43.963Z",
-        "firstSeen": "2026-08-19T09:06:10.416Z"
-      },
-      {
-        "store": "krokhol",
-        "price": 199,
-        "inStock": true,
-        "url": "https://www.krokholdgs.no/products/neo-soft-spore",
-        "image": "https://krokholdgs-i02.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/uCvXd_Discmania_Neo_Soft_Spore_1.webp/w600h600.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:05.699Z",
-        "firstSeen": "2026-09-04T05:35:05.699Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 229,
-        "inStock": true,
-        "url": "https://nydisk.no/products/discmania-soft-neo-spore",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-Spore-6_da6ab26b-d803-4fa7-852d-7ac225a81bc0.png?v=1716743905",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:44.024Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 194,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/spore-neo-evolution",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Spore-Neo-Discmania.png?v=1711463032",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-07-24T20:58:19.645Z"
-      },
-      {
-        "store": "rocketdiscs",
-        "price": 193,
-        "inStock": true,
-        "url": "https://rocketdiscs.com/discmania-spore",
-        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20240326142734243_StockSSP_4392Rocket_65.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:37:17.675Z",
-        "firstSeen": "2026-07-24T20:58:57.598Z"
-      },
-      {
-        "store": "discsport",
-        "price": 194,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/spore",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 186,
-        "inStock": true,
-        "url": "https://ugglansdiscgolf.se/products/neo-soft-spore",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/neo-spore4_lg.webp?v=1732735825",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:48:09.055Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      }
-    ],
     "mvp-pixel": [
       {
         "store": "aceshop",
@@ -33451,107 +33328,6 @@
         "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/StarArachnidFirstRunBlue.jpg?v=1773859230",
         "plastic": "Star",
         "edition": "First Run",
-        "lastScraped": "2026-09-04T05:48:09.055Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      }
-    ],
-    "latitude-founder": [
-      {
-        "store": "kvamdgs",
-        "price": 225,
-        "inStock": true,
-        "url": "https://kvamdgs.no/products/neo-founder",
-        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_1672.jpg?v=1776763258",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-07-24T20:34:22.548Z"
-      },
-      {
-        "store": "hyzershop",
-        "price": 255,
-        "inStock": false,
-        "url": "https://hyzershop.no/products/founder-prototype-worlds-2025-edition",
-        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/Neo_Lumen_Worlds_Founder_Prototype_8.webp?v=1757430199",
-        "plastic": null,
-        "edition": "Prototype",
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "frisbeebutikken",
-        "price": 219,
-        "inStock": true,
-        "url": "https://frisbeebutikken.no/products/neo-founder",
-        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XG5M9_Discmania_NEO_Founder_1.webp/w665h665.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:28.336Z",
-        "firstSeen": "2026-09-01T08:02:03.867Z"
-      },
-      {
-        "store": "krokhol",
-        "price": 200,
-        "inStock": true,
-        "url": "https://www.krokholdgs.no/products/neo-founder",
-        "image": "https://krokholdgs-i03.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/s4gTR_Discmania_Neo_Founder_1.webp/w600h600.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:05.699Z",
-        "firstSeen": "2026-09-04T05:35:05.699Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 223,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/founder-c-line-horizon-flipmageddon-limited-edition-by-jmilly",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/C_Line_Horizon_Founder_Limited_Edition_By_J_Milly_Yellow_Orange_2_f6bb1c2b-03ee-443b-bdbd-613b4d230d5f.webp?v=1785940090",
-        "plastic": null,
-        "edition": "Limited Edition",
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-08-06T08:46:38.191Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 194,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/founder",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Neo_Founder_Yellow.webp?v=1772449807",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-07-24T20:58:19.645Z"
-      },
-      {
-        "store": "discsport",
-        "price": 223,
-        "inStock": false,
-        "url": "https://discsport.se/discar/mold/founder",
-        "image": null,
-        "plastic": null,
-        "edition": "Limited Edition",
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-30T08:53:09.800Z"
-      },
-      {
-        "store": "discsport",
-        "price": 194,
-        "inStock": false,
-        "url": "https://discsport.se/discar/mold/founder",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 186,
-        "inStock": false,
-        "url": "https://ugglansdiscgolf.se/products/neo-founder",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/Neo_Founder_Yellow.webp?v=1773314543",
-        "plastic": "Neo",
-        "edition": null,
         "lastScraped": "2026-09-04T05:48:09.055Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
       }
@@ -45578,184 +45354,6 @@
         "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/DD_LucidIceCulprit-Prototype_Yellow_Blue.jpg?v=1733319873",
         "plastic": "Lucid Ice",
         "edition": "Prototype",
-        "lastScraped": "2026-09-04T05:48:09.055Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      }
-    ],
-    "latitude-mutant": [
-      {
-        "store": "aceshop",
-        "price": 199,
-        "inStock": true,
-        "url": "https://aceshop.no/product/evolution-neo-mutant/",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-01T11:12:19.175Z",
-        "firstSeen": "2026-08-28T18:21:19.215Z"
-      },
-      {
-        "store": "wearediscgolf",
-        "price": 219,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/neo-mutant/",
-        "image": "https://wearediscgolf.no/content/uploads/2021/11/Evolution_Neo_Mutant_Yellow_DMS_1024x.jpeg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-11T07:03:21.232Z"
-      },
-      {
-        "store": "kvamdgs",
-        "price": 225,
-        "inStock": true,
-        "url": "https://kvamdgs.no/products/neo-mutant",
-        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_1299.png?v=1774373227",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-07-24T20:34:22.548Z"
-      },
-      {
-        "store": "hyzershop",
-        "price": 219,
-        "inStock": false,
-        "url": "https://hyzershop.no/products/neo-mutant",
-        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/Discmania-Neo-Mutant-Pink.webp?v=1757429093",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-09-04T05:29:22.372Z"
-      },
-      {
-        "store": "discsor",
-        "price": 229,
-        "inStock": true,
-        "url": "https://discsor.no/product/neo-midrange-mutant/",
-        "image": "https://discsor.no/wp-content/uploads/2025/11/Neo_Mutant_Blue_2400px_144PPI_2048x2048_a8bf5919-6501-4240-b183-a2cbfe4a9a2c.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "frisbeebutikken",
-        "price": 219,
-        "inStock": true,
-        "url": "https://frisbeebutikken.no/products/neo-mutant",
-        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/EBFWO_Discmania_NEO_Mutant_1.webp/w665h665.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:28.336Z",
-        "firstSeen": "2026-09-01T08:02:03.867Z"
-      },
-      {
-        "store": "starframe",
-        "price": 209,
-        "inStock": true,
-        "url": "https://www.starframe.no/products/neo-mutant",
-        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/WNkfF_Discmania_NEO_Mutant_1.png/w665h650.png",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:43.963Z",
-        "firstSeen": "2026-08-19T09:06:10.416Z"
-      },
-      {
-        "store": "krokhol",
-        "price": 219,
-        "inStock": true,
-        "url": "https://www.krokholdgs.no/products/neo-mutant",
-        "image": "https://krokholdgs-i04.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/72po0_Discmania_Neo_Mutant_1.webp/w600h600.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:05.699Z",
-        "firstSeen": "2026-09-04T05:35:05.699Z"
-      },
-      {
-        "store": "golfdiscer",
-        "price": 209,
-        "inStock": true,
-        "url": "https://golfdiscer.no/products/neo-mutant",
-        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/A66BB0E4-3F67-4A0C-90B7-D3BD2E9EC72C.jpg?v=1743950734",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:29.518Z",
-        "firstSeen": "2026-07-24T20:57:44.650Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 219,
-        "inStock": true,
-        "url": "https://nydisk.no/products/discmania-neo-mutant",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-Mutant-1_7185ea0e-dd3e-42c9-8778-af59aa6746e2.png?v=1718366629",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:44.024Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discshopen",
-        "price": 199,
-        "inStock": true,
-        "url": "https://discshopen.no/produkt/neo-mutant/",
-        "image": "https://discshopen.no/wp-content/uploads/2022/09/Neo-Mutant-hvit.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:01.405Z",
-        "firstSeen": "2026-07-26T12:03:52.878Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 194,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/mutant-neo-evolution",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Mutant-NEO-Evolution-Discmania_350b7549-65dc-49d2-81e9-57c03e9940ea.png?v=1647456851",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-07-24T20:58:19.645Z"
-      },
-      {
-        "store": "rocketdiscs",
-        "price": 193,
-        "inStock": true,
-        "url": "https://rocketdiscs.com/discmania-mutant",
-        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20251206103109940_StockSSP_41141Rocket_1.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:37:17.675Z",
-        "firstSeen": "2026-07-24T20:58:57.598Z"
-      },
-      {
-        "store": "rocketdiscs",
-        "price": 226,
-        "inStock": true,
-        "url": "https://rocketdiscs.com/discmania-mutant",
-        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20251021122249176_StockSSP_40720Rocket_1.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:37:17.675Z",
-        "firstSeen": "2026-07-24T16:46:27.699Z"
-      },
-      {
-        "store": "discsport",
-        "price": 194,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/mutant",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 186,
-        "inStock": true,
-        "url": "https://ugglansdiscgolf.se/products/neo-mutant",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/neomutant4_lg.webp?v=1732734323",
-        "plastic": "Neo",
-        "edition": null,
         "lastScraped": "2026-09-04T05:48:09.055Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
       }
@@ -59729,151 +59327,6 @@
         "url": "https://ugglansdiscgolf.se/products/champion-eagle",
         "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/eagle_champion_blue.png?v=1732811164",
         "plastic": "Champion",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:48:09.055Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      }
-    ],
-    "latitude-volt": [
-      {
-        "store": "wearediscgolf",
-        "price": 199,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/neutron-volt/",
-        "image": "https://wearediscgolf.no/content/uploads/2021/11/Fission-Volt.jpg",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-11T07:03:21.232Z"
-      },
-      {
-        "store": "arcticdisc",
-        "price": 249,
-        "inStock": true,
-        "url": "https://arcticdisc.no/products/fission-volt",
-        "image": "https://cdn.shopify.com/s/files/1/0932/8050/2130/files/volt3.webp?v=1761331228",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-07-24T16:34:05.624Z"
-      },
-      {
-        "store": "hyzershop",
-        "price": 215,
-        "inStock": false,
-        "url": "https://hyzershop.no/products/volt-2",
-        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/09FE6BBE-059D-4C80-AC15-585B9B46CDD2_5000x_a7386e83-5607-4dee-bc71-db5e55e02903.webp?v=1747854554",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "discgolfdynasty",
-        "price": 215,
-        "inStock": true,
-        "url": "https://www.discgolfdynasty.no/products/plasma-volt",
-        "image": "https://cdn.shopify.com/s/files/1/0564/5824/8377/files/FM-60000261_2.png?v=1774524391",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "frisbeebutikken",
-        "price": 229,
-        "inStock": true,
-        "url": "https://frisbeebutikken.no/products/neutron-volt",
-        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XDKfD_MVP_Neutron_Volt_1.webp/w665h665.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:28.336Z",
-        "firstSeen": "2026-08-23T12:25:27.535Z"
-      },
-      {
-        "store": "starframe",
-        "price": 169,
-        "inStock": true,
-        "url": "https://www.starframe.no/products/electron-volt",
-        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/M3OQO_MVP_Cosmic_Neutron_Volt_1.jpeg/w665h665.jpeg",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:43.963Z",
-        "firstSeen": "2026-08-19T09:06:10.416Z"
-      },
-      {
-        "store": "krokhol",
-        "price": 159,
-        "inStock": true,
-        "url": "https://www.krokholdgs.no/products/electron-volt-classic",
-        "image": "https://krokholdgs-i05.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/dgiGJ_MVP_Disc_Sports_Proton_Volt_1.webp/w600h600.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:05.699Z",
-        "firstSeen": "2026-09-04T05:35:05.699Z"
-      },
-      {
-        "store": "golfdiscer",
-        "price": 209,
-        "inStock": true,
-        "url": "https://golfdiscer.no/products/cosmic-neutron-volt",
-        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/84DA7276-FBD8-4D4B-8F14-2DFB4881C065.jpg?v=1755425267",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:29.518Z",
-        "firstSeen": "2026-07-24T16:45:56.042Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 199,
-        "inStock": true,
-        "url": "https://nydisk.no/products/mvp-proton-volt",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/116_f6f23be7-98f9-40b2-a8f5-2f95e0068330.png?v=1785838734",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:44.024Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 174,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/volt-neutron-cosmic",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Volt-Neutron-Cosmic-MVP.png?v=1620244105",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-07-24T08:51:18.048Z"
-      },
-      {
-        "store": "rocketdiscs",
-        "price": 129,
-        "inStock": true,
-        "url": "https://rocketdiscs.com/mvp-volt",
-        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20260104152053138_StockSSP_44093Rocket_1.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:37:17.675Z",
-        "firstSeen": "2026-07-24T16:46:27.699Z"
-      },
-      {
-        "store": "discsport",
-        "price": 223,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/volt",
-        "image": null,
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 223,
-        "inStock": true,
-        "url": "https://ugglansdiscgolf.se/products/neutron-volt",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/MVP-neutron-Volt-orange.webp?v=1759930377",
-        "plastic": null,
         "edition": null,
         "lastScraped": "2026-09-04T05:48:09.055Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
@@ -98917,140 +98370,6 @@
         "firstSeen": "2026-07-26T12:24:40.398Z"
       }
     ],
-    "latitude-paradigm": [
-      {
-        "store": "aceshop",
-        "price": 199,
-        "inStock": true,
-        "url": "https://aceshop.no/product/evolution-neo-paradigm/",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-01T11:12:19.175Z",
-        "firstSeen": "2026-07-24T16:37:21.028Z"
-      },
-      {
-        "store": "wearediscgolf",
-        "price": 219,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/neo-paradigm/",
-        "image": "https://wearediscgolf.no/content/uploads/2022/01/Neo-Paradigm-White-DMSU.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-11T07:03:21.232Z"
-      },
-      {
-        "store": "hyzershop",
-        "price": 219,
-        "inStock": true,
-        "url": "https://hyzershop.no/products/neo-paradigm",
-        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/E282395F-0858-44FC-8D14-00D627E3C6F9.webp?v=1743284895",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-09-04T05:29:22.372Z"
-      },
-      {
-        "store": "discsor",
-        "price": 229,
-        "inStock": true,
-        "url": "https://discsor.no/product/neo-paradigm/",
-        "image": "https://discsor.no/wp-content/uploads/2025/11/pgul-scaled.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:29:22.372Z",
-        "firstSeen": "2026-08-22T17:08:01.249Z"
-      },
-      {
-        "store": "starframe",
-        "price": 199,
-        "inStock": true,
-        "url": "https://www.starframe.no/products/neo-paradigm",
-        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/PVd51_Discmania_NEO_Paradigm__1.jpeg/w665h665.jpeg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:34:43.963Z",
-        "firstSeen": "2026-08-19T09:06:10.416Z"
-      },
-      {
-        "store": "krokhol",
-        "price": 219,
-        "inStock": true,
-        "url": "https://www.krokholdgs.no/products/neo-paradigm",
-        "image": "https://krokholdgs-i03.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/AHOwK_Discmania_Neo_Paradigm_1.jpg/w600h600.jpg",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:05.699Z",
-        "firstSeen": "2026-09-04T05:35:05.699Z"
-      },
-      {
-        "store": "golfdiscer",
-        "price": 219,
-        "inStock": true,
-        "url": "https://golfdiscer.no/products/neo-paradigm",
-        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/discmania-neo-paradigm-201631.jpg?v=1727011591",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:29.518Z",
-        "firstSeen": "2026-07-24T20:57:44.650Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 219,
-        "inStock": true,
-        "url": "https://nydisk.no/products/discmania-neo-paradigm",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-Paradigm-2.png?v=1710506702",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:44.024Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 194,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/paradigm-neo-evolution",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Paradigm-Neo-Evolution-Discmania.png?v=1676362938",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-07-24T20:58:19.645Z"
-      },
-      {
-        "store": "rocketdiscs",
-        "price": 193,
-        "inStock": true,
-        "url": "https://rocketdiscs.com/discmania-paradigm",
-        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20251014131212943_StockSSP_42308Rocket_1.webp",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:37:17.675Z",
-        "firstSeen": "2026-07-24T20:58:57.598Z"
-      },
-      {
-        "store": "discsport",
-        "price": 194,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/paradigm",
-        "image": null,
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 186,
-        "inStock": true,
-        "url": "https://ugglansdiscgolf.se/products/neo-paradigm",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/neo-paradigm4_lg.webp?v=1732735695",
-        "plastic": "Neo",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:48:09.055Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      }
-    ],
     "latitude-flow": [
       {
         "store": "krokhol",
@@ -110384,52 +109703,6 @@
         "firstSeen": "2026-08-03T10:04:02.385Z"
       }
     ],
-    "latitude-gatekeeper": [
-      {
-        "store": "discexpress",
-        "price": 203,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/gatekeeper-copy",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/VIP_Ice_Gatekeeper_Westside_Hockey_Orange.webp?v=1769421253",
-        "plastic": "VIP",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-09-03T09:15:30.528Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 184,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/gatekeeper-vip",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/vip-gatekeeper-white.webp?v=1752135424",
-        "plastic": "VIP",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-09-04T05:36:09.428Z"
-      },
-      {
-        "store": "discsport",
-        "price": 184,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/gatekeeper",
-        "image": null,
-        "plastic": "VIP",
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "discsport",
-        "price": 184,
-        "inStock": true,
-        "url": "https://discsport.se/discar/mold/gatekeeper",
-        "image": null,
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:44:32.595Z",
-        "firstSeen": "2026-07-24T21:06:56.489Z"
-      }
-    ],
     "westside-warship": [
       {
         "store": "wearediscgolf",
@@ -116952,30 +116225,6 @@
         "edition": null,
         "lastScraped": "2026-09-04T05:44:32.595Z",
         "firstSeen": "2026-07-26T08:51:30.378Z"
-      }
-    ],
-    "latitude-northman": [
-      {
-        "store": "nydisk",
-        "price": 209,
-        "inStock": false,
-        "url": "https://nydisk.no/products/westside-discs-tournament-northman",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/Tournament-Northman-3.png?v=1738841576",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:35:44.024Z",
-        "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 184,
-        "inStock": false,
-        "url": "https://www.discexpress.se/products/northman-tournament",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/TP_Northman_Blue.webp?v=1752135155",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-09-04T05:36:09.428Z",
-        "firstSeen": "2026-07-24T08:51:18.048Z"
       }
     ],
     "prodigy-d4": [
@@ -125567,6 +124816,757 @@
         "price": 223,
         "inStock": true,
         "url": "https://discsport.se/discar/mold/hurricane",
+        "image": null,
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      }
+    ],
+    "discmania-mutant": [
+      {
+        "store": "aceshop",
+        "price": 199,
+        "inStock": true,
+        "url": "https://aceshop.no/product/evolution-neo-mutant/",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-01T11:12:19.175Z",
+        "firstSeen": "2026-08-28T18:21:19.215Z"
+      },
+      {
+        "store": "wearediscgolf",
+        "price": 219,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/neo-mutant/",
+        "image": "https://wearediscgolf.no/content/uploads/2021/11/Evolution_Neo_Mutant_Yellow_DMS_1024x.jpeg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-11T07:03:21.232Z"
+      },
+      {
+        "store": "kvamdgs",
+        "price": 225,
+        "inStock": true,
+        "url": "https://kvamdgs.no/products/neo-mutant",
+        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_1299.png?v=1774373227",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-07-24T20:34:22.548Z"
+      },
+      {
+        "store": "hyzershop",
+        "price": 219,
+        "inStock": false,
+        "url": "https://hyzershop.no/products/neo-mutant",
+        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/Discmania-Neo-Mutant-Pink.webp?v=1757429093",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-09-04T05:29:22.372Z"
+      },
+      {
+        "store": "discsor",
+        "price": 229,
+        "inStock": true,
+        "url": "https://discsor.no/product/neo-midrange-mutant/",
+        "image": "https://discsor.no/wp-content/uploads/2025/11/Neo_Mutant_Blue_2400px_144PPI_2048x2048_a8bf5919-6501-4240-b183-a2cbfe4a9a2c.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-mutant",
+        "image": "https://frisbeebutikke-i04.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/EBFWO_Discmania_NEO_Mutant_1.webp/w665h665.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:28.336Z",
+        "firstSeen": "2026-09-01T08:02:03.867Z"
+      },
+      {
+        "store": "starframe",
+        "price": 209,
+        "inStock": true,
+        "url": "https://www.starframe.no/products/neo-mutant",
+        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/WNkfF_Discmania_NEO_Mutant_1.png/w665h650.png",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:43.963Z",
+        "firstSeen": "2026-08-19T09:06:10.416Z"
+      },
+      {
+        "store": "krokhol",
+        "price": 219,
+        "inStock": true,
+        "url": "https://www.krokholdgs.no/products/neo-mutant",
+        "image": "https://krokholdgs-i04.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/72po0_Discmania_Neo_Mutant_1.webp/w600h600.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:05.699Z",
+        "firstSeen": "2026-09-04T05:35:05.699Z"
+      },
+      {
+        "store": "golfdiscer",
+        "price": 209,
+        "inStock": true,
+        "url": "https://golfdiscer.no/products/neo-mutant",
+        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/A66BB0E4-3F67-4A0C-90B7-D3BD2E9EC72C.jpg?v=1743950734",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:29.518Z",
+        "firstSeen": "2026-07-24T20:57:44.650Z"
+      },
+      {
+        "store": "nydisk",
+        "price": 219,
+        "inStock": true,
+        "url": "https://nydisk.no/products/discmania-neo-mutant",
+        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-Mutant-1_7185ea0e-dd3e-42c9-8778-af59aa6746e2.png?v=1718366629",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:44.024Z",
+        "firstSeen": "2026-07-26T12:03:23.979Z"
+      },
+      {
+        "store": "discshopen",
+        "price": 199,
+        "inStock": true,
+        "url": "https://discshopen.no/produkt/neo-mutant/",
+        "image": "https://discshopen.no/wp-content/uploads/2022/09/Neo-Mutant-hvit.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:01.405Z",
+        "firstSeen": "2026-07-26T12:03:52.878Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 194,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/mutant-neo-evolution",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Mutant-NEO-Evolution-Discmania_350b7549-65dc-49d2-81e9-57c03e9940ea.png?v=1647456851",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-07-24T20:58:19.645Z"
+      },
+      {
+        "store": "rocketdiscs",
+        "price": 193,
+        "inStock": true,
+        "url": "https://rocketdiscs.com/discmania-mutant",
+        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20251206103109940_StockSSP_41141Rocket_1.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:37:17.675Z",
+        "firstSeen": "2026-07-24T20:58:57.598Z"
+      },
+      {
+        "store": "rocketdiscs",
+        "price": 226,
+        "inStock": true,
+        "url": "https://rocketdiscs.com/discmania-mutant",
+        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20251021122249176_StockSSP_40720Rocket_1.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:37:17.675Z",
+        "firstSeen": "2026-07-24T16:46:27.699Z"
+      },
+      {
+        "store": "discsport",
+        "price": 194,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/mutant",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "ugglans",
+        "price": 186,
+        "inStock": true,
+        "url": "https://ugglansdiscgolf.se/products/neo-mutant",
+        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/neomutant4_lg.webp?v=1732734323",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:48:09.055Z",
+        "firstSeen": "2026-07-26T12:24:40.398Z"
+      }
+    ],
+    "discmania-paradigm": [
+      {
+        "store": "aceshop",
+        "price": 199,
+        "inStock": true,
+        "url": "https://aceshop.no/product/evolution-neo-paradigm/",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-01T11:12:19.175Z",
+        "firstSeen": "2026-07-24T16:37:21.028Z"
+      },
+      {
+        "store": "wearediscgolf",
+        "price": 219,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/neo-paradigm/",
+        "image": "https://wearediscgolf.no/content/uploads/2022/01/Neo-Paradigm-White-DMSU.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-11T07:03:21.232Z"
+      },
+      {
+        "store": "hyzershop",
+        "price": 219,
+        "inStock": true,
+        "url": "https://hyzershop.no/products/neo-paradigm",
+        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/E282395F-0858-44FC-8D14-00D627E3C6F9.webp?v=1743284895",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-09-04T05:29:22.372Z"
+      },
+      {
+        "store": "discsor",
+        "price": 229,
+        "inStock": true,
+        "url": "https://discsor.no/product/neo-paradigm/",
+        "image": "https://discsor.no/wp-content/uploads/2025/11/pgul-scaled.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "starframe",
+        "price": 199,
+        "inStock": true,
+        "url": "https://www.starframe.no/products/neo-paradigm",
+        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/PVd51_Discmania_NEO_Paradigm__1.jpeg/w665h665.jpeg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:43.963Z",
+        "firstSeen": "2026-08-19T09:06:10.416Z"
+      },
+      {
+        "store": "krokhol",
+        "price": 219,
+        "inStock": true,
+        "url": "https://www.krokholdgs.no/products/neo-paradigm",
+        "image": "https://krokholdgs-i03.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/AHOwK_Discmania_Neo_Paradigm_1.jpg/w600h600.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:05.699Z",
+        "firstSeen": "2026-09-04T05:35:05.699Z"
+      },
+      {
+        "store": "golfdiscer",
+        "price": 219,
+        "inStock": true,
+        "url": "https://golfdiscer.no/products/neo-paradigm",
+        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/discmania-neo-paradigm-201631.jpg?v=1727011591",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:29.518Z",
+        "firstSeen": "2026-07-24T20:57:44.650Z"
+      },
+      {
+        "store": "nydisk",
+        "price": 219,
+        "inStock": true,
+        "url": "https://nydisk.no/products/discmania-neo-paradigm",
+        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-Paradigm-2.png?v=1710506702",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:44.024Z",
+        "firstSeen": "2026-07-26T12:03:23.979Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 194,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/paradigm-neo-evolution",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Paradigm-Neo-Evolution-Discmania.png?v=1676362938",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-07-24T20:58:19.645Z"
+      },
+      {
+        "store": "rocketdiscs",
+        "price": 193,
+        "inStock": true,
+        "url": "https://rocketdiscs.com/discmania-paradigm",
+        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20251014131212943_StockSSP_42308Rocket_1.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:37:17.675Z",
+        "firstSeen": "2026-07-24T20:58:57.598Z"
+      },
+      {
+        "store": "discsport",
+        "price": 194,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/paradigm",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "ugglans",
+        "price": 186,
+        "inStock": true,
+        "url": "https://ugglansdiscgolf.se/products/neo-paradigm",
+        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/neo-paradigm4_lg.webp?v=1732735695",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:48:09.055Z",
+        "firstSeen": "2026-07-26T12:24:40.398Z"
+      }
+    ],
+    "discmania-spore": [
+      {
+        "store": "wearediscgolf",
+        "price": 219,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/neo-spore/",
+        "image": "https://wearediscgolf.no/content/uploads/2024/03/60006119.jpg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-16T10:32:12.262Z"
+      },
+      {
+        "store": "hyzershop",
+        "price": 215,
+        "inStock": false,
+        "url": "https://hyzershop.no/products/neo-soft-spore",
+        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/spore_hvit.webp?v=1721657661",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-09-04T05:29:22.372Z"
+      },
+      {
+        "store": "discgolfdynasty",
+        "price": 219,
+        "inStock": false,
+        "url": "https://www.discgolfdynasty.no/products/neo-spore",
+        "image": "https://cdn.shopify.com/s/files/1/0564/5824/8377/files/4F0BF837-07E7-4E00-8EA0-80E805BD2456.png?v=1712061638",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "discsor",
+        "price": 225,
+        "inStock": true,
+        "url": "https://discsor.no/product/neo-soft-spore/",
+        "image": "https://discsor.no/wp-content/uploads/2025/11/DM4A9771_4c658094-8f9a-4a93-8ed4-bc45c0b49f50-scaled.png",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "starframe",
+        "price": 219,
+        "inStock": true,
+        "url": "https://www.starframe.no/products/soft-neo-spore",
+        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/DlVqx_Discmania_Soft_Neo_Spore_1.jpeg/w665h665.jpeg",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:43.963Z",
+        "firstSeen": "2026-08-19T09:06:10.416Z"
+      },
+      {
+        "store": "krokhol",
+        "price": 199,
+        "inStock": true,
+        "url": "https://www.krokholdgs.no/products/neo-soft-spore",
+        "image": "https://krokholdgs-i02.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/uCvXd_Discmania_Neo_Soft_Spore_1.webp/w600h600.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:05.699Z",
+        "firstSeen": "2026-09-04T05:35:05.699Z"
+      },
+      {
+        "store": "nydisk",
+        "price": 229,
+        "inStock": true,
+        "url": "https://nydisk.no/products/discmania-soft-neo-spore",
+        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/NEO-Spore-6_da6ab26b-d803-4fa7-852d-7ac225a81bc0.png?v=1716743905",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:44.024Z",
+        "firstSeen": "2026-07-26T12:03:23.979Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 194,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/spore-neo-evolution",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Spore-Neo-Discmania.png?v=1711463032",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-07-24T20:58:19.645Z"
+      },
+      {
+        "store": "rocketdiscs",
+        "price": 193,
+        "inStock": true,
+        "url": "https://rocketdiscs.com/discmania-spore",
+        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20240326142734243_StockSSP_4392Rocket_65.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:37:17.675Z",
+        "firstSeen": "2026-07-24T20:58:57.598Z"
+      },
+      {
+        "store": "discsport",
+        "price": 194,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/spore",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "ugglans",
+        "price": 186,
+        "inStock": true,
+        "url": "https://ugglansdiscgolf.se/products/neo-soft-spore",
+        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/neo-spore4_lg.webp?v=1732735825",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:48:09.055Z",
+        "firstSeen": "2026-07-26T12:24:40.398Z"
+      }
+    ],
+    "discmania-founder": [
+      {
+        "store": "kvamdgs",
+        "price": 225,
+        "inStock": true,
+        "url": "https://kvamdgs.no/products/neo-founder",
+        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/IMG_1672.jpg?v=1776763258",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-07-24T20:34:22.548Z"
+      },
+      {
+        "store": "hyzershop",
+        "price": 255,
+        "inStock": false,
+        "url": "https://hyzershop.no/products/founder-prototype-worlds-2025-edition",
+        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/Neo_Lumen_Worlds_Founder_Prototype_8.webp?v=1757430199",
+        "plastic": null,
+        "edition": "Prototype",
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 219,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neo-founder",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XG5M9_Discmania_NEO_Founder_1.webp/w665h665.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:28.336Z",
+        "firstSeen": "2026-09-01T08:02:03.867Z"
+      },
+      {
+        "store": "krokhol",
+        "price": 200,
+        "inStock": true,
+        "url": "https://www.krokholdgs.no/products/neo-founder",
+        "image": "https://krokholdgs-i03.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/s4gTR_Discmania_Neo_Founder_1.webp/w600h600.webp",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:05.699Z",
+        "firstSeen": "2026-09-04T05:35:05.699Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 223,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/founder-c-line-horizon-flipmageddon-limited-edition-by-jmilly",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/C_Line_Horizon_Founder_Limited_Edition_By_J_Milly_Yellow_Orange_2_f6bb1c2b-03ee-443b-bdbd-613b4d230d5f.webp?v=1785940090",
+        "plastic": null,
+        "edition": "Limited Edition",
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-08-06T08:46:38.191Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 194,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/founder",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Neo_Founder_Yellow.webp?v=1772449807",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-07-24T20:58:19.645Z"
+      },
+      {
+        "store": "discsport",
+        "price": 223,
+        "inStock": false,
+        "url": "https://discsport.se/discar/mold/founder",
+        "image": null,
+        "plastic": null,
+        "edition": "Limited Edition",
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-30T08:53:09.800Z"
+      },
+      {
+        "store": "discsport",
+        "price": 194,
+        "inStock": false,
+        "url": "https://discsport.se/discar/mold/founder",
+        "image": null,
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "ugglans",
+        "price": 186,
+        "inStock": false,
+        "url": "https://ugglansdiscgolf.se/products/neo-founder",
+        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/Neo_Founder_Yellow.webp?v=1773314543",
+        "plastic": "Neo",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:48:09.055Z",
+        "firstSeen": "2026-07-26T12:24:40.398Z"
+      }
+    ],
+    "mvp-volt": [
+      {
+        "store": "wearediscgolf",
+        "price": 199,
+        "inStock": true,
+        "url": "https://wearediscgolf.no/produkt/neutron-volt/",
+        "image": "https://wearediscgolf.no/content/uploads/2021/11/Fission-Volt.jpg",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-11T07:03:21.232Z"
+      },
+      {
+        "store": "arcticdisc",
+        "price": 249,
+        "inStock": true,
+        "url": "https://arcticdisc.no/products/fission-volt",
+        "image": "https://cdn.shopify.com/s/files/1/0932/8050/2130/files/volt3.webp?v=1761331228",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-07-24T16:34:05.624Z"
+      },
+      {
+        "store": "hyzershop",
+        "price": 215,
+        "inStock": false,
+        "url": "https://hyzershop.no/products/volt-2",
+        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/09FE6BBE-059D-4C80-AC15-585B9B46CDD2_5000x_a7386e83-5607-4dee-bc71-db5e55e02903.webp?v=1747854554",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "discgolfdynasty",
+        "price": 215,
+        "inStock": true,
+        "url": "https://www.discgolfdynasty.no/products/plasma-volt",
+        "image": "https://cdn.shopify.com/s/files/1/0564/5824/8377/files/FM-60000261_2.png?v=1774524391",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:29:22.372Z",
+        "firstSeen": "2026-08-22T17:08:01.249Z"
+      },
+      {
+        "store": "frisbeebutikken",
+        "price": 229,
+        "inStock": true,
+        "url": "https://frisbeebutikken.no/products/neutron-volt",
+        "image": "https://frisbeebutikke-i02.mycdn.no/mysimgprod/frisbeebutikke_mystore_no/images/XDKfD_MVP_Neutron_Volt_1.webp/w665h665.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:28.336Z",
+        "firstSeen": "2026-08-23T12:25:27.535Z"
+      },
+      {
+        "store": "starframe",
+        "price": 169,
+        "inStock": true,
+        "url": "https://www.starframe.no/products/electron-volt",
+        "image": "https://starframedisc-i05.mycdn.no/mysimgprod/starframedisc_mystore_no/images/M3OQO_MVP_Cosmic_Neutron_Volt_1.jpeg/w665h665.jpeg",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:34:43.963Z",
+        "firstSeen": "2026-08-19T09:06:10.416Z"
+      },
+      {
+        "store": "krokhol",
+        "price": 159,
+        "inStock": true,
+        "url": "https://www.krokholdgs.no/products/electron-volt-classic",
+        "image": "https://krokholdgs-i05.mycdn.no/mysimgprod/krokholdgs_mystore_no/images/dgiGJ_MVP_Disc_Sports_Proton_Volt_1.webp/w600h600.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:05.699Z",
+        "firstSeen": "2026-09-04T05:35:05.699Z"
+      },
+      {
+        "store": "golfdiscer",
+        "price": 209,
+        "inStock": true,
+        "url": "https://golfdiscer.no/products/cosmic-neutron-volt",
+        "image": "https://cdn.shopify.com/s/files/1/0463/6003/5495/files/84DA7276-FBD8-4D4B-8F14-2DFB4881C065.jpg?v=1755425267",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:29.518Z",
+        "firstSeen": "2026-07-24T16:45:56.042Z"
+      },
+      {
+        "store": "nydisk",
+        "price": 199,
+        "inStock": true,
+        "url": "https://nydisk.no/products/mvp-proton-volt",
+        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/116_f6f23be7-98f9-40b2-a8f5-2f95e0068330.png?v=1785838734",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:44.024Z",
+        "firstSeen": "2026-07-26T12:03:23.979Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 174,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/volt-neutron-cosmic",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/products/Volt-Neutron-Cosmic-MVP.png?v=1620244105",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-07-24T08:51:18.048Z"
+      },
+      {
+        "store": "rocketdiscs",
+        "price": 129,
+        "inStock": true,
+        "url": "https://rocketdiscs.com/mvp-volt",
+        "image": "https://rocketdiscs.com/Inf_Uploads/DiscStock/w240_20260104152053138_StockSSP_44093Rocket_1.webp",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:37:17.675Z",
+        "firstSeen": "2026-07-24T16:46:27.699Z"
+      },
+      {
+        "store": "discsport",
+        "price": 223,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/volt",
+        "image": null,
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "ugglans",
+        "price": 223,
+        "inStock": true,
+        "url": "https://ugglansdiscgolf.se/products/neutron-volt",
+        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/MVP-neutron-Volt-orange.webp?v=1759930377",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:48:09.055Z",
+        "firstSeen": "2026-07-26T12:24:40.398Z"
+      }
+    ],
+    "westside-northman": [
+      {
+        "store": "nydisk",
+        "price": 209,
+        "inStock": false,
+        "url": "https://nydisk.no/products/westside-discs-tournament-northman",
+        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/Tournament-Northman-3.png?v=1738841576",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:35:44.024Z",
+        "firstSeen": "2026-07-26T12:03:23.979Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 184,
+        "inStock": false,
+        "url": "https://www.discexpress.se/products/northman-tournament",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/TP_Northman_Blue.webp?v=1752135155",
+        "plastic": null,
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-07-24T08:51:18.048Z"
+      }
+    ],
+    "westside-gatekeeper": [
+      {
+        "store": "discexpress",
+        "price": 203,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/gatekeeper-copy",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/VIP_Ice_Gatekeeper_Westside_Hockey_Orange.webp?v=1769421253",
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-09-03T09:15:30.528Z"
+      },
+      {
+        "store": "discexpress",
+        "price": 184,
+        "inStock": true,
+        "url": "https://www.discexpress.se/products/gatekeeper-vip",
+        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/vip-gatekeeper-white.webp?v=1752135424",
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:36:09.428Z",
+        "firstSeen": "2026-09-04T05:36:09.428Z"
+      },
+      {
+        "store": "discsport",
+        "price": 184,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/gatekeeper",
+        "image": null,
+        "plastic": "VIP",
+        "edition": null,
+        "lastScraped": "2026-09-04T05:44:32.595Z",
+        "firstSeen": "2026-07-24T21:06:56.489Z"
+      },
+      {
+        "store": "discsport",
+        "price": 184,
+        "inStock": true,
+        "url": "https://discsport.se/discar/mold/gatekeeper",
         "image": null,
         "plastic": null,
         "edition": null,
