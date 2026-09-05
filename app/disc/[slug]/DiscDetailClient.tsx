@@ -69,6 +69,19 @@ export function PriceTable({
   hideHeader?: boolean;
   inline?: boolean;
 }) {
+  /**
+   * Label rows with their plastic only when the table actually mixes them.
+   * A chip repeating the same word down every row is not information, and it
+   * costs the width the price columns need — the Bokeh page carried eleven
+   * identical "Neutron" chips, on a disc sold in one plastic, so there were no
+   * chips to filter by either. Derived from the rows rather than from the
+   * filter UI, which gets this wrong in exactly that case.
+   */
+  // Unknown plastics do not count as a distinct one. Bokeh is sold in Neutron
+  // by twelve stores and unlabelled by two; counting the blank as a second
+  // value kept all eleven chips on screen.
+  const showPlastic = new Set(stores.map((s) => s.plasticLabel).filter(Boolean)).size > 1;
+
   if (stores.length === 0) {
     if (hideHeader || inline) return null;
     return (
@@ -140,7 +153,7 @@ export function PriceTable({
                           isBest ? "bg-[#EEF7D4]" : "hover:bg-[#F1EFE6]"
                         } ${!row.inStock && inline ? "opacity-60" : ""}`}
                       >
-                        <td className={inline ? "px-3 py-2" : "px-5 py-4"}>
+                        <td className={`${inline ? "px-3 py-2" : "px-5 py-4"} min-w-0`}>
                           <div className="flex flex-wrap items-center gap-1.5">
                             <span className="font-semibold text-[#101C14]">{row.name}</span>
                             {row.country === "SE" && <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]" title="Svensk butikk">SE</span>}
@@ -154,7 +167,7 @@ export function PriceTable({
                             )}
                             {/* Plastic first: it is what makes the row
                                 comparable at all. Pickup is a nice-to-know. */}
-                            {row.plasticLabel && (
+                            {showPlastic && row.plasticLabel && (
                               <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]">
                                 {row.plasticLabel}
                               </span>
@@ -170,15 +183,19 @@ export function PriceTable({
                             <StockDot inStock={row.inStock} />
                           </td>
                         )}
-                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} text-[#101C14]`}>kr {row.price}</td>
-                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} text-[#101C14]`}>
+                        {/* Price columns never wrap. "kr 228" breaking across
+                            two lines is worse than a truncated store name, so
+                            any width shortfall is taken from the store column,
+                            which has text that can shorten gracefully. */}
+                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} whitespace-nowrap text-[#101C14]`}>kr {row.price}</td>
+                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} whitespace-nowrap text-[#101C14]`}>
                           {row.shippingNOK > 0 ? (
                             `kr ${row.shippingNOK}`
                           ) : (
                             <span className="font-semibold text-[#101C14]">Gratis</span>
                           )}
                         </td>
-                        <td className={inline ? "px-3 py-2" : "px-4 py-4"}>
+                        <td className={`${inline ? "px-3 py-2" : "px-4 py-4"} whitespace-nowrap`}>
                           <span className="font-extrabold text-[#101C14]">kr {row.total}</span>
                         </td>
                         <td className={inline ? "px-2 py-2" : "px-4 py-4"}>
@@ -214,6 +231,12 @@ export function PriceTable({
                         <div className="flex flex-wrap items-center gap-1.5">
                           <span className="font-extrabold text-[#101C14]">{row.name}</span>
                           {row.country === "SE" && <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]" title="Svensk butikk">SE</span>}
+                          {showPlastic && row.plasticLabel && (
+                            <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]">
+                              {row.plasticLabel}
+                            </span>
+                          )}
+                          <PickupBadge storeKey={row.storeKey} />
                           {isBest && (
                             <span className="dd-sticker text-[10px]">
                               Beste pris
@@ -862,12 +885,19 @@ export function DiscHeroSection({
                           {sec.rows.filter((r) => r.inStock).length} butikker på lager
                         </span>
                       </div>
+                      {/* Grouped view: each section is already one plastic and
+                          is titled with it, so the per-row chip is redundant. */}
                       <PriceTable stores={sec.rows} lastUpdated={lastUpdated} hideHeader inline />
                     </div>
                   ))}
                 </div>
               ) : (
-                <PriceTable stores={storeRows} lastUpdated={lastUpdated} hideHeader inline />
+                <PriceTable
+                  stores={storeRows}
+                  lastUpdated={lastUpdated}
+                  hideHeader
+                  inline
+                />
               )}
 
               {/* Bli varslet — inline in right column */}
