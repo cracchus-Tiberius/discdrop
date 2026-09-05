@@ -4,7 +4,14 @@
 // scripts/lib/*.js's pure-computation modules.
 //
 // Field priority, highest to lowest: disc name prefix > disc name
-// substring > brand prefix > brand substring > plastic/player substring.
+// substring > brand prefix > brand substring > type > plastic/player
+// substring.
+//
+// One core for both surfaces. The header dropdown used this; /browse had its
+// own flat includes() over name/brand/type/plastics with no ranking and no
+// minimum length, so the same query behaved differently depending on where it
+// was typed. Type matching is the one thing /browse had and this did not, so
+// it moves in here rather than being dropped.
 // Confirmed in production: without this, a 2-character query like "ec"
 // matched "Recycled ESP" (a plastic line) as readily as any disc name,
 // burying real name matches under plastic noise for every disc sold in
@@ -14,11 +21,13 @@ export type SearchableDisc = {
   id: string;
   name: string;
   brand: string;
+  /** "putter" | "midrange" | "fairway" | "distance" — searchable, so "putter" returns putters. */
+  type?: string | null;
   plastics: string[];
   player?: string | null;
 };
 
-export type SearchMatchField = "name" | "brand" | "plastic" | "player";
+export type SearchMatchField = "name" | "brand" | "type" | "plastic" | "player";
 
 export type SearchResult<T extends SearchableDisc> = {
   disc: T;
@@ -43,6 +52,9 @@ const SCORE = {
   nameSubstring: 80,
   brandPrefix: 60,
   brandSubstring: 40,
+  // A type match is a category browse, not a disc lookup — "putter" should
+  // return putters, but never above a disc actually named for the query.
+  type: 30,
   plasticOrPlayer: 20,
 };
 
@@ -122,6 +134,25 @@ export function searchDiscs<T extends SearchableDisc>(query: string, discs: T[])
 
     if (!allowPlasticPlayer) continue;
 
+    // Type matching came from /browse, which had it while the dropdown did
+    // not — the same query gave different answers depending on where you
+    // typed it. Gated behind the same minimum length as plastic: "pu" must
+    // not dump every putter over genuine name matches.
+    if (disc.type) {
+      const typeMatch = findMatch(disc.type, q);
+      if (typeMatch) {
+        results.push({
+          disc,
+          score: SCORE.type,
+          matchedField: "type",
+          matchedPlastic: null,
+          matchStart: typeMatch.start,
+          matchLength: typeMatch.length,
+        });
+        continue;
+      }
+    }
+
     const plastic = disc.plastics.find((p) => normalizeSearchText(p).includes(q));
     if (plastic) {
       const plasticMatch = findMatch(plastic, q)!;
@@ -146,6 +177,56 @@ export function searchDiscs<T extends SearchableDisc>(query: string, discs: T[])
         matchStart: playerMatch.start,
         matchLength: playerMatch.length,
       });
+    }
+  }
+
+  // Multi-term fallback. "star destroyer" is a plastic and a mold, and no
+  // single field contains both, so a whole-string search finds nothing — on
+  // either surface, before this. Only runs when the direct pass found nothing,
+  // so no existing query changes: every term must match some field of the
+  // disc, and the result is scored by its best single-term match.
+  if (results.length === 0) {
+    const terms = q.split(/\s+/).filter((t) => t.length >= 2);
+    if (terms.length >= 2) {
+      for (const disc of discs) {
+        const fields: [SearchMatchField, string][] = [
+          ["name", disc.name],
+          ["brand", disc.brand],
+          ...(disc.type ? ([["type", disc.type]] as [SearchMatchField, string][]) : []),
+          ...disc.plastics.map((p) => ["plastic", p] as [SearchMatchField, string]),
+          ...(disc.player ? ([["player", disc.player]] as [SearchMatchField, string][]) : []),
+        ];
+        type Best = { field: SearchMatchField; text: string; term: string; score: number };
+        let best: Best | undefined;
+        let allMatched = true;
+        for (const term of terms) {
+          let hit = false;
+          for (const [field, text] of fields) {
+            if (!findMatch(text, term)) continue;
+            hit = true;
+            const score =
+              field === "name" ? (normalizeSearchText(text).startsWith(term) ? SCORE.namePrefix : SCORE.nameSubstring)
+              : field === "brand" ? SCORE.brandSubstring
+              : field === "type" ? SCORE.type
+              : SCORE.plasticOrPlayer;
+            if (best === undefined || score > best.score) best = { field, text, term, score };
+          }
+          if (!hit) { allMatched = false; break; }
+        }
+        if (!allMatched || best === undefined) continue;
+        const m = findMatch(best.text, best.term)!;
+        results.push({
+          disc,
+          // Below any single-field match by construction — this pass only runs
+          // when there were none, but the tier keeps the ordering honest if
+          // that ever changes.
+          score: best.score - 1,
+          matchedField: best.field,
+          matchedPlastic: best.field === "plastic" ? best.text : null,
+          matchStart: m.start,
+          matchLength: m.length,
+        });
+      }
     }
   }
 

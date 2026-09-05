@@ -90,3 +90,57 @@ test("searchDiscs: matchStart/matchLength point at the real match position for h
   assert.equal(result.matchStart, "Discraft ".length);
   assert.equal(result.matchLength, 4);
 });
+
+// ── One core for both surfaces ───────────────────────────────────────────────
+
+test('searchDiscs: a type query returns that type — /browse had this, the dropdown did not', () => {
+  const results = searchDiscs("putter", [
+    disc({ id: "a", name: "Berg", brand: "Kastaplast", type: "putter" }),
+    disc({ id: "b", name: "Destroyer", brand: "Innova", type: "distance" }),
+  ]);
+  assert.deepEqual(results.map((r) => r.disc.id), ["a"]);
+  assert.equal(results[0].matchedField, "type");
+});
+
+test('searchDiscs: a type match never outranks a disc actually named for the query', () => {
+  const results = searchDiscs("putter", [
+    disc({ id: "type", name: "Berg", brand: "Kastaplast", type: "putter" }),
+    disc({ id: "name", name: "Putter Line", brand: "Whatever", type: "distance" }),
+  ]);
+  assert.deepEqual(results.map((r) => r.disc.id), ["name", "type"]);
+});
+
+test('searchDiscs: type respects the same minimum length as plastic', () => {
+  // "pu" must not dump every putter over genuine name matches.
+  assert.deepEqual(searchDiscs("pu", [disc({ id: "a", name: "Berg", brand: "K", type: "putter" })]), []);
+});
+
+test('searchDiscs: "star destroyer" finds the Star Destroyer', () => {
+  // A plastic and a mold. No single field contains both, so a whole-string
+  // search found nothing — on either surface, before this.
+  const results = searchDiscs("star destroyer", [
+    disc({ id: "d", name: "Destroyer", brand: "Innova", type: "distance", plastics: ["Star", "Champion"] }),
+    disc({ id: "w", name: "Wraith", brand: "Innova", type: "distance", plastics: ["Star"] }),
+    disc({ id: "b", name: "Destroyer", brand: "Other", type: "distance", plastics: ["DX"] }),
+  ]);
+  assert.deepEqual(results.map((r) => r.disc.id), ["d"]);
+});
+
+test('searchDiscs: the multi-term pass only runs when the direct pass found nothing', () => {
+  // "buzzz gt" matches a disc name directly; that must win outright rather
+  // than being widened into every disc carrying either word.
+  const results = searchDiscs("buzzz gt", [
+    disc({ id: "gt", name: "Buzzz GT", brand: "Discraft", type: "midrange" }),
+    disc({ id: "os", name: "Buzzz OS", brand: "Discraft", type: "midrange", plastics: ["GT"] }),
+  ]);
+  assert.deepEqual(results.map((r) => r.disc.id), ["gt"]);
+});
+
+test('searchDiscs: every term must match, not just one', () => {
+  assert.deepEqual(
+    searchDiscs("star nonexistentword", [
+      disc({ id: "d", name: "Destroyer", brand: "Innova", type: "distance", plastics: ["Star"] }),
+    ]),
+    []
+  );
+});
