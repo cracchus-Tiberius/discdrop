@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { searchDiscs } from "@/lib/search";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
@@ -236,16 +237,26 @@ function BrowseContent() {
   const filtered = useMemo(() => {
     let list = discs as Disc[];
 
-    // Text search
+    // Text search — same core as the header dropdown (lib/search.ts). This
+    // used to be its own flat includes() with no ranking, no field priority
+    // and no minimum length, so "ec" matched every disc sold in Recycled ESP
+    // here while the dropdown correctly ignored it. Used as a filter only:
+    // the sort below is this page's own, and it has no relevance option.
     if (query.trim()) {
-      const q = query.toLowerCase();
-      list = list.filter(
-        (d) =>
-          d.name.toLowerCase().includes(q) ||
-          d.brand.toLowerCase().includes(q) ||
-          d.type.toLowerCase().includes(q) ||
-          getDiscPlastics(d.id).some((p) => p.toLowerCase().includes(q))
+      const matched = new Set(
+        searchDiscs(
+          query,
+          list.map((d) => ({
+            id: d.id,
+            name: d.name,
+            brand: d.brand,
+            type: d.type,
+            plastics: getDiscPlastics(d.id),
+            player: null,
+          }))
+        ).map((r) => r.disc.id)
       );
+      list = list.filter((d) => matched.has(d.id));
     }
 
     // Type filter

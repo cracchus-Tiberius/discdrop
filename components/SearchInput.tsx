@@ -93,6 +93,7 @@ export function SearchInput({
       id: d.id,
       name: d.name,
       brand: d.brand,
+      type: "type" in d ? ((d as { type?: string }).type ?? null) : null,
       plastics: getDiscPlastics(d.id),
       player: "player" in d ? ((d as { player?: string }).player ?? null) : null,
     }));
