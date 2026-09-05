@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-04T09:16:28.367Z",
+  "generated": "2026-09-05T08:46:38.406Z",
   "summary": {
-    "priceChanges24h": 3,
+    "priceChanges24h": 2,
     "newDiscs24h": 0,
     "storesChecked": 18
   },
@@ -15,15 +15,15 @@
       "newPrice": 274,
       "pct": -10,
       "date": "2026-09-04",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
       "history": [
         305,
         305,
         305,
-        305,
         304,
         304,
+        274,
         274
       ]
     },
@@ -36,15 +36,15 @@
       "newPrice": 249,
       "pct": -5,
       "date": "2026-09-04",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.starframe.no/products/spark-pipeline",
       "history": [
         263,
         263,
         263,
-        263,
         262,
         262,
+        249,
         249
       ]
     },
@@ -63,10 +63,10 @@
         315,
         315,
         315,
-        315,
         295,
         295,
-        314
+        314,
+        295
       ]
     }
   ],
