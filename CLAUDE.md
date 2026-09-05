@@ -97,6 +97,14 @@ Package manager: pnpm (always use pnpm, never npm).
   store's override over the shared default. Prefer an identifying UA over a
   newer spoofed Chrome — the spoof only stays unblocked until it ages onto a
   blocklist too.
+- The SEK->NOK rate lives in scripts/lib/fx.js, shared by all four Swedish
+  scrapers. Its fallback (used only when the rate API is unreachable) is a
+  DATED observation, not a round number — the four scrapers previously carried
+  their own copies falling back to 1.03/1.03/1.03/1.00 while the real rate was
+  0.9724, overstating every Swedish price ~6% in the stores' favour. Each run
+  records fxRate/fxRateSource/fxRateAt into that store's meta, so a Swedish
+  price moving 199 -> 205 can be told apart from the krone moving. That is the
+  currency-drift question in the /nytt launch checklist below.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.
