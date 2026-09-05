@@ -28,6 +28,7 @@
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",
     "check:freshness": "node scripts/check-store-freshness.js",
+    "check:drift": "node scripts/check-price-drift.js",
     "check:deploy-provenance": "node scripts/check-deploy-provenance.mjs",
     "check-alerts": "node scripts/check-alerts.js",
     "build:price-changes": "node scripts/build-price-changes.js",

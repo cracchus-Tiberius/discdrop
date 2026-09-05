@@ -32,24 +32,41 @@ const HEADERS = {
 
 // ── Currency assertion ────────────────────────────────────────────────────────
 // Shopify storefronts can geo-localize currency by client IP (this bit
-// Discexpress in production — see scrape-discexpress.js). Pin currency in the
-// URL AND probe a single product's .json before scraping; fail loudly if the
-// storefront ignores the pin rather than silently writing wrong-currency prices.
+// Discexpress in production — see scrape-discexpress.js). Probe a single
+// product's .json before scraping and fail loudly if it is not SEK, rather
+// than silently writing wrong-currency prices.
+//
+// Deliberately WITHOUT ?currency=SEK, unlike Discexpress. Confirmed 2026-09-05:
+// on this store the parameter does not pin the price, it triggers a Shopify
+// conversion from another base currency without the shop's own rounding.
+// Same product, same second:
+//
+//   products.json?currency=SEK   162.24   <- what we were recording
+//   products.json                169.00
+//   product page JSON-LD         169.00   <- what the customer pays
+//
+// So the "defence" was making every Ugglans price ~4% too low, flattering the
+// store in exactly the ranking this site exists to get right. The probe still
+// catches a geo-localized USD storefront on its own: price_currency comes back
+// as the served currency either way, and scripts/lib/fx.js's plausibility band
+// rejects the resulting rate. Discexpress keeps the parameter — there it is
+// verified harmless, 60 of 60 products identical with and without, and it has
+// a real incident behind it.
 async function assertSekStorefront() {
-  const probeColl = `${STORE.baseUrl}/products.json?limit=1&currency=SEK`;
+  const probeColl = `${STORE.baseUrl}/products.json?limit=1`;
   const r1 = await fetch(probeColl, { headers: HEADERS, timeout: 10000 });
   if (!r1.ok) throw new Error(`Currency probe HTTP ${r1.status}`);
   const handle = (await r1.json())?.products?.[0]?.handle;
   if (!handle) throw new Error('Currency probe: collection returned no products');
 
-  const probeOne = `${STORE.baseUrl}/products/${handle}.json?currency=SEK`;
+  const probeOne = `${STORE.baseUrl}/products/${handle}.json`;
   const r2 = await fetch(probeOne, { headers: HEADERS, timeout: 10000 });
   if (!r2.ok) throw new Error(`Currency probe (single product) HTTP ${r2.status}`);
   const cur = (await r2.json())?.product?.variants?.[0]?.price_currency;
   if (cur !== 'SEK') {
     throw new Error(
       `Ugglans storefront returned currency "${cur}" (expected SEK). ` +
-      `Pinning ?currency=SEK did not stick — refusing to scrape.`
+      `The storefront is not serving SEK — refusing to scrape.`
     );
   }
   console.log(`  ✓ Currency assertion: storefront returns SEK`);
@@ -67,7 +84,7 @@ async function scrapeWithApi(sekToNok) {
   let page = 1;
 
   while (true) {
-    const url = `${STORE.baseUrl}/products.json?limit=250&page=${page}&currency=SEK`;
+    const url = `${STORE.baseUrl}/products.json?limit=250&page=${page}`;
     console.log(`    ${STORE.key} API p${page}: ${url}`);
 
     let data;
@@ -139,7 +156,7 @@ async function scrapeWithPlaywright(sekToNok) {
     let page = 1;
 
     while (true) {
-      const url = `${STORE.baseUrl}/products.json?limit=250&page=${page}&currency=SEK`;
+      const url = `${STORE.baseUrl}/products.json?limit=250&page=${page}`;
       console.log(`    ${STORE.key} PW p${page}: ${url}`);
       const pwPage = await context.newPage();
       try {
