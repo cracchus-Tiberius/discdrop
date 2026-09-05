@@ -213,3 +213,13 @@ jobs:
       # by a routine review, not by the pipeline.
       - name: Check per-store freshness
         run: node scripts/check-store-freshness.js
+
+      # Samples a few products per Shopify store and compares what we recorded
+      # against what the shop currently charges. A conversion fault moves every
+      # product the same way, so the median gap is the tell; ordinary price
+      # movement cancels out. Ugglans published prices ~4% low for as long as
+      # its scraper pinned ?currency=SEK, and it took someone checking six
+      # listings by hand to notice. Last step, like the freshness check: it must
+      # not hold up a deploy, only make the problem impossible to miss.
+      - name: Check price drift against the stores
+        run: node scripts/check-price-drift.js
