@@ -1,11 +1,221 @@
 {
-  "generated": "2026-09-05T08:46:38.406Z",
+  "generated": "2026-09-05T08:59:52.570Z",
   "summary": {
-    "priceChanges24h": 2,
-    "newDiscs24h": 0,
-    "storesChecked": 18
+    "priceChanges24h": 19,
+    "newDiscs24h": 8,
+    "storesChecked": 19
   },
   "timeline": [
+    {
+      "discId": "clash-salt",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Salt",
+      "oldPrice": 374,
+      "newPrice": 244,
+      "pct": -35,
+      "date": "2026-09-05",
+      "bucket": "today",
+      "url": "https://wearediscgolf.no/produkt/steady-salt/",
+      "history": [
+        374,
+        374,
+        374,
+        374,
+        374,
+        374,
+        244
+      ]
+    },
+    {
+      "discId": "latitude-rive",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Royal",
+      "oldPrice": 277,
+      "newPrice": 215,
+      "pct": -22,
+      "date": "2026-09-05",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/rive-grand-royal-unleash-the-monster-8-limited-edition",
+      "history": [
+        283,
+        283,
+        283,
+        282,
+        282,
+        277,
+        215
+      ]
+    },
+    {
+      "discId": "discmania-jokeri",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": null,
+      "oldPrice": 282,
+      "newPrice": 224,
+      "pct": -21,
+      "date": "2026-09-05",
+      "bucket": "today",
+      "url": "https://discsport.se/discar/mold/jokeri",
+      "history": [
+        283,
+        283,
+        283,
+        282,
+        282,
+        282,
+        224
+      ]
+    },
+    {
+      "discId": "prodigy-a1",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "400",
+      "oldPrice": 344,
+      "newPrice": 234,
+      "pct": -32,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/400-plastic-a1",
+      "history": [
+        344,
+        344,
+        344,
+        344,
+        344,
+        234,
+        234
+      ]
+    },
+    {
+      "discId": "discmania-instinct",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "Neo",
+      "oldPrice": 233,
+      "newPrice": 188,
+      "pct": -19,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/neo-instinct",
+      "history": [
+        234,
+        234,
+        234,
+        233,
+        233,
+        188,
+        188
+      ]
+    },
+    {
+      "discId": "discmania-shogun",
+      "store": "discsport",
+      "storeName": "Discsport",
+      "plastic": "Active",
+      "oldPrice": 152,
+      "newPrice": 127,
+      "pct": -16,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://discsport.se/discar/mold/shogun",
+      "history": [
+        152,
+        152,
+        152,
+        152,
+        152,
+        127,
+        127
+      ]
+    },
+    {
+      "discId": "latitude-diamond",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "Retro",
+      "oldPrice": 174,
+      "newPrice": 148,
+      "pct": -15,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/retro-diamond",
+      "history": [
+        175,
+        174,
+        174,
+        174,
+        174,
+        148,
+        148
+      ]
+    },
+    {
+      "discId": "latitude-sapphire",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "Retro",
+      "oldPrice": 174,
+      "newPrice": 148,
+      "pct": -15,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/retro-sapphire",
+      "history": [
+        175,
+        174,
+        174,
+        174,
+        174,
+        148,
+        148
+      ]
+    },
+    {
+      "discId": "prodigy-reverb",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "400",
+      "oldPrice": 275,
+      "newPrice": 234,
+      "pct": -15,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/400-plastic-reverb",
+      "history": [
+        275,
+        275,
+        275,
+        275,
+        275,
+        234,
+        234
+      ]
+    },
+    {
+      "discId": "prodigy-m2",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "300",
+      "oldPrice": 217,
+      "newPrice": 194,
+      "pct": -11,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/300-plastic-m2",
+      "history": [
+        218,
+        218,
+        218,
+        217,
+        217,
+        194,
+        194
+      ]
+    },
     {
       "discId": "mvp-particle",
       "store": "frisbeebutikken",
@@ -28,24 +238,213 @@
       ]
     },
     {
-      "discId": "latitude-pipeline",
-      "store": "starframe",
-      "storeName": "Starframe",
+      "discId": "axiom-bokeh-lizotte",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
       "plastic": null,
-      "oldPrice": 262,
-      "newPrice": 249,
+      "oldPrice": 254,
+      "newPrice": 228,
+      "pct": -10,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/axiom-bokeh-premium-factory-misprint",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        228,
+        228
+      ]
+    },
+    {
+      "discId": "mvp-stasis",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 254,
+      "newPrice": 229,
+      "pct": -10,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/mvp-stasis-premium-factory-misprint",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        229,
+        229
+      ]
+    },
+    {
+      "discId": "kastaplast-lva",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "K1 Grind",
+      "oldPrice": 264,
+      "newPrice": 238,
+      "pct": -10,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/k1-grind-alva",
+      "history": [
+        264,
+        264,
+        264,
+        264,
+        264,
+        238,
+        238
+      ]
+    },
+    {
+      "discId": "mvp-pilot",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "Electron",
+      "oldPrice": 185,
+      "newPrice": 168,
+      "pct": -9,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/electron-pilot",
+      "history": [
+        186,
+        185,
+        185,
+        185,
+        185,
+        168,
+        168
+      ]
+    },
+    {
+      "discId": "latitude-brave",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "Grand",
+      "oldPrice": 282,
+      "newPrice": 258,
+      "pct": -9,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/grand-brave---nordic-female-open-2025",
+      "history": [
+        283,
+        283,
+        283,
+        282,
+        282,
+        258,
+        258
+      ]
+    },
+    {
+      "discId": "discraft-cicada",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "X Line",
+      "oldPrice": 194,
+      "newPrice": 178,
+      "pct": -8,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/x-line-cicada",
+      "history": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        178,
+        178
+      ]
+    },
+    {
+      "discId": "discraft-captains-raptor",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 257,
+      "newPrice": 236,
+      "pct": -8,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.discexpress.se/products/captains-raptor-z-confetti-paul-ulibarri-2026",
+      "history": [
+        259,
+        259,
+        259,
+        258,
+        257,
+        236,
+        249
+      ]
+    },
+    {
+      "discId": "prodiscus-belleair",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 214,
+      "newPrice": 198,
+      "pct": -7,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/trophy-line-belleair",
+      "history": [
+        214,
+        214,
+        214,
+        214,
+        214,
+        198,
+        198
+      ]
+    },
+    {
+      "discId": "mvp-spin",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "Electron",
+      "oldPrice": 200,
+      "newPrice": 188,
+      "pct": -6,
+      "date": "2026-09-04",
+      "bucket": "yesterday",
+      "url": "https://www.krokholdgs.no/products/electron-spin-classic",
+      "history": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        188,
+        188
+      ]
+    },
+    {
+      "discId": "discraft-roach",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 176,
+      "newPrice": 168,
       "pct": -5,
       "date": "2026-09-04",
       "bucket": "yesterday",
-      "url": "https://www.starframe.no/products/spark-pipeline",
+      "url": "https://www.krokholdgs.no/products/d-line-roach",
       "history": [
-        263,
-        263,
-        263,
-        262,
-        262,
-        249,
-        249
+        177,
+        177,
+        177,
+        176,
+        176,
+        168,
+        168
       ]
     },
     {
@@ -60,15 +459,57 @@
       "bucket": "earlier-this-week",
       "url": "https://nydisk.no/products/discmania-c-line-cd1-the-crush-boys-3",
       "history": [
-        315,
-        315,
+        316,
+        316,
         315,
         295,
         295,
         314,
-        295
+        314
+      ]
+    },
+    {
+      "discId": "mvp-uplink",
+      "store": "rocketdiscs",
+      "storeName": "Rocketdiscs",
+      "plastic": "R2 Neutron",
+      "oldPrice": 218,
+      "newPrice": 207,
+      "pct": -5,
+      "date": "2026-09-01",
+      "bucket": "earlier-this-week",
+      "url": "https://rocketdiscs.com/mvp-uplink",
+      "history": [
+        218,
+        218,
+        207,
+        207,
+        206,
+        206,
+        206
+      ]
+    },
+    {
+      "discId": "discraft-drone",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "ESP FLX",
+      "oldPrice": 305,
+      "newPrice": 284,
+      "pct": -7,
+      "date": "2026-08-31",
+      "bucket": "earlier-this-week",
+      "url": "https://frisbeebutikken.no/products/esp-flx-drone",
+      "history": [
+        305,
+        284,
+        284,
+        284,
+        284,
+        284,
+        284
       ]
     }
   ],
-  "totalDrops": 3
+  "totalDrops": 24
 }
