@@ -119,3 +119,9 @@
 /disc/latitude-rogue/         /disc/dga-rogue/            301
 /disc/latitude-quake          /disc/dga-quake/            301
 /disc/latitude-quake/         /disc/dga-quake/            301
+
+# latitude-guard -> dynamic-guard (2026-09-05). Discsport's title says
+# "Guard Mold - Putt & Approach | Dynamic Discs", Rocketdiscs' URL is
+# dynamic-discs-guard, and all 55 listings are in Dynamic plastics.
+/disc/latitude-guard          /disc/dynamic-guard/       301
+/disc/latitude-guard/         /disc/dynamic-guard/       301

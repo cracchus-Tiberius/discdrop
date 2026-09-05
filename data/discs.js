@@ -102,7 +102,17 @@ export const discs = [
   { id:"latitude-fuse", name:"Fuse", brand:"Latitude 64", type:"midrange", flight:{speed:5,glide:6,turn:-1,fade:0}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-gauntlet", name:"Gauntlet", brand:"Latitude 64", type:"putter", flight:{speed:2,glide:4,turn:0,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-grace", name:"Grace", brand:"Latitude 64", type:"distance", flight:{speed:11,glide:6,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
-  { id:"latitude-guard", name:"Guard", brand:"Latitude 64", type:"putter", flight:{speed:2,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
+    // Was latitude-guard until 2026-09-05, the fifteenth entry in the same
+  // family as function/hurricane — and the one the URL scan missed, because it
+  // looked for "classic-blend" and this store wrote plain "classic". The
+  // foreign-plastic gate caught it instead, which is the point of doing it
+  // structurally. Discsport's title says "Guard Mold - Putt & Approach |
+  // Dynamic Discs", Rocketdiscs' URL is dynamic-discs-guard, and Dynamic's own
+  // store sells four Guards (Classic, Classic Soft, Classic Blend Burst, Prime
+  // Burst) while Latitude 64's 339 products list none. Flight numbers kept:
+  // Dynamic publish none in their product data, and 2/4/0/2 matches the
+  // putt & approach classification.
+  { id:"dynamic-guard", name:"Guard", brand:"Dynamic Discs", type:"putter", flight:{speed:2,glide:4,turn:0,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[], catalogAddedAt:"2026-07-24T00:00:00.000Z" },
   { id:"latitude-jade", name:"Jade", brand:"Latitude 64", type:"fairway", flight:{speed:9,glide:6,turn:-2,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-keystone", name:"Keystone", brand:"Latitude 64", type:"putter", flight:{speed:2,glide:5,turn:-1,fade:1}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },
   { id:"latitude-mighty", name:"Mighty", brand:"Latitude 64", type:"fairway", flight:{speed:7,glide:5,turn:-1,fade:2}, image:"", stores:[], priceHistory:[null,null,null,null,null,null,null,null,null,null,null,null], tags:[] },

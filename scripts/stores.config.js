@@ -500,6 +500,11 @@ const FIRST_SEEN_ID_ALIASES = {
   'dga-avalanche': 'latitude-avalanche',
   'dga-rogue': 'latitude-rogue',
   'dga-quake': 'latitude-quake',
+  // latitude-guard -> dynamic-guard (2026-09-05). Caught by the
+  // foreign-plastic gate rather than the URL scan; all 55 listings are in
+  // Dynamic Discs plastics (Classic, Classic Blend Burst, Classic Soft,
+  // Prime Burst).
+  'dynamic-guard': 'latitude-guard',
   'discmania-maestro': 'discmania-active',
   'discmania-rockstar': 'discmania-active',
   'discmania-mentor': 'discmania-active',
