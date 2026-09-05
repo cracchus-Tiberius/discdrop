@@ -18,14 +18,7 @@ const { spawn } = require('child_process');
 const TIMEOUT_MS = 10 * 60 * 1000; // 10 min per scraper
 
 const STEPS = [
-  { name: 'WeAreDiscGolf / Kvam / Arctic',  cmd: 'node scripts/scraper.js' },
-  // Aceshop renders its catalog client-side and gets 0 products from the plain-fetch
-  // attempt, so it always falls through to a Playwright crawl of 4 categories with
-  // full pagination (40+ page loads). Results only get written to scraped-prices.json
-  // once, at the very end — a SIGKILL from the default 10-min timeout mid-crawl (which
-  // happened routinely in CI, confirmed by scraped-prices.json carrying 18+ hour stale
-  // Aceshop entries with no error surfaced) silently discards the entire run.
-  { name: 'Aceshop',                         cmd: 'node scripts/scrape-aceshop.js', timeoutMs: 20 * 60 * 1000 },
+  { name: 'WeAreDiscGolf / Aceshop / Kvam / Arctic', cmd: 'node scripts/scraper.js' },
   { name: 'Frisbeebutikken',                 cmd: 'node scripts/scrape-frisbeebutikken.js' },
   { name: 'Starframe',                       cmd: 'node scripts/scrape-starframe.js' },
   { name: 'Krokhol',                         cmd: 'node scripts/scrape-krokhol.js' },
