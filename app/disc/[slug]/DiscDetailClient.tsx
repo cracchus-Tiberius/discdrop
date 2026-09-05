@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { PickupBadge } from "@/components/PickupBadge";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import { entryLandedNOK, type RichStoreEntry } from "@/lib/disc-utils";
@@ -19,6 +20,7 @@ function normalizePlastic(p: string): string {
 
 type Store = {
   name: string;
+  storeKey: string;
   price: number;
   inStock: boolean;
   url: string;
@@ -129,6 +131,7 @@ export function PriceTable({
                             {inline && !row.inStock && (
                               <span className="text-[11px] text-[#E8704A]">Utsolgt</span>
                             )}
+                            <PickupBadge storeKey={row.storeKey} />
                           </div>
                           {row.country === "SE" && row.voec && !inline && (
                             <div className="mt-0.5 text-[11px] text-[#101C1499]">inkl. frakt og MVA</div>
@@ -556,6 +559,7 @@ export function DiscHeroSection({
 
   const storeRows: Store[] = deduplicatedEntries.map((e) => ({
     name: e.storeName,
+    storeKey: e.storeKey,
     price: e.price,
     inStock: e.inStock,
     url: e.url,

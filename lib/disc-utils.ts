@@ -212,7 +212,11 @@ export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
       price: entry.price,
       inStock: entry.inStock,
       url: entry.url,
-      shipping: meta?.shipping ?? 45,
+      // No silent default. A store with no shipping figure must not be
+      // presented as if it charged the cheapest Norwegian rate — that is how
+      // every store ended up claiming 45 kr. 0 makes the omission visible in
+      // the UI instead of quietly flattering the store's landed price.
+      shipping: meta?.shipping ?? 0,
       freeShippingOver: meta?.freeShippingOver ?? 999,
       plastic: entry.plastic ?? null,
       edition: entry.edition ?? null,

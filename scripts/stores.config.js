@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const { PLASTIC_TYPES, PLAYER_NAMES, EDITION_KEYWORDS, parseProductName, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./plastic-types.js');
 const { discs: SOURCE_DISCS } = require('../data/discs.js');
+const { SHIPPING_RATES } = require('../data/shipping-rates.js');
 
 // ── Disc catalog (single source of truth: data/discs.js) ────────────────────
 const DISC_CATALOG = SOURCE_DISCS.map(({ id, name, brand }) => ({ id, name, brand }));
@@ -540,7 +541,24 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
     try { data = JSON.parse(fs.readFileSync(dataPath, 'utf8')); } catch {}
   }
 
-  Object.assign(data.stores, storeMeta);
+  // Verified rates win over whatever a scraper passes for itself. Every
+  // Norwegian store used to inherit a hardcoded 45 kr from its own config;
+  // 8 of the 11 checked on 2026-09-05 were wrong by up to 45 kr, which is
+  // enough to reorder "best price including shipping". Keeping the override
+  // here means data/shipping-rates.js is the one place to correct a rate,
+  // rather than fifteen scraper files.
+  const verifiedMeta = {};
+  for (const [key, meta] of Object.entries(storeMeta)) {
+    const rate = SHIPPING_RATES[key];
+    verifiedMeta[key] = rate
+      ? {
+          ...meta,
+          shipping: rate.from,
+          ...(rate.freeShippingOver != null ? { freeShippingOver: rate.freeShippingOver } : {}),
+        }
+      : meta;
+  }
+  Object.assign(data.stores, verifiedMeta);
 
   const keySet = new Set(storeKeys);
   const previousEntryCount = countEntriesForKeys(data.prices, keySet);
