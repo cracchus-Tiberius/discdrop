@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PickupBadge } from "@/components/PickupBadge";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import scrapedPrices from "@/data/scraped-prices.json";
@@ -82,11 +83,16 @@ export default function ButikkerPage() {
                 <div className="mt-auto space-y-1 border-t border-[#101C1414] pt-4 text-[12px] text-[#101C1499]">
                   <p>{discCount} disker i vår prisdatabase</p>
                   <p>
-                    {store.freeShippingOver
-                      ? `Fri frakt over kr ${store.freeShippingOver} · ellers kr ${store.shipping}`
-                      : `Frakt fra kr ${store.shipping}`}
+                    {/* Leads with the floor, always. The rate is the cheapest
+                        tier one disc qualifies for, so "fra" is doing real
+                        work — a heavier order pays more. Putting the free
+                        threshold first read as the headline number when it is
+                        the exception. */}
+                    {`Frakt fra kr ${store.shipping}`}
+                    {store.freeShippingOver ? ` · fri over kr ${store.freeShippingOver}` : ""}
                     {isSweden && store.voec && " · MVA inkludert (VOEC)"}
                   </p>
+                <div className="mt-2"><PickupBadge storeKey={key} /></div>
                 </div>
 
                 <a

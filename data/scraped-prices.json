@@ -11,25 +11,25 @@
       "name": "Kvam DGS",
       "url": "https://kvamdgs.no",
       "freeShippingOver": 799,
-      "shipping": 45
+      "shipping": 69
     },
     "arcticdisc": {
       "name": "Arctic Disc",
       "url": "https://arcticdisc.no",
       "freeShippingOver": 1199,
-      "shipping": 45
+      "shipping": 69
     },
     "golfdiscer": {
       "name": "GolfDiscer",
       "url": "https://golfdiscer.no",
       "freeShippingOver": 799,
-      "shipping": 45
+      "shipping": 49
     },
     "frisbeesor": {
       "name": "Frisbee Sør",
       "url": "https://frisbeesor.no",
       "freeShippingOver": 699,
-      "shipping": 45
+      "shipping": 90
     },
     "discexpress": {
       "name": "Discexpress",
@@ -51,7 +51,7 @@
       "name": "Aceshop",
       "url": "https://aceshop.no",
       "freeShippingOver": 599,
-      "shipping": 45
+      "shipping": 29
     },
     "discsport": {
       "name": "Discsport",
@@ -64,7 +64,7 @@
       "name": "NyDisk",
       "url": "https://nydisk.no",
       "freeShippingOver": 800,
-      "shipping": 45
+      "shipping": 65
     },
     "discshopen": {
       "name": "DiscShopen",
@@ -93,8 +93,8 @@
     "frisbeebutikken": {
       "name": "Frisbeebutikken",
       "url": "https://frisbeebutikken.no",
-      "freeShippingOver": 699,
-      "shipping": 45
+      "freeShippingOver": 1500,
+      "shipping": 49
     },
     "starframe": {
       "name": "Starframe",
@@ -105,7 +105,7 @@
       "name": "HyzerShop",
       "url": "https://hyzershop.no",
       "freeShippingOver": 749,
-      "shipping": 45
+      "shipping": 69
     },
     "discgolfdynasty": {
       "name": "Disc Golf Dynasty",
