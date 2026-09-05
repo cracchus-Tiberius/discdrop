@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/check-meta-lengths.mjs",
+    "build": "next build && node scripts/check-meta-lengths.mjs && node scripts/write-deploy-version.mjs",
     "check-meta-lengths": "node scripts/check-meta-lengths.mjs",
     "start": "next start",
     "lint": "eslint",
@@ -28,6 +28,7 @@
     "scrape:enrich": "node scripts/enrich-variants.js",
     "scrape:audit": "node scripts/scrape-audit.js",
     "check:freshness": "node scripts/check-store-freshness.js",
+    "check:deploy-provenance": "node scripts/check-deploy-provenance.mjs",
     "check-alerts": "node scripts/check-alerts.js",
     "build:price-changes": "node scripts/build-price-changes.js",
     "build:new-in-stores": "node scripts/build-new-in-stores.js",
