@@ -64,12 +64,13 @@ Package manager: pnpm (always use pnpm, never npm).
   dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
 
 ## Scraper
-- scripts/scrape-all.js runs every store scraper in sequence (10-min timeout each,
-  20 min for Aceshop — see comment there). One failure doesn't block the rest.
+- scripts/scrape-all.js runs every store scraper in sequence (10-min timeout
+  each). One failure doesn't block the rest.
 - Stores scraped, in run order: WeAreDiscGolf/Kvam DGS/Arctic Disc/HyzerShop/Disc Golf
   Dynasty/Disc Sør (all in scripts/scraper.js — WooCommerce + Shopify JSON APIs;
   HyzerShop/Disc Golf Dynasty are Shopify, Disc Sør is WooCommerce, same as
-  WeAreDiscGolf), Aceshop, Frisbeebutikken, Starframe, Krokhol, GolfDiscer,
+  WeAreDiscGolf; Aceshop is WooCommerce too and joined them 2026-09-05),
+  Frisbeebutikken, Starframe, Krokhol, GolfDiscer,
   Frisbee Sør, NyDisk, DiscShopen (Norwegian, NOK — no currency conversion), Discexpress,
   Rocketdiscs, Discsport, Ugglans Discgolf, Discace of Sweden (Swedish/EU — SEK or EUR,
   converted to NOK with a live exchange rate at scrape time, VOEC-registered so MVA is
@@ -88,6 +89,14 @@ Package manager: pnpm (always use pnpm, never npm).
   (where the brand comes from data-manufacturer, not the visible title). Krokhol has
   no "all discs" parent category, so it lists five type categories and de-duplicates
   by product URL.
+- Aceshop's WAF 403s the shared USER_AGENT — the Windows Chrome/124.0.0.0
+  string, a very common scraper fingerprint. Confirmed 2026-09-05: that exact
+  string 403s on both HTML and the JSON API, while Chrome/140, the same version
+  on macOS, and an honest identifying UA all return 200 from the same IP. Its
+  store entry carries a `userAgent` override; scraper.js's uaFor() applies any
+  store's override over the shared default. Prefer an identifying UA over a
+  newer spoofed Chrome — the spoof only stays unblocked until it ages onto a
+  blocklist too.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.

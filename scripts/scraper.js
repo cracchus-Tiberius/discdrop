@@ -20,6 +20,23 @@ const STORES = [
     type: 'woocommerce-api',
     skipCategorySlugs: ['second-hand', 'brukt', 'used', 'nice-not-perfect'],
   },
+  {
+    key: 'aceshop',
+    name: 'Aceshop',
+    baseUrl: 'https://aceshop.no',
+    freeShippingOver: 599,
+    shipping: 45,
+    type: 'woocommerce-api',
+    // Aceshop's WAF 403s the shared USER_AGENT above — the Windows
+    // Chrome/124.0.0.0 string, which is one of the most common scraper
+    // fingerprints there is. Confirmed 2026-09-05: that exact string returns
+    // 403 on both the HTML pages and this JSON API, while Chrome/140, the same
+    // Chrome/124 on macOS, and this honest UA all return 200 from the same IP.
+    // An identifying UA is used rather than a newer Chrome because a spoofed
+    // version only stays unblocked until it too ages onto a blocklist.
+    userAgent: 'DiscDrop/1.0 (+https://discdrop.net)',
+    skipCategorySlugs: ['second-hand', 'brukt', 'used', 'bruktbutikk'],
+  },
   // ── Shopify stores (use products.json API) ─────────────────────────────────
   {
     key: 'kvamdgs',
@@ -75,6 +92,12 @@ const STORES = [
 const USER_AGENT =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
+// A store can override the User-Agent. Aceshop needs it: its WAF 403s that
+// exact spoofed-Chrome string — a very common scraping signature — while a
+// current Chrome build, the same version on macOS, or an honest identifying
+// UA all pass. See the ACESHOP_USER_AGENT comment on its store entry.
+const uaFor = (store) => store.userAgent || USER_AGENT;
+
 function sleep(ms) {
   return new Promise((res) => setTimeout(res, ms));
 }
@@ -123,7 +146,7 @@ async function scrapeShopifyStore(store) {
     console.log(`  ${store.key} page ${page}: ${url}`);
 
     const data = await fetchJsonWithRetry(url, {
-      headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
+      headers: { 'User-Agent': uaFor(store), 'Accept': 'application/json' },
       timeout: 15000,
     });
     if (data === null) break;
@@ -203,7 +226,7 @@ async function scrapeWooCommerceApiStore(store) {
     // response. 40s comfortably covers the slowest observed response with
     // margin, and fetchJsonWithRetry above still retries beyond that.
     const data = await fetchJsonWithRetry(url, {
-      headers: { 'User-Agent': USER_AGENT, 'Accept': 'application/json' },
+      headers: { 'User-Agent': uaFor(store), 'Accept': 'application/json' },
       timeout: 40000,
     });
     if (!Array.isArray(data) || data.length === 0) break;
