@@ -1,11 +1,53 @@
 {
-  "generated": "2026-09-03T09:25:08.170Z",
+  "generated": "2026-09-04T09:16:28.367Z",
   "summary": {
-    "priceChanges24h": 1,
-    "newDiscs24h": 10,
+    "priceChanges24h": 3,
+    "newDiscs24h": 0,
     "storesChecked": 18
   },
   "timeline": [
+    {
+      "discId": "mvp-particle",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Particle Proton",
+      "oldPrice": 304,
+      "newPrice": 274,
+      "pct": -10,
+      "date": "2026-09-04",
+      "bucket": "today",
+      "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
+      "history": [
+        305,
+        305,
+        305,
+        305,
+        304,
+        304,
+        274
+      ]
+    },
+    {
+      "discId": "latitude-pipeline",
+      "store": "starframe",
+      "storeName": "Starframe",
+      "plastic": null,
+      "oldPrice": 262,
+      "newPrice": 249,
+      "pct": -5,
+      "date": "2026-09-04",
+      "bucket": "today",
+      "url": "https://www.starframe.no/products/spark-pipeline",
+      "history": [
+        263,
+        263,
+        263,
+        263,
+        262,
+        262,
+        249
+      ]
+    },
     {
       "discId": "discraft-crush",
       "store": "nydisk",
@@ -15,18 +57,18 @@
       "newPrice": 295,
       "pct": -6,
       "date": "2026-09-02",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://nydisk.no/products/discmania-c-line-cd1-the-crush-boys-3",
       "history": [
         315,
         315,
         315,
         315,
-        315,
         295,
-        295
+        295,
+        314
       ]
     }
   ],
-  "totalDrops": 1
+  "totalDrops": 3
 }
