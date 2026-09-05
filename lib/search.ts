@@ -90,6 +90,78 @@ function findMatch(haystack: string, needle: string): { start: number; length: n
 }
 
 /**
+ * Levenshtein distance, bailing out as soon as the whole row exceeds `max`.
+ * The early exit matters: this runs against every mold name in the catalog,
+ * and only ever when a search has already failed.
+ */
+function editDistance(a: string, b: string, max: number): number {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  const cur = new Array<number>(b.length + 1);
+  for (let i = 1; i <= a.length; i++) {
+    cur[0] = i;
+    let rowMin = cur[0];
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (cur[j] < rowMin) rowMin = cur[j];
+    }
+    if (rowMin > max) return max + 1;
+    prev = cur.slice();
+  }
+  return prev[b.length];
+}
+
+// Below this, no suggestions at all. Short queries are already served by prefix
+// matching, and short mold names collide savagely: 2374 pairs of real names in
+// this catalog sit within edit distance 2 of each other, almost all of them the
+// 2-3 character ones — PD2 is one edit from CD2, DD2, FD2 and MD2. Suggesting
+// against those would be noise dressed as help.
+const MIN_QUERY_LENGTH_FOR_SUGGESTIONS = 4;
+
+/** One edit for a short word, two once there is enough word to misspell. */
+function maxEditsFor(query: string): number {
+  return query.length >= 6 ? 2 : 1;
+}
+
+const MAX_SUGGESTIONS = 3;
+
+/**
+ * Names worth offering when a search found nothing — "Mente du: Rhythm?".
+ *
+ * Deliberately NOT results. A misspelling is a guess about intent, and quietly
+ * swapping in a different disc's prices is a worse failure than an empty list.
+ * The caller shows these as an offer; the shopper decides.
+ *
+ * Only call this when searchDiscs() returned nothing.
+ */
+export function suggestDiscNames<T extends SearchableDisc>(query: string, discs: T[]): string[] {
+  const q = normalizeSearchText(query.trim());
+  if (q.length < MIN_QUERY_LENGTH_FOR_SUGGESTIONS) return [];
+  const max = maxEditsFor(q);
+
+  const scored = new Map<string, number>();
+  for (const disc of discs) {
+    for (const candidate of [disc.name, disc.brand]) {
+      const norm = normalizeSearchText(candidate);
+      // Compare against the whole candidate and against each of its words, so
+      // "destroyr" reaches "Destroyer" and also "Star Destroyer"-style names.
+      for (const part of [norm, ...norm.split(/\s+/)]) {
+        if (!part) continue;
+        const d = editDistance(q, part, max);
+        if (d > max) continue;
+        const prev = scored.get(candidate);
+        if (prev === undefined || d < prev) scored.set(candidate, d);
+      }
+    }
+  }
+
+  return [...scored.entries()]
+    .sort((a, b) => a[1] - b[1] || a[0].length - b[0].length || a[0].localeCompare(b[0], "nb"))
+    .slice(0, MAX_SUGGESTIONS)
+    .map(([name]) => name);
+}
+
+/**
  * Ranked search results for `query` against `discs`. Empty query returns
  * an empty array — the caller decides what to show pre-search.
  */

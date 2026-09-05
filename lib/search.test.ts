@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { searchDiscs, normalizeSearchText, type SearchableDisc } from "./search.ts";
+import { searchDiscs, suggestDiscNames, normalizeSearchText, type SearchableDisc } from "./search.ts";
 
 function disc(overrides: Partial<SearchableDisc> & { id: string; name: string; brand: string }): SearchableDisc {
   return { plastics: [], player: null, ...overrides };
@@ -143,4 +143,57 @@ test('searchDiscs: every term must match, not just one', () => {
     ]),
     []
   );
+});
+
+// ── Fuzzy suggestions ────────────────────────────────────────────────────────
+// Offers, never corrections. Only consulted when a search found nothing.
+
+const catalog = [
+  disc({ id: "rhythm", name: "Rhythm", brand: "MVP", type: "midrange" }),
+  disc({ id: "rhyno", name: "Rhyno", brand: "Innova", type: "putter" }),
+  disc({ id: "destroyer", name: "Destroyer", brand: "Innova", type: "distance" }),
+  disc({ id: "buzzz", name: "Buzzz", brand: "Discraft", type: "midrange" }),
+  disc({ id: "pd2", name: "PD2", brand: "Discmania", type: "distance" }),
+  disc({ id: "cd2", name: "CD2", brand: "Discmania", type: "fairway" }),
+  disc({ id: "berg", name: "Berg", brand: "Kastaplast", type: "putter" }),
+];
+
+test("suggestDiscNames: a one-edit misspelling reaches the disc", () => {
+  assert.deepEqual(suggestDiscNames("rhytm", catalog), ["Rhythm"]);
+  assert.deepEqual(suggestDiscNames("destroyr", catalog), ["Destroyer"]);
+});
+
+test("suggestDiscNames: brand misspellings work too", () => {
+  assert.deepEqual(suggestDiscNames("kastaplst", catalog), ["Kastaplast"]);
+});
+
+test("suggestDiscNames: nothing plausible means no suggestion, not a wild guess", () => {
+  assert.deepEqual(suggestDiscNames("xyzzy", catalog), []);
+});
+
+test("suggestDiscNames: short queries get no suggestions at all", () => {
+  // 2374 pairs of real mold names in this catalog sit within edit distance 2 of
+  // each other, almost all of them 2-3 characters: PD2 is one edit from CD2,
+  // DD2, FD2 and MD2. Suggesting against those is noise dressed as help.
+  assert.deepEqual(suggestDiscNames("pd3", catalog), []);
+  assert.deepEqual(suggestDiscNames("zzz", catalog), []);
+});
+
+test("suggestDiscNames: two edits are only allowed once the query is long enough", () => {
+  // "berg" is 4 chars, so one edit — "bxrg" reaches it, "bxrx" does not.
+  assert.deepEqual(suggestDiscNames("bxrg", catalog), ["Berg"]);
+  assert.deepEqual(suggestDiscNames("bxrx", catalog), []);
+  // "destroyer" is long enough that two edits are still a plausible typo.
+  assert.deepEqual(suggestDiscNames("destroyar", catalog), ["Destroyer"]);
+});
+
+test("suggestDiscNames: at most three, closest first", () => {
+  const many = Array.from({ length: 8 }, (_, i) => disc({ id: `d${i}`, name: `Rhyth${"abcdefgh"[i]}`, brand: "X" }));
+  assert.ok(suggestDiscNames("rhytha", many).length <= 3);
+});
+
+test("a query with results never reaches the suggestion path", () => {
+  // "buzz" already matches Buzzz by substring — the caller must not offer
+  // alternatives over a working result.
+  assert.ok(searchDiscs("buzz", catalog).length > 0);
 });
