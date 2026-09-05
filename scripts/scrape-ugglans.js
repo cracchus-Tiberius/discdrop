@@ -8,6 +8,7 @@
 
 const fetch = require('node-fetch');
 const { isUsedDisc, isMiniDisc, isNonDiscProduct, mergeStoreResults } = require('./stores.config.js');
+const { fetchSekToNok, fxMeta } = require('./lib/fx.js');
 
 const STORE = {
   key: 'ugglans',
@@ -28,21 +29,6 @@ const HEADERS = {
 
 // ── SEK → NOK exchange rate ───────────────────────────────────────────────────
 
-async function fetchSekToNok() {
-  try {
-    const res = await fetch('https://open.er-api.com/v6/latest/SEK', { timeout: 5000 });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const rate = data?.rates?.NOK;
-    if (rate && rate > 0) {
-      console.log(`  SEK/NOK rate: ${rate.toFixed(4)}`);
-      return rate;
-    }
-  } catch (err) {
-    console.log(`  Could not fetch live rate (${err.message}), using 1.03`);
-  }
-  return 1.03;
-}
 
 // ── Currency assertion ────────────────────────────────────────────────────────
 // Shopify storefronts can geo-localize currency by client IP (this bit
@@ -198,7 +184,7 @@ async function scrapeWithPlaywright(sekToNok) {
 
 // ── Merge results ─────────────────────────────────────────────────────────────
 
-function mergeResults(products, now) {
+function mergeResults(products, now, fx) {
   return mergeStoreResults({
     products: products.map((p) => ({ ...p, store: STORE.key })),
     storeKeys: [STORE.key],
@@ -209,6 +195,7 @@ function mergeResults(products, now) {
         freeShippingOver: STORE.freeShippingOver,
         shipping: STORE.shipping,
         country: STORE.country,
+        ...fxMeta(fx),
         currency: STORE.currency,
         voec: STORE.voec,
       },
@@ -225,7 +212,8 @@ async function main() {
   console.log('='.repeat(50));
 
   await assertSekStorefront();
-  const sekToNok = await fetchSekToNok();
+  const fx = await fetchSekToNok();
+  const sekToNok = fx.rate;
 
   let products = null;
 
@@ -246,7 +234,7 @@ async function main() {
     }
   }
 
-  const { matched, unmatched, total } = mergeResults(products, now);
+  const { matched, unmatched, total } = mergeResults(products, now, fx);
   console.log(`\nUgglans Discgolf: ${total} products → ${matched} matched, ${unmatched} unmatched`);
 }
 

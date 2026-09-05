@@ -7,6 +7,7 @@
 
 const fetch = require('node-fetch');
 const { isUsedDisc, isMiniDisc, isNonDiscProduct, mergeStoreResults } = require('./stores.config.js');
+const { fetchSekToNok, fxMeta } = require('./lib/fx.js');
 
 const STORE = {
   key: 'discsport',
@@ -21,21 +22,6 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 
 // ── SEK → NOK rate ────────────────────────────────────────────────────────────
 
-async function fetchSekToNok() {
-  try {
-    const res = await fetch('https://open.er-api.com/v6/latest/SEK', { timeout: 5000 });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    const rate = data?.rates?.NOK;
-    if (rate && rate > 0) {
-      console.log(`  SEK/NOK rate: ${rate.toFixed(4)}`);
-      return rate;
-    }
-  } catch (err) {
-    console.log(`  Could not fetch live rate (${err.message}), using 1.03`);
-  }
-  return 1.03; // fallback: 1 SEK ≈ 1.03 NOK
-}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -258,7 +244,7 @@ async function scrape() {
 
 // ── Merge results ─────────────────────────────────────────────────────────────
 
-function mergeResults(products, sekToNok, now) {
+function mergeResults(products, sekToNok, now, fx) {
   // Currency conversion + sanity floor happen here, before the shared merge
   // helper — it expects `product.price` to already be the final NOK price.
   const convertedProducts = products
@@ -274,6 +260,7 @@ function mergeResults(products, sekToNok, now) {
         url: STORE.baseUrl,
         shipping: STORE.shipping,
         country: STORE.country,
+        ...fxMeta(fx),
         voec: STORE.voec,
       },
     },
@@ -288,7 +275,8 @@ async function main() {
   console.log(`Discsport scraper — ${now}`);
   console.log('='.repeat(50));
 
-  const sekToNok = await fetchSekToNok();
+  const fx = await fetchSekToNok();
+  const sekToNok = fx.rate;
   const products = await scrape();
 
   if (products.length === 0) {
@@ -296,7 +284,7 @@ async function main() {
     process.exit(1);
   }
 
-  const { matched, unmatched, total } = mergeResults(products, sekToNok, now);
+  const { matched, unmatched, total } = mergeResults(products, sekToNok, now, fx);
   console.log(`  Matched ${matched} discs, ${unmatched} unmatched (${total} total)`);
 }
 
