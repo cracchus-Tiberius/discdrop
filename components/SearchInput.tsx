@@ -5,7 +5,7 @@ import Link from "next/link";
 import { DiscImage } from "./DiscImage";
 import { discs } from "@/data/discs.js";
 import { getScrapedPrice, getDiscImage, getDiscPlastics } from "@/lib/disc-utils";
-import { searchDiscs, type SearchableDisc, type SearchResult } from "@/lib/search";
+import { searchDiscs, suggestDiscNames, type SearchableDisc, type SearchResult } from "@/lib/search";
 
 type Disc = (typeof discs)[number];
 
@@ -114,6 +114,24 @@ export function SearchInput({
 
   const showPanel = focused && value.trim().length < 2 && quickType === null && quickBrand === null;
   const showResults = focused && results.length > 0;
+  /**
+   * "Mente du: Rhythm?" when a search finds nothing. An offer, never a silent
+   * correction — a misspelling is a guess about intent, and quietly showing a
+   * different disc's prices is a worse failure than an empty list.
+   */
+  const suggestions = useMemo(() => {
+    if (results.length > 0 || value.trim().length < 4) return [];
+    return suggestDiscNames(
+      value,
+      (discs as { id: string; name: string; brand: string; type?: string }[]).map((d) => ({
+        id: d.id, name: d.name, brand: d.brand, type: d.type ?? null,
+        // Suggestions compare against mold and brand names only. A plastic is
+        // not something a shopper misspells looking for a disc.
+        plastics: [] as string[], player: null,
+      }))
+    );
+  }, [value, results.length]);
+
   const showEmpty = focused && value.trim().length >= 2 && results.length === 0 && quickType === null && quickBrand === null;
 
   // Escape key
@@ -347,7 +365,25 @@ export function SearchInput({
           {/* Empty state */}
           {showEmpty && (
             <div className="px-5 py-4 text-sm text-[#101C1477]">
-              Ingen resultater for &ldquo;{value}&rdquo;
+              <div>Ingen resultater for &ldquo;{value}&rdquo;</div>
+              {suggestions.length > 0 && (
+                <div className="mt-2 text-[#101C14]">
+                  Mente du:{" "}
+                  {suggestions.map((name, i) => (
+                    <span key={name}>
+                      {i > 0 && <span className="text-[#101C1477]"> · </span>}
+                      <button
+                        type="button"
+                        onMouseDown={(e) => { e.preventDefault(); onChange(name); }}
+                        className="font-semibold underline decoration-dotted underline-offset-2 hover:text-[#2D6A4F]"
+                      >
+                        {name}
+                      </button>
+                    </span>
+                  ))}
+                  ?
+                </div>
+              )}
             </div>
           )}
         </div>

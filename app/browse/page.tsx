@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { searchDiscs } from "@/lib/search";
+import { searchDiscs, suggestDiscNames } from "@/lib/search";
 import { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
@@ -315,6 +315,22 @@ function BrowseContent() {
     return list;
   }, [query, typeFilter, brand, activeChip, effectiveSort]);
 
+  /**
+   * Same offer the header dropdown makes. Suggestions come from the shared
+   * core, so a misspelling gets the same help wherever it is typed — which was
+   * the whole point of unifying the two.
+   */
+  const querySuggestions = useMemo(() => {
+    if (!query.trim() || filtered.length > 0) return [];
+    return suggestDiscNames(
+      query,
+      (discs as Disc[]).map((d) => ({
+        id: d.id, name: d.name, brand: d.brand, type: d.type,
+        plastics: [] as string[], player: null,
+      }))
+    );
+  }, [query, filtered.length]);
+
   // Rendering all ~700 discs at once (each with an eager <img>) blows past a 30s
   // page load — page results in instead, growing as the user asks for more.
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
@@ -435,6 +451,24 @@ function BrowseContent() {
         {filtered.length === 0 ? (
           <div className="mt-20 flex flex-col items-center gap-4 text-center">
             <p className="text-lg text-[#101C1499]">Ingen disker funnet</p>
+            {querySuggestions.length > 0 && (
+              <p className="text-sm text-[#101C14]">
+                Mente du:{" "}
+                {querySuggestions.map((name, i) => (
+                  <span key={name}>
+                    {i > 0 && <span className="text-[#101C1477]"> · </span>}
+                    <button
+                      type="button"
+                      onClick={() => setQuery(name)}
+                      className="font-semibold underline decoration-dotted underline-offset-2 hover:text-[#2D6A4F]"
+                    >
+                      {name}
+                    </button>
+                  </span>
+                ))}
+                ?
+              </p>
+            )}
             {hasActiveFilters && (
               <button
                 type="button"
