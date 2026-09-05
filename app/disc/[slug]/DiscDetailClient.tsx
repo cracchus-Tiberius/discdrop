@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { PickupBadge } from "@/components/PickupBadge";
+import { plasticKey, groupPlastics, defaultPlasticKey, type PlasticGroup } from "@/lib/plastic";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import { entryLandedNOK, type RichStoreEntry } from "@/lib/disc-utils";
@@ -12,15 +13,15 @@ import { PriceThresholdInput, validatePriceThreshold } from "@/components/PriceT
 // ── Plastic normalization ────────────────────────────────────────────────────
 // Scrapers sometimes emit word-swapped names (e.g. "Horizon C-Line" vs "C-Line Horizon").
 // Sort words alphabetically so both map to the same canonical display name.
-function normalizePlastic(p: string): string {
-  return p.trim().split(/\s+/).sort((a, b) => a.localeCompare(b, "nb")).join(" ");
-}
+
 
 // ── Types ───────────────────────────────────────────────────────────────────
 
 type Store = {
   name: string;
   storeKey: string;
+  /** Shown on every row so a DX listing is never read as the same thing as Halo Star. */
+  plasticLabel: string | null;
   price: number;
   inStock: boolean;
   url: string;
@@ -34,6 +35,26 @@ type StoreRow = Store & {
   shippingNOK: number;
   total: number;
 };
+
+/**
+ * One row per store, preferring an in-stock listing and then the cheaper one.
+ * Applied WITHIN a plastic, never across them — collapsing across plastics is
+ * what let a store's DX listing stand in for its Star listing.
+ */
+function dedupeByStore(entries: RichStoreEntry[]): RichStoreEntry[] {
+  const byStore = new Map<string, RichStoreEntry>();
+  for (const e of entries) {
+    const existing = byStore.get(e.storeKey);
+    if (!existing) {
+      byStore.set(e.storeKey, e);
+    } else if (e.inStock && !existing.inStock) {
+      byStore.set(e.storeKey, e);
+    } else if (e.inStock === existing.inStock && e.price < existing.price) {
+      byStore.set(e.storeKey, e);
+    }
+  }
+  return [...byStore.values()];
+}
 
 // ── Price Comparison Table ───────────────────────────────────────────────────
 
@@ -130,6 +151,13 @@ export function PriceTable({
                             )}
                             {inline && !row.inStock && (
                               <span className="text-[11px] text-[#E8704A]">Utsolgt</span>
+                            )}
+                            {/* Plastic first: it is what makes the row
+                                comparable at all. Pickup is a nice-to-know. */}
+                            {row.plasticLabel && (
+                              <span className="rounded bg-[#F1EFE6] px-1.5 py-0.5 text-[10px] font-semibold text-[#101C1499]">
+                                {row.plasticLabel}
+                              </span>
                             )}
                             <PickupBadge storeKey={row.storeKey} />
                           </div>
@@ -486,38 +514,36 @@ export function DiscHeroSection({
 }) {
   // ── Chip state ──────────────────────────────────────────────────────────────
 
-  const plastics = useMemo(() => {
-    const seen = new Set<string>();
-    const out: string[] = [];
-    for (const e of allEntries) {
-      if (e.plastic) {
-        const norm = normalizePlastic(e.plastic);
-        if (!seen.has(norm)) { seen.add(norm); out.push(norm); }
-      }
-    }
-    return out;
-  }, [allEntries]);
+  const plasticGroups: PlasticGroup[] = useMemo(() => groupPlastics(allEntries), [allEntries]);
+  const plasticLabelByKey = useMemo(
+    () => new Map(plasticGroups.map((g) => [g.key, g.label])),
+    [plasticGroups]
+  );
+  /** Distinct stores with any listing at all — the honest coverage headline. */
+  const totalStoreCount = useMemo(
+    () => new Set(allEntries.map((e) => e.storeKey)).size,
+    [allEntries]
+  );
 
-  const showPlasticChips = plastics.length >= 2;
+  const showPlasticChips = plasticGroups.length >= 2;
 
-  const defaultPlastic = useMemo(() => {
-    if (!showPlasticChips) return null;
-    let best: string | null = null;
-    let bestPrice = Infinity;
-    for (const p of plastics) {
-      const min = allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === p && e.inStock)
-        .reduce((m, e) => Math.min(m, e.price), Infinity);
-      if (min < bestPrice) { bestPrice = min; best = p; }
-    }
-    return best ?? plastics[0] ?? null;
-  }, [allEntries, plastics, showPlasticChips]);
-
-  // Default to null = "Alle" so count reflects all stores on first render
-  const [selectedPlastic, setSelectedPlastic] = useState<string | null>(null);
+  // Opens on the widest-stocked plastic rather than "Alle". "Alle" mixed five
+  // different products into one ranking — a DX Valkyrie at 125 kr headlining
+  // over Star and Champion listings elsewhere — which is the bug this fixes.
+  // The store count that "Alle" used to protect is still shown, on its chip
+  // and beside the selection, so coverage is visible without being claimed
+  // dishonestly.
+  const defaultPlastic = useMemo(
+    () => (showPlasticChips ? defaultPlasticKey(plasticGroups) : null),
+    [plasticGroups, showPlasticChips]
+  );
+  const [selectedPlastic, setSelectedPlastic] = useState<string | null>(defaultPlastic);
   const [selectedEdition, setSelectedEdition] = useState<string | null>(null);
 
   const plasticEntries = useMemo(
-    () => (!showPlasticChips || selectedPlastic === null) ? allEntries : allEntries.filter((e) => e.plastic && normalizePlastic(e.plastic) === selectedPlastic),
+    () => (!showPlasticChips || selectedPlastic === null)
+      ? allEntries
+      : allEntries.filter((e) => e.plastic && plasticKey(e.plastic) === selectedPlastic),
     [allEntries, selectedPlastic, showPlasticChips]
   );
 
@@ -542,24 +568,12 @@ export function DiscHeroSection({
   // Deduplicate by store: one row per store, keeping cheapest in-stock entry
   // (or cheapest overall if no in-stock). This correctly counts 1 store even
   // when "Alle" is selected and that store carries multiple plastics/editions.
-  const deduplicatedEntries = useMemo(() => {
-    const byStore = new Map<string, RichStoreEntry>();
-    for (const e of filtered) {
-      const existing = byStore.get(e.storeKey);
-      if (!existing) {
-        byStore.set(e.storeKey, e);
-      } else if (e.inStock && !existing.inStock) {
-        byStore.set(e.storeKey, e);
-      } else if (e.inStock === existing.inStock && e.price < existing.price) {
-        byStore.set(e.storeKey, e);
-      }
-    }
-    return [...byStore.values()];
-  }, [filtered]);
+  const deduplicatedEntries = useMemo(() => dedupeByStore(filtered), [filtered]);
 
-  const storeRows: Store[] = deduplicatedEntries.map((e) => ({
+  const toStoreRow = useCallback((e: RichStoreEntry): Store => ({
     name: e.storeName,
     storeKey: e.storeKey,
+    plasticLabel: e.plastic ? (plasticLabelByKey.get(plasticKey(e.plastic)) ?? e.plastic) : null,
     price: e.price,
     inStock: e.inStock,
     url: e.url,
@@ -567,7 +581,60 @@ export function DiscHeroSection({
     freeShippingOver: e.freeShippingOver,
     country: e.country,
     voec: e.voec,
-  }));
+  }), [plasticLabelByKey]);
+
+  const storeRows: Store[] = deduplicatedEntries.map(toStoreRow);
+
+  /**
+   * "Alle" renders one table per plastic instead of one merged ranking. Merging
+   * them is what produced the original complaint: a DX row and a Halo Star row
+   * sorted against each other as if they were the same purchase. Grouped, the
+   * page still shows everything, but every comparison inside a table is
+   * like-for-like.
+   */
+  const groupedRows = useMemo(() => {
+    if (selectedPlastic !== null || !showPlasticChips) return null;
+    const byPlastic = new Map<string, RichStoreEntry[]>();
+    for (const e of filtered) {
+      const key = e.plastic ? plasticKey(e.plastic) : "";
+      if (!byPlastic.has(key)) byPlastic.set(key, []);
+      byPlastic.get(key)!.push(e);
+    }
+    const order = [...plasticGroups].sort((a, b) => b.storeCount - a.storeCount || a.minPrice - b.minPrice);
+    const sections = order
+      .filter((g) => byPlastic.has(g.key))
+      .map((g) => ({ key: g.key, label: g.label, entries: byPlastic.get(g.key)! }));
+    // Listings whose plastic the scrapers could not read still belong on the
+    // page; they go last, labelled honestly rather than folded into a real one.
+    if (byPlastic.has("")) {
+      sections.push({ key: "__ukjent", label: "Ukjent plast", entries: byPlastic.get("")! });
+    }
+    return sections.map((sec) => ({
+      ...sec,
+      rows: dedupeByStore(sec.entries).map(toStoreRow),
+    }));
+  }, [filtered, selectedPlastic, showPlasticChips, plasticGroups, plasticLabelByKey]);
+
+  /**
+   * The cheapest plastic, when it is not the one selected. Coverage decides the
+   * default, and on a disc like the Stingray that means opening on Halo Star at
+   * 301 kr because five stores carry it, while DX sits at 125 kr across four.
+   * Defensible as a comparison, jarring as a headline — and it contradicts the
+   * browse card, which still says "fra kr 125".
+   *
+   * So the cheap option is surfaced rather than buried: one line, one click to
+   * switch. Same principle as the store counts on the chips — stop using a
+   * number dishonestly without hiding it.
+   */
+  const cheaperAlternative = useMemo(() => {
+    if (selectedPlastic === null) return null;
+    const current = plasticGroups.find((g) => g.key === selectedPlastic);
+    if (!current || current.minPrice === Infinity) return null;
+    const cheapest = plasticGroups
+      .filter((g) => g.storeCount > 0 && g.minPrice < current.minPrice)
+      .sort((a, b) => a.minPrice - b.minPrice)[0];
+    return cheapest ?? null;
+  }, [plasticGroups, selectedPlastic]);
 
   const bestEntry = useMemo(() => {
     const rows = deduplicatedEntries.map((e) => ({
@@ -620,8 +687,17 @@ export function DiscHeroSection({
                 {bestEntry != null ? (
                   <>
                     <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.total}</span>
+                    {/* Counts the selected plastic, and names the total
+                        alongside it. "19 butikker" that compared five different
+                        products was the broken promise; this keeps coverage
+                        visible without making that claim. */}
                     {inStockCount > 0 && (
-                      <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
+                      <span className="text-sm text-[#101C1499]">
+                        · {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}
+                        {selectedPlastic !== null && totalStoreCount > inStockCount
+                          ? ` · ${totalStoreCount} totalt`
+                          : ""}
+                      </span>
                     )}
                   </>
                 ) : (
@@ -682,8 +758,17 @@ export function DiscHeroSection({
                 {bestEntry != null ? (
                   <>
                     <span className="text-lg font-extrabold text-[#101C14]">kr {bestEntry.total}</span>
+                    {/* Counts the selected plastic, and names the total
+                        alongside it. "19 butikker" that compared five different
+                        products was the broken promise; this keeps coverage
+                        visible without making that claim. */}
                     {inStockCount > 0 && (
-                      <span className="text-sm text-[#101C1499]">· {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}</span>
+                      <span className="text-sm text-[#101C1499]">
+                        · {inStockCount} butikk{inStockCount !== 1 ? "er" : ""}
+                        {selectedPlastic !== null && totalStoreCount > inStockCount
+                          ? ` · ${totalStoreCount} totalt`
+                          : ""}
+                      </span>
                     )}
                   </>
                 ) : (
@@ -706,20 +791,33 @@ export function DiscHeroSection({
                 <div>
                   <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-[#101C1499]">Plastikk</div>
                   <div className="flex flex-wrap gap-2">
+                    {/* The counts are the point: "Alle (19)" keeps the full
+                        coverage visible while each plastic shows how many
+                        stores actually stock that one, so the headline number
+                        is never a promise the table cannot keep. */}
                     <Chip
-                      label="Alle"
+                      label={`Alle (${totalStoreCount})`}
                       active={selectedPlastic === null}
                       onClick={() => { setSelectedPlastic(null); setSelectedEdition(null); }}
                     />
-                    {plastics.map((p) => (
+                    {plasticGroups.map((g) => (
                       <Chip
-                        key={p}
-                        label={p}
-                        active={selectedPlastic === p}
-                        onClick={() => { setSelectedPlastic(p); setSelectedEdition(null); }}
+                        key={g.key}
+                        label={g.storeCount > 0 ? `${g.label} (${g.storeCount})` : g.label}
+                        active={selectedPlastic === g.key}
+                        onClick={() => { setSelectedPlastic(g.key); setSelectedEdition(null); }}
                       />
                     ))}
                   </div>
+                  {cheaperAlternative && (
+                    <button
+                      type="button"
+                      onClick={() => { setSelectedPlastic(cheaperAlternative.key); setSelectedEdition(null); }}
+                      className="mt-2 text-left text-[11px] text-[#101C1499] underline decoration-dotted underline-offset-2 hover:text-[#2D6A4F]"
+                    >
+                      Billigst uansett plast: kr {cheaperAlternative.minPrice} med {cheaperAlternative.label}
+                    </button>
+                  )}
                 </div>
               )}
 
@@ -752,8 +850,25 @@ export function DiscHeroSection({
                 </div>
               </div>
 
-              {/* Prissammenligning — inline in right column */}
-              <PriceTable stores={storeRows} lastUpdated={lastUpdated} hideHeader inline />
+              {/* Prissammenligning — inline in right column. Under "Alle",
+                  one table per plastic rather than a single mixed ranking. */}
+              {groupedRows ? (
+                <div className="flex flex-col gap-5">
+                  {groupedRows.map((sec) => (
+                    <div key={sec.key}>
+                      <div className="mb-1.5 flex items-baseline gap-2">
+                        <span className="text-sm font-extrabold text-[#101C14]">{sec.label}</span>
+                        <span className="text-[11px] text-[#101C1499]">
+                          {sec.rows.filter((r) => r.inStock).length} butikker på lager
+                        </span>
+                      </div>
+                      <PriceTable stores={sec.rows} lastUpdated={lastUpdated} hideHeader inline />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <PriceTable stores={storeRows} lastUpdated={lastUpdated} hideHeader inline />
+              )}
 
               {/* Bli varslet — inline in right column */}
               <PriceAlertSignup discId={discId} discName={disc.name} inline />
@@ -775,6 +890,7 @@ export function DiscHeroSection({
           >
             <span className="min-w-0 flex-1 truncate text-sm font-semibold opacity-90">
               Beste pris: <span className="font-extrabold">kr {bestEntry.total}</span> hos {bestEntry.storeName}
+              {bestEntry.plastic ? ` (${plasticLabelByKey.get(plasticKey(bestEntry.plastic)) ?? bestEntry.plastic})` : ""}
             </span>
             <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold">
               Kjøp
