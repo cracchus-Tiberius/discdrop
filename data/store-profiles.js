@@ -27,6 +27,31 @@ const STORE_PROFILES = {
     blurb:
       "Krokhol Disc Golf Shop kaller seg «en av Norges ledende spesialbutikker for diskgolf», og pro shopen ligger «i 2. etasje over kafeen på Krokhol, kun 100 meter fra tee 1» i Siggerud. Banen deres åpnet i 2018 og fikk i 2022 følge av «Krokhol Blue, en kortere og mer tilgjengelig bane». Hver disk fotograferes og veies individuelt: «vekten du ser i nettbutikken er vekten på akkurat den disken du får levert». 60 dagers fri retur.",
   },
+  frisbeebutikken: {
+    tagline: "Midt i diskgolfsmørøyet",
+    blurb:
+      "Frisbeebutikken startet «så smått i 2016 med salg av diskgolfutstyr fra en tilhenger», og driver i dag butikk på Loholt i Trondheim – «midt i diskgolfsmørøyet», rett ved Dragvoll Diskgolfarena. Underveis har de utvidet til banedesign, banebygging og kursvirksomhet. De inviterer deg inn «for å bla i vårt store utvalg eller bare en hyggelig diskgolfprat».",
+  },
+  starframe: {
+    tagline: "Sammen bygger vi bag",
+    blurb:
+      "Starframe ble etablert høsten 2021 og har «vokst fra en liten nettbutikk til en av Norges største spesialbutikker innen discgolf». I 2026 flyttet de inn på Parketten i Brumunddal, med rundt 270 m² butikk og to diskgolfsimulatorer. De vil «være blant de første i Norge med de nyeste produktene», og gir tilbake gjennom klubbsamarbeid, turneringspremiering og Team Starframe.",
+  },
+  hyzershop: {
+    tagline: "For at miljøet skal vokse",
+    blurb:
+      "HyzerShop holder det kort om seg selv: de «jobber alltid mot å levere best mulig produkter til våre kunder, og bidra til at disc golf miljøet i Norge vokser enda mer».",
+  },
+  discgolfdynasty: {
+    tagline: "Ditt neste steg",
+    blurb:
+      "Disc Golf Dynasty er «fire unge karer fra Drammensområdet» som åpnet nettbutikken i mai 2021. De er spillere selv og mener det gir dem peiling på «hva som både ønskes og forventes av spillere». Nivået ditt er likegyldig for dem: «Vi har lyst til å hjelpe DEG med å ta DITT neste steg!»",
+  },
+  discsor: {
+    tagline: "Glede, fellesskap og natur",
+    blurb:
+      "Disc Sør er en nyere nettbutikk med base i Søgne. Visjonen deres er å «fremme discgolf som en morsom og tilgjengelig sport for alle» – for dem handler sporten «ikke bare om å kaste en disc inn i en kurv, men også om å oppleve glede, fellesskap og natur». Utvalget er satt sammen for spillere på alle nivåer.",
+  },
   golfdiscer: {
     tagline: "Designet for alle",
     blurb:
