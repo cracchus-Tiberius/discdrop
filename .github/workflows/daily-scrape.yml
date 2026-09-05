@@ -170,6 +170,22 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # Refuses to deploy over work this checkout does not have. CI cannot see
+      # unpushed local commits, so the question is asked the other way round:
+      # the live site publishes the commit it was built from, and this compares
+      # it against HEAD. Live commit an ancestor of HEAD means the deploy moves
+      # the site forward; a commit we have never heard of means someone
+      # deployed from a clone with work that never got pushed, and deploying
+      # now would discard it.
+      #
+      # Confirmed 2026-09-05: the 08:46 cron deployed over two days of unpushed
+      # catalog work — fifteen brand re-attributions and a new store — and the
+      # run was green throughout. Fails open on a missing version.json, an
+      # unreachable site or a dirty live build; a guard that blocks the daily
+      # deploy on its own hiccups is worse than the problem.
+      - name: Verify deploy provenance
+        run: node scripts/check-deploy-provenance.mjs
+
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=discdrop --commit-dirty=true
         env:
