@@ -24,6 +24,14 @@ Package manager: pnpm (always use pnpm, never npm).
   `--force-refreeze` exists solely for deliberate bug fixes and requires
   an explicit decision from Tobba in the session — never run it as part
   of routine maintenance, refactors, or "tidying".
+- Any workflow whose script reads git history must check out with
+  `fetch-depth: 0`. Depth counts COMMITS, not days. The daily workflow used
+  to say 20, which was fine until 2026-09-05, when twelve merged pull
+  requests filled that window on their own — the next run reached three days
+  of scrape history instead of seven and /prisfall shipped three rows where
+  there were twenty-three. Nothing fails; the window just silently shortens,
+  and it shortens most on the days we ship most. This repo is ~6 MB packed,
+  so there is nothing to save by trimming it.
 
 ## Design System
 - Background: #F5F2EB
@@ -62,6 +70,27 @@ Package manager: pnpm (always use pnpm, never npm).
   nickname-first Discmania-titler.
 - Ved katalogutvidelse/butikk-onboarding undertrykkes new-disc-signaler den
   dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
+
+## Prisfall-regler
+- Historiske snapshots leses mot dagens data som fasit, ikke som sannhet i
+  seg selv. build-price-changes.js rekonstruerer vinduet fra commitede
+  scraped-prices.json-snapshots, og de ble skrevet av den matcheren,
+  katalogen og de fraktsatsene som gjaldt den dagen. Dagens data avgjør tre
+  ting: hvilke disker finnes (omdøpte id-er droppes), hvilken disk et produkt
+  ER (et produkt kan ikke ha vært en annen disk før), og hva frakt koster
+  (data/shipping-rates.js er håndverifisert — en endring der er vår
+  datakorreksjon, aldri butikkens prisendring). Våre datafikser er ikke
+  verdens prisendringer. Se sanitizeSnapshot i scripts/lib/price-changes.js.
+- Ny butikk i vinduet = ikke prisfall. Et drop der vinnerbutikken manglet i
+  forrige snapshot undertrykkes — butikken ble koblet på, den kuttet ingen
+  pris. Krokhol-onboardingen 2026-09-04 la 17 slike rader på /prisfall på én
+  dag. Samme doktrine som mass-reset-undertrykkingen i lib/new-in-stores.js.
+- Et drop hvis produkt-URL er borte fra dagens skrap publiseres ikke: lenken
+  fører ingensteds uansett om produktet er utgått eller var en feilmatch vi
+  siden har rettet. Snapshotene kan ikke skille de to, og ~200 produkter om
+  dagen forsvinner ved helt vanlig varegjennomtrekk — derfor gjelder regelen
+  raden, ikke historikken (isPublishableDrop), så grunnlaget for andre disker
+  står urørt.
 
 ## Scraper
 - scripts/scrape-all.js runs every store scraper in sequence (10-min timeout
