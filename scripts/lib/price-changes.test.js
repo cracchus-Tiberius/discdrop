@@ -14,6 +14,10 @@ const {
   capPerBrand,
   buildHistory,
   classifyDropBucket,
+  snapshotAuthority,
+  sanitizeSnapshot,
+  isPublishableDrop,
+  canonicalUrl,
 } = require('./price-changes');
 const { getIsoWeekStart } = require('./new-in-stores');
 
@@ -338,4 +342,77 @@ test('classifyDropBucket groups a date relative to today into today/yesterday/ea
   assert.equal(classifyDropBucket('2026-08-17', TODAY, mondayMs), 'earlier-this-week'); // Monday of this week
   assert.equal(classifyDropBucket('2026-08-16', TODAY, mondayMs), 'last-week'); // Sunday, previous ISO week
   assert.equal(classifyDropBucket('2026-08-10', TODAY, mondayMs), 'last-week');
+});
+
+// --- re-reading history against today's data ------------------------------
+
+const TODAY_SNAPSHOT = {
+  stores: { nydisk: { name: 'NyDisk', shipping: 65 } },
+  prices: {
+    'discmania-mutant': [{ store: 'nydisk', price: 200, inStock: true, url: 'https://s.no/neo-mutant' }],
+    'innova-roc': [{ store: 'nydisk', price: 150, inStock: true, url: 'https://s.no/roc' }],
+    'innova-rancho': [{ store: 'nydisk', price: 155, inStock: true, url: 'https://s.no/rancho' }],
+  },
+};
+const CATALOG_IDS = new Set(['discmania-mutant', 'innova-roc', 'innova-rancho', 'discraft-crush']);
+
+test('canonicalUrl ignores query and fragment so one product is not counted twice', () => {
+  assert.equal(canonicalUrl('https://s.no/roc?variant=7#tab'), 'https://s.no/roc');
+});
+
+test('sanitizeSnapshot drops entries under a disc id the catalog no longer has', () => {
+  const old = {
+    stores: { nydisk: { name: 'NyDisk', shipping: 45 } },
+    prices: { 'latitude-mutant': [{ store: 'nydisk', price: 200, inStock: true, url: 'https://s.no/neo-mutant' }] },
+  };
+  const { snapshot, dropped } = sanitizeSnapshot(old, CATALOG_IDS, snapshotAuthority(TODAY_SNAPSHOT));
+  assert.deepEqual(Object.keys(snapshot.prices), []);
+  assert.equal(dropped.deadId, 1);
+});
+
+test('sanitizeSnapshot drops a product today matches to a different disc', () => {
+  // The rename ghost: the URL is still sold, just no longer this disc.
+  const old = {
+    stores: {},
+    prices: { 'innova-roc': [{ store: 'nydisk', price: 155, inStock: true, url: 'https://s.no/rancho' }] },
+  };
+  const { snapshot, dropped } = sanitizeSnapshot(old, CATALOG_IDS, snapshotAuthority(TODAY_SNAPSHOT));
+  assert.deepEqual(Object.keys(snapshot.prices), []);
+  assert.equal(dropped.staleMatch, 1);
+});
+
+test('sanitizeSnapshot keeps a product that today still matches to the same disc', () => {
+  const old = {
+    stores: {},
+    prices: { 'innova-roc': [{ store: 'nydisk', price: 160, inStock: true, url: 'https://s.no/roc?variant=7' }] },
+  };
+  const { snapshot, dropped } = sanitizeSnapshot(old, CATALOG_IDS, snapshotAuthority(TODAY_SNAPSHOT));
+  assert.equal(snapshot.prices['innova-roc'].length, 1);
+  assert.equal(dropped.staleMatch, 0);
+});
+
+test('sanitizeSnapshot keeps a product that has since sold out — that is churn, not a ghost', () => {
+  const old = {
+    stores: {},
+    prices: { 'innova-roc': [{ store: 'nydisk', price: 160, inStock: true, url: 'https://s.no/gone' }] },
+  };
+  const { snapshot } = sanitizeSnapshot(old, CATALOG_IDS, snapshotAuthority(TODAY_SNAPSHOT));
+  assert.equal(snapshot.prices['innova-roc'].length, 1);
+});
+
+test('sanitizeSnapshot replaces the old store metadata with today\'s verified rates', () => {
+  const old = {
+    stores: { nydisk: { name: 'NyDisk', shipping: 45 } },
+    prices: { 'innova-roc': [{ store: 'nydisk', price: 150, inStock: true, url: 'https://s.no/roc' }] },
+  };
+  const { snapshot } = sanitizeSnapshot(old, CATALOG_IDS, snapshotAuthority(TODAY_SNAPSHOT));
+  assert.equal(snapshot.stores.nydisk.shipping, 65);
+});
+
+test('isPublishableDrop rejects a drop whose product is gone from the current scrape', () => {
+  const authority = snapshotAuthority(TODAY_SNAPSHOT);
+  // The Crush ghost: a mis-match that today resolves to no disc at all.
+  assert.equal(isPublishableDrop({ url: 'https://s.no/cd1-the-crush-boys' }, authority), false);
+  assert.equal(isPublishableDrop({ url: 'https://s.no/roc?variant=7' }, authority), true);
+  assert.equal(isPublishableDrop({ url: null }, authority), true);
 });

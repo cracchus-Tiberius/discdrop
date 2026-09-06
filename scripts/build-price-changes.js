@@ -25,7 +25,14 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
-const { computeChanges, buildHistory, classifyDropBucket } = require('./lib/price-changes');
+const {
+  computeChanges,
+  buildHistory,
+  classifyDropBucket,
+  snapshotAuthority,
+  sanitizeSnapshot,
+  isPublishableDrop,
+} = require('./lib/price-changes');
 const { getIsoWeekStart } = require('./lib/new-in-stores');
 const { discs: SOURCE_DISCS } = require('../data/discs.js');
 
@@ -37,6 +44,7 @@ const RELATIVE_SCRAPED_PATH = 'data/scraped-prices.json';
 const HISTORY_LENGTH = 7; // 6 committed daily snapshots + today's working tree
 
 const CATALOG = SOURCE_DISCS.map(({ id, brand }) => ({ id, brand }));
+const CATALOG_IDS = new Set(SOURCE_DISCS.map((d) => d.id));
 
 // data/scraped-prices.json is well over 1MB (execFileSync's default
 // maxBuffer), so raise it — 64MB comfortably covers the catalog's growth.
@@ -104,12 +112,24 @@ function buildSnapshotWindow() {
   // every earlier day-pair's date off by one).
   const committed = oneCommitPerDay(HISTORY_LENGTH).filter((c) => c.day !== todayDate).slice(0, HISTORY_LENGTH - 1); // newest first
   const oldestFirst = committed.slice().reverse();
-  const committedSnapshots = oldestFirst.map((c) => readCommittedSnapshot(c.sha));
+  // Every committed snapshot is re-read against today's catalog and today's
+  // data before it is used — see sanitizeSnapshot's comment in
+  // lib/price-changes.js for why. Without this, every matcher fix we ship
+  // resurfaces as a fake price drop dated to whenever the bad match was live.
+  const authority = snapshotAuthority(today);
+  const total = { deadId: 0, staleMatch: 0 };
+  const committedSnapshots = oldestFirst.map((c) => {
+    const { snapshot, dropped } = sanitizeSnapshot(readCommittedSnapshot(c.sha), CATALOG_IDS, authority);
+    for (const key of Object.keys(total)) total[key] += dropped[key];
+    return snapshot;
+  });
 
   return {
     snapshots: [...committedSnapshots, today],
     dates: [...oldestFirst.map((c) => c.day), todayDate],
     todayDate,
+    dropped: total,
+    authority,
   };
 }
 
@@ -132,7 +152,7 @@ function attachHistory(dropsRaw, snapshots) {
 }
 
 function main() {
-  const { snapshots, dates, todayDate } = buildSnapshotWindow();
+  const { snapshots, dates, todayDate, dropped, authority } = buildSnapshotWindow();
   const today = snapshots[snapshots.length - 1];
   const storesChecked = Object.keys(today.stores || {}).length;
   const mondayOfThisWeekMs = getIsoWeekStart(new Date(`${todayDate}T00:00:00Z`)).getTime();
@@ -145,6 +165,7 @@ function main() {
   let todayChangedCount = 0;
   let todayNewDiscCount = 0;
   const timelineRaw = [];
+  let unpublishable = 0;
   for (let i = 1; i < snapshots.length; i++) {
     const result = computeChanges({
       oldSnapshot: snapshots[i - 1],
@@ -162,6 +183,7 @@ function main() {
     const date = dates[i];
     const bucket = classifyDropBucket(date, todayDate, mondayOfThisWeekMs);
     for (const drop of result.dropsRaw) {
+      if (!isPublishableDrop(drop, authority)) { unpublishable++; continue; }
       timelineRaw.push({ ...drop, date, bucket });
     }
   }
@@ -184,7 +206,7 @@ function main() {
     });
   }
   const weekCatchUp = weekResult.dropsRaw
-    .filter((d) => !timelineDiscIds.has(d.discId))
+    .filter((d) => !timelineDiscIds.has(d.discId) && isPublishableDrop(d, authority))
     .map((d) => ({ ...d, date: todayDate, bucket: 'last-week' }));
 
   const timeline = attachHistory([...timelineRaw, ...weekCatchUp], snapshots).sort(
@@ -206,6 +228,11 @@ function main() {
 
   const byBucket = { today: 0, yesterday: 0, 'earlier-this-week': 0, 'last-week': 0 };
   for (const d of timeline) byBucket[d.bucket]++;
+  console.log(
+    `  history re-read against today's data: dropped ${dropped.deadId} entries under renamed/removed ` +
+      `disc ids and ${dropped.staleMatch} products since matched to a different disc, ` +
+      `and held back ${unpublishable} drop(s) whose product is no longer in the current scrape.`
+  );
   console.log(
     `price-changes.json: ${todayChangedCount} price changes today, ${todayNewDiscCount} new discs, ` +
       `${storesChecked} stores checked, ${timeline.length} drops total ` +

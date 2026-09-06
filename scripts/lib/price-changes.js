@@ -110,6 +110,112 @@ function pctChange(oldPrice, newPrice) {
   return Math.round((newPrice / oldPrice - 1) * 100);
 }
 
+// ---------------------------------------------------------------------------
+// Historical snapshots vs. today's understanding of the world
+// ---------------------------------------------------------------------------
+//
+// build-price-changes.js reconstructs a 7-day history out of the last six
+// COMMITTED scraped-prices.json snapshots. Those were written by whatever
+// matcher, catalog and store metadata were current on the day — so every fix
+// we ship retroactively rewrites history, and the page reports our own
+// corrections as price movement.
+//
+// Seen in production on 2026-09-06: /prisfall showed "Discraft Crush, NyDisk,
+// -6%" for 2026-09-02. The row was real in the snapshot and wrong in the
+// world — the product was a Discmania C-Line CD1 that the pre-34a5282 matcher
+// had claimed for Discraft's Crush. Re-running the build changed nothing,
+// because the ghost lives in git, not in the code. Same family as the
+// MAX_VALID_PRICE_NOK guard above: the live site was never wrong, only this
+// script's reading of old history.
+//
+// So every snapshot is re-read against today's data before it is used. Today's
+// snapshot is the authority on three things a fix can change:
+//
+//   1. Which discs exist. An id that is no longer in the catalog was renamed
+//      or removed (latitude-volt -> mvp-volt, and fourteen more on 2026-09-05).
+//   2. Which disc a product IS. If a URL appears in today's data under some
+//      other id, the old pairing was a mis-match we have since corrected.
+//      A product cannot have been a different disc in the past.
+//   3. What shipping costs. data/shipping-rates.js is hand-verified, not
+//      scraped, so a change there is us correcting our own data — never a
+//      store changing its prices.
+//
+// A URL absent from today's data altogether is the ambiguous case: the product
+// was delisted, or it is a mis-match that now matches nothing (the Crush ghost
+// is exactly this). The snapshots cannot tell those apart — but roughly 200
+// products a day drop out of the scrape through ordinary churn, so treating
+// them all as untrustworthy would rewrite every disc's baseline and report
+// sold-out stock as brand-new listings. That case is handled one level up
+// instead, by isPublishableDrop(): such entries still count toward history and
+// baselines, they just cannot BE the row we publish, because their link no
+// longer resolves for the reader either way.
+
+function snapshotAuthority(todaySnapshot) {
+  const urlIds = new Map();
+  for (const [discId, entries] of Object.entries((todaySnapshot && todaySnapshot.prices) || {})) {
+    for (const entry of entries || []) {
+      if (!entry.url) continue;
+      const url = canonicalUrl(entry.url);
+      if (!urlIds.has(url)) urlIds.set(url, new Set());
+      urlIds.get(url).add(discId);
+    }
+  }
+  return { urlIds, stores: (todaySnapshot && todaySnapshot.stores) || {} };
+}
+
+/** Strip query/fragment so ?variant=... and #tab don't split one product in two. */
+function canonicalUrl(url) {
+  return String(url).replace(/[?#].*$/, '');
+}
+
+/**
+ * Re-reads one historical snapshot against today's catalog and today's data.
+ * Returns a snapshot of the same shape, carrying only entries today still
+ * vouches for, and today's store metadata.
+ *
+ * `catalogIds` is a Set of the ids in data/discs.js right now; `authority`
+ * comes from snapshotAuthority(todaySnapshot).
+ */
+function sanitizeSnapshot(snapshot, catalogIds, authority) {
+  const prices = {};
+  const dropped = { deadId: 0, staleMatch: 0 };
+
+  for (const [discId, entries] of Object.entries((snapshot && snapshot.prices) || {})) {
+    if (!catalogIds.has(discId)) {
+      dropped.deadId += (entries || []).length;
+      continue;
+    }
+    const kept = [];
+    for (const entry of entries || []) {
+      const ids = entry.url ? authority.urlIds.get(canonicalUrl(entry.url)) : null;
+      if (ids && !ids.has(discId)) { dropped.staleMatch++; continue; }
+      kept.push(entry);
+    }
+    if (kept.length) prices[discId] = kept;
+  }
+
+  return { snapshot: { ...snapshot, prices, stores: authority.stores }, dropped };
+}
+
+/**
+ * Whether a computed drop is fit to publish on /prisfall.
+ *
+ * The row exists to send a reader to a cheaper disc, so its link has to lead
+ * somewhere. A winning entry whose product URL is gone from the current scrape
+ * fails that on its own terms, and it is also where the last of the stale-match
+ * ghosts hide: the NyDisk "Discraft Crush" was a Discmania CD1 whose URL no
+ * longer resolves to any disc we carry, so nothing else could catch it.
+ *
+ * Costs us the occasional genuine drop at a store that has since sold out — on
+ * 2026-09-06 exactly one, a Discexpress Captain's Raptor that dipped for a day
+ * and was back at its old price the next. A dead link is not worth keeping for
+ * that.
+ */
+function isPublishableDrop(drop, authority) {
+  if (!drop.url) return true;
+  return authority.urlIds.has(canonicalUrl(drop.url));
+}
+
 /**
  * Compare two full scraped-prices.json snapshots (`{prices, stores}` shape)
  * for one period (day or week). Returns:
@@ -275,6 +381,10 @@ module.exports = {
   pctChange,
   computeChanges,
   capPerBrand,
+  snapshotAuthority,
+  sanitizeSnapshot,
+  isPublishableDrop,
+  canonicalUrl,
   buildHistory,
   classifyDropBucket,
 };
