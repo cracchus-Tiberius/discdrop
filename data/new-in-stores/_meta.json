@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-05T08:59:52.723Z",
+  "generated": "2026-09-06T09:03:44.929Z",
   "currentIsoWeek": "2026-W36",
   "summary": {
-    "totalSignals": 144,
+    "totalSignals": 119,
     "newDiscs": 0,
-    "newReleases": 54,
-    "newAtStore": 90,
+    "newReleases": 52,
+    "newAtStore": 67,
     "weeksIncluded": 3,
     "quarantinedStores": [
       "hyzershop",
@@ -33,12 +33,12 @@
       {
         "store": "krokhol",
         "date": "2026-09-04",
-        "count": 1003
+        "count": 978
       },
       {
         "store": "nydisk",
         "date": "2026-07-26",
-        "count": 796
+        "count": 795
       },
       {
         "store": "ugglans",
@@ -48,17 +48,17 @@
       {
         "store": "starframe",
         "date": "2026-08-19",
-        "count": 647
+        "count": 646
       },
       {
         "store": "wearediscgolf",
         "date": "2026-08-16",
-        "count": 474
+        "count": 473
       },
       {
         "store": "wearediscgolf",
         "date": "2026-08-11",
-        "count": 456
+        "count": 452
       },
       {
         "store": "hyzershop",
@@ -98,7 +98,7 @@
       {
         "store": "aceshop",
         "date": "2026-08-28",
-        "count": 128
+        "count": 126
       },
       {
         "store": "discexpress",
@@ -106,19 +106,9 @@
         "count": 98
       },
       {
-        "store": "hyzershop",
-        "date": "2026-09-04",
-        "count": 89
-      },
-      {
-        "store": "frisbeebutikken",
-        "date": "2026-09-01",
-        "count": 88
-      },
-      {
         "store": "aceshop",
         "date": "2026-07-24",
-        "count": 86
+        "count": 87
       },
       {
         "store": "discsport",
@@ -131,19 +121,14 @@
         "count": 83
       },
       {
-        "store": "aceshop",
-        "date": "2026-08-04",
-        "count": 81
-      },
-      {
-        "store": "frisbeebutikken",
-        "date": "2026-09-04",
-        "count": 80
-      },
-      {
         "store": "wearediscgolf",
         "date": "2026-07-24",
         "count": 79
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-09-01",
+        "count": 78
       },
       {
         "store": "rocketdiscs",
@@ -151,9 +136,29 @@
         "count": 78
       },
       {
+        "store": "frisbeebutikken",
+        "date": "2026-09-04",
+        "count": 77
+      },
+      {
+        "store": "aceshop",
+        "date": "2026-08-04",
+        "count": 77
+      },
+      {
+        "store": "hyzershop",
+        "date": "2026-09-05",
+        "count": 66
+      },
+      {
+        "store": "nydisk",
+        "date": "2026-09-06",
+        "count": 55
+      },
+      {
         "store": "wearediscgolf",
         "date": "2026-09-04",
-        "count": 56
+        "count": 50
       },
       {
         "store": "discsport",
@@ -163,12 +168,12 @@
       {
         "store": "starframe",
         "date": "2026-09-04",
-        "count": 45
+        "count": 42
       },
       {
         "store": "frisbeebutikken",
         "date": "2026-08-13",
-        "count": 38
+        "count": 37
       },
       {
         "store": "rocketdiscs",
@@ -178,11 +183,6 @@
       {
         "store": "rocketdiscs",
         "date": "2026-07-28",
-        "count": 31
-      },
-      {
-        "store": "nydisk",
-        "date": "2026-09-04",
         "count": 31
       }
     ],
@@ -195,12 +195,17 @@
       {
         "store": "rocketdiscs",
         "isoWeek": "2026-W36",
-        "count": 29
+        "count": 28
       },
       {
         "store": "frisbeebutikken",
-        "isoWeek": "2026-W34",
-        "count": 21
+        "isoWeek": "2026-W36",
+        "count": 26
+      },
+      {
+        "store": "discexpress",
+        "isoWeek": "2026-W36",
+        "count": 25
       }
     ]
   },
