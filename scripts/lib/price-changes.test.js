@@ -416,3 +416,51 @@ test('isPublishableDrop rejects a drop whose product is gone from the current sc
   assert.equal(isPublishableDrop({ url: 'https://s.no/roc?variant=7' }, authority), true);
   assert.equal(isPublishableDrop({ url: null }, authority), true);
 });
+
+test('computeChanges does not report a drop won by a store that just joined', () => {
+  const catalog = [{ id: 'disc-a', brand: 'Innova' }];
+  const oldSnapshot = {
+    stores: { alpha: { name: 'Alpha', shipping: 0 } },
+    prices: { 'disc-a': [{ store: 'alpha', price: 300, inStock: true }] },
+  };
+  const newSnapshot = {
+    stores: { alpha: { name: 'Alpha', shipping: 0 }, nyebutikk: { name: 'Nye', shipping: 0 } },
+    prices: {
+      'disc-a': [
+        { store: 'alpha', price: 300, inStock: true },
+        { store: 'nyebutikk', price: 200, inStock: true },
+      ],
+    },
+  };
+  const onboarding = computeChanges({ oldSnapshot, newSnapshot, catalog, period: 'day' });
+  assert.deepEqual(onboarding.dropsRaw, []);
+  // Still counted as a change — the cheapest landed price really did move.
+  assert.equal(onboarding.changedDiscCount, 1);
+
+  // The same cut at a store that was already there is a real drop.
+  const realCut = computeChanges({
+    oldSnapshot,
+    newSnapshot: { ...newSnapshot, stores: oldSnapshot.stores, prices: { 'disc-a': [{ store: 'alpha', price: 200, inStock: true }] } },
+    catalog,
+    period: 'day',
+  });
+  assert.equal(realCut.dropsRaw.length, 1);
+  assert.equal(realCut.dropsRaw[0].pct, -33);
+});
+
+test('sanitizeSnapshot keeps a store the snapshot had, and does not invent one it lacked', () => {
+  const authority = snapshotAuthority(TODAY_SNAPSHOT);
+  const before = { stores: {}, prices: {} };
+  assert.deepEqual(Object.keys(sanitizeSnapshot(before, CATALOG_IDS, authority).snapshot.stores), []);
+
+  const withStore = { stores: { nydisk: { name: 'NyDisk', shipping: 45 } }, prices: {} };
+  const after = sanitizeSnapshot(withStore, CATALOG_IDS, authority).snapshot;
+  assert.deepEqual(Object.keys(after.stores), ['nydisk']);
+  assert.equal(after.stores.nydisk.shipping, 65); // today's verified rate
+});
+
+test('sanitizeSnapshot leaves a no-longer-scraped store its own shipping cost', () => {
+  const old = { stores: { gammel: { name: 'Gammel', shipping: 79 } }, prices: {} };
+  const after = sanitizeSnapshot(old, CATALOG_IDS, snapshotAuthority(TODAY_SNAPSHOT)).snapshot;
+  assert.equal(after.stores.gammel.shipping, 79);
+});

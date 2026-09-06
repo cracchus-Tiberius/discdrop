@@ -194,7 +194,17 @@ function sanitizeSnapshot(snapshot, catalogIds, authority) {
     if (kept.length) prices[discId] = kept;
   }
 
-  return { snapshot: { ...snapshot, prices, stores: authority.stores }, dropped };
+  // Today's verified rates, but ONLY for the stores this snapshot actually
+  // had. Which stores existed on a given day is a fact about that day, and
+  // computeChanges needs it to tell a price cut from a store joining the
+  // comparison. A store we have since stopped scraping keeps its own old
+  // metadata rather than losing its shipping cost and looking cheap.
+  const stores = {};
+  for (const key of Object.keys((snapshot && snapshot.stores) || {})) {
+    stores[key] = authority.stores[key] || snapshot.stores[key];
+  }
+
+  return { snapshot: { ...snapshot, prices, stores }, dropped };
 }
 
 /**
@@ -242,11 +252,15 @@ function isPublishableDrop(drop, authority) {
  * earlier — not a new low, just noise reverting. Doesn't affect
  * changedDiscCount (that's still "did the price move at all", not "is
  * this a new low") — only whether the disc makes it into dropsRaw.
+ *
+ * A drop won by a store absent from `oldSnapshot.stores` is likewise excluded:
+ * that store joined the comparison, it did not cut a price.
  */
 function computeChanges({ oldSnapshot, newSnapshot, catalog, period, trailingSnapshots }) {
   const oldPrices = (oldSnapshot && oldSnapshot.prices) || {};
   const newPrices = (newSnapshot && newSnapshot.prices) || {};
   const storesMeta = (newSnapshot && newSnapshot.stores) || {};
+  const oldStores = (oldSnapshot && oldSnapshot.stores) || {};
   const catalogById = new Map(catalog.map((d) => [d.id, d]));
 
   let changedDiscCount = 0;
@@ -280,6 +294,12 @@ function computeChanges({ oldSnapshot, newSnapshot, catalog, period, trailingSna
           const trailingMin = trailingMinLanded(discId, trailingSnapshots);
           if (trailingMin != null && newBest.landed >= trailingMin) continue; // not a new low — a rebound, not news
         }
+        // A store that wasn't in the old snapshot didn't cut anything — it
+        // joined. Onboarding Krokhol on 2026-09-04 put seventeen "drops" on
+        // /prisfall in one day, none of which were price cuts. Same reasoning
+        // as the mass-reset suppression in lib/new-in-stores.js: our coverage
+        // widening is not the world getting cheaper.
+        if (!oldStores[newBest.store]) continue;
         dropsRaw.push({
           discId,
           brand: disc.brand,
