@@ -37,7 +37,7 @@ function save(descriptions) {
 
 function buildPrompt(disc) {
   const typeLabel = { driver: 'driver', fairway: 'fairway driver', midrange: 'midrange', putter: 'putter' }[disc.type] ?? disc.type;
-  return `Write a 2-3 sentence disc golf disc description in Norwegian Bokmål for the ${disc.brand} ${disc.name}. Flight numbers: Speed ${disc.flight.speed}, Glide ${disc.flight.glide}, Turn ${disc.flight.turn}, Fade ${disc.flight.fade}. Type: ${typeLabel}. Keep it practical and friendly — what player suits it and what is it known for? Do not state a numeric speed/glide/turn/fade value anywhere in the text other than the exact ones given above — if you reference a flight number, it must match exactly. Only mention a specific plastic type by name if you are confident it is a real, commonly available plastic for this exact disc; if unsure, use a generic phrase like "ulike plasttyper" instead of inventing one. Answer in plain text only, no quotes.`;
+  return `Write a 2-3 sentence disc golf disc description in Norwegian Bokmål for the ${disc.brand} ${disc.name}. Flight numbers: Speed ${disc.flight.speed}, Glide ${disc.flight.glide}, Turn ${disc.flight.turn}, Fade ${disc.flight.fade}. Type: ${typeLabel}. Keep it practical and friendly — what player suits it and what is it known for? Do not state a numeric speed/glide/turn/fade value anywhere in the text other than the exact ones given above — if you reference a flight number, it must match exactly. Only mention a specific plastic type by name if you are confident it is a real, commonly available plastic for this exact disc; if unsure, use a generic phrase like "ulike plasttyper" instead of inventing one. Write "disk"/"disken"/"disker" — never the English "disc" — except inside a brand name such as Dynamic Discs, Clash Discs or Disc Golf. Answer in plain text only, no quotes.`;
 }
 
 // Confirmed in production 2026-08-21: the model (even given the correct
@@ -51,6 +51,20 @@ function buildPrompt(disc) {
 function hasSpeedMismatch(text, realSpeed) {
   const matches = [...text.matchAll(/speed\s*(?:på\s*)?(\d+(?:[.,]\d+)?)/gi)];
   return matches.some((m) => Math.abs(parseFloat(m[1].replace(',', '.')) - realSpeed) > 0.6);
+}
+
+// The project writes Norwegian Bokmål and spells it "disk", never the English
+// "disc" — that rule is in CLAUDE.md and it is visible on every disc page.
+// The model ignores it about as often as it obeys: on 2026-09-06 nineteen of
+// the first twenty regenerated descriptions said "en pålitelig disc". Brand
+// names are the exception (Dynamic Discs, Clash Discs, Disc Golf), so strip
+// those before looking.
+function hasEnglishDiscWord(text, brand) {
+  let stripped = text;
+  for (const phrase of [brand, 'Disc Golf', 'Discgolf', 'discgolf']) {
+    if (phrase) stripped = stripped.split(phrase).join(' ');
+  }
+  return /\bdisc(en|er|ene|s)?\b/i.test(stripped);
 }
 
 async function generateOne(client, disc, attempt = 1) {
@@ -71,12 +85,19 @@ async function generateOne(client, disc, attempt = 1) {
     throw err;
   }
 
+  if (text && hasEnglishDiscWord(text, disc.brand) && attempt < 3) {
+    console.log(`  ↻ Wrote "disc" instead of "disk" for ${disc.brand} ${disc.name} — retry ${attempt + 1}/3`);
+    return generateOne(client, disc, attempt + 1);
+  }
   if (text && hasSpeedMismatch(text, disc.flight.speed) && attempt < 3) {
     console.log(`  ↻ Speed mismatch in generated text for ${disc.brand} ${disc.name} (real speed ${disc.flight.speed}) — retry ${attempt + 1}/3`);
     return generateOne(client, disc, attempt + 1);
   }
   if (text && hasSpeedMismatch(text, disc.flight.speed)) {
     console.warn(`  ⚠ Giving up after 3 attempts — ${disc.brand} ${disc.name} still has a speed mismatch, saving anyway (needs manual review)`);
+  }
+  if (text && hasEnglishDiscWord(text, disc.brand)) {
+    console.warn(`  ⚠ Giving up after 3 attempts — ${disc.brand} ${disc.name} still says "disc", saving anyway (needs manual review)`);
   }
   return text;
 }
