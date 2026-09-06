@@ -79,10 +79,17 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          # build-price-changes.js reads the last ~7 daily commits of
-          # data/scraped-prices.json via `git show <sha>:...` — the default
-          # shallow (depth-1) clone wouldn't have that history.
-          fetch-depth: 20
+          # build-price-changes.js reads the last ~7 DAILY commits of
+          # data/scraped-prices.json via `git show <sha>:...`, so it needs
+          # that history — the default depth-1 clone has none of it.
+          #
+          # This used to say 20, meaning 20 commits, not 20 days. On
+          # 2026-09-06 the twelve pull requests merged the day before filled
+          # that window on their own and /prisfall shipped with three rows
+          # from a single day instead of twenty-three across six. The
+          # truncation is silent and it gets worse the more we ship, which is
+          # exactly backwards. The repo is ~6 MB packed; take all of it.
+          fetch-depth: 0
 
       - name: Install Node.js 22
         uses: actions/setup-node@v4

@@ -124,6 +124,16 @@ function buildSnapshotWindow() {
     return snapshot;
   });
 
+  // A shallow clone silently shortens the window instead of failing, and the
+  // page just quietly loses days — say so where someone reads the log.
+  if (committedSnapshots.length < HISTORY_LENGTH - 1) {
+    console.log(
+      `  ⚠ Only ${committedSnapshots.length} of ${HISTORY_LENGTH - 1} daily snapshots were reachable in git. ` +
+      `/prisfall will cover ${committedSnapshots.length + 1} days instead of ${HISTORY_LENGTH}. ` +
+      `If this is CI, the checkout needs more history (fetch-depth: 0).`
+    );
+  }
+
   return {
     snapshots: [...committedSnapshots, today],
     dates: [...oldestFirst.map((c) => c.day), todayDate],
