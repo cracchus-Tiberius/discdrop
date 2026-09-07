@@ -50,7 +50,7 @@ function save(descriptions) {
 
 function buildPrompt(disc) {
   const typeLabel = { driver: 'driver', fairway: 'fairway driver', midrange: 'midrange', putter: 'putter' }[disc.type] ?? disc.type;
-  return `Write a 2-3 sentence disc golf disc description in Norwegian Bokmål for the ${disc.brand} ${disc.name}. Flight numbers: Speed ${disc.flight.speed}, Glide ${disc.flight.glide}, Turn ${disc.flight.turn}, Fade ${disc.flight.fade}. Type: ${typeLabel}. Keep it practical and friendly — what player suits it and what is it known for? If you describe the flight path by direction, use the standard convention for a RIGHT-HANDED BACKHAND thrower: negative turn means the disc turns to the RIGHT early in the flight, and fade means it finishes to the LEFT. Getting this backwards is worse than not mentioning direction at all, so leave direction out if you are unsure. Do not state a numeric speed/glide/turn/fade value anywhere in the text other than the exact ones given above — if you reference a flight number, it must match exactly. Only mention a specific plastic type by name if you are confident it is a real, commonly available plastic for this exact disc; if unsure, use a generic phrase like "ulike plasttyper" instead of inventing one. Write natural, idiomatic Norwegian Bokmål — no Swedish or Danish words, no English words, and no invented compounds. Write "disk"/"disken"/"disker" — never the English "disc" — except inside a brand name such as Dynamic Discs, Clash Discs or Disc Golf. Answer in plain text only, no quotes.`;
+  return `Write a 2-3 sentence disc golf disc description in Norwegian Bokmål for the ${disc.brand} ${disc.name}. Flight numbers: Speed ${disc.flight.speed}, Glide ${disc.flight.glide}, Turn ${disc.flight.turn}, Fade ${disc.flight.fade}. Type: ${typeLabel}. Keep it practical and friendly — what player suits it and what is it known for? If you describe the flight path by direction, use the standard convention for a RIGHT-HANDED BACKHAND thrower: negative turn means the disc turns to the RIGHT early in the flight, and fade means it finishes to the LEFT. Getting this backwards is worse than not mentioning direction at all, so leave direction out if you are unsure. Do not call a turn of -2 or more \"minimal\" or a fade of 3 or more \"mild\" — describe the numbers you were given, not a disc you are thinking of. Do not state a numeric speed/glide/turn/fade value anywhere in the text other than the exact ones given above — if you reference a flight number, it must match exactly. Only mention a specific plastic type by name if you are confident it is a real, commonly available plastic for this exact disc; if unsure, use a generic phrase like "ulike plasttyper" instead of inventing one. Write natural, idiomatic Norwegian Bokmål — no Swedish or Danish words, no English words, and no invented compounds. Write "disk"/"disken"/"disker" — never the English "disc" — except inside a proper noun: a brand name such as Dynamic Discs, Clash Discs or Disc Golf, or the mold name itself. Always write the mold name exactly as given above — Innova\'s "Power Disc" is spelled Disc, and shortening it to "Power" to satisfy this rule is wrong. Answer in plain text only, no quotes.`;
 }
 
 // Confirmed in production 2026-08-21: the model (even given the correct
@@ -72,12 +72,21 @@ function hasSpeedMismatch(text, realSpeed) {
 // the first twenty regenerated descriptions said "en pålitelig disc". Brand
 // names are the exception (Dynamic Discs, Clash Discs, Disc Golf), so strip
 // those before looking.
-function hasEnglishDiscWord(text, brand) {
-  let stripped = text;
-  for (const phrase of [brand, 'Disc Golf', 'Discgolf', 'discgolf']) {
-    if (phrase) stripped = stripped.split(phrase).join(' ');
+function hasEnglishDiscWord(text, disc) {
+  return /\bdisc(en|er|ene|s)?\b/i.test(withoutOwnNames(text, disc));
+}
+
+// Everything that is a proper noun on this particular disc: its brand, its
+// mold name, and the sport's own spellings. Both the "disc" rule and the
+// run-together rule have to look past these — Innova's Power Disc really is
+// spelled Disc, and TeeDevil, RocX3, RhynoX and AviarX3 really do run two
+// words together. Four of those tripped their own check on 2026-09-07.
+function withoutOwnNames(text, disc) {
+  let out = text;
+  for (const phrase of [disc.brand, disc.name, 'Disc Golf', 'Discgolf', 'discgolf']) {
+    if (phrase) out = out.split(phrase).join(' ');
   }
-  return /\bdisc(en|er|ene|s)?\b/i.test(stripped);
+  return out;
 }
 
 // Anything outside Latin-1 plus the Norwegian letters is a decoding slip, not
@@ -89,8 +98,8 @@ function hasForeignScript(text) {
 // "er enDistance Driver" — two words run together across a case boundary.
 // Real Norwegian never does this; product names that legitimately do (GStar,
 // McBeth) do not appear in generated prose.
-function hasMissingSpace(text) {
-  return /[a-zæøå][A-ZÆØÅ]/.test(text);
+function hasMissingSpace(text, disc) {
+  return /[a-zæøå][A-ZÆØÅ]/.test(withoutOwnNames(text, disc));
 }
 
 // The model does not know every small manufacturer, and when it doesn't it
@@ -109,6 +118,24 @@ function namesAnotherBrand(text, brand) {
 // thing a reader sees on the page.
 function isTruncated(text) {
   return !/[.!?]["»)]?\s*$/.test(text);
+}
+
+// Claims about how much a disc turns or fades, checked against what it
+// actually does. The generated corpus is full of "minimal turn" about discs
+// rated -3 and "mild fade" about a fade of 4 — the numbers are quoted
+// correctly right next to the sentence that contradicts them. Only flags the
+// clear-cut cases; a -1 called "lett" is a matter of taste.
+const LITTLE = /(minimal|minimale|lite|liten|litt|svak|svakt|knapt noe|nesten ingen)\s+(\w+\s+){0,2}/;
+function overstatesFlight(text, flight) {
+  const claims = (word, value, littleAbove, muchBelow) => {
+    const re = new RegExp(LITTLE.source + word, 'i');
+    if (re.test(text) && Math.abs(value) >= littleAbove) return true;
+    return new RegExp(`(mye|stor|kraftig|betydelig)\\s+(\\w+\\s+){0,2}${word}`, 'i').test(text)
+      && Math.abs(value) <= muchBelow;
+  };
+  if (flight.turn != null && claims('turn', flight.turn, 2, 0.5)) return 'turn';
+  if (flight.fade != null && claims('fade', flight.fade, 3, 0.5)) return 'fade';
+  return null;
 }
 
 async function generateOne(client, disc, attempt = 1) {
@@ -136,6 +163,11 @@ async function generateOne(client, disc, attempt = 1) {
     throw err;
   }
 
+  const overstated = text ? overstatesFlight(text, disc.flight) : null;
+  if (overstated && attempt < 3) {
+    console.log(`  ↻ Describes ${disc.brand} ${disc.name}'s ${overstated} as something its number is not — retry ${attempt + 1}/3`);
+    return generateOne(client, disc, attempt + 1);
+  }
   if (text && isTruncated(text) && attempt < 3) {
     console.log(`  ↻ Truncated text for ${disc.brand} ${disc.name} — retry ${attempt + 1}/3`);
     return generateOne(client, disc, attempt + 1);
@@ -148,11 +180,11 @@ async function generateOne(client, disc, attempt = 1) {
     console.log(`  ↻ Non-Latin characters in text for ${disc.brand} ${disc.name} — retry ${attempt + 1}/3`);
     return generateOne(client, disc, attempt + 1);
   }
-  if (text && hasMissingSpace(text) && attempt < 3) {
+  if (text && hasMissingSpace(text, disc) && attempt < 3) {
     console.log(`  ↻ Run-together words for ${disc.brand} ${disc.name} — retry ${attempt + 1}/3`);
     return generateOne(client, disc, attempt + 1);
   }
-  if (text && hasEnglishDiscWord(text, disc.brand) && attempt < 3) {
+  if (text && hasEnglishDiscWord(text, disc) && attempt < 3) {
     console.log(`  ↻ Wrote "disc" instead of "disk" for ${disc.brand} ${disc.name} — retry ${attempt + 1}/3`);
     return generateOne(client, disc, attempt + 1);
   }
@@ -163,7 +195,7 @@ async function generateOne(client, disc, attempt = 1) {
   if (text && hasSpeedMismatch(text, disc.flight.speed)) {
     console.warn(`  ⚠ Giving up after 3 attempts — ${disc.brand} ${disc.name} still has a speed mismatch, saving anyway (needs manual review)`);
   }
-  if (text && hasEnglishDiscWord(text, disc.brand)) {
+  if (text && hasEnglishDiscWord(text, disc)) {
     console.warn(`  ⚠ Giving up after 3 attempts — ${disc.brand} ${disc.name} still says "disc", saving anyway (needs manual review)`);
   }
   if (text && namesAnotherBrand(text, disc.brand)) {
@@ -174,7 +206,10 @@ async function generateOne(client, disc, attempt = 1) {
     console.warn(`  ⚠ Dropping ${disc.brand} ${disc.name} — still truncated after 3 attempts.`);
     return '';
   }
-  if (text && (hasForeignScript(text) || hasMissingSpace(text))) {
+  if (overstatesFlight(text, disc.flight)) {
+    console.warn(`  ⚠ ${disc.brand} ${disc.name} still misdescribes its own flight numbers after 3 attempts (needs manual review)`);
+  }
+  if (text && (hasForeignScript(text) || hasMissingSpace(text, disc))) {
     console.warn(`  ⚠ Giving up after 3 attempts — ${disc.brand} ${disc.name} still has malformed text, saving anyway (needs manual review)`);
   }
   return text;
