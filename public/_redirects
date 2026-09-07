@@ -125,3 +125,13 @@
 # dynamic-discs-guard, and all 55 listings are in Dynamic plastics.
 /disc/latitude-guard          /disc/dynamic-guard/       301
 /disc/latitude-guard/         /disc/dynamic-guard/       301
+
+# prodigy-pa3-lizotte -> prodigy-pa-3 (2026-09-07). Not a rename: the entry was
+# fabricated. Simon Lizotte has never thrown for Prodigy, the flight numbers
+# were identical to the plain PA-3 that already existed, the image was a stock
+# 300-plastic PA-3, and it carried hand-written seed prices. In 3 of 198
+# snapshots it did hold real listings — both ordinary PA-3s (frisbeebutikken's
+# 300 PA-3 and We Are Disc Golf's 400 PA-3), stolen from the real entry until
+# the matcher improved. Dark in the other 195.
+/disc/prodigy-pa3-lizotte     /disc/prodigy-pa-3/         301
+/disc/prodigy-pa3-lizotte/    /disc/prodigy-pa-3/         301

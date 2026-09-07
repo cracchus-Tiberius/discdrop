@@ -54,6 +54,9 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   (d/f/m/p-model med -s/-os-varianter). Merkefeltet er riktig; bare id-en er
   arvet feil. `discmania-talisman`s beskrivelse sier "Discmania Talisman" og
   siterer S-Line — den må regenereres når id-en rettes.
+- **`latitude-gladiator`.** Duplikat av `dynamic-gladiator` (begge "Latitude
+  64 Gladiator", 13/5/0/3.5). Ingen av dem har riktig id-prefiks; bare
+  `dynamic-gladiator` har priser. Ryddes med FD2-posten over.
 - **`discmania-steady`.** Blander tre merker i én oppføring: molden er DGAs,
   "Steady" er også Clash' plastnavn, og plastlisten forveksler molds med
   plaster. `dga-steady` finnes nå separat og er riktig.
@@ -82,6 +85,11 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
 - discs.js — source of truth for disc catalogue (685 discs, 22 brands)
 - scraped-prices.json — real store prices, updated by pnpm scrape
 - Only show prices from scraped-prices.json, never mock store data
+- discs.js skal ALDRI inneholde priser. De bor utelukkende i
+  scraped-prices.json. Katalogen hadde til 2026-09-07 håndskrevne stores[]-
+  og priceHistory-rester fra seedingen på 17 disker — ingenting leste dem, så
+  de ble aldri vist, men de lå som feller i det som skal være fasit. En av
+  dem, prodigy-pa3-lizotte, var en oppdiktet disk i tillegg.
 - Run pnpm scrape to update prices from Norwegian stores
 - top-sellers.json — drives "Populære disker" on the homepage. Refreshed every
   ~14 days by scripts/scrape-top-sellers.js (.github/workflows/refresh-top-sellers.yml,

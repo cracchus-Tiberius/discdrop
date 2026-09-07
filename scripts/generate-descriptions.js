@@ -125,7 +125,7 @@ function isTruncated(text) {
 // rated -3 and "mild fade" about a fade of 4 — the numbers are quoted
 // correctly right next to the sentence that contradicts them. Only flags the
 // clear-cut cases; a -1 called "lett" is a matter of taste.
-const LITTLE = /(minimal|minimale|lite|liten|litt|svak|svakt|knapt noe|nesten ingen)\s+(\w+\s+){0,2}/;
+const LITTLE = /(minimal|minimale|lite|liten|litt|svak|svakt|knapt noe|nesten ingen|lav|lavt|lave|beskjeden|beskjedent)\s+(\w+\s+){0,2}/;
 function overstatesFlight(text, flight) {
   const claims = (word, value, littleAbove, muchBelow) => {
     const re = new RegExp(LITTLE.source + word, 'i');
