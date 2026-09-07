@@ -33,6 +33,40 @@ Package manager: pnpm (always use pnpm, never npm).
   and it shortens most on the days we ship most. This repo is ~6 MB packed,
   so there is nothing to save by trimming it.
 
+## Oppryddingskø (venter på GSC-stabilitet)
+Disse er kjent, bevisst utsatt, og skal IKKE ryddes som del av annet arbeid.
+De endrer disk-id-er eller sletter sider som allerede er indeksert, så de
+venter til Google Search Console har satt seg etter omdøpingene 2026-09-05.
+Ved opprydding: legg en 301 i public/_redirects for hver id som forsvinner,
+slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
+
+- **FD2/Gladiator-duplikatene.** `lone-star-walker` er en ren duplikat av
+  `discmania-fd2` — samme brand, name og flighttall (Discmania FD2, 7/4/0/2)
+  — og har null priser. `latitude-gladiator` og `dynamic-gladiator` er
+  duplikater av hverandre (begge "Latitude 64 Gladiator", 13/5/0/3.5); bare
+  `dynamic-gladiator` har priser, og den har feil id-prefiks.
+  Merk ved rydding: `lone-star-walker`s beskrivelse i disc-descriptions.json
+  er en FD2-beskrivelse. Den ble bevisst stående urørt i omkjøringen
+  2026-09-07 (bryter disk/disc-regelen) fordi den forsvinner med
+  oppføringen — slett den sammen med disken, ikke regenerer den.
+- **Prodigy- og Prodiscus-diskene med `discmania-`-id.** Seksten oppføringer:
+  fem Prodiscus (jokeri, laseri, midari, origo, talisman) og elleve Prodigy
+  (d/f/m/p-model med -s/-os-varianter). Merkefeltet er riktig; bare id-en er
+  arvet feil. `discmania-talisman`s beskrivelse sier "Discmania Talisman" og
+  siterer S-Line — den må regenereres når id-en rettes.
+- **`discmania-steady`.** Blander tre merker i én oppføring: molden er DGAs,
+  "Steady" er også Clash' plastnavn, og plastlisten forveksler molds med
+  plaster. `dga-steady` finnes nå separat og er riktig.
+- **`latitude-spark`.** Sjekk om Spark er utgått hos Latitude 64 — den fanger
+  DGA-produkter med Spark-plast i matcheren.
+- **`axiom-bokeh-lizotte`.** Id-en har spillernavnet, name-feltet ikke
+  ("Bokeh"). Enten flytt utgaven inn i navnet eller gjør id-en ren.
+- **data/unmatched-products.json.** Gammelt øyeblikksbilde, ikke regenerert
+  siden katalogutvidelsen. Verdiløst som arbeidsliste inntil videre.
+- **Ni foreldreløse i data/disc-images.json** (latitude-essence, -instinct,
+  -method, -origin, -splice, mvp-fireball, -mayhem, -panic, -time-lapse).
+  Eldre enn 2026-09-05-runden. Ingen effekt i drift, bare død vekt.
+
 ## Design System
 - Background: #F5F2EB
 - Primary green: #2D6A4F
