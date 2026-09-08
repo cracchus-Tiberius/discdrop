@@ -176,6 +176,15 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   records fxRate/fxRateSource/fxRateAt into that store's meta, so a Swedish
   price moving 199 -> 205 can be told apart from the krone moving. That is the
   currency-drift question in the /nytt launch checklist below.
+- Discsport's mold-slug list is read with plain fetch, NOT through Playwright,
+  even though the rest of that scraper needs a browser. The slugs sit in inline
+  <script> tags of the server-rendered /discar page, and discsport.se is an
+  Angular app that replaces that markup once it bootstraps — so page.evaluate()
+  only sees them if it wins a race against hydration. A laptop wins it; a
+  GitHub runner loses it, in every retry, which is why retrying never helped.
+  This took the store out on 2026-08-18 and again for three days from
+  2026-09-05 (caught by the staleness check, not by anyone looking). If a
+  scraper's data is in the HTML the server sends, read it from there.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.

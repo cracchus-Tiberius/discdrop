@@ -54,21 +54,50 @@ function isAncestorOfHead(sha) {
   }
 }
 
-let live;
-try {
-  const res = await fetch(`${url}/version.json`, {
-    headers: { 'User-Agent': 'DiscDrop deploy-provenance check' },
-    signal: AbortSignal.timeout(15000),
-  });
-  if (!res.ok) {
-    warn(`${url}/version.json returned HTTP ${res.status}. Nothing to compare against — this is expected on the first deploy after this check landed. Allowing.`);
-    process.exit(0);
+// A 404 and a 403 mean opposite things, and this check used to report both as
+// "expected on the first deploy". On 2026-09-07 the runner got a 403 — the CDN
+// challenging it, while the same URL served 200 from a laptop — and the log
+// said the site had never been deployed. That is a false all-clear on the one
+// signal this check exists to give, so the two cases are now separated and the
+// blocked one says so out loud.
+async function readLiveVersion() {
+  const ATTEMPTS = 3;
+  let lastStatus = null;
+  for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
+    try {
+      const res = await fetch(`${url}/version.json`, {
+        headers: { 'User-Agent': 'DiscDrop deploy-provenance check' },
+        signal: AbortSignal.timeout(15000),
+      });
+      if (res.ok) return { version: await res.json() };
+      lastStatus = `HTTP ${res.status}`;
+      // Nothing there to read: no version.json has ever been published, which
+      // is the genuine first-deploy case.
+      if (res.status === 404) return { firstDeploy: true };
+    } catch (err) {
+      lastStatus = err.message;
+    }
+    if (attempt < ATTEMPTS) await new Promise((r) => setTimeout(r, 3000 * attempt));
   }
-  live = await res.json();
-} catch (err) {
-  warn(`Could not read ${url}/version.json (${err.message}). Allowing rather than blocking the daily deploy on a network hiccup.`);
+  return { unreadable: lastStatus };
+}
+
+const result = await readLiveVersion();
+if (result.firstDeploy) {
+  console.log(`${url}/version.json does not exist yet — nothing has been deployed with a version stamp. Proceeding.`);
   process.exit(0);
 }
+if (result.unreadable) {
+  warn(
+    `Could not read ${url}/version.json after 3 attempts (${result.unreadable}). This is NOT the same as ` +
+    `a first deploy: something is there, we just cannot see it, so this run does not know what is live. ` +
+    `Proceeding anyway rather than blocking the daily deploy on someone else's outage — but if the site ` +
+    `rolls back after this run, this is why, and the fix is to compare against the Cloudflare deployment ` +
+    `API with the token this workflow already has.`
+  );
+  process.exit(0);
+}
+const live = result.version;
 
 const head = execSync('git rev-parse HEAD').toString().trim();
 console.log(`live:  ${live.sha} (${live.builtBy || '?'}${live.dirty ? ', dirty' : ''}, ${live.builtAt || '?'})`);

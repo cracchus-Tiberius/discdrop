@@ -85,57 +85,56 @@ async function scrape() {
     console.log('  Loading disc catalogue page to extract mold slugs...');
 
     // Format: " Destroyer##15##2##discar/mold/destroyer "
+    //
+    // Read from the HTML the server sends, NOT through the browser. The
+    // payload sits in inline <script> tags of the server-rendered page, and
+    // discsport.se is an Angular app: once it bootstraps it replaces that
+    // markup, so page.evaluate() only sees the slugs if it wins a race
+    // against hydration. On a laptop it wins; on a GitHub runner it loses,
+    // every time and in every retry.
+    //
+    // That is the 2026-08-18 incident ("0 slugs on the GA run, 997 live
+    // minutes later, no code or site change"), and it repeated on
+    // 2026-09-07, taking Discsport out for three days until the staleness
+    // check caught it. Retrying never had a chance: all three attempts lose
+    // the same race the same way. Verified 2026-09-08 that a plain fetch
+    // returns all 1014 slugs, with any user agent or none — the browser was
+    // never needed for this step, and skipping it also drops ~16s off the
+    // run.
     async function extractMoldSlugs() {
-      const indexPage = await context.newPage();
-      indexPage.on('dialog', d => d.dismiss().catch(() => {}));
-      try {
-        // Use the Swedish path — /no/ prefix breaks mold page filtering
-        await indexPage.goto(`${STORE.baseUrl}/discar`, { waitUntil: 'domcontentloaded', timeout: 30000 });
-
-        return await indexPage.evaluate(() => {
-          const scripts = Array.from(document.querySelectorAll('script'));
-          const slugs = new Set();
-          for (const script of scripts) {
-            const text = script.textContent || '';
-            const matches = text.matchAll(/"[^"]*##\d+##2##discar\/mold\/([^"\s]+)[^"]*"/g);
-            for (const m of matches) {
-              const moldSlug = m[1];
-              // Discsport's own autocomplete data has entries like "#3",
-              // "#3-flyer", "#1-helix" whose "slug" starts with a hash — these
-              // are NOT per-product mold pages. Verified live: every single
-              // one of them (not just the bare "#3" case) resolves to the
-              // exact same generic listing page (DISCatcher Traveler, a
-              // starter bag, Active Premium Majesty/Magician/...), because "#"
-              // is a URL fragment, not a real path segment their site routes
-              // on when loaded directly. Confirmed in production: 98 price
-              // entries across completely unrelated discs (Zone SS, Aviar,
-              // Berg, Luna, ...) all ended up pointing at discsport.se/discar/
-              // mold/#3, making every price attributed to it unverifiable —
-              // reject the whole "starts with #" family, not just that one.
-              if (moldSlug && moldSlug.length > 1 && !moldSlug.startsWith('#')) {
-                slugs.add(moldSlug);
-              }
-            }
-          }
-          return [...slugs];
-        });
-      } finally {
-        await indexPage.close();
+      const res = await fetch(`${STORE.baseUrl}/discar`, {
+        headers: { 'User-Agent': UA },
+        timeout: 30000,
+        redirect: 'follow', // /discar 301s to /discar/alla
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status} loading the catalogue page`);
+      const html = await res.text();
+      const slugs = new Set();
+      for (const m of html.matchAll(/"[^"]*##\d+##2##discar\/mold\/([^"\s]+)[^"]*"/g)) {
+        const moldSlug = m[1];
+        // Discsport's own autocomplete data has entries like "#3",
+        // "#3-flyer", "#1-helix" whose "slug" starts with a hash — these are
+        // NOT per-product mold pages. Verified live: every one of them
+        // resolves to the same generic listing page, because "#" is a URL
+        // fragment, not a path segment their site routes on. Confirmed in
+        // production: 98 price entries across unrelated discs (Zone SS,
+        // Aviar, Berg, Luna, ...) all pointed at discsport.se/discar/mold/#3.
+        if (moldSlug && moldSlug.length > 1 && !moldSlug.startsWith('#')) slugs.add(moldSlug);
       }
+      return [...slugs];
     }
 
-    // Confirmed in production 2026-08-18: the catalogue page (which now
-    // 301-redirects /discar -> /discar/alla) came back with 0 mold slugs on
-    // the daily GA run despite the page and its data being fine both before
-    // and after (reproduced live minutes after the failure: 997 slugs, no
-    // code or site change needed). A single transient load/redirect hiccup
-    // used to kill the whole store for the day with zero retry — 3 attempts
-    // with a short backoff costs a few seconds on a run that already takes
-    // several minutes, and turns a one-off blip back into a normal day
-    // instead of a full missed scrape.
+    // A network blip should not cost the store its whole day, so keep a short
+    // retry — but this one is now retrying an actual transient, not a race it
+    // cannot win.
     let moldSlugs = [];
     for (let attempt = 1; attempt <= 3; attempt++) {
-      moldSlugs = await extractMoldSlugs();
+      try {
+        moldSlugs = await extractMoldSlugs();
+      } catch (err) {
+        console.warn(`  Attempt ${attempt}/3 failed: ${err.message}`);
+        moldSlugs = [];
+      }
       if (moldSlugs.length > 0) break;
       if (attempt < 3) {
         console.warn(`  Attempt ${attempt}/3 found 0 mold slugs — retrying in 5s...`);
