@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-07T09:52:53.316Z",
+  "generated": "2026-09-08T09:20:53.399Z",
   "summary": {
-    "priceChanges24h": 1,
+    "priceChanges24h": 5,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -21,7 +21,7 @@
         374,
         374,
         374,
-        374,
+        244,
         244,
         244,
         244
@@ -39,13 +39,13 @@
       "bucket": "last-week",
       "url": "https://www.discexpress.se/products/rive-grand-royal-unleash-the-monster-8-limited-edition",
       "history": [
-        283,
         282,
         282,
         277,
         215,
         215,
-        215
+        215,
+        214
       ]
     },
     {
@@ -60,13 +60,13 @@
       "bucket": "last-week",
       "url": "https://discsport.se/discar/mold/jokeri",
       "history": [
-        283,
         282,
         282,
         282,
         224,
         224,
-        224
+        224,
+        223
       ]
     },
     {
@@ -83,11 +83,11 @@
       "history": [
         152,
         152,
-        152,
         127,
         127,
         127,
-        127
+        127,
+        126
       ]
     },
     {
@@ -104,7 +104,7 @@
       "history": [
         304,
         304,
-        304,
+        278,
         278,
         278,
         278,
