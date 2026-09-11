@@ -1,74 +1,10 @@
 {
-  "generated": "2026-09-10T09:22:51.552Z",
+  "generated": "2026-09-11T09:18:46.271Z",
   "summary": {
     "priceChanges24h": 0,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
-  "timeline": [
-    {
-      "discId": "clash-salt",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "Salt",
-      "oldPrice": 374,
-      "newPrice": 244,
-      "pct": -35,
-      "date": "2026-09-05",
-      "bucket": "last-week",
-      "url": "https://wearediscgolf.no/produkt/steady-salt/",
-      "history": [
-        374,
-        244,
-        244,
-        244,
-        244,
-        244,
-        244
-      ]
-    },
-    {
-      "discId": "latitude-rive",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Royal",
-      "oldPrice": 277,
-      "newPrice": 215,
-      "pct": -22,
-      "date": "2026-09-05",
-      "bucket": "last-week",
-      "url": "https://www.discexpress.se/products/rive-grand-royal-unleash-the-monster-8-limited-edition",
-      "history": [
-        277,
-        215,
-        215,
-        215,
-        214,
-        213,
-        213
-      ]
-    },
-    {
-      "discId": "discmania-jokeri",
-      "store": "discsport",
-      "storeName": "Discsport",
-      "plastic": null,
-      "oldPrice": 282,
-      "newPrice": 224,
-      "pct": -21,
-      "date": "2026-09-05",
-      "bucket": "last-week",
-      "url": "https://discsport.se/discar/mold/jokeri",
-      "history": [
-        282,
-        224,
-        224,
-        224,
-        223,
-        223,
-        223
-      ]
-    }
-  ],
-  "totalDrops": 3
+  "timeline": [],
+  "totalDrops": 0
 }
