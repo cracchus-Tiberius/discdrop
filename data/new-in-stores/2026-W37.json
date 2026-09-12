@@ -6,40 +6,21 @@
   "endDate": "2026-09-13",
   "signals": [
     {
-      "discId": "mvp-control",
-      "name": "Control",
-      "brand": "MVP",
+      "discId": "discmania-majesty",
+      "name": "Majesty",
+      "brand": "Discmania",
       "image": "",
       "type": "new-release",
-      "plastic": "Eclipse 2.0",
+      "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789117796754,
-      "price": 367,
+      "firstSeenMs": 1789203153618,
+      "price": 184,
       "stores": [
         {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 367,
-          "url": "https://rocketdiscs.com/mvp-control"
-        }
-      ]
-    },
-    {
-      "discId": "axiom-aspect",
-      "name": "Aspect",
-      "brand": "Axiom",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Eclipse 2.0",
-      "edition": null,
-      "firstSeenMs": 1789117796754,
-      "price": 367,
-      "stores": [
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 367,
-          "url": "https://rocketdiscs.com/axiom-aspect"
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 184,
+          "url": "https://www.discexpress.se/products/majesty-premium-active"
         }
       ]
     },
@@ -51,14 +32,20 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1789117731256,
-      "price": 314,
+      "firstSeenMs": 1789203126024,
+      "price": 280,
       "stores": [
         {
           "store": "nydisk",
           "storeName": "NyDisk",
           "price": 314,
           "url": "https://nydisk.no/products/westside-discs-tournament-x-rill-world-matt-orum-2026"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 280,
+          "url": "https://www.discexpress.se/products/world-tournament-x-rill-matt-orum-team-series"
         }
       ]
     },
@@ -70,7 +57,7 @@
       "type": "new-release",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1789117731256,
+      "firstSeenMs": 1789203126024,
       "price": 224,
       "stores": [
         {
@@ -89,7 +76,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1789117731256,
+      "firstSeenMs": 1789203126024,
       "price": 205,
       "stores": [
         {
@@ -108,7 +95,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1789117731256,
+      "firstSeenMs": 1789203126024,
       "price": 205,
       "stores": [
         {
@@ -116,6 +103,82 @@
           "storeName": "NyDisk",
           "price": 205,
           "url": "https://nydisk.no/products/dynamic-discs-lucid-x-chameleon-raider-ricky-wysocki"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-pa-3",
+      "name": "PA-3",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-release",
+      "plastic": "300 Soft",
+      "edition": null,
+      "firstSeenMs": 1789203043514,
+      "price": 238,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 238,
+          "url": "https://frisbeebutikken.no/products/300-soft-fractal-pa-3"
+        }
+      ]
+    },
+    {
+      "discId": "innova-xero",
+      "name": "Xero",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1789202715824,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-control",
+      "name": "Control",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Eclipse 2.0",
+      "edition": null,
+      "firstSeenMs": 1789117796754,
+      "price": 368,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 368,
+          "url": "https://rocketdiscs.com/mvp-control"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-aspect",
+      "name": "Aspect",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Eclipse 2.0",
+      "edition": null,
+      "firstSeenMs": 1789117796754,
+      "price": 368,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 368,
+          "url": "https://rocketdiscs.com/axiom-aspect"
         }
       ]
     },
@@ -215,25 +278,6 @@
       ]
     },
     {
-      "discId": "innova-xero",
-      "name": "Xero",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-release",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1789117308447,
-      "price": 214,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
-        }
-      ]
-    },
-    {
       "discId": "discmania-dd",
       "name": "DD",
       "brand": "Discmania",
@@ -297,25 +341,6 @@
       ]
     },
     {
-      "discId": "innova-thunderbird",
-      "name": "Thunderbird",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Duo",
-      "edition": "Limited Edition",
-      "firstSeenMs": 1788773722086,
-      "price": 374,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 374,
-          "url": "https://wearediscgolf.no/produkt/duo-thunderbird-limited-edition/"
-        }
-      ]
-    },
-    {
       "discId": "latitude-anchor",
       "name": "Anchor",
       "brand": "Latitude 64",
@@ -323,7 +348,7 @@
       "type": "new-at-store",
       "plastic": "Gold Ice",
       "edition": null,
-      "firstSeenMs": 1789117731256,
+      "firstSeenMs": 1789203126024,
       "price": 294,
       "stores": [
         {
@@ -342,7 +367,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1789117731256,
+      "firstSeenMs": 1789203126024,
       "price": 314,
       "stores": [
         {
@@ -361,7 +386,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1789117721018,
+      "firstSeenMs": 1789203113485,
       "price": 235,
       "stores": [
         {
@@ -380,7 +405,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1789117721018,
+      "firstSeenMs": 1789203113485,
       "price": 339,
       "stores": [
         {
@@ -397,16 +422,41 @@
       "brand": "Innova",
       "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
       "type": "new-at-store",
-      "plastic": "Pro",
+      "plastic": "JK Pro",
       "edition": null,
-      "firstSeenMs": 1789117716467,
-      "price": 228,
+      "firstSeenMs": 1789202715824,
+      "price": 214,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/jk-pro-aviar/"
+        },
         {
           "store": "golfdiscer",
           "storeName": "GolfDiscer",
           "price": 228,
           "url": "https://golfdiscer.no/products/yeti-pro-aviar"
+        }
+      ]
+    },
+    {
+      "discId": "innova-whale",
+      "name": "Whale",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1789202715824,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
         }
       ]
     },
@@ -418,9 +468,15 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789117716467,
-      "price": 228,
+      "firstSeenMs": 1789202715824,
+      "price": 214,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-animal/"
+        },
         {
           "store": "golfdiscer",
           "storeName": "GolfDiscer",
@@ -430,21 +486,179 @@
       ]
     },
     {
-      "discId": "innova-mamba",
-      "name": "Mamba",
+      "discId": "innova-roc",
+      "name": "Roc",
       "brand": "Innova",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Duo",
-      "edition": "Special Edition",
-      "firstSeenMs": 1789031534842,
-      "price": 309,
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1789202715824,
+      "price": 214,
       "stores": [
         {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 309,
-          "url": "https://www.discexpress.se/products/mamba-duo-special-edition"
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-roc/"
+        },
+        {
+          "store": "kvamdgs",
+          "storeName": "Kvam DGS",
+          "price": 248,
+          "url": "https://kvamdgs.no/products/kc-pro-roc"
+        }
+      ]
+    },
+    {
+      "discId": "innova-lion",
+      "name": "Lion",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1789202715824,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-nomad",
+      "name": "Nomad",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Electron",
+      "edition": "James Conrad",
+      "firstSeenMs": 1789117308447,
+      "price": 204,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 204,
+          "url": "https://wearediscgolf.no/produkt/electron-nomad-soft-james-conrad-white-rim/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-birdie",
+      "name": "Birdie",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Pro",
+      "edition": null,
+      "firstSeenMs": 1789117308447,
+      "price": 594,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 594,
+          "url": "https://wearediscgolf.no/produkt/birdie-pro-disc-golf-board-game/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-uplink",
+      "name": "Uplink",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1789117308447,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/neutron-uplink-white-rim/"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-river",
+      "name": "River",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Opto Ice",
+      "edition": null,
+      "firstSeenMs": 1789117308447,
+      "price": 294,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 294,
+          "url": "https://wearediscgolf.no/produkt/opto-ice-moonshine-splash-river-jomezpro/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-inertia",
+      "name": "Inertia",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Eclipse",
+      "edition": null,
+      "firstSeenMs": 1789031060028,
+      "price": 274,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 274,
+          "url": "https://wearediscgolf.no/produkt/eclipse-inertia/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-dimension",
+      "name": "Dimension",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1789031060028,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/neutron-dimension-white-rim/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-fox",
+      "name": "Fox",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Halo Star",
+      "edition": null,
+      "firstSeenMs": 1788773722086,
+      "price": 304,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 304,
+          "url": "https://wearediscgolf.no/produkt/halo-star-fox/"
         }
       ]
     },
@@ -454,11 +668,17 @@
       "brand": "Innova",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Duo",
-      "edition": "Calvin Heimburg",
-      "firstSeenMs": 1789031060028,
-      "price": 438,
+      "plastic": "Halo Star",
+      "edition": "Limited Edition",
+      "firstSeenMs": 1788773722086,
+      "price": 314,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 314,
+          "url": "https://wearediscgolf.no/produkt/halo-star-eagle-l-european-limited-edition/"
+        },
         {
           "store": "arcticdisc",
           "storeName": "Arctic Disc",
@@ -466,8 +686,27 @@
           "url": "https://arcticdisc.no/products/duo-eagle-calvin-heimburg-2027"
         }
       ]
+    },
+    {
+      "discId": "innova-corvette",
+      "name": "Corvette",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Halo Star",
+      "edition": null,
+      "firstSeenMs": 1788773722086,
+      "price": 304,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 304,
+          "url": "https://wearediscgolf.no/produkt/halo-star-corvette/"
+        }
+      ]
     }
   ],
   "frozen": false,
-  "generated": "2026-09-11T09:18:46.729Z"
+  "generated": "2026-09-12T09:02:54.138Z"
 }
