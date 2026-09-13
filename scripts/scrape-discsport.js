@@ -86,21 +86,25 @@ async function scrape() {
 
     // Format: " Destroyer##15##2##discar/mold/destroyer "
     //
-    // Read from the HTML the server sends, NOT through the browser. The
-    // payload sits in inline <script> tags of the server-rendered page, and
-    // discsport.se is an Angular app: once it bootstraps it replaces that
-    // markup, so page.evaluate() only sees the slugs if it wins a race
-    // against hydration. On a laptop it wins; on a GitHub runner it loses,
-    // every time and in every retry.
+    // Why this fails in CI — corrected 2026-09-13. Discsport's LiteSpeed
+    // server answers requests from GitHub's runner IPs with a reCAPTCHA
+    // "Bot Verification" page: HTTP 200, 1705 bytes, for every path and every
+    // user agent. From a residential connection the same URL returns the real
+    // 1.3 MB page. Probed from a runner on 2026-09-13; that is the cause of
+    // the 2026-08-18 outage and of the one that began 2026-09-05.
     //
-    // That is the 2026-08-18 incident ("0 slugs on the GA run, 997 live
-    // minutes later, no code or site change"), and it repeated on
-    // 2026-09-07, taking Discsport out for three days until the staleness
-    // check caught it. Retrying never had a chance: all three attempts lose
-    // the same race the same way. Verified 2026-09-08 that a plain fetch
-    // returns all 1014 slugs, with any user agent or none — the browser was
-    // never needed for this step, and skipping it also drops ~16s off the
-    // run.
+    // An earlier comment here blamed a race against Angular hydration, and
+    // the 2026-09-08 "fix" moved this step from Playwright to plain fetch on
+    // that theory. The theory was wrong — it was checked only from a
+    // workstation, which the block never applies to — and the store stayed
+    // down for five more days. Plain fetch is kept because it is simpler and
+    // faster, not because it helps against the block. It does not.
+    //
+    // The captcha is the store saying it does not want automated traffic from
+    // datacenters. Do not try to get past it; see CLAUDE.md for what to do
+    // instead. What this code does is recognise it, so the log says "blocked"
+    // instead of "site structure may have changed", and stop retrying
+    // something that will not change in five seconds.
     async function extractMoldSlugs() {
       const res = await fetch(`${STORE.baseUrl}/discar`, {
         headers: { 'User-Agent': UA },
@@ -109,6 +113,14 @@ async function scrape() {
       });
       if (!res.ok) throw new Error(`HTTP ${res.status} loading the catalogue page`);
       const html = await res.text();
+      if (/<title>\s*Bot Verification\s*<\/title>/i.test(html)) {
+        const err = new Error(
+          'discsport.se served its reCAPTCHA "Bot Verification" page instead of the catalogue ' +
+          '(this IP is being challenged as a bot — not a site-structure change)'
+        );
+        err.blocked = true;
+        throw err;
+      }
       const slugs = new Set();
       for (const m of html.matchAll(/"[^"]*##\d+##2##discar\/mold\/([^"\s]+)[^"]*"/g)) {
         const moldSlug = m[1];
@@ -125,8 +137,8 @@ async function scrape() {
     }
 
     // A network blip should not cost the store its whole day, so keep a short
-    // retry — but this one is now retrying an actual transient, not a race it
-    // cannot win.
+    // retry — but not against the bot check, which answers the same way every
+    // time from the same IP.
     let moldSlugs = [];
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
@@ -134,6 +146,10 @@ async function scrape() {
       } catch (err) {
         console.warn(`  Attempt ${attempt}/3 failed: ${err.message}`);
         moldSlugs = [];
+        if (err.blocked) {
+          console.error('  BLOCKED: not retrying. See CLAUDE.md (Scraper → Discsport).');
+          return [];
+        }
       }
       if (moldSlugs.length > 0) break;
       if (attempt < 3) {
