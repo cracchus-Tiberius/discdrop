@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-13T09:56:50.529Z",
-  "currentIsoWeek": "2026-W37",
+  "generated": "2026-09-14T10:20:15.400Z",
+  "currentIsoWeek": "2026-W38",
   "summary": {
-    "totalSignals": 142,
+    "totalSignals": 148,
     "newDiscs": 0,
-    "newReleases": 52,
-    "newAtStore": 90,
+    "newReleases": 51,
+    "newAtStore": 97,
     "weeksIncluded": 3,
     "quarantinedStores": [
       "krokhol"
@@ -29,7 +29,7 @@
       {
         "store": "krokhol",
         "date": "2026-09-04",
-        "count": 956
+        "count": 952
       },
       {
         "store": "nydisk",
@@ -133,7 +133,7 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-09-13",
+        "date": "2026-09-14",
         "count": 65
       },
       {
@@ -142,9 +142,9 @@
         "count": 62
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-09-04",
-        "count": 55
+        "store": "nydisk",
+        "date": "2026-09-14",
+        "count": 56
       },
       {
         "store": "discsport",
@@ -157,6 +157,11 @@
         "count": 49
       },
       {
+        "store": "frisbeebutikken",
+        "date": "2026-09-04",
+        "count": 49
+      },
+      {
         "store": "starframe",
         "date": "2026-09-04",
         "count": 41
@@ -164,16 +169,16 @@
       {
         "store": "rocketdiscs",
         "date": "2026-08-21",
-        "count": 34
+        "count": 33
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-09-14",
+        "count": 31
       },
       {
         "store": "frisbeebutikken",
         "date": "2026-08-13",
-        "count": 32
-      },
-      {
-        "store": "rocketdiscs",
-        "date": "2026-07-28",
         "count": 31
       }
     ],
@@ -181,7 +186,7 @@
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W37",
-        "count": 69
+        "count": 63
       },
       {
         "store": "rocketdiscs",
@@ -192,22 +197,25 @@
         "store": "starframe",
         "isoWeek": "2026-W37",
         "count": 27
-      },
-      {
-        "store": "discexpress",
-        "isoWeek": "2026-W37",
-        "count": 22
       }
     ]
   },
   "weeks": [
+    {
+      "isoWeek": "2026-W38",
+      "year": 2026,
+      "weekNumber": 38,
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "frozen": false
+    },
     {
       "isoWeek": "2026-W37",
       "year": 2026,
       "weekNumber": 37,
       "startDate": "2026-09-07",
       "endDate": "2026-09-13",
-      "frozen": false
+      "frozen": true
     },
     {
       "isoWeek": "2026-W36",

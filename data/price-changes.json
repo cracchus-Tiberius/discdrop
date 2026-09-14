@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-13T09:56:50.083Z",
+  "generated": "2026-09-14T10:20:15.003Z",
   "summary": {
-    "priceChanges24h": 4,
+    "priceChanges24h": 0,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -15,15 +15,15 @@
       "newPrice": 239,
       "pct": -24,
       "date": "2026-09-13",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.krokholdgs.no/products/z-line-reaper-classic-reissue",
       "history": [
-        314,
         314,
         313,
         312,
         314,
         314,
+        239,
         239
       ]
     },
@@ -36,14 +36,14 @@
       "newPrice": 230,
       "pct": -25,
       "date": "2026-09-12",
-      "bucket": "yesterday",
+      "bucket": "last-week",
       "url": "https://frisbeebutikken.no/products/ultrium-laseri",
       "history": [
         308,
         308,
         308,
         308,
-        308,
+        230,
         230,
         230
       ]
@@ -57,14 +57,14 @@
       "newPrice": 145,
       "pct": -17,
       "date": "2026-09-12",
-      "bucket": "yesterday",
+      "bucket": "last-week",
       "url": "https://www.discexpress.se/products/river-retro",
       "history": [
         174,
-        174,
         173,
         173,
         174,
+        145,
         145,
         145
       ]
@@ -78,14 +78,14 @@
       "newPrice": 145,
       "pct": -6,
       "date": "2026-09-12",
-      "bucket": "yesterday",
+      "bucket": "last-week",
       "url": "https://www.discexpress.se/products/fuse-retro-1",
       "history": [
         154,
         154,
         154,
         154,
-        154,
+        145,
         145,
         145
       ]
