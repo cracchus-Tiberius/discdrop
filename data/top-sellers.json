@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01",
+  "generated": "2026-09-15",
   "sources": [
     "https://infinitediscs.com/top-selling/discs-last-month"
   ],
@@ -12,70 +12,64 @@
       "note": "Pinned: Scandinavian-market favorite"
     },
     {
-      "name": "Control",
-      "brand": "MVP",
-      "score": 40,
-      "catalogId": "mvp-control"
-    },
-    {
       "name": "Trail",
       "brand": "MVP",
       "score": 39,
       "catalogId": "mvp-trail"
     },
     {
-      "name": "Pure",
-      "brand": "Latitude 64",
-      "score": 33,
-      "catalogId": "latitude-pure"
-    },
-    {
       "name": "Wraith",
       "brand": "Innova",
-      "score": 31,
+      "score": 34,
       "catalogId": "innova-wraith"
     },
     {
-      "name": "DD1",
-      "brand": "Discmania",
-      "score": 29,
-      "catalogId": "discmania-dd1"
+      "name": "Control",
+      "brand": "MVP",
+      "score": 33,
+      "catalogId": "mvp-control"
     },
     {
-      "name": "Destroyer",
-      "brand": "Innova",
-      "score": 28,
-      "catalogId": "innova-destroyer"
+      "name": "Bokeh",
+      "brand": "Axiom",
+      "score": 32,
+      "catalogId": "axiom-bokeh-lizotte"
+    },
+    {
+      "name": "Particle",
+      "brand": "MVP",
+      "score": 31,
+      "catalogId": "mvp-particle"
     },
     {
       "name": "DD3",
       "brand": "Discmania",
-      "score": 25,
+      "score": 28,
       "catalogId": "discmania-dd3"
     },
     {
-      "name": "Core",
-      "brand": "Latitude 64",
-      "score": 24,
-      "catalogId": "latitude-core"
-    },
-    {
-      "name": "Cloudbreaker",
+      "name": "DD1",
       "brand": "Discmania",
-      "score": 20,
-      "catalogId": "discmania-cloudbreaker"
+      "score": 26,
+      "catalogId": "discmania-dd1"
     },
     {
-      "name": "Eagle",
+      "name": "Sync",
       "brand": "Innova",
-      "score": 18,
-      "catalogId": "innova-eagle"
+      "score": 24,
+      "catalogId": "innova-sync"
     },
     {
-      "name": "Pixel",
-      "brand": "Axiom",
-      "score": 17,
-      "catalogId": "mvp-pixel"
+      "name": "Destroyer",
+      "brand": "Innova",
+      "score": 22,
+      "catalogId": "innova-destroyer"
+    },
+    {
+      "name": "Alpaca",
+      "brand": "Infinite Discs",
+      "score": 18,
+      "catalogId": "infinite-alpaca"
     },
     {
       "name": "Hex",
@@ -84,52 +78,58 @@
       "catalogId": "axiom-hex"
     },
     {
-      "name": "Maya",
-      "brand": "Infinite Discs",
+      "name": "P2X",
+      "brand": "Discmania",
       "score": 15,
-      "catalogId": "infinite-maya"
+      "catalogId": "discmania-p2x"
     },
     {
-      "name": "Buzzz",
-      "brand": "Discraft",
-      "score": 14,
-      "catalogId": "discraft-buzzz"
+      "name": "Glitch",
+      "brand": "MVP",
+      "score": 13,
+      "catalogId": "mvp-glitch"
+    },
+    {
+      "name": "Pixel",
+      "brand": "Axiom",
+      "score": 12,
+      "catalogId": "mvp-pixel"
     },
     {
       "name": "Mamba",
       "brand": "Innova",
-      "score": 10,
+      "score": 9,
       "catalogId": "innova-mamba"
     },
     {
-      "name": "PA-3",
-      "brand": "Prodigy",
-      "score": 9,
-      "catalogId": "prodigy-pa-3"
-    },
-    {
-      "name": "Peak",
-      "brand": "Latitude 64",
-      "score": 8,
-      "catalogId": "latitude-peak"
-    },
-    {
-      "name": "Wave",
-      "brand": "MVP",
+      "name": "Maya",
+      "brand": "Infinite Discs",
       "score": 7,
-      "catalogId": "mvp-wave"
+      "catalogId": "infinite-maya"
     },
     {
-      "name": "P2X",
+      "name": "FD",
       "brand": "Discmania",
-      "score": 3,
-      "catalogId": "discmania-p2x"
+      "score": 6,
+      "catalogId": "discmania-fd"
     },
     {
-      "name": "Raptor",
+      "name": "Buzzz",
       "brand": "Discraft",
-      "score": 2,
-      "catalogId": "discraft-raptor"
+      "score": 5,
+      "catalogId": "discraft-buzzz"
+    },
+    {
+      "name": "Eagle",
+      "brand": "Innova",
+      "score": 3,
+      "catalogId": "innova-eagle"
+    },
+    {
+      "name": "Zone",
+      "brand": "Discraft",
+      "score": 1,
+      "catalogId": "discraft-zone"
     }
   ]
 }
