@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-14T10:20:15.003Z",
+  "generated": "2026-09-15T09:54:31.496Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 4,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -15,14 +15,14 @@
       "newPrice": 239,
       "pct": -24,
       "date": "2026-09-13",
-      "bucket": "yesterday",
+      "bucket": "last-week",
       "url": "https://www.krokholdgs.no/products/z-line-reaper-classic-reissue",
       "history": [
-        314,
         313,
         312,
         314,
         314,
+        239,
         239,
         239
       ]
@@ -42,7 +42,7 @@
         308,
         308,
         308,
-        308,
+        230,
         230,
         230,
         230
@@ -60,10 +60,10 @@
       "bucket": "last-week",
       "url": "https://www.discexpress.se/products/river-retro",
       "history": [
-        174,
         173,
         173,
         174,
+        145,
         145,
         145,
         145
@@ -84,7 +84,7 @@
         154,
         154,
         154,
-        154,
+        145,
         145,
         145,
         145
