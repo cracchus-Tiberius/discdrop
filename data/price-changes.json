@@ -1,11 +1,74 @@
 {
-  "generated": "2026-09-15T09:54:31.496Z",
+  "generated": "2026-09-16T09:43:46.671Z",
   "summary": {
     "priceChanges24h": 4,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
   "timeline": [
+    {
+      "discId": "discmania-p3x",
+      "store": "ugglans",
+      "storeName": "Ugglans Discgolf",
+      "plastic": "D-Line",
+      "oldPrice": 250,
+      "newPrice": 178,
+      "pct": -29,
+      "date": "2026-09-16",
+      "bucket": "today",
+      "url": "https://ugglansdiscgolf.se/products/d-line-flex-2-p3x",
+      "history": [
+        197,
+        197,
+        197,
+        251,
+        251,
+        250,
+        178
+      ]
+    },
+    {
+      "discId": "latitude-culverin",
+      "store": "ugglans",
+      "storeName": "Ugglans Discgolf",
+      "plastic": "Opto",
+      "oldPrice": 258,
+      "newPrice": 226,
+      "pct": -12,
+      "date": "2026-09-16",
+      "bucket": "today",
+      "url": "https://ugglansdiscgolf.se/products/opto-culverin-special-edition",
+      "history": [
+        258,
+        258,
+        258,
+        258,
+        258,
+        258,
+        226
+      ]
+    },
+    {
+      "discId": "dynamic-gladiator",
+      "store": "ugglans",
+      "storeName": "Ugglans Discgolf",
+      "plastic": "Opto",
+      "oldPrice": 254,
+      "newPrice": 226,
+      "pct": -11,
+      "date": "2026-09-16",
+      "bucket": "today",
+      "url": "https://ugglansdiscgolf.se/products/opto-gladiator-special-edition",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        254,
+        226
+      ]
+    },
     {
       "discId": "discraft-reaper",
       "store": "krokhol",
@@ -18,10 +81,10 @@
       "bucket": "last-week",
       "url": "https://www.krokholdgs.no/products/z-line-reaper-classic-reissue",
       "history": [
-        313,
         312,
         314,
         314,
+        239,
         239,
         239,
         239
@@ -41,7 +104,7 @@
       "history": [
         308,
         308,
-        308,
+        230,
         230,
         230,
         230,
@@ -61,8 +124,8 @@
       "url": "https://www.discexpress.se/products/river-retro",
       "history": [
         173,
-        173,
         174,
+        145,
         145,
         145,
         145,
@@ -83,7 +146,7 @@
       "history": [
         154,
         154,
-        154,
+        145,
         145,
         145,
         145,
@@ -91,5 +154,5 @@
       ]
     }
   ],
-  "totalDrops": 4
+  "totalDrops": 7
 }
