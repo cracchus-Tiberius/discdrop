@@ -1,11 +1,32 @@
 {
-  "generated": "2026-09-16T09:43:46.671Z",
+  "generated": "2026-09-17T09:53:32.301Z",
   "summary": {
-    "priceChanges24h": 4,
+    "priceChanges24h": 1,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
   "timeline": [
+    {
+      "discId": "latitude-grace",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "Zero",
+      "oldPrice": 193,
+      "newPrice": 164,
+      "pct": -15,
+      "date": "2026-09-17",
+      "bucket": "today",
+      "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/",
+      "history": [
+        193,
+        193,
+        193,
+        193,
+        193,
+        193,
+        164
+      ]
+    },
     {
       "discId": "discmania-p3x",
       "store": "ugglans",
@@ -15,15 +36,15 @@
       "newPrice": 178,
       "pct": -29,
       "date": "2026-09-16",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://ugglansdiscgolf.se/products/d-line-flex-2-p3x",
       "history": [
-        197,
         197,
         197,
         251,
         251,
         250,
+        178,
         178
       ]
     },
@@ -36,7 +57,7 @@
       "newPrice": 226,
       "pct": -12,
       "date": "2026-09-16",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://ugglansdiscgolf.se/products/opto-culverin-special-edition",
       "history": [
         258,
@@ -44,8 +65,8 @@
         258,
         258,
         258,
-        258,
-        226
+        226,
+        222
       ]
     },
     {
@@ -57,7 +78,7 @@
       "newPrice": 226,
       "pct": -11,
       "date": "2026-09-16",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://ugglansdiscgolf.se/products/opto-gladiator-special-edition",
       "history": [
         254,
@@ -65,8 +86,8 @@
         254,
         254,
         254,
-        254,
-        226
+        226,
+        222
       ]
     },
     {
@@ -81,9 +102,9 @@
       "bucket": "last-week",
       "url": "https://www.krokholdgs.no/products/z-line-reaper-classic-reissue",
       "history": [
-        312,
         314,
         314,
+        239,
         239,
         239,
         239,
@@ -103,7 +124,7 @@
       "url": "https://frisbeebutikken.no/products/ultrium-laseri",
       "history": [
         308,
-        308,
+        230,
         230,
         230,
         230,
@@ -123,8 +144,8 @@
       "bucket": "last-week",
       "url": "https://www.discexpress.se/products/river-retro",
       "history": [
-        173,
         174,
+        145,
         145,
         145,
         145,
@@ -145,7 +166,7 @@
       "url": "https://www.discexpress.se/products/fuse-retro-1",
       "history": [
         154,
-        154,
+        145,
         145,
         145,
         145,
@@ -154,5 +175,5 @@
       ]
     }
   ],
-  "totalDrops": 7
+  "totalDrops": 8
 }

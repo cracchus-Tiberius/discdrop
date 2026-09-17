@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-16T09:43:47.082Z",
+  "generated": "2026-09-17T09:53:32.777Z",
   "currentIsoWeek": "2026-W38",
   "summary": {
-    "totalSignals": 136,
+    "totalSignals": 143,
     "newDiscs": 0,
     "newReleases": 48,
-    "newAtStore": 88,
+    "newAtStore": 95,
     "weeksIncluded": 3,
     "quarantinedStores": [
       "krokhol"
@@ -29,7 +29,7 @@
       {
         "store": "krokhol",
         "date": "2026-09-04",
-        "count": 947
+        "count": 945
       },
       {
         "store": "nydisk",
@@ -49,12 +49,12 @@
       {
         "store": "wearediscgolf",
         "date": "2026-08-16",
-        "count": 466
+        "count": 465
       },
       {
         "store": "wearediscgolf",
         "date": "2026-08-11",
-        "count": 435
+        "count": 432
       },
       {
         "store": "hyzershop",
@@ -64,7 +64,7 @@
       {
         "store": "frisbeesor",
         "date": "2026-07-24",
-        "count": 276
+        "count": 275
       },
       {
         "store": "kvamdgs",
@@ -74,7 +74,7 @@
       {
         "store": "discgolfdynasty",
         "date": "2026-08-22",
-        "count": 228
+        "count": 226
       },
       {
         "store": "discsor",
@@ -133,8 +133,13 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-09-16",
+        "date": "2026-09-17",
         "count": 65
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-09-17",
+        "count": 54
       },
       {
         "store": "discsport",
@@ -170,18 +175,13 @@
         "store": "rocketdiscs",
         "date": "2026-08-21",
         "count": 33
-      },
-      {
-        "store": "frisbeebutikken",
-        "date": "2026-09-14",
-        "count": 31
       }
     ],
     "suppressedWeeklyCapEvents": [
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W37",
-        "count": 44
+        "count": 39
       },
       {
         "store": "starframe",
@@ -189,9 +189,9 @@
         "count": 30
       },
       {
-        "store": "rocketdiscs",
-        "isoWeek": "2026-W36",
-        "count": 30
+        "store": "frisbeebutikken",
+        "isoWeek": "2026-W38",
+        "count": 28
       }
     ]
   },

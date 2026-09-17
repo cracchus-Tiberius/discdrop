@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 183,
       "stores": [
         {
@@ -25,6 +25,44 @@
       ]
     },
     {
+      "discId": "discmania-astronaut",
+      "name": "Astronaut",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1789638226942,
+      "price": 183,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 183,
+          "url": "https://www.discexpress.se/products/astronaut-premium-active"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-p1",
+      "name": "P1",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "C-Line",
+      "edition": "2026",
+      "firstSeenMs": 1789638198415,
+      "price": 284,
+      "stores": [
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 284,
+          "url": "https://nydisk.no/products/discmania-c-line-p1-nannestad-open-2026"
+        }
+      ]
+    },
+    {
       "discId": "westside-world",
       "name": "World",
       "brand": "Westside Discs",
@@ -32,7 +70,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1789551223312,
+      "firstSeenMs": 1789638198415,
       "price": 279,
       "stores": [
         {
@@ -57,7 +95,7 @@
       "type": "new-release",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1789551223312,
+      "firstSeenMs": 1789638198415,
       "price": 224,
       "stores": [
         {
@@ -76,7 +114,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1789551223312,
+      "firstSeenMs": 1789638198415,
       "price": 205,
       "stores": [
         {
@@ -95,7 +133,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1789551223312,
+      "firstSeenMs": 1789638198415,
       "price": 205,
       "stores": [
         {
@@ -103,6 +141,63 @@
           "storeName": "NyDisk",
           "price": 205,
           "url": "https://nydisk.no/products/dynamic-discs-lucid-x-chameleon-raider-ricky-wysocki"
+        }
+      ]
+    },
+    {
+      "discId": "innova-xero",
+      "name": "Xero",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1789637729881,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-archive",
+      "name": "Archive",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-release",
+      "plastic": "400",
+      "edition": "Isaac Robinson",
+      "firstSeenMs": 1789637729881,
+      "price": 275,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 275,
+          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
+        }
+      ]
+    },
+    {
+      "discId": "alfa-fjord",
+      "name": "Fjord",
+      "brand": "Alfa",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Chrome",
+      "edition": "Limited Edition",
+      "firstSeenMs": 1789637729881,
+      "price": 294,
+      "stores": [
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 294,
+          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
         }
       ]
     },
@@ -126,63 +221,6 @@
       ]
     },
     {
-      "discId": "innova-xero",
-      "name": "Xero",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-release",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1789550751200,
-      "price": 214,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-archive",
-      "name": "Archive",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-release",
-      "plastic": "400",
-      "edition": "Isaac Robinson",
-      "firstSeenMs": 1789550751200,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
-        }
-      ]
-    },
-    {
-      "discId": "alfa-fjord",
-      "name": "Fjord",
-      "brand": "Alfa",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Chrome",
-      "edition": "Limited Edition",
-      "firstSeenMs": 1789550751200,
-      "price": 294,
-      "stores": [
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 294,
-          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
-        }
-      ]
-    },
-    {
       "discId": "discmania-p3x",
       "name": "P3X",
       "brand": "Discmania",
@@ -193,6 +231,12 @@
       "firstSeenMs": 1789466026571,
       "price": 207,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/p-line-p3x-flex-1/"
+        },
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
@@ -210,8 +254,14 @@
       "plastic": "Opto",
       "edition": "Special Edition",
       "firstSeenMs": 1789466026571,
-      "price": 226,
+      "price": 222,
       "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 222,
+          "url": "https://www.discexpress.se/products/gladiator-opto-special-edition"
+        },
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
@@ -229,13 +279,44 @@
       "plastic": "Opto",
       "edition": "Special Edition",
       "firstSeenMs": 1789381174925,
-      "price": 226,
+      "price": 222,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/opto-culverin-special-edition/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 222,
+          "url": "https://www.discexpress.se/products/culverin-opto-special-edition"
+        },
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
           "price": 226,
           "url": "https://ugglansdiscgolf.se/products/opto-culverin-special-edition"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-md3",
+      "name": "MD3",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Swirly S-Line",
+      "edition": null,
+      "firstSeenMs": 1789380528924,
+      "price": 298,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 298,
+          "url": "https://frisbeebutikken.no/products/swirly-s-line-md3-mariners-tide"
         }
       ]
     },
@@ -247,7 +328,7 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 279,
       "stores": [
         {
@@ -266,7 +347,7 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": "Anthony Barela",
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 241,
       "stores": [
         {
@@ -285,7 +366,7 @@
       "type": "new-at-store",
       "plastic": "Halo Champion Proto Glow",
       "edition": "Tour Series",
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 375,
       "stores": [
         {
@@ -304,7 +385,7 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 308,
       "stores": [
         {
@@ -323,7 +404,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 260,
       "stores": [
         {
@@ -342,7 +423,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 260,
       "stores": [
         {
@@ -361,7 +442,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 260,
       "stores": [
         {
@@ -380,7 +461,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 260,
       "stores": [
         {
@@ -399,7 +480,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 260,
       "stores": [
         {
@@ -411,6 +492,63 @@
       ]
     },
     {
+      "discId": "discmania-maestro",
+      "name": "Maestro",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1789638226942,
+      "price": 126,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 126,
+          "url": "https://www.discexpress.se/products/spring-ox-active"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-magician",
+      "name": "Magician",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1789638226942,
+      "price": 126,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 126,
+          "url": "https://www.discexpress.se/products/fox-spirit-active"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-mentor",
+      "name": "Mentor",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1789638226942,
+      "price": 126,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 126,
+          "url": "https://www.discexpress.se/products/sea-serpent-active"
+        }
+      ]
+    },
+    {
       "discId": "discmania-genius",
       "name": "Genius",
       "brand": "Discmania",
@@ -418,7 +556,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 126,
       "stores": [
         {
@@ -430,6 +568,25 @@
       ]
     },
     {
+      "discId": "discmania-sensei",
+      "name": "Sensei",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1789638226942,
+      "price": 126,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 126,
+          "url": "https://www.discexpress.se/products/guardian-lion-active"
+        }
+      ]
+    },
+    {
       "discId": "discmania-mermaid",
       "name": "Mermaid",
       "brand": "Discmania",
@@ -437,7 +594,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 126,
       "stores": [
         {
@@ -456,7 +613,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1789551248638,
+      "firstSeenMs": 1789638226942,
       "price": 222,
       "stores": [
         {
@@ -475,7 +632,7 @@
       "type": "new-at-store",
       "plastic": "Gold Ice",
       "edition": null,
-      "firstSeenMs": 1789551223312,
+      "firstSeenMs": 1789638198415,
       "price": 294,
       "stores": [
         {
@@ -494,7 +651,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1789551223312,
+      "firstSeenMs": 1789638198415,
       "price": 314,
       "stores": [
         {
@@ -513,7 +670,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1789551212078,
+      "firstSeenMs": 1789638187155,
       "price": 229,
       "stores": [
         {
@@ -532,7 +689,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1789551212078,
+      "firstSeenMs": 1789638187155,
       "price": 235,
       "stores": [
         {
@@ -551,7 +708,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1789551212078,
+      "firstSeenMs": 1789638187155,
       "price": 339,
       "stores": [
         {
@@ -563,25 +720,6 @@
       ]
     },
     {
-      "discId": "kastaplast-gadd",
-      "name": "Gadd",
-      "brand": "Kastaplast",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "K1",
-      "edition": null,
-      "firstSeenMs": 1789551155741,
-      "price": 279,
-      "stores": [
-        {
-          "store": "starframe",
-          "storeName": "Starframe",
-          "price": 279,
-          "url": "https://www.starframe.no/products/k1-gadd-first-run"
-        }
-      ]
-    },
-    {
       "discId": "innova-aviar",
       "name": "Aviar",
       "brand": "Innova",
@@ -589,7 +727,7 @@
       "type": "new-at-store",
       "plastic": "JK Pro",
       "edition": "Calvin Heimburg",
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 214,
       "stores": [
         {
@@ -613,6 +751,25 @@
       ]
     },
     {
+      "discId": "discmania-p3x",
+      "name": "P3X",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "D-Line",
+      "edition": null,
+      "firstSeenMs": 1789637729881,
+      "price": 184,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 184,
+          "url": "https://wearediscgolf.no/produkt/d-line-p3x-flex-2/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-distortion",
       "name": "Distortion",
       "brand": "Prodigy",
@@ -620,7 +777,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 275,
       "stores": [
         {
@@ -639,7 +796,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 214,
       "stores": [
         {
@@ -670,7 +827,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 214,
       "stores": [
         {
@@ -701,7 +858,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 214,
       "stores": [
         {
@@ -713,6 +870,25 @@
       ]
     },
     {
+      "discId": "latitude-pearl",
+      "name": "Pearl",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Opto",
+      "edition": null,
+      "firstSeenMs": 1789637729881,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/opto-pearl/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-fx-2",
       "name": "FX-2",
       "brand": "Prodigy",
@@ -720,7 +896,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 315,
       "stores": [
         {
@@ -732,6 +908,44 @@
       ]
     },
     {
+      "discId": "latitude-grace",
+      "name": "Grace",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Zero",
+      "edition": null,
+      "firstSeenMs": 1789637729881,
+      "price": 164,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 164,
+          "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-jade",
+      "name": "Jade",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Gold",
+      "edition": null,
+      "firstSeenMs": 1789637729881,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/gold-jade/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-shadowfax",
       "name": "Shadowfax",
       "brand": "Prodigy",
@@ -739,7 +953,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 255,
       "stores": [
         {
@@ -758,7 +972,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 275,
       "stores": [
         {
@@ -777,7 +991,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1789550751200,
+      "firstSeenMs": 1789637729881,
       "price": 275,
       "stores": [
         {
@@ -789,21 +1003,21 @@
       ]
     },
     {
-      "discId": "discraft-zone-ss",
-      "name": "Zone SS",
-      "brand": "Discraft",
+      "discId": "kastaplast-gadd",
+      "name": "Gadd",
+      "brand": "Kastaplast",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Titanium",
+      "plastic": "K1",
       "edition": null,
-      "firstSeenMs": 1789465518094,
-      "price": 346,
+      "firstSeenMs": 1789551155741,
+      "price": 279,
       "stores": [
         {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 346,
-          "url": "https://rocketdiscs.com/discraft-zone-ss"
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 279,
+          "url": "https://www.starframe.no/products/k1-gadd-first-run"
         }
       ]
     },
@@ -815,7 +1029,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789464749144,
+      "firstSeenMs": 1789550751200,
       "price": 180,
       "stores": [
         {
@@ -829,6 +1043,25 @@
           "storeName": "Disc Golf Dynasty",
           "price": 180,
           "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-zone-ss",
+      "name": "Zone SS",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Titanium",
+      "edition": null,
+      "firstSeenMs": 1789465518094,
+      "price": 347,
+      "stores": [
+        {
+          "store": "rocketdiscs",
+          "storeName": "Rocketdiscs",
+          "price": 347,
+          "url": "https://rocketdiscs.com/discraft-zone-ss"
         }
       ]
     },
@@ -859,5 +1092,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-09-16T09:43:47.082Z"
+  "generated": "2026-09-17T09:53:32.777Z"
 }
