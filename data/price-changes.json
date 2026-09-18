@@ -1,11 +1,53 @@
 {
-  "generated": "2026-09-17T09:53:32.301Z",
+  "generated": "2026-09-18T09:24:10.085Z",
   "summary": {
-    "priceChanges24h": 1,
+    "priceChanges24h": 6,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
   "timeline": [
+    {
+      "discId": "prodigy-f9",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "500",
+      "oldPrice": 259,
+      "newPrice": 240,
+      "pct": -7,
+      "date": "2026-09-18",
+      "bucket": "today",
+      "url": "https://wearediscgolf.no/produkt/500-f9/",
+      "history": [
+        259,
+        259,
+        259,
+        259,
+        259,
+        259,
+        240
+      ]
+    },
+    {
+      "discId": "prodigy-mx-1",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": "400",
+      "oldPrice": 255,
+      "newPrice": 240,
+      "pct": -6,
+      "date": "2026-09-18",
+      "bucket": "today",
+      "url": "https://wearediscgolf.no/produkt/400-mx-1/",
+      "history": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        240
+      ]
+    },
     {
       "discId": "latitude-grace",
       "store": "wearediscgolf",
@@ -15,7 +57,7 @@
       "newPrice": 164,
       "pct": -15,
       "date": "2026-09-17",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/",
       "history": [
         193,
@@ -23,7 +65,7 @@
         193,
         193,
         193,
-        193,
+        164,
         164
       ]
     },
@@ -36,16 +78,16 @@
       "newPrice": 178,
       "pct": -29,
       "date": "2026-09-16",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://ugglansdiscgolf.se/products/d-line-flex-2-p3x",
       "history": [
-        197,
         197,
         251,
         251,
         250,
         178,
-        178
+        178,
+        174
       ]
     },
     {
@@ -57,15 +99,15 @@
       "newPrice": 226,
       "pct": -12,
       "date": "2026-09-16",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://ugglansdiscgolf.se/products/opto-culverin-special-edition",
       "history": [
         258,
         258,
         258,
         258,
-        258,
         226,
+        222,
         222
       ]
     },
@@ -78,15 +120,15 @@
       "newPrice": 226,
       "pct": -11,
       "date": "2026-09-16",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://ugglansdiscgolf.se/products/opto-gladiator-special-edition",
       "history": [
         254,
         254,
         254,
         254,
-        254,
         226,
+        222,
         222
       ]
     },
@@ -103,77 +145,14 @@
       "url": "https://www.krokholdgs.no/products/z-line-reaper-classic-reissue",
       "history": [
         314,
-        314,
+        239,
         239,
         239,
         239,
         239,
         239
       ]
-    },
-    {
-      "discId": "discmania-laseri",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 308,
-      "newPrice": 230,
-      "pct": -25,
-      "date": "2026-09-12",
-      "bucket": "last-week",
-      "url": "https://frisbeebutikken.no/products/ultrium-laseri",
-      "history": [
-        308,
-        230,
-        230,
-        230,
-        230,
-        230,
-        230
-      ]
-    },
-    {
-      "discId": "latitude-river",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Retro",
-      "oldPrice": 174,
-      "newPrice": 145,
-      "pct": -17,
-      "date": "2026-09-12",
-      "bucket": "last-week",
-      "url": "https://www.discexpress.se/products/river-retro",
-      "history": [
-        174,
-        145,
-        145,
-        145,
-        145,
-        145,
-        145
-      ]
-    },
-    {
-      "discId": "latitude-fuse",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Retro",
-      "oldPrice": 154,
-      "newPrice": 145,
-      "pct": -6,
-      "date": "2026-09-12",
-      "bucket": "last-week",
-      "url": "https://www.discexpress.se/products/fuse-retro-1",
-      "history": [
-        154,
-        145,
-        145,
-        145,
-        145,
-        145,
-        145
-      ]
     }
   ],
-  "totalDrops": 8
+  "totalDrops": 7
 }
