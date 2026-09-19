@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-18T09:24:10.085Z",
+  "generated": "2026-09-19T09:15:17.916Z",
   "summary": {
-    "priceChanges24h": 6,
+    "priceChanges24h": 1,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -15,7 +15,7 @@
       "newPrice": 240,
       "pct": -7,
       "date": "2026-09-18",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://wearediscgolf.no/produkt/500-f9/",
       "history": [
         259,
@@ -23,7 +23,7 @@
         259,
         259,
         259,
-        259,
+        240,
         240
       ]
     },
@@ -36,7 +36,7 @@
       "newPrice": 240,
       "pct": -6,
       "date": "2026-09-18",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://wearediscgolf.no/produkt/400-mx-1/",
       "history": [
         255,
@@ -44,7 +44,7 @@
         255,
         255,
         255,
-        255,
+        240,
         240
       ]
     },
@@ -57,14 +57,14 @@
       "newPrice": 164,
       "pct": -15,
       "date": "2026-09-17",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/",
       "history": [
         193,
         193,
         193,
         193,
-        193,
+        164,
         164,
         164
       ]
@@ -81,12 +81,12 @@
       "bucket": "earlier-this-week",
       "url": "https://ugglansdiscgolf.se/products/d-line-flex-2-p3x",
       "history": [
-        197,
         251,
         251,
         250,
         178,
         178,
+        174,
         174
       ]
     },
@@ -105,8 +105,8 @@
         258,
         258,
         258,
-        258,
         226,
+        222,
         222,
         222
       ]
@@ -126,31 +126,31 @@
         254,
         254,
         254,
-        254,
         226,
+        222,
         222,
         222
       ]
     },
     {
-      "discId": "discraft-reaper",
-      "store": "krokhol",
-      "storeName": "Krokhol Disc Golf Shop",
-      "plastic": "Z",
-      "oldPrice": 314,
-      "newPrice": 239,
-      "pct": -24,
-      "date": "2026-09-13",
-      "bucket": "last-week",
-      "url": "https://www.krokholdgs.no/products/z-line-reaper-classic-reissue",
+      "discId": "mvp-particle",
+      "store": "frisbeebutikken",
+      "storeName": "Frisbeebutikken",
+      "plastic": "Particle Proton",
+      "oldPrice": 303,
+      "newPrice": 278,
+      "pct": -8,
+      "date": "2026-09-16",
+      "bucket": "earlier-this-week",
+      "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
       "history": [
-        314,
-        239,
-        239,
-        239,
-        239,
-        239,
-        239
+        303,
+        303,
+        303,
+        278,
+        278,
+        278,
+        278
       ]
     }
   ],

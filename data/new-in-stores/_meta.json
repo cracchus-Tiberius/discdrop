@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-18T09:24:10.546Z",
+  "generated": "2026-09-19T09:15:18.225Z",
   "currentIsoWeek": "2026-W38",
   "summary": {
-    "totalSignals": 121,
+    "totalSignals": 112,
     "newDiscs": 0,
-    "newReleases": 36,
-    "newAtStore": 85,
+    "newReleases": 32,
+    "newAtStore": 80,
     "weeksIncluded": 3,
     "quarantinedStores": [
       "krokhol"
@@ -49,12 +49,12 @@
       {
         "store": "wearediscgolf",
         "date": "2026-08-16",
-        "count": 464
+        "count": 463
       },
       {
         "store": "wearediscgolf",
         "date": "2026-08-11",
-        "count": 431
+        "count": 430
       },
       {
         "store": "hyzershop",
@@ -74,7 +74,7 @@
       {
         "store": "discgolfdynasty",
         "date": "2026-08-22",
-        "count": 224
+        "count": 222
       },
       {
         "store": "discsor",
@@ -133,13 +133,8 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-09-18",
-        "count": 65
-      },
-      {
-        "store": "nydisk",
-        "date": "2026-09-18",
-        "count": 55
+        "date": "2026-09-19",
+        "count": 64
       },
       {
         "store": "frisbeebutikken",
@@ -160,6 +155,11 @@
         "store": "frisbeebutikken",
         "date": "2026-09-01",
         "count": 46
+      },
+      {
+        "store": "nydisk",
+        "date": "2026-09-18",
+        "count": 45
       },
       {
         "store": "starframe",
