@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 184,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 184,
       "stores": [
         {
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1789808754222,
+      "firstSeenMs": 1789896685743,
       "price": 279,
       "stores": [
         {
@@ -76,7 +76,7 @@
       "type": "new-release",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1789808754222,
+      "firstSeenMs": 1789896685743,
       "price": 224,
       "stores": [
         {
@@ -95,7 +95,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1789808754222,
+      "firstSeenMs": 1789896685743,
       "price": 205,
       "stores": [
         {
@@ -114,7 +114,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1789808754222,
+      "firstSeenMs": 1789896685743,
       "price": 205,
       "stores": [
         {
@@ -126,6 +126,25 @@
       ]
     },
     {
+      "discId": "mvp-detour",
+      "name": "Detour",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Neutron",
+      "edition": "Project Lab Coat",
+      "firstSeenMs": 1789896601689,
+      "price": 288,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 288,
+          "url": "https://frisbeebutikken.no/products/neutron-detour-project-lab-coat"
+        }
+      ]
+    },
+    {
       "discId": "innova-xero",
       "name": "Xero",
       "brand": "Innova",
@@ -133,7 +152,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 214,
       "stores": [
         {
@@ -152,7 +171,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 275,
       "stores": [
         {
@@ -171,7 +190,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 294,
       "stores": [
         {
@@ -274,6 +293,25 @@
           "storeName": "Starframe",
           "price": 375,
           "url": "https://www.starframe.no/products/color-glow-d-line-flex-3-rainmaker-eagle-2023-putting-wc"
+        }
+      ]
+    },
+    {
+      "discId": "innova-firefly",
+      "name": "Firefly",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "R-Pro",
+      "edition": "2025",
+      "firstSeenMs": 1789551139032,
+      "price": 248,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 248,
+          "url": "https://frisbeebutikken.no/products/r-pro-proto-glow-firefly-edgc-2025"
         }
       ]
     },
@@ -391,7 +429,7 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 279,
       "stores": [
         {
@@ -410,7 +448,7 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": "Anthony Barela",
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 241,
       "stores": [
         {
@@ -429,7 +467,7 @@
       "type": "new-at-store",
       "plastic": "Halo Champion Proto Glow",
       "edition": "Tour Series",
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 375,
       "stores": [
         {
@@ -448,7 +486,7 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 308,
       "stores": [
         {
@@ -467,7 +505,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 260,
       "stores": [
         {
@@ -486,7 +524,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 260,
       "stores": [
         {
@@ -505,7 +543,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 260,
       "stores": [
         {
@@ -524,7 +562,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 260,
       "stores": [
         {
@@ -543,7 +581,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 260,
       "stores": [
         {
@@ -562,7 +600,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 126,
       "stores": [
         {
@@ -581,7 +619,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 126,
       "stores": [
         {
@@ -600,7 +638,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 126,
       "stores": [
         {
@@ -619,7 +657,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 126,
       "stores": [
         {
@@ -638,7 +676,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 126,
       "stores": [
         {
@@ -657,7 +695,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 126,
       "stores": [
         {
@@ -676,7 +714,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1789808802262,
+      "firstSeenMs": 1789896712906,
       "price": 222,
       "stores": [
         {
@@ -695,7 +733,7 @@
       "type": "new-at-store",
       "plastic": "Gold Ice",
       "edition": null,
-      "firstSeenMs": 1789808754222,
+      "firstSeenMs": 1789896685743,
       "price": 294,
       "stores": [
         {
@@ -714,7 +752,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1789808754222,
+      "firstSeenMs": 1789896685743,
       "price": 314,
       "stores": [
         {
@@ -733,7 +771,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1789808742591,
+      "firstSeenMs": 1789896674799,
       "price": 229,
       "stores": [
         {
@@ -752,7 +790,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1789808742591,
+      "firstSeenMs": 1789896674799,
       "price": 235,
       "stores": [
         {
@@ -771,7 +809,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1789808742591,
+      "firstSeenMs": 1789896674799,
       "price": 339,
       "stores": [
         {
@@ -783,6 +821,44 @@
       ]
     },
     {
+      "discId": "discraft-buzzz",
+      "name": "Buzzz",
+      "brand": "Discraft",
+      "image": "https://cdn.shopify.com/s/files/1/0658/0224/0252/products/logostampedbuzzz_0000_McBethMiniStampEspBuzzz-9.jpg?v=1669241633",
+      "type": "new-at-store",
+      "plastic": "Jawbreaker",
+      "edition": null,
+      "firstSeenMs": 1789896619086,
+      "price": 249,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 249,
+          "url": "https://www.starframe.no/products/jawbreaker-buzzz"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-drone",
+      "name": "Drone",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "ESP FLX",
+      "edition": null,
+      "firstSeenMs": 1789896619086,
+      "price": 269,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 269,
+          "url": "https://www.starframe.no/products/esp-flx-drone-classic-reissue"
+        }
+      ]
+    },
+    {
       "discId": "innova-aviar",
       "name": "Aviar",
       "brand": "Innova",
@@ -790,7 +866,7 @@
       "type": "new-at-store",
       "plastic": "JK Pro",
       "edition": "Calvin Heimburg",
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 214,
       "stores": [
         {
@@ -821,7 +897,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 275,
       "stores": [
         {
@@ -840,7 +916,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 214,
       "stores": [
         {
@@ -871,7 +947,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 214,
       "stores": [
         {
@@ -902,7 +978,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 214,
       "stores": [
         {
@@ -921,7 +997,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 315,
       "stores": [
         {
@@ -940,7 +1016,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 255,
       "stores": [
         {
@@ -959,7 +1035,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1789808085089,
+      "firstSeenMs": 1789896279880,
       "price": 275,
       "stores": [
         {
@@ -978,7 +1054,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1789722442148,
+      "firstSeenMs": 1789808085089,
       "price": 180,
       "stores": [
         {
@@ -1319,5 +1395,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-09-19T09:15:18.225Z"
+  "generated": "2026-09-20T09:41:14.685Z"
 }
