@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T09:40:47.364Z",
+  "lastUpdated": "2026-09-21T10:24:33.126Z",
   "products": [
     {
       "store": "discsport",
@@ -4791,8 +4791,8 @@
     },
     {
       "store": "hyzershop",
-      "rawName": "Expanse - Lykke Lorentzen Signature Series",
-      "price": 295,
+      "rawName": "Expanse - Lykke Lorentzen Signature Series 2025",
+      "price": 279,
       "url": "https://hyzershop.no/products/expanse-lykke-lorentzen-signature-series",
       "inStock": true
     },
@@ -6618,20 +6618,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "MVP Lunar Module - Kurvlys",
       "price": 179,
       "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
@@ -6639,51 +6625,72 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Cicada - Missy Gannon V2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
+      "rawName": "Premium JOKERi - Roland Kõur Signature Series",
+      "price": 174,
+      "url": "https://frisbeebutikken.no/products/premium-jokeri-roland-kur-signature-series",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "rawName": "Premium LASERi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-laseri",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+      "rawName": "Premium MIDARi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-midari",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Sled - Worlds Edition",
-      "price": 289,
-      "url": "https://frisbeebutikken.no/products/special-blend-sled-worlds-edition",
+      "rawName": "Premium Talisman",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-talisman",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
+      "rawName": "Premium Titan",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
-      "price": 289,
-      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "rawName": "NERF Soft Flight Driver",
+      "price": 199,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-driver",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NERF Soft Flight Midrange",
+      "price": 199,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-midrange",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NERF Soft Flight Putter",
+      "price": 199,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-putter",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NERF Soft Flight Starter Kit",
+      "price": 549,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-starter-kit",
       "inStock": true
     },
     {
@@ -6730,6 +6737,41 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Sled - Worlds Edition",
+      "price": 289,
+      "url": "https://frisbeebutikken.no/products/special-blend-sled-worlds-edition",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
+      "price": 289,
+      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Z Terminator - First Run",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
@@ -6737,16 +6779,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "NERF Soft Flight Driver",
-      "price": 199,
-      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-driver",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "NERF Soft Flight Midrange",
-      "price": 199,
-      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-midrange",
+      "rawName": "Special Blend Cicada - Missy Gannon V2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
       "inStock": true
     },
     {
@@ -7248,6 +7283,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Special Blend Raptor (Daniel Davidsson 2026)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/special-blend-raptor-daniel-davidsson-2026",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "K1 Glow Älva 2024",
       "price": 229,
       "url": "https://www.starframe.no/products/k1-glow-alva-2024",
@@ -7356,13 +7398,6 @@
       "rawName": "Radiant Interval (Drew Gibson Tour Series)",
       "price": 289,
       "url": "https://www.starframe.no/products/radiant-interval-drew-gibson-tour-series",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Radiant Era",
-      "price": 259,
-      "url": "https://www.starframe.no/products/radant-era",
       "inStock": true
     },
     {
@@ -10448,7 +10483,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4401,
+      "price": 4400,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
@@ -11337,126 +11372,126 @@
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
@@ -11834,112 +11869,112 @@
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
@@ -12282,21 +12317,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "Lucid Cavalry",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/dynamic-discs-cavalry",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Lucid Cavalry",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/dynamic-discs-cavalry",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Lucid Cavalry",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/dynamic-discs-cavalry",
       "inStock": true
     },
@@ -15523,28 +15558,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 248,
+      "price": 247,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
@@ -15824,7 +15859,7 @@
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Fasti",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-fasti",
       "inStock": true
     },
@@ -15838,14 +15873,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
@@ -15880,42 +15915,42 @@
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Ultrium Razeri",
-      "price": 194,
+      "price": 193,
       "url": "https://rocketdiscs.com/prodiscus-razeri",
       "inStock": true
     },
@@ -16398,7 +16433,7 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2296,
+      "price": 2295,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": false
     },
@@ -16510,7 +16545,7 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Apex XL",
-      "price": 2383,
+      "price": 2382,
       "url": "https://ugglansdiscgolf.se/products/prodigy-apex-xl",
       "inStock": true
     },
