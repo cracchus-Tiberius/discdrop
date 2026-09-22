@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T10:24:51.657Z",
+  "generated": "2026-09-22T09:42:02.033Z",
   "summary": {
     "priceChanges24h": 0,
     "newDiscs24h": 0,
@@ -15,14 +15,14 @@
       "newPrice": 269,
       "pct": -7,
       "date": "2026-09-20",
-      "bucket": "yesterday",
+      "bucket": "last-week",
       "url": "https://www.starframe.no/products/esp-flx-drone-classic-reissue",
       "history": [
         288,
         288,
         288,
         288,
-        288,
+        269,
         269,
         269
       ]
@@ -41,7 +41,7 @@
       "history": [
         259,
         259,
-        259,
+        240,
         240,
         240,
         240,
@@ -62,7 +62,7 @@
       "history": [
         255,
         255,
-        255,
+        240,
         240,
         240,
         240,
@@ -82,98 +82,14 @@
       "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/",
       "history": [
         193,
-        193,
+        164,
         164,
         164,
         164,
         164,
         164
       ]
-    },
-    {
-      "discId": "discmania-p3x",
-      "store": "ugglans",
-      "storeName": "Ugglans Discgolf",
-      "plastic": "D-Line",
-      "oldPrice": 250,
-      "newPrice": 178,
-      "pct": -29,
-      "date": "2026-09-16",
-      "bucket": "last-week",
-      "url": "https://ugglansdiscgolf.se/products/d-line-flex-2-p3x",
-      "history": [
-        250,
-        178,
-        178,
-        174,
-        174,
-        174,
-        174
-      ]
-    },
-    {
-      "discId": "latitude-culverin",
-      "store": "ugglans",
-      "storeName": "Ugglans Discgolf",
-      "plastic": "Opto",
-      "oldPrice": 258,
-      "newPrice": 226,
-      "pct": -12,
-      "date": "2026-09-16",
-      "bucket": "last-week",
-      "url": "https://ugglansdiscgolf.se/products/opto-culverin-special-edition",
-      "history": [
-        258,
-        226,
-        222,
-        222,
-        222,
-        222,
-        222
-      ]
-    },
-    {
-      "discId": "dynamic-gladiator",
-      "store": "ugglans",
-      "storeName": "Ugglans Discgolf",
-      "plastic": "Opto",
-      "oldPrice": 254,
-      "newPrice": 226,
-      "pct": -11,
-      "date": "2026-09-16",
-      "bucket": "last-week",
-      "url": "https://ugglansdiscgolf.se/products/opto-gladiator-special-edition",
-      "history": [
-        254,
-        226,
-        222,
-        222,
-        222,
-        222,
-        222
-      ]
-    },
-    {
-      "discId": "mvp-particle",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Particle Proton",
-      "oldPrice": 303,
-      "newPrice": 278,
-      "pct": -8,
-      "date": "2026-09-16",
-      "bucket": "last-week",
-      "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
-      "history": [
-        303,
-        278,
-        278,
-        278,
-        278,
-        278,
-        278
-      ]
     }
   ],
-  "totalDrops": 8
+  "totalDrops": 4
 }
