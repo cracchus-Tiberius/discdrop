@@ -1,11 +1,32 @@
 {
-  "generated": "2026-09-22T09:42:02.033Z",
+  "generated": "2026-09-23T09:42:42.555Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 2,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
   "timeline": [
+    {
+      "discId": "discmania-rainmaker",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "P-Line",
+      "oldPrice": 274,
+      "newPrice": 203,
+      "pct": -26,
+      "date": "2026-09-23",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/rainmaker-p-line-flex-2",
+      "history": [
+        274,
+        274,
+        274,
+        274,
+        274,
+        274,
+        203
+      ]
+    },
     {
       "discId": "discraft-drone",
       "store": "starframe",
@@ -21,7 +42,7 @@
         288,
         288,
         288,
-        288,
+        269,
         269,
         269,
         269
@@ -40,7 +61,7 @@
       "url": "https://wearediscgolf.no/produkt/500-f9/",
       "history": [
         259,
-        259,
+        240,
         240,
         240,
         240,
@@ -61,33 +82,12 @@
       "url": "https://wearediscgolf.no/produkt/400-mx-1/",
       "history": [
         255,
-        255,
+        240,
         240,
         240,
         240,
         240,
         240
-      ]
-    },
-    {
-      "discId": "latitude-grace",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "Zero",
-      "oldPrice": 193,
-      "newPrice": 164,
-      "pct": -15,
-      "date": "2026-09-17",
-      "bucket": "last-week",
-      "url": "https://wearediscgolf.no/produkt/zero-gravity-grace/",
-      "history": [
-        193,
-        164,
-        164,
-        164,
-        164,
-        164,
-        164
       ]
     }
   ],
