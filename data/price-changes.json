@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-23T09:42:42.555Z",
+  "generated": "2026-09-24T09:44:22.093Z",
   "summary": {
-    "priceChanges24h": 2,
+    "priceChanges24h": 3,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -15,7 +15,7 @@
       "newPrice": 203,
       "pct": -26,
       "date": "2026-09-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/rainmaker-p-line-flex-2",
       "history": [
         274,
@@ -23,7 +23,7 @@
         274,
         274,
         274,
-        274,
+        203,
         203
       ]
     },
@@ -41,55 +41,13 @@
       "history": [
         288,
         288,
-        288,
+        269,
         269,
         269,
         269,
         269
       ]
-    },
-    {
-      "discId": "prodigy-f9",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "500",
-      "oldPrice": 259,
-      "newPrice": 240,
-      "pct": -7,
-      "date": "2026-09-18",
-      "bucket": "last-week",
-      "url": "https://wearediscgolf.no/produkt/500-f9/",
-      "history": [
-        259,
-        240,
-        240,
-        240,
-        240,
-        240,
-        240
-      ]
-    },
-    {
-      "discId": "prodigy-mx-1",
-      "store": "wearediscgolf",
-      "storeName": "We Are Disc Golf",
-      "plastic": "400",
-      "oldPrice": 255,
-      "newPrice": 240,
-      "pct": -6,
-      "date": "2026-09-18",
-      "bucket": "last-week",
-      "url": "https://wearediscgolf.no/produkt/400-mx-1/",
-      "history": [
-        255,
-        240,
-        240,
-        240,
-        240,
-        240,
-        240
-      ]
     }
   ],
-  "totalDrops": 4
+  "totalDrops": 2
 }
