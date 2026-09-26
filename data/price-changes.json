@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-25T10:02:55.198Z",
+  "generated": "2026-09-26T09:45:19.581Z",
   "summary": {
-    "priceChanges24h": 1,
+    "priceChanges24h": 0,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -21,33 +21,12 @@
         274,
         274,
         274,
-        274,
+        203,
         203,
         203,
         203
       ]
-    },
-    {
-      "discId": "discraft-drone",
-      "store": "starframe",
-      "storeName": "Starframe",
-      "plastic": "ESP FLX",
-      "oldPrice": 288,
-      "newPrice": 269,
-      "pct": -7,
-      "date": "2026-09-20",
-      "bucket": "last-week",
-      "url": "https://www.starframe.no/products/esp-flx-drone-classic-reissue",
-      "history": [
-        288,
-        269,
-        269,
-        269,
-        269,
-        269,
-        269
-      ]
     }
   ],
-  "totalDrops": 2
+  "totalDrops": 1
 }
