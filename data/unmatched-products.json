@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T09:45:01.257Z",
+  "lastUpdated": "2026-09-27T10:25:36.233Z",
   "products": [
     {
       "store": "discsport",
@@ -482,6 +482,643 @@
       "rawName": "NEW Lucid Cavalry - First Run",
       "price": 183,
       "url": "https://discsport.se/discar/mold/cavalry",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "PM CAPS (Paul McBeth)",
+      "price": 299,
+      "url": "https://aceshop.no/product/pm-caps-paul-mcbeth/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "3 Stykk aceshop Microfiber Towel 30&#215;50 cm",
+      "price": 229,
+      "url": "https://aceshop.no/product/3-stykk-aceshop-microfiber-towel-30x50-cm/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ACESHOP MICROFIBER TOWEL",
+      "price": 89,
+      "url": "https://aceshop.no/product/aceshop-microfiber-towel/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Ace Titanium Belt &#8211; Regular Strap",
+      "price": 499,
+      "url": "https://aceshop.no/product/ace-titanium-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Huck Norris Ninja Belt &#8211; Regular Strap",
+      "price": 449,
+      "url": "https://aceshop.no/product/huck-norris-ninja-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Honeycomb Belt &#8211; Regular Strap",
+      "price": 549,
+      "url": "https://aceshop.no/product/honeycomb-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Walnut Belt &#8211; Regular Strap",
+      "price": 549,
+      "url": "https://aceshop.no/product/walnut-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Vert Gunmetal Belt &#8211; Regular Strap",
+      "price": 499,
+      "url": "https://aceshop.no/product/vert-gunmetal-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Grip6 Belt Regular Straps",
+      "price": 219,
+      "url": "https://aceshop.no/product/grip6-belt-regular-straps/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "WIZARD SUPER SOFT",
+      "price": 149,
+      "url": "https://aceshop.no/product/wizard-super-soft/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "VOODOO SUPER SOFT",
+      "price": 149,
+      "url": "https://aceshop.no/product/voodoo-super-soft/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ANSIKTSMASKE 3-LAGS BOMULL",
+      "price": 99,
+      "url": "https://aceshop.no/product/ansiktsmaske-3-lags-bomull/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Aceshop bøff",
+      "price": 69,
+      "url": "https://aceshop.no/product/aceshop-boff/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Kurv + 10 puttere for dags leie",
+      "price": 499,
+      "url": "https://aceshop.no/product/kurv-10-puttere-for-dags-leie/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Latitude 64 Swift Backpack",
+      "price": 419,
+      "url": "https://aceshop.no/product/latitude-64-swift-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Latitude 64 Practice Bag",
+      "price": 419,
+      "url": "https://aceshop.no/product/latitude-64-practice-bag/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "PAUL MCBETH PERFORMANCE SHIRT PM LOGO",
+      "price": 249,
+      "url": "https://aceshop.no/product/paul-mcbeth-performance-shirt-pm-logo/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Westside Water Bottle 600 ml",
+      "price": 69,
+      "url": "https://aceshop.no/product/westside-water-bottle-600-ml/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Westside Water Bottle 800 ml",
+      "price": 79,
+      "url": "https://aceshop.no/product/westside-water-bottle-800-ml/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Premium 210 Fitted Cap",
+      "price": 249,
+      "url": "https://aceshop.no/product/premium-210-fitted-cap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Innova DISCatcher Pro 28",
+      "price": 5699,
+      "url": "https://aceshop.no/product/innova-discatcher-pro-28/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Innova Infoboard",
+      "price": 8499,
+      "url": "https://aceshop.no/product/innova-infoboard/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "5-PANEL RETRO TRUCKER CAPS M/ ACESHOP LOGO",
+      "price": 249,
+      "url": "https://aceshop.no/product/5-panel-retro-trucker-cap-m-aceshop-logo/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Retro Trucker 2-tone Cap m/ SDGK logo",
+      "price": 249,
+      "url": "https://aceshop.no/product/retro-trucker-2-tone-cap-m-sdgk-logo/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DIRT BAG &#8211; ACESHOP",
+      "price": 99,
+      "url": "https://aceshop.no/product/dirt-bag-aceshop/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Next Tee Skilt Høyre",
+      "price": 69,
+      "url": "https://aceshop.no/product/next-tee-skilt-hoyre/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Next Tee Skilt Venstre",
+      "price": 69,
+      "url": "https://aceshop.no/product/next-tee-skilt-venstre/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Mandopil",
+      "price": 159,
+      "url": "https://aceshop.no/product/mandopil/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "MAGIC SUPER STUPID SOFT M/ ACESHOP LOGO",
+      "price": 149,
+      "url": "https://aceshop.no/product/magic-super-stupid-soft-m-aceshop-logo/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Chains Gunmetal Belt &#8211; Regular Strap",
+      "price": 449,
+      "url": "https://aceshop.no/product/chains-gunmetal-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Forged Carbon Fiber Belt -Elemant Strap",
+      "price": 649,
+      "url": "https://aceshop.no/product/forged-carbon-fiber-belt-elemant-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Granite Belt &#8211; Regular Strap",
+      "price": 499,
+      "url": "https://aceshop.no/product/granite-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Gunmetal Belt &#8211; Regular Strap",
+      "price": 499,
+      "url": "https://aceshop.no/product/gunmetal-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Olive Belt &#8211; Regular Strap",
+      "price": 549,
+      "url": "https://aceshop.no/product/olive-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Grip6 Belt Midweight Straps",
+      "price": 219,
+      "url": "https://aceshop.no/product/grip6-belt-midweight-straps/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Huck Norris Ninja Belt &#8211; Midweight Strap",
+      "price": 449,
+      "url": "https://aceshop.no/product/huck-norris-ninja-belt-midweight-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Ace Gunmetal Belt &#8211; Regular Strap",
+      "price": 499,
+      "url": "https://aceshop.no/product/ace-gunmetal-belt-regular-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Ace Titanium Belt &#8211; Midweight Strap",
+      "price": 499,
+      "url": "https://aceshop.no/product/ace-titanium-belt-midweight-strap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Aceshop Skulderbag",
+      "price": 249,
+      "url": "https://aceshop.no/product/aceshop-skulderbag/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Latitude 64 Raincover &#8211; Black",
+      "price": 249,
+      "url": "https://aceshop.no/product/latitude-64-raincover-black/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Latitude 64 Raincover-Easy-Go Series &#8211; Black",
+      "price": 249,
+      "url": "https://aceshop.no/product/latitude-64-raincover-easy-go-series-black/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Aceshop Cotton Towel",
+      "price": 89,
+      "url": "https://aceshop.no/product/aceshop-cotton-towel/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CRYSTAL LINE SNOOPY FIRST RUN",
+      "price": 199,
+      "url": "https://aceshop.no/product/crystal-line-sniipy-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "110 Mesh Cap Black One size",
+      "price": 249,
+      "url": "https://aceshop.no/product/110-mesh-cap-black-one-size/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Kunstgress 2mx3m",
+      "price": 2299,
+      "url": "https://aceshop.no/product/kunstgress-2mx3m/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Kunstgress 2mx4m",
+      "price": 2999,
+      "url": "https://aceshop.no/product/kunstgress-2mx4m/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Disc Retriver Aceshop",
+      "price": 329,
+      "url": "https://aceshop.no/product/disc-retriver-aceshop/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Motivasjons Drikke Flaske 1L",
+      "price": 129,
+      "url": "https://aceshop.no/product/motivasjons-drikke-flaske-1l/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "dgputt Trucker cap",
+      "price": 249,
+      "url": "https://aceshop.no/product/dgputt-trucker-cap/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "dg Putt Microfiber Håndkle",
+      "price": 89,
+      "url": "https://aceshop.no/product/dg-putt-microfiber-handkle/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "K1 ÄLVA",
+      "price": 199,
+      "url": "https://aceshop.no/product/k1-alva/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "K1 ÄLVA GLOW",
+      "price": 219,
+      "url": "https://aceshop.no/product/k1-alva-glow/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SIGR ODIN",
+      "price": 2799,
+      "url": "https://aceshop.no/product/sigr-odin/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SIGR Loke",
+      "price": 699,
+      "url": "https://aceshop.no/product/sigr-loke/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Dropzone 90cmx18cm",
+      "price": 349,
+      "url": "https://aceshop.no/product/dropzone-90mmx18mm/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Z CONFETTI VULTURE HOLYN HANDLEY 2025",
+      "price": 269,
+      "url": "https://aceshop.no/product/z-confetti-vulture-holyn-handley-2025/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SL NEUTRON TURBULANCE",
+      "price": 219,
+      "url": "https://aceshop.no/product/sl-neutron-turbulance/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "PERSONLIG MICROFIBER HÅNDKLE",
+      "price": 109,
+      "url": "https://aceshop.no/product/personlig-microfiber-handkle/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SIGR RETRIVER",
+      "price": 449,
+      "url": "https://aceshop.no/product/sigr-retriver/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SIGR BALDER",
+      "price": 2399,
+      "url": "https://aceshop.no/product/sigr-balder/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "RUSH LS TEE MENN",
+      "price": 459,
+      "url": "https://aceshop.no/product/rush-ls-tee-menn/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "RUSH LS TEE DAME",
+      "price": 459,
+      "url": "https://aceshop.no/product/rush-ls-tee-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "RUSH SS TEE MENN",
+      "price": 389,
+      "url": "https://aceshop.no/product/rush-ss-tee-menn/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "RUSH SS TEE DAME",
+      "price": 389,
+      "url": "https://aceshop.no/product/rush-ss-tee-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE BASIC HOODY",
+      "price": 299,
+      "url": "https://aceshop.no/product/clique-basic-hoody/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE BASIC ACTIVE ROUNDNECK",
+      "price": 399,
+      "url": "https://aceshop.no/product/clique-basic-active-roundneck/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE CLASSIC HOODY DAME",
+      "price": 379,
+      "url": "https://aceshop.no/product/clique-classic-hoody-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE BASIC ACTIVE-T L/S MENN",
+      "price": 169,
+      "url": "https://aceshop.no/product/clique-basic-active-t-l-s-menn/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE BASIC ACTIVE-T L/S DAME",
+      "price": 169,
+      "url": "https://aceshop.no/product/clique-basic-active-t-l-s-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE NEW CLASSIC-T MENN",
+      "price": 89,
+      "url": "https://aceshop.no/product/clique-new-classic-t-menn/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "CLIQUE NEW CLASSIC-T DAME",
+      "price": 89,
+      "url": "https://aceshop.no/product/clique-new-classic-t-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "BIRDIE TAG GENSER",
+      "price": 449,
+      "url": "https://aceshop.no/product/birdie-tag-genser/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I KNOW I THROW LIKE A GIRL T-SKJORTE DAME",
+      "price": 249,
+      "url": "https://aceshop.no/product/i-know-i-throw-like-a-girl-t-skjorte-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I KNOW I THROW LIKE A GIRL &#8211; GENSER",
+      "price": 449,
+      "url": "https://aceshop.no/product/i-know-i-throw-like-a-girl-genser/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ADV UNIFY HYBRID JAKKE MENN",
+      "price": 1199,
+      "url": "https://aceshop.no/product/adv-unify-hybrid-jakke-menn/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I`M A BOMBER &#8211; MANNLIG KASTER",
+      "price": 399,
+      "url": "https://aceshop.no/product/im-a-bomber-mannlig-kaster/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I`M A BOMBER &#8211; KVINNELIG KASTER",
+      "price": 399,
+      "url": "https://aceshop.no/product/im-a-bomber-kvinnelig-kaster/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I`M A BOMBER T-SKJORTE DAME",
+      "price": 249,
+      "url": "https://aceshop.no/product/im-a-bomber-t-skjorte-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I`M A BOMBER T-SKJORTE &#8211; MANNLIG KASTER",
+      "price": 249,
+      "url": "https://aceshop.no/product/im-a-bomber-t-skjorte-mannlig-kaster/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DISCGOLF IS MY HAPPY PLACE GENSER",
+      "price": 399,
+      "url": "https://aceshop.no/product/discgolf-is-my-happy-place-genser/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DISCGOLF IS MY HAPPY PLACE T-SKJORTE",
+      "price": 249,
+      "url": "https://aceshop.no/product/discgolf-is-my-happy-place-t-skjorte/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DISCGOLF IS MY HAPPY PLACE T-SKJORTE DAME",
+      "price": 249,
+      "url": "https://aceshop.no/product/discgolf-is-my-happy-place-t-skjorte-dame/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I DONT ALLWAYS PLAY DISCGOLF &#8211; GENSER",
+      "price": 399,
+      "url": "https://aceshop.no/product/i-dont-allways-play-discgolf-genser/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "I DONT ALLWAYS PLAY DISCGOLF &#8211; T-SKJORTE",
+      "price": 249,
+      "url": "https://aceshop.no/product/i-dont-allways-play-discgolf-t-skjorte/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SPECIAL BLEND HALLUX &#8211; RICKY WYSOCKI TOUR SERIES 2026",
+      "price": 279,
+      "url": "https://aceshop.no/product/special-blend-hallux-ricky-wysocki-tour-series-2026/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "Z-LINE COLORSHIFT FOSSIL &#8211; FIRST RUN",
+      "price": 229,
+      "url": "https://aceshop.no/product/z-line-colorshift-fossil-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "HARD BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
+      "price": 169,
+      "url": "https://aceshop.no/product/hard-blend-ultraluna-paul-mcbeth-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "SOFT BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
+      "price": 169,
+      "url": "https://aceshop.no/product/soft-blend-ultraluna-paul-mcbeth-first-run/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "INNOVA EXCURSION BACKPACK",
+      "price": 799,
+      "url": "https://aceshop.no/product/innova-excursion-backpack/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "ALFA 2.0 ECO LINE DISKGOLF BAG",
+      "price": 599,
+      "url": "https://aceshop.no/product/alfa-2-0-eco-line-diskgolf-bag/",
+      "inStock": true
+    },
+    {
+      "store": "aceshop",
+      "rawName": "DIRT BAG &#8211; ACESHOP BLUBB BLUBB",
+      "price": 99,
+      "url": "https://aceshop.no/product/dirt-bag-aceshop-blubb-blubb/",
       "inStock": true
     },
     {
@@ -2459,640 +3096,10 @@
       "inStock": true
     },
     {
-      "store": "aceshop",
-      "rawName": "PM CAPS (Paul McBeth)",
-      "price": 299,
-      "url": "https://aceshop.no/product/pm-caps-paul-mcbeth/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "3 Stykk aceshop Microfiber Towel 30&#215;50 cm",
-      "price": 229,
-      "url": "https://aceshop.no/product/3-stykk-aceshop-microfiber-towel-30x50-cm/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "ACESHOP MICROFIBER TOWEL",
-      "price": 89,
-      "url": "https://aceshop.no/product/aceshop-microfiber-towel/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Ace Titanium Belt &#8211; Regular Strap",
-      "price": 499,
-      "url": "https://aceshop.no/product/ace-titanium-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Huck Norris Ninja Belt &#8211; Regular Strap",
-      "price": 449,
-      "url": "https://aceshop.no/product/huck-norris-ninja-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Honeycomb Belt &#8211; Regular Strap",
-      "price": 549,
-      "url": "https://aceshop.no/product/honeycomb-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Walnut Belt &#8211; Regular Strap",
-      "price": 549,
-      "url": "https://aceshop.no/product/walnut-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Vert Gunmetal Belt &#8211; Regular Strap",
-      "price": 499,
-      "url": "https://aceshop.no/product/vert-gunmetal-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Grip6 Belt Regular Straps",
-      "price": 219,
-      "url": "https://aceshop.no/product/grip6-belt-regular-straps/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "WIZARD SUPER SOFT",
-      "price": 149,
-      "url": "https://aceshop.no/product/wizard-super-soft/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "VOODOO SUPER SOFT",
-      "price": 149,
-      "url": "https://aceshop.no/product/voodoo-super-soft/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "ANSIKTSMASKE 3-LAGS BOMULL",
-      "price": 99,
-      "url": "https://aceshop.no/product/ansiktsmaske-3-lags-bomull/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Aceshop bøff",
-      "price": 69,
-      "url": "https://aceshop.no/product/aceshop-boff/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Kurv + 10 puttere for dags leie",
-      "price": 499,
-      "url": "https://aceshop.no/product/kurv-10-puttere-for-dags-leie/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Latitude 64 Swift Backpack",
-      "price": 419,
-      "url": "https://aceshop.no/product/latitude-64-swift-backpack/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Latitude 64 Practice Bag",
-      "price": 419,
-      "url": "https://aceshop.no/product/latitude-64-practice-bag/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "PAUL MCBETH PERFORMANCE SHIRT PM LOGO",
-      "price": 249,
-      "url": "https://aceshop.no/product/paul-mcbeth-performance-shirt-pm-logo/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Westside Water Bottle 600 ml",
-      "price": 69,
-      "url": "https://aceshop.no/product/westside-water-bottle-600-ml/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Westside Water Bottle 800 ml",
-      "price": 79,
-      "url": "https://aceshop.no/product/westside-water-bottle-800-ml/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Premium 210 Fitted Cap",
-      "price": 249,
-      "url": "https://aceshop.no/product/premium-210-fitted-cap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Innova DISCatcher Pro 28",
-      "price": 5699,
-      "url": "https://aceshop.no/product/innova-discatcher-pro-28/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Innova Infoboard",
-      "price": 8499,
-      "url": "https://aceshop.no/product/innova-infoboard/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "5-PANEL RETRO TRUCKER CAPS M/ ACESHOP LOGO",
-      "price": 249,
-      "url": "https://aceshop.no/product/5-panel-retro-trucker-cap-m-aceshop-logo/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Retro Trucker 2-tone Cap m/ SDGK logo",
-      "price": 249,
-      "url": "https://aceshop.no/product/retro-trucker-2-tone-cap-m-sdgk-logo/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "DIRT BAG &#8211; ACESHOP",
-      "price": 99,
-      "url": "https://aceshop.no/product/dirt-bag-aceshop/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Next Tee Skilt Høyre",
-      "price": 69,
-      "url": "https://aceshop.no/product/next-tee-skilt-hoyre/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Next Tee Skilt Venstre",
-      "price": 69,
-      "url": "https://aceshop.no/product/next-tee-skilt-venstre/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Mandopil",
-      "price": 159,
-      "url": "https://aceshop.no/product/mandopil/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "MAGIC SUPER STUPID SOFT M/ ACESHOP LOGO",
-      "price": 149,
-      "url": "https://aceshop.no/product/magic-super-stupid-soft-m-aceshop-logo/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Chains Gunmetal Belt &#8211; Regular Strap",
-      "price": 449,
-      "url": "https://aceshop.no/product/chains-gunmetal-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Forged Carbon Fiber Belt -Elemant Strap",
-      "price": 649,
-      "url": "https://aceshop.no/product/forged-carbon-fiber-belt-elemant-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Granite Belt &#8211; Regular Strap",
-      "price": 499,
-      "url": "https://aceshop.no/product/granite-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Gunmetal Belt &#8211; Regular Strap",
-      "price": 499,
-      "url": "https://aceshop.no/product/gunmetal-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Olive Belt &#8211; Regular Strap",
-      "price": 549,
-      "url": "https://aceshop.no/product/olive-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Grip6 Belt Midweight Straps",
-      "price": 219,
-      "url": "https://aceshop.no/product/grip6-belt-midweight-straps/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Huck Norris Ninja Belt &#8211; Midweight Strap",
-      "price": 449,
-      "url": "https://aceshop.no/product/huck-norris-ninja-belt-midweight-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Ace Gunmetal Belt &#8211; Regular Strap",
-      "price": 499,
-      "url": "https://aceshop.no/product/ace-gunmetal-belt-regular-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Ace Titanium Belt &#8211; Midweight Strap",
-      "price": 499,
-      "url": "https://aceshop.no/product/ace-titanium-belt-midweight-strap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Aceshop Skulderbag",
-      "price": 249,
-      "url": "https://aceshop.no/product/aceshop-skulderbag/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Latitude 64 Raincover &#8211; Black",
-      "price": 249,
-      "url": "https://aceshop.no/product/latitude-64-raincover-black/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Latitude 64 Raincover-Easy-Go Series &#8211; Black",
-      "price": 249,
-      "url": "https://aceshop.no/product/latitude-64-raincover-easy-go-series-black/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Aceshop Cotton Towel",
-      "price": 89,
-      "url": "https://aceshop.no/product/aceshop-cotton-towel/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CRYSTAL LINE SNOOPY FIRST RUN",
-      "price": 199,
-      "url": "https://aceshop.no/product/crystal-line-sniipy-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "110 Mesh Cap Black One size",
-      "price": 249,
-      "url": "https://aceshop.no/product/110-mesh-cap-black-one-size/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Kunstgress 2mx3m",
-      "price": 2299,
-      "url": "https://aceshop.no/product/kunstgress-2mx3m/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Kunstgress 2mx4m",
-      "price": 2999,
-      "url": "https://aceshop.no/product/kunstgress-2mx4m/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Disc Retriver Aceshop",
-      "price": 329,
-      "url": "https://aceshop.no/product/disc-retriver-aceshop/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Motivasjons Drikke Flaske 1L",
-      "price": 129,
-      "url": "https://aceshop.no/product/motivasjons-drikke-flaske-1l/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "dgputt Trucker cap",
-      "price": 249,
-      "url": "https://aceshop.no/product/dgputt-trucker-cap/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "dg Putt Microfiber Håndkle",
-      "price": 89,
-      "url": "https://aceshop.no/product/dg-putt-microfiber-handkle/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "K1 ÄLVA",
-      "price": 199,
-      "url": "https://aceshop.no/product/k1-alva/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "K1 ÄLVA GLOW",
-      "price": 219,
-      "url": "https://aceshop.no/product/k1-alva-glow/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SIGR ODIN",
-      "price": 2799,
-      "url": "https://aceshop.no/product/sigr-odin/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SIGR Loke",
-      "price": 699,
-      "url": "https://aceshop.no/product/sigr-loke/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Dropzone 90cmx18cm",
-      "price": 349,
-      "url": "https://aceshop.no/product/dropzone-90mmx18mm/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Z CONFETTI VULTURE HOLYN HANDLEY 2025",
-      "price": 269,
-      "url": "https://aceshop.no/product/z-confetti-vulture-holyn-handley-2025/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SL NEUTRON TURBULANCE",
-      "price": 219,
-      "url": "https://aceshop.no/product/sl-neutron-turbulance/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "PERSONLIG MICROFIBER HÅNDKLE",
-      "price": 109,
-      "url": "https://aceshop.no/product/personlig-microfiber-handkle/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SIGR RETRIVER",
-      "price": 449,
-      "url": "https://aceshop.no/product/sigr-retriver/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SIGR BALDER",
-      "price": 2399,
-      "url": "https://aceshop.no/product/sigr-balder/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "RUSH LS TEE MENN",
-      "price": 459,
-      "url": "https://aceshop.no/product/rush-ls-tee-menn/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "RUSH LS TEE DAME",
-      "price": 459,
-      "url": "https://aceshop.no/product/rush-ls-tee-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "RUSH SS TEE MENN",
-      "price": 389,
-      "url": "https://aceshop.no/product/rush-ss-tee-menn/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "RUSH SS TEE DAME",
-      "price": 389,
-      "url": "https://aceshop.no/product/rush-ss-tee-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE BASIC HOODY",
-      "price": 299,
-      "url": "https://aceshop.no/product/clique-basic-hoody/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE BASIC ACTIVE ROUNDNECK",
-      "price": 399,
-      "url": "https://aceshop.no/product/clique-basic-active-roundneck/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE CLASSIC HOODY DAME",
-      "price": 379,
-      "url": "https://aceshop.no/product/clique-classic-hoody-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE BASIC ACTIVE-T L/S MENN",
-      "price": 169,
-      "url": "https://aceshop.no/product/clique-basic-active-t-l-s-menn/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE BASIC ACTIVE-T L/S DAME",
-      "price": 169,
-      "url": "https://aceshop.no/product/clique-basic-active-t-l-s-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE NEW CLASSIC-T MENN",
-      "price": 89,
-      "url": "https://aceshop.no/product/clique-new-classic-t-menn/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "CLIQUE NEW CLASSIC-T DAME",
-      "price": 89,
-      "url": "https://aceshop.no/product/clique-new-classic-t-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "BIRDIE TAG GENSER",
-      "price": 449,
-      "url": "https://aceshop.no/product/birdie-tag-genser/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I KNOW I THROW LIKE A GIRL T-SKJORTE DAME",
-      "price": 249,
-      "url": "https://aceshop.no/product/i-know-i-throw-like-a-girl-t-skjorte-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I KNOW I THROW LIKE A GIRL &#8211; GENSER",
-      "price": 449,
-      "url": "https://aceshop.no/product/i-know-i-throw-like-a-girl-genser/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "ADV UNIFY HYBRID JAKKE MENN",
-      "price": 1199,
-      "url": "https://aceshop.no/product/adv-unify-hybrid-jakke-menn/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I`M A BOMBER &#8211; MANNLIG KASTER",
-      "price": 399,
-      "url": "https://aceshop.no/product/im-a-bomber-mannlig-kaster/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I`M A BOMBER &#8211; KVINNELIG KASTER",
-      "price": 399,
-      "url": "https://aceshop.no/product/im-a-bomber-kvinnelig-kaster/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I`M A BOMBER T-SKJORTE DAME",
-      "price": 249,
-      "url": "https://aceshop.no/product/im-a-bomber-t-skjorte-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I`M A BOMBER T-SKJORTE &#8211; MANNLIG KASTER",
-      "price": 249,
-      "url": "https://aceshop.no/product/im-a-bomber-t-skjorte-mannlig-kaster/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "DISCGOLF IS MY HAPPY PLACE GENSER",
-      "price": 399,
-      "url": "https://aceshop.no/product/discgolf-is-my-happy-place-genser/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "DISCGOLF IS MY HAPPY PLACE T-SKJORTE",
-      "price": 249,
-      "url": "https://aceshop.no/product/discgolf-is-my-happy-place-t-skjorte/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "DISCGOLF IS MY HAPPY PLACE T-SKJORTE DAME",
-      "price": 249,
-      "url": "https://aceshop.no/product/discgolf-is-my-happy-place-t-skjorte-dame/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I DONT ALLWAYS PLAY DISCGOLF &#8211; GENSER",
-      "price": 399,
-      "url": "https://aceshop.no/product/i-dont-allways-play-discgolf-genser/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "I DONT ALLWAYS PLAY DISCGOLF &#8211; T-SKJORTE",
-      "price": 249,
-      "url": "https://aceshop.no/product/i-dont-allways-play-discgolf-t-skjorte/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SPECIAL BLEND HALLUX &#8211; RICKY WYSOCKI TOUR SERIES 2026",
-      "price": 279,
-      "url": "https://aceshop.no/product/special-blend-hallux-ricky-wysocki-tour-series-2026/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Z-LINE COLORSHIFT FOSSIL &#8211; FIRST RUN",
-      "price": 229,
-      "url": "https://aceshop.no/product/z-line-colorshift-fossil-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "HARD BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
-      "price": 169,
-      "url": "https://aceshop.no/product/hard-blend-ultraluna-paul-mcbeth-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "SOFT BLEND ULTRALUNA PAUL MCBETH FIRST RUN",
-      "price": 169,
-      "url": "https://aceshop.no/product/soft-blend-ultraluna-paul-mcbeth-first-run/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "INNOVA EXCURSION BACKPACK",
-      "price": 799,
-      "url": "https://aceshop.no/product/innova-excursion-backpack/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "ALFA 2.0 ECO LINE DISKGOLF BAG",
-      "price": 599,
-      "url": "https://aceshop.no/product/alfa-2-0-eco-line-diskgolf-bag/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "DIRT BAG &#8211; ACESHOP BLUBB BLUBB",
-      "price": 99,
-      "url": "https://aceshop.no/product/dirt-bag-aceshop-blubb-blubb/",
+      "store": "kvamdgs",
+      "rawName": "Proton Cypher - Circuit Challenge 2026",
+      "price": 275,
+      "url": "https://kvamdgs.no/products/proton-cypher-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -3436,7 +3443,7 @@
       "rawName": "K1 Älva - Moomin Group",
       "price": 225,
       "url": "https://kvamdgs.no/products/k1-alva-moomin-group",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "kvamdgs",
@@ -3658,29 +3665,36 @@
     {
       "store": "arcticdisc",
       "rawName": "Latitude 64 Startsett - Zero Gravity",
-      "price": 399,
+      "price": 299,
       "url": "https://arcticdisc.no/products/latitude-64-startsett-zero-gravity",
       "inStock": true
     },
     {
       "store": "arcticdisc",
       "rawName": "Latitude 64 startsett - lett",
-      "price": 339,
+      "price": 254,
       "url": "https://arcticdisc.no/products/latitude-64-startsett-lett",
       "inStock": true
     },
     {
       "store": "arcticdisc",
       "rawName": "Latitude 64 Startsett - Classic",
-      "price": 339,
+      "price": 254,
       "url": "https://arcticdisc.no/products/latitude-64-startsett-classic",
       "inStock": true
     },
     {
       "store": "arcticdisc",
       "rawName": "Latitude 64 klut - Mikrofiber",
-      "price": 109,
+      "price": 82,
       "url": "https://arcticdisc.no/products/latitude-64-klut-mikrofiber",
+      "inStock": true
+    },
+    {
+      "store": "hyzershop",
+      "rawName": "P2",
+      "price": 169,
+      "url": "https://hyzershop.no/products/p2",
       "inStock": true
     },
     {
@@ -3987,7 +4001,7 @@
     {
       "store": "hyzershop",
       "rawName": "Swan",
-      "price": 169,
+      "price": 159,
       "url": "https://hyzershop.no/products/swan",
       "inStock": true
     },
@@ -4295,7 +4309,7 @@
     {
       "store": "hyzershop",
       "rawName": "DD4 - Prototype - European Open 2026 Fundraiser",
-      "price": 269,
+      "price": 279,
       "url": "https://hyzershop.no/products/dd4-prototype-european-open-2026-fundraiser",
       "inStock": true
     },
@@ -4876,7 +4890,7 @@
     {
       "store": "hyzershop",
       "rawName": "FD - Ella Hansen Worlds 2025 Edition",
-      "price": 295,
+      "price": 289,
       "url": "https://hyzershop.no/products/fd-ella-hansen-worlds-2025-edition",
       "inStock": true
     },
@@ -5928,7 +5942,7 @@
       "rawName": "FD",
       "price": 239,
       "url": "https://hyzershop.no/products/c-line-fd",
-      "inStock": false
+      "inStock": true
     },
     {
       "store": "hyzershop",
@@ -5956,7 +5970,7 @@
       "rawName": "Origin",
       "price": 219,
       "url": "https://hyzershop.no/products/neo-origin",
-      "inStock": false
+      "inStock": true
     },
     {
       "store": "hyzershop",
@@ -6660,9 +6674,58 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Cicada - Missy Gannon V2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "rawName": "NERF Soft Flight Driver",
+      "price": 199,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-driver",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NERF Soft Flight Midrange",
+      "price": 199,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-midrange",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NERF Soft Flight Putter",
+      "price": 199,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-putter",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NERF Soft Flight Starter Kit",
+      "price": 549,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-starter-kit",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium LASERi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-laseri",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Talisman",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-talisman",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -6688,30 +6751,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Premium LASERi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-laseri",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium MIDARi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-midari",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Talisman",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-talisman",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
       "inStock": true
     },
     {
@@ -6765,6 +6807,13 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
+      "price": 289,
+      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Z Terminator - First Run",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
@@ -6772,23 +6821,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "NERF Soft Flight Driver",
-      "price": 199,
-      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-driver",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
-      "price": 289,
-      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "rawName": "Premium MIDARi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-midari",
       "inStock": true
     },
     {
@@ -7395,13 +7430,6 @@
     },
     {
       "store": "starframe",
-      "rawName": "K1 Älva (Moomin Group)",
-      "price": 225,
-      "url": "https://www.starframe.no/products/k1-alva-moomin-group",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
       "rawName": "Premium Dune",
       "price": 255,
       "url": "https://www.starframe.no/products/premium-dune",
@@ -7941,6 +7969,20 @@
     },
     {
       "store": "nydisk",
+      "rawName": "Discmania Color Madness Horizon S-line Tilt",
+      "price": 500,
+      "url": "https://nydisk.no/products/discmania-color-madness-horizon-s-line-tilt",
+      "inStock": false
+    },
+    {
+      "store": "nydisk",
+      "rawName": "Lone Star Disc Armadillo",
+      "price": 200,
+      "url": "https://nydisk.no/products/lone-star-disc",
+      "inStock": true
+    },
+    {
+      "store": "nydisk",
       "rawName": "Westside Discs Microfiber Waffle Towel",
       "price": 149,
       "url": "https://nydisk.no/products/westside-discs-microfiber-waffle-towel",
@@ -7958,6 +8000,20 @@
       "rawName": "Latitude64 Microfiber Waffle Towel",
       "price": 149,
       "url": "https://nydisk.no/products/latitude64-microfiber-waffle-towel",
+      "inStock": true
+    },
+    {
+      "store": "nydisk",
+      "rawName": "Discmania Color Glow P4 - Prototype",
+      "price": 250,
+      "url": "https://nydisk.no/products/discmania-color-glow-p4-prototype",
+      "inStock": true
+    },
+    {
+      "store": "nydisk",
+      "rawName": "Discmania Lux Vapor P4 (Razor Claw)",
+      "price": 400,
+      "url": "https://nydisk.no/products/discmania-lux-vapor-p4-razor-claw",
       "inStock": true
     },
     {
@@ -8007,6 +8063,13 @@
       "rawName": "Latitude64 Caps",
       "price": 299,
       "url": "https://nydisk.no/products/latitude64-caps",
+      "inStock": true
+    },
+    {
+      "store": "nydisk",
+      "rawName": "Discmania Horizon Nordic Phenom III",
+      "price": 300,
+      "url": "https://nydisk.no/products/discmania-horizon-nordic-phenom-iii",
       "inStock": true
     },
     {
@@ -8767,6 +8830,20 @@
     },
     {
       "store": "discexpress",
+      "rawName": "MVP Black Hole Event Horizon Training Net",
+      "price": 1533,
+      "url": "https://www.discexpress.se/products/mvp-black-hole-event-horizon-training-net",
+      "inStock": true
+    },
+    {
+      "store": "discexpress",
+      "rawName": "Discgolf Adventskalender – Limited Collector’s Edition (4 Unika Discar)",
+      "price": 958,
+      "url": "https://www.discexpress.se/products/discgolf-adventskalender-limited-collector-s-edition-4-unika-discar",
+      "inStock": true
+    },
+    {
+      "store": "discexpress",
       "rawName": "Discgolf julkalender 2026 - 24 Discar",
       "price": 2851,
       "url": "https://www.discexpress.se/products/discgolf-julkalender-2026-24-discar",
@@ -8873,21 +8950,21 @@
     {
       "store": "discexpress",
       "rawName": "FPC Runing Cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-5-panel-sport",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Rubber Patch Sport Cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-rubber-patch-sport-cap-1",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Dad Cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-dad-cap",
       "inStock": true
     },
@@ -10252,28 +10329,28 @@
     {
       "store": "discexpress",
       "rawName": "FPC Tour Performance cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-tour-performance-cap",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC The Finger Rubber Patch Sport Cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-rubber-patch-sport-cap",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Finger Sport cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-finger-sport-cap",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Finger 5-panel cap",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/fpc-finger-5-panel-cap",
       "inStock": true
     },
@@ -10357,7 +10434,7 @@
     {
       "store": "discexpress",
       "rawName": "Trainer Lite Carry Bag",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/trainer-lite-carry-bag",
       "inStock": true
     },
@@ -10574,7 +10651,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2492,
+      "price": 2491,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -10637,7 +10714,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart LG",
-      "price": 3259,
+      "price": 3258,
       "url": "https://www.discexpress.se/products/backpack-cart-lg",
       "inStock": false
     },
@@ -10742,7 +10819,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy Putter Pocket",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/prodigy-putter-pocket",
       "inStock": false
     },
@@ -10980,7 +11057,7 @@
     {
       "store": "discexpress",
       "rawName": "Friction 3 Ultimate Frisbee Gloves Pair",
-      "price": 383,
+      "price": 382,
       "url": "https://www.discexpress.se/products/friction-3-ultimate-frisbee-gloves",
       "inStock": true
     },
@@ -16594,7 +16671,7 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Backpack 1",
-      "price": 1054,
+      "price": 1053,
       "url": "https://ugglansdiscgolf.se/products/prodigy-bp1",
       "inStock": false
     },
