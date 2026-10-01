@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30T10:55:33.743Z",
+  "lastUpdated": "2026-10-01T05:00:49.086Z",
   "products": [
     {
       "store": "discsport",
@@ -549,13 +549,6 @@
     },
     {
       "store": "wearediscgolf",
-      "rawName": "Kastaplast Towel",
-      "price": 99,
-      "url": "https://wearediscgolf.no/produkt/kastaplast-towel/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
       "rawName": "D-Blend Cohort",
       "price": 145,
       "url": "https://wearediscgolf.no/produkt/d-blend-cohort/",
@@ -587,6 +580,13 @@
       "rawName": "ET Omega4",
       "price": 219,
       "url": "https://wearediscgolf.no/produkt/et-omega4/",
+      "inStock": true
+    },
+    {
+      "store": "wearediscgolf",
+      "rawName": "I-Dye Poly",
+      "price": 79,
+      "url": "https://wearediscgolf.no/produkt/i-dye-poly/",
       "inStock": true
     },
     {
@@ -6681,9 +6681,51 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "rawName": "Kasta Set Moomin",
+      "price": 599,
+      "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium LASERi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-laseri",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium MIDARi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-midari",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
       "inStock": true
     },
     {
@@ -6716,44 +6758,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Premium LASERi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-laseri",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
       "inStock": true
     },
     {
@@ -6761,6 +6768,13 @@
       "rawName": "Ultrium Amulet",
       "price": 181,
       "url": "https://frisbeebutikken.no/products/ultrium-amulet",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium FASTi",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-fasti",
       "inStock": true
     },
     {
@@ -6793,41 +6807,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Terminator - First Run",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium MIDARi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-midari",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
-      "price": 289,
-      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "MVP Lunar Module - Kurvlys",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium FASTi",
-      "price": 181,
-      "url": "https://frisbeebutikken.no/products/ultrium-fasti",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Z Colorshift Fossil - Ricky Wysocki",
       "price": 249,
       "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
@@ -6842,16 +6821,44 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "NEO Function",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/neo-function",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Lux Vapor Function - Special Edition",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
       "price": 229,
-      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Terminator - First Run",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
+      "price": 289,
+      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "NEO Function",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/neo-function",
       "inStock": true
     },
     {
@@ -8823,6 +8830,13 @@
     },
     {
       "store": "discexpress",
+      "rawName": "Good Boy 300 Firm Fractal",
+      "price": 172,
+      "url": "https://www.discexpress.se/products/good-boy-300-firm-fractal",
+      "inStock": true
+    },
+    {
+      "store": "discexpress",
       "rawName": "Latitude 64 Beanie - Pom",
       "price": 287,
       "url": "https://www.discexpress.se/products/pom-beanie",
@@ -8838,42 +8852,42 @@
     {
       "store": "discexpress",
       "rawName": "MVP Black Hole Event Horizon Training Net",
-      "price": 1535,
+      "price": 1537,
       "url": "https://www.discexpress.se/products/mvp-black-hole-event-horizon-training-net",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discgolf Adventskalender – Limited Collector’s Edition (4 Unika Discar)",
-      "price": 959,
+      "price": 960,
       "url": "https://www.discexpress.se/products/discgolf-adventskalender-limited-collector-s-edition-4-unika-discar",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discgolf julkalender 2026 - 24 Discar",
-      "price": 2856,
+      "price": 2859,
       "url": "https://www.discexpress.se/products/discgolf-julkalender-2026-24-discar",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Mutiny Fuzion",
-      "price": 181,
+      "price": 182,
       "url": "https://www.discexpress.se/products/mutiny-fuzion",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Caltrop Zero Medium - Special Edition",
-      "price": 133,
+      "price": 134,
       "url": "https://www.discexpress.se/products/caltrop-zero-medium-special-edition",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Raketen Opto Hex - Special Edition",
-      "price": 181,
+      "price": 182,
       "url": "https://www.discexpress.se/products/raketen-opto-hex-special-edition",
       "inStock": true
     },
@@ -8887,7 +8901,7 @@
     {
       "store": "discexpress",
       "rawName": "Crocs™ Procyon",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/crocs™-procyon",
       "inStock": true
     },
@@ -8950,28 +8964,28 @@
     {
       "store": "discexpress",
       "rawName": "Sampo Tournament Rill",
-      "price": 181,
+      "price": 182,
       "url": "https://www.discexpress.se/products/sampo-tournament-rill",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Runing Cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-5-panel-sport",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Rubber Patch Sport Cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-rubber-patch-sport-cap-1",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Dad Cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-dad-cap",
       "inStock": true
     },
@@ -9006,7 +9020,7 @@
     {
       "store": "discexpress",
       "rawName": "MVP Voyager Lite",
-      "price": 1247,
+      "price": 1249,
       "url": "https://www.discexpress.se/products/mvp-voyager-lite",
       "inStock": true
     },
@@ -9132,21 +9146,21 @@
     {
       "store": "discexpress",
       "rawName": "Range Finder Pro - Avståndsmätare för Discgolf",
-      "price": 1439,
+      "price": 1441,
       "url": "https://www.discexpress.se/products/range-finder-pro-avstandsmatare-for-discgolf",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discmania - Tour Bag",
-      "price": 1920,
+      "price": 1922,
       "url": "https://www.discexpress.se/products/discmania-tour-bag",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Sky Backpack 2.0",
-      "price": 959,
+      "price": 960,
       "url": "https://www.discexpress.se/products/discmania-fanatic-sky-backpack-2-0",
       "inStock": true
     },
@@ -9160,7 +9174,7 @@
     {
       "store": "discexpress",
       "rawName": "Captains Raptor Z Confetti - Paul Ulibarri x Brad Hammock",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/captains-raptor-z-confetti-paul-ulibarri-x-brad-hammock",
       "inStock": true
     },
@@ -9181,21 +9195,21 @@
     {
       "store": "discexpress",
       "rawName": "M5 500",
-      "price": 210,
+      "price": 211,
       "url": "https://www.discexpress.se/products/m5-500",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Pivot BaseGrip Plastic - Seraphim Stamp",
-      "price": 133,
+      "price": 134,
       "url": "https://www.discexpress.se/products/pivot-basegrip-plastic-seraphim-stamp",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "H6 400 Glow",
-      "price": 210,
+      "price": 211,
       "url": "https://www.discexpress.se/products/h6-400-glow",
       "inStock": true
     },
@@ -9209,7 +9223,7 @@
     {
       "store": "discexpress",
       "rawName": "Hiva 2.0 - Kastaplast Bag",
-      "price": 575,
+      "price": 576,
       "url": "https://www.discexpress.se/products/hiva-2-0-kastaplast-bag",
       "inStock": true
     },
@@ -9272,63 +9286,63 @@
     {
       "store": "discexpress",
       "rawName": "Voyager Pro",
-      "price": 2112,
+      "price": 2114,
       "url": "https://www.discexpress.se/products/voyager-pro",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Voyager - James Conrad Signature Edition",
-      "price": 1911,
+      "price": 1913,
       "url": "https://www.discexpress.se/products/voyager-james-conrad-signature-edition",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Innova - Excursion Pack",
-      "price": 767,
+      "price": 768,
       "url": "https://www.discexpress.se/products/innova-excursion-pack",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Axiom Voyager Lite",
-      "price": 1247,
+      "price": 1249,
       "url": "https://www.discexpress.se/products/axiom-voyager-lite",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "MVP Voyager Lite – Ripstop",
-      "price": 1247,
+      "price": 1249,
       "url": "https://www.discexpress.se/products/mvp-voyager-lite-ripstop",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Innova DisCatcher Traveler Basket",
-      "price": 1623,
+      "price": 1625,
       "url": "https://www.discexpress.se/products/innova-discatcher-traveler-basket",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Vessel Parallel",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/vessel-parallel",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Nuance Glow",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/nuance-glow",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Requiem Parallel",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/requiem-parallel",
       "inStock": true
     },
@@ -9377,21 +9391,21 @@
     {
       "store": "discexpress",
       "rawName": "Safari Pack",
-      "price": 1151,
+      "price": 1153,
       "url": "https://www.discexpress.se/products/safari-ryggsack",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Träningskoner – Set med 10 st för discgolf & sport",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/traningskoner",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Strandmackan - Soft Foam Disc – Strandfrisbee i PU-skum",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/soft-foam-disc",
       "inStock": true
     },
@@ -9405,7 +9419,7 @@
     {
       "store": "discexpress",
       "rawName": "Lite Pro - Discmania",
-      "price": 1151,
+      "price": 1153,
       "url": "https://www.discexpress.se/products/lite-pro-discmania",
       "inStock": true
     },
@@ -9419,7 +9433,7 @@
     {
       "store": "discexpress",
       "rawName": "Expanse Parallel",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/coalesce-nebula-ethereal",
       "inStock": true
     },
@@ -9531,14 +9545,14 @@
     {
       "store": "discexpress",
       "rawName": "Discgolfkalender 2025 - 24 Överraskningar för Discgolfentusiasten",
-      "price": 2879,
+      "price": 2882,
       "url": "https://www.discexpress.se/products/discgolf-adventskalender-2025-24-overraskningar-for-discgolf-entusiasten",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Luxury E5 Backpack",
-      "price": 1911,
+      "price": 1913,
       "url": "https://www.discexpress.se/products/core-pro-e5-backpack",
       "inStock": true
     },
@@ -9622,7 +9636,7 @@
     {
       "store": "discexpress",
       "rawName": "Sigr - Loke",
-      "price": 671,
+      "price": 672,
       "url": "https://www.discexpress.se/products/sigr-loke",
       "inStock": true
     },
@@ -9636,21 +9650,21 @@
     {
       "store": "discexpress",
       "rawName": "Sigr - Odin",
-      "price": 2688,
+      "price": 2691,
       "url": "https://www.discexpress.se/products/sigr-odin",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "P4 P-Line Flex 2 Swirl - Razor Claw- Kyle Klein - Signature Series",
-      "price": 181,
+      "price": 182,
       "url": "https://www.discexpress.se/products/cd1-s-line-special-blend-zetas-moon-colten-montgomery-copy",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FINAL NINE (Expansion Pack)",
-      "price": 335,
+      "price": 336,
       "url": "https://www.discexpress.se/products/final-nine-expansion-pack",
       "inStock": true
     },
@@ -9685,7 +9699,7 @@
     {
       "store": "discexpress",
       "rawName": "Candy Planty",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/candy-planty",
       "inStock": true
     },
@@ -9699,7 +9713,7 @@
     {
       "store": "discexpress",
       "rawName": "Vanilla Planty",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/vanilla-planty",
       "inStock": true
     },
@@ -9713,7 +9727,7 @@
     {
       "store": "discexpress",
       "rawName": "Sigr - Balder",
-      "price": 2112,
+      "price": 2114,
       "url": "https://www.discexpress.se/products/sigr-balder",
       "inStock": true
     },
@@ -9762,14 +9776,14 @@
     {
       "store": "discexpress",
       "rawName": "Framtid",
-      "price": 2400,
+      "price": 2402,
       "url": "https://www.discexpress.se/products/framtid",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Pine Tournament",
-      "price": 181,
+      "price": 182,
       "url": "https://www.discexpress.se/products/pine-tournament",
       "inStock": true
     },
@@ -9804,7 +9818,7 @@
     {
       "store": "discexpress",
       "rawName": "Upper Park The Rebel 2025",
-      "price": 2871,
+      "price": 2875,
       "url": "https://www.discexpress.se/products/upper-park-the-rebel-2025",
       "inStock": true
     },
@@ -9825,28 +9839,28 @@
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Putt",
-      "price": 3802,
+      "price": 3806,
       "url": "https://www.discexpress.se/products/tech-disc-putt",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Midrange",
-      "price": 3802,
+      "price": 3806,
       "url": "https://www.discexpress.se/products/tech-disc-midrange",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Distance Driver",
-      "price": 3802,
+      "price": 3806,
       "url": "https://www.discexpress.se/products/tech-disc-disctance-driver",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Fairway Driver",
-      "price": 3802,
+      "price": 3806,
       "url": "https://www.discexpress.se/products/tech-disc-fairway-driver",
       "inStock": true
     },
@@ -9951,21 +9965,21 @@
     {
       "store": "discexpress",
       "rawName": "ZÜCA - Insert Bag, black (Compact Disc Golf)",
-      "price": 863,
+      "price": 864,
       "url": "https://www.discexpress.se/products/zuca-insert-bag-black-compact-disc-golf",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Halo Opto Ice",
-      "price": 210,
+      "price": 211,
       "url": "https://www.discexpress.se/products/halo-opto-ice",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Kasta Set (Moomin)",
-      "price": 575,
+      "price": 576,
       "url": "https://www.discexpress.se/products/kasta-set-moomin-start-set",
       "inStock": true
     },
@@ -10042,77 +10056,77 @@
     {
       "store": "discexpress",
       "rawName": "Rack - All Terrain - Zuca",
-      "price": 527,
+      "price": 528,
       "url": "https://www.discexpress.se/products/rack-all-terrain-zuca",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Boston - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-boston-p-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Detroit - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-detroit-p-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Chicago - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-chicago-p-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Las Vegas - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-las-vegas-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Philadelphia - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-philadelphia-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Toronto - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-toronto-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Montreal - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-montreal-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "NHL - Tampa Bay - P Model S ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/nhl-tampa-bay-model-s-ace-base-grip",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "The Finger Rubber Patch Beanie",
-      "price": 133,
+      "price": 134,
       "url": "https://www.discexpress.se/products/the-finger-beanie-flying-plate-company",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Compact Disc Golf Cart",
-      "price": 3072,
+      "price": 3075,
       "url": "https://www.discexpress.se/products/zuca-compact-disc-golf-cart",
       "inStock": false
     },
@@ -10210,7 +10224,7 @@
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Fly Backpack",
-      "price": 527,
+      "price": 528,
       "url": "https://www.discexpress.se/products/discmania-fanatic-fly-backpack",
       "inStock": false
     },
@@ -10336,28 +10350,28 @@
     {
       "store": "discexpress",
       "rawName": "FPC Tour Performance cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-tour-performance-cap",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC The Finger Rubber Patch Sport Cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-rubber-patch-sport-cap",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Finger Sport cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-finger-sport-cap",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "FPC Finger 5-panel cap",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/fpc-finger-5-panel-cap",
       "inStock": true
     },
@@ -10371,7 +10385,7 @@
     {
       "store": "discexpress",
       "rawName": "Slammer Classic Blend Sockibomb",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/slammer-classic-blend",
       "inStock": false
     },
@@ -10420,7 +10434,7 @@
     {
       "store": "discexpress",
       "rawName": "Paul McBeth Trucker Hat",
-      "price": 335,
+      "price": 336,
       "url": "https://www.discexpress.se/products/paul-mcbeth-trucker-hat",
       "inStock": false
     },
@@ -10434,14 +10448,14 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4320,
+      "price": 4325,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Trainer Lite Carry Bag",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/trainer-lite-carry-bag",
       "inStock": true
     },
@@ -10462,7 +10476,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart",
-      "price": 2880,
+      "price": 2883,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart",
       "inStock": false
     },
@@ -10504,7 +10518,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - Apex XL",
-      "price": 959,
+      "price": 960,
       "url": "https://www.discexpress.se/products/prodigy-apex-xl",
       "inStock": false
     },
@@ -10518,7 +10532,7 @@
     {
       "store": "discexpress",
       "rawName": "Stratosphere Wing It Disc Golf",
-      "price": 181,
+      "price": 182,
       "url": "https://www.discexpress.se/products/stratosphere-wing-it-disc-golf",
       "inStock": false
     },
@@ -10567,7 +10581,7 @@
     {
       "store": "discexpress",
       "rawName": "Griffon U-Line Durable",
-      "price": 133,
+      "price": 134,
       "url": "https://www.discexpress.se/products/griffon-u-line-durable",
       "inStock": false
     },
@@ -10581,7 +10595,7 @@
     {
       "store": "discexpress",
       "rawName": "Glove Grips",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/glove-grips",
       "inStock": true
     },
@@ -10595,21 +10609,21 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack LG Bag  (Only Insert Bag)",
-      "price": 1343,
+      "price": 1345,
       "url": "https://www.discexpress.se/products/zuca-trekker-lg-bag",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Bag (Only Insert Bag)",
-      "price": 1151,
+      "price": 1153,
       "url": "https://www.discexpress.se/products/zuca-trekker-bag",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart Fenders",
-      "price": 575,
+      "price": 576,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart-fenders",
       "inStock": true
     },
@@ -10651,14 +10665,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4416,
+      "price": 4421,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2496,
+      "price": 2499,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -10672,14 +10686,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Saddle Bag Set for All-Terrain",
-      "price": 767,
+      "price": 768,
       "url": "https://www.discexpress.se/products/saddle-bag-set",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Putter Pouch",
-      "price": 431,
+      "price": 432,
       "url": "https://www.discexpress.se/products/putter-pouch",
       "inStock": false
     },
@@ -10700,7 +10714,7 @@
     {
       "store": "discexpress",
       "rawName": "Disc Jockey Bluetooth Speaker",
-      "price": 1632,
+      "price": 1633,
       "url": "https://www.discexpress.se/products/disc-jockey-bluetooth-speaker",
       "inStock": true
     },
@@ -10721,14 +10735,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart LG",
-      "price": 3264,
+      "price": 3268,
       "url": "https://www.discexpress.se/products/backpack-cart-lg",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart and Insert Bag",
-      "price": 4032,
+      "price": 4037,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-backpack-cart-with-insert",
       "inStock": true
     },
@@ -10784,21 +10798,21 @@
     {
       "store": "discexpress",
       "rawName": "Latitude 64 - Swift Bag Hex",
-      "price": 431,
+      "price": 432,
       "url": "https://www.discexpress.se/products/latitude-64-swift-bag",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Upper Park The Trainer",
-      "price": 527,
+      "price": 528,
       "url": "https://www.discexpress.se/products/upper-park-the-trainer",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Upper Park The Pinch Pro",
-      "price": 959,
+      "price": 960,
       "url": "https://www.discexpress.se/products/upper-park-the-pinch",
       "inStock": false
     },
@@ -10819,14 +10833,14 @@
     {
       "store": "discexpress",
       "rawName": "Westside Discs - Refuge Backpack",
-      "price": 479,
+      "price": 480,
       "url": "https://www.discexpress.se/products/refuge-backpack-westside-discs",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Prodigy Putter Pocket",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/prodigy-putter-pocket",
       "inStock": false
     },
@@ -10847,7 +10861,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - BP-2 V3",
-      "price": 863,
+      "price": 864,
       "url": "https://www.discexpress.se/products/prodigy-bp-2-v2",
       "inStock": false
     },
@@ -10889,7 +10903,7 @@
     {
       "store": "discexpress",
       "rawName": "M Model US ACE Base Grip",
-      "price": 85,
+      "price": 86,
       "url": "https://www.discexpress.se/products/m-model-us-ace-base-grip",
       "inStock": false
     },
@@ -10903,7 +10917,7 @@
     {
       "store": "discexpress",
       "rawName": "FPC 5-Panel",
-      "price": 335,
+      "price": 336,
       "url": "https://www.discexpress.se/products/flying-plate-5-panel",
       "inStock": true
     },
@@ -10987,7 +11001,7 @@
     {
       "store": "discexpress",
       "rawName": "Crazy Caddy Game",
-      "price": 258,
+      "price": 259,
       "url": "https://www.discexpress.se/products/crazy-caddy-game",
       "inStock": false
     },
@@ -11008,7 +11022,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - Practice Bag V2 (2020 Model)",
-      "price": 335,
+      "price": 336,
       "url": "https://www.discexpress.se/products/practice-bag-v2",
       "inStock": false
     },
@@ -11029,7 +11043,7 @@
     {
       "store": "discexpress",
       "rawName": "Marshal Classic",
-      "price": 133,
+      "price": 134,
       "url": "https://www.discexpress.se/products/marshal-classic",
       "inStock": false
     },
@@ -11057,14 +11071,14 @@
     {
       "store": "discexpress",
       "rawName": "Friction Warm Pair",
-      "price": 402,
+      "price": 403,
       "url": "https://www.discexpress.se/products/friction-warm-pair",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Friction 3 Ultimate Frisbee Gloves Pair",
-      "price": 383,
+      "price": 384,
       "url": "https://www.discexpress.se/products/friction-3-ultimate-frisbee-gloves",
       "inStock": true
     },
@@ -11232,91 +11246,91 @@
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Proto Glow Moondust Roc",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/innova-roc",
       "inStock": true
     },
@@ -11470,203 +11484,203 @@
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "DX Aviar Classic",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/innova-aviar-classic",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Special Blend Z Captain's Raptor",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-captains-raptor",
       "inStock": true
     },
@@ -11722,56 +11736,56 @@
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
@@ -12044,112 +12058,112 @@
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Big Z Nebula",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/discraft-nebula",
       "inStock": true
     },
@@ -12233,28 +12247,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 238,
+      "price": 239,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
@@ -12338,21 +12352,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "K1 Glow Älva",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/kastaplast-älva",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "K1 Glow Älva",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/kastaplast-älva",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "K1 Glow Älva",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/kastaplast-älva",
       "inStock": true
     },
@@ -14018,49 +14032,49 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
@@ -14116,203 +14130,203 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
@@ -14466,77 +14480,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
@@ -14557,28 +14571,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model S",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-s",
       "inStock": true
     },
@@ -14879,315 +14893,315 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
@@ -15341,77 +15355,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow P Model US",
-      "price": 140,
+      "price": 141,
       "url": "https://rocketdiscs.com/prodigy-p-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
@@ -15446,14 +15460,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
@@ -15475,132 +15489,6 @@
       "store": "rocketdiscs",
       "rawName": "Vex Expanse",
       "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Vex Expanse",
-      "price": 282,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
-      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Parallel Expanse",
-      "price": 260,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
@@ -15670,329 +15558,455 @@
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Expanse",
-      "price": 260,
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Vex Expanse",
+      "price": 282,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
+      "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
+      "inStock": true
+    },
+    {
+      "store": "rocketdiscs",
+      "rawName": "Parallel Expanse",
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-expanse",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "TSA Glow Nuance",
-      "price": 249,
+      "price": 250,
       "url": "https://rocketdiscs.com/thought-space-athletics-nuance",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Vex Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Parallel Persona",
-      "price": 260,
+      "price": 261,
       "url": "https://rocketdiscs.com/thought-space-athletics-persona",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 151,
+      "price": 152,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 151,
+      "price": 152,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 151,
+      "price": 152,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 151,
+      "price": 152,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
@@ -16195,21 +16209,21 @@
     {
       "store": "ugglans",
       "rawName": "Paul McBeth x GRIPeq MB-G3",
-      "price": 2112,
+      "price": 2114,
       "url": "https://ugglansdiscgolf.se/products/paul-mcbeth-x-gripeq-mb-g3",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Zero Medium Caltrop - Special Edition",
-      "price": 133,
+      "price": 134,
       "url": "https://ugglansdiscgolf.se/products/zero-medium-caltrop-special-edition",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Opto Hex Raketen - Special Edition",
-      "price": 181,
+      "price": 182,
       "url": "https://ugglansdiscgolf.se/products/opto-hex-raketen-special-edition",
       "inStock": true
     },
@@ -16223,7 +16237,7 @@
     {
       "store": "ugglans",
       "rawName": "Handduk + Magnetfäste - PAKET",
-      "price": 181,
+      "price": 182,
       "url": "https://ugglansdiscgolf.se/products/handduk-magnetfaste-paket",
       "inStock": true
     },
@@ -16251,7 +16265,7 @@
     {
       "store": "ugglans",
       "rawName": "Ugglans Backpack",
-      "price": 431,
+      "price": 432,
       "url": "https://ugglansdiscgolf.se/products/ugglans-backpack",
       "inStock": true
     },
@@ -16293,14 +16307,14 @@
     {
       "store": "ugglans",
       "rawName": "Discmania Tour Bag",
-      "price": 1920,
+      "price": 1922,
       "url": "https://ugglansdiscgolf.se/products/discmania-tour-bag",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Discmania Fanatic Sky bag",
-      "price": 959,
+      "price": 960,
       "url": "https://ugglansdiscgolf.se/products/discmania-fanatic-sky-bag",
       "inStock": false
     },
@@ -16335,35 +16349,35 @@
     {
       "store": "ugglans",
       "rawName": "Axiom Premium Starter Kit",
-      "price": 479,
+      "price": 480,
       "url": "https://ugglansdiscgolf.se/products/axiom-premium-starter-kit",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Kastaplast Hiva Messenger Bag 2.0 Mint colour on visible seams",
-      "price": 575,
+      "price": 576,
       "url": "https://ugglansdiscgolf.se/products/kastaplast-hiva-messenger-bag",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Ugglans Doubles - Ultuna 6/9",
-      "price": 672,
+      "price": 673,
       "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-uspastorp-6-9-kopia",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Ugglans Doubles - Bockarp 13/9",
-      "price": 672,
+      "price": 673,
       "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-bockarp-13-9",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Ugglans Doubles - Ymer 20/9",
-      "price": 672,
+      "price": 673,
       "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-ymer-20-9",
       "inStock": true
     },
@@ -16412,7 +16426,7 @@
     {
       "store": "ugglans",
       "rawName": "Luxury E5 Backpack",
-      "price": 1920,
+      "price": 1922,
       "url": "https://ugglansdiscgolf.se/products/luxury-e5-backpack",
       "inStock": true
     },
@@ -16426,21 +16440,21 @@
     {
       "store": "ugglans",
       "rawName": "Streamline Voyager Pro Bag",
-      "price": 2112,
+      "price": 2114,
       "url": "https://ugglansdiscgolf.se/products/streamline-voyager-bag",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Axiom Voyager Pro Bag",
-      "price": 2112,
+      "price": 2114,
       "url": "https://ugglansdiscgolf.se/products/axiom-voyager-bag",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "MVP Voyager Pro",
-      "price": 2112,
+      "price": 2114,
       "url": "https://ugglansdiscgolf.se/products/voyager-pro",
       "inStock": true
     },
@@ -16461,14 +16475,14 @@
     {
       "store": "ugglans",
       "rawName": "Voyager Lite",
-      "price": 1151,
+      "price": 1153,
       "url": "https://ugglansdiscgolf.se/products/voyager-lite",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Anthony Barela Signature Series AX6",
-      "price": 3456,
+      "price": 3460,
       "url": "https://ugglansdiscgolf.se/products/anthony-barela-signature-series-ax6",
       "inStock": false
     },
@@ -16482,21 +16496,21 @@
     {
       "store": "ugglans",
       "rawName": "Ugglans Isolerade Vattenflaska (0.5L)",
-      "price": 181,
+      "price": 182,
       "url": "https://ugglansdiscgolf.se/products/ugglans-isolerade-vattenflaska-0-5l",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "MVP Beaker Bag",
-      "price": 354,
+      "price": 355,
       "url": "https://ugglansdiscgolf.se/products/mvp-beaker-bag",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Razor Claw Kyle Klein Signature Series Swirl P-Line P4",
-      "price": 210,
+      "price": 211,
       "url": "https://ugglansdiscgolf.se/products/razor-claw-kyle-klein-signature-series-swirl-p-line-p4",
       "inStock": true
     },
@@ -16517,7 +16531,7 @@
     {
       "store": "ugglans",
       "rawName": "Magnofly för Framtid & Frid 2",
-      "price": 335,
+      "price": 336,
       "url": "https://ugglansdiscgolf.se/products/magnofly-for-framtid",
       "inStock": true
     },
@@ -16566,21 +16580,21 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Odin",
-      "price": 2688,
+      "price": 2691,
       "url": "https://ugglansdiscgolf.se/products/sigr-odin",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2304,
+      "price": 2306,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "SIGR Loke",
-      "price": 671,
+      "price": 672,
       "url": "https://ugglansdiscgolf.se/products/sigr-loke",
       "inStock": true
     },
@@ -16622,14 +16636,14 @@
     {
       "store": "ugglans",
       "rawName": "Framtid",
-      "price": 3456,
+      "price": 3460,
       "url": "https://ugglansdiscgolf.se/products/framtid",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "European Birdies - Frid 2",
-      "price": 4321,
+      "price": 4326,
       "url": "https://ugglansdiscgolf.se/products/frid-2-european-birdie-turkos",
       "inStock": false
     },
@@ -16678,21 +16692,21 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Backpack 1",
-      "price": 1055,
+      "price": 1057,
       "url": "https://ugglansdiscgolf.se/products/prodigy-bp1",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Prodigy Apex XL",
-      "price": 2391,
+      "price": 2394,
       "url": "https://ugglansdiscgolf.se/products/prodigy-apex-xl",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Marshal Classic Blend",
-      "price": 133,
+      "price": 134,
       "url": "https://ugglansdiscgolf.se/products/marshal-classic-blend",
       "inStock": true
     },
@@ -16734,21 +16748,21 @@
     {
       "store": "ugglans",
       "rawName": "Grip G2",
-      "price": 1632,
+      "price": 1633,
       "url": "https://ugglansdiscgolf.se/products/grip-g2-coal",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Grip Bx3",
-      "price": 2880,
+      "price": 2883,
       "url": "https://ugglansdiscgolf.se/products/grip-bx3",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Grip AX 6",
-      "price": 3456,
+      "price": 3460,
       "url": "https://ugglansdiscgolf.se/products/grip-ax-6",
       "inStock": true
     },
@@ -16776,14 +16790,14 @@
     {
       "store": "ugglans",
       "rawName": "Ugglans Magnetfäste för handduk",
-      "price": 85,
+      "price": 86,
       "url": "https://ugglansdiscgolf.se/products/ugglans-magnet",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Ugglans Handduk med karbinhake",
-      "price": 133,
+      "price": 134,
       "url": "https://ugglansdiscgolf.se/products/ugglans-handuk",
       "inStock": true
     },
@@ -16811,28 +16825,28 @@
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Anthracite black",
-      "price": 335,
+      "price": 336,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-anthracite-black/",
       "inStock": true
     },
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Tour blue",
-      "price": 335,
+      "price": 336,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-tour-blue/",
       "inStock": true
     },
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Deep Red",
-      "price": 335,
+      "price": 336,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-deep-red/",
       "inStock": true
     },
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Cloud White",
-      "price": 335,
+      "price": 336,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-cloud-white/",
       "inStock": true
     },
@@ -16860,7 +16874,7 @@
     {
       "store": "discace",
       "rawName": "Innova Excursion Pack",
-      "price": 767,
+      "price": 768,
       "url": "https://discaceofsweden.com/produkt/innova-excursion-pack/",
       "inStock": true
     },
