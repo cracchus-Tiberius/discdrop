@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T04:59:46.097Z",
+  "generated": "2026-10-03T04:59:41.736Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -13,7 +13,7 @@
       "price": 2799,
       "reason": "above-max",
       "url": "https://hyzershop.no/products/odin",
-      "lastScraped": "2026-10-02T04:43:01.873Z"
+      "lastScraped": "2026-10-03T04:43:46.231Z"
     },
     {
       "discId": "mvp-shift",
@@ -22,7 +22,7 @@
       "price": 2483,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-10-02T04:50:36.144Z"
+      "lastScraped": "2026-10-03T04:50:57.776Z"
     },
     {
       "discId": "streamline-range",
@@ -31,7 +31,7 @@
       "price": 958,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-10-02T04:50:36.144Z"
+      "lastScraped": "2026-10-03T04:50:57.776Z"
     },
     {
       "discId": "latitude-core",
@@ -40,7 +40,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-10-02T04:49:52.392Z"
+      "lastScraped": "2026-10-03T04:50:10.669Z"
     },
     {
       "discId": "latitude-core",
@@ -49,7 +49,7 @@
       "price": 729,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
-      "lastScraped": "2026-10-02T04:49:56.487Z"
+      "lastScraped": "2026-10-03T04:50:14.781Z"
     },
     {
       "discId": "discraft-raptor",
@@ -58,7 +58,7 @@
       "price": 659,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
-      "lastScraped": "2026-10-02T04:49:56.487Z"
+      "lastScraped": "2026-10-03T04:50:14.781Z"
     },
     {
       "discId": "innova-birdie",
@@ -67,7 +67,7 @@
       "price": 47,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-10-02T04:50:36.144Z"
+      "lastScraped": "2026-10-03T04:50:57.776Z"
     }
   ]
 }
