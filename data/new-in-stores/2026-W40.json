@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791003057776,
+      "firstSeenMs": 1791094593895,
       "price": 184,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791003057776,
+      "firstSeenMs": 1791094593895,
       "price": 184,
       "stores": [
         {
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1791003025751,
+      "firstSeenMs": 1791094564027,
       "price": 205,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1791003025751,
+      "firstSeenMs": 1791094564027,
       "price": 205,
       "stores": [
         {
@@ -78,6 +78,63 @@
           "storeName": "NyDisk",
           "price": 205,
           "url": "https://nydisk.no/products/dynamic-discs-lucid-x-chameleon-raider-ricky-wysocki"
+        }
+      ]
+    },
+    {
+      "discId": "innova-firefly",
+      "name": "Firefly",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "R-Pro",
+      "edition": "2025",
+      "firstSeenMs": 1791094479723,
+      "price": 248,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 248,
+          "url": "https://frisbeebutikken.no/products/r-pro-proto-glow-firefly-edgc-2025"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-archive",
+      "name": "Archive",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-release",
+      "plastic": "400",
+      "edition": "Isaac Robinson",
+      "firstSeenMs": 1791094141960,
+      "price": 275,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 275,
+          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
+        }
+      ]
+    },
+    {
+      "discId": "alfa-fjord",
+      "name": "Fjord",
+      "brand": "Alfa",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Chrome",
+      "edition": "Limited Edition",
+      "firstSeenMs": 1791094141960,
+      "price": 294,
+      "stores": [
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 294,
+          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
         }
       ]
     },
@@ -97,44 +154,6 @@
           "storeName": "Krokhol Disc Golf Shop",
           "price": 228,
           "url": "https://www.krokholdgs.no/products/proline-torrent"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-archive",
-      "name": "Archive",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-release",
-      "plastic": "400",
-      "edition": "Isaac Robinson",
-      "firstSeenMs": 1791002626231,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
-        }
-      ]
-    },
-    {
-      "discId": "alfa-fjord",
-      "name": "Fjord",
-      "brand": "Alfa",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Chrome",
-      "edition": "Limited Edition",
-      "firstSeenMs": 1791002626231,
-      "price": 294,
-      "stores": [
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 294,
-          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
         }
       ]
     },
@@ -185,12 +204,12 @@
       "plastic": "400 Ultra Soft",
       "edition": null,
       "firstSeenMs": 1790830281590,
-      "price": 261,
+      "price": 260,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 261,
+          "price": 260,
           "url": "https://www.discexpress.se/products/a2-400-ultra-soft"
         }
       ]
@@ -204,12 +223,12 @@
       "plastic": "400 Ultra Soft",
       "edition": null,
       "firstSeenMs": 1790830281590,
-      "price": 261,
+      "price": 260,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 261,
+          "price": 260,
           "url": "https://www.discexpress.se/products/d3-400-ultra-soft"
         }
       ]
@@ -280,7 +299,7 @@
       "plastic": "C-Line",
       "edition": "Niklas Anttila",
       "firstSeenMs": 1790680099807,
-      "price": 261,
+      "price": 260,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -297,13 +316,13 @@
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 261,
+          "price": 260,
           "url": "https://www.discexpress.se/products/drop-c-line-metalflake-niklas-anttila-creator-series"
         },
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
-          "price": 265,
+          "price": 264,
           "url": "https://ugglansdiscgolf.se/products/c-line-metalflake-drop-niklas-anttila-creator-series"
         }
       ]
@@ -580,7 +599,7 @@
       "type": "new-at-store",
       "plastic": "Gold Ice",
       "edition": null,
-      "firstSeenMs": 1791003025751,
+      "firstSeenMs": 1791094564027,
       "price": 294,
       "stores": [
         {
@@ -599,7 +618,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1791003025751,
+      "firstSeenMs": 1791094564027,
       "price": 224,
       "stores": [
         {
@@ -618,7 +637,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1791003014781,
+      "firstSeenMs": 1791094552870,
       "price": 235,
       "stores": [
         {
@@ -637,7 +656,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1791003014781,
+      "firstSeenMs": 1791094552870,
       "price": 339,
       "stores": [
         {
@@ -656,7 +675,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 275,
       "stores": [
         {
@@ -675,7 +694,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 214,
       "stores": [
         {
@@ -706,7 +725,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 214,
       "stores": [
         {
@@ -737,7 +756,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 214,
       "stores": [
         {
@@ -756,7 +775,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 315,
       "stores": [
         {
@@ -775,7 +794,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 255,
       "stores": [
         {
@@ -794,7 +813,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 275,
       "stores": [
         {
@@ -813,7 +832,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791002626231,
+      "firstSeenMs": 1791094141960,
       "price": 275,
       "stores": [
         {
@@ -821,6 +840,31 @@
           "storeName": "Disc Sør",
           "price": 275,
           "url": "https://discsor.no/product/reverb-400-kevin-jones/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-whale",
+      "name": "Whale",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1791002626231,
+      "price": 180,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 180,
+          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
         }
       ]
     },
@@ -859,31 +903,6 @@
           "storeName": "Starframe",
           "price": 249,
           "url": "https://www.starframe.no/products/spark-hurricane"
-        }
-      ]
-    },
-    {
-      "discId": "innova-whale",
-      "name": "Whale",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1790916181873,
-      "price": 180,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
-        },
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 180,
-          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
         }
       ]
     },
@@ -1211,5 +1230,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-10-03T04:59:41.425Z"
+  "generated": "2026-10-04T06:25:51.088Z"
 }
