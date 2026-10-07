@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06T05:00:06.099Z",
+  "generated": "2026-10-07T05:02:44.732Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -13,16 +13,16 @@
       "price": 2799,
       "reason": "above-max",
       "url": "https://hyzershop.no/products/odin",
-      "lastScraped": "2026-10-06T04:43:45.954Z"
+      "lastScraped": "2026-10-07T04:44:44.887Z"
     },
     {
       "discId": "mvp-shift",
       "discName": "Streamline Shift",
       "store": "discexpress",
-      "price": 2475,
+      "price": 2477,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-10-06T04:51:13.384Z"
+      "lastScraped": "2026-10-07T04:52:30.775Z"
     },
     {
       "discId": "streamline-range",
@@ -31,7 +31,7 @@
       "price": 955,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-10-06T04:51:13.384Z"
+      "lastScraped": "2026-10-07T04:52:30.775Z"
     },
     {
       "discId": "latitude-core",
@@ -40,7 +40,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-10-06T04:50:28.198Z"
+      "lastScraped": "2026-10-07T04:51:39.351Z"
     },
     {
       "discId": "latitude-core",
@@ -49,7 +49,7 @@
       "price": 729,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
-      "lastScraped": "2026-10-06T04:50:32.632Z"
+      "lastScraped": "2026-10-07T04:51:44.386Z"
     },
     {
       "discId": "discraft-raptor",
@@ -58,7 +58,7 @@
       "price": 659,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
-      "lastScraped": "2026-10-06T04:50:32.632Z"
+      "lastScraped": "2026-10-07T04:51:44.386Z"
     },
     {
       "discId": "innova-birdie",
@@ -67,7 +67,7 @@
       "price": 47,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-10-06T04:51:13.384Z"
+      "lastScraped": "2026-10-07T04:52:30.775Z"
     }
   ]
 }
