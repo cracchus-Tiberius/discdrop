@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791435162754,
+      "firstSeenMs": 1791521623836,
       "price": 184,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791435162754,
+      "firstSeenMs": 1791521623836,
       "price": 184,
       "stores": [
         {
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1791435132731,
+      "firstSeenMs": 1791521590536,
       "price": 205,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1791435132731,
+      "firstSeenMs": 1791521590536,
       "price": 205,
       "stores": [
         {
@@ -82,6 +82,63 @@
       ]
     },
     {
+      "discId": "mvp-watt",
+      "name": "Watt",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Cosmic Neutron",
+      "edition": null,
+      "firstSeenMs": 1791521545901,
+      "price": 269,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 269,
+          "url": "https://www.krokholdgs.no/products/cosmic-neutron-watt"
+        }
+      ]
+    },
+    {
+      "discId": "innova-xero",
+      "name": "Xero",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1791521187459,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-comet",
+      "name": "Comet",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "ESP FLX",
+      "edition": "2026",
+      "firstSeenMs": 1791521187459,
+      "price": 314,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 314,
+          "url": "https://wearediscgolf.no/produkt/esp-flx-comet-michael-johansen-2026/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-archive",
       "name": "Archive",
       "brand": "Prodigy",
@@ -89,7 +146,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 275,
       "stores": [
         {
@@ -108,7 +165,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 294,
       "stores": [
         {
@@ -116,6 +173,25 @@
           "storeName": "Disc Golf Dynasty",
           "price": 294,
           "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-drone",
+      "name": "Drone",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Z",
+      "edition": "2026",
+      "firstSeenMs": 1791521187459,
+      "price": 314,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 314,
+          "url": "https://wearediscgolf.no/produkt/z-midnight-drone-luke-taylor-2026/"
         }
       ]
     },
@@ -204,32 +280,19 @@
       "plastic": "Plasma",
       "edition": null,
       "firstSeenMs": 1791262273384,
-      "price": 279,
+      "price": 269,
       "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 269,
+          "url": "https://www.krokholdgs.no/products/plasma-rhythm"
+        },
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 279,
+          "price": 280,
           "url": "https://www.discexpress.se/products/rhythm-plasma-plc"
-        }
-      ]
-    },
-    {
-      "discId": "infinite-centurion",
-      "name": "Centurion",
-      "brand": "Infinite Discs",
-      "image": "",
-      "type": "new-release",
-      "plastic": "S-Blend",
-      "edition": null,
-      "firstSeenMs": 1791262180954,
-      "price": 379,
-      "stores": [
-        {
-          "store": "starframe",
-          "storeName": "Starframe",
-          "price": 379,
-          "url": "https://www.starframe.no/products/halo-s-blend-centurion-james-proctor"
         }
       ]
     },
@@ -280,7 +343,7 @@
       "plastic": "Fission",
       "edition": null,
       "firstSeenMs": 1791261825954,
-      "price": 298,
+      "price": 279,
       "stores": [
         {
           "store": "arcticdisc",
@@ -289,9 +352,15 @@
           "url": "https://arcticdisc.no/products/fission-dimension"
         },
         {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 279,
+          "url": "https://www.krokholdgs.no/products/fission-dimension"
+        },
+        {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 298,
+          "price": 299,
           "url": "https://www.discexpress.se/products/dimension-fission-plc"
         }
       ]
@@ -335,6 +404,25 @@
       ]
     },
     {
+      "discId": "latitude-anchor",
+      "name": "Anchor",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Gold Ice",
+      "edition": null,
+      "firstSeenMs": 1791521590536,
+      "price": 294,
+      "stores": [
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 294,
+          "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
+        }
+      ]
+    },
+    {
       "discId": "discraft-stratus",
       "name": "Stratus",
       "brand": "Discraft",
@@ -342,7 +430,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1791435132731,
+      "firstSeenMs": 1791521590536,
       "price": 224,
       "stores": [
         {
@@ -354,6 +442,44 @@
       ]
     },
     {
+      "discId": "mvp-echo",
+      "name": "Echo",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": "Silas Schultz",
+      "firstSeenMs": 1791521590536,
+      "price": 264,
+      "stores": [
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 264,
+          "url": "https://nydisk.no/products/streamline-neutron-echo-2026-world-championship-silas-schultz"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-roach",
+      "name": "Roach",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line",
+      "edition": null,
+      "firstSeenMs": 1791521578619,
+      "price": 229,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 229,
+          "url": "https://www.frisbeesor.no/produkt/putter-line-roach/"
+        }
+      ]
+    },
+    {
       "discId": "discraft-banger-gt",
       "name": "Banger GT",
       "brand": "Discraft",
@@ -361,7 +487,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1791435120255,
+      "firstSeenMs": 1791521578619,
       "price": 235,
       "stores": [
         {
@@ -380,7 +506,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1791435120255,
+      "firstSeenMs": 1791521578619,
       "price": 339,
       "stores": [
         {
@@ -392,183 +518,6 @@
       ]
     },
     {
-      "discId": "discraft-magnet",
-      "name": "Magnet",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line Soft",
-      "edition": null,
-      "firstSeenMs": 1791435088582,
-      "price": 178,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 178,
-          "url": "https://www.krokholdgs.no/products/putter-line-soft-magnet"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-ringer",
-      "name": "Ringer",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line Soft",
-      "edition": null,
-      "firstSeenMs": 1791435088582,
-      "price": 178,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 178,
-          "url": "https://www.krokholdgs.no/products/putter-line-soft-ringer"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-ringer-gt",
-      "name": "Ringer GT",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line Soft",
-      "edition": null,
-      "firstSeenMs": 1791435088582,
-      "price": 178,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 178,
-          "url": "https://www.krokholdgs.no/products/putter-line-soft-ringer-gt"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-buzzz-ss",
-      "name": "Buzzz SS",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Tour Series",
-      "edition": "2026",
-      "firstSeenMs": 1791435088582,
-      "price": 318,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 318,
-          "url": "https://www.krokholdgs.no/products/special-blend-buzzz-ss-ezra-robinson-tour-series-2026"
-        }
-      ]
-    },
-    {
-      "discId": "latitude-anchor",
-      "name": "Anchor",
-      "brand": "Latitude 64",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Gold Ice",
-      "edition": null,
-      "firstSeenMs": 1791435088582,
-      "price": 258,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 258,
-          "url": "https://www.krokholdgs.no/products/gold-ice-anchor"
-        },
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 294,
-          "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
-        }
-      ]
-    },
-    {
-      "discId": "latitude-brave",
-      "name": "Brave",
-      "brand": "Latitude 64",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Clear",
-      "edition": null,
-      "firstSeenMs": 1791435088582,
-      "price": 288,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 288,
-          "url": "https://www.krokholdgs.no/products/clear-brave"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-cigarra",
-      "name": "Cigarra",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Tour Series",
-      "edition": "Anthony Barela",
-      "firstSeenMs": 1791435088582,
-      "price": 318,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 318,
-          "url": "https://www.krokholdgs.no/products/special-blend-cigarra-anthony-barela-tour-series-2026-v2"
-        }
-      ]
-    },
-    {
-      "discId": "dga-tempest",
-      "name": "Tempest",
-      "brand": "DGA",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Spark",
-      "edition": null,
-      "firstSeenMs": 1791435088582,
-      "price": 238,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 238,
-          "url": "https://www.krokholdgs.no/products/spark-tempest"
-        }
-      ]
-    },
-    {
-      "discId": "axiom-insanity",
-      "name": "Insanity",
-      "brand": "Axiom",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": null,
-      "firstSeenMs": 1791435063788,
-      "price": 275,
-      "stores": [
-        {
-          "store": "starframe",
-          "storeName": "Starframe",
-          "price": 275,
-          "url": "https://www.starframe.no/products/neutron-insanity-new-stamp"
-        }
-      ]
-    },
-    {
       "discId": "innova-aviar",
       "name": "Aviar",
       "brand": "Innova",
@@ -576,8 +525,8 @@
       "type": "new-at-store",
       "plastic": "JK Pro",
       "edition": "Calvin Heimburg",
-      "firstSeenMs": 1791434734354,
-      "price": 209,
+      "firstSeenMs": 1791521187459,
+      "price": 214,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -592,16 +541,29 @@
           "url": "https://www.discgolfdynasty.no/products/kc-pro-aviar-calvin-heimburg-character-edition"
         },
         {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 209,
-          "url": "https://www.krokholdgs.no/products/kc-pro-aviar-calvin-heimburg-signature-edition"
-        },
-        {
           "store": "golfdiscer",
           "storeName": "GolfDiscer",
           "price": 228,
           "url": "https://golfdiscer.no/products/yeti-pro-aviar"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-focus",
+      "name": "Focus",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Jawbreaker",
+      "edition": "Ricky Wysocki",
+      "firstSeenMs": 1791521187459,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/jawbreaker-focus-ricky-wysocki/"
         }
       ]
     },
@@ -613,7 +575,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 275,
       "stores": [
         {
@@ -632,8 +594,8 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791434734354,
-      "price": 208,
+      "firstSeenMs": 1791521187459,
+      "price": 214,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -646,12 +608,6 @@
           "storeName": "Disc Golf Dynasty",
           "price": 214,
           "url": "https://www.discgolfdynasty.no/products/kc-pro-animal"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 208,
-          "url": "https://www.krokholdgs.no/products/kc-pro-animal"
         },
         {
           "store": "golfdiscer",
@@ -669,7 +625,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 214,
       "stores": [
         {
@@ -694,20 +650,14 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791434734354,
-      "price": 208,
+      "firstSeenMs": 1791521187459,
+      "price": 214,
       "stores": [
         {
           "store": "wearediscgolf",
           "storeName": "We Are Disc Golf",
           "price": 214,
           "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 208,
-          "url": "https://www.krokholdgs.no/products/kc-pro-lion"
         }
       ]
     },
@@ -719,7 +669,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 315,
       "stores": [
         {
@@ -738,7 +688,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 255,
       "stores": [
         {
@@ -757,7 +707,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 275,
       "stores": [
         {
@@ -776,7 +726,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791434734354,
+      "firstSeenMs": 1791521187459,
       "price": 275,
       "stores": [
         {
@@ -788,78 +738,21 @@
       ]
     },
     {
-      "discId": "axiom-proxy",
-      "name": "Proxy",
-      "brand": "Axiom",
+      "discId": "discraft-reaper",
+      "name": "Reaper",
+      "brand": "Discraft",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Neutron Soft",
+      "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1791348672594,
-      "price": 239,
+      "firstSeenMs": 1791521187459,
+      "price": 244,
       "stores": [
         {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 239,
-          "url": "https://www.krokholdgs.no/products/neutron-soft-proxy-classic"
-        }
-      ]
-    },
-    {
-      "discId": "mvp-reactor",
-      "name": "Reactor",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": null,
-      "firstSeenMs": 1791348672594,
-      "price": 259,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 259,
-          "url": "https://www.krokholdgs.no/products/neutron-reactor-2026"
-        }
-      ]
-    },
-    {
-      "discId": "mvp-paradox",
-      "name": "Paradox",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": null,
-      "firstSeenMs": 1791348672594,
-      "price": 259,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 259,
-          "url": "https://www.krokholdgs.no/products/neutron-paradox-2026"
-        }
-      ]
-    },
-    {
-      "discId": "kastaplast-krut",
-      "name": "Krut",
-      "brand": "Kastaplast",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "K1 Glow",
-      "edition": null,
-      "firstSeenMs": 1791348672594,
-      "price": 268,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 268,
-          "url": "https://www.krokholdgs.no/products/k1-glow-krut"
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/z-reaper-reissue/"
         }
       ]
     },
@@ -871,7 +764,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791348284887,
+      "firstSeenMs": 1791434734354,
       "price": 180,
       "stores": [
         {
@@ -885,12 +778,6 @@
           "storeName": "Disc Golf Dynasty",
           "price": 180,
           "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 208,
-          "url": "https://www.krokholdgs.no/products/kc-pro-whale"
         }
       ]
     },
@@ -969,27 +856,8 @@
           "url": "https://rocketdiscs.com/discmania-dd4"
         }
       ]
-    },
-    {
-      "discId": "mvp-trail",
-      "name": "Trail",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": null,
-      "firstSeenMs": 1791262202478,
-      "price": 259,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 259,
-          "url": "https://www.krokholdgs.no/products/neutron-trail-2026"
-        }
-      ]
     }
   ],
   "frozen": false,
-  "generated": "2026-10-08T05:02:42.493Z"
+  "generated": "2026-10-09T05:03:01.927Z"
 }

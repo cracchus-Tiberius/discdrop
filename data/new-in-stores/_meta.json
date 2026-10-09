@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-08T05:02:42.493Z",
+  "generated": "2026-10-09T05:03:01.927Z",
   "currentIsoWeek": "2026-W41",
   "summary": {
-    "totalSignals": 159,
+    "totalSignals": 138,
     "newDiscs": 0,
     "newReleases": 62,
-    "newAtStore": 97,
+    "newAtStore": 76,
     "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
@@ -37,7 +37,7 @@
       {
         "store": "ugglans",
         "date": "2026-07-26",
-        "count": 775
+        "count": 774
       },
       {
         "store": "starframe",
@@ -82,7 +82,7 @@
       {
         "store": "arcticdisc",
         "date": "2026-07-24",
-        "count": 154
+        "count": 153
       },
       {
         "store": "golfdiscer",
@@ -131,7 +131,7 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-10-08",
+        "date": "2026-10-09",
         "count": 63
       },
       {
@@ -153,18 +153,33 @@
         "store": "rocketdiscs",
         "date": "2026-08-21",
         "count": 33
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-10-09",
+        "count": 32
       }
     ],
     "suppressedWeeklyCapEvents": [
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W41",
-        "count": 74
+        "count": 71
       },
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W40",
-        "count": 69
+        "count": 68
+      },
+      {
+        "store": "arcticdisc",
+        "isoWeek": "2026-W41",
+        "count": 30
+      },
+      {
+        "store": "krokhol",
+        "isoWeek": "2026-W41",
+        "count": 27
       },
       {
         "store": "discexpress",
@@ -179,11 +194,6 @@
       {
         "store": "krokhol",
         "isoWeek": "2026-W40",
-        "count": 21
-      },
-      {
-        "store": "arcticdisc",
-        "isoWeek": "2026-W41",
         "count": 21
       }
     ]
