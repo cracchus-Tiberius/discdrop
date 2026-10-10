@@ -1,10 +1,95 @@
 {
-  "generated": "2026-10-09T05:03:01.460Z",
+  "generated": "2026-10-10T05:00:51.416Z",
   "summary": {
-    "priceChanges24h": 3,
+    "priceChanges24h": 6,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
-  "timeline": [],
-  "totalDrops": 0
+  "timeline": [
+    {
+      "discId": "axiom-aspect",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 328,
+      "newPrice": 229,
+      "pct": -30,
+      "date": "2026-10-10",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/axiom-aspect-premium-factory-misprint",
+      "history": [
+        328,
+        328,
+        328,
+        328,
+        328,
+        328,
+        229
+      ]
+    },
+    {
+      "discId": "mvp-trail",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 254,
+      "newPrice": 229,
+      "pct": -10,
+      "date": "2026-10-10",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/mvp-trail-premium-factory-misprint",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        254,
+        229
+      ]
+    },
+    {
+      "discId": "axiom-bokeh-lizotte",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 254,
+      "newPrice": 229,
+      "pct": -10,
+      "date": "2026-10-10",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/axiom-bokeh-premium-factory-misprint",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        254,
+        229
+      ]
+    },
+    {
+      "discId": "mvp-control",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": null,
+      "oldPrice": 254,
+      "newPrice": 229,
+      "pct": -10,
+      "date": "2026-10-10",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/mvp-control-premium-factory-misprint",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        254,
+        229
+      ]
+    }
+  ],
+  "totalDrops": 4
 }
