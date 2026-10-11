@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791607854493,
+      "firstSeenMs": 1791694350109,
       "price": 184,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791607854493,
+      "firstSeenMs": 1791694350109,
       "price": 184,
       "stores": [
         {
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1791607822095,
+      "firstSeenMs": 1791694311535,
       "price": 205,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1791607822095,
+      "firstSeenMs": 1791694311535,
       "price": 205,
       "stores": [
         {
@@ -78,6 +78,82 @@
           "storeName": "NyDisk",
           "price": 205,
           "url": "https://nydisk.no/products/dynamic-discs-lucid-x-chameleon-raider-ricky-wysocki"
+        }
+      ]
+    },
+    {
+      "discId": "dga-hurricane",
+      "name": "Hurricane",
+      "brand": "DGA",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Tour Series Swirl",
+      "edition": "2026",
+      "firstSeenMs": 1791694269947,
+      "price": 318,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 318,
+          "url": "https://www.krokholdgs.no/products/tour-series-swirl-hurricane-andrew-marwede-2026"
+        }
+      ]
+    },
+    {
+      "discId": "innova-xero",
+      "name": "Xero",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1791693889994,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-archive",
+      "name": "Archive",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-release",
+      "plastic": "400",
+      "edition": "Isaac Robinson",
+      "firstSeenMs": 1791693889994,
+      "price": 275,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 275,
+          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
+        }
+      ]
+    },
+    {
+      "discId": "alfa-fjord",
+      "name": "Fjord",
+      "brand": "Alfa",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Chrome",
+      "edition": "Limited Edition",
+      "firstSeenMs": 1791693889994,
+      "price": 294,
+      "stores": [
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 294,
+          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
         }
       ]
     },
@@ -139,6 +215,25 @@
       ]
     },
     {
+      "discId": "mvp-detour",
+      "name": "Detour",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": null,
+      "edition": null,
+      "firstSeenMs": 1791607777353,
+      "price": 229,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 229,
+          "url": "https://www.krokholdgs.no/products/mvp-detour--premium-factory-misprint"
+        }
+      ]
+    },
+    {
       "discId": "mvp-servo",
       "name": "Servo",
       "brand": "MVP",
@@ -173,6 +268,25 @@
           "storeName": "Krokhol Disc Golf Shop",
           "price": 229,
           "url": "https://www.krokholdgs.no/products/mvp-tesla-premium-factory-misprint"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-trail",
+      "name": "Trail",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": null,
+      "edition": null,
+      "firstSeenMs": 1791607777353,
+      "price": 229,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 229,
+          "url": "https://www.krokholdgs.no/products/mvp-trail-premium-factory-misprint"
         }
       ]
     },
@@ -234,25 +348,6 @@
       ]
     },
     {
-      "discId": "innova-xero",
-      "name": "Xero",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-release",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1791607407034,
-      "price": 214,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
-        }
-      ]
-    },
-    {
       "discId": "mvp-terra",
       "name": "Terra",
       "brand": "MVP",
@@ -268,44 +363,6 @@
           "storeName": "Arctic Disc",
           "price": 318,
           "url": "https://arcticdisc.no/products/fission-terra-project-lab-coat"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-archive",
-      "name": "Archive",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-release",
-      "plastic": "400",
-      "edition": "Isaac Robinson",
-      "firstSeenMs": 1791607407034,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
-        }
-      ]
-    },
-    {
-      "discId": "alfa-fjord",
-      "name": "Fjord",
-      "brand": "Alfa",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Chrome",
-      "edition": "Limited Edition",
-      "firstSeenMs": 1791607407034,
-      "price": 294,
-      "stores": [
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 294,
-          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
         }
       ]
     },
@@ -544,7 +601,7 @@
       "type": "new-at-store",
       "plastic": "Gold Ice",
       "edition": null,
-      "firstSeenMs": 1791607822095,
+      "firstSeenMs": 1791694311535,
       "price": 294,
       "stores": [
         {
@@ -563,7 +620,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1791607822095,
+      "firstSeenMs": 1791694311535,
       "price": 224,
       "stores": [
         {
@@ -582,7 +639,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1791607810377,
+      "firstSeenMs": 1791694300616,
       "price": 229,
       "stores": [
         {
@@ -601,7 +658,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1791607810377,
+      "firstSeenMs": 1791694300616,
       "price": 235,
       "stores": [
         {
@@ -620,7 +677,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1791607810377,
+      "firstSeenMs": 1791694300616,
       "price": 339,
       "stores": [
         {
@@ -632,21 +689,78 @@
       ]
     },
     {
-      "discId": "axiom-insanity",
-      "name": "Insanity",
-      "brand": "Axiom",
+      "discId": "discraft-cicada",
+      "name": "Cicada",
+      "brand": "Discraft",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Neutron",
+      "plastic": "Titanium",
       "edition": null,
-      "firstSeenMs": 1791607755094,
-      "price": 275,
+      "firstSeenMs": 1791694248444,
+      "price": 269,
       "stores": [
         {
           "store": "starframe",
           "storeName": "Starframe",
-          "price": 275,
-          "url": "https://www.starframe.no/products/neutron-insanity-new-stamp"
+          "price": 269,
+          "url": "https://www.starframe.no/products/titanium-cicada"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-cigarra",
+      "name": "Cigarra",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": null,
+      "edition": "Ledgestone",
+      "firstSeenMs": 1791694248444,
+      "price": 273,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 273,
+          "url": "https://www.starframe.no/products/ti-sparkle-cigarra-ledgestone"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-scorch",
+      "name": "Scorch",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Z Swirl",
+      "edition": null,
+      "firstSeenMs": 1791694248444,
+      "price": 339,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 339,
+          "url": "https://www.starframe.no/products/z-swirl-scorch-valerie-mandujano-2025"
+        }
+      ]
+    },
+    {
+      "discId": "dga-squall",
+      "name": "Squall",
+      "brand": "DGA",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Spark",
+      "edition": null,
+      "firstSeenMs": 1791694248444,
+      "price": 249,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 249,
+          "url": "https://www.starframe.no/products/spark-squall"
         }
       ]
     },
@@ -658,7 +772,7 @@
       "type": "new-at-store",
       "plastic": "JK Pro",
       "edition": "Calvin Heimburg",
-      "firstSeenMs": 1791607407034,
+      "firstSeenMs": 1791693889994,
       "price": 214,
       "stores": [
         {
@@ -689,7 +803,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791607407034,
+      "firstSeenMs": 1791693889994,
       "price": 275,
       "stores": [
         {
@@ -708,7 +822,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791607407034,
+      "firstSeenMs": 1791693889994,
       "price": 214,
       "stores": [
         {
@@ -739,7 +853,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791607407034,
+      "firstSeenMs": 1791693889994,
       "price": 214,
       "stores": [
         {
@@ -753,6 +867,164 @@
           "storeName": "Kvam DGS",
           "price": 248,
           "url": "https://kvamdgs.no/products/kc-pro-roc"
+        }
+      ]
+    },
+    {
+      "discId": "innova-lion",
+      "name": "Lion",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1791693889994,
+      "price": 214,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-fx-2",
+      "name": "FX-2",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "500",
+      "edition": null,
+      "firstSeenMs": 1791693889994,
+      "price": 315,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 315,
+          "url": "https://discsor.no/product/fx2-500-alden-harris/"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-shadowfax",
+      "name": "Shadowfax",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "400",
+      "edition": null,
+      "firstSeenMs": 1791693889994,
+      "price": 255,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 255,
+          "url": "https://discsor.no/product/shadowfax-400-proto-stamp/"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-stryder",
+      "name": "Stryder",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "400",
+      "edition": null,
+      "firstSeenMs": 1791693889994,
+      "price": 275,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 275,
+          "url": "https://discsor.no/product/airborne-stryder-400-proto-stamp/"
+        }
+      ]
+    },
+    {
+      "discId": "prodigy-reverb",
+      "name": "Reverb",
+      "brand": "Prodigy",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "400",
+      "edition": "Kevin Jones",
+      "firstSeenMs": 1791693889994,
+      "price": 275,
+      "stores": [
+        {
+          "store": "discsor",
+          "storeName": "Disc Sør",
+          "price": 275,
+          "url": "https://discsor.no/product/reverb-400-kevin-jones/"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-insanity",
+      "name": "Insanity",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1791607755094,
+      "price": 275,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 275,
+          "url": "https://www.starframe.no/products/neutron-insanity-new-stamp"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-glitch",
+      "name": "Glitch",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron Soft",
+      "edition": null,
+      "firstSeenMs": 1791607407034,
+      "price": 394,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 394,
+          "url": "https://wearediscgolf.no/produkt/neutron-soft-glitch-154g/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-whale",
+      "name": "Whale",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1791607407034,
+      "price": 180,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 180,
+          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
         }
       ]
     },
@@ -772,101 +1044,6 @@
           "storeName": "We Are Disc Golf",
           "price": 244,
           "url": "https://wearediscgolf.no/produkt/z-buzzz-os-new-stamp/"
-        }
-      ]
-    },
-    {
-      "discId": "innova-lion",
-      "name": "Lion",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1791607407034,
-      "price": 214,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-fx-2",
-      "name": "FX-2",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "500",
-      "edition": null,
-      "firstSeenMs": 1791607407034,
-      "price": 315,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 315,
-          "url": "https://discsor.no/product/fx2-500-alden-harris/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-shadowfax",
-      "name": "Shadowfax",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "400",
-      "edition": null,
-      "firstSeenMs": 1791607407034,
-      "price": 255,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 255,
-          "url": "https://discsor.no/product/shadowfax-400-proto-stamp/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-stryder",
-      "name": "Stryder",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "400",
-      "edition": null,
-      "firstSeenMs": 1791607407034,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/airborne-stryder-400-proto-stamp/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-reverb",
-      "name": "Reverb",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "400",
-      "edition": "Kevin Jones",
-      "firstSeenMs": 1791607407034,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/reverb-400-kevin-jones/"
         }
       ]
     },
@@ -924,31 +1101,6 @@
           "storeName": "We Are Disc Golf",
           "price": 214,
           "url": "https://wearediscgolf.no/produkt/jawbreaker-focus-ricky-wysocki/"
-        }
-      ]
-    },
-    {
-      "discId": "innova-whale",
-      "name": "Whale",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1791521187459,
-      "price": 180,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
-        },
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 180,
-          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
         }
       ]
     },
@@ -1106,5 +1258,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-10-10T05:00:51.875Z"
+  "generated": "2026-10-11T05:01:32.168Z"
 }

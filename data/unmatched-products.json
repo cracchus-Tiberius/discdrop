@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-10T04:59:33.986Z",
+  "lastUpdated": "2026-10-11T05:00:44.662Z",
   "products": [
     {
       "store": "discsport",
@@ -1623,13 +1623,6 @@
       "rawName": "We Are Forundringspakke 2025",
       "price": 549,
       "url": "https://wearediscgolf.no/produkt/we-are-forundringspakke-2025/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "MVP Add-On Module III",
-      "price": 699,
-      "url": "https://wearediscgolf.no/produkt/mvp-add-on-module-iii/",
       "inStock": true
     },
     {
@@ -6863,6 +6856,27 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "K1 Grind Älva",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/k1-grind-alva",
@@ -6870,9 +6884,30 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "rawName": "Special Blend Cicada - Missy Gannon V2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -6919,13 +6954,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Premium LASERi",
       "price": 160,
       "url": "https://frisbeebutikken.no/products/premium-laseri",
@@ -6947,30 +6975,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Terminator - First Run",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
+      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
       "inStock": true
     },
     {
@@ -6982,9 +6989,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Cicada - Missy Gannon V2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "rawName": "Z Terminator - First Run",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
       "inStock": true
     },
     {
@@ -8238,7 +8245,7 @@
       "rawName": "Thought Space Athletics Glow Nuance",
       "price": 279,
       "url": "https://nydisk.no/products/thought-space-athletics-glow-nuance",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "nydisk",
@@ -9559,7 +9566,7 @@
     {
       "store": "discexpress",
       "rawName": "Voyager - James Conrad Signature Edition",
-      "price": 1905,
+      "price": 1904,
       "url": "https://www.discexpress.se/products/voyager-james-conrad-signature-edition",
       "inStock": false
     },
@@ -9657,7 +9664,7 @@
     {
       "store": "discexpress",
       "rawName": "Safari Pack",
-      "price": 1148,
+      "price": 1147,
       "url": "https://www.discexpress.se/products/safari-ryggsack",
       "inStock": true
     },
@@ -9685,7 +9692,7 @@
     {
       "store": "discexpress",
       "rawName": "Lite Pro - Discmania",
-      "price": 1148,
+      "price": 1147,
       "url": "https://www.discexpress.se/products/lite-pro-discmania",
       "inStock": true
     },
@@ -9818,7 +9825,7 @@
     {
       "store": "discexpress",
       "rawName": "Luxury E5 Backpack",
-      "price": 1905,
+      "price": 1904,
       "url": "https://www.discexpress.se/products/core-pro-e5-backpack",
       "inStock": true
     },
@@ -10882,7 +10889,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Bag (Only Insert Bag)",
-      "price": 1148,
+      "price": 1147,
       "url": "https://www.discexpress.se/products/zuca-trekker-bag",
       "inStock": false
     },
@@ -10931,7 +10938,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4402,
+      "price": 4401,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
@@ -16846,7 +16853,7 @@
     {
       "store": "ugglans",
       "rawName": "Voyager Lite",
-      "price": 1148,
+      "price": 1147,
       "url": "https://ugglansdiscgolf.se/products/voyager-lite",
       "inStock": false
     },
