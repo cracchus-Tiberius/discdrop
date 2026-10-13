@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 183,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 183,
       "stores": [
         {
@@ -44,6 +44,25 @@
       ]
     },
     {
+      "discId": "westside-world",
+      "name": "World",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Tournament",
+      "edition": "2026",
+      "firstSeenMs": 1791867355964,
+      "price": 314,
+      "stores": [
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 314,
+          "url": "https://nydisk.no/products/westside-discs-tournament-x-rill-world-matt-orum-2026"
+        }
+      ]
+    },
+    {
       "discId": "dynamic-enforcer",
       "name": "Enforcer",
       "brand": "Dynamic Discs",
@@ -51,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1791781333514,
+      "firstSeenMs": 1791867355964,
       "price": 205,
       "stores": [
         {
@@ -70,7 +89,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1791781333514,
+      "firstSeenMs": 1791867355964,
       "price": 205,
       "stores": [
         {
@@ -82,6 +101,25 @@
       ]
     },
     {
+      "discId": "mvp-uplink",
+      "name": "Uplink",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Neutron",
+      "edition": "Project Lab Coat",
+      "firstSeenMs": 1791867272190,
+      "price": 278,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 278,
+          "url": "https://frisbeebutikken.no/products/neutron-uplink-project-labcoat"
+        }
+      ]
+    },
+    {
       "discId": "innova-xero",
       "name": "Xero",
       "brand": "Innova",
@@ -89,7 +127,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 214,
       "stores": [
         {
@@ -108,7 +146,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 275,
       "stores": [
         {
@@ -127,7 +165,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 294,
       "stores": [
         {
@@ -146,14 +184,33 @@
       "type": "new-at-store",
       "plastic": "Proton",
       "edition": null,
-      "firstSeenMs": 1791781364858,
-      "price": 270,
+      "firstSeenMs": 1791867386228,
+      "price": 269,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 270,
+          "price": 269,
           "url": "https://www.discexpress.se/products/watt-proton-plc"
+        }
+      ]
+    },
+    {
+      "discId": "westside-world",
+      "name": "World",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Tournament",
+      "edition": "Team Series",
+      "firstSeenMs": 1791867386228,
+      "price": 279,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 279,
+          "url": "https://www.discexpress.se/products/world-tournament-x-rill-matt-orum-team-series"
         }
       ]
     },
@@ -165,13 +222,13 @@
       "type": "new-at-store",
       "plastic": "Halo Champion Proto Glow",
       "edition": "Tour Series",
-      "firstSeenMs": 1791781364858,
-      "price": 375,
+      "firstSeenMs": 1791867386228,
+      "price": 374,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 375,
+          "price": 374,
           "url": "https://www.discexpress.se/products/gorgon-halo-champion-proto-glow-dennis-augustsson-copy"
         }
       ]
@@ -184,13 +241,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1791781364858,
-      "price": 260,
+      "firstSeenMs": 1791867386228,
+      "price": 259,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 259,
           "url": "https://www.discexpress.se/products/destiny-tournament-x-ring"
         }
       ]
@@ -203,13 +260,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1791781364858,
-      "price": 260,
+      "firstSeenMs": 1791867386228,
+      "price": 259,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 259,
           "url": "https://www.discexpress.se/products/prince-tournament-x"
         }
       ]
@@ -222,13 +279,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1791781364858,
-      "price": 260,
+      "firstSeenMs": 1791867386228,
+      "price": 259,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 259,
           "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
         }
       ]
@@ -241,13 +298,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1791781364858,
-      "price": 260,
+      "firstSeenMs": 1791867386228,
+      "price": 259,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 259,
           "url": "https://www.discexpress.se/products/sword-tournament-x"
         }
       ]
@@ -260,13 +317,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1791781364858,
-      "price": 260,
+      "firstSeenMs": 1791867386228,
+      "price": 259,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 259,
           "url": "https://www.discexpress.se/products/vip-x-orbit-ahti-westside-fishing"
         }
       ]
@@ -279,7 +336,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 126,
       "stores": [
         {
@@ -298,7 +355,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 126,
       "stores": [
         {
@@ -317,7 +374,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 126,
       "stores": [
         {
@@ -336,7 +393,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 126,
       "stores": [
         {
@@ -355,7 +412,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 126,
       "stores": [
         {
@@ -374,7 +431,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1791781364858,
+      "firstSeenMs": 1791867386228,
       "price": 126,
       "stores": [
         {
@@ -393,7 +450,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1791781333514,
+      "firstSeenMs": 1791867355964,
       "price": 224,
       "stores": [
         {
@@ -412,7 +469,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1791781333514,
+      "firstSeenMs": 1791867355964,
       "price": 314,
       "stores": [
         {
@@ -431,7 +488,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1791781322741,
+      "firstSeenMs": 1791867344622,
       "price": 229,
       "stores": [
         {
@@ -450,7 +507,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1791781322741,
+      "firstSeenMs": 1791867344622,
       "price": 235,
       "stores": [
         {
@@ -469,7 +526,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1791781322741,
+      "firstSeenMs": 1791867344622,
       "price": 339,
       "stores": [
         {
@@ -488,7 +545,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line Soft",
       "edition": null,
-      "firstSeenMs": 1791781291706,
+      "firstSeenMs": 1791867311460,
       "price": 178,
       "stores": [
         {
@@ -507,7 +564,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line Soft",
       "edition": null,
-      "firstSeenMs": 1791781291706,
+      "firstSeenMs": 1791867311460,
       "price": 178,
       "stores": [
         {
@@ -526,7 +583,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line Soft",
       "edition": null,
-      "firstSeenMs": 1791781291706,
+      "firstSeenMs": 1791867311460,
       "price": 178,
       "stores": [
         {
@@ -545,7 +602,7 @@
       "type": "new-at-store",
       "plastic": "Tour Series",
       "edition": "2026",
-      "firstSeenMs": 1791781291706,
+      "firstSeenMs": 1791867311460,
       "price": 318,
       "stores": [
         {
@@ -564,7 +621,7 @@
       "type": "new-at-store",
       "plastic": "Gold Ice",
       "edition": null,
-      "firstSeenMs": 1791781291706,
+      "firstSeenMs": 1791867311460,
       "price": 258,
       "stores": [
         {
@@ -582,6 +639,25 @@
       ]
     },
     {
+      "discId": "mvp-pixel",
+      "name": "Pixel",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Cosmic Electron",
+      "edition": null,
+      "firstSeenMs": 1791867288121,
+      "price": 219,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 219,
+          "url": "https://www.starframe.no/products/cosmic-electron-pixel"
+        }
+      ]
+    },
+    {
       "discId": "innova-aviar",
       "name": "Aviar",
       "brand": "Innova",
@@ -589,7 +665,7 @@
       "type": "new-at-store",
       "plastic": "JK Pro",
       "edition": "Calvin Heimburg",
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 209,
       "stores": [
         {
@@ -626,7 +702,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 275,
       "stores": [
         {
@@ -645,7 +721,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 208,
       "stores": [
         {
@@ -682,7 +758,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 214,
       "stores": [
         {
@@ -707,7 +783,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 208,
       "stores": [
         {
@@ -732,7 +808,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 315,
       "stores": [
         {
@@ -751,7 +827,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 255,
       "stores": [
         {
@@ -770,7 +846,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 275,
       "stores": [
         {
@@ -789,7 +865,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1791780907701,
+      "firstSeenMs": 1791866920340,
       "price": 275,
       "stores": [
         {
@@ -799,8 +875,39 @@
           "url": "https://discsor.no/product/reverb-400-kevin-jones/"
         }
       ]
+    },
+    {
+      "discId": "innova-whale",
+      "name": "Whale",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1791780907701,
+      "price": 180,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 180,
+          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
+        },
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 208,
+          "url": "https://www.krokholdgs.no/products/kc-pro-whale"
+        }
+      ]
     }
   ],
   "frozen": false,
-  "generated": "2026-10-12T05:11:55.894Z"
+  "generated": "2026-10-13T05:05:47.287Z"
 }

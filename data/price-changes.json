@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-12T05:11:55.425Z",
+  "generated": "2026-10-13T05:05:47.011Z",
   "summary": {
-    "priceChanges24h": 2,
+    "priceChanges24h": 4,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -15,15 +15,15 @@
       "newPrice": 218,
       "pct": -6,
       "date": "2026-10-12",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://frisbeebutikken.no/products/300-a5-ultra-soft",
       "history": [
-        232,
         232,
         232,
         233,
         232,
         232,
+        218,
         218
       ]
     },
@@ -42,28 +42,7 @@
         328,
         328,
         328,
-        328,
         229,
-        229,
-        229
-      ]
-    },
-    {
-      "discId": "mvp-trail",
-      "store": "krokhol",
-      "storeName": "Krokhol Disc Golf Shop",
-      "plastic": null,
-      "oldPrice": 254,
-      "newPrice": 229,
-      "pct": -10,
-      "date": "2026-10-10",
-      "bucket": "last-week",
-      "url": "https://www.krokholdgs.no/products/mvp-trail-premium-factory-misprint",
-      "history": [
-        254,
-        254,
-        254,
-        254,
         229,
         229,
         229
@@ -84,7 +63,7 @@
         254,
         254,
         254,
-        254,
+        229,
         229,
         229,
         229
@@ -105,7 +84,7 @@
         254,
         254,
         254,
-        254,
+        229,
         229,
         229,
         229
@@ -126,12 +105,12 @@
         244,
         244,
         244,
-        244,
+        229,
         229,
         229,
         229
       ]
     }
   ],
-  "totalDrops": 6
+  "totalDrops": 5
 }
