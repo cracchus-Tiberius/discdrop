@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-14T05:02:57.681Z",
+  "generated": "2026-10-15T04:57:19.108Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 14,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
@@ -18,10 +18,10 @@
       "bucket": "earlier-this-week",
       "url": "https://frisbeebutikken.no/products/300-a5-ultra-soft",
       "history": [
-        232,
         233,
         232,
         232,
+        218,
         218,
         218,
         218
@@ -40,7 +40,7 @@
       "url": "https://www.krokholdgs.no/products/axiom-aspect-premium-factory-misprint",
       "history": [
         328,
-        328,
+        229,
         229,
         229,
         229,
@@ -61,7 +61,7 @@
       "url": "https://www.krokholdgs.no/products/axiom-bokeh-premium-factory-misprint",
       "history": [
         254,
-        254,
+        229,
         229,
         229,
         229,
@@ -82,7 +82,7 @@
       "url": "https://www.krokholdgs.no/products/mvp-control-premium-factory-misprint",
       "history": [
         254,
-        254,
+        229,
         229,
         229,
         229,
@@ -103,7 +103,7 @@
       "url": "https://www.krokholdgs.no/products/axiom-trance-factory-misprint",
       "history": [
         244,
-        244,
+        229,
         229,
         229,
         229,
