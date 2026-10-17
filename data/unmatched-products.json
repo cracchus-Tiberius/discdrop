@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T04:59:40.448Z",
+  "lastUpdated": "2026-10-17T04:57:41.377Z",
   "products": [
     {
       "store": "discsport",
@@ -6751,13 +6751,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Kasta Set Moomin",
       "price": 599,
       "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
@@ -6779,6 +6772,13 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "NEO Function",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/neo-function",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "K1 Grind Älva",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/k1-grind-alva",
@@ -6786,30 +6786,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Premium LASERi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-laseri",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium MIDARi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-midari",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
       "inStock": true
     },
     {
@@ -6824,13 +6803,6 @@
       "rawName": "Special Blend Passion - Paige Pierce v2",
       "price": 279,
       "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
       "inStock": true
     },
     {
@@ -6891,9 +6863,44 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "Premium LASERi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-laseri",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium MIDARi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-midari",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Z Terminator - First Run",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
       "inStock": true
     },
     {
@@ -7143,6 +7150,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Color Glow D-Line Flex 3 Rainmaker",
+      "price": 300,
+      "url": "https://www.starframe.no/products/color-glow-d-line-flex-3-rainmaker",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Fuzion Mutiny",
       "price": 199,
       "url": "https://www.starframe.no/products/fuzion-mutiny",
@@ -7171,9 +7185,9 @@
     },
     {
       "store": "starframe",
-      "rawName": "Color Glow D-Line Flex 3 Rainmaker",
+      "rawName": "Color Glow D-Line Flex 1 Rainmaker",
       "price": 300,
-      "url": "https://www.starframe.no/products/color-glow-d-line-flex-3-rainmaker",
+      "url": "https://www.starframe.no/products/color-glow-d-line-flex-1-rainmaker",
       "inStock": true
     },
     {
@@ -7181,13 +7195,6 @@
       "rawName": "NERF Soft Flight Ultimate",
       "price": 199,
       "url": "https://www.starframe.no/products/nerf-soft-flight-ultimate",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Color Glow D-Line Flex 1 Rainmaker",
-      "price": 300,
-      "url": "https://www.starframe.no/products/color-glow-d-line-flex-1-rainmaker",
       "inStock": true
     },
     {
@@ -7213,16 +7220,16 @@
     },
     {
       "store": "starframe",
-      "rawName": "Latitude 64 Swift HEX Backpack",
-      "price": 499,
-      "url": "https://www.starframe.no/products/latitude-64-swift-hex-backpack",
+      "rawName": "Prominent Line Gain (First Run)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/prominent-line-gain-first-run",
       "inStock": true
     },
     {
       "store": "starframe",
-      "rawName": "Prominent Line Gain (First Run)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/prominent-line-gain-first-run",
+      "rawName": "Latitude 64 Swift HEX Backpack",
+      "price": 499,
+      "url": "https://www.starframe.no/products/latitude-64-swift-hex-backpack",
       "inStock": true
     },
     {
@@ -7248,6 +7255,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Major Line Skyway (First Run)",
+      "price": 219,
+      "url": "https://www.starframe.no/products/major-line-skyway-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Z Terminator (First Run)",
       "price": 209,
       "url": "https://www.starframe.no/products/z-terminator-first-run",
@@ -7258,13 +7272,6 @@
       "rawName": "Z Jawbreaker Captains Caliber (Seppo Paju)",
       "price": 289,
       "url": "https://www.starframe.no/products/z-jawbreaker-captains-caliber-seppo-paju",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Major Line Skyway (First Run)",
-      "price": 219,
-      "url": "https://www.starframe.no/products/major-line-skyway-first-run",
       "inStock": true
     },
     {
@@ -7283,16 +7290,16 @@
     },
     {
       "store": "starframe",
-      "rawName": "Electron Firm Autopilot (Eagle McMahon)",
-      "price": 249,
-      "url": "https://www.starframe.no/products/electron-firm-autopilot-eagle-mcmahon",
+      "rawName": "Crystal Line Snoopy",
+      "price": 199,
+      "url": "https://www.starframe.no/products/crystal-line-snoopy",
       "inStock": true
     },
     {
       "store": "starframe",
-      "rawName": "Crystal Line Snoopy",
-      "price": 199,
-      "url": "https://www.starframe.no/products/crystal-line-snoopy",
+      "rawName": "Electron Firm Autopilot (Eagle McMahon)",
+      "price": 249,
+      "url": "https://www.starframe.no/products/electron-firm-autopilot-eagle-mcmahon",
       "inStock": true
     },
     {
@@ -7325,6 +7332,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Major Line Skyway (Proto)",
+      "price": 219,
+      "url": "https://www.starframe.no/products/major-line-skyway-proto",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "K1 Hard Glow Idog (Jesse Nieminen Tour Series 2026)",
       "price": 279,
       "url": "https://www.starframe.no/products/k1-hard-glow-idog-jesse-nieminen-tour-series-2026",
@@ -7342,13 +7356,6 @@
       "rawName": "K1 Hard Glow Stål (Fritiof Fagergren Tour Series 2026)",
       "price": 279,
       "url": "https://www.starframe.no/products/k1-hard-glow-stal-fritiof-fagergren-tour-series-2026",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Major Line Skyway (Proto)",
-      "price": 219,
-      "url": "https://www.starframe.no/products/major-line-skyway-proto",
       "inStock": true
     },
     {
@@ -7374,6 +7381,20 @@
     },
     {
       "store": "starframe",
+      "rawName": "G-Blend Dynasty",
+      "price": 199,
+      "url": "https://www.starframe.no/products/g-blend-dynasty",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Hard Malm (First Run Tour Series)",
+      "price": 239,
+      "url": "https://www.starframe.no/products/k1-hard-malm-first-run-tour-series",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Premium Procyon",
       "price": 269,
       "url": "https://www.starframe.no/products/premium-procyon",
@@ -7395,16 +7416,9 @@
     },
     {
       "store": "starframe",
-      "rawName": "G-Blend Dynasty",
-      "price": 199,
-      "url": "https://www.starframe.no/products/g-blend-dynasty",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "K1 Hard Malm (First Run Tour Series)",
-      "price": 239,
-      "url": "https://www.starframe.no/products/k1-hard-malm-first-run-tour-series",
+      "rawName": "Glow Nuance",
+      "price": 279,
+      "url": "https://www.starframe.no/products/glow-nuance",
       "inStock": true
     },
     {
@@ -7419,13 +7433,6 @@
       "rawName": "Parallel Persona",
       "price": 269,
       "url": "https://www.starframe.no/products/parallel-persona",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Glow Nuance",
-      "price": 279,
-      "url": "https://www.starframe.no/products/glow-nuance",
       "inStock": true
     },
     {
@@ -8879,6 +8886,13 @@
     },
     {
       "store": "discexpress",
+      "rawName": "GRIPeq MB-G3 - Paul McBeth",
+      "price": 2180,
+      "url": "https://www.discexpress.se/products/paul-mcbeth-x-gripeq-mb-g3",
+      "inStock": true
+    },
+    {
+      "store": "discexpress",
       "rawName": "Ballista Pro Frost",
       "price": 199,
       "url": "https://www.discexpress.se/products/ballista-pro-frost",
@@ -9020,7 +9034,7 @@
     {
       "store": "discexpress",
       "rawName": "MVP Black Hole Event Horizon Training Net",
-      "price": 1523,
+      "price": 1522,
       "url": "https://www.discexpress.se/products/mvp-black-hole-event-horizon-training-net",
       "inStock": true
     },
@@ -9713,7 +9727,7 @@
     {
       "store": "discexpress",
       "rawName": "Discgolfkalender 2025 - 24 Överraskningar för Discgolfentusiasten",
-      "price": 2855,
+      "price": 2854,
       "url": "https://www.discexpress.se/products/discgolf-adventskalender-2025-24-overraskningar-for-discgolf-entusiasten",
       "inStock": false
     },
@@ -9944,7 +9958,7 @@
     {
       "store": "discexpress",
       "rawName": "Framtid",
-      "price": 2380,
+      "price": 2379,
       "url": "https://www.discexpress.se/products/framtid",
       "inStock": false
     },
@@ -10007,28 +10021,28 @@
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Putt",
-      "price": 3770,
+      "price": 3769,
       "url": "https://www.discexpress.se/products/tech-disc-putt",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Midrange",
-      "price": 3770,
+      "price": 3769,
       "url": "https://www.discexpress.se/products/tech-disc-midrange",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Distance Driver",
-      "price": 3770,
+      "price": 3769,
       "url": "https://www.discexpress.se/products/tech-disc-disctance-driver",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Fairway Driver",
-      "price": 3770,
+      "price": 3769,
       "url": "https://www.discexpress.se/products/tech-disc-fairway-driver",
       "inStock": false
     },
@@ -10136,6 +10150,13 @@
       "price": 856,
       "url": "https://www.discexpress.se/products/zuca-insert-bag-black-compact-disc-golf",
       "inStock": false
+    },
+    {
+      "store": "discexpress",
+      "rawName": "GRIPeq MB-PX1 - Paul McBeth",
+      "price": 3799,
+      "url": "https://www.discexpress.se/products/grip-eq-mb-px1",
+      "inStock": true
     },
     {
       "store": "discexpress",
@@ -10609,7 +10630,7 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4284,
+      "price": 4283,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
@@ -10637,7 +10658,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart",
-      "price": 2856,
+      "price": 2855,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart",
       "inStock": false
     },
@@ -10833,7 +10854,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2475,
+      "price": 2474,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -10854,7 +10875,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Putter Pouch",
-      "price": 428,
+      "price": 427,
       "url": "https://www.discexpress.se/products/putter-pouch",
       "inStock": false
     },
@@ -10959,7 +10980,7 @@
     {
       "store": "discexpress",
       "rawName": "Latitude 64 - Swift Bag Hex",
-      "price": 428,
+      "price": 427,
       "url": "https://www.discexpress.se/products/latitude-64-swift-bag",
       "inStock": true
     },
@@ -11260,77 +11281,77 @@
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Luster Max",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/innova-max",
       "inStock": true
     },
@@ -11358,35 +11379,35 @@
     {
       "store": "rocketdiscs",
       "rawName": "Star Fairway Disc",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-fairway-disc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Fairway Disc",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-fairway-disc",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Mid Disc 3",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-mid-disc-3",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Mid Disc 3",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-mid-disc-3",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Star Mid Disc 3",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-mid-disc-3",
       "inStock": true
     },
@@ -11519,112 +11540,112 @@
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Tour Series Galactic Aviar",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/innova-aviar",
       "inStock": true
     },
@@ -11869,56 +11890,56 @@
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "ESP Hallux",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-hallux",
       "inStock": true
     },
@@ -12100,21 +12121,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Jawbreaker Z FLX Glide",
-      "price": 265,
+      "price": 264,
       "url": "https://rocketdiscs.com/discraft-glide",
       "inStock": true
     },
@@ -12380,28 +12401,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 233,
-      "url": "https://rocketdiscs.com/discraft-wysocki-putter",
-      "inStock": true
-    },
-    {
-      "store": "rocketdiscs",
-      "rawName": "Discraft Prototype Putter Blend Ricky Wysocki Prototype Putter",
-      "price": 233,
+      "price": 232,
       "url": "https://rocketdiscs.com/discraft-wysocki-putter",
       "inStock": true
     },
@@ -12646,532 +12660,532 @@
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Classic Supreme Orbit Sockibomb Slammer",
-      "price": 180,
+      "price": 179,
       "url": "https://rocketdiscs.com/dynamic-discs-sockibomb-slammer",
       "inStock": true
     },
@@ -13395,28 +13409,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -13458,21 +13472,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -13500,7 +13514,7 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
@@ -13528,14 +13542,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
@@ -13556,14 +13570,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 131,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
@@ -16230,28 +16244,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 148,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 148,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 148,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 148,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
@@ -16398,14 +16412,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "Premium Sparkle Jokeri",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/prodiscus-jokeri",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Premium Sparkle Jokeri",
-      "price": 212,
+      "price": 211,
       "url": "https://rocketdiscs.com/prodiscus-jokeri",
       "inStock": true
     },
@@ -16510,7 +16524,7 @@
     {
       "store": "ugglans",
       "rawName": "Ugglans Backpack",
-      "price": 428,
+      "price": 427,
       "url": "https://ugglansdiscgolf.se/products/ugglans-backpack",
       "inStock": true
     },
@@ -16561,7 +16575,7 @@
       "rawName": "Discmania Fanatic Sky bag",
       "price": 951,
       "url": "https://ugglansdiscgolf.se/products/discmania-fanatic-sky-bag",
-      "inStock": false
+      "inStock": true
     },
     {
       "store": "ugglans",
@@ -16608,21 +16622,21 @@
     {
       "store": "ugglans",
       "rawName": "Ugglans Doubles - Ultuna 6/9",
-      "price": 667,
+      "price": 666,
       "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-uspastorp-6-9-kopia",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Ugglans Doubles - Bockarp 13/9",
-      "price": 667,
+      "price": 666,
       "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-bockarp-13-9",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Ugglans Doubles - Ymer 20/9",
-      "price": 667,
+      "price": 666,
       "url": "https://ugglansdiscgolf.se/products/ugglans-doubles-ymer-20-9",
       "inStock": true
     },
@@ -16888,7 +16902,7 @@
     {
       "store": "ugglans",
       "rawName": "European Birdies - Frid 2",
-      "price": 4285,
+      "price": 4284,
       "url": "https://ugglansdiscgolf.se/products/frid-2-european-birdie-turkos",
       "inStock": false
     },
@@ -17000,7 +17014,7 @@
     {
       "store": "ugglans",
       "rawName": "Grip Bx3",
-      "price": 2856,
+      "price": 2855,
       "url": "https://ugglansdiscgolf.se/products/grip-bx3",
       "inStock": true
     },
