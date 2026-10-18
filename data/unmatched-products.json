@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-17T04:57:41.377Z",
+  "lastUpdated": "2026-10-18T04:56:42.581Z",
   "products": [
     {
       "store": "discsport",
@@ -2208,13 +2208,6 @@
     },
     {
       "store": "wearediscgolf",
-      "rawName": "Brixton 2025 DGPT Starter Box",
-      "price": 449,
-      "url": "https://wearediscgolf.no/produkt/brixton-2025-dgpt-starter-box/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
       "rawName": "Special Blend Cigarra Anthony Barela 2026 v2",
       "price": 279,
       "url": "https://wearediscgolf.no/produkt/special-blend-cigarra-anthony-barela-2026-v2/",
@@ -3072,13 +3065,6 @@
       "rawName": "INNOVA EXCURSION BACKPACK",
       "price": 799,
       "url": "https://aceshop.no/product/innova-excursion-backpack/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "ALFA 2.0 ECO LINE DISKGOLF BAG",
-      "price": 599,
-      "url": "https://aceshop.no/product/alfa-2-0-eco-line-diskgolf-bag/",
       "inStock": true
     },
     {
@@ -6751,6 +6737,13 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Kasta Set Moomin",
       "price": 599,
       "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
@@ -6772,37 +6765,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "NEO Function",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/neo-function",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "K1 Grind Älva",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "ESP Hallux First Run",
       "price": 249,
       "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Cicada - Missy Gannon V2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
       "inStock": true
     },
     {
@@ -6828,13 +6793,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Ultrium Pyramid",
-      "price": 181,
-      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Ultrium SLAIDi",
       "price": 181,
       "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
@@ -6845,20 +6803,6 @@
       "rawName": "Ultrium Titan",
       "price": 181,
       "url": "https://frisbeebutikken.no/products/ultrium-titan",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
-      "price": 289,
-      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
       "inStock": true
     },
     {
@@ -6891,6 +6835,20 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "Special Blend Cicada - Missy Gannon V2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Z Terminator - First Run",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
@@ -6901,6 +6859,13 @@
       "rawName": "Special Blend Scorch - Valerie Mandujano",
       "price": 279,
       "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Pyramid",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
       "inStock": true
     },
     {
@@ -7545,6 +7510,13 @@
       "rawName": "Radiant Era",
       "price": 259,
       "url": "https://www.starframe.no/products/radant-era",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Radiant Interval",
+      "price": 259,
+      "url": "https://www.starframe.no/products/radiant-intervl",
       "inStock": true
     },
     {
@@ -10630,7 +10602,7 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4283,
+      "price": 4284,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
@@ -10854,7 +10826,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2474,
+      "price": 2475,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -16244,28 +16216,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 147,
+      "price": 148,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 147,
+      "price": 148,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 147,
+      "price": 148,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 147,
+      "price": 148,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },

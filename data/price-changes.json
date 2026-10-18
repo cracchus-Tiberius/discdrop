@@ -1,30 +1,30 @@
 {
-  "generated": "2026-10-17T04:58:01.568Z",
+  "generated": "2026-10-18T04:56:57.972Z",
   "summary": {
-    "priceChanges24h": 2,
+    "priceChanges24h": 0,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
   "timeline": [
     {
-      "discId": "prodigy-a5",
+      "discId": "mvp-particle",
       "store": "frisbeebutikken",
       "storeName": "Frisbeebutikken",
-      "plastic": "300",
-      "oldPrice": 232,
-      "newPrice": 218,
-      "pct": -6,
-      "date": "2026-10-12",
+      "plastic": "Particle Proton",
+      "oldPrice": 302,
+      "newPrice": 278,
+      "pct": -8,
+      "date": "2026-10-13",
       "bucket": "earlier-this-week",
-      "url": "https://frisbeebutikken.no/products/300-a5-ultra-soft",
+      "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
       "history": [
-        232,
-        218,
-        218,
-        218,
-        218,
-        218,
-        218
+        302,
+        278,
+        278,
+        278,
+        278,
+        278,
+        278
       ]
     }
   ],
