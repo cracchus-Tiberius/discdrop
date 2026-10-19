@@ -1,32 +1,10 @@
 {
-  "generated": "2026-10-18T04:56:57.972Z",
+  "generated": "2026-10-19T05:01:28.330Z",
   "summary": {
     "priceChanges24h": 0,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
-  "timeline": [
-    {
-      "discId": "mvp-particle",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": "Particle Proton",
-      "oldPrice": 302,
-      "newPrice": 278,
-      "pct": -8,
-      "date": "2026-10-13",
-      "bucket": "earlier-this-week",
-      "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
-      "history": [
-        302,
-        278,
-        278,
-        278,
-        278,
-        278,
-        278
-      ]
-    }
-  ],
-  "totalDrops": 1
+  "timeline": [],
+  "totalDrops": 0
 }
