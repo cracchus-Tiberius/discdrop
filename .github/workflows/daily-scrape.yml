@@ -218,7 +218,12 @@ jobs:
       # stays current no matter how long one store has been dead. Aceshop sat
       # 94 hours stale behind exactly that gap (2026-09-01..05) and was found
       # by a routine review, not by the pipeline.
+      # always(): the price-alerts step above can now fail the job on its own
+      # (an undeliverable alert must not pass silently). Without this, that
+      # failure would skip this check and the drift check below — hiding a dead
+      # store behind a dead mail credential.
       - name: Check per-store freshness
+        if: always()
         run: node scripts/check-store-freshness.js
 
       # Samples a few products per Shopify store and compares what we recorded
@@ -229,4 +234,5 @@ jobs:
       # listings by hand to notice. Last step, like the freshness check: it must
       # not hold up a deploy, only make the problem impossible to miss.
       - name: Check price drift against the stores
+        if: always()
         run: node scripts/check-price-drift.js

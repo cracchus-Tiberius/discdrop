@@ -213,6 +213,19 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   (not the SDK, for Workers-runtime compatibility). Model: claude-sonnet-5.
   Key: env.ANTHROPIC_API_KEY (set as a Cloudflare Pages environment variable/secret).
 - functions/api/alerts/ — price/back-in-stock alerts, reads/writes the `DB` D1 binding.
+- scripts/check-alerts.js reports three numbers (matched / delivered / failed)
+  and exits non-zero when a matched alert could not be delivered. It used to
+  report only deliveries, as "triggered", so a run where every send 401'd
+  printed "Triggered 0 alert(s)" and exited 0 — indistinguishable from a quiet
+  day. Confirmed 2026-10-20: an expired RESEND_API_KEY silently dropped two
+  genuine alerts. A failed alert is never deactivated, so the next run retries
+  it. The exit code matters because notifyOwner() goes through Resend with the
+  same key — when the key is what broke, the in-band warning cannot get out
+  either, and GitHub's own failure email is the only channel left. The two
+  checks after it in daily-scrape.yml carry `if: always()` so a dead mail
+  credential cannot hide a dead store.
+- Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
+  serve them) — see wrangler.toml for the D1 binding.
 - Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
   serve them) — see wrangler.toml for the D1 binding.
 
