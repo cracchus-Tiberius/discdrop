@@ -197,6 +197,20 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   CI before diagnosing — the runner and the laptop are not seeing the same
   site. The scraper now detects the captcha page and logs BLOCKED. Do not
   build around the captcha: it is the store declining datacenter bots.
+- A blocked store needs TWO entries, or it does damage in one of two ways.
+  `KNOWN_BLOCKED` in scripts/check-store-freshness.js stops the daily false
+  alarm (it reports BLOCK and a ::warning::, and no longer fails the run);
+  lib/price-freshness.ts stops the stale prices being shown. Discsport had
+  neither for six weeks: the check failed the run every single day — so a red
+  pipeline became the normal state, which is exactly the inattention that
+  check was written to end — while 1387 entries, 42 days old, still fed
+  "best price", /prisfall and the disc detail table. 140 discs were advertising
+  a price that no longer existed anywhere (westside-longbowman at 242 kr when
+  the real cheapest was 354). Listing a store in one place and not the other
+  gives you either a silent lie or an alarm nobody reads. Add to both, or
+  neither. If a blocked store starts answering again the check says so
+  (::notice::, "remove it from KNOWN_BLOCKED") — it does not quietly re-include
+  it.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.
@@ -233,8 +247,6 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   either, and GitHub's own failure email is the only channel left. The two
   checks after it in daily-scrape.yml carry `if: always()` so a dead mail
   credential cannot hide a dead store.
-- Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
-  serve them) — see wrangler.toml for the D1 binding.
 - Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
   serve them) — see wrangler.toml for the D1 binding.
 

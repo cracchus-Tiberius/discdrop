@@ -27,6 +27,29 @@ const path = require('path');
 // before — without waiting so long that a dead store goes unnoticed for days.
 const DEFAULT_MAX_AGE_HOURS = 36;
 
+// Stores we know are unreachable, and have decided not to fight. A store in
+// here is still reported every run, but as BLOCKED rather than STALE, and it
+// does not fail the build.
+//
+// This exists because an alarm that can never go green stops being an alarm.
+// Discsport's host began serving runner IPs a reCAPTCHA page on 2026-09-08
+// (CLAUDE.md, Scraper -> Discsport: it is the store declining datacenter
+// bots, and we are not building around it). The freshness check did its job
+// and failed the run every day for six weeks — by which point a daily red X
+// was the normal state of the pipeline, and the next store to die quietly
+// would have been just one more line in a log nobody reads any more. That is
+// the same inattention this check was written to end.
+//
+// Listing a store here is only half the answer: it stops the false alarm, it
+// does NOT stop the stale prices being shown. lib/price-freshness.ts is what
+// keeps them off the site. Add to both, or neither.
+const KNOWN_BLOCKED = {
+  discsport: {
+    since: '2026-09-08',
+    reason: 'discsport.se serves datacenter IPs a reCAPTCHA page; see CLAUDE.md (Scraper -> Discsport)',
+  },
+};
+
 function parseMaxAgeHours(argv) {
   const flag = argv.find((a) => a.startsWith('--max-age-hours='));
   if (!flag) return DEFAULT_MAX_AGE_HOURS;
@@ -70,38 +93,69 @@ function storeAges(snapshot, nowMs) {
   return rows.sort((a, b) => b.ageHours - a.ageHours);
 }
 
-function checkStoreFreshness(snapshot, { nowMs = Date.now(), maxAgeHours = DEFAULT_MAX_AGE_HOURS } = {}) {
+function checkStoreFreshness(
+  snapshot,
+  { nowMs = Date.now(), maxAgeHours = DEFAULT_MAX_AGE_HOURS, knownBlocked = KNOWN_BLOCKED } = {}
+) {
   const rows = storeAges(snapshot, nowMs);
-  return { rows, stale: rows.filter((r) => r.ageHours > maxAgeHours) };
+  const stale = rows.filter((r) => r.ageHours > maxAgeHours);
+  return {
+    rows,
+    // `stale` keeps its original meaning: everything past the threshold.
+    stale,
+    // Expected, already-triaged outages — reported, never fatal.
+    blocked: stale.filter((r) => knownBlocked[r.store]),
+    // What the check is actually for: a store that went quiet without us
+    // knowing why. Only these fail the run.
+    unexpected: stale.filter((r) => !knownBlocked[r.store]),
+    // A blocked store that started answering again. Worth saying out loud —
+    // the entry should come off the list, and off price-freshness's reckoning.
+    recovered: rows.filter((r) => knownBlocked[r.store] && r.ageHours <= maxAgeHours),
+  };
 }
 
 function main() {
   const maxAgeHours = parseMaxAgeHours(process.argv.slice(2));
   const snapshotPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
   const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
-  const { rows, stale } = checkStoreFreshness(snapshot, { maxAgeHours });
+  const { rows, blocked, unexpected, recovered } = checkStoreFreshness(snapshot, { maxAgeHours });
+
+  const label = (r) => {
+    if (r.ageHours <= maxAgeHours) return '  ok ';
+    return KNOWN_BLOCKED[r.store] ? 'BLOCK' : 'STALE';
+  };
 
   console.log(`Per-store freshness (threshold ${maxAgeHours}h), ${rows.length} stores:`);
   for (const r of rows) {
     const age = r.ageHours === Infinity ? 'no priced listings' : `${r.ageHours.toFixed(1)}h`;
-    console.log(`  ${r.ageHours > maxAgeHours ? 'STALE' : '  ok '}  ${r.store.padEnd(18)} ${age.padStart(18)}  ${String(r.entries).padStart(5)} entries`);
+    console.log(`  ${label(r)}  ${r.store.padEnd(18)} ${age.padStart(18)}  ${String(r.entries).padStart(5)} entries`);
   }
 
-  if (stale.length === 0) {
-    console.log(`\nAll ${rows.length} stores scraped within ${maxAgeHours}h.`);
+  for (const r of blocked) {
+    const { since, reason } = KNOWN_BLOCKED[r.store];
+    console.log(`::warning title=Blocked store: ${r.store}::${r.store} has been unreachable since ${since} (${r.ageHours.toFixed(1)}h stale). ${reason}. Its prices are hidden from the site by lib/price-freshness.ts, so this is expected and does not fail the run.`);
+  }
+
+  for (const r of recovered) {
+    console.log(`::notice title=Blocked store answering again: ${r.store}::${r.store} is listed as blocked but scraped ${r.ageHours.toFixed(1)}h ago. Remove it from KNOWN_BLOCKED in scripts/check-store-freshness.js.`);
+  }
+
+  if (unexpected.length === 0) {
+    const suffix = blocked.length ? ` (${blocked.length} known-blocked: ${blocked.map((r) => r.store).join(', ')})` : '';
+    console.log(`\nAll ${rows.length - blocked.length} reachable stores scraped within ${maxAgeHours}h${suffix}.`);
     return;
   }
 
-  for (const r of stale) {
+  for (const r of unexpected) {
     const detail = r.ageHours === Infinity
       ? 'has no priced listings at all — its scraper returned nothing'
       : `last scraped ${r.lastScraped} (${r.ageHours.toFixed(1)}h ago, threshold ${maxAgeHours}h)`;
-    console.log(`::error title=Stale store: ${r.store}::${r.store} ${detail}. Its prices are being shown on the live site as if current. Check that store's step in this run's log.`);
+    console.log(`::error title=Stale store: ${r.store}::${r.store} ${detail}. Check that store's step in this run's log.`);
   }
-  console.log(`::error::${stale.length} of ${rows.length} stores are stale: ${stale.map((r) => r.store).join(', ')}`);
+  console.log(`::error::${unexpected.length} of ${rows.length} stores are unexpectedly stale: ${unexpected.map((r) => r.store).join(', ')}`);
   process.exitCode = 1;
 }
 
-module.exports = { checkStoreFreshness, storeAges, DEFAULT_MAX_AGE_HOURS };
+module.exports = { checkStoreFreshness, storeAges, DEFAULT_MAX_AGE_HOURS, KNOWN_BLOCKED };
 
 if (require.main === module) main();
