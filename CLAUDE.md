@@ -85,6 +85,15 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
 - discs.js — source of truth for disc catalogue (685 discs, 22 brands)
 - scraped-prices.json — real store prices, updated by pnpm scrape
 - Only show prices from scraped-prices.json, never mock store data
+- Scraped entries older than MAX_PRICE_AGE_DAYS (7) are not shown at all —
+  lib/price-freshness.ts, applied in getScrapedPrice() and
+  getAllScrapedEntries(). Age is measured against the snapshot's own
+  `lastUpdated`, not wall-clock now: that keeps a static build deterministic,
+  and it means a dead cron ages every store together and filters nothing (the
+  site keeps serving its last good prices) while a single store falling behind
+  the others disappears on its own. Seven days, not the freshness check's 36h
+  — that one raises an alarm early, this one decides what a visitor sees, and
+  a store missing one or two runs must not have its catalogue vanish.
 - discs.js skal ALDRI inneholde priser. De bor utelukkende i
   scraped-prices.json. Katalogen hadde til 2026-09-07 håndskrevne stores[]-
   og priceHistory-rester fra seedingen på 17 disker — ingenting leste dem, så

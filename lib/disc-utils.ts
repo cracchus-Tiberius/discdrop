@@ -1,3 +1,4 @@
+import { isEntryCurrent as isEntryCurrentAt, MAX_PRICE_AGE_DAYS } from "./price-freshness";
 import {
   discs,
 } from "@/data/discs.js";
@@ -73,6 +74,25 @@ export const MIN_VALID_PRICE_NOK = 50;
 // file if a disc's price looks suspiciously absent.
 export const MAX_VALID_PRICE_NOK = 600;
 
+export { MAX_PRICE_AGE_DAYS };
+
+// Measured against the dataset's own lastUpdated rather than wall-clock now.
+// Two reasons. It keeps a static build deterministic — the same data file
+// always produces the same pages, whenever it is built. And it asks the right
+// question: "is this store stale relative to the rest of today's scrape?", not
+// "how long ago was this?". If the whole pipeline stops, every store ages
+// together and nothing is filtered — the site keeps serving its last good
+// prices instead of blanking itself, which is what scrape-freshness-alert.yml
+// is for. Only a store falling behind the others disappears.
+const PRICE_REFERENCE_MS = scrapedPrices.lastUpdated
+  ? new Date(scrapedPrices.lastUpdated as string).getTime()
+  : Date.now();
+
+/** Whether a scraped entry is recent enough to show. See lib/price-freshness.ts. */
+function isEntryCurrent(entry: { lastScraped?: string }): boolean {
+  return isEntryCurrentAt(entry, PRICE_REFERENCE_MS);
+}
+
 /**
  * Returns price/stock data from scraped-prices.json for a disc ID.
  * Price is landed cost in NOK: disc + mandatory shipping for international stores.
@@ -88,7 +108,8 @@ export function getScrapedPrice(discId: string): {
     return { price: null, inStockCount: 0, storeCount: 0 };
   }
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
-  const inStock = scraped.filter(
+  const current = scraped.filter((s) => isEntryCurrent(s));
+  const inStock = current.filter(
     (s) => s.inStock && s.price >= MIN_VALID_PRICE_NOK && s.price <= MAX_VALID_PRICE_NOK
   );
   return {
@@ -96,7 +117,9 @@ export function getScrapedPrice(discId: string): {
       ? Math.min(...inStock.map((s) => entryLandedNOK(s, storeMeta[s.store])))
       : null,
     inStockCount: new Set(inStock.map((s) => s.store)).size,
-    storeCount: new Set(scraped.map((s) => s.store)).size,
+    // Counted off `current` too: a store whose scraper has been dead for a week
+    // is not coverage we can claim on the disc's behalf.
+    storeCount: new Set(current.map((s) => s.store)).size,
   };
 }
 
@@ -201,7 +224,9 @@ export type RichStoreEntry = {
 export function getAllScrapedEntries(discId: string): RichStoreEntry[] {
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[discId];
   if (!scraped || scraped.length === 0) return [];
-  const valid = scraped.filter((e) => e.price >= MIN_VALID_PRICE_NOK && e.price <= MAX_VALID_PRICE_NOK);
+  const valid = scraped.filter(
+    (e) => e.price >= MIN_VALID_PRICE_NOK && e.price <= MAX_VALID_PRICE_NOK && isEntryCurrent(e)
+  );
   if (valid.length === 0) return [];
   const storeMeta = scrapedPrices.stores as Record<string, StoreMeta>;
   return valid.map((entry) => {
