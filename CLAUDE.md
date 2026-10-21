@@ -211,6 +211,21 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   neither. If a blocked store starts answering again the check says so
   (::notice::, "remove it from KNOWN_BLOCKED") — it does not quietly re-include
   it.
+- Discace's API fetch retries (3 attempts, 5s backoff) on a thrown network
+  error, a 5xx, or a truncated body; a 4xx returns immediately, since the
+  server will say the same thing three times. It was the one WooCommerce
+  scraper that never got the retry scraper.js, Frisbeebutikken and Starframe
+  all received on 2026-08-22, and it cost a full day of prices on 2026-10-10,
+  10-11 and 10-20 — the 10-11 miss was the second in a row and reached 48h,
+  past the 36h freshness threshold. Nobody saw that alarm, because the run was
+  already red every day over Discsport. Still open: the Playwright fallback
+  reads /butik/ and returned 0 products on the day it was needed (that URL
+  also 503s from outside), so the safety net is not actually catching
+  anything — needs checking from a normal connection.
+- Discace is genuinely small: ~130 products in its API, of which ~38 are new
+  discs and ~26 match the catalogue. The rest are Disc Replay (used) and merch.
+  A constant 25-26 entries is correct for this store, not a stuck scraper —
+  verified against the live API 2026-10-21.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.

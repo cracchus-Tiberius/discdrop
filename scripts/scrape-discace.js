@@ -37,6 +37,58 @@ const HEADERS = {
 // ── SEK → NOK exchange rate ───────────────────────────────────────────────────
 
 
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+// Confirmed in production 2026-10-20: a single network timeout on API page 1
+// took Discace out for the whole day. The fallback did not save it either —
+// Playwright got 0 products from /butik/ — so one blip cost a full day of
+// prices, and the same thing happened on 10-10 and again on 10-11, which
+// reached 48h and tripped the 36h freshness threshold.
+//
+// This is the same failure, with the same fix, that scripts/scraper.js got on
+// 2026-08-22 (fetchJsonWithRetry: "a single network timeout fetching page 1 of
+// wearediscgolf's WooCommerce API killed the whole store's run for the day"),
+// and that Frisbeebutikken and Starframe got the same day. Discace is the one
+// scraper that never received it.
+//
+// Retries a thrown network error or a 5xx, which are the transients. A 4xx is
+// the server telling us something real about the request — it will say the same
+// thing three times — so that returns immediately, as before. The JSON parse
+// sits inside the retry too: a truncated body is the same class of transient.
+// Returns { res, data } because the caller needs x-wp-totalpages off the
+// response headers, not just the parsed body.
+async function fetchApiPageWithRetry(
+  url,
+  { attempts = 3, fetchImpl = fetch, sleepImpl = sleep, backoffMs = 5000 } = {}
+) {
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    const last = attempt === attempts;
+    try {
+      const res = await fetchImpl(url, { headers: HEADERS, timeout: 15000 });
+
+      if (!res.ok) {
+        if (res.status < 500) {
+          console.log(`    → HTTP ${res.status} — API unavailable`);
+          return null;
+        }
+        throw new Error(`HTTP ${res.status}`);
+      }
+
+      return { res, data: await res.json() };
+    } catch (err) {
+      if (last) {
+        console.log(`    → failed after ${attempts} attempts: ${err.message}`);
+        return null;
+      }
+      console.warn(`    ⚠ Attempt ${attempt}/${attempts} failed: ${err.message} — retrying in ${backoffMs / 1000}s`);
+      await sleepImpl(backoffMs);
+    }
+  }
+  return null;
+}
+
 function isUsedCategorySlug(slugs) {
   return slugs.some((s) => s.includes('begagnad') || s.includes('disc-replay'));
 }
@@ -51,26 +103,9 @@ async function scrapeWithApi(sekToNok) {
     const url = `${STORE.baseUrl}/wp-json/wc/store/v1/products?per_page=100&page=${page}&orderby=id&order=asc`;
     console.log(`    ${STORE.key} API p${page}: ${url}`);
 
-    let res;
-    try {
-      res = await fetch(url, { headers: HEADERS, timeout: 15000 });
-    } catch (err) {
-      console.log(`    → request failed: ${err.message}`);
-      return null;
-    }
-
-    if (!res.ok) {
-      console.log(`    → HTTP ${res.status} — API unavailable`);
-      return null;
-    }
-
-    let data;
-    try {
-      data = await res.json();
-    } catch (err) {
-      console.log(`    → JSON parse failed: ${err.message}`);
-      return null;
-    }
+    const fetched = await fetchApiPageWithRetry(url);
+    if (!fetched) return null;
+    const { res, data } = fetched;
 
     if (!Array.isArray(data) || data.length === 0) break;
 
@@ -266,7 +301,11 @@ async function main() {
   console.log(`  Matched ${matched} discs, ${unmatched} unmatched (${total} total)`);
 }
 
-main().catch((err) => {
-  console.error('Fatal error:', err);
-  process.exit(1);
-});
+module.exports = { fetchApiPageWithRetry };
+
+if (require.main === module) {
+  main().catch((err) => {
+    console.error('Fatal error:', err);
+    process.exit(1);
+  });
+}
