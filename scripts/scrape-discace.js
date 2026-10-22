@@ -175,7 +175,22 @@ async function scrapeWithPlaywright(sekToNok) {
       console.log(`    ${STORE.key} PW p${pageNum}: ${pageUrl}`);
       const page = await context.newPage();
       try {
-        await page.goto(pageUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        // Read the status instead of discarding it. Without this an error
+        // page parses as a page with no li.product in it, and the run reports
+        // "0 products" — which is what the 2026-10-20 log said, and why it
+        // took two days to work out that the store's origin had simply
+        // answered 503. "0 products" and "the server said no" need to look
+        // different in the log.
+        const response = await page.goto(pageUrl, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        const status = response ? response.status() : null;
+        if (response && !response.ok()) {
+          console.log(`    → HTTP ${status} from ${pageUrl} — the store's origin refused the page, not an empty catalogue`);
+          // This function closes the page at the end of the try and again in
+          // the catch; there is no finally, so an early return has to close it
+          // itself rather than leaning on browser.close() to sweep up.
+          await page.close();
+          return null;
+        }
         await page.waitForSelector('li.product', { timeout: 15000 }).catch(() => {});
 
         const { products, nextPage } = await page.evaluate(() => {

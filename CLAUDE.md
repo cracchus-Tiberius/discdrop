@@ -218,10 +218,22 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   all received on 2026-08-22, and it cost a full day of prices on 2026-10-10,
   10-11 and 10-20 — the 10-11 miss was the second in a row and reached 48h,
   past the 36h freshness threshold. Nobody saw that alarm, because the run was
-  already red every day over Discsport. Still open: the Playwright fallback
-  reads /butik/ and returned 0 products on the day it was needed (that URL
-  also 503s from outside), so the safety net is not actually catching
-  anything — needs checking from a normal connection.
+  already red every day over Discsport.
+- Discace's Playwright fallback is not a safety net, and should not be
+  trusted as one. Probed 2026-10-22: discaceofsweden.com serves its cached
+  front page and robots.txt fine while answering 503 to essentially every
+  uncached page — /butik/, /shop/, sitemap_index.xml (which its own robots.txt
+  points at), a product category, and a /produkt/ URL that is in our own
+  scraped data, several of them failing in the same batch in which / and
+  robots.txt succeeded. So /butik/ is not the wrong URL; the origin is simply
+  unreliable for automated clients. That is also the single root cause behind
+  2026-10-20, where the API timed out AND Playwright got 0 products: one
+  struggling origin, not two bugs. A fallback that depends on the same origin
+  as the thing it is backing up cannot rescue it — the API retry is the real
+  protection here. The fallback now reads page.goto()'s status and says
+  "HTTP 503 ... the store's origin refused the page" instead of reporting
+  "0 products", because an error page and an empty catalogue parsed
+  identically before, and that is exactly why 10-20 took two days to explain.
 - Discace is genuinely small: ~130 products in its API, of which ~38 are new
   discs and ~26 match the catalogue. The rest are Disc Replay (used) and merch.
   A constant 25-26 entries is correct for this store, not a stuck scraper —
