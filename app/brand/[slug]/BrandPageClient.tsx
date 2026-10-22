@@ -105,7 +105,6 @@ export default function BrandPageClient({
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
   }, [typeFilter]);
-  const visible = filtered.slice(0, visibleCount);
 
   return (
     <div className="min-h-screen bg-[#FFFDF6]">
@@ -161,7 +160,18 @@ export default function BrandPageClient({
 
         {/* Grid */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {visible.map((d) => {
+          {/* EVERY disc is rendered, and the ones past visibleCount are hidden
+              with a class rather than left out of the markup. "Vis flere"
+              behaves exactly as before, but the links now exist in the
+              prerendered HTML.
+
+              This page is built at export time with visibleCount still at its
+              initial 60, so slicing the list here meant brands with more than
+              60 discs shipped static HTML that linked to only the first 60.
+              Across the catalogue that left 115 of 702 discs with no internal
+              link from anywhere — reachable only from sitemap.xml, which is
+              how a page ends up "crawled, currently not indexed". */}
+          {filtered.map((d, i) => {
             const price = getScrapedPrice(d.id).price;
             const unavailable = price === null;
             return (
@@ -170,7 +180,7 @@ export default function BrandPageClient({
                 href={`/disc/${d.id}`}
                 className={`rounded-2xl border-2 border-[#101C14] bg-white p-4 transition-transform duration-150 hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0_#B8E04A] ${
                   unavailable ? "opacity-60" : ""
-                }`}
+                } ${i >= visibleCount ? "hidden" : ""}`}
               >
                 <div
                   className="relative mb-3 flex items-center justify-center rounded-xl bg-[#F1EFE6]"
