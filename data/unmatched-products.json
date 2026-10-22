@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-22T04:58:28.507Z",
+  "lastUpdated": "2026-10-22T06:24:28.122Z",
   "products": [
     {
       "store": "discsport",
@@ -6779,37 +6779,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "BT Soft Swan",
-      "price": 149,
-      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Cicada - Missy Gannon V2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
       "inStock": true
     },
     {
@@ -6856,6 +6828,20 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "BT Soft Swan",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Cicada - Missy Gannon V2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-cicada-missy-gannon-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
       "price": 229,
       "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
@@ -6880,6 +6866,55 @@
       "rawName": "Premium Titan",
       "price": 160,
       "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Amulet",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-amulet",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium LEGENDa",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Pyramid",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium SLAIDi",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Titan",
+      "price": 181,
+      "url": "https://frisbeebutikken.no/products/ultrium-titan",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
+      "price": 289,
+      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Terminator - First Run",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
       "inStock": true
     },
     {
@@ -7972,13 +8007,6 @@
       "rawName": "SOKKER &laquo;LIND&raquo; FLÅTTAVVISENDE!",
       "price": 179,
       "url": "https://www.frisbeesor.no/produkt/2758/",
-      "inStock": true
-    },
-    {
-      "store": "frisbeesor",
-      "rawName": "FERD RYGGSEKK",
-      "price": 1299,
-      "url": "https://www.frisbeesor.no/produkt/ferd-reggsekk/",
       "inStock": true
     },
     {
