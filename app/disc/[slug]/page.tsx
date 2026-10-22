@@ -7,6 +7,7 @@ import { buildDiscMeta } from "@/lib/disc-meta.mjs";
 import discDescriptions from "@/data/disc-descriptions.json";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { RelatedDiscs } from "./RelatedDiscs";
 import {
   DiscHeroSection,
 } from "./DiscDetailClient";
@@ -123,6 +124,7 @@ export default async function DiscDetailPage({
           lastUpdated={scrapedLastUpdated}
           description={(discDescriptions as Record<string, string>)[disc.id] ?? null}
         />
+        <RelatedDiscs discId={disc.id} />
       </main>
       <SiteFooter />
     </div>
