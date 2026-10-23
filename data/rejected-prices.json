@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22T06:25:03.260Z",
+  "generated": "2026-10-23T05:00:06.849Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -13,25 +13,25 @@
       "price": 2799,
       "reason": "above-max",
       "url": "https://hyzershop.no/products/odin",
-      "lastScraped": "2026-10-22T06:07:35.567Z"
+      "lastScraped": "2026-10-23T04:42:21.209Z"
     },
     {
       "discId": "mvp-shift",
       "discName": "Streamline Shift",
       "store": "discexpress",
-      "price": 2453,
+      "price": 2440,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/upper-park-the-shift",
-      "lastScraped": "2026-10-22T06:15:21.933Z"
+      "lastScraped": "2026-10-23T04:50:17.027Z"
     },
     {
       "discId": "streamline-range",
       "discName": "Streamline Range",
       "store": "discexpress",
-      "price": 946,
+      "price": 941,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-10-22T06:15:21.933Z"
+      "lastScraped": "2026-10-23T04:50:17.027Z"
     },
     {
       "discId": "latitude-core",
@@ -40,7 +40,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-10-22T06:14:36.725Z"
+      "lastScraped": "2026-10-23T04:49:14.816Z"
     },
     {
       "discId": "latitude-core",
@@ -67,7 +67,7 @@
       "price": 46,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-10-22T06:15:21.933Z"
+      "lastScraped": "2026-10-23T04:50:17.027Z"
     }
   ]
 }
