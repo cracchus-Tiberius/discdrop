@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-24T04:56:22.160Z",
+  "lastUpdated": "2026-10-25T04:58:36.200Z",
   "products": [
     {
       "store": "discsport",
@@ -2771,13 +2771,6 @@
       "rawName": "Kunstgress 2mx4m",
       "price": 2999,
       "url": "https://aceshop.no/product/kunstgress-2mx4m/",
-      "inStock": true
-    },
-    {
-      "store": "aceshop",
-      "rawName": "Disc Retriver Aceshop",
-      "price": 329,
-      "url": "https://aceshop.no/product/disc-retriver-aceshop/",
       "inStock": true
     },
     {
@@ -6786,9 +6779,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Electron Autopilot Soft - Eagle McMahon",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon-2",
+      "rawName": "ESP Hallux First Run",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
       "inStock": true
     },
     {
@@ -6828,6 +6821,20 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "K1 Grind Älva",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Premium LASERi",
       "price": 160,
       "url": "https://frisbeebutikken.no/products/premium-laseri",
@@ -6849,16 +6856,23 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
+      "price": 249,
+      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
+      "price": 289,
+      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Terminator - First Run",
+      "price": 219,
+      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
       "inStock": true
     },
     {
@@ -6891,23 +6905,16 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Colorshift Fossil - Ricky Wysocki",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
-      "price": 289,
-      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Z Terminator - First Run",
-      "price": 219,
-      "url": "https://frisbeebutikken.no/products/z-terminator-first-run",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
       "inStock": true
     },
     {
@@ -6929,6 +6936,13 @@
       "rawName": "Ultrium Titan",
       "price": 181,
       "url": "https://frisbeebutikken.no/products/ultrium-titan",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Electron Autopilot Soft - Eagle McMahon",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon-2",
       "inStock": true
     },
     {
@@ -7118,13 +7132,6 @@
       "rawName": "Steady Spice (Eric Oakley Tour Series)",
       "price": 295,
       "url": "https://www.starframe.no/products/steady-spice-eric-oakley-tour-series",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Sunny Berry (Scott Withers Tour Series 2023)",
-      "price": 309,
-      "url": "https://www.starframe.no/products/sunny-berry-scott-withers-tour-series-2023",
       "inStock": true
     },
     {
@@ -7594,6 +7601,13 @@
       "rawName": "Radiant Era",
       "price": 259,
       "url": "https://www.starframe.no/products/radant-era",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Radiant Interval",
+      "price": 259,
+      "url": "https://www.starframe.no/products/radiant-intervl",
       "inStock": true
     },
     {
@@ -8999,7 +9013,7 @@
     {
       "store": "discexpress",
       "rawName": "GameProofer eTAG",
-      "price": 2536,
+      "price": 2535,
       "url": "https://www.discexpress.se/products/gameproofer-etag",
       "inStock": true
     },
@@ -9587,7 +9601,7 @@
     {
       "store": "discexpress",
       "rawName": "Innova DisCatcher Traveler Basket",
-      "price": 1588,
+      "price": 1587,
       "url": "https://www.discexpress.se/products/innova-discatcher-traveler-basket",
       "inStock": true
     },
@@ -9622,14 +9636,14 @@
     {
       "store": "discexpress",
       "rawName": "Buzzz SuperColor - Dark Star Orchestra Terrapin",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/buzzz-supercolor-dark-star-orchestra-terrapin",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Buzzz SuperColor - Dark Star Ochestra Beetle",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/buzzz-supercolor-dark-star-ochestra-beetle",
       "inStock": true
     },
@@ -9825,14 +9839,14 @@
     {
       "store": "discexpress",
       "rawName": "Fossil - Ricky Wysocki - Prototype",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/fossil-ricky-wysocki-prototype",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Hallux - Ricky Wysocki - Prototype",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/hallux-ricky-wysocki-prototype",
       "inStock": true
     },
@@ -9944,7 +9958,7 @@
     {
       "store": "discexpress",
       "rawName": "Älva K1 - Moomin Group (Moomin)",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/alva-k1-grind-copy",
       "inStock": false
     },
@@ -9972,7 +9986,7 @@
     {
       "store": "discexpress",
       "rawName": "Berry Planty",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/berry-steady-copy",
       "inStock": true
     },
@@ -10042,7 +10056,7 @@
     {
       "store": "discexpress",
       "rawName": "Framtid",
-      "price": 2348,
+      "price": 2347,
       "url": "https://www.discexpress.se/products/framtid",
       "inStock": false
     },
@@ -10231,7 +10245,7 @@
     {
       "store": "discexpress",
       "rawName": "ZÜCA - Insert Bag, black (Compact Disc Golf)",
-      "price": 845,
+      "price": 844,
       "url": "https://www.discexpress.se/products/zuca-insert-bag-black-compact-disc-golf",
       "inStock": false
     },
@@ -10511,7 +10525,7 @@
     {
       "store": "discexpress",
       "rawName": "Disc Doctor 2.0 Repair Tool",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/copy-of-disc-doctor-2-0-repair-tool",
       "inStock": false
     },
@@ -10714,7 +10728,7 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4227,
+      "price": 4226,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
@@ -10938,7 +10952,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2442,
+      "price": 2441,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -11008,7 +11022,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart and Insert Bag",
-      "price": 3945,
+      "price": 3944,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-backpack-cart-with-insert",
       "inStock": true
     },
@@ -11092,7 +11106,7 @@
     {
       "store": "discexpress",
       "rawName": "The Finger Rubber Patch Beanie - FPC",
-      "price": 225,
+      "price": 224,
       "url": "https://www.discexpress.se/products/the-finger-beanie",
       "inStock": true
     },
@@ -11127,7 +11141,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - BP-2 V3",
-      "price": 845,
+      "price": 844,
       "url": "https://www.discexpress.se/products/prodigy-bp-2-v2",
       "inStock": false
     },
@@ -16902,7 +16916,7 @@
     {
       "store": "ugglans",
       "rawName": "K1 Älva - Moomin Group",
-      "price": 225,
+      "price": 224,
       "url": "https://ugglansdiscgolf.se/products/k1-alva-moomin-group",
       "inStock": false
     },
@@ -16965,7 +16979,7 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2254,
+      "price": 2253,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": false
     },
@@ -17245,7 +17259,7 @@
     {
       "store": "discace",
       "rawName": "Evolvent Discs Readiness Apex-80",
-      "price": 225,
+      "price": 224,
       "url": "https://discaceofsweden.com/produkt/evolvent-discs-readiness-apex-80/",
       "inStock": true
     },
@@ -17259,7 +17273,7 @@
     {
       "store": "discace",
       "rawName": "Clash Discs Berry Special Blend",
-      "price": 225,
+      "price": 224,
       "url": "https://discaceofsweden.com/produkt/clash-discs-steady-berry-special-blend/",
       "inStock": true
     }
