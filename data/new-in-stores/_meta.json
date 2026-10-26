@@ -1,12 +1,12 @@
 {
-  "generated": "2026-10-25T04:58:56.719Z",
-  "currentIsoWeek": "2026-W43",
+  "generated": "2026-10-26T05:02:59.373Z",
+  "currentIsoWeek": "2026-W44",
   "summary": {
-    "totalSignals": 114,
+    "totalSignals": 146,
     "newDiscs": 0,
-    "newReleases": 43,
-    "newAtStore": 71,
-    "weeksIncluded": 2,
+    "newReleases": 42,
+    "newAtStore": 104,
+    "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
       {
@@ -27,7 +27,7 @@
       {
         "store": "krokhol",
         "date": "2026-09-04",
-        "count": 881
+        "count": 880
       },
       {
         "store": "nydisk",
@@ -47,7 +47,7 @@
       {
         "store": "wearediscgolf",
         "date": "2026-08-16",
-        "count": 437
+        "count": 436
       },
       {
         "store": "wearediscgolf",
@@ -127,11 +127,11 @@
       {
         "store": "aceshop",
         "date": "2026-08-04",
-        "count": 69
+        "count": 68
       },
       {
         "store": "hyzershop",
-        "date": "2026-10-25",
+        "date": "2026-10-26",
         "count": 62
       },
       {
@@ -147,7 +147,7 @@
       {
         "store": "frisbeebutikken",
         "date": "2026-10-21",
-        "count": 45
+        "count": 43
       },
       {
         "store": "frisbeebutikken",
@@ -158,6 +158,11 @@
         "store": "starframe",
         "date": "2026-09-04",
         "count": 38
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-10-26",
+        "count": 35
       },
       {
         "store": "rocketdiscs",
@@ -179,28 +184,26 @@
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W42",
-        "count": 47
-      },
-      {
-        "store": "krokhol",
-        "isoWeek": "2026-W43",
-        "count": 25
-      },
-      {
-        "store": "wearediscgolf",
-        "isoWeek": "2026-W43",
-        "count": 25
+        "count": 43
       }
     ]
   },
   "weeks": [
+    {
+      "isoWeek": "2026-W44",
+      "year": 2026,
+      "weekNumber": 44,
+      "startDate": "2026-10-26",
+      "endDate": "2026-11-01",
+      "frozen": false
+    },
     {
       "isoWeek": "2026-W43",
       "year": 2026,
       "weekNumber": 43,
       "startDate": "2026-10-19",
       "endDate": "2026-10-25",
-      "frozen": false
+      "frozen": true
     },
     {
       "isoWeek": "2026-W42",
