@@ -1,10 +1,53 @@
 {
-  "generated": "2026-10-29T04:54:02.524Z",
+  "generated": "2026-10-30T04:52:37.795Z",
   "summary": {
-    "priceChanges24h": 0,
+    "priceChanges24h": 3,
     "newDiscs24h": 0,
     "storesChecked": 19
   },
-  "timeline": [],
-  "totalDrops": 0
+  "timeline": [
+    {
+      "discId": "westside-bear",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "BT",
+      "oldPrice": 218,
+      "newPrice": 190,
+      "pct": -13,
+      "date": "2026-10-30",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/bear-bt-light",
+      "history": [
+        219,
+        219,
+        218,
+        218,
+        218,
+        218,
+        190
+      ]
+    },
+    {
+      "discId": "climo-coast",
+      "store": "wearediscgolf",
+      "storeName": "We Are Disc Golf",
+      "plastic": null,
+      "oldPrice": 268,
+      "newPrice": 234,
+      "pct": -13,
+      "date": "2026-10-30",
+      "bucket": "today",
+      "url": "https://wearediscgolf.no/produkt/limited-edition-coast-disc-of-the-year/",
+      "history": [
+        268,
+        268,
+        268,
+        268,
+        268,
+        268,
+        234
+      ]
+    }
+  ],
+  "totalDrops": 2
 }
