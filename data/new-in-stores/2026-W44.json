@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 181,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 181,
       "stores": [
         {
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1793421954204,
+      "firstSeenMs": 1793508666639,
       "price": 314,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1793421954204,
+      "firstSeenMs": 1793508666639,
       "price": 205,
       "stores": [
         {
@@ -89,7 +89,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1793421954204,
+      "firstSeenMs": 1793508666639,
       "price": 205,
       "stores": [
         {
@@ -108,7 +108,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 214,
       "stores": [
         {
@@ -127,7 +127,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 275,
       "stores": [
         {
@@ -146,7 +146,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 294,
       "stores": [
         {
@@ -447,6 +447,25 @@
       ]
     },
     {
+      "discId": "mvp-control",
+      "name": "Control",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Neutron",
+      "edition": "Ida Emilie Nesse",
+      "firstSeenMs": 1793162460861,
+      "price": 278,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 278,
+          "url": "https://frisbeebutikken.no/products/neutron-control"
+        }
+      ]
+    },
+    {
       "discId": "mvp-watt",
       "name": "Watt",
       "brand": "MVP",
@@ -454,7 +473,7 @@
       "type": "new-at-store",
       "plastic": "Proton",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 265,
       "stores": [
         {
@@ -473,7 +492,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": "Team Series",
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 274,
       "stores": [
         {
@@ -492,7 +511,7 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 274,
       "stores": [
         {
@@ -511,7 +530,7 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 303,
       "stores": [
         {
@@ -530,7 +549,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 256,
       "stores": [
         {
@@ -549,7 +568,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 256,
       "stores": [
         {
@@ -568,7 +587,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 256,
       "stores": [
         {
@@ -587,7 +606,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 256,
       "stores": [
         {
@@ -606,7 +625,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 256,
       "stores": [
         {
@@ -625,7 +644,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 124,
       "stores": [
         {
@@ -644,7 +663,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 124,
       "stores": [
         {
@@ -663,7 +682,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 124,
       "stores": [
         {
@@ -682,7 +701,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 124,
       "stores": [
         {
@@ -701,7 +720,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 124,
       "stores": [
         {
@@ -720,7 +739,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793421983141,
+      "firstSeenMs": 1793508694937,
       "price": 124,
       "stores": [
         {
@@ -739,7 +758,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1793421954204,
+      "firstSeenMs": 1793508666639,
       "price": 224,
       "stores": [
         {
@@ -758,7 +777,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 275,
       "stores": [
         {
@@ -770,6 +789,25 @@
       ]
     },
     {
+      "discId": "axiom-hex",
+      "name": "Hex",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Cosmic Neutron",
+      "edition": null,
+      "firstSeenMs": 1793507665199,
+      "price": 254,
+      "stores": [
+        {
+          "store": "aceshop",
+          "storeName": "Aceshop",
+          "price": 254,
+          "url": "https://aceshop.no/product/axciom-cosmic-neutron-hex/"
+        }
+      ]
+    },
+    {
       "discId": "innova-roc",
       "name": "Roc",
       "brand": "Innova",
@@ -777,7 +815,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 214,
       "stores": [
         {
@@ -795,6 +833,25 @@
       ]
     },
     {
+      "discId": "mvp-terra",
+      "name": "Terra",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1793507665199,
+      "price": 254,
+      "stores": [
+        {
+          "store": "aceshop",
+          "storeName": "Aceshop",
+          "price": 254,
+          "url": "https://aceshop.no/product/mvp-neutron-terra/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-fx-2",
       "name": "FX-2",
       "brand": "Prodigy",
@@ -802,7 +859,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 315,
       "stores": [
         {
@@ -821,7 +878,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 255,
       "stores": [
         {
@@ -840,7 +897,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 275,
       "stores": [
         {
@@ -859,7 +916,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1793421268605,
+      "firstSeenMs": 1793507665199,
       "price": 275,
       "stores": [
         {
@@ -923,6 +980,37 @@
           "storeName": "GolfDiscer",
           "price": 228,
           "url": "https://golfdiscer.no/products/yeti-pro-aviar"
+        }
+      ]
+    },
+    {
+      "discId": "innova-whale",
+      "name": "Whale",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 180,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 208,
+          "url": "https://www.krokholdgs.no/products/kc-pro-whale"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 180,
+          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
         }
       ]
     },
@@ -1067,37 +1155,6 @@
           "storeName": "We Are Disc Golf",
           "price": 214,
           "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
-        }
-      ]
-    },
-    {
-      "discId": "innova-whale",
-      "name": "Whale",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1793334926975,
-      "price": 180,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 208,
-          "url": "https://www.krokholdgs.no/products/kc-pro-whale"
-        },
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
-        },
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 180,
-          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
         }
       ]
     },
@@ -1274,5 +1331,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-10-31T04:55:52.232Z"
+  "generated": "2026-11-01T05:00:43.398Z"
 }
