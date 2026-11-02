@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-01T05:00:43.398Z",
-  "currentIsoWeek": "2026-W44",
+  "generated": "2026-11-02T05:00:03.129Z",
+  "currentIsoWeek": "2026-W45",
   "summary": {
-    "totalSignals": 134,
+    "totalSignals": 139,
     "newDiscs": 0,
-    "newReleases": 39,
-    "newAtStore": 95,
-    "weeksIncluded": 2,
+    "newReleases": 36,
+    "newAtStore": 103,
+    "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
       {
@@ -77,7 +77,7 @@
       {
         "store": "discsor",
         "date": "2026-08-22",
-        "count": 181
+        "count": 180
       },
       {
         "store": "arcticdisc",
@@ -112,7 +112,7 @@
       {
         "store": "aceshop",
         "date": "2026-07-24",
-        "count": 79
+        "count": 78
       },
       {
         "store": "rocketdiscs",
@@ -131,7 +131,7 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "count": 62
       },
       {
@@ -152,7 +152,7 @@
       {
         "store": "frisbeebutikken",
         "date": "2026-10-26",
-        "count": 34
+        "count": 33
       },
       {
         "store": "rocketdiscs",
@@ -164,28 +164,36 @@
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W43",
-        "count": 153
+        "count": 108
       },
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W44",
-        "count": 65
+        "count": 64
       },
       {
         "store": "frisbeesor",
         "isoWeek": "2026-W44",
-        "count": 28
+        "count": 25
       }
     ]
   },
   "weeks": [
+    {
+      "isoWeek": "2026-W45",
+      "year": 2026,
+      "weekNumber": 45,
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-08",
+      "frozen": false
+    },
     {
       "isoWeek": "2026-W44",
       "year": 2026,
       "weekNumber": 44,
       "startDate": "2026-10-26",
       "endDate": "2026-11-01",
-      "frozen": false
+      "frozen": true
     },
     {
       "isoWeek": "2026-W43",
