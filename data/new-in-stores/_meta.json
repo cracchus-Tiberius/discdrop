@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-02T05:00:03.129Z",
+  "generated": "2026-11-03T05:01:00.862Z",
   "currentIsoWeek": "2026-W45",
   "summary": {
-    "totalSignals": 139,
+    "totalSignals": 121,
     "newDiscs": 0,
-    "newReleases": 36,
-    "newAtStore": 103,
+    "newReleases": 35,
+    "newAtStore": 86,
     "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
@@ -72,7 +72,7 @@
       {
         "store": "discgolfdynasty",
         "date": "2026-08-22",
-        "count": 207
+        "count": 206
       },
       {
         "store": "discsor",
@@ -131,7 +131,7 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-11-02",
+        "date": "2026-11-03",
         "count": 62
       },
       {
@@ -150,31 +150,36 @@
         "count": 38
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-10-26",
-        "count": 33
-      },
-      {
         "store": "rocketdiscs",
         "date": "2026-08-21",
         "count": 33
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-11-03",
+        "count": 31
       }
     ],
     "suppressedWeeklyCapEvents": [
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W43",
-        "count": 108
+        "count": 86
       },
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W44",
-        "count": 64
+        "count": 85
       },
       {
         "store": "frisbeesor",
         "isoWeek": "2026-W44",
         "count": 25
+      },
+      {
+        "store": "wearediscgolf",
+        "isoWeek": "2026-W43",
+        "count": 21
       }
     ]
   },

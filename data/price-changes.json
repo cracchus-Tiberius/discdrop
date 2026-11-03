@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-02T05:00:02.849Z",
+  "generated": "2026-11-03T05:01:00.477Z",
   "summary": {
     "priceChanges24h": 0,
-    "newDiscs24h": 0,
+    "newDiscs24h": 1,
     "storesChecked": 19
   },
   "timeline": [
@@ -20,11 +20,11 @@
       "history": [
         218,
         218,
-        218,
         190,
         190,
         190,
-        190
+        190,
+        192
       ]
     },
     {
@@ -41,7 +41,7 @@
       "history": [
         268,
         268,
-        268,
+        234,
         234,
         234,
         234,
