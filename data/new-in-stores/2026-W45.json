@@ -13,13 +13,13 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 183,
+      "firstSeenMs": 1793767896257,
+      "price": 182,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 183,
+          "price": 182,
           "url": "https://www.discexpress.se/products/majesty-premium-active"
         }
       ]
@@ -32,13 +32,13 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 183,
+      "firstSeenMs": 1793767896257,
+      "price": 182,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 183,
+          "price": 182,
           "url": "https://www.discexpress.se/products/astronaut-premium-active"
         }
       ]
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1793681494325,
+      "firstSeenMs": 1793767870205,
       "price": 314,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1793681494325,
+      "firstSeenMs": 1793767870205,
       "price": 205,
       "stores": [
         {
@@ -89,7 +89,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1793681494325,
+      "firstSeenMs": 1793767870205,
       "price": 205,
       "stores": [
         {
@@ -108,7 +108,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 214,
       "stores": [
         {
@@ -127,7 +127,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 275,
       "stores": [
         {
@@ -146,7 +146,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 294,
       "stores": [
         {
@@ -165,7 +165,7 @@
       "type": "new-at-store",
       "plastic": "Proton",
       "edition": null,
-      "firstSeenMs": 1793681519067,
+      "firstSeenMs": 1793767896257,
       "price": 268,
       "stores": [
         {
@@ -184,13 +184,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": "Team Series",
-      "firstSeenMs": 1793681519067,
-      "price": 278,
+      "firstSeenMs": 1793767896257,
+      "price": 277,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 278,
+          "price": 277,
           "url": "https://www.discexpress.se/products/world-tournament-x-rill-matt-orum-team-series"
         }
       ]
@@ -203,33 +203,14 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 278,
+      "firstSeenMs": 1793767896257,
+      "price": 277,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 278,
+          "price": 277,
           "url": "https://www.discexpress.se/products/fuse-project-grip"
-        }
-      ]
-    },
-    {
-      "discId": "innova-gorgon",
-      "name": "Gorgon",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Halo Champion Proto Glow",
-      "edition": "Tour Series",
-      "firstSeenMs": 1793681519067,
-      "price": 373,
-      "stores": [
-        {
-          "store": "discexpress",
-          "storeName": "Discexpress",
-          "price": 373,
-          "url": "https://www.discexpress.se/products/gorgon-halo-champion-proto-glow-dennis-augustsson-copy"
         }
       ]
     },
@@ -241,13 +222,13 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 306,
+      "firstSeenMs": 1793767896257,
+      "price": 305,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 306,
+          "price": 305,
           "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
         }
       ]
@@ -260,13 +241,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 259,
+      "firstSeenMs": 1793767896257,
+      "price": 258,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 259,
+          "price": 258,
           "url": "https://www.discexpress.se/products/destiny-tournament-x-ring"
         }
       ]
@@ -279,13 +260,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 259,
+      "firstSeenMs": 1793767896257,
+      "price": 258,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 259,
+          "price": 258,
           "url": "https://www.discexpress.se/products/prince-tournament-x"
         }
       ]
@@ -298,13 +279,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 259,
+      "firstSeenMs": 1793767896257,
+      "price": 258,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 259,
+          "price": 258,
           "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
         }
       ]
@@ -317,13 +298,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 259,
+      "firstSeenMs": 1793767896257,
+      "price": 258,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 259,
+          "price": 258,
           "url": "https://www.discexpress.se/products/sword-tournament-x"
         }
       ]
@@ -336,13 +317,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 259,
+      "firstSeenMs": 1793767896257,
+      "price": 258,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 259,
+          "price": 258,
           "url": "https://www.discexpress.se/products/vip-x-orbit-ahti-westside-fishing"
         }
       ]
@@ -355,13 +336,13 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 126,
+      "firstSeenMs": 1793767896257,
+      "price": 125,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 126,
+          "price": 125,
           "url": "https://www.discexpress.se/products/spring-ox-active"
         }
       ]
@@ -374,13 +355,13 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 126,
+      "firstSeenMs": 1793767896257,
+      "price": 125,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 126,
+          "price": 125,
           "url": "https://www.discexpress.se/products/fox-spirit-active"
         }
       ]
@@ -393,13 +374,13 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 126,
+      "firstSeenMs": 1793767896257,
+      "price": 125,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 126,
+          "price": 125,
           "url": "https://www.discexpress.se/products/sea-serpent-active"
         }
       ]
@@ -412,13 +393,13 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 126,
+      "firstSeenMs": 1793767896257,
+      "price": 125,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 126,
+          "price": 125,
           "url": "https://www.discexpress.se/products/sun-crow-active"
         }
       ]
@@ -431,13 +412,13 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 126,
+      "firstSeenMs": 1793767896257,
+      "price": 125,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 126,
+          "price": 125,
           "url": "https://www.discexpress.se/products/guardian-lion-active"
         }
       ]
@@ -450,13 +431,13 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1793681519067,
-      "price": 126,
+      "firstSeenMs": 1793767896257,
+      "price": 125,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 126,
+          "price": 125,
           "url": "https://www.discexpress.se/products/mermaid-basic-active"
         }
       ]
@@ -469,7 +450,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1793681494325,
+      "firstSeenMs": 1793767870205,
       "price": 224,
       "stores": [
         {
@@ -481,6 +462,101 @@
       ]
     },
     {
+      "discId": "westside-stag",
+      "name": "Stag",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "VIP",
+      "edition": "2025",
+      "firstSeenMs": 1793767870205,
+      "price": 314,
+      "stores": [
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 314,
+          "url": "https://nydisk.no/products/westside-discs-vip-x-ring-stag-heidi-laine-2025"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-roach",
+      "name": "Roach",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line",
+      "edition": null,
+      "firstSeenMs": 1793767858405,
+      "price": 229,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 229,
+          "url": "https://www.frisbeesor.no/produkt/putter-line-roach/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-banger-gt",
+      "name": "Banger GT",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line",
+      "edition": null,
+      "firstSeenMs": 1793767858405,
+      "price": 235,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 235,
+          "url": "https://www.frisbeesor.no/produkt/putter-line-banger-gt/"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-time-lapse",
+      "name": "Time-Lapse",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": "Special Edition",
+      "firstSeenMs": 1793767858405,
+      "price": 339,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 339,
+          "url": "https://www.frisbeesor.no/produkt/time-lapse-neutron-special-edition/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-dimension",
+      "name": "Dimension",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Fission",
+      "edition": null,
+      "firstSeenMs": 1793767231706,
+      "price": 295,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 295,
+          "url": "https://www.starframe.no/products/fission-dimension"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-distortion",
       "name": "Distortion",
       "brand": "Prodigy",
@@ -488,7 +564,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 275,
       "stores": [
         {
@@ -507,7 +583,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 214,
       "stores": [
         {
@@ -532,7 +608,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 315,
       "stores": [
         {
@@ -551,7 +627,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 255,
       "stores": [
         {
@@ -570,7 +646,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 275,
       "stores": [
         {
@@ -589,7 +665,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1793680479383,
+      "firstSeenMs": 1793766860914,
       "price": 275,
       "stores": [
         {
@@ -616,63 +692,6 @@
           "storeName": "Frisbee Sør",
           "price": 259,
           "url": "https://www.frisbeesor.no/produkt/8528/"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-roach",
-      "name": "Roach",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line",
-      "edition": null,
-      "firstSeenMs": 1793595047319,
-      "price": 229,
-      "stores": [
-        {
-          "store": "frisbeesor",
-          "storeName": "Frisbee Sør",
-          "price": 229,
-          "url": "https://www.frisbeesor.no/produkt/putter-line-roach/"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-banger-gt",
-      "name": "Banger GT",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line",
-      "edition": null,
-      "firstSeenMs": 1793595047319,
-      "price": 235,
-      "stores": [
-        {
-          "store": "frisbeesor",
-          "storeName": "Frisbee Sør",
-          "price": 235,
-          "url": "https://www.frisbeesor.no/produkt/putter-line-banger-gt/"
-        }
-      ]
-    },
-    {
-      "discId": "axiom-time-lapse",
-      "name": "Time-Lapse",
-      "brand": "Axiom",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": "Special Edition",
-      "firstSeenMs": 1793595047319,
-      "price": 339,
-      "stores": [
-        {
-          "store": "frisbeesor",
-          "storeName": "Frisbee Sør",
-          "price": 339,
-          "url": "https://www.frisbeesor.no/produkt/time-lapse-neutron-special-edition/"
         }
       ]
     },
@@ -811,5 +830,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-03T05:01:00.862Z"
+  "generated": "2026-11-04T05:00:08.894Z"
 }
