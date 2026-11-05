@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T05:00:08.894Z",
+  "generated": "2026-11-05T05:00:00.355Z",
   "currentIsoWeek": "2026-W45",
   "summary": {
-    "totalSignals": 119,
+    "totalSignals": 113,
     "newDiscs": 0,
-    "newReleases": 35,
-    "newAtStore": 84,
+    "newReleases": 34,
+    "newAtStore": 79,
     "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
@@ -42,7 +42,7 @@
       {
         "store": "starframe",
         "date": "2026-08-19",
-        "count": 570
+        "count": 569
       },
       {
         "store": "wearediscgolf",
@@ -87,7 +87,7 @@
       {
         "store": "golfdiscer",
         "date": "2026-07-24",
-        "count": 133
+        "count": 126
       },
       {
         "store": "aceshop",
@@ -131,7 +131,7 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-11-04",
+        "date": "2026-11-05",
         "count": 62
       },
       {
@@ -174,7 +174,7 @@
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W43",
-        "count": 58
+        "count": 57
       },
       {
         "store": "frisbeesor",
@@ -184,6 +184,11 @@
       {
         "store": "wearediscgolf",
         "isoWeek": "2026-W43",
+        "count": 22
+      },
+      {
+        "store": "frisbeebutikken",
+        "isoWeek": "2026-W45",
         "count": 22
       }
     ]
