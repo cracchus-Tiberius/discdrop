@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-05T05:00:00.355Z",
+  "generated": "2026-11-06T05:02:08.969Z",
   "currentIsoWeek": "2026-W45",
   "summary": {
-    "totalSignals": 113,
+    "totalSignals": 100,
     "newDiscs": 0,
-    "newReleases": 34,
-    "newAtStore": 79,
+    "newReleases": 28,
+    "newAtStore": 72,
     "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
@@ -37,7 +37,7 @@
       {
         "store": "ugglans",
         "date": "2026-07-26",
-        "count": 771
+        "count": 769
       },
       {
         "store": "starframe",
@@ -131,7 +131,7 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-11-05",
+        "date": "2026-11-06",
         "count": 62
       },
       {
@@ -145,14 +145,14 @@
         "count": 48
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-11-04",
-        "count": 48
-      },
-      {
         "store": "starframe",
         "date": "2026-09-04",
         "count": 38
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-11-04",
+        "count": 34
       },
       {
         "store": "rocketdiscs",
@@ -160,36 +160,31 @@
         "count": 33
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-11-03",
-        "count": 31
+        "store": "discexpress",
+        "date": "2026-11-06",
+        "count": 32
       }
     ],
     "suppressedWeeklyCapEvents": [
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W44",
-        "count": 83
+        "count": 72
+      },
+      {
+        "store": "frisbeebutikken",
+        "isoWeek": "2026-W45",
+        "count": 56
       },
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W43",
-        "count": 57
+        "count": 37
       },
       {
         "store": "frisbeesor",
         "isoWeek": "2026-W44",
         "count": 25
-      },
-      {
-        "store": "wearediscgolf",
-        "isoWeek": "2026-W43",
-        "count": 22
-      },
-      {
-        "store": "frisbeebutikken",
-        "isoWeek": "2026-W45",
-        "count": 22
       }
     ]
   },
