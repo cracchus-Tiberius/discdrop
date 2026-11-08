@@ -13,7 +13,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 183,
       "stores": [
         {
@@ -32,7 +32,7 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 183,
       "stores": [
         {
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1794027064916,
+      "firstSeenMs": 1794113465168,
       "price": 314,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1794027064916,
+      "firstSeenMs": 1794113465168,
       "price": 205,
       "stores": [
         {
@@ -89,7 +89,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1794027064916,
+      "firstSeenMs": 1794113465168,
       "price": 205,
       "stores": [
         {
@@ -108,7 +108,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 214,
       "stores": [
         {
@@ -127,7 +127,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 275,
       "stores": [
         {
@@ -146,7 +146,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 294,
       "stores": [
         {
@@ -246,6 +246,25 @@
       ]
     },
     {
+      "discId": "mvp-watt",
+      "name": "Watt",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Proton",
+      "edition": null,
+      "firstSeenMs": 1794113487759,
+      "price": 269,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 269,
+          "url": "https://www.discexpress.se/products/watt-proton-plc"
+        }
+      ]
+    },
+    {
       "discId": "westside-world",
       "name": "World",
       "brand": "Westside Discs",
@@ -253,7 +272,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": "Team Series",
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 279,
       "stores": [
         {
@@ -272,7 +291,7 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 279,
       "stores": [
         {
@@ -291,13 +310,13 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1794027087494,
-      "price": 308,
+      "firstSeenMs": 1794113487759,
+      "price": 307,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 308,
+          "price": 307,
           "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
         }
       ]
@@ -310,7 +329,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 260,
       "stores": [
         {
@@ -329,7 +348,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 260,
       "stores": [
         {
@@ -348,7 +367,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 260,
       "stores": [
         {
@@ -367,7 +386,7 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 260,
       "stores": [
         {
@@ -386,7 +405,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 260,
       "stores": [
         {
@@ -405,7 +424,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 126,
       "stores": [
         {
@@ -424,7 +443,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 126,
       "stores": [
         {
@@ -443,7 +462,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 126,
       "stores": [
         {
@@ -462,7 +481,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 126,
       "stores": [
         {
@@ -481,7 +500,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 126,
       "stores": [
         {
@@ -500,7 +519,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794027087494,
+      "firstSeenMs": 1794113487759,
       "price": 126,
       "stores": [
         {
@@ -519,7 +538,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1794027064916,
+      "firstSeenMs": 1794113465168,
       "price": 224,
       "stores": [
         {
@@ -538,7 +557,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1794027064916,
+      "firstSeenMs": 1794113465168,
       "price": 314,
       "stores": [
         {
@@ -557,7 +576,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1794027053850,
+      "firstSeenMs": 1794113453909,
       "price": 229,
       "stores": [
         {
@@ -576,7 +595,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1794027053850,
+      "firstSeenMs": 1794113453909,
       "price": 235,
       "stores": [
         {
@@ -595,7 +614,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1794027053850,
+      "firstSeenMs": 1794113453909,
       "price": 339,
       "stores": [
         {
@@ -607,6 +626,25 @@
       ]
     },
     {
+      "discId": "mvp-reactor",
+      "name": "Reactor",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Proton",
+      "edition": null,
+      "firstSeenMs": 1794112828172,
+      "price": 275,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 275,
+          "url": "https://www.starframe.no/products/proton-reactor-white-rim"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-distortion",
       "name": "Distortion",
       "brand": "Prodigy",
@@ -614,7 +652,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 275,
       "stores": [
         {
@@ -633,7 +671,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 214,
       "stores": [
         {
@@ -658,7 +696,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 315,
       "stores": [
         {
@@ -677,7 +715,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 255,
       "stores": [
         {
@@ -696,7 +734,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 275,
       "stores": [
         {
@@ -715,7 +753,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1794026063671,
+      "firstSeenMs": 1794112468758,
       "price": 275,
       "stores": [
         {
@@ -828,25 +866,6 @@
       ]
     },
     {
-      "discId": "discmania-md5",
-      "name": "MD5",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "C-Line Glow",
-      "edition": null,
-      "firstSeenMs": 1793853279653,
-      "price": 444,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 444,
-          "url": "https://wearediscgolf.no/produkt/c-line-glow-md5-176g-2/"
-        }
-      ]
-    },
-    {
       "discId": "mvp-dimension",
       "name": "Dimension",
       "brand": "MVP",
@@ -924,5 +943,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-07T04:59:55.167Z"
+  "generated": "2026-11-08T04:59:53.869Z"
 }
