@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-08T04:59:53.869Z",
-  "currentIsoWeek": "2026-W45",
+  "generated": "2026-11-09T05:01:00.398Z",
+  "currentIsoWeek": "2026-W46",
   "summary": {
-    "totalSignals": 93,
+    "totalSignals": 96,
     "newDiscs": 0,
-    "newReleases": 28,
-    "newAtStore": 65,
-    "weeksIncluded": 2,
+    "newReleases": 26,
+    "newAtStore": 70,
+    "weeksIncluded": 3,
     "quarantinedStores": [],
     "suppressedMassResetEvents": [
       {
@@ -85,14 +85,14 @@
         "count": 138
       },
       {
-        "store": "golfdiscer",
-        "date": "2026-07-24",
-        "count": 126
-      },
-      {
         "store": "aceshop",
         "date": "2026-08-28",
         "count": 116
+      },
+      {
+        "store": "golfdiscer",
+        "date": "2026-07-24",
+        "count": 112
       },
       {
         "store": "discexpress",
@@ -131,18 +131,18 @@
       },
       {
         "store": "hyzershop",
-        "date": "2026-11-08",
+        "date": "2026-11-09",
         "count": 62
-      },
-      {
-        "store": "frisbeebutikken",
-        "date": "2026-11-08",
-        "count": 50
       },
       {
         "store": "discsport",
         "date": "2026-09-04",
         "count": 50
+      },
+      {
+        "store": "frisbeebutikken",
+        "date": "2026-11-08",
+        "count": 49
       },
       {
         "store": "wearediscgolf",
@@ -155,11 +155,6 @@
         "count": 38
       },
       {
-        "store": "frisbeebutikken",
-        "date": "2026-11-04",
-        "count": 33
-      },
-      {
         "store": "rocketdiscs",
         "date": "2026-08-21",
         "count": 33
@@ -169,28 +164,36 @@
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W45",
-        "count": 66
+        "count": 75
       },
       {
         "store": "frisbeebutikken",
         "isoWeek": "2026-W44",
-        "count": 63
+        "count": 33
       },
       {
-        "store": "frisbeesor",
-        "isoWeek": "2026-W44",
-        "count": 25
+        "store": "frisbeebutikken",
+        "isoWeek": "2026-W46",
+        "count": 27
       }
     ]
   },
   "weeks": [
+    {
+      "isoWeek": "2026-W46",
+      "year": 2026,
+      "weekNumber": 46,
+      "startDate": "2026-11-09",
+      "endDate": "2026-11-15",
+      "frozen": false
+    },
     {
       "isoWeek": "2026-W45",
       "year": 2026,
       "weekNumber": 45,
       "startDate": "2026-11-02",
       "endDate": "2026-11-08",
-      "frozen": false
+      "frozen": true
     },
     {
       "isoWeek": "2026-W44",

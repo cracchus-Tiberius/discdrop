@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T04:59:40.333Z",
+  "lastUpdated": "2026-11-09T05:00:38.151Z",
   "products": [
     {
       "store": "discsport",
@@ -6912,9 +6912,30 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "BT Soft Swan",
+      "price": 149,
+      "url": "https://frisbeebutikken.no/products/bt-soft-swan32",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Electron Autopilot - Eagle McMahon",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Electron Autopilot Firm - Eagle McMahon",
       "price": 179,
       "url": "https://frisbeebutikken.no/products/electron-autopilot-firm-eagle-mcmahon",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Electron Autopilot Soft - Eagle McMahon",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon-2",
       "inStock": true
     },
     {
@@ -6926,51 +6947,16 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 249,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "rawName": "Kasta Set Moomin",
+      "price": 599,
+      "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
       "inStock": true
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Special Blend Scorch - Valerie Mandujano",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 279,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium LASERi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-laseri",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium MIDARi",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-midari",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "rawName": "Lux Vapor Function - Special Edition",
       "price": 229,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
       "inStock": true
     },
     {
@@ -7006,6 +6992,34 @@
       "rawName": "NERF Soft Flight Starter Kit",
       "price": 549,
       "url": "https://frisbeebutikken.no/products/nerf-soft-flight-starter-kit",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium LASERi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-laseri",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium MIDARi",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-midari",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
       "inStock": true
     },
     {
@@ -7052,20 +7066,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Lux Vapor Function - Special Edition",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Electron Autopilot - Eagle McMahon",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
       "price": 289,
       "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
@@ -7073,16 +7073,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Electron Autopilot Soft - Eagle McMahon",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Kasta Set Moomin",
-      "price": 599,
-      "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -7787,13 +7780,6 @@
     },
     {
       "store": "golfdiscer",
-      "rawName": "Phoenix Line Kui",
-      "price": 179,
-      "url": "https://golfdiscer.no/products/phoenix-line-kui",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
       "rawName": "Dragon Line Putter Gui",
       "price": 199,
       "url": "https://golfdiscer.no/products/dragon-line-putter-gui",
@@ -7850,24 +7836,10 @@
     },
     {
       "store": "golfdiscer",
-      "rawName": "Disc golf startsett Kasteplast Mummi",
-      "price": 598,
-      "url": "https://golfdiscer.no/products/disc-golf-startsett-kasteplast-mummi",
-      "inStock": false
-    },
-    {
-      "store": "golfdiscer",
       "rawName": "Forundringspakke",
       "price": 649,
       "url": "https://golfdiscer.no/products/overraskelsesboks",
       "inStock": true
-    },
-    {
-      "store": "golfdiscer",
-      "rawName": "Discmania Performance Tee",
-      "price": 199,
-      "url": "https://golfdiscer.no/products/discmania-performance-tee",
-      "inStock": false
     },
     {
       "store": "golfdiscer",
@@ -9055,7 +9027,7 @@
     {
       "store": "discexpress",
       "rawName": "GRIPeq MB-G3 - Paul McBeth",
-      "price": 2187,
+      "price": 2189,
       "url": "https://www.discexpress.se/products/paul-mcbeth-x-gripeq-mb-g3",
       "inStock": false
     },
@@ -9076,14 +9048,14 @@
     {
       "store": "discexpress",
       "rawName": "MVP Lunar Module 18-pack",
-      "price": 3135,
+      "price": 3137,
       "url": "https://www.discexpress.se/products/mvp-lunar-module-18-pack",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "GameProofer eTAG",
-      "price": 2578,
+      "price": 2580,
       "url": "https://www.discexpress.se/products/gameproofer-etag",
       "inStock": true
     },
@@ -9139,7 +9111,7 @@
     {
       "store": "discexpress",
       "rawName": "Persona Parallel",
-      "price": 266,
+      "price": 267,
       "url": "https://www.discexpress.se/products/persona-parallel",
       "inStock": true
     },
@@ -9153,21 +9125,21 @@
     {
       "store": "discexpress",
       "rawName": "Autopilot Electron (Firm) - Eagle McMahon Team Series",
-      "price": 161,
+      "price": 162,
       "url": "https://www.discexpress.se/products/autopilot-electron-firm-eagle-mcmahon-team-series",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Autopilot Electron (Soft) - Eagle McMahon Team Series",
-      "price": 161,
+      "price": 162,
       "url": "https://www.discexpress.se/products/autopilot-electron-soft-eagle-mcmahon-team-series",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Autopilot Electron - Eagle McMahon Team Series",
-      "price": 161,
+      "price": 162,
       "url": "https://www.discexpress.se/products/autopilot-electron-eagle-mcmahon-team-series",
       "inStock": true
     },
@@ -9202,21 +9174,21 @@
     {
       "store": "discexpress",
       "rawName": "MVP Black Hole Event Horizon Training Net",
-      "price": 1527,
+      "price": 1529,
       "url": "https://www.discexpress.se/products/mvp-black-hole-event-horizon-training-net",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discgolf Adventskalender – Limited Collector’s Edition (4 Unika Discar)",
-      "price": 954,
+      "price": 955,
       "url": "https://www.discexpress.se/products/discgolf-adventskalender-limited-collector-s-edition-4-unika-discar",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discgolf julkalender 2026 - 24 Discar",
-      "price": 2841,
+      "price": 2843,
       "url": "https://www.discexpress.se/products/discgolf-julkalender-2026-24-discar",
       "inStock": false
     },
@@ -9365,12 +9337,12 @@
       "rawName": "Älva K1 Grind (Moomin)",
       "price": 219,
       "url": "https://www.discexpress.se/products/alva-k1-grind-moomin",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "MVP Voyager Lite",
-      "price": 1241,
+      "price": 1242,
       "url": "https://www.discexpress.se/products/mvp-voyager-lite",
       "inStock": true
     },
@@ -9496,21 +9468,21 @@
     {
       "store": "discexpress",
       "rawName": "Range Finder Pro - Avståndsmätare för Discgolf",
-      "price": 1432,
+      "price": 1433,
       "url": "https://www.discexpress.se/products/range-finder-pro-avstandsmatare-for-discgolf",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discmania - Tour Bag",
-      "price": 1909,
+      "price": 1911,
       "url": "https://www.discexpress.se/products/discmania-tour-bag",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Sky Backpack 2.0",
-      "price": 954,
+      "price": 955,
       "url": "https://www.discexpress.se/products/discmania-fanatic-sky-backpack-2-0",
       "inStock": true
     },
@@ -9573,7 +9545,7 @@
     {
       "store": "discexpress",
       "rawName": "Hiva 2.0 - Kastaplast Bag",
-      "price": 572,
+      "price": 573,
       "url": "https://www.discexpress.se/products/hiva-2-0-kastaplast-bag",
       "inStock": true
     },
@@ -9636,42 +9608,42 @@
     {
       "store": "discexpress",
       "rawName": "Voyager Pro",
-      "price": 2100,
+      "price": 2102,
       "url": "https://www.discexpress.se/products/voyager-pro",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Voyager - James Conrad Signature Edition",
-      "price": 1901,
+      "price": 1902,
       "url": "https://www.discexpress.se/products/voyager-james-conrad-signature-edition",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Innova - Excursion Pack",
-      "price": 763,
+      "price": 764,
       "url": "https://www.discexpress.se/products/innova-excursion-pack",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Axiom Voyager Lite",
-      "price": 1241,
+      "price": 1242,
       "url": "https://www.discexpress.se/products/axiom-voyager-lite",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "MVP Voyager Lite – Ripstop",
-      "price": 1241,
+      "price": 1242,
       "url": "https://www.discexpress.se/products/mvp-voyager-lite-ripstop",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Innova DisCatcher Traveler Basket",
-      "price": 1614,
+      "price": 1616,
       "url": "https://www.discexpress.se/products/innova-discatcher-traveler-basket",
       "inStock": true
     },
@@ -9720,7 +9692,7 @@
     {
       "store": "discexpress",
       "rawName": "Glide Jawbreaker Z FLX - Around the World",
-      "price": 266,
+      "price": 267,
       "url": "https://www.discexpress.se/products/glide-jawbreaker-z-flx-around-the-world",
       "inStock": true
     },
@@ -9741,7 +9713,7 @@
     {
       "store": "discexpress",
       "rawName": "Safari Pack",
-      "price": 1145,
+      "price": 1146,
       "url": "https://www.discexpress.se/products/safari-ryggsack",
       "inStock": true
     },
@@ -9769,7 +9741,7 @@
     {
       "store": "discexpress",
       "rawName": "Lite Pro - Discmania",
-      "price": 1145,
+      "price": 1146,
       "url": "https://www.discexpress.se/products/lite-pro-discmania",
       "inStock": true
     },
@@ -9811,7 +9783,7 @@
     {
       "store": "discexpress",
       "rawName": "Regnskydd - Lore 2.0 - Squatch",
-      "price": 334,
+      "price": 335,
       "url": "https://www.discexpress.se/products/regnskydd-lore",
       "inStock": true
     },
@@ -9895,14 +9867,14 @@
     {
       "store": "discexpress",
       "rawName": "Discgolfkalender 2025 - 24 Överraskningar för Discgolfentusiasten",
-      "price": 2864,
+      "price": 2866,
       "url": "https://www.discexpress.se/products/discgolf-adventskalender-2025-24-overraskningar-for-discgolf-entusiasten",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Luxury E5 Backpack",
-      "price": 1901,
+      "price": 1902,
       "url": "https://www.discexpress.se/products/core-pro-e5-backpack",
       "inStock": true
     },
@@ -10000,7 +9972,7 @@
     {
       "store": "discexpress",
       "rawName": "Sigr - Odin",
-      "price": 2673,
+      "price": 2676,
       "url": "https://www.discexpress.se/products/sigr-odin",
       "inStock": true
     },
@@ -10014,7 +9986,7 @@
     {
       "store": "discexpress",
       "rawName": "FINAL NINE (Expansion Pack)",
-      "price": 333,
+      "price": 334,
       "url": "https://www.discexpress.se/products/final-nine-expansion-pack",
       "inStock": true
     },
@@ -10077,7 +10049,7 @@
     {
       "store": "discexpress",
       "rawName": "Sigr - Balder",
-      "price": 2100,
+      "price": 2102,
       "url": "https://www.discexpress.se/products/sigr-balder",
       "inStock": true
     },
@@ -10119,14 +10091,14 @@
     {
       "store": "discexpress",
       "rawName": "Grip sack",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/sport-sac",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Framtid",
-      "price": 2387,
+      "price": 2389,
       "url": "https://www.discexpress.se/products/framtid",
       "inStock": false
     },
@@ -10161,56 +10133,56 @@
     {
       "store": "discexpress",
       "rawName": "Älva K1 Glow",
-      "price": 247,
+      "price": 248,
       "url": "https://www.discexpress.se/products/alva-k1-glow",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Upper Park The Rebel 2025",
-      "price": 2856,
+      "price": 2858,
       "url": "https://www.discexpress.se/products/upper-park-the-rebel-2025",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Dynamic Discs Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/dynamic-discs-rubber-velcro-patch",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Westside Discs Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/westside-rubber-velcro-patch",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Putt",
-      "price": 3781,
+      "price": 3785,
       "url": "https://www.discexpress.se/products/tech-disc-putt",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Midrange",
-      "price": 3781,
+      "price": 3785,
       "url": "https://www.discexpress.se/products/tech-disc-midrange",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Distance Driver",
-      "price": 3781,
+      "price": 3785,
       "url": "https://www.discexpress.se/products/tech-disc-disctance-driver",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Tech Disc - Fairway Driver",
-      "price": 3781,
+      "price": 3785,
       "url": "https://www.discexpress.se/products/tech-disc-fairway-driver",
       "inStock": true
     },
@@ -10245,42 +10217,42 @@
     {
       "store": "discexpress",
       "rawName": "K3 Hard Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/k3-hard-rubber-velcro-patch-copy",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Lets Kastaplast Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/lets-kastaplast-rubber-velcro-patch",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Berg Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/berg-rubber-velcro-patch",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Im a Fuse Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/im-a-fuse-rubber-velcro-patch",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Latitude Rubber Velcro Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/huk-lab-rubber-velcro-patch-copy",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Go backpack",
-      "price": 314,
+      "price": 315,
       "url": "https://www.discexpress.se/products/discmania-fanatic-go-backpack",
       "inStock": true
     },
@@ -10322,7 +10294,7 @@
     {
       "store": "discexpress",
       "rawName": "GRIPeq MB-PX1 - Paul McBeth",
-      "price": 3811,
+      "price": 3814,
       "url": "https://www.discexpress.se/products/grip-eq-mb-px1",
       "inStock": true
     },
@@ -10336,7 +10308,7 @@
     {
       "store": "discexpress",
       "rawName": "Kasta Set (Moomin)",
-      "price": 572,
+      "price": 573,
       "url": "https://www.discexpress.se/products/kasta-set-moomin-start-set",
       "inStock": true
     },
@@ -10378,21 +10350,21 @@
     {
       "store": "discexpress",
       "rawName": "Ale Disc Golf Center Patch 60x70mm",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/ale-disc-golf-center-patch-60x70mm",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Ale Disc Golf Center Patch 120x45mm",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/ale-disc-golf-center-patch-120x45mm",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Nail Clipper",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/nail-clipper",
       "inStock": true
     },
@@ -10413,7 +10385,7 @@
     {
       "store": "discexpress",
       "rawName": "Rack - All Terrain - Zuca",
-      "price": 524,
+      "price": 525,
       "url": "https://www.discexpress.se/products/rack-all-terrain-zuca",
       "inStock": true
     },
@@ -10427,7 +10399,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Compact Disc Golf Cart",
-      "price": 3056,
+      "price": 3058,
       "url": "https://www.discexpress.se/products/zuca-compact-disc-golf-cart",
       "inStock": false
     },
@@ -10448,7 +10420,7 @@
     {
       "store": "discexpress",
       "rawName": "Discmania - Fanatic Fly Backpack",
-      "price": 524,
+      "price": 525,
       "url": "https://www.discexpress.se/products/discmania-fanatic-fly-backpack",
       "inStock": false
     },
@@ -10532,7 +10504,7 @@
     {
       "store": "discexpress",
       "rawName": "Cuff Beanie Paul Mcbeth 2 Tone",
-      "price": 314,
+      "price": 315,
       "url": "https://www.discexpress.se/products/cuff-beanie-paul-mcbeth-2-tone",
       "inStock": true
     },
@@ -10553,7 +10525,7 @@
     {
       "store": "discexpress",
       "rawName": "Discexpress Towel",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/discexpress-towel",
       "inStock": true
     },
@@ -10651,7 +10623,7 @@
     {
       "store": "discexpress",
       "rawName": "Paul McBeth Trucker Hat",
-      "price": 333,
+      "price": 334,
       "url": "https://www.discexpress.se/products/paul-mcbeth-trucker-hat",
       "inStock": false
     },
@@ -10665,7 +10637,7 @@
     {
       "store": "discexpress",
       "rawName": "Frid 2",
-      "price": 4297,
+      "price": 4301,
       "url": "https://www.discexpress.se/products/frid-european-birdies",
       "inStock": false
     },
@@ -10693,14 +10665,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart",
-      "price": 2865,
+      "price": 2867,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Friction Disc Golf Towel",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/friction-disc-golf-towel",
       "inStock": true
     },
@@ -10735,7 +10707,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - Apex XL",
-      "price": 954,
+      "price": 955,
       "url": "https://www.discexpress.se/products/prodigy-apex-xl",
       "inStock": false
     },
@@ -10819,28 +10791,28 @@
     {
       "store": "discexpress",
       "rawName": "Upper Park Disc Golf Logo Patch",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/upper-park-disc-golf-logo-patch",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack LG Bag  (Only Insert Bag)",
-      "price": 1336,
+      "price": 1337,
       "url": "https://www.discexpress.se/products/zuca-trekker-lg-bag",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Bag (Only Insert Bag)",
-      "price": 1145,
+      "price": 1146,
       "url": "https://www.discexpress.se/products/zuca-trekker-bag",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart Fenders",
-      "price": 572,
+      "price": 573,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart-fenders",
       "inStock": false
     },
@@ -10882,14 +10854,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4393,
+      "price": 4396,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2482,
+      "price": 2484,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -10903,7 +10875,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Saddle Bag Set for All-Terrain",
-      "price": 763,
+      "price": 764,
       "url": "https://www.discexpress.se/products/saddle-bag-set",
       "inStock": false
     },
@@ -10931,7 +10903,7 @@
     {
       "store": "discexpress",
       "rawName": "Disc Jockey Bluetooth Speaker",
-      "price": 1623,
+      "price": 1624,
       "url": "https://www.discexpress.se/products/disc-jockey-bluetooth-speaker",
       "inStock": true
     },
@@ -10952,14 +10924,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart LG",
-      "price": 3247,
+      "price": 3249,
       "url": "https://www.discexpress.se/products/backpack-cart-lg",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart and Insert Bag",
-      "price": 4011,
+      "price": 4014,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-backpack-cart-with-insert",
       "inStock": true
     },
@@ -11008,7 +10980,7 @@
     {
       "store": "discexpress",
       "rawName": "Grip It And Rip It Disc Golf Shirt",
-      "price": 247,
+      "price": 248,
       "url": "https://www.discexpress.se/products/grip-it-and-rip-it-disc-golf-shirt",
       "inStock": false
     },
@@ -11022,14 +10994,14 @@
     {
       "store": "discexpress",
       "rawName": "Upper Park The Trainer",
-      "price": 524,
+      "price": 525,
       "url": "https://www.discexpress.se/products/upper-park-the-trainer",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Upper Park The Pinch Pro",
-      "price": 954,
+      "price": 955,
       "url": "https://www.discexpress.se/products/upper-park-the-pinch",
       "inStock": false
     },
@@ -11127,7 +11099,7 @@
     {
       "store": "discexpress",
       "rawName": "FPC 5-Panel",
-      "price": 333,
+      "price": 334,
       "url": "https://www.discexpress.se/products/flying-plate-5-panel",
       "inStock": true
     },
@@ -11141,7 +11113,7 @@
     {
       "store": "discexpress",
       "rawName": "Locking Backers for Pins - Set of 2",
-      "price": 161,
+      "price": 162,
       "url": "https://www.discexpress.se/products/locking-backers-for-disc-golf-pins-set-of-2",
       "inStock": true
     },
@@ -11211,7 +11183,7 @@
     {
       "store": "discexpress",
       "rawName": "Innova Playing Cards",
-      "price": 75,
+      "price": 76,
       "url": "https://www.discexpress.se/products/innova-playing-cards",
       "inStock": true
     },
@@ -11225,7 +11197,7 @@
     {
       "store": "discexpress",
       "rawName": "Prodigy - Practice Bag V2 (2020 Model)",
-      "price": 333,
+      "price": 334,
       "url": "https://www.discexpress.se/products/practice-bag-v2",
       "inStock": false
     },
@@ -11274,7 +11246,7 @@
     {
       "store": "discexpress",
       "rawName": "Friction Warm Pair",
-      "price": 400,
+      "price": 401,
       "url": "https://www.discexpress.se/products/friction-warm-pair",
       "inStock": true
     },
@@ -13458,28 +13430,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -13521,21 +13493,21 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model OS",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-os",
       "inStock": true
     },
@@ -13563,7 +13535,7 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
@@ -13591,14 +13563,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
@@ -13619,14 +13591,14 @@
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "BaseGrip Glow D Model US",
-      "price": 129,
+      "price": 130,
       "url": "https://rocketdiscs.com/prodigy-d-model-us",
       "inStock": true
     },
@@ -16293,28 +16265,28 @@
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 146,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 146,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 146,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
     {
       "store": "rocketdiscs",
       "rawName": "Nerve Pro Temple",
-      "price": 146,
+      "price": 147,
       "url": "https://rocketdiscs.com/thought-space-athletics-temple",
       "inStock": true
     },
@@ -16517,7 +16489,7 @@
     {
       "store": "ugglans",
       "rawName": "Paul McBeth x GRIPeq MB-G3",
-      "price": 2196,
+      "price": 2198,
       "url": "https://ugglansdiscgolf.se/products/paul-mcbeth-x-gripeq-mb-g3",
       "inStock": false
     },
@@ -16538,7 +16510,7 @@
     {
       "store": "ugglans",
       "rawName": "Swedish Open Slimbag",
-      "price": 247,
+      "price": 248,
       "url": "https://ugglansdiscgolf.se/products/swedish-open-slimbag",
       "inStock": true
     },
@@ -16552,7 +16524,7 @@
     {
       "store": "ugglans",
       "rawName": "Seppo Paju First Run Z Jawbreaker Captain’s Caliber",
-      "price": 247,
+      "price": 248,
       "url": "https://ugglansdiscgolf.se/products/seppo-paju-first-run-z-jawbreaker-captain-s-caliber",
       "inStock": true
     },
@@ -16587,7 +16559,7 @@
     {
       "store": "ugglans",
       "rawName": "Ugglans slim shoulderbag",
-      "price": 247,
+      "price": 248,
       "url": "https://ugglansdiscgolf.se/products/ugglans-slim-shoulderbag",
       "inStock": true
     },
@@ -16615,14 +16587,14 @@
     {
       "store": "ugglans",
       "rawName": "Discmania Tour Bag",
-      "price": 1909,
+      "price": 1911,
       "url": "https://ugglansdiscgolf.se/products/discmania-tour-bag",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Discmania Fanatic Sky bag",
-      "price": 954,
+      "price": 955,
       "url": "https://ugglansdiscgolf.se/products/discmania-fanatic-sky-bag",
       "inStock": true
     },
@@ -16664,7 +16636,7 @@
     {
       "store": "ugglans",
       "rawName": "Kastaplast Hiva Messenger Bag 2.0 Mint colour on visible seams",
-      "price": 572,
+      "price": 573,
       "url": "https://ugglansdiscgolf.se/products/kastaplast-hiva-messenger-bag",
       "inStock": true
     },
@@ -16699,7 +16671,7 @@
     {
       "store": "ugglans",
       "rawName": "Kasta Set",
-      "price": 438,
+      "price": 439,
       "url": "https://ugglansdiscgolf.se/products/kasta-set",
       "inStock": true
     },
@@ -16713,7 +16685,7 @@
     {
       "store": "ugglans",
       "rawName": "“Around the World” Jawbreaker Z FLX Glide",
-      "price": 266,
+      "price": 267,
       "url": "https://ugglansdiscgolf.se/products/around-the-world-jawbreaker-z-flx-glide",
       "inStock": true
     },
@@ -16727,14 +16699,14 @@
     {
       "store": "ugglans",
       "rawName": "2026 Paul Ulibarri Z Confetti Captain’s Raptor",
-      "price": 266,
+      "price": 267,
       "url": "https://ugglansdiscgolf.se/products/2026-paul-ulibarri-z-confetti-captain-s-raptor",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Luxury E5 Backpack",
-      "price": 1909,
+      "price": 1911,
       "url": "https://ugglansdiscgolf.se/products/luxury-e5-backpack",
       "inStock": true
     },
@@ -16748,21 +16720,21 @@
     {
       "store": "ugglans",
       "rawName": "Streamline Voyager Pro Bag",
-      "price": 2100,
+      "price": 2102,
       "url": "https://ugglansdiscgolf.se/products/streamline-voyager-bag",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Axiom Voyager Pro Bag",
-      "price": 2100,
+      "price": 2102,
       "url": "https://ugglansdiscgolf.se/products/axiom-voyager-bag",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "MVP Voyager Pro",
-      "price": 2100,
+      "price": 2102,
       "url": "https://ugglansdiscgolf.se/products/voyager-pro",
       "inStock": true
     },
@@ -16783,21 +16755,21 @@
     {
       "store": "ugglans",
       "rawName": "Voyager Lite",
-      "price": 1145,
+      "price": 1146,
       "url": "https://ugglansdiscgolf.se/products/voyager-lite",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Anthony Barela Signature Series AX6",
-      "price": 3438,
+      "price": 3440,
       "url": "https://ugglansdiscgolf.se/products/anthony-barela-signature-series-ax6",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Fanatic Go Backpack",
-      "price": 314,
+      "price": 315,
       "url": "https://ugglansdiscgolf.se/products/fanatic-go-backpack",
       "inStock": false
     },
@@ -16811,7 +16783,7 @@
     {
       "store": "ugglans",
       "rawName": "MVP Beaker Bag",
-      "price": 352,
+      "price": 353,
       "url": "https://ugglansdiscgolf.se/products/mvp-beaker-bag",
       "inStock": false
     },
@@ -16839,7 +16811,7 @@
     {
       "store": "ugglans",
       "rawName": "Magnofly för Framtid & Frid 2",
-      "price": 333,
+      "price": 334,
       "url": "https://ugglansdiscgolf.se/products/magnofly-for-framtid",
       "inStock": true
     },
@@ -16888,14 +16860,14 @@
     {
       "store": "ugglans",
       "rawName": "SIGR Odin",
-      "price": 2673,
+      "price": 2676,
       "url": "https://ugglansdiscgolf.se/products/sigr-odin",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "SIGR Balder",
-      "price": 2291,
+      "price": 2293,
       "url": "https://ugglansdiscgolf.se/products/sigr-balder",
       "inStock": false
     },
@@ -16909,7 +16881,7 @@
     {
       "store": "ugglans",
       "rawName": "Prototype Color Glow C-Line P4 x Worlds",
-      "price": 247,
+      "price": 248,
       "url": "https://ugglansdiscgolf.se/products/prototype-color-glow-c-line-p4-x-worlds",
       "inStock": false
     },
@@ -16944,14 +16916,14 @@
     {
       "store": "ugglans",
       "rawName": "Framtid",
-      "price": 3438,
+      "price": 3440,
       "url": "https://ugglansdiscgolf.se/products/framtid",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "European Birdies - Frid 2",
-      "price": 4298,
+      "price": 4302,
       "url": "https://ugglansdiscgolf.se/products/frid-2-european-birdie-turkos",
       "inStock": false
     },
@@ -17000,14 +16972,14 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Backpack 1",
-      "price": 1050,
+      "price": 1051,
       "url": "https://ugglansdiscgolf.se/products/prodigy-bp1",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Prodigy Apex XL",
-      "price": 2378,
+      "price": 2380,
       "url": "https://ugglansdiscgolf.se/products/prodigy-apex-xl",
       "inStock": true
     },
@@ -17028,7 +17000,7 @@
     {
       "store": "ugglans",
       "rawName": "K1 Glow Älva",
-      "price": 247,
+      "price": 248,
       "url": "https://ugglansdiscgolf.se/products/k1-glow-alva",
       "inStock": true
     },
@@ -17056,21 +17028,21 @@
     {
       "store": "ugglans",
       "rawName": "Grip G2",
-      "price": 1623,
+      "price": 1624,
       "url": "https://ugglansdiscgolf.se/products/grip-g2-coal",
       "inStock": false
     },
     {
       "store": "ugglans",
       "rawName": "Grip Bx3",
-      "price": 2865,
+      "price": 2867,
       "url": "https://ugglansdiscgolf.se/products/grip-bx3",
       "inStock": true
     },
     {
       "store": "ugglans",
       "rawName": "Grip AX 6",
-      "price": 3438,
+      "price": 3440,
       "url": "https://ugglansdiscgolf.se/products/grip-ax-6",
       "inStock": true
     },
@@ -17112,7 +17084,7 @@
     {
       "store": "discace",
       "rawName": "Prodigy BP-4 Backpack",
-      "price": 266,
+      "price": 267,
       "url": "https://discaceofsweden.com/produkt/prodigy-bp-4-backpack/",
       "inStock": true
     },
@@ -17133,28 +17105,28 @@
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Anthracite black",
-      "price": 333,
+      "price": 334,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-anthracite-black/",
       "inStock": true
     },
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Tour blue",
-      "price": 333,
+      "price": 334,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-tour-blue/",
       "inStock": true
     },
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Deep Red",
-      "price": 333,
+      "price": 334,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-deep-red/",
       "inStock": true
     },
     {
       "store": "discace",
       "rawName": "DA of Sweden TPL Team Polo Cloud White",
-      "price": 333,
+      "price": 334,
       "url": "https://discaceofsweden.com/produkt/da-of-sweden-tpl-team-polo-cloud-white/",
       "inStock": true
     },
@@ -17182,7 +17154,7 @@
     {
       "store": "discace",
       "rawName": "Innova Excursion Pack",
-      "price": 763,
+      "price": 764,
       "url": "https://discaceofsweden.com/produkt/innova-excursion-pack/",
       "inStock": true
     },
