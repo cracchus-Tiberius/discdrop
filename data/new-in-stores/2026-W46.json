@@ -13,13 +13,13 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 183,
+      "firstSeenMs": 1794286317919,
+      "price": 184,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 183,
+          "price": 184,
           "url": "https://www.discexpress.se/products/majesty-premium-active"
         }
       ]
@@ -32,13 +32,13 @@
       "type": "new-release",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 183,
+      "firstSeenMs": 1794286317919,
+      "price": 184,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 183,
+          "price": 184,
           "url": "https://www.discexpress.se/products/astronaut-premium-active"
         }
       ]
@@ -51,7 +51,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1794199879008,
+      "firstSeenMs": 1794286296222,
       "price": 314,
       "stores": [
         {
@@ -70,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1794199879008,
+      "firstSeenMs": 1794286296222,
       "price": 205,
       "stores": [
         {
@@ -89,7 +89,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1794199879008,
+      "firstSeenMs": 1794286296222,
       "price": 205,
       "stores": [
         {
@@ -101,6 +101,25 @@
       ]
     },
     {
+      "discId": "discraft-luna",
+      "name": "Luna",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Big Z Swirl",
+      "edition": null,
+      "firstSeenMs": 1794285293921,
+      "price": 324,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 324,
+          "url": "https://wearediscgolf.no/produkt/big-z-swirl-ultra-luna/"
+        }
+      ]
+    },
+    {
       "discId": "innova-xero",
       "name": "Xero",
       "brand": "Innova",
@@ -108,7 +127,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 214,
       "stores": [
         {
@@ -120,6 +139,25 @@
       ]
     },
     {
+      "discId": "discraft-archer",
+      "name": "Archer",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Z Swirl",
+      "edition": "Anthony Barela",
+      "firstSeenMs": 1794285293921,
+      "price": 324,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 324,
+          "url": "https://wearediscgolf.no/produkt/z-swirl-archer-bff-anthony-barela-austin-turner/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-archive",
       "name": "Archive",
       "brand": "Prodigy",
@@ -127,7 +165,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 275,
       "stores": [
         {
@@ -146,7 +184,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 294,
       "stores": [
         {
@@ -165,13 +203,13 @@
       "type": "new-at-store",
       "plastic": "Proton",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 269,
+      "firstSeenMs": 1794286317919,
+      "price": 270,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 269,
+          "price": 270,
           "url": "https://www.discexpress.se/products/watt-proton-plc"
         }
       ]
@@ -184,13 +222,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": "Team Series",
-      "firstSeenMs": 1794199902449,
-      "price": 279,
+      "firstSeenMs": 1794286317919,
+      "price": 280,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 279,
+          "price": 280,
           "url": "https://www.discexpress.se/products/world-tournament-x-rill-matt-orum-team-series"
         }
       ]
@@ -203,13 +241,13 @@
       "type": "new-at-store",
       "plastic": "Project Grip",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 279,
+      "firstSeenMs": 1794286317919,
+      "price": 280,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 279,
+          "price": 280,
           "url": "https://www.discexpress.se/products/fuse-project-grip"
         }
       ]
@@ -222,13 +260,13 @@
       "type": "new-at-store",
       "plastic": "Z",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 308,
+      "firstSeenMs": 1794286317919,
+      "price": 309,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 308,
+          "price": 309,
           "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame"
         }
       ]
@@ -241,13 +279,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 260,
+      "firstSeenMs": 1794286317919,
+      "price": 261,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 261,
           "url": "https://www.discexpress.se/products/destiny-tournament-x-ring"
         }
       ]
@@ -260,13 +298,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 260,
+      "firstSeenMs": 1794286317919,
+      "price": 261,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 261,
           "url": "https://www.discexpress.se/products/prince-tournament-x"
         }
       ]
@@ -279,13 +317,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 260,
+      "firstSeenMs": 1794286317919,
+      "price": 261,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 261,
           "url": "https://www.discexpress.se/products/warship-vip-x-orbit-westside-at-the-beach"
         }
       ]
@@ -298,13 +336,13 @@
       "type": "new-at-store",
       "plastic": "Tournament",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 260,
+      "firstSeenMs": 1794286317919,
+      "price": 261,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 261,
           "url": "https://www.discexpress.se/products/sword-tournament-x"
         }
       ]
@@ -317,13 +355,13 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": null,
-      "firstSeenMs": 1794199902449,
-      "price": 260,
+      "firstSeenMs": 1794286317919,
+      "price": 261,
       "stores": [
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 260,
+          "price": 261,
           "url": "https://www.discexpress.se/products/vip-x-orbit-ahti-westside-fishing"
         }
       ]
@@ -336,7 +374,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
+      "firstSeenMs": 1794286317919,
       "price": 126,
       "stores": [
         {
@@ -355,7 +393,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
+      "firstSeenMs": 1794286317919,
       "price": 126,
       "stores": [
         {
@@ -374,7 +412,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
+      "firstSeenMs": 1794286317919,
       "price": 126,
       "stores": [
         {
@@ -393,7 +431,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
+      "firstSeenMs": 1794286317919,
       "price": 126,
       "stores": [
         {
@@ -412,7 +450,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
+      "firstSeenMs": 1794286317919,
       "price": 126,
       "stores": [
         {
@@ -431,7 +469,7 @@
       "type": "new-at-store",
       "plastic": "Active",
       "edition": null,
-      "firstSeenMs": 1794199902449,
+      "firstSeenMs": 1794286317919,
       "price": 126,
       "stores": [
         {
@@ -450,7 +488,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1794199879008,
+      "firstSeenMs": 1794286296222,
       "price": 224,
       "stores": [
         {
@@ -469,7 +507,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1794199879008,
+      "firstSeenMs": 1794286296222,
       "price": 314,
       "stores": [
         {
@@ -488,7 +526,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1794199867470,
+      "firstSeenMs": 1794286284743,
       "price": 229,
       "stores": [
         {
@@ -507,7 +545,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1794199867470,
+      "firstSeenMs": 1794286284743,
       "price": 235,
       "stores": [
         {
@@ -526,7 +564,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1794199867470,
+      "firstSeenMs": 1794286284743,
       "price": 339,
       "stores": [
         {
@@ -538,6 +576,25 @@
       ]
     },
     {
+      "discId": "discraft-zone",
+      "name": "Zone",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "CryZtal FLX",
+      "edition": null,
+      "firstSeenMs": 1794285293921,
+      "price": 324,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 324,
+          "url": "https://wearediscgolf.no/produkt/cryztal-flx-zone-worlds/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-distortion",
       "name": "Distortion",
       "brand": "Prodigy",
@@ -545,7 +602,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 275,
       "stores": [
         {
@@ -564,7 +621,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 214,
       "stores": [
         {
@@ -589,7 +646,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 315,
       "stores": [
         {
@@ -601,6 +658,25 @@
       ]
     },
     {
+      "discId": "discraft-raptor",
+      "name": "Raptor",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Z Swirl",
+      "edition": null,
+      "firstSeenMs": 1794285293921,
+      "price": 344,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 344,
+          "url": "https://wearediscgolf.no/produkt/z-swirl-fuzed-raptor-with-solid-esp-rim/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-shadowfax",
       "name": "Shadowfax",
       "brand": "Prodigy",
@@ -608,7 +684,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 255,
       "stores": [
         {
@@ -627,7 +703,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 275,
       "stores": [
         {
@@ -646,7 +722,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1794198878989,
+      "firstSeenMs": 1794285293921,
       "price": 275,
       "stores": [
         {
@@ -659,5 +735,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-09T05:01:00.398Z"
+  "generated": "2026-11-10T05:01:14.331Z"
 }
