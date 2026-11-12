@@ -184,13 +184,24 @@ test('parseJsonLdItemList refuses a price in any currency but NOK', () => {
   assert.deepStrictEqual(parseJsonLdItemList(krokholPage([eur]), KROKHOL), []);
 });
 
-test('a lower price on the card beats the JSON-LD price', () => {
-  // The saved page had no sale item, so which price a discounted product
-  // publishes is unverified. If its card shows less, the card wins.
-  const card = '<article class="product-thumb-info"><a href="/products/-d-line-flex3-p2">x</a>' +
-    '<section class="price flex"><p>119,-</p><p class="line-through">140,-</p></section></article>';
-  const [p] = parseJsonLdItemList(krokholPage([KROKHOL_ITEMS[0]], card), KROKHOL);
-  assert.strictEqual(p.price, 119);
+test('a sale card beats an ordinary JSON-LD price', () => {
+  // The price markup below is Krokhol's real sale card for Neutron Tesla
+  // Classic, copied from the saved https://www.krokholdgs.no/specials of
+  // 2026-11-12 (189,- with 209,- struck through). The JSON-LD side is set to
+  // the ordinary price on purpose: whichever of the two Krokhol's JSON-LD
+  // publishes for a discount, the scraper must land on what the customer pays.
+  const tesla = structuredClone(KROKHOL_ITEMS[0]);
+  tesla.item.name = 'Neutron Tesla Classic';
+  tesla.item.brand.name = 'MVP Disc Sports';
+  tesla.item.url = 'https://www.krokholdgs.no/products/neutron-tesla-classic';
+  tesla.item.offers.price = 209;
+  const card = '<article class="product-thumb-info"><a href="https://www.krokholdgs.no/products/neutron-tesla-classic">x</a>' +
+    '<div class="pb_price price flex items-center min-h-[1.75rem]"> <p style="color:#C0392B" class="mr-2 text-xl font-bold">189,-</p> ' +
+    '<span class="flex flex-col mr-2"> <span style="color:#1A1A1A" class="text-base font-light leading-tight"> ' +
+    '<s class="line-through">209,-</s> </span> </span> </div></article>';
+  const [p] = parseJsonLdItemList(krokholPage([tesla], card), KROKHOL);
+  assert.strictEqual(p.rawName, 'MVP Disc Sports Neutron Tesla Classic');
+  assert.strictEqual(p.price, 189);
 });
 
 test('a card that agrees with JSON-LD changes nothing', () => {

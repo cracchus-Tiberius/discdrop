@@ -172,8 +172,9 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   for thirteen days while its 1029 prices sat on the site as current — the
   freshness alarm fired daily and drowned in Discsport's. parseListing() tries the
   three in order, so Frisbeebutikken and Starframe are untouched. If a card shows
-  a lower price than its JSON-LD, the card wins: the saved page had no sale item,
-  so which price a discount publishes is unverified. Krokhol has
+  a lower price than its JSON-LD, the card wins — verified against Krokhol's real
+  sale cards (189,- over a struck 209,-), so a discount lands on what the customer
+  pays whichever price the JSON-LD publishes for it. Krokhol has
   no "all discs" parent category, so it lists five type categories and de-duplicates
   by product URL.
 - Aceshop's WAF 403s the shared USER_AGENT — the Windows Chrome/124.0.0.0

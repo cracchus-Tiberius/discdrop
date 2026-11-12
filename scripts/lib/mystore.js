@@ -184,12 +184,14 @@ function parseServerRenderedCards(html, { baseUrl } = {}) {
  * a saved putter page: all 200 items Product/Offer, NOK, branded, and every
  * card's visible price equal to its JSON-LD price.
  *
- * That page had no product on sale, so it could not show which price a sale
- * item publishes. schema.org asks for the selling price and Mystore's own
- * templates track final vs original price separately, so it is very likely the
- * sale price — but if a card ever shows a lower price than its JSON-LD, the
- * card wins. Getting this wrong would overstate Krokhol on every discounted
- * disc and hide real /prisfall drops.
+ * Sale prices: if a card shows a lower price than its JSON-LD, the card wins.
+ * Krokhol's sale cards show the sale price and the struck-through ordinary
+ * one (/specials, 2026-11-12: Neutron Tesla Classic 189,- over 209,-), and the
+ * guard takes the lower, so the scraper lands on what the customer pays
+ * whichever price the JSON-LD publishes for a discount — that page has no
+ * ItemList of its own, so that part was never observed directly. Getting it
+ * wrong would overstate Krokhol on every discounted disc and hide real
+ * /prisfall drops.
  */
 const OUT_OF_STOCK_RE = /(OutOfStock|SoldOut|Discontinued)$/i;
 
