@@ -486,7 +486,7 @@ const NON_DISC_PHRASES = [
   // Sets / bundles
   'disc golf set', 'disc golf bag', 'starter set', 'starter bag', 'starter pack',
   'mystery box', 'mystery disc', 'mystery pack', 'mysteri pack', 'distance set',
-  'komplett paket', '3-disc', '3 disc', '3-pack', '3 för',
+  'komplett paket',
   'evolution disc golf', 'advanced startset', 'training set', 'träningspaket',
   // Baskets / targets
   'tävlingskorg', 'throwing net', 'kastnät', 'pro target', 'foldable target',
@@ -501,6 +501,10 @@ const NON_DISC_PHRASES = [
   // Accessories
   'with cooler', 'w/cooler', 'w/ cooler', 'seat cushion', 'tool kit',
   'pvc patch', 'birdie challange', 'birdie challenge',
+  // Phone cases — "Phone Case Inner Core" (wearediscgolf, kvamdgs) was live on
+  // latitude-core on 2026-11-13 and sat behind a frozen /nytt signal in W34.
+  // The apparel audit the day before missed it: not a garment, same failure.
+  'phone case', 'mobildeksel', 'mobilskal',
   'pro rainfly', 'slim rainfly', 'rain fly',
   // Apparel
   'hand warmers', 'hettegenser',
@@ -516,12 +520,42 @@ const NON_DISC_PHRASES = [
   'dog eat disc',
 ];
 
+// Phrases that start with a digit cannot be plain substring tests, because
+// plenty of real molds end in one. NON_DISC_PHRASES is matched with
+// includes(), so '3 disc' fired inside "MD3 Discmania" — the characters
+// "3 disc" sit across the join of two perfectly good words. Confirmed
+// 2026-11-12: it rejects "C-Line Glow MD3 Discmania Challenge", and the only
+// reason the two MD3 listings in our data survived is that their real title
+// happens to put a dash between the mold and the brand. PD3, FD3, TL3, Roc3,
+// Mako3, Teebird3 and the rest are one careless store title away from the
+// same fate, and "MD3 för 299" would have tripped '3 för' just as readily.
+//
+// A leading boundary is the whole fix: the digit must not follow a letter or
+// another digit. Deliberately no trailing boundary — "3 discs set" is a real
+// way to write a bundle, and anchoring the end would lose the plural.
+const NON_DISC_NUMERIC_PHRASES = ['3-disc', '3 disc', '3-pack', '3 för'];
+
+const NON_DISC_NUMERIC_RES = NON_DISC_NUMERIC_PHRASES.map(
+  (p) => new RegExp('(?<![a-z0-9])' + p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i')
+);
+
 // Single words / regex tokens that mean the product is NOT a disc.
 // Word-boundary match to avoid false positives.
 const NON_DISC_WORDS = [
   // Apparel
   'hoodie', 'jacket', 'jersey', 'tröja', 't-shirt', 'tshirt',
   'snapback', 'flexfit', 'keps', 'sock', 'strumpor',
+  // Headwear and the rest of the apparel rack. Confirmed in production
+  // 2026-11-12: a corpus audit found six garments matched to three discs —
+  // wearediscgolf's "Cap Astronaut" became discmania-astronaut (and, having
+  // the only product photo among that disc's entries, put a baseball cap on
+  // the Astronaut card on /nytt), "Kastaplast Beanie Berg" became
+  // kastaplast-berg at three separate stores, and two t-shirts became
+  // latitude-core. None of them won best price, so nothing showed a wrong
+  // number — they inflated store counts and waited for a sale.
+  'cap', 'caps', 'hat', 'hats', 'lue', 'beanie', 'trucker',
+  'genser', 'shirt', 'socks', 'sokker', 'jakke', 'polo',
+  'crewneck', 'sweater',
   // Books / media
   'huvudbok', 'arbetsbok', 'kalender', 'ljudfiler', 'simulator',
   // Equipment / sundries
@@ -549,18 +583,39 @@ const NON_DISC_WORDS = [
 function isNonDiscProduct(rawName) {
   const lower = rawName.toLowerCase();
 
+  // "tee" earns a guard rather than a place in NON_DISC_WORDS. It is how the
+  // two t-shirts above are spelled ("Core Unify Training Tee", "Innova Unity
+  // Core Womens Tee"), but it is also the first syllable of three real molds
+  // — Teebird, Teebird3 and TeeDevil — and a store writing "Tee Devil" or
+  // "Tee Bird" with a space would otherwise have a genuine disc thrown away.
+  // Match the garment, never the mold.
+  if (/\btee(?!\s*(?:devil|bird))\b/i.test(lower)) return true;
+
+  // 'shield' used to sit here bare, next to 'face shield', and it silently
+  // deleted a real disc: Westside Discs' Shield putter is in the catalogue
+  // (westside-shield) with zero price entries, because every listing of it
+  // was thrown away here before the matcher ever saw it. Nothing recorded it
+  // either — rejected products never reach unmatched-products.json, so the
+  // disc simply looked like one nobody stocks. Found 2026-11-12 by the same
+  // corpus audit as the '3 disc' bug, and it is the same defect: a substring
+  // broad enough to catch a real name. 'face shield' still covers what the
+  // rule was for, and 'shield' is brand-checked in the matcher so a stray
+  // product cannot take its place.
   if (
     lower.includes('sticker') ||
     lower.includes('pin badge') ||
     lower.includes('keychain') ||
     lower.includes('face shield') ||
-    lower.includes('shield') ||
     /\bclip\b/.test(lower) ||
     /\bpin\b/.test(lower)
   ) return true;
 
   for (const phr of NON_DISC_PHRASES) {
     if (lower.includes(phr)) return true;
+  }
+
+  for (const re of NON_DISC_NUMERIC_RES) {
+    if (re.test(lower)) return true;
   }
 
   for (const w of NON_DISC_WORDS) {

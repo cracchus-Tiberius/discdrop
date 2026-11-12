@@ -2312,17 +2312,6 @@
       },
       {
         "store": "nydisk",
-        "price": 249,
-        "inStock": true,
-        "url": "https://nydisk.no/products/kastaplast-beanie-berg",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/1-1.png?v=1789635281",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:51:14.520Z",
-        "firstSeen": "2026-09-17T09:43:18.415Z"
-      },
-      {
-        "store": "nydisk",
         "price": 229,
         "inStock": false,
         "url": "https://nydisk.no/products/kastaplast-k1-hard-glow-berg-x-braeden-sides-2026",
@@ -2430,17 +2419,6 @@
         "edition": null,
         "lastScraped": "2026-11-12T04:51:14.520Z",
         "firstSeen": "2026-07-26T12:03:23.979Z"
-      },
-      {
-        "store": "discexpress",
-        "price": 239,
-        "inStock": true,
-        "url": "https://www.discexpress.se/products/beanie-berg",
-        "image": "https://cdn.shopify.com/s/files/1/2643/6710/files/Beanie_Berg.jpg?v=1789123508",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:51:37.303Z",
-        "firstSeen": "2026-09-28T11:16:25.739Z"
       },
       {
         "store": "discexpress",
@@ -2703,17 +2681,6 @@
         "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/K1_Hard_Berg_X_Braeden_Sides_Tour_Series_2026_Blue_Transparent.webp?v=1777477104",
         "plastic": "K1 Hard",
         "edition": "Tour Series",
-        "lastScraped": "2026-11-12T05:00:25.228Z",
-        "firstSeen": "2026-07-26T12:24:40.398Z"
-      },
-      {
-        "store": "ugglans",
-        "price": 239,
-        "inStock": true,
-        "url": "https://ugglansdiscgolf.se/products/kastaplast-beanie-berg",
-        "image": "https://cdn.shopify.com/s/files/1/0722/6812/0328/files/Beanie_Berg.webp?v=1763371548",
-        "plastic": null,
-        "edition": null,
         "lastScraped": "2026-11-12T05:00:25.228Z",
         "firstSeen": "2026-07-26T12:24:40.398Z"
       },
@@ -17028,17 +16995,6 @@
         "firstSeen": "2026-08-11T07:03:21.232Z"
       },
       {
-        "store": "wearediscgolf",
-        "price": 259,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/phone-case-inner-core/",
-        "image": "https://wearediscgolf.no/content/uploads/2025/08/Phone-Case-Inner-Core.jpg",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:34:33.288Z",
-        "firstSeen": "2026-08-11T07:03:21.232Z"
-      },
-      {
         "store": "aceshop",
         "price": 229,
         "inStock": true,
@@ -17048,28 +17004,6 @@
         "edition": null,
         "lastScraped": "2026-11-12T04:34:33.288Z",
         "firstSeen": "2026-08-04T08:37:46.032Z"
-      },
-      {
-        "store": "aceshop",
-        "price": 389,
-        "inStock": true,
-        "url": "https://aceshop.no/product/core-unify-training-tee-menn/",
-        "image": "https://aceshop.no/wp-content/uploads/sites/2/2026/09/1909878-999000_Core-Unify-Training-Tee-M_Front.webp",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:34:33.288Z",
-        "firstSeen": "2026-09-05T09:17:18.480Z"
-      },
-      {
-        "store": "kvamdgs",
-        "price": 255,
-        "inStock": true,
-        "url": "https://kvamdgs.no/products/phone-case-inner-core",
-        "image": "https://cdn.shopify.com/s/files/1/0618/6296/9476/files/PPCproductphoto_1080x_3adc129b-67b3-4574-b63c-165cb1817932.webp?v=1787489657",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:34:33.288Z",
-        "firstSeen": "2026-08-24T06:53:54.110Z"
       },
       {
         "store": "hyzershop",
@@ -17114,17 +17048,6 @@
         "edition": null,
         "lastScraped": "2026-11-12T04:51:03.242Z",
         "firstSeen": "2026-07-24T16:46:00.142Z"
-      },
-      {
-        "store": "nydisk",
-        "price": 399,
-        "inStock": true,
-        "url": "https://nydisk.no/products/innova-unity-core-womens-tee",
-        "image": "https://cdn.shopify.com/s/files/1/0801/8555/7276/files/Unity-Core-Women_s-Tee_d34912ee-ca94-4165-be67-8f0aab033721.png?v=1787222634",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:51:14.520Z",
-        "firstSeen": "2026-08-21T06:51:07.113Z"
       },
       {
         "store": "nydisk",
@@ -120792,28 +120715,6 @@
         "edition": null,
         "lastScraped": "2026-09-08T07:19:27.485Z",
         "firstSeen": "2026-07-24T21:06:56.489Z"
-      },
-      {
-        "store": "wearediscgolf",
-        "price": 289,
-        "inStock": true,
-        "url": "https://wearediscgolf.no/produkt/cap-astronaut/",
-        "image": "https://wearediscgolf.no/content/uploads/2026/06/BOUNCEBACK-CAP-ASTRONAUT-FRONT_018eb7a3-28bf-438d-a00f-df55552fac45.jpg",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:34:33.288Z",
-        "firstSeen": "2026-09-03T09:05:27.422Z"
-      },
-      {
-        "store": "hyzershop",
-        "price": 245,
-        "inStock": false,
-        "url": "https://hyzershop.no/products/coalesce-astronaut-stamp",
-        "image": "https://cdn.shopify.com/s/files/1/0677/7887/1609/files/PXL_20251007_074920419.MP.webp?v=1764598804",
-        "plastic": null,
-        "edition": null,
-        "lastScraped": "2026-11-12T04:34:33.288Z",
-        "firstSeen": "2026-09-03T09:05:27.422Z"
       },
       {
         "store": "discsor",
