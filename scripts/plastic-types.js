@@ -501,6 +501,10 @@ const NON_DISC_PHRASES = [
   // Accessories
   'with cooler', 'w/cooler', 'w/ cooler', 'seat cushion', 'tool kit',
   'pvc patch', 'birdie challange', 'birdie challenge',
+  // Phone cases — "Phone Case Inner Core" (wearediscgolf, kvamdgs) was live on
+  // latitude-core on 2026-11-13 and sat behind a frozen /nytt signal in W34.
+  // The apparel audit the day before missed it: not a garment, same failure.
+  'phone case', 'mobildeksel', 'mobilskal',
   'pro rainfly', 'slim rainfly', 'rain fly',
   // Apparel
   'hand warmers', 'hettegenser',

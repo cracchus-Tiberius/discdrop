@@ -116,3 +116,14 @@ test('"shield" no longer deletes the Westside Shield putter', () => {
   }
   assert.strictEqual(isNonDiscProduct('Face Shield'), true);
 });
+
+test('phone cases are not discs', () => {
+  // "Phone Case Inner Core" matched latitude-core at two stores and fed a
+  // frozen /nytt signal in 2026-W34 — merch, like the apparel, but not a
+  // garment, so the apparel audit walked straight past it.
+  for (const name of ['Phone Case Inner Core', 'Discmania mobildeksel', 'Kastaplast mobilskal']) {
+    assert.strictEqual(isNonDiscProduct(name), true, `${name} should be rejected`);
+  }
+  // "Casey" is a player name on real signature discs, and must survive.
+  assert.strictEqual(isNonDiscProduct('Sky Walker 3 Casey White Horizon S-Line FD2'), false);
+});
