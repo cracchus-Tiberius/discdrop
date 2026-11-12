@@ -456,8 +456,19 @@ function parseProductName(rawName, brand) {
  * Returns true when the product name suggests a used, B-grade, or
  * otherwise non-new disc that should be excluded from price comparison.
  */
+// 'recycled' sits in USED_KEYWORDS for stores that sell pre-owned discs under
+// that word, but Discraft's Recycled ESP is a plastic line — new discs pressed
+// from recycled material — and PLASTIC_TYPES above lists it as one. The two
+// lists disagreed, and USED_KEYWORDS won: on 2026-11-13 not a single entry in
+// scraped-prices.json, across all nineteen stores, had "recycl" in its URL.
+// Krokhol alone was listing "ESP Recycled Zone" and "ESP Recycled Challenger"
+// as new discs when the gap was found. The phrase is removed before the
+// keyword test, in both word orders stores use, so it exempts only the plastic
+// — "recycled disc" and the like are still treated as used.
+const RECYCLED_ESP_RE = /\b(?:recycled\s+esp|esp\s+recycled)\b/g;
+
 function isUsedDisc(rawName) {
-  const lower = rawName.toLowerCase();
+  const lower = rawName.toLowerCase().replace(RECYCLED_ESP_RE, ' ');
   return USED_KEYWORDS.some((kw) => lower.includes(kw));
 }
 
