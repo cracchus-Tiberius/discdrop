@@ -1,10 +1,74 @@
 {
-  "generated": "2026-11-12T05:00:56.686Z",
+  "generated": "2026-11-12T18:03:51.230Z",
   "summary": {
-    "priceChanges24h": 0,
-    "newDiscs24h": 0,
+    "priceChanges24h": 3,
+    "newDiscs24h": 1,
     "storesChecked": 19
   },
-  "timeline": [],
-  "totalDrops": 0
+  "timeline": [
+    {
+      "discId": "discraft-meteor",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "ESP",
+      "oldPrice": 232,
+      "newPrice": 198,
+      "pct": -15,
+      "date": "2026-11-12",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/esp-recycled-meteor",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        198
+      ]
+    },
+    {
+      "discId": "discraft-force",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "ESP",
+      "oldPrice": 232,
+      "newPrice": 198,
+      "pct": -15,
+      "date": "2026-11-12",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/esp-recycled-force",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        198
+      ]
+    },
+    {
+      "discId": "discraft-thrasher",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "ESP",
+      "oldPrice": 232,
+      "newPrice": 198,
+      "pct": -15,
+      "date": "2026-11-12",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/esp-recycled-thrasher",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        198
+      ]
+    }
+  ],
+  "totalDrops": 3
 }
