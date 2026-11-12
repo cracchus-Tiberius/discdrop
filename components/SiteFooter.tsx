@@ -13,8 +13,9 @@ export function SiteFooter({
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[12px] text-[#FFFDF699]">
         <span>
           © 2026 discdrop · Laget av{" "}
-          <a href="https://kviist.no" target="_blank" rel="noopener noreferrer" className="text-[#B8E04A] hover:underline">
-            Kviist
+          {/* No noreferrer: kviist.no should see discdrop as the referrer. */}
+          <a href="https://kviist.no/" target="_blank" rel="noopener" className="text-[#B8E04A] hover:underline">
+            Kviist Studio
           </a>
         </span>
         <span>Prisene inkluderer 25% MVA. Fraktgrenser varierer.</span>

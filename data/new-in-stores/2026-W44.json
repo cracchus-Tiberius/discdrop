@@ -1,0 +1,783 @@
+{
+  "isoWeek": "2026-W44",
+  "year": 2026,
+  "weekNumber": 44,
+  "startDate": "2026-10-26",
+  "endDate": "2026-11-01",
+  "signals": [
+    {
+      "discId": "latitude-fire",
+      "name": "Fire",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Moonshine",
+      "edition": null,
+      "firstSeenMs": 1793335383618,
+      "price": 303,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 303,
+          "url": "https://www.discexpress.se/products/fire-clear-moonshine"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-mighty",
+      "name": "Mighty",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Moonshine",
+      "edition": null,
+      "firstSeenMs": 1793335383618,
+      "price": 303,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 303,
+          "url": "https://www.discexpress.se/products/mighty-clear-moonshine"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-fuse",
+      "name": "Fuse",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Gold Orbit",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 260,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 264,
+          "url": "https://www.krokholdgs.no/products/gold-orbit-fuse-hjalmar-fredriksson"
+        },
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 260,
+          "url": "https://ugglansdiscgolf.se/products/gold-orbit-fuse-hjalmar-fredriksson"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-ares",
+      "name": "Ares",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Big Z",
+      "edition": null,
+      "firstSeenMs": 1793334926975,
+      "price": 314,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 314,
+          "url": "https://wearediscgolf.no/produkt/big-z-colorshift-ares-night-of-the-mcbeast/"
+        }
+      ]
+    },
+    {
+      "discId": "westside-bear",
+      "name": "Bear",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": "BT",
+      "edition": null,
+      "firstSeenMs": 1793334926975,
+      "price": 190,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 204,
+          "url": "https://wearediscgolf.no/produkt/bt-light-rill-bear/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 190,
+          "url": "https://www.discexpress.se/products/bear-bt-light"
+        }
+      ]
+    },
+    {
+      "discId": "westside-warship",
+      "name": "Warship",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": "BT",
+      "edition": null,
+      "firstSeenMs": 1793334926975,
+      "price": 190,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 199,
+          "url": "https://www.krokholdgs.no/products/bt-light-rill-warship"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 204,
+          "url": "https://wearediscgolf.no/produkt/bt-light-rill-warship/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 190,
+          "url": "https://www.discexpress.se/products/warship-bt-light"
+        }
+      ]
+    },
+    {
+      "discId": "westside-king",
+      "name": "King",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": "BT",
+      "edition": null,
+      "firstSeenMs": 1793334926975,
+      "price": 190,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 204,
+          "url": "https://wearediscgolf.no/produkt/bt-light-rill-king/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 190,
+          "url": "https://www.discexpress.se/products/king-bt-light"
+        }
+      ]
+    },
+    {
+      "discId": "westside-tursas",
+      "name": "Tursas",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": "BT",
+      "edition": null,
+      "firstSeenMs": 1793334926975,
+      "price": 190,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 204,
+          "url": "https://wearediscgolf.no/produkt/bt-light-rill-tursas/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 190,
+          "url": "https://www.discexpress.se/products/tursas-bt-light"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-cigarra",
+      "name": "Cigarra",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Z Glo",
+      "edition": null,
+      "firstSeenMs": 1793248539671,
+      "price": 294,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 294,
+          "url": "https://wearediscgolf.no/produkt/z-glo-jawbreaker-flx-cigarra/"
+        },
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 304,
+          "url": "https://nydisk.no/products/discraft-z-glo-jawbreaker-flx-cigarra-eu-exclusive"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-nuke",
+      "name": "Nuke",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Z Glo",
+      "edition": "Confetti",
+      "firstSeenMs": 1793248539671,
+      "price": 294,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 294,
+          "url": "https://wearediscgolf.no/produkt/z-glo-confetti-nuke/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-detour",
+      "name": "Detour",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Neutron",
+      "edition": "Project Lab Coat",
+      "firstSeenMs": 1793162460861,
+      "price": 288,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 288,
+          "url": "https://frisbeebutikken.no/products/neutron-detour-project-lab-coat"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-impulse",
+      "name": "Impulse",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Neutron",
+      "edition": "Project Lab Coat",
+      "firstSeenMs": 1793162460861,
+      "price": 278,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 278,
+          "url": "https://frisbeebutikken.no/products/neutron-impulse-project-lab-coat"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-hex",
+      "name": "Hex",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Cosmic Neutron",
+      "edition": null,
+      "firstSeenMs": 1793507665199,
+      "price": 254,
+      "stores": [
+        {
+          "store": "aceshop",
+          "storeName": "Aceshop",
+          "price": 254,
+          "url": "https://aceshop.no/product/axciom-cosmic-neutron-hex/"
+        },
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 268,
+          "url": "https://frisbeebutikken.no/products/proton-hex"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-terra",
+      "name": "Terra",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1793507665199,
+      "price": 254,
+      "stores": [
+        {
+          "store": "aceshop",
+          "storeName": "Aceshop",
+          "price": 254,
+          "url": "https://aceshop.no/product/mvp-neutron-terra/"
+        }
+      ]
+    },
+    {
+      "discId": "westside-swan-2",
+      "name": "Swan 2",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "BT",
+      "edition": null,
+      "firstSeenMs": 1793335383618,
+      "price": 190,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 190,
+          "url": "https://www.discexpress.se/products/swan-2-bt-light"
+        }
+      ]
+    },
+    {
+      "discId": "innova-aviar",
+      "name": "Aviar",
+      "brand": "Innova",
+      "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": "Calvin Heimburg",
+      "firstSeenMs": 1793335312571,
+      "price": 209,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 209,
+          "url": "https://www.krokholdgs.no/products/kc-pro-aviar-calvin-heimburg-signature-edition"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/jk-pro-aviar/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 214,
+          "url": "https://www.discgolfdynasty.no/products/kc-pro-aviar-calvin-heimburg-character-edition"
+        },
+        {
+          "store": "golfdiscer",
+          "storeName": "GolfDiscer",
+          "price": 228,
+          "url": "https://golfdiscer.no/products/yeti-pro-aviar"
+        }
+      ]
+    },
+    {
+      "discId": "innova-whale",
+      "name": "Whale",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 180,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 208,
+          "url": "https://www.krokholdgs.no/products/kc-pro-whale"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-whale/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 180,
+          "url": "https://www.discgolfdynasty.no/products/dx-whale-kopi"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-magnet",
+      "name": "Magnet",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line Soft",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 178,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 178,
+          "url": "https://www.krokholdgs.no/products/putter-line-soft-magnet"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-ringer",
+      "name": "Ringer",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line Soft",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 178,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 178,
+          "url": "https://www.krokholdgs.no/products/putter-line-soft-ringer"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-ringer-gt",
+      "name": "Ringer GT",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Putter Line Soft",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 178,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 178,
+          "url": "https://www.krokholdgs.no/products/putter-line-soft-ringer-gt"
+        }
+      ]
+    },
+    {
+      "discId": "innova-animal",
+      "name": "Animal",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 208,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 208,
+          "url": "https://www.krokholdgs.no/products/kc-pro-animal"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-animal/"
+        },
+        {
+          "store": "discgolfdynasty",
+          "storeName": "Disc Golf Dynasty",
+          "price": 214,
+          "url": "https://www.discgolfdynasty.no/products/kc-pro-animal"
+        },
+        {
+          "store": "golfdiscer",
+          "storeName": "GolfDiscer",
+          "price": 228,
+          "url": "https://golfdiscer.no/products/kc-pro-animal"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-buzzz-ss",
+      "name": "Buzzz SS",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Tour Series",
+      "edition": "2026",
+      "firstSeenMs": 1793335312571,
+      "price": 318,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 318,
+          "url": "https://www.krokholdgs.no/products/special-blend-buzzz-ss-ezra-robinson-tour-series-2026"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-anchor",
+      "name": "Anchor",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Gold Ice",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 258,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 258,
+          "url": "https://www.krokholdgs.no/products/gold-ice-anchor"
+        },
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 294,
+          "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
+        }
+      ]
+    },
+    {
+      "discId": "innova-lion",
+      "name": "Lion",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "KC Pro",
+      "edition": null,
+      "firstSeenMs": 1793335312571,
+      "price": 208,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 208,
+          "url": "https://www.krokholdgs.no/products/kc-pro-lion"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 214,
+          "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-cigarra",
+      "name": "Cigarra",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Tour Series",
+      "edition": "Anthony Barela",
+      "firstSeenMs": 1793334926975,
+      "price": 237,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 318,
+          "url": "https://www.krokholdgs.no/products/special-blend-cigarra-anthony-barela-tour-series-2026-v2"
+        },
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 314,
+          "url": "https://wearediscgolf.no/produkt/big-z-colorshift-cigarra-dawn-of-the-barela/"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 237,
+          "url": "https://www.discexpress.se/products/cigarra-z-refresh-anthony-barela-signature-series"
+        }
+      ]
+    },
+    {
+      "discId": "climo-coast",
+      "name": "Coast",
+      "brand": "Climo Disc Golf",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": null,
+      "edition": "Limited Edition",
+      "firstSeenMs": 1793334926975,
+      "price": 234,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 234,
+          "url": "https://wearediscgolf.no/produkt/limited-edition-coast-disc-of-the-year/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-thrasher",
+      "name": "Thrasher",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Titanium",
+      "edition": null,
+      "firstSeenMs": 1793248974979,
+      "price": 269,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 269,
+          "url": "https://www.starframe.no/products/titanium-thrasher"
+        }
+      ]
+    },
+    {
+      "discId": "innova-invader",
+      "name": "Invader",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Champion",
+      "edition": null,
+      "firstSeenMs": 1793162132068,
+      "price": 244,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/champion-luster-invader/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-mirage",
+      "name": "Mirage",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Star",
+      "edition": null,
+      "firstSeenMs": 1793162132068,
+      "price": 244,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/star-mirage/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-toro",
+      "name": "Toro",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Star",
+      "edition": "Calvin Heimburg",
+      "firstSeenMs": 1793162132068,
+      "price": 244,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/star-toro-calvin-heimburg/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-particle",
+      "name": "Particle",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Particle Proton Soft",
+      "edition": null,
+      "firstSeenMs": 1793162132068,
+      "price": 314,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 314,
+          "url": "https://wearediscgolf.no/produkt/particle-proton-soft-rhythm/"
+        }
+      ]
+    },
+    {
+      "discId": "innova-tern",
+      "name": "Tern",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Star",
+      "edition": null,
+      "firstSeenMs": 1793162132068,
+      "price": 228,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/star-tern/"
+        },
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 228,
+          "url": "https://frisbeebutikken.no/products/pro-tern"
+        }
+      ]
+    },
+    {
+      "discId": "innova-boss",
+      "name": "Boss",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Blizzard Champion",
+      "edition": null,
+      "firstSeenMs": 1793162132068,
+      "price": 244,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/blizzard-champion-boss/"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-nuke-ss",
+      "name": "Nuke SS",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "ESP",
+      "edition": null,
+      "firstSeenMs": 1793093268160,
+      "price": 265,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 265,
+          "url": "https://www.discexpress.se/products/nuke-ss-esp-refresh"
+        }
+      ]
+    }
+  ],
+  "frozen": true,
+  "generated": "2026-11-02T05:00:03.129Z"
+}

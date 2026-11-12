@@ -1,40 +1,18 @@
 import { discs } from "@/data/discs.js";
+import { SLUG_TO_BRAND as SLUGS, BRAND_SLUGS, discsForSlug } from "@/lib/brands";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import BrandPageClient from "./BrandPageClient";
 
-export const SLUG_TO_BRAND: Record<string, string> = {
-  "kastaplast": "Kastaplast",
-  "innova": "Innova",
-  "discraft": "Discraft",
-  "discmania": "Discmania",
-  "latitude-64": "Latitude 64",
-  "dynamic-discs": "Dynamic Discs",
-  "westside-discs": "Westside Discs",
-  "mvp": "MVP",
-  "axiom": "Axiom",
-  "streamline": "Streamline",
-  "prodigy": "Prodigy",
-  "viking-discs": "Viking Discs",
-  "rpm": "RPM Discs",
-  "thought-space-athletics": "Thought Space Athletics",
-  "alfa": "Alfa",
-  "eggshell-discs": "EggShell Discs",
-  "clash-discs": "Clash Discs",
-  "dga": "DGA",
-  "climo-disc-golf": "Climo Disc Golf",
-  "prodiscus": "Prodiscus",
-  "lone-star-discs": "Lone Star Discs",
-  "gateway": "Gateway",
-  "millennium": "Millennium",
-};
-
-export const BRAND_TO_SLUG: Record<string, string> = Object.fromEntries(
-  Object.entries(SLUG_TO_BRAND).map(([slug, brand]) => [brand, slug])
-);
+// Brand slugs live in lib/brands.ts — one map, asserted against the catalogue
+// by lib/brands.test.ts. This file used to carry its own copy, which is how
+// /brand/eggshell-discs/ outlived the brand's rename and how seven brands
+// never got a page at all. Re-exported because app/sitemap.ts imports from
+// here.
+export { SLUG_TO_BRAND, BRAND_TO_SLUG } from "@/lib/brands";
 
 export function generateStaticParams() {
-  return Object.keys(SLUG_TO_BRAND).map((slug) => ({ slug }));
+  return BRAND_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -43,7 +21,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const brand = SLUG_TO_BRAND[slug];
+  const brand = SLUGS[slug];
   if (!brand) return {};
   const count = discs.filter((d) => d.brand === brand).length;
   return {
@@ -58,7 +36,7 @@ export default async function BrandPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const brand = SLUG_TO_BRAND[slug];
+  const brand = SLUGS[slug];
   if (!brand) notFound();
 
   const brandDiscs = discs.filter((d) => d.brand === brand);

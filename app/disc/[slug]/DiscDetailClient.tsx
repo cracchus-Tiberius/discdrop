@@ -3,6 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { PickupBadge } from "@/components/PickupBadge";
 import { plasticKey, groupPlastics, defaultPlasticKey, type PlasticGroup } from "@/lib/plastic";
+import { BRAND_TO_SLUG as BRAND_SLUG } from "@/lib/brands";
 import Link from "next/link";
 import { DiscImage } from "@/components/DiscImage";
 import { entryLandedNOK, type RichStoreEntry } from "@/lib/disc-utils";
@@ -448,33 +449,11 @@ function Chip({
 
 // ── Brand logo helpers ───────────────────────────────────────────────────────
 
-const BRAND_SLUG: Record<string, string> = {
-  "Kastaplast": "kastaplast",
-  "Innova": "innova",
-  "Discraft": "discraft",
-  "Discmania": "discmania",
-  "Latitude 64": "latitude-64",
-  "Dynamic Discs": "dynamic-discs",
-  "Westside Discs": "westside-discs",
-  "MVP Disc Sports": "mvp",
-  "MVP": "mvp",
-  "Axiom Discs": "axiom",
-  "Axiom": "axiom",
-  "Streamline Discs": "streamline",
-  "Streamline": "streamline",
-  "Prodigy": "prodigy",
-  "Viking Discs": "viking-discs",
-  "RPM Discs": "rpm",
-  "Thought Space Athletics": "thought-space-athletics",
-  "Alfa": "alfa",
-  "EggShell Discs": "eggshell-discs",
-  "Clash Discs": "clash-discs",
-  "Prodiscus": "prodiscus",
-  "Lone Star Discs": "lone-star-discs",
-  "Gateway": "gateway",
-  "Millennium": "millennium",
-};
-
+// Brand slugs come from lib/brands.ts. This file used to keep its own map
+// with a `?? brand.toLowerCase().replace(/\s+/g, "-")` fallback, which meant
+// an unmapped brand produced a link to a /brand/ page that was never built —
+// 32 disc pages pointing at 404s, silently, because a fallback that guesses
+// never looks broken.
 const BRAND_EXT: Record<string, string> = {
   "mvp": "svg",
   "axiom": "svg",
@@ -743,7 +722,7 @@ export function DiscHeroSection({
               {/* Brand · type badge (+ HOT/TOUR tags) */}
               <div className="flex flex-wrap items-center gap-2">
                 <Link
-                  href={`/brand/${BRAND_SLUG[disc.brand] ?? disc.brand.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={`/brand/${BRAND_SLUG[disc.brand]}/`}
                   className="text-sm font-semibold text-[#101C1499] transition-colors hover:text-[#101C14]"
                 >
                   {disc.brand}

@@ -135,3 +135,10 @@
 # the matcher improved. Dark in the other 195.
 /disc/prodigy-pa3-lizotte     /disc/prodigy-pa-3/         301
 /disc/prodigy-pa3-lizotte/    /disc/prodigy-pa-3/         301
+
+# /brand/eggshell-discs -> /brand/dino-discs (2026-10-21). The brand was
+# renamed in discs.js on 2026-09-05, but app/brand/[slug]/page.tsx kept its own
+# copy of the slug map, so the old URL went on being built — empty — and went
+# on being submitted in sitemap.xml. Both maps now come from lib/brands.ts.
+/brand/eggshell-discs         /brand/dino-discs/          301
+/brand/eggshell-discs/        /brand/dino-discs/          301

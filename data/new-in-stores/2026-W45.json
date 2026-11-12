@@ -1,0 +1,314 @@
+{
+  "isoWeek": "2026-W45",
+  "year": 2026,
+  "weekNumber": 45,
+  "startDate": "2026-11-02",
+  "endDate": "2026-11-08",
+  "signals": [
+    {
+      "discId": "discraft-zone-os",
+      "name": "Zone OS",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "ESP",
+      "edition": null,
+      "firstSeenMs": 1793940750988,
+      "price": 269,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 269,
+          "url": "https://www.discexpress.se/products/zone-os-esp"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-sten",
+      "name": "Sten",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-release",
+      "plastic": "K1 Soft Glow",
+      "edition": null,
+      "firstSeenMs": 1793854766575,
+      "price": 289,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 289,
+          "url": "https://www.discexpress.se/products/sten-k1-soft-glow"
+        },
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 293,
+          "url": "https://ugglansdiscgolf.se/products/k1-soft-glow-sten"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-reko",
+      "name": "Reko",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-release",
+      "plastic": "K1 Soft Glow",
+      "edition": null,
+      "firstSeenMs": 1793854766575,
+      "price": 289,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 289,
+          "url": "https://www.discexpress.se/products/reko-k1-soft-glow"
+        },
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 293,
+          "url": "https://ugglansdiscgolf.se/products/k1-soft-glow-reko"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-fierce",
+      "name": "Fierce",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Jawbreaker",
+      "edition": null,
+      "firstSeenMs": 1793767215142,
+      "price": 318,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 318,
+          "url": "https://frisbeebutikken.no/products/jawbreaker-fierce"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-laseri",
+      "name": "Laseri",
+      "brand": "Prodiscus",
+      "image": "",
+      "type": "new-release",
+      "plastic": null,
+      "edition": null,
+      "firstSeenMs": 1793680804864,
+      "price": 230,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 230,
+          "url": "https://frisbeebutikken.no/products/ultrium-laseri"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-reactor",
+      "name": "Reactor",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Proton",
+      "edition": null,
+      "firstSeenMs": 1794112828172,
+      "price": 275,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 275,
+          "url": "https://www.starframe.no/products/proton-reactor-white-rim"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-peak",
+      "name": "Peak",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Zero",
+      "edition": null,
+      "firstSeenMs": 1793940750988,
+      "price": 174,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 174,
+          "url": "https://www.discexpress.se/products/peak-zero-super-soft"
+        }
+      ]
+    },
+    {
+      "discId": "discraft-sled",
+      "name": "Sled",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "ESP",
+      "edition": null,
+      "firstSeenMs": 1793940750988,
+      "price": 269,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 269,
+          "url": "https://www.discexpress.se/products/sled-esp"
+        }
+      ]
+    },
+    {
+      "discId": "innova-leopard3",
+      "name": "Leopard3",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "G-Star",
+      "edition": null,
+      "firstSeenMs": 1793939699138,
+      "price": 234,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 234,
+          "url": "https://wearediscgolf.no/produkt/g-star-leopard3/"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-sinus",
+      "name": "Sinus",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Zero",
+      "edition": null,
+      "firstSeenMs": 1793854766575,
+      "price": 174,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 174,
+          "url": "https://www.discexpress.se/products/sinus-zero-super-soft"
+        },
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 178,
+          "url": "https://ugglansdiscgolf.se/products/zero-supersoft-sinus"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-glitch",
+      "name": "Glitch",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron Soft",
+      "edition": null,
+      "firstSeenMs": 1793853279653,
+      "price": 394,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 394,
+          "url": "https://wearediscgolf.no/produkt/neutron-soft-glitch-154g-2/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-dimension",
+      "name": "Dimension",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Fission",
+      "edition": null,
+      "firstSeenMs": 1793767231706,
+      "price": 295,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 295,
+          "url": "https://www.starframe.no/products/fission-dimension"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-envy",
+      "name": "Envy",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": "James Conrad",
+      "firstSeenMs": 1793595047319,
+      "price": 259,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 259,
+          "url": "https://www.frisbeesor.no/produkt/8528/"
+        }
+      ]
+    },
+    {
+      "discId": "axiom-panic",
+      "name": "Panic",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neutron",
+      "edition": null,
+      "firstSeenMs": 1793595047319,
+      "price": 319,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 319,
+          "url": "https://www.frisbeesor.no/produkt/neutron-panic/"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-stasis",
+      "name": "Stasis",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Proton Soft",
+      "edition": "MVP Open",
+      "firstSeenMs": 1793595047319,
+      "price": 419,
+      "stores": [
+        {
+          "store": "frisbeesor",
+          "storeName": "Frisbee Sør",
+          "price": 419,
+          "url": "https://www.frisbeesor.no/produkt/proton-soft-stasis-mvp-open-2026/"
+        }
+      ]
+    }
+  ],
+  "frozen": true,
+  "generated": "2026-11-09T05:01:00.398Z"
+}
