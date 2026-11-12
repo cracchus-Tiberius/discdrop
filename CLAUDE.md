@@ -110,6 +110,14 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   Aldri duplikat-oppføringer.
 - Kjente alias-feller: Cloudbreaker, Q-Line/Q-Line Premier, Kaxe Z,
   nickname-first Discmania-titler.
+- Recycled ESP er en Discraft-plast (nye disker av resirkulert materiale), ikke
+  brukt. PLASTIC_TYPES listet den mens USED_KEYWORDS' 'recycled' kastet den:
+  2026-11-13 hadde ikke én oppføring i noen butikk "recycl" i URL-en. isUsedDisc
+  fjerner nå frasen (begge ordrekkefølger) før nøkkelordtesten, så 'recycled'
+  fortsatt fanger ekte brukte disker. Åpent, ikke fikset: 'gyropalooza' i
+  NON_DISC_WORDS (lagt inn for sett) forkaster også enkeltdisker med
+  Gyropalooza-utgave, f.eks. Krokhols "Eclipse Glow Parachute - 2024 Gyropalooza
+  Edition" (streamline-parachute finnes i katalogen).
 - Ved katalogutvidelse/butikk-onboarding undertrykkes new-disc-signaler den
   dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
 
@@ -156,8 +164,16 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   scripts/lib/mystore.js — one shared implementation, each store a config object
   (key/name/baseUrl/categoryUrl(s)/shipping/pageUrl). The lib handles both Mystore
   card renderings: the addToCart() Alpine JS-object-literal form that Frisbeebutikken
-  and Starframe serve, and the server-rendered card markup Krokhol's theme serves
-  (where the brand comes from data-manufacturer, not the visible title). Krokhol has
+  and Starframe serve, and the server-rendered card markup Krokhol's theme used to
+  serve (where the brand came from data-manufacturer, not the visible title) — plus,
+  since 2026-11-13, a third: the page's JSON-LD ItemList (schema.org Product/Offer
+  with brand.name, a numeric NOK price and real availability). Krokhol's theme
+  changed around 2026-10-30, the card markup vanished, and it scraped 0 products
+  for thirteen days while its 1029 prices sat on the site as current — the
+  freshness alarm fired daily and drowned in Discsport's. parseListing() tries the
+  three in order, so Frisbeebutikken and Starframe are untouched. If a card shows
+  a lower price than its JSON-LD, the card wins: the saved page had no sale item,
+  so which price a discount publishes is unverified. Krokhol has
   no "all discs" parent category, so it lists five type categories and de-duplicates
   by product URL.
 - Aceshop's WAF 403s the shared USER_AGENT — the Windows Chrome/124.0.0.0
