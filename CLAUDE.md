@@ -24,6 +24,21 @@ Package manager: pnpm (always use pnpm, never npm).
   `--force-refreeze` exists solely for deliberate bug fixes and requires
   an explicit decision from Tobba in the session — never run it as part
   of routine maintenance, refactors, or "tidying".
+- `--force-refreeze` only reaches weeks still inside SIGNAL_WINDOW_MS (14
+  days). The signal engine builds from today's scraped-prices.json alone, so
+  an older week has nothing to be rebuilt from and the flag silently writes
+  nothing — by design, since the alternative would be an empty week replacing
+  an indexed archive page. Repairing an older frozen week means editing the
+  file by hand. That has been done once, 2026-11-13, on Tobba's explicit go:
+  W34, W36 and W40 carried rows driven by a cap, two t-shirts, a beanie and a
+  phone case. The edit only removed — 56 lines, nothing added, `generated`
+  left as it was, each row's price recomputed from the stores that remained
+  (none moved; the removed stores were never the cheapest). Two rows an audit
+  of all twelve frozen weeks flagged were deliberately left: W35
+  latitude-gatekeeper (the old id from the 2026-09-05 rename, not
+  contamination) and W36 mvp-particle <- discsport's /mold/trail (discsport
+  puts the mold page's URL on every product found there, so the URL cannot
+  say what the product was).
 - Any workflow whose script reads git history must check out with
   `fetch-depth: 0`. Depth counts COMMITS, not days. The daily workflow used
   to say 20, which was fine until 2026-09-05, when twelve merged pull
@@ -157,6 +172,12 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   De to MD3-oppføringene i dataene overlevde bare fordi den ekte tittelen har
   en tankestrek der; PD3, FD3, TL3, Roc3, Mako3 og Teebird3 var én slurvete
   butikktittel unna samme skjebne.
+- Merch er bredere enn klær: "Phone Case Inner Core" lå live på
+  latitude-core hos wearediscgolf og kvamdgs og sto bak en frossen W34-rad,
+  forbi plagg-auditen fordi det ikke er et plagg. 'phone case',
+  'mobildeksel' og 'mobilskal' er lagt til. Når en audit leter etter én type
+  feilmatch, se på de andre butikkene i de samme radene også — W34-raden ble
+  funnet ved å lese den, ikke av auditen.
 - Et for bredt substring-filter sletter disker i stillhet, og ingenting
   registrerer det: produkter som isNonDiscProduct forkaster når ALDRI fram
   til unmatched-products.json, så disken ser bare ut som en ingen fører.

@@ -572,12 +572,6 @@
       "price": 186,
       "stores": [
         {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 334,
-          "url": "https://wearediscgolf.no/produkt/cap-astronaut/"
-        },
-        {
           "store": "discexpress",
           "storeName": "Discexpress",
           "price": 186,
@@ -740,25 +734,6 @@
           "storeName": "Rocketdiscs",
           "price": 314,
           "url": "https://rocketdiscs.com/discmania-fd2"
-        }
-      ]
-    },
-    {
-      "discId": "latitude-core",
-      "name": "Core",
-      "brand": "Latitude 64",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": null,
-      "edition": null,
-      "firstSeenMs": 1788599838480,
-      "price": 418,
-      "stores": [
-        {
-          "store": "aceshop",
-          "storeName": "Aceshop",
-          "price": 418,
-          "url": "https://aceshop.no/product/core-unify-training-tee-menn/"
         }
       ]
     },
