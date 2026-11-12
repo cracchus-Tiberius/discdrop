@@ -6,6 +6,44 @@
   "endDate": "2026-11-15",
   "signals": [
     {
+      "discId": "discmania-majesty",
+      "name": "Majesty",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1794459097303,
+      "price": 184,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 184,
+          "url": "https://www.discexpress.se/products/majesty-premium-active"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-astronaut",
+      "name": "Astronaut",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Active",
+      "edition": null,
+      "firstSeenMs": 1794459097303,
+      "price": 184,
+      "stores": [
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 184,
+          "url": "https://www.discexpress.se/products/astronaut-premium-active"
+        }
+      ]
+    },
+    {
       "discId": "westside-world",
       "name": "World",
       "brand": "Westside Discs",
@@ -13,7 +51,7 @@
       "type": "new-release",
       "plastic": "Tournament",
       "edition": "2026",
-      "firstSeenMs": 1794372681590,
+      "firstSeenMs": 1794459074520,
       "price": 314,
       "stores": [
         {
@@ -32,7 +70,7 @@
       "type": "new-release",
       "plastic": "Lucid Ice",
       "edition": "Sockibomb",
-      "firstSeenMs": 1794372681590,
+      "firstSeenMs": 1794459074520,
       "price": 205,
       "stores": [
         {
@@ -51,7 +89,7 @@
       "type": "new-release",
       "plastic": "Lucid X",
       "edition": "Ricky Wysocki",
-      "firstSeenMs": 1794372681590,
+      "firstSeenMs": 1794459074520,
       "price": 205,
       "stores": [
         {
@@ -70,7 +108,7 @@
       "type": "new-release",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 214,
       "stores": [
         {
@@ -82,6 +120,25 @@
       ]
     },
     {
+      "discId": "axiom-hex",
+      "name": "Hex",
+      "brand": "Axiom",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Electron",
+      "edition": "Simon Lizotte",
+      "firstSeenMs": 1794458073288,
+      "price": 334,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 334,
+          "url": "https://wearediscgolf.no/produkt/electron-eclipse-hex-simon-lizotte/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-archive",
       "name": "Archive",
       "brand": "Prodigy",
@@ -89,7 +146,7 @@
       "type": "new-release",
       "plastic": "400",
       "edition": "Isaac Robinson",
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 275,
       "stores": [
         {
@@ -108,7 +165,7 @@
       "type": "new-release",
       "plastic": "Chrome",
       "edition": "Limited Edition",
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 294,
       "stores": [
         {
@@ -116,6 +173,25 @@
           "storeName": "Disc Golf Dynasty",
           "price": 294,
           "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
+        }
+      ]
+    },
+    {
+      "discId": "innova-sync",
+      "name": "Sync",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "R-Pro",
+      "edition": null,
+      "firstSeenMs": 1794458073288,
+      "price": 234,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 234,
+          "url": "https://wearediscgolf.no/produkt/r-pro-proto-glow-sync/"
         }
       ]
     },
@@ -184,7 +260,7 @@
       "type": "new-at-store",
       "plastic": "X Line",
       "edition": null,
-      "firstSeenMs": 1794372681590,
+      "firstSeenMs": 1794459074520,
       "price": 224,
       "stores": [
         {
@@ -203,7 +279,7 @@
       "type": "new-at-store",
       "plastic": "VIP",
       "edition": "2025",
-      "firstSeenMs": 1794372681590,
+      "firstSeenMs": 1794459074520,
       "price": 314,
       "stores": [
         {
@@ -222,7 +298,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1794372669580,
+      "firstSeenMs": 1794459063242,
       "price": 229,
       "stores": [
         {
@@ -241,7 +317,7 @@
       "type": "new-at-store",
       "plastic": "Putter Line",
       "edition": null,
-      "firstSeenMs": 1794372669580,
+      "firstSeenMs": 1794459063242,
       "price": 235,
       "stores": [
         {
@@ -260,7 +336,7 @@
       "type": "new-at-store",
       "plastic": "Neutron",
       "edition": "Special Edition",
-      "firstSeenMs": 1794372669580,
+      "firstSeenMs": 1794459063242,
       "price": 339,
       "stores": [
         {
@@ -272,6 +348,25 @@
       ]
     },
     {
+      "discId": "kastaplast-berg",
+      "name": "Berg",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "K1 Glow",
+      "edition": null,
+      "firstSeenMs": 1794458073288,
+      "price": 304,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 304,
+          "url": "https://wearediscgolf.no/produkt/k1-glow-berg-2024/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-distortion",
       "name": "Distortion",
       "brand": "Prodigy",
@@ -279,7 +374,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 275,
       "stores": [
         {
@@ -298,7 +393,7 @@
       "type": "new-at-store",
       "plastic": "KC Pro",
       "edition": null,
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 214,
       "stores": [
         {
@@ -323,7 +418,7 @@
       "type": "new-at-store",
       "plastic": "500",
       "edition": null,
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 315,
       "stores": [
         {
@@ -335,6 +430,25 @@
       ]
     },
     {
+      "discId": "mvp-trail",
+      "name": "Trail",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Fission",
+      "edition": "James Conrad",
+      "firstSeenMs": 1794458073288,
+      "price": 364,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 364,
+          "url": "https://wearediscgolf.no/produkt/fission-trail-james-conrad-2/"
+        }
+      ]
+    },
+    {
       "discId": "prodigy-shadowfax",
       "name": "Shadowfax",
       "brand": "Prodigy",
@@ -342,7 +456,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 255,
       "stores": [
         {
@@ -361,7 +475,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": null,
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 275,
       "stores": [
         {
@@ -380,7 +494,7 @@
       "type": "new-at-store",
       "plastic": "400",
       "edition": "Kevin Jones",
-      "firstSeenMs": 1794371674691,
+      "firstSeenMs": 1794458073288,
       "price": 275,
       "stores": [
         {
@@ -388,6 +502,25 @@
           "storeName": "Disc Sør",
           "price": 275,
           "url": "https://discsor.no/product/reverb-400-kevin-jones/"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-founder",
+      "name": "Founder",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Neo",
+      "edition": null,
+      "firstSeenMs": 1794458073288,
+      "price": 264,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 264,
+          "url": "https://wearediscgolf.no/produkt/neo-founder/"
         }
       ]
     },
@@ -431,5 +564,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-11T05:00:45.311Z"
+  "generated": "2026-11-12T05:00:57.164Z"
 }
