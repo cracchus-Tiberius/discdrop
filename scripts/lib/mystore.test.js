@@ -7,7 +7,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert');
-const { parseNok, parseAddToCartCards, parseServerRenderedCards, parseListing } = require('./mystore.js');
+const { parseNok, parseAddToCartCards, parseServerRenderedCards, parseJsonLdItemList, parseListing } = require('./mystore.js');
 
 test('parseNok reads the Mystore price forms', () => {
   assert.strictEqual(parseNok('189,-'), 189);
@@ -82,4 +82,151 @@ test('parseListing reads the highest page number from both URL shapes', () => {
   assert.strictEqual(parseListing(amp, {}).maxPage, 4);
   assert.strictEqual(parseListing(plain, {}).maxPage, 6);
   assert.strictEqual(parseListing(amp, { paginationSelector: 'a[href*="?page="]' }).maxPage, 1);
+});
+
+
+// ── Rendering 3: JSON-LD ────────────────────────────────────────────────────
+// Krokhol's theme changed around 2026-10-30. The card markup rendering 2 reads
+// disappeared, the store scraped 0 products for thirteen days, and its 1029
+// prices sat on the site as if current. The two items below are copied
+// verbatim from the saved https://www.krokholdgs.no/categories/putter-disk of
+// 2026-11-12; the rest are variations on them, marked where they are.
+
+const KROKHOL_ITEMS = [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "url": "https://www.krokholdgs.no/products/-d-line-flex3-p2",
+    "item": {
+      "@type": "Product",
+      "@id": "https://www.krokholdgs.no/products/-d-line-flex3-p2#product",
+      "name": "D-Line Flex3 P2",
+      "url": "https://www.krokholdgs.no/products/-d-line-flex3-p2",
+      "image": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/Vn1Vj_Discmania__D-Line_Flex3_P2_1.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Discmania"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.krokholdgs.no/products/-d-line-flex3-p2",
+        "priceCurrency": "NOK",
+        "price": 140,
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 41,
+    "url": "https://www.krokholdgs.no/products/esp-recycled-zone",
+    "item": {
+      "@type": "Product",
+      "@id": "https://www.krokholdgs.no/products/esp-recycled-zone#product",
+      "name": "ESP Recycled Zone",
+      "url": "https://www.krokholdgs.no/products/esp-recycled-zone",
+      "image": "https://www.krokholdgs.no/users/krokholdgs_mystore_no/images/6xlGV_Discraft_ESP_Recycled_Zone_1.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Discraft"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.krokholdgs.no/products/esp-recycled-zone",
+        "priceCurrency": "NOK",
+        "price": 160,
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  }
+];
+
+function krokholPage(items, cardsHtml = '') {
+  const graph = { '@context': 'https://schema.org', '@graph': [
+    { '@type': 'CollectionPage', name: 'Putter' },
+    { '@type': 'ItemList', numberOfItems: items.length, itemListElement: items },
+  ] };
+  return '<html><head><script type="application/ld+json">' + JSON.stringify(graph) +
+    '</script></head><body>' + cardsHtml +
+    '<a href="/categories/putter-disk?&page=2">2</a></body></html>';
+}
+
+const KROKHOL = { baseUrl: 'https://www.krokholdgs.no' };
+
+test("parseJsonLdItemList reads Krokhol's structured data", () => {
+  const [flex, recycled] = parseJsonLdItemList(krokholPage(KROKHOL_ITEMS), KROKHOL);
+  assert.deepStrictEqual(flex, {
+    rawName: 'Discmania D-Line Flex3 P2',
+    price: 140,
+    productUrl: 'https://www.krokholdgs.no/products/-d-line-flex3-p2',
+    inStock: true,
+    image: KROKHOL_ITEMS[0].item.image,
+  });
+  // Recycled ESP is a Discraft plastic line, new discs — it used to be thrown
+  // away as used by the 'recycled' keyword.
+  assert.strictEqual(recycled.rawName, 'Discraft ESP Recycled Zone');
+  assert.strictEqual(recycled.price, 160);
+});
+
+test('parseJsonLdItemList reads real availability instead of assuming in stock', () => {
+  // Variation: same item, marked sold out.
+  const soldOut = structuredClone(KROKHOL_ITEMS[0]);
+  soldOut.item.offers.availability = 'https://schema.org/OutOfStock';
+  const [p] = parseJsonLdItemList(krokholPage([soldOut]), KROKHOL);
+  assert.strictEqual(p.inStock, false);
+});
+
+test('parseJsonLdItemList refuses a price in any currency but NOK', () => {
+  // Variation: same item in EUR. A NOK store publishing another currency is a
+  // bug to skip, not a number to trust (cf. Discexpress, USD-as-SEK).
+  const eur = structuredClone(KROKHOL_ITEMS[0]);
+  eur.item.offers.priceCurrency = 'EUR';
+  assert.deepStrictEqual(parseJsonLdItemList(krokholPage([eur]), KROKHOL), []);
+});
+
+test('a sale card beats an ordinary JSON-LD price', () => {
+  // The price markup below is Krokhol's real sale card for Neutron Tesla
+  // Classic, copied from the saved https://www.krokholdgs.no/specials of
+  // 2026-11-12 (189,- with 209,- struck through). The JSON-LD side is set to
+  // the ordinary price on purpose: whichever of the two Krokhol's JSON-LD
+  // publishes for a discount, the scraper must land on what the customer pays.
+  const tesla = structuredClone(KROKHOL_ITEMS[0]);
+  tesla.item.name = 'Neutron Tesla Classic';
+  tesla.item.brand.name = 'MVP Disc Sports';
+  tesla.item.url = 'https://www.krokholdgs.no/products/neutron-tesla-classic';
+  tesla.item.offers.price = 209;
+  const card = '<article class="product-thumb-info"><a href="https://www.krokholdgs.no/products/neutron-tesla-classic">x</a>' +
+    '<div class="pb_price price flex items-center min-h-[1.75rem]"> <p style="color:#C0392B" class="mr-2 text-xl font-bold">189,-</p> ' +
+    '<span class="flex flex-col mr-2"> <span style="color:#1A1A1A" class="text-base font-light leading-tight"> ' +
+    '<s class="line-through">209,-</s> </span> </span> </div></article>';
+  const [p] = parseJsonLdItemList(krokholPage([tesla], card), KROKHOL);
+  assert.strictEqual(p.rawName, 'MVP Disc Sports Neutron Tesla Classic');
+  assert.strictEqual(p.price, 189);
+});
+
+test('a card that agrees with JSON-LD changes nothing', () => {
+  const card = '<article class="product-thumb-info"><a href="/products/-d-line-flex3-p2">x</a>' +
+    '<section class="price flex"><p>140,-</p></section></article>';
+  const [p] = parseJsonLdItemList(krokholPage([KROKHOL_ITEMS[0]], card), KROKHOL);
+  assert.strictEqual(p.price, 140);
+});
+
+test('an unparseable JSON-LD block does not hide a good one', () => {
+  const html = krokholPage(KROKHOL_ITEMS).replace('<head>', '<head><script type="application/ld+json">{ not json</script>');
+  assert.strictEqual(parseJsonLdItemList(html, KROKHOL).length, 2);
+});
+
+test('parseListing reaches JSON-LD only when the card renderings find nothing', () => {
+  const { products, maxPage } = parseListing(krokholPage(KROKHOL_ITEMS), KROKHOL);
+  assert.strictEqual(products.length, 2);
+  assert.strictEqual(maxPage, 2);
+});
+
+test('a page with both the handler form and JSON-LD keeps using the handler form', () => {
+  // What keeps Frisbeebutikken and Starframe exactly as they were: if Mystore
+  // ever adds JSON-LD to their theme too, rendering 1 still wins.
+  const handler = `<button @click="addToCart({ name: 'Champion Caiman', price: '219,-', url: 'https://x.no/products/champion-caiman', image: '' })">`;
+  const html = krokholPage(KROKHOL_ITEMS).replace('<body>', '<body>' + handler);
+  const { products } = parseListing(html, KROKHOL);
+  assert.deepStrictEqual(products.map((p) => p.rawName), ['Champion Caiman']);
 });

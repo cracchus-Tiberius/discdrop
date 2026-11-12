@@ -22,9 +22,17 @@
 //   2. Server-rendered card markup, no addToCart anywhere on the page. Krokhol
 //      serves this. See parseServerRenderedCards() for the shape.
 //
-// parseListing() tries the handler form first and falls back to card markup, so
-// a store that changes theme keeps working, and neither store needs to declare
-// which rendering it has.
+//   3. JSON-LD. A <script type="application/ld+json"> CollectionPage whose
+//      ItemList carries every listed product as schema.org Product + Offer:
+//      name, url, image, brand.name, a numeric NOK price and an availability.
+//      Krokhol serves this since its theme changed around 2026-10-30, when the
+//      card markup in (2) disappeared and the store quietly scraped 0
+//      products for thirteen days. See parseJsonLdItemList().
+//
+// parseListing() tries them in that order and takes the first that yields
+// products, so a store that changes theme keeps working, no store needs to
+// declare which rendering it has, and adding (3) changed nothing for the two
+// stores (1) still serves.
 
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
@@ -159,6 +167,118 @@ function parseServerRenderedCards(html, { baseUrl } = {}) {
 }
 
 /**
+ * Rendering 3: JSON-LD. Krokhol's theme since ~2026-10-30 emits, per page,
+ *
+ *   <script type="application/ld+json">{ "@graph": [ { "@type": "ItemList",
+ *     "itemListElement": [ { "@type": "ListItem", "position": 1, "item": {
+ *       "@type": "Product", "name": "D-Line Flex3 P2",
+ *       "url": "https://www.krokholdgs.no/products/-d-line-flex3-p2",
+ *       "brand": { "@type": "Brand", "name": "Discmania" },
+ *       "offers": { "@type": "Offer", "priceCurrency": "NOK", "price": 140,
+ *                   "availability": "https://schema.org/InStock" } } }, ... ] } ] }
+ *
+ * Structured data is a better source than the cards it replaced: it is what
+ * the store publishes for search engines, so it is meant to stay stable across
+ * redesigns; the price is a number rather than "189,-"; and availability is
+ * real, where both earlier renderings had to assume in-stock. Checked against
+ * a saved putter page: all 200 items Product/Offer, NOK, branded, and every
+ * card's visible price equal to its JSON-LD price.
+ *
+ * Sale prices: if a card shows a lower price than its JSON-LD, the card wins.
+ * Krokhol's sale cards show the sale price and the struck-through ordinary
+ * one (/specials, 2026-11-12: Neutron Tesla Classic 189,- over 209,-), and the
+ * guard takes the lower, so the scraper lands on what the customer pays
+ * whichever price the JSON-LD publishes for a discount — that page has no
+ * ItemList of its own, so that part was never observed directly. Getting it
+ * wrong would overstate Krokhol on every discounted disc and hide real
+ * /prisfall drops.
+ */
+const OUT_OF_STOCK_RE = /(OutOfStock|SoldOut|Discontinued)$/i;
+
+function jsonLdItemLists($) {
+  const lists = [];
+  const visit = (node) => {
+    if (!node || typeof node !== 'object') return;
+    if (Array.isArray(node)) { node.forEach(visit); return; }
+    if (node['@type'] === 'ItemList') lists.push(node);
+    if (node['@graph']) visit(node['@graph']);
+  };
+  $('script[type="application/ld+json"]').each((_, el) => {
+    try { visit(JSON.parse($(el).text())); } catch { /* one bad block must not hide the rest */ }
+  });
+  return lists;
+}
+
+/** Lowest price each listing card shows, keyed by product path — the sale guard above. */
+function cardPricesByPath($) {
+  const byPath = new Map();
+  $('article.product-thumb-info').each((_, el) => {
+    const $card = $(el);
+    const href = $card.find('a[href*="/products/"]').first().attr('href');
+    if (!href) return;
+    let path;
+    try { path = new URL(href, 'https://x.invalid').pathname; } catch { return; }
+    const shown = $card.find('[class*="price"] p, [class*="price"] span')
+      .map((_, p) => $(p).text().trim()).get()
+      .filter((t) => /^\d[\d\s.]*,(?:-|\d{2})$/.test(t))
+      .map(parseNok)
+      .filter((n) => n && !isNaN(n));
+    if (shown.length) byPath.set(path, Math.min(...shown));
+  });
+  return byPath;
+}
+
+function parseJsonLdItemList(html, { baseUrl } = {}) {
+  const $ = cheerio.load(html);
+  const abs = (href) => { try { return new URL(href, baseUrl).toString(); } catch { return null; } };
+  const cardPrices = cardPricesByPath($);
+  const products = [];
+  const seen = new Set();
+
+  for (const list of jsonLdItemLists($)) {
+    for (const entry of list.itemListElement || []) {
+      const item = entry && entry.item ? entry.item : entry;
+      if (!item || item['@type'] !== 'Product') continue;
+
+      const title = String(item.name || '').trim();
+      if (!title) continue;
+      const brand = String((item.brand && (item.brand.name || item.brand)) || '').trim();
+      // Same prefix rule as rendering 2: never "Kastaplast Kastaplast K3 Reko".
+      const rawName = brand && !title.toLowerCase().startsWith(brand.toLowerCase())
+        ? `${brand} ${title}`
+        : title;
+      if (!isSellableDisc(rawName)) continue;
+
+      const productUrl = abs(item.url || entry.url);
+      if (!productUrl || seen.has(productUrl)) continue;
+
+      const offer = Array.isArray(item.offers) ? item.offers[0] : item.offers;
+      if (!offer) continue;
+      // A NOK store publishing another currency is a bug to refuse, not convert
+      // — the same lesson as Discexpress's USD-as-SEK incident.
+      if (offer.priceCurrency && offer.priceCurrency !== 'NOK') continue;
+      let price = Number(offer.price != null ? offer.price : offer.lowPrice);
+      if (!price || isNaN(price)) continue;
+
+      let path = null;
+      try { path = new URL(productUrl).pathname; } catch { /* keep JSON-LD price */ }
+      const shown = path ? cardPrices.get(path) : undefined;
+      if (shown && shown < price) price = shown;
+      price = Math.round(price);
+      if (price < MIN_PRICE_NOK) continue;
+
+      const inStock = !OUT_OF_STOCK_RE.test(String(offer.availability || ''));
+      const image = Array.isArray(item.image) ? item.image[0] : item.image || null;
+
+      seen.add(productUrl);
+      products.push({ rawName, price, productUrl, inStock, image });
+    }
+  }
+
+  return products;
+}
+
+/**
  * A store's disc categories. Most Mystore shops put every disc under one
  * category; Krokhol splits them by type (putter/midrange/fairway/driver) with
  * no "all discs" parent, so the list form exists for that. Products are
@@ -173,6 +293,7 @@ function categoriesOf(store) {
 function parseListing(html, store) {
   let products = parseAddToCartCards(html);
   if (products.length === 0) products = parseServerRenderedCards(html, store);
+  if (products.length === 0) products = parseJsonLdItemList(html, store);
 
   const $ = cheerio.load(html);
   let maxPage = 1;
@@ -512,6 +633,7 @@ module.exports = {
   parseNok,
   parseAddToCartCards,
   parseServerRenderedCards,
+  parseJsonLdItemList,
   parseListing,
   isChallengePage,
   runMystoreScrape,
