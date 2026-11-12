@@ -273,8 +273,30 @@ export function getDiscImage(disc: Disc): string {
   if (enriched) return enriched;
   const scraped = (scrapedPrices.prices as Record<string, ScrapedEntry[]>)[disc.id];
   if (scraped) {
+    // Entries whose plastic parsed are tried first. A product the matcher
+    // could read a real plastic line out of is much more likely to be the
+    // disc than one it could not, and the photo is the one place a single bad
+    // listing speaks for the whole disc: it only takes one, because the first
+    // image found wins and nothing downstream questions it.
+    //
+    // Confirmed 2026-11-12: wearediscgolf's "Cap Astronaut" was the only
+    // entry on discmania-astronaut carrying a photo — the two Discsport rows
+    // had none — so a baseball cap was the picture on the Astronaut card.
+    // Every one of the seven mismatched products found that day had a null
+    // plastic, against 93.7% of real entries having one. 13 discs currently
+    // have no catalogue image and exactly one scraped photo, so for those the
+    // lone photo is the card, whatever it happens to be.
+    //
+    // This reorders, it never excludes: a disc whose only photo comes from a
+    // plastic-less entry still gets that photo, just last. The real fix is
+    // upstream, in isNonDiscProduct and the matcher's brand check — this is
+    // what stops the next one from reaching the page.
+    const byTrust = [
+      ...scraped.filter((e) => e.plastic),
+      ...scraped.filter((e) => !e.plastic),
+    ];
     let fallbackBlank: string | null = null;
-    for (const entry of scraped) {
+    for (const entry of byTrust) {
       if (!entry.image) continue;
       if (BLANK_IMAGE_PATTERN.test(entry.image)) {
         if (!fallbackBlank) fallbackBlank = entry.image;
