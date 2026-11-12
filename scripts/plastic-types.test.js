@@ -72,3 +72,47 @@ test('apparel keywords do not swallow molds that merely contain them', () => {
     assert.strictEqual(isNonDiscProduct(name), false, `${name} should be kept`);
   }
 });
+
+// ── Digit-initial bundle phrases ────────────────────────────────────────────
+// NON_DISC_PHRASES is matched with includes(), so '3 disc' fired inside
+// "MD3 Discmania": those characters sit across the join of two good words.
+// Found 2026-11-12. The two MD3 listings in the price data survived only
+// because their real title puts a dash between the mold and the brand.
+
+test('a mold ending in a digit is not a three-disc set', () => {
+  for (const name of [
+    'C-Line Glow MD3 Discmania Challenge Light Strike',
+    'c line glow md3 discmania challenge fundraiser light strike',
+    'Discmania MD3 för 299',
+    'Innova PD3 Discmania crossover',
+    'Discraft Roc3 discontinued run',
+  ]) {
+    assert.strictEqual(isNonDiscProduct(name), false, `${name} should be kept`);
+  }
+});
+
+test('real bundles are still rejected, plural included', () => {
+  // No trailing boundary on purpose: "3 discs set" is a normal way to write
+  // a bundle, and anchoring the end would lose the plural.
+  for (const name of [
+    'Discmania 3 disc set',
+    'MVP 3 discs starter bundle',
+    'Kastaplast 3-disc pack',
+    'Discsport 3-pack',
+    'Ugglans 3 för 299',
+    'Starter 3 disc box',
+  ]) {
+    assert.strictEqual(isNonDiscProduct(name), true, `${name} should be rejected`);
+  }
+});
+
+test('"shield" no longer deletes the Westside Shield putter', () => {
+  // A bare includes('shield') sat next to 'face shield' and threw away every
+  // listing of a real disc. westside-shield was in the catalogue with zero
+  // prices and nothing recorded why — rejected products never reach
+  // unmatched-products.json, so it just looked unstocked.
+  for (const name of ['Westside VIP Shield', 'Westside Discs Shield', 'Westside Tournament Shield']) {
+    assert.strictEqual(isNonDiscProduct(name), false, `${name} should be kept`);
+  }
+  assert.strictEqual(isNonDiscProduct('Face Shield'), true);
+});

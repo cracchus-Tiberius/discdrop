@@ -147,12 +147,25 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   (verifisert mot discmania.net), og er det eneste merkebeviset en ekte
   "Active Premium Astronaut"-tittel bærer. Uten det ville sjekken kastet de
   fire ekte oppføringene sammen med Coalesce-en.
-- Latent, ikke fikset: NON_DISC_PHRASES' '3 disc' er en substring-sjekk og
-  treffer på tvers av ord — "MD3 Discmania" blir "md3 discmania" og
-  inneholder "3 disc". Ekte MD3/PD3/FD3-titler uten skilletegn mellom tallet
-  og neste ord blir dermed forkastet. Oppdaget 2026-11-12 under auditen; de
-  to MD3-oppføringene i dataene overlevde bare fordi den ekte tittelen har en
-  tankestrek der. Trenger ordgrense, ikke includes().
+- Siffer-initiale frasER kan ikke være substring-tester, for mange ekte molds
+  slutter på et tall. NON_DISC_PHRASES matches med includes(), så '3 disc'
+  fyrte inne i "MD3 Discmania" — tegnene sitter på skjøten mellom to helt
+  gode ord. De fire ('3-disc', '3 disc', '3-pack', '3 för') ligger nå i
+  NON_DISC_NUMERIC_PHRASES med en ledende grense: sifferet kan ikke følge en
+  bokstav eller et annet siffer. Bevisst ingen avsluttende grense — "3 discs
+  set" er en vanlig måte å skrive en pakke på, og den ville mistet flertall.
+  De to MD3-oppføringene i dataene overlevde bare fordi den ekte tittelen har
+  en tankestrek der; PD3, FD3, TL3, Roc3, Mako3 og Teebird3 var én slurvete
+  butikktittel unna samme skjebne.
+- Et for bredt substring-filter sletter disker i stillhet, og ingenting
+  registrerer det: produkter som isNonDiscProduct forkaster når ALDRI fram
+  til unmatched-products.json, så disken ser bare ut som en ingen fører.
+  Bart 'shield' lå ved siden av 'face shield' og tok hver eneste listing av
+  Westside Discs' Shield-putter — westside-shield sto i katalogen med null
+  priser. Fjernet 2026-11-12; 'face shield' dekker fortsatt det regelen var
+  til for, og 'shield' er lagt i REQUIRES_BRAND_CHECK så et tilfeldig
+  produkt ikke kan ta plassen. Korpusauditen (katalognavn + slugs for
+  oppføringer med parset plast, 6758 navn) går nå rent.
 - Ved katalogutvidelse/butikk-onboarding undertrykkes new-disc-signaler den
   dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
 

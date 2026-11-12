@@ -212,3 +212,9 @@ test('brand-checking astronaut keeps every real Astronaut listing', () => {
     assert.strictEqual(matchDisc(name)?.id, 'discmania-astronaut', name);
   }
 });
+
+test('shield is brand-checked, so a stray product cannot take the disc', () => {
+  assert.strictEqual(matchDisc('Westside VIP Shield')?.id, 'westside-shield');
+  assert.strictEqual(matchDisc('Westside Discs Shield')?.id, 'westside-shield');
+  assert.strictEqual(matchDisc('Generic Shield Cover'), null);
+});

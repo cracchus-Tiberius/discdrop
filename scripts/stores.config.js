@@ -406,7 +406,7 @@ function matchDiscCandidate(rawProductName) {
       // sits earlier in discs.js than Coalesce. Requiring the brand breaks
       // the tie on evidence rather than on file order, and the product then
       // falls through to axiom-coalesce, which is what it actually is.
-      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function', 'crush', 'astronaut']);
+      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function', 'crush', 'astronaut', 'shield']);
       if (discName.length <= 3 || REQUIRES_BRAND_CHECK.has(discName)) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
