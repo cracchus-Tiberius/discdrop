@@ -163,9 +163,17 @@ async function sendEmail(alert, currentPrice) {
   if (!res.ok) {
     const err = await res.text();
     console.error(`Failed to send email to ${email}:`, err);
-    return false;
+    return { ok: false, status: res.status, body: err };
   }
-  return true;
+  return { ok: true, status: res.status };
+}
+
+// A 401/403 from Resend is not a per-recipient problem — the credential itself
+// is rejected, so every remaining send in this run will fail the same way.
+// Confirmed in production 2026-10-20: an expired key turned two genuine
+// triggers into two 401s, and the run still exited 0.
+function isAuthFailure(status) {
+  return status === 401 || status === 403;
 }
 
 async function main() {
@@ -173,22 +181,65 @@ async function main() {
   const alerts = queryAlerts();
   console.log(`Found ${alerts.length} active alert(s).`);
 
-  let triggered = 0;
+  // Three separate numbers, because conflating them is what hid the outage:
+  // `matched` is how many subscribers' conditions came true, `delivered` is how
+  // many actually got an email. The old code reported only the second one and
+  // called it "triggered", so a run where every send 401'd printed
+  // "Triggered 0 alert(s)" and exited 0 — indistinguishable from a quiet day
+  // with nothing to send.
+  let matched = 0;
+  let delivered = 0;
+  const failures = [];
+  let authFailed = false;
+
   for (const alert of alerts) {
     const currentPrice = getBestPrice(alert.disc_id);
     if (currentPrice == null) continue; // still out of stock everywhere
     // target_price === 0 means "notify me as soon as it's back in stock, any price"
     if (alert.target_price > 0 && currentPrice > alert.target_price) continue;
 
+    matched++;
     console.log(`  Trigger: ${alert.disc_id} at kr ${currentPrice} (target kr ${alert.target_price}) → ${alert.email}`);
-    const sent = await sendEmail(alert, currentPrice);
-    if (sent) {
+    const result = await sendEmail(alert, currentPrice);
+
+    if (result.ok) {
+      // Only deactivate on a confirmed send. A failed alert stays active so the
+      // next run retries it — the subscriber still gets told, just later.
       deactivateAlert(alert.id);
-      triggered++;
+      delivered++;
+      continue;
+    }
+
+    failures.push({ discId: alert.disc_id, status: result.status });
+
+    if (isAuthFailure(result.status)) {
+      authFailed = true;
+      const remaining = alerts.length - matched;
+      console.error(
+        `  Resend rejected our API key (HTTP ${result.status}). Every further send would fail ` +
+        `the same way, so this run stops here${remaining > 0 ? ` with ${remaining} alert(s) unchecked` : ''}. ` +
+        `Rotate RESEND_API_KEY.`
+      );
+      break;
     }
   }
 
-  console.log(`Done. Triggered ${triggered} alert(s).`);
+  console.log(`Done. ${matched} alert(s) matched, ${delivered} delivered, ${failures.length} failed.`);
+
+  if (failures.length === 0) return;
+
+  // Exit non-zero so the step turns the run red and GitHub sends its own
+  // failure email. That channel matters precisely here: notifyOwner() goes
+  // through Resend with the same key, so when the key is what broke, the
+  // in-band warning cannot get out either.
+  for (const f of failures) {
+    console.log(`::error title=Alert delivery failed: ${f.discId}::HTTP ${f.status} from Resend. The subscriber was not notified; the alert stays active and will retry next run.`);
+  }
+  console.log(
+    `::error::${failures.length} of ${matched} matched price alert(s) could not be delivered` +
+    `${authFailed ? ' — Resend rejected RESEND_API_KEY, rotate it' : ''}.`
+  );
+  process.exitCode = 1;
 }
 
 main().catch(async (e) => {

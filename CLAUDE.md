@@ -24,6 +24,21 @@ Package manager: pnpm (always use pnpm, never npm).
   `--force-refreeze` exists solely for deliberate bug fixes and requires
   an explicit decision from Tobba in the session — never run it as part
   of routine maintenance, refactors, or "tidying".
+- `--force-refreeze` only reaches weeks still inside SIGNAL_WINDOW_MS (14
+  days). The signal engine builds from today's scraped-prices.json alone, so
+  an older week has nothing to be rebuilt from and the flag silently writes
+  nothing — by design, since the alternative would be an empty week replacing
+  an indexed archive page. Repairing an older frozen week means editing the
+  file by hand. That has been done once, 2026-11-13, on Tobba's explicit go:
+  W34, W36 and W40 carried rows driven by a cap, two t-shirts, a beanie and a
+  phone case. The edit only removed — 56 lines, nothing added, `generated`
+  left as it was, each row's price recomputed from the stores that remained
+  (none moved; the removed stores were never the cheapest). Two rows an audit
+  of all twelve frozen weeks flagged were deliberately left: W35
+  latitude-gatekeeper (the old id from the 2026-09-05 rename, not
+  contamination) and W36 mvp-particle <- discsport's /mold/trail (discsport
+  puts the mold page's URL on every product found there, so the URL cannot
+  say what the product was).
 - Any workflow whose script reads git history must check out with
   `fetch-depth: 0`. Depth counts COMMITS, not days. The daily workflow used
   to say 20, which was fine until 2026-09-05, when twelve merged pull
@@ -85,6 +100,22 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
 - discs.js — source of truth for disc catalogue (685 discs, 22 brands)
 - scraped-prices.json — real store prices, updated by pnpm scrape
 - Only show prices from scraped-prices.json, never mock store data
+- getDiscImage() tries entries whose plastic parsed before those without.
+  The photo is where a single bad listing speaks for the whole disc: the
+  first image found wins and nothing downstream questions it, and 13 discs
+  have no catalogue image and exactly one scraped photo. All seven mismatched
+  products found on 2026-11-12 had a null plastic, against 93.7% of real
+  entries having one. This reorders, it never excludes — the real fix is
+  upstream in isNonDiscProduct and the matcher's brand check.
+- Scraped entries older than MAX_PRICE_AGE_DAYS (7) are not shown at all —
+  lib/price-freshness.ts, applied in getScrapedPrice() and
+  getAllScrapedEntries(). Age is measured against the snapshot's own
+  `lastUpdated`, not wall-clock now: that keeps a static build deterministic,
+  and it means a dead cron ages every store together and filters nothing (the
+  site keeps serving its last good prices) while a single store falling behind
+  the others disappears on its own. Seven days, not the freshness check's 36h
+  — that one raises an alarm early, this one decides what a visitor sees, and
+  a store missing one or two runs must not have its catalogue vanish.
 - discs.js skal ALDRI inneholde priser. De bor utelukkende i
   scraped-prices.json. Katalogen hadde til 2026-09-07 håndskrevne stores[]-
   og priceHistory-rester fra seedingen på 17 disker — ingenting leste dem, så
@@ -110,6 +141,53 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   Aldri duplikat-oppføringer.
 - Kjente alias-feller: Cloudbreaker, Q-Line/Q-Line Premier, Kaxe Z,
   nickname-first Discmania-titler.
+- Klesplagg er ikke disker. isNonDiscProduct dekker nå hodeplagg og klær
+  (cap/caps/hat/lue/beanie/trucker/genser/shirt/socks/sokker/jakke/polo/
+  crewneck/sweater). En korpusaudit 2026-11-12 fant seks plagg matchet til
+  tre disker: "Cap Astronaut" -> discmania-astronaut, "Kastaplast Beanie
+  Berg" -> kastaplast-berg i tre butikker, og to t-skjorter -> latitude-core.
+  Ingen av dem vant beste pris, så ingen pris var feil — de blåste opp
+  butikktellere og ventet på et salg. Skaden var bildet: caps-en var den
+  eneste oppføringen på Astronaut med et produktfoto, så kortet på /nytt
+  viste en caps.
+- "tee" har en vakt, ikke en plass i ordlista: /\btee(?!\s*(?:devil|bird))\b/.
+  Teebird, Teebird3 og TeeDevil er ekte molds, og en butikk som skriver "Tee
+  Bird" med mellomrom skal ikke miste disken.
+- Stempelnavn som kolliderer med en ekte mold: 'astronaut' er lagt i
+  REQUIRES_BRAND_CHECK. hyzershops "Coalesce Astronaut Stamp" er en Thought
+  Space Athletics Coalesce med astronaut-stempel, og siden "Astronaut" og
+  "Coalesce" begge er ni tegn ble "longest match wins" uavgjort og
+  katalogrekkefølgen avgjorde. Merkesjekken krevde at 'active' ble lagt til
+  discmaniaPlasticRe — Active og Active Premium ER Discmania-plastlinjer
+  (verifisert mot discmania.net), og er det eneste merkebeviset en ekte
+  "Active Premium Astronaut"-tittel bærer. Uten det ville sjekken kastet de
+  fire ekte oppføringene sammen med Coalesce-en.
+- Siffer-initiale frasER kan ikke være substring-tester, for mange ekte molds
+  slutter på et tall. NON_DISC_PHRASES matches med includes(), så '3 disc'
+  fyrte inne i "MD3 Discmania" — tegnene sitter på skjøten mellom to helt
+  gode ord. De fire ('3-disc', '3 disc', '3-pack', '3 för') ligger nå i
+  NON_DISC_NUMERIC_PHRASES med en ledende grense: sifferet kan ikke følge en
+  bokstav eller et annet siffer. Bevisst ingen avsluttende grense — "3 discs
+  set" er en vanlig måte å skrive en pakke på, og den ville mistet flertall.
+  De to MD3-oppføringene i dataene overlevde bare fordi den ekte tittelen har
+  en tankestrek der; PD3, FD3, TL3, Roc3, Mako3 og Teebird3 var én slurvete
+  butikktittel unna samme skjebne.
+- Merch er bredere enn klær: "Phone Case Inner Core" lå live på
+  latitude-core hos wearediscgolf og kvamdgs og sto bak en frossen W34-rad,
+  forbi plagg-auditen fordi det ikke er et plagg. 'phone case',
+  'mobildeksel' og 'mobilskal' er lagt til. Når en audit leter etter én type
+  feilmatch, se på de andre butikkene i de samme radene også — W34-raden ble
+  funnet ved å lese den, ikke av auditen.
+- Et for bredt substring-filter sletter disker i stillhet, og ingenting
+  registrerer det: produkter som isNonDiscProduct forkaster når ALDRI fram
+  til unmatched-products.json, så disken ser bare ut som en ingen fører.
+  Bart 'shield' lå ved siden av 'face shield' og tok hver eneste listing av
+  Westside Discs' Shield-putter — westside-shield sto i katalogen med null
+  priser. Fjernet 2026-11-12; 'face shield' dekker fortsatt det regelen var
+  til for, og 'shield' er lagt i REQUIRES_BRAND_CHECK så et tilfeldig
+  produkt ikke kan ta plassen. Korpusauditen (katalognavn + slugs for
+  oppføringer med parset plast, 6758 navn) går nå rent.
+
 - Recycled ESP er en Discraft-plast (nye disker av resirkulert materiale), ikke
   brukt. PLASTIC_TYPES listet den mens USED_KEYWORDS' 'recycled' kastet den:
   2026-11-13 hadde ikke én oppføring i noen butikk "recycl" i URL-en. isUsedDisc
@@ -205,6 +283,47 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   CI before diagnosing — the runner and the laptop are not seeing the same
   site. The scraper now detects the captcha page and logs BLOCKED. Do not
   build around the captcha: it is the store declining datacenter bots.
+- A blocked store needs TWO entries, or it does damage in one of two ways.
+  `KNOWN_BLOCKED` in scripts/check-store-freshness.js stops the daily false
+  alarm (it reports BLOCK and a ::warning::, and no longer fails the run);
+  lib/price-freshness.ts stops the stale prices being shown. Discsport had
+  neither for six weeks: the check failed the run every single day — so a red
+  pipeline became the normal state, which is exactly the inattention that
+  check was written to end — while 1387 entries, 42 days old, still fed
+  "best price", /prisfall and the disc detail table. 140 discs were advertising
+  a price that no longer existed anywhere (westside-longbowman at 242 kr when
+  the real cheapest was 354). Listing a store in one place and not the other
+  gives you either a silent lie or an alarm nobody reads. Add to both, or
+  neither. If a blocked store starts answering again the check says so
+  (::notice::, "remove it from KNOWN_BLOCKED") — it does not quietly re-include
+  it.
+- Discace's API fetch retries (3 attempts, 5s backoff) on a thrown network
+  error, a 5xx, or a truncated body; a 4xx returns immediately, since the
+  server will say the same thing three times. It was the one WooCommerce
+  scraper that never got the retry scraper.js, Frisbeebutikken and Starframe
+  all received on 2026-08-22, and it cost a full day of prices on 2026-10-10,
+  10-11 and 10-20 — the 10-11 miss was the second in a row and reached 48h,
+  past the 36h freshness threshold. Nobody saw that alarm, because the run was
+  already red every day over Discsport.
+- Discace's Playwright fallback is not a safety net, and should not be
+  trusted as one. Probed 2026-10-22: discaceofsweden.com serves its cached
+  front page and robots.txt fine while answering 503 to essentially every
+  uncached page — /butik/, /shop/, sitemap_index.xml (which its own robots.txt
+  points at), a product category, and a /produkt/ URL that is in our own
+  scraped data, several of them failing in the same batch in which / and
+  robots.txt succeeded. So /butik/ is not the wrong URL; the origin is simply
+  unreliable for automated clients. That is also the single root cause behind
+  2026-10-20, where the API timed out AND Playwright got 0 products: one
+  struggling origin, not two bugs. A fallback that depends on the same origin
+  as the thing it is backing up cannot rescue it — the API retry is the real
+  protection here. The fallback now reads page.goto()'s status and says
+  "HTTP 503 ... the store's origin refused the page" instead of reporting
+  "0 products", because an error page and an empty catalogue parsed
+  identically before, and that is exactly why 10-20 took two days to explain.
+- Discace is genuinely small: ~130 products in its API, of which ~38 are new
+  discs and ~26 match the catalogue. The rest are Disc Replay (used) and merch.
+  A constant 25-26 entries is correct for this store, not a stuck scraper —
+  verified against the live API 2026-10-21.
 - Each standalone scrape-*.js tries the store's JSON API first (Shopify products.json
   or WooCommerce wp-json/wc/store/v1/products), falls back to Playwright HTML scraping
   if that's blocked or unavailable.
@@ -230,6 +349,17 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   (not the SDK, for Workers-runtime compatibility). Model: claude-sonnet-5.
   Key: env.ANTHROPIC_API_KEY (set as a Cloudflare Pages environment variable/secret).
 - functions/api/alerts/ — price/back-in-stock alerts, reads/writes the `DB` D1 binding.
+- scripts/check-alerts.js reports three numbers (matched / delivered / failed)
+  and exits non-zero when a matched alert could not be delivered. It used to
+  report only deliveries, as "triggered", so a run where every send 401'd
+  printed "Triggered 0 alert(s)" and exited 0 — indistinguishable from a quiet
+  day. Confirmed 2026-10-20: an expired RESEND_API_KEY silently dropped two
+  genuine alerts. A failed alert is never deactivated, so the next run retries
+  it. The exit code matters because notifyOwner() goes through Resend with the
+  same key — when the key is what broke, the in-band warning cannot get out
+  either, and GitHub's own failure email is the only channel left. The two
+  checks after it in daily-scrape.yml carry `if: always()` so a dead mail
+  credential cannot hide a dead store.
 - Local testing of functions/ requires `wrangler pages dev` (plain `next dev` won't
   serve them) — see wrangler.toml for the D1 binding.
 

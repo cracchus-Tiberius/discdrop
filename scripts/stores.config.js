@@ -398,11 +398,25 @@ function matchDiscCandidate(rawProductName) {
       // text, and Discraft's Crush is short enough to lose a longest-match
       // contest against it. Every current listing carries either the brand
       // name or a Discraft plastic, so the check costs nothing today.
-      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function', 'crush']);
+      // 'astronaut' joins them for the same reason, found 2026-11-12:
+      // hyzershop's "Coalesce Astronaut Stamp" is a Thought Space Athletics
+      // Coalesce carrying an astronaut-themed stamp, and it matched
+      // discmania-astronaut. Both names are nine characters, so "longest
+      // match wins" was a tie that catalog order decided — Astronaut simply
+      // sits earlier in discs.js than Coalesce. Requiring the brand breaks
+      // the tie on evidence rather than on file order, and the product then
+      // falls through to axiom-coalesce, which is what it actually is.
+      const REQUIRES_BRAND_CHECK = new Set(['berserker', 'phenom', 'viking', 'motion', 'flow', 'dragon', 'function', 'crush', 'astronaut', 'shield']);
       if (discName.length <= 3 || REQUIRES_BRAND_CHECK.has(discName)) {
         const brandNorm = norm(disc.brand);
         const brandPattern = new RegExp('(?:^|\\s)' + brandNorm.replace(/\s+/g, '\\s+') + '(?:\\s|$)', 'i');
-        const discmaniaPlasticRe = /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line)\b/i;
+        // Active and Active Premium are Discmania plastic lines too (confirmed
+        // against discmania.net 2026-11-12), and they are how every legitimate
+        // Astronaut listing in our data is spelled — "Active Premium Astronaut"
+        // names no brand at all. Without 'active' here, brand-checking
+        // 'astronaut' would have thrown the four real listings away along with
+        // the Coalesce.
+        const discmaniaPlasticRe = /\b(?:c[- ]line|s[- ]line|d[- ]line|p[- ]line|q[- ]line|active)\b/i;
         const innovaPlasticRe = /\b(?:champion|star|gstar|blizzard|halo|pro|xt|dx|r-pro|jstar)\b/i;
         const texts = normalisedNoSplit !== normalised ? [normalised, normalisedNoSplit] : [normalised];
         const hasDiscmaniaPlastic = disc.brand === 'Discmania' && texts.some((t) => discmaniaPlasticRe.test(t));

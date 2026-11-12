@@ -188,3 +188,33 @@ test('a Dino Discs title is not rejected by its own plastic', () => {
   assert.strictEqual(id('Egg Shell Tyrannosaurus Rex'), 'eggshell-rex');
   assert.strictEqual(id('Egg Shell Glow Tyrannosaurus Rex'), 'eggshell-rex');
 });
+
+// ── Stamp names that collide with a real mold ───────────────────────────────
+// Found 2026-11-12. "Coalesce Astronaut Stamp" (hyzershop) is a Thought Space
+// Athletics Coalesce carrying an astronaut-themed stamp. Astronaut and
+// Coalesce are both nine characters, so "longest match wins" tied and catalog
+// order picked the wrong one.
+
+test('a stamp name does not beat the real mold when both are in the catalog', () => {
+  assert.strictEqual(matchDisc('Coalesce Astronaut Stamp')?.id, 'axiom-coalesce');
+});
+
+test('brand-checking astronaut keeps every real Astronaut listing', () => {
+  // None of these name Discmania at all — "Active"/"Active Premium" is the
+  // only brand evidence they carry, which is why that plastic line had to be
+  // added to the Discmania plastic pattern alongside the C/S/D/P/Q lines.
+  for (const name of [
+    'Discmania Active Premium Astronaut',
+    'Active Premium Astronaut',
+    'Astronaut Premium Active',
+    'Discmania Astronaut',
+  ]) {
+    assert.strictEqual(matchDisc(name)?.id, 'discmania-astronaut', name);
+  }
+});
+
+test('shield is brand-checked, so a stray product cannot take the disc', () => {
+  assert.strictEqual(matchDisc('Westside VIP Shield')?.id, 'westside-shield');
+  assert.strictEqual(matchDisc('Westside Discs Shield')?.id, 'westside-shield');
+  assert.strictEqual(matchDisc('Generic Shield Cover'), null);
+});
