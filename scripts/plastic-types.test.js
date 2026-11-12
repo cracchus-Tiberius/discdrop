@@ -3,7 +3,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { isMiniDisc } = require('./plastic-types.js');
+const { isMiniDisc, isNonDiscProduct } = require('./plastic-types.js');
 
 test('isMiniDisc catches known mini/marker naming patterns', () => {
   assert.equal(isMiniDisc('K1 Reko Mini'), true);
@@ -25,4 +25,50 @@ test('isMiniDisc does not false-positive on real discs', () => {
   // "Macro" and "Mini" must be whole words, not substrings of a real name.
   assert.equal(isMiniDisc('Macropod'), false);
   assert.equal(isMiniDisc('Minimalist'), false);
+});
+
+// ── Apparel ─────────────────────────────────────────────────────────────────
+// A corpus audit on 2026-11-12 found six garments matched to three discs:
+// "Cap Astronaut" -> discmania-astronaut (it owned the only product photo on
+// that disc, so a baseball cap was the picture on its /nytt card),
+// "Kastaplast Beanie Berg" -> kastaplast-berg at three stores, and two
+// t-shirts -> latitude-core.
+
+test('headwear and garments are not discs', () => {
+  for (const name of [
+    'Cap Astronaut',
+    'Kastaplast Beanie Berg',
+    'Core Unify Training Tee Menn',
+    'Innova Unity Core Womens Tee',
+    'DiscDrop Trucker Hat',
+    'Lue med logo',
+    'Discmania Genser Sort',
+    'Team Polo Anthracite',
+  ]) {
+    assert.strictEqual(isNonDiscProduct(name), true, `${name} should be rejected`);
+  }
+});
+
+test('"tee" rejects the garment without taking Teebird or TeeDevil with it', () => {
+  // Three real molds start with that syllable, and a store writing the name
+  // with a space must not lose a genuine disc.
+  assert.strictEqual(isNonDiscProduct('Innova Unity Core Womens Tee'), true);
+  for (const name of ['Innova Teebird', 'Innova Tee Bird', 'Innova Teebird3', 'Innova TeeDevil', 'Innova Tee Devil']) {
+    assert.strictEqual(isNonDiscProduct(name), false, `${name} should be kept`);
+  }
+});
+
+test('apparel keywords do not swallow molds that merely contain them', () => {
+  // cap/hat sit inside Captain, Captain's Raptor and Hatchet; word boundaries
+  // are what keep those three discs.
+  for (const name of [
+    "Discraft Captain's Raptor",
+    'Dynamic Captain',
+    'Westside Hatchet',
+    'Kastaplast K3 Berg',
+    'Latitude 64 Opto Core',
+    'Discmania Active Premium Astronaut',
+  ]) {
+    assert.strictEqual(isNonDiscProduct(name), false, `${name} should be kept`);
+  }
 });

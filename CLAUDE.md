@@ -85,6 +85,13 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
 - discs.js — source of truth for disc catalogue (685 discs, 22 brands)
 - scraped-prices.json — real store prices, updated by pnpm scrape
 - Only show prices from scraped-prices.json, never mock store data
+- getDiscImage() tries entries whose plastic parsed before those without.
+  The photo is where a single bad listing speaks for the whole disc: the
+  first image found wins and nothing downstream questions it, and 13 discs
+  have no catalogue image and exactly one scraped photo. All seven mismatched
+  products found on 2026-11-12 had a null plastic, against 93.7% of real
+  entries having one. This reorders, it never excludes — the real fix is
+  upstream in isNonDiscProduct and the matcher's brand check.
 - Scraped entries older than MAX_PRICE_AGE_DAYS (7) are not shown at all —
   lib/price-freshness.ts, applied in getScrapedPrice() and
   getAllScrapedEntries(). Age is measured against the snapshot's own
@@ -119,6 +126,33 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   Aldri duplikat-oppføringer.
 - Kjente alias-feller: Cloudbreaker, Q-Line/Q-Line Premier, Kaxe Z,
   nickname-first Discmania-titler.
+- Klesplagg er ikke disker. isNonDiscProduct dekker nå hodeplagg og klær
+  (cap/caps/hat/lue/beanie/trucker/genser/shirt/socks/sokker/jakke/polo/
+  crewneck/sweater). En korpusaudit 2026-11-12 fant seks plagg matchet til
+  tre disker: "Cap Astronaut" -> discmania-astronaut, "Kastaplast Beanie
+  Berg" -> kastaplast-berg i tre butikker, og to t-skjorter -> latitude-core.
+  Ingen av dem vant beste pris, så ingen pris var feil — de blåste opp
+  butikktellere og ventet på et salg. Skaden var bildet: caps-en var den
+  eneste oppføringen på Astronaut med et produktfoto, så kortet på /nytt
+  viste en caps.
+- "tee" har en vakt, ikke en plass i ordlista: /\btee(?!\s*(?:devil|bird))\b/.
+  Teebird, Teebird3 og TeeDevil er ekte molds, og en butikk som skriver "Tee
+  Bird" med mellomrom skal ikke miste disken.
+- Stempelnavn som kolliderer med en ekte mold: 'astronaut' er lagt i
+  REQUIRES_BRAND_CHECK. hyzershops "Coalesce Astronaut Stamp" er en Thought
+  Space Athletics Coalesce med astronaut-stempel, og siden "Astronaut" og
+  "Coalesce" begge er ni tegn ble "longest match wins" uavgjort og
+  katalogrekkefølgen avgjorde. Merkesjekken krevde at 'active' ble lagt til
+  discmaniaPlasticRe — Active og Active Premium ER Discmania-plastlinjer
+  (verifisert mot discmania.net), og er det eneste merkebeviset en ekte
+  "Active Premium Astronaut"-tittel bærer. Uten det ville sjekken kastet de
+  fire ekte oppføringene sammen med Coalesce-en.
+- Latent, ikke fikset: NON_DISC_PHRASES' '3 disc' er en substring-sjekk og
+  treffer på tvers av ord — "MD3 Discmania" blir "md3 discmania" og
+  inneholder "3 disc". Ekte MD3/PD3/FD3-titler uten skilletegn mellom tallet
+  og neste ord blir dermed forkastet. Oppdaget 2026-11-12 under auditen; de
+  to MD3-oppføringene i dataene overlevde bare fordi den ekte tittelen har en
+  tankestrek der. Trenger ordgrense, ikke includes().
 - Ved katalogutvidelse/butikk-onboarding undertrykkes new-disc-signaler den
   dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
 

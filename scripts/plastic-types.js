@@ -522,6 +522,17 @@ const NON_DISC_WORDS = [
   // Apparel
   'hoodie', 'jacket', 'jersey', 'tröja', 't-shirt', 'tshirt',
   'snapback', 'flexfit', 'keps', 'sock', 'strumpor',
+  // Headwear and the rest of the apparel rack. Confirmed in production
+  // 2026-11-12: a corpus audit found six garments matched to three discs —
+  // wearediscgolf's "Cap Astronaut" became discmania-astronaut (and, having
+  // the only product photo among that disc's entries, put a baseball cap on
+  // the Astronaut card on /nytt), "Kastaplast Beanie Berg" became
+  // kastaplast-berg at three separate stores, and two t-shirts became
+  // latitude-core. None of them won best price, so nothing showed a wrong
+  // number — they inflated store counts and waited for a sale.
+  'cap', 'caps', 'hat', 'hats', 'lue', 'beanie', 'trucker',
+  'genser', 'shirt', 'socks', 'sokker', 'jakke', 'polo',
+  'crewneck', 'sweater',
   // Books / media
   'huvudbok', 'arbetsbok', 'kalender', 'ljudfiler', 'simulator',
   // Equipment / sundries
@@ -548,6 +559,14 @@ const NON_DISC_WORDS = [
 
 function isNonDiscProduct(rawName) {
   const lower = rawName.toLowerCase();
+
+  // "tee" earns a guard rather than a place in NON_DISC_WORDS. It is how the
+  // two t-shirts above are spelled ("Core Unify Training Tee", "Innova Unity
+  // Core Womens Tee"), but it is also the first syllable of three real molds
+  // — Teebird, Teebird3 and TeeDevil — and a store writing "Tee Devil" or
+  // "Tee Bird" with a space would otherwise have a genuine disc thrown away.
+  // Match the garment, never the mold.
+  if (/\btee(?!\s*(?:devil|bird))\b/i.test(lower)) return true;
 
   if (
     lower.includes('sticker') ||
