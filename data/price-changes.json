@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T04:54:00.812Z",
+  "generated": "2026-11-14T04:51:32.890Z",
   "summary": {
     "priceChanges24h": 1,
     "newDiscs24h": 0,
@@ -15,14 +15,14 @@
       "newPrice": 198,
       "pct": -15,
       "date": "2026-11-12",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://www.krokholdgs.no/products/esp-recycled-meteor",
       "history": [
         232,
         232,
         232,
         232,
-        232,
+        198,
         198,
         198
       ]
@@ -36,14 +36,14 @@
       "newPrice": 198,
       "pct": -15,
       "date": "2026-11-12",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://www.krokholdgs.no/products/esp-recycled-force",
       "history": [
         232,
         232,
         232,
         232,
-        232,
+        198,
         198,
         198
       ]
@@ -57,14 +57,14 @@
       "newPrice": 198,
       "pct": -15,
       "date": "2026-11-12",
-      "bucket": "yesterday",
+      "bucket": "earlier-this-week",
       "url": "https://www.krokholdgs.no/products/esp-recycled-thrasher",
       "history": [
         232,
         232,
         232,
         232,
-        232,
+        198,
         198,
         198
       ]
