@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T04:51:20.742Z",
+  "lastUpdated": "2026-11-15T04:52:22.913Z",
   "products": [
     {
       "store": "discsport",
@@ -3433,13 +3433,6 @@
     },
     {
       "store": "arcticdisc",
-      "rawName": "SIGR Odin",
-      "price": 2519,
-      "url": "https://arcticdisc.no/products/sigr-sigr-odin",
-      "inStock": true
-    },
-    {
-      "store": "arcticdisc",
       "rawName": "Latitude 64 Startsett - Zero Gravity",
       "price": 399,
       "url": "https://arcticdisc.no/products/latitude-64-startsett-zero-gravity",
@@ -6373,13 +6366,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Electron Autopilot - Eagle McMahon",
-      "price": 179,
-      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Electron Autopilot Firm - Eagle McMahon",
       "price": 179,
       "url": "https://frisbeebutikken.no/products/electron-autopilot-firm-eagle-mcmahon",
@@ -6432,13 +6418,6 @@
       "rawName": "Premium LASERi",
       "price": 160,
       "url": "https://frisbeebutikken.no/products/premium-laseri",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
-      "price": 229,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -6520,9 +6499,23 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Premium Titan",
-      "price": 160,
-      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Special Blend Scorch - Valerie Mandujano",
+      "price": 279,
+      "url": "https://frisbeebutikken.no/products/special-blend-scorch-valerie-mandujano",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "price": 229,
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -6534,9 +6527,23 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "Premium Titan",
+      "price": 160,
+      "url": "https://frisbeebutikken.no/products/premium-titan1",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "K1 Grind Älva",
       "price": 219,
       "url": "https://frisbeebutikken.no/products/k1-grind-alva",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Electron Autopilot - Eagle McMahon",
+      "price": 179,
+      "url": "https://frisbeebutikken.no/products/electron-autopilot-eagle-mcmahon",
       "inStock": true
     },
     {
@@ -8056,7 +8063,7 @@
       "rawName": "Clash Discs Glow Berry Scary Halloween Edition",
       "price": 179,
       "url": "https://nydisk.no/products/clash-discs-glow-berry-scary-halloween-edition",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "nydisk",
@@ -8544,7 +8551,7 @@
     {
       "store": "discexpress",
       "rawName": "GRIPeq MB-G3 - Paul McBeth",
-      "price": 2176,
+      "price": 2175,
       "url": "https://www.discexpress.se/products/paul-mcbeth-x-gripeq-mb-g3",
       "inStock": false
     },
@@ -9083,7 +9090,7 @@
     {
       "store": "discexpress",
       "rawName": "Voyager - James Conrad Signature Edition",
-      "price": 1891,
+      "price": 1890,
       "url": "https://www.discexpress.se/products/voyager-james-conrad-signature-edition",
       "inStock": false
     },
@@ -9111,7 +9118,7 @@
     {
       "store": "discexpress",
       "rawName": "Innova DisCatcher Traveler Basket",
-      "price": 1606,
+      "price": 1605,
       "url": "https://www.discexpress.se/products/innova-discatcher-traveler-basket",
       "inStock": true
     },
@@ -9251,7 +9258,7 @@
     {
       "store": "discexpress",
       "rawName": "Regnskydd - Lore 2.0 - Squatch",
-      "price": 333,
+      "price": 332,
       "url": "https://www.discexpress.se/products/regnskydd-lore",
       "inStock": true
     },
@@ -9342,7 +9349,7 @@
     {
       "store": "discexpress",
       "rawName": "Luxury E5 Backpack",
-      "price": 1891,
+      "price": 1890,
       "url": "https://www.discexpress.se/products/core-pro-e5-backpack",
       "inStock": true
     },
@@ -9594,7 +9601,7 @@
     {
       "store": "discexpress",
       "rawName": "Upper Park The Rebel 2025",
-      "price": 2841,
+      "price": 2840,
       "url": "https://www.discexpress.se/products/upper-park-the-rebel-2025",
       "inStock": true
     },
@@ -9748,7 +9755,7 @@
     {
       "store": "discexpress",
       "rawName": "GRIPeq MB-PX1 - Paul McBeth",
-      "price": 3791,
+      "price": 3790,
       "url": "https://www.discexpress.se/products/grip-eq-mb-px1",
       "inStock": true
     },
@@ -16314,7 +16321,7 @@
     {
       "store": "ugglans",
       "rawName": "Prodigy Apex XL",
-      "price": 2366,
+      "price": 2365,
       "url": "https://ugglansdiscgolf.se/products/prodigy-apex-xl",
       "inStock": true
     },
