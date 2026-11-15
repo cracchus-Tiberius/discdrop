@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01",
+  "generated": "2026-11-15",
   "sources": [
     "https://infinitediscs.com/top-selling/discs-last-month"
   ],
@@ -12,118 +12,118 @@
       "note": "Pinned: Scandinavian-market favorite"
     },
     {
-      "name": "Trail",
-      "brand": "MVP",
-      "score": 38,
-      "catalogId": "mvp-trail"
-    },
-    {
-      "name": "Bokeh",
-      "brand": "Axiom",
-      "score": 36,
-      "catalogId": "axiom-bokeh-lizotte"
-    },
-    {
-      "name": "Particle",
-      "brand": "MVP",
-      "score": 35,
-      "catalogId": "mvp-particle"
-    },
-    {
-      "name": "Luna",
-      "brand": "Discraft",
-      "score": 33,
-      "catalogId": "discraft-luna"
-    },
-    {
       "name": "Wraith",
       "brand": "Innova",
-      "score": 28,
+      "score": 40,
       "catalogId": "innova-wraith"
     },
     {
-      "name": "DD1",
-      "brand": "Discmania",
-      "score": 26,
-      "catalogId": "discmania-dd1"
-    },
-    {
-      "name": "DD3",
-      "brand": "Discmania",
-      "score": 25,
-      "catalogId": "discmania-dd3"
-    },
-    {
-      "name": "Destroyer",
+      "name": "Toro",
       "brand": "Innova",
-      "score": 24,
-      "catalogId": "innova-destroyer"
+      "score": 39,
+      "catalogId": "innova-toro"
     },
     {
-      "name": "Votum",
-      "brand": "Thought Space Athletics",
-      "score": 22,
-      "catalogId": "tsa-votum"
+      "name": "Valkyrie",
+      "brand": "Innova",
+      "score": 36,
+      "catalogId": "innova-valkyrie"
     },
     {
-      "name": "Buzzz",
-      "brand": "Discraft",
-      "score": 21,
-      "catalogId": "discraft-buzzz"
-    },
-    {
-      "name": "Hex",
-      "brand": "Axiom",
-      "score": 19,
-      "catalogId": "axiom-hex"
-    },
-    {
-      "name": "Wave",
+      "name": "Trail",
       "brand": "MVP",
-      "score": 16,
-      "catalogId": "mvp-wave"
+      "score": 34,
+      "catalogId": "mvp-trail"
     },
     {
-      "name": "Roc3",
+      "name": "Pig",
       "brand": "Innova",
-      "score": 15,
-      "catalogId": "innova-roc3"
+      "score": 32,
+      "catalogId": "innova-pig"
     },
     {
       "name": "Maya",
       "brand": "Infinite Discs",
-      "score": 13,
+      "score": 30,
       "catalogId": "infinite-maya"
     },
     {
-      "name": "Mamba",
-      "brand": "Innova",
-      "score": 9,
-      "catalogId": "innova-mamba"
+      "name": "Particle",
+      "brand": "MVP",
+      "score": 29,
+      "catalogId": "mvp-particle"
+    },
+    {
+      "name": "Bokeh",
+      "brand": "Axiom",
+      "score": 28,
+      "catalogId": "axiom-bokeh-lizotte"
     },
     {
       "name": "Mantra",
       "brand": "Thought Space Athletics",
-      "score": 8,
+      "score": 26,
       "catalogId": "tsa-mantra"
     },
     {
-      "name": "Pixel",
-      "brand": "Axiom",
-      "score": 4,
-      "catalogId": "mvp-pixel"
+      "name": "Votum",
+      "brand": "Thought Space Athletics",
+      "score": 19,
+      "catalogId": "tsa-votum"
     },
     {
-      "name": "Glitch",
-      "brand": "MVP",
-      "score": 2,
-      "catalogId": "mvp-glitch"
+      "name": "Pharaoh",
+      "brand": "Infinite Discs",
+      "score": 17,
+      "catalogId": "infinite-pharaoh"
+    },
+    {
+      "name": "Tern",
+      "brand": "Innova",
+      "score": 15,
+      "catalogId": "innova-tern"
+    },
+    {
+      "name": "Destroyer",
+      "brand": "Innova",
+      "score": 14,
+      "catalogId": "innova-destroyer"
+    },
+    {
+      "name": "Mamba",
+      "brand": "Innova",
+      "score": 12,
+      "catalogId": "innova-mamba"
+    },
+    {
+      "name": "DD1",
+      "brand": "Discmania",
+      "score": 9,
+      "catalogId": "discmania-dd1"
     },
     {
       "name": "Pathfinder",
       "brand": "Thought Space Athletics",
-      "score": 1,
+      "score": 7,
       "catalogId": "tsa-pathfinder"
+    },
+    {
+      "name": "Detour",
+      "brand": "MVP",
+      "score": 6,
+      "catalogId": "mvp-detour"
+    },
+    {
+      "name": "Roc3",
+      "brand": "Innova",
+      "score": 3,
+      "catalogId": "innova-roc3"
+    },
+    {
+      "name": "DD3",
+      "brand": "Discmania",
+      "score": 2,
+      "catalogId": "discmania-dd3"
     }
   ]
 }
