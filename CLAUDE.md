@@ -275,6 +275,17 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   pays whichever price the JSON-LD publishes for it. Krokhol has
   no "all discs" parent category, so it lists five type categories and de-duplicates
   by product URL.
+- A Mystore listing can shift order while it is being paginated, and the
+  scrape then loses products with no error. Frisbeebutikken swung between ~305
+  and ~391 matched listings for weeks; the runner log for 2026-11-16 showed
+  why. All five pages came back full (470 rows), but 111 of those rows were
+  products already read on an earlier page, so 359 distinct came through
+  against 472 on 11-15 and 11-23. Each page has a fixed number of slots, so
+  within one pass duplicate rows = products skipped. mystore.js now counts
+  them: a pass with more than SHIFT_TOLERANCE (2) duplicates paginates again
+  and unions the passes, up to MAX_LISTING_PASSES (4). The log line "N already
+  seen on an earlier page" is that signal. Starframe never showed the swing:
+  its page URLs pin /sort-by/1/ and its pages are disjoint.
 - Aceshop's WAF 403s the shared USER_AGENT — the Windows Chrome/124.0.0.0
   string, a very common scraper fingerprint. Confirmed 2026-09-05: that exact
   string 403s on both HTML and the JSON API, while Chrome/140, the same version
