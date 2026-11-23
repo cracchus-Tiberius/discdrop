@@ -203,6 +203,21 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   Edition" (streamline-parachute finnes i katalogen).
 - Ved katalogutvidelse/butikk-onboarding undertrykkes new-disc-signaler den
   dagen (mass-reset) — sjekk manuelt om ekte drops druknet.
+- firstSeen bæres av data/first-seen-ledger.json, nøklet på (discId|store|url),
+  ikke bare av forrige snapshot nøklet på plast. Snapshotet alene nullstilte
+  ~130 oppføringer hver dag, på to måter: (1) merge lagrer plastic=null når
+  tittelen ikke sier plasten, enrich-variants.js fyller den inn fra URL-en
+  etterpå, og neste dag fant oppslaget på "…|null" ingenting; (2) en
+  oppføring som manglet i én kjøring mistet datoen sin — Frisbeebutikken når
+  mellom ~305 og ~391 oppføringer fra dag til dag, og 83 av dens 89 "nye"
+  2026-11-23 hadde vært der 11-15. Discexpress lakk ~29 falske nyheter om
+  dagen inn på /nytt (rett under mass-reset-grensen på 30), mens HyzerShops 62
+  utløste mass-reset daglig og tok eventuelle ekte HyzerShop-drops med seg.
+  Loggen husker en URL i 60 dager etter at den sist ble sett, og bygges kun
+  fra registrerte firstSeen-datoer (scripts/backfill-first-seen-ledger.js,
+  kjørt én gang 2026-11-23 fra full historikk). Uke 47 frøs samme dag med 6
+  signaler mot 48 live; de 42 som falt ut var i hovedsak slike nullstillinger,
+  så arkivet er riktigere enn live-visningen var. Ikke regenerer den.
 
 ## Prisfall-regler
 - Historiske snapshots leses mot dagens data som fasit, ikke som sannhet i
