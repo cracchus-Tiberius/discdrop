@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { BRAND_OG_IMAGE, OG_TYPE_WEBSITE } from "@/lib/seo";
 
-const bricolage = Bricolage_Grotesque({
+// Self-hosted, not next/font/google: that one downloads the font from Google
+// at build time, so a Google hiccup fails the whole build (it did, 2026-11-13).
+// One variable file covers every weight we use (200-800 on the wght axis) and
+// the full Latin-1 range, æøå included. OFL-1.1 licence alongside it in
+// app/fonts/; source: @fontsource-variable/bricolage-grotesque 5.3.0.
+const bricolage = localFont({
+  src: "./fonts/bricolage-grotesque-latin-wght-normal.woff2",
   variable: "--font-bricolage",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: "200 800",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

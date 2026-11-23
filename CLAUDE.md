@@ -92,6 +92,11 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
 - Hero bg: #1E3D2F
 - Font: Playfair Display (serif headlines) + DM Sans (body)
 - Navbar: logo left, links centered, pill hover effect
+- The site font (Bricolage Grotesque) is self-hosted from app/fonts/ via
+  next/font/local — one variable woff2, weights 200-800, OFL licence beside it.
+  It used to come from next/font/google, which fetches from Google at build
+  time: on 2026-11-13 that fetch failed and took the daily build down with it.
+  Don't switch back to next/font/google for a new font either.
 
 ## Reference Docs
 - docs/DiscDrop_Knowledge_Base.md — disc brands, plastic types, player sponsorships, naming conventions, regex patterns for scraper matching. Read when building or updating scraper logic.
