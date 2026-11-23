@@ -8,7 +8,10 @@
 // Key insight this whole module leans on: scripts/stores.config.js's
 // mergeStoreResults() already tracks firstSeen at (discId|store|plastic)
 // granularity and NEVER touches it once set (see that file's comment above
-// mergeStoreResults). That means classification only needs ONE current
+// mergeStoreResults). "Never" held only from 2026-11-24: until then a
+// plastic filled in by enrich-variants.js, or a listing missing for a single
+// run, reset it daily for ~130 listings — data/first-seen-ledger.json now
+// carries it per URL (scripts/lib/first-seen-ledger.js). That means classification only needs ONE current
 // snapshot of scraped-prices.json — no git history walking required, unlike
 // price-changes.js's day-over-day diffing. A signal is just "this
 // (discId, store, plastic) key's firstSeen is recent", cross-referenced

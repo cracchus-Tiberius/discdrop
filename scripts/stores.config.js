@@ -10,6 +10,7 @@ const path = require('path');
 const { PLASTIC_TYPES, PLAYER_NAMES, EDITION_KEYWORDS, parseProductName, isUsedDisc, isMiniDisc, isNonDiscProduct } = require('./plastic-types.js');
 const { discs: SOURCE_DISCS } = require('../data/discs.js');
 const { SHIPPING_RATES } = require('../data/shipping-rates.js');
+const { loadLedger, saveLedger, earliest, resolveFirstSeen, recordSeen, pruneLedger } = require('./lib/first-seen-ledger.js');
 
 // ── Disc catalog (single source of truth: data/discs.js) ────────────────────
 const DISC_CATALOG = SOURCE_DISCS.map(({ id, name, brand }) => ({ id, name, brand }));
@@ -548,8 +549,9 @@ function countEntriesForKeys(prices, keySet) {
   return count;
 }
 
-function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
-  const dataPath = path.join(__dirname, '..', 'data', 'scraped-prices.json');
+// dataDir exists for tests; every scraper writes to the real data/.
+function mergeStoreResults({ products, storeKeys, storeMeta, now, dataDir = path.join(__dirname, '..', 'data') }) {
+  const dataPath = path.join(dataDir, 'scraped-prices.json');
   let data = { lastUpdated: now, stores: {}, prices: {} };
   if (fs.existsSync(dataPath)) {
     try { data = JSON.parse(fs.readFileSync(dataPath, 'utf8')); } catch {}
@@ -590,10 +592,21 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
   for (const [discId, entries] of Object.entries(data.prices)) {
     for (const e of entries) {
       if (keySet.has(e.store)) {
-        firstSeenByKey.set(`${discId}|${e.store}|${e.plastic}`, e.firstSeen || e.lastScraped || now);
+        // Earliest, not last-written: a key can hold several listings (the
+        // same disc and plastic under two URLs), and the date belongs to the
+        // first of them.
+        const k = `${discId}|${e.store}|${e.plastic}`;
+        firstSeenByKey.set(k, earliest(firstSeenByKey.get(k), e.firstSeen || e.lastScraped || now));
       }
     }
   }
+
+  // The snapshot lookup above only reaches listings present in the last
+  // run, under the plastic they were stored with. The ledger reaches the
+  // rest — see scripts/lib/first-seen-ledger.js for the two ways the
+  // snapshot alone reset ~130 listings a day.
+  const ledgerPath = path.join(dataDir, 'first-seen-ledger.json');
+  const ledger = loadLedger(ledgerPath);
 
   for (const discId of Object.keys(data.prices)) {
     data.prices[discId] = data.prices[discId].filter((e) => !keySet.has(e.store));
@@ -612,10 +625,21 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
       const existing = data.prices[disc.id].find(
         (e) => e.store === product.store && e.plastic === variant.plastic
       );
+      const key = `${disc.id}|${product.store}|${variant.plastic}`;
+      const aliasId = FIRST_SEEN_ID_ALIASES[disc.id];
+      const aliasKey = aliasId ? `${aliasId}|${product.store}|${variant.plastic}` : null;
+      const firstSeen = resolveFirstSeen({
+        ledger,
+        discId: disc.id,
+        aliasId,
+        store: product.store,
+        url: product.productUrl,
+        keyFirstSeen: firstSeenByKey.get(key),
+        aliasKeyFirstSeen: aliasKey ? firstSeenByKey.get(aliasKey) : undefined,
+        now,
+      });
+      recordSeen(ledger, { discId: disc.id, store: product.store, url: product.productUrl, firstSeen, now });
       if (!existing) {
-        const key = `${disc.id}|${product.store}|${variant.plastic}`;
-        const aliasId = FIRST_SEEN_ID_ALIASES[disc.id];
-        const aliasKey = aliasId ? `${aliasId}|${product.store}|${variant.plastic}` : null;
         data.prices[disc.id].push({
           store: product.store,
           price: product.price,
@@ -625,9 +649,14 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
           plastic: variant.plastic,
           edition: variant.edition,
           lastScraped: now,
-          firstSeen: firstSeenByKey.get(key) || (aliasKey ? firstSeenByKey.get(aliasKey) : undefined) || now,
+          firstSeen,
         });
-      } else if (product.price < existing.price) {
+      } else {
+        // Several listings collapse into one entry; it was first seen when
+        // the earliest of them was.
+        existing.firstSeen = earliest(existing.firstSeen, firstSeen);
+      }
+      if (existing && product.price < existing.price) {
         existing.price = product.price;
         existing.inStock = product.inStock;
         existing.url = product.productUrl;
@@ -661,7 +690,12 @@ function mergeStoreResults({ products, storeKeys, storeMeta, now }) {
   data.lastUpdated = now;
   fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 
-  const unmatchedPath = path.join(__dirname, '..', 'data', 'unmatched-products.json');
+  // Only after the price data is written: a run the drop guard refuses must
+  // not move the ledger either.
+  pruneLedger(ledger, now);
+  saveLedger(ledgerPath, ledger);
+
+  const unmatchedPath = path.join(dataDir, 'unmatched-products.json');
   let unmatchedData = { lastUpdated: now, products: [] };
   if (fs.existsSync(unmatchedPath)) {
     try {
