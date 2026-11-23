@@ -62,7 +62,17 @@ jobs:
   scrape-and-deploy:
     needs: check-staleness
     if: needs.check-staleness.outputs.should_run == 'true'
-    runs-on: ubuntu-latest
+    # Pinned, not ubuntu-latest. GitHub moved ubuntu-latest to Ubuntu 26.04
+    # (runner image 20261116), and Playwright 1.58.2 refuses to install
+    # Chromium there ("Playwright does not support chromium on
+    # ubuntu26.04-x64"). The install step failed in one second, every step
+    # after it was skipped, and from 2026-11-17 no scrape, commit or deploy
+    # happened for a week — 14 red runs in a row while the site served
+    # 2026-11-16's prices. Only this job installs Playwright, so only this job
+    # is pinned. Unpin once Playwright is upgraded to a release that supports
+    # the newer image — and do that upgrade on its own, since DiscShopen
+    # scrapes through Playwright and a new Chromium is a change worth testing.
+    runs-on: ubuntu-24.04
     # No job-level timeout means GitHub's default of 360 minutes (6 hours) —
     # confirmed in production 2026-08-19: "Install Playwright browsers" hung
     # silently twice in one morning (no error, no log output, just stuck) with

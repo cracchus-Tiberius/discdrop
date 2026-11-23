@@ -92,6 +92,11 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
 - Hero bg: #1E3D2F
 - Font: Playfair Display (serif headlines) + DM Sans (body)
 - Navbar: logo left, links centered, pill hover effect
+- The site font (Bricolage Grotesque) is self-hosted from app/fonts/ via
+  next/font/local — one variable woff2, weights 200-800, OFL licence beside it.
+  It used to come from next/font/google, which fetches from Google at build
+  time: on 2026-11-13 that fetch failed and took the daily build down with it.
+  Don't switch back to next/font/google for a new font either.
 
 ## Reference Docs
 - docs/DiscDrop_Knowledge_Base.md — disc brands, plastic types, player sponsorships, naming conventions, regex patterns for scraper matching. Read when building or updating scraper logic.
@@ -337,6 +342,14 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   is still >26h old after both crons have had their chance — that's the
   "something is actually broken" signal, distinct from "just running late".
   Manual runs only needed for testing.
+- The scrape-and-deploy job runs on `ubuntu-24.04`, pinned, not `ubuntu-latest`.
+  GitHub moved ubuntu-latest to Ubuntu 26.04 (image 20261116) and Playwright
+  1.58.2 cannot install Chromium there, so from 2026-11-17 the install step
+  failed in a second, everything after it was skipped, and nothing was scraped,
+  committed or deployed for a week. The freshness check (if: always()) reported
+  18 of 19 stores stale every run; that was the signal. Unpin only after
+  upgrading Playwright to a release that supports the newer image, as its own
+  change — DiscShopen scrapes through Playwright.
 - Run manually with: pnpm scrape:all (or pnpm scrape:nydisk / pnpm scrape:discshopen
   etc. for a single store)
 - Output: data/scraped-prices.json + data/unmatched-products.json
