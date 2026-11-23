@@ -337,6 +337,14 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   is still >26h old after both crons have had their chance — that's the
   "something is actually broken" signal, distinct from "just running late".
   Manual runs only needed for testing.
+- The scrape-and-deploy job runs on `ubuntu-24.04`, pinned, not `ubuntu-latest`.
+  GitHub moved ubuntu-latest to Ubuntu 26.04 (image 20261116) and Playwright
+  1.58.2 cannot install Chromium there, so from 2026-11-17 the install step
+  failed in a second, everything after it was skipped, and nothing was scraped,
+  committed or deployed for a week. The freshness check (if: always()) reported
+  18 of 19 stores stale every run; that was the signal. Unpin only after
+  upgrading Playwright to a release that supports the newer image, as its own
+  change — DiscShopen scrapes through Playwright.
 - Run manually with: pnpm scrape:all (or pnpm scrape:nydisk / pnpm scrape:discshopen
   etc. for a single store)
 - Output: data/scraped-prices.json + data/unmatched-products.json
