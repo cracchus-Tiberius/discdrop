@@ -285,7 +285,13 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   them: a pass with more than SHIFT_TOLERANCE (2) duplicates paginates again
   and unions the passes, up to MAX_LISTING_PASSES (4). The log line "N already
   seen on an earlier page" is that signal. Starframe never showed the swing:
-  its page URLs pin /sort-by/1/ and its pages are disjoint.
+  its page URLs pin /sort-by/1/ and its pages are disjoint. Do NOT copy that to
+  Frisbeebutikken. Probed from a runner 2026-11-23: every /sort-by/1..6/ order
+  there overlaps its own pages, and sort-by/2, /3 and /5 overlap identically on
+  every pass (33, 51, 69 products never shown, most likely tied sort keys under
+  LIMIT/OFFSET), so a second pass cannot recover them. The default order shifted
+  on the first pass (23 skipped) and read cleanly on the next two (474 distinct),
+  which is the case the re-read handles.
 - Aceshop's WAF 403s the shared USER_AGENT — the Windows Chrome/124.0.0.0
   string, a very common scraper fingerprint. Confirmed 2026-09-05: that exact
   string 403s on both HTML and the JSON API, while Chrome/140, the same version
