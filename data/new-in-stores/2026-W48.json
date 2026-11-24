@@ -6,40 +6,40 @@
   "endDate": "2026-11-29",
   "signals": [
     {
-      "discId": "axiom-fireball",
-      "name": "Fireball",
-      "brand": "Axiom",
+      "discId": "discmania-p2x",
+      "name": "P2X",
+      "brand": "Discmania",
       "image": "",
       "type": "new-release",
-      "plastic": "Particle Glow Eclipse",
+      "plastic": "D-Line",
       "edition": null,
-      "firstSeenMs": 1795426283722,
-      "price": 366,
+      "firstSeenMs": 1795512021140,
+      "price": 174,
       "stores": [
         {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 366,
-          "url": "https://rocketdiscs.com/axiom-fireball"
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 174,
+          "url": "https://www.krokholdgs.no/products/d-line-flex2-p2x-20th-anniversary-edition"
         }
       ]
     },
     {
-      "discId": "westside-world",
-      "name": "World",
-      "brand": "Westside Discs",
+      "discId": "discmania-fd2",
+      "name": "FD2",
+      "brand": "Discmania",
       "image": "",
       "type": "new-release",
-      "plastic": "Tournament",
-      "edition": "2026",
-      "firstSeenMs": 1795426230477,
-      "price": 314,
+      "plastic": "C-Line",
+      "edition": null,
+      "firstSeenMs": 1795512021140,
+      "price": 249,
       "stores": [
         {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 314,
-          "url": "https://nydisk.no/products/westside-discs-tournament-x-rill-world-matt-orum-2026"
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 249,
+          "url": "https://www.krokholdgs.no/products/c-line-fd2-20th-anniversary-edition"
         }
       ]
     },
@@ -71,8 +71,14 @@
       "plastic": "C-Line Glow",
       "edition": "Casey White",
       "firstSeenMs": 1795426230477,
-      "price": 354,
+      "price": 279,
       "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 279,
+          "url": "https://www.krokholdgs.no/products/c-line-glow-md1-20th-anniversary-edition"
+        },
         {
           "store": "nydisk",
           "storeName": "NyDisk",
@@ -101,63 +107,6 @@
       ]
     },
     {
-      "discId": "dynamic-enforcer",
-      "name": "Enforcer",
-      "brand": "Dynamic Discs",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Lucid Ice",
-      "edition": "Sockibomb",
-      "firstSeenMs": 1795426230477,
-      "price": 304,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 304,
-          "url": "https://nydisk.no/products/dynamic-discs-lucid-ice-enforcer-sockibomb"
-        }
-      ]
-    },
-    {
-      "discId": "dynamic-raider",
-      "name": "Raider",
-      "brand": "Dynamic Discs",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Lucid X",
-      "edition": "Ricky Wysocki",
-      "firstSeenMs": 1795426230477,
-      "price": 304,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 304,
-          "url": "https://nydisk.no/products/dynamic-discs-lucid-x-chameleon-raider-ricky-wysocki"
-        }
-      ]
-    },
-    {
-      "discId": "mvp-reactor",
-      "name": "Reactor",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Eclipse",
-      "edition": "Team Series",
-      "firstSeenMs": 1795426187419,
-      "price": 299,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 299,
-          "url": "https://www.krokholdgs.no/products/eclipse-reactor-elaine-king-5x-team-series"
-        }
-      ]
-    },
-    {
       "discId": "westside-bear",
       "name": "Bear",
       "brand": "Westside Discs",
@@ -173,25 +122,6 @@
           "storeName": "Starframe",
           "price": 289,
           "url": "https://www.starframe.no/products/elasto-moonshine-bear"
-        }
-      ]
-    },
-    {
-      "discId": "innova-xero",
-      "name": "Xero",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-release",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 214,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-xero/"
         }
       ]
     },
@@ -221,280 +151,40 @@
       ]
     },
     {
-      "discId": "prodigy-archive",
-      "name": "Archive",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-release",
-      "plastic": "400",
-      "edition": "Isaac Robinson",
-      "firstSeenMs": 1795425756756,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/archive-400-isaac-robinson-smugglers-pursuit/"
-        }
-      ]
-    },
-    {
-      "discId": "alfa-fjord",
-      "name": "Fjord",
-      "brand": "Alfa",
-      "image": "",
-      "type": "new-release",
-      "plastic": "Chrome",
-      "edition": "Limited Edition",
-      "firstSeenMs": 1795425756756,
-      "price": 294,
-      "stores": [
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 294,
-          "url": "https://www.discgolfdynasty.no/products/chrome-fjord-ro"
-        }
-      ]
-    },
-    {
-      "discId": "mvp-trace",
-      "name": "Trace",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Cosmic Neutron",
-      "edition": null,
-      "firstSeenMs": 1795426283722,
-      "price": 269,
-      "stores": [
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 269,
-          "url": "https://rocketdiscs.com/streamline-trace"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-stratus",
-      "name": "Stratus",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "X Line",
-      "edition": null,
-      "firstSeenMs": 1795426230477,
-      "price": 224,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 224,
-          "url": "https://nydisk.no/products/discraft-x-line-stratus"
-        }
-      ]
-    },
-    {
-      "discId": "westside-stag",
-      "name": "Stag",
-      "brand": "Westside Discs",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "VIP",
-      "edition": "2025",
-      "firstSeenMs": 1795426230477,
-      "price": 314,
-      "stores": [
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 314,
-          "url": "https://nydisk.no/products/westside-discs-vip-x-ring-stag-heidi-laine-2025"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-banger-gt",
-      "name": "Banger GT",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line",
-      "edition": null,
-      "firstSeenMs": 1795426218455,
-      "price": 235,
-      "stores": [
-        {
-          "store": "frisbeesor",
-          "storeName": "Frisbee Sør",
-          "price": 235,
-          "url": "https://www.frisbeesor.no/produkt/putter-line-banger-gt/"
-        }
-      ]
-    },
-    {
-      "discId": "axiom-time-lapse",
-      "name": "Time-Lapse",
+      "discId": "axiom-hex",
+      "name": "Hex",
       "brand": "Axiom",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": "Special Edition",
-      "firstSeenMs": 1795426218455,
-      "price": 339,
+      "plastic": "Total Eclipse",
+      "edition": null,
+      "firstSeenMs": 1795511982133,
+      "price": 300,
       "stores": [
         {
-          "store": "frisbeesor",
-          "storeName": "Frisbee Sør",
-          "price": 339,
-          "url": "https://www.frisbeesor.no/produkt/time-lapse-neutron-special-edition/"
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 300,
+          "url": "https://frisbeebutikken.no/products/total-eclipse-hex"
         }
       ]
     },
     {
-      "discId": "streamline-range",
-      "name": "Range",
+      "discId": "streamline-parachute",
+      "name": "Parachute",
       "brand": "Streamline",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Eclipse",
-      "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 269,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 269,
-          "url": "https://www.krokholdgs.no/products/eclipse-glow-range"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-magnet",
-      "name": "Magnet",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line Soft",
-      "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 178,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 178,
-          "url": "https://www.krokholdgs.no/products/putter-line-soft-magnet"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-ringer",
-      "name": "Ringer",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line Soft",
-      "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 178,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 178,
-          "url": "https://www.krokholdgs.no/products/putter-line-soft-ringer"
-        }
-      ]
-    },
-    {
-      "discId": "discraft-ringer-gt",
-      "name": "Ringer GT",
-      "brand": "Discraft",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Putter Line Soft",
-      "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 178,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 178,
-          "url": "https://www.krokholdgs.no/products/putter-line-soft-ringer-gt"
-        }
-      ]
-    },
-    {
-      "discId": "latitude-anchor",
-      "name": "Anchor",
-      "brand": "Latitude 64",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Gold Ice",
-      "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 258,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 258,
-          "url": "https://www.krokholdgs.no/products/gold-ice-anchor"
-        },
-        {
-          "store": "nydisk",
-          "storeName": "NyDisk",
-          "price": 294,
-          "url": "https://nydisk.no/products/latitude64-gold-ice-anchor"
-        }
-      ]
-    },
-    {
-      "discId": "axiom-rhythm",
-      "name": "Rhythm",
-      "brand": "Axiom",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Fission",
-      "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 279,
-      "stores": [
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 279,
-          "url": "https://www.krokholdgs.no/products/fission-rhythm-2026"
-        },
-        {
-          "store": "rocketdiscs",
-          "storeName": "Rocketdiscs",
-          "price": 291,
-          "url": "https://rocketdiscs.com/axiom-rhythm"
-        }
-      ]
-    },
-    {
-      "discId": "mvp-energy",
-      "name": "Energy",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-at-store",
       "plastic": "Neutron",
       "edition": null,
-      "firstSeenMs": 1795426187419,
-      "price": 239,
+      "firstSeenMs": 1795511586502,
+      "price": 244,
       "stores": [
         {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 239,
-          "url": "https://www.krokholdgs.no/products/neutron-energy-classic"
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/neutron-soft-parachute-artist-series-scott-oswalt/"
         }
       ]
     },
@@ -518,58 +208,59 @@
       ]
     },
     {
-      "discId": "westside-underworld",
-      "name": "Underworld",
-      "brand": "Westside Discs",
+      "discId": "latitude-explorer",
+      "name": "Explorer",
+      "brand": "Latitude 64",
       "image": "",
       "type": "new-at-store",
-      "plastic": "Tournament",
+      "plastic": "Opto",
       "edition": null,
-      "firstSeenMs": 1795426166418,
-      "price": 259,
+      "firstSeenMs": 1795426149147,
+      "price": 273,
       "stores": [
         {
-          "store": "starframe",
-          "storeName": "Starframe",
-          "price": 259,
-          "url": "https://www.starframe.no/products/tournament-underworld-zen"
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 273,
+          "url": "https://frisbeebutikken.no/products/opto-moonshine-explorer"
         }
       ]
     },
     {
-      "discId": "innova-aviar",
-      "name": "Aviar",
+      "discId": "innova-dragon",
+      "name": "Dragon",
       "brand": "Innova",
-      "image": "https://www.innovadiscs.com/wp-content/uploads/2015/02/aviar_featured.jpg",
+      "image": "",
       "type": "new-at-store",
-      "plastic": "JK Pro",
-      "edition": "Calvin Heimburg",
-      "firstSeenMs": 1795425756756,
-      "price": 214,
+      "plastic": "DX",
+      "edition": null,
+      "firstSeenMs": 1795426149147,
+      "price": 210,
       "stores": [
         {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/jk-pro-aviar/"
-        },
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 210,
+          "url": "https://frisbeebutikken.no/products/dx-proto-glow-dragon"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-sweep",
+      "name": "Sweep",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Grand",
+      "edition": null,
+      "firstSeenMs": 1795426149147,
+      "price": 291,
+      "stores": [
         {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 214,
-          "url": "https://www.discgolfdynasty.no/products/kc-pro-aviar-calvin-heimburg-character-edition"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 218,
-          "url": "https://www.krokholdgs.no/products/kc-pro-aviar"
-        },
-        {
-          "store": "golfdiscer",
-          "storeName": "GolfDiscer",
-          "price": 228,
-          "url": "https://golfdiscer.no/products/yeti-pro-aviar"
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 291,
+          "url": "https://frisbeebutikken.no/products/grand-sweep"
         }
       ]
     },
@@ -582,218 +273,17 @@
       "plastic": "Z",
       "edition": null,
       "firstSeenMs": 1795425756756,
-      "price": 244,
+      "price": 194,
       "stores": [
         {
           "store": "wearediscgolf",
           "storeName": "We Are Disc Golf",
-          "price": 244,
+          "price": 194,
           "url": "https://wearediscgolf.no/produkt/z-zone-os-custom/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-distortion",
-      "name": "Distortion",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "500",
-      "edition": "Kevin Jones",
-      "firstSeenMs": 1795425756756,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/distortion-500-kevin-jones/"
-        }
-      ]
-    },
-    {
-      "discId": "mvp-nomad",
-      "name": "Nomad",
-      "brand": "MVP",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Electron Firm",
-      "edition": "James Conrad",
-      "firstSeenMs": 1795425756756,
-      "price": 204,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 204,
-          "url": "https://wearediscgolf.no/produkt/electron-firm-nomad-james-conrad/"
-        }
-      ]
-    },
-    {
-      "discId": "innova-animal",
-      "name": "Animal",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 208,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-animal/"
-        },
-        {
-          "store": "discgolfdynasty",
-          "storeName": "Disc Golf Dynasty",
-          "price": 214,
-          "url": "https://www.discgolfdynasty.no/products/kc-pro-animal"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 208,
-          "url": "https://www.krokholdgs.no/products/kc-pro-animal"
-        },
-        {
-          "store": "golfdiscer",
-          "storeName": "GolfDiscer",
-          "price": 228,
-          "url": "https://golfdiscer.no/products/kc-pro-animal"
-        }
-      ]
-    },
-    {
-      "discId": "innova-roc",
-      "name": "Roc",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 214,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-roc/"
-        },
-        {
-          "store": "kvamdgs",
-          "storeName": "Kvam DGS",
-          "price": 248,
-          "url": "https://kvamdgs.no/products/kc-pro-roc"
-        }
-      ]
-    },
-    {
-      "discId": "innova-lion",
-      "name": "Lion",
-      "brand": "Innova",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "KC Pro",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 208,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 214,
-          "url": "https://wearediscgolf.no/produkt/kc-pro-lion/"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 208,
-          "url": "https://www.krokholdgs.no/products/kc-pro-lion"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-fx-2",
-      "name": "FX-2",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "500",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 315,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 315,
-          "url": "https://discsor.no/product/fx2-500-alden-harris/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-shadowfax",
-      "name": "Shadowfax",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "400",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 255,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 255,
-          "url": "https://discsor.no/product/shadowfax-400-proto-stamp/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-stryder",
-      "name": "Stryder",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "400",
-      "edition": null,
-      "firstSeenMs": 1795425756756,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/airborne-stryder-400-proto-stamp/"
-        }
-      ]
-    },
-    {
-      "discId": "prodigy-reverb",
-      "name": "Reverb",
-      "brand": "Prodigy",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "400",
-      "edition": "Kevin Jones",
-      "firstSeenMs": 1795425756756,
-      "price": 275,
-      "stores": [
-        {
-          "store": "discsor",
-          "storeName": "Disc Sør",
-          "price": 275,
-          "url": "https://discsor.no/product/reverb-400-kevin-jones/"
         }
       ]
     }
   ],
   "frozen": false,
-  "generated": "2026-11-23T09:39:53.494Z"
+  "generated": "2026-11-24T09:30:11.695Z"
 }

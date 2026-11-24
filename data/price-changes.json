@@ -1,11 +1,4610 @@
 {
-  "generated": "2026-11-23T09:39:53.167Z",
+  "generated": "2026-11-24T09:30:11.372Z",
   "summary": {
-    "priceChanges24h": 88,
-    "newDiscs24h": 1,
+    "priceChanges24h": 231,
+    "newDiscs24h": 0,
     "storesChecked": 19
   },
   "timeline": [
+    {
+      "discId": "mvp-dimension",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 248,
+      "newPrice": 182,
+      "pct": -27,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-dimension/",
+      "history": [
+        248,
+        248,
+        248,
+        248,
+        248,
+        248,
+        182
+      ]
+    },
+    {
+      "discId": "discraft-joy",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "ESP",
+      "oldPrice": 258,
+      "newPrice": 189,
+      "pct": -27,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/esp-joy-paige-pierce-first-run/",
+      "history": [
+        258,
+        258,
+        258,
+        258,
+        258,
+        258,
+        189
+      ]
+    },
+    {
+      "discId": "discraft-zone-ss",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Jawbreaker",
+      "oldPrice": 188,
+      "newPrice": 140,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/jawbreaker-zone-ss/",
+      "history": [
+        188,
+        188,
+        188,
+        188,
+        188,
+        188,
+        140
+      ]
+    },
+    {
+      "discId": "discraft-ares",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "ESP",
+      "oldPrice": 256,
+      "newPrice": 189,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/esp-areas-paul-mcbeth-first-run/",
+      "history": [
+        258,
+        258,
+        258,
+        258,
+        258,
+        256,
+        189
+      ]
+    },
+    {
+      "discId": "mvp-pixel",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Electron",
+      "oldPrice": 198,
+      "newPrice": 147,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-electron-pixel-firm/",
+      "history": [
+        198,
+        198,
+        198,
+        198,
+        198,
+        198,
+        147
+      ]
+    },
+    {
+      "discId": "innova-rat",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-rat/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "innova-rhynox",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "XT",
+      "oldPrice": 188,
+      "newPrice": 140,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/xt-rhyno-x/",
+      "history": [
+        188,
+        188,
+        188,
+        188,
+        188,
+        188,
+        140
+      ]
+    },
+    {
+      "discId": "dynamic-verdict",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Lucid",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/verdict-lucid",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "kastaplast-stl",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-stal/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "innova-xcaliber",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-xcaliber/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "latitude-ballista-pro",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Gold",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/ballista-pro-gold-line",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "dynamic-escape",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Lucid",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/escape-lucid",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "latitude-stiletto",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Opto",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/stilleto-opto-line",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "kastaplast-krut",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-krut/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "dynamic-sheriff",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Lucid",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/sheriff-lucid",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "latitude-havoc",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Opto",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/havoc-opto-lila",
+      "history": [
+        185,
+        185,
+        185,
+        185,
+        185,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "westside-adder",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/bear-vip-copy",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "dynamic-captain",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Lucid",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/captain-lucid",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "dynamic-felon",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Lucid Air",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/felon-lucid-air",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "kastaplast-grym-x",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-grym-x/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "innova-dominator",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Blizzard Champion",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/blizzard-champion-dominator/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "westside-giant",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Tournament",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/giant-reborn-tournament",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "innova-rancho",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-rancho-roc/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "westside-tide",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Tournament",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/tide-tournament",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "westside-bard",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/bard-vip",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "westside-queen",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/queen-vip",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "westside-sorcerer",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/sorcerer-vip",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "westside-seer",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Tournament",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/seer-tournament",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "mvp-ion",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Electron",
+      "oldPrice": 198,
+      "newPrice": 147,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-electron-ion-firm/",
+      "history": [
+        198,
+        198,
+        198,
+        198,
+        198,
+        198,
+        147
+      ]
+    },
+    {
+      "discId": "prodigy-d1",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "400",
+      "oldPrice": 232,
+      "newPrice": 172,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/d1-400",
+      "history": [
+        232,
+        232,
+        231,
+        231,
+        231,
+        232,
+        172
+      ]
+    },
+    {
+      "discId": "westside-vellamo",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Tournament",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/vellamo-tournament",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "mvp-stasis",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 254,
+      "newPrice": 187,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-stasis/",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        254,
+        187
+      ]
+    },
+    {
+      "discId": "westside-boatman",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Tournament",
+      "oldPrice": 221,
+      "newPrice": 164,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/boatman-tournament-rill",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        164
+      ]
+    },
+    {
+      "discId": "discmania-paradigm",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neo",
+      "oldPrice": 228,
+      "newPrice": 168,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/evolution-neo-paradigm/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        168
+      ]
+    },
+    {
+      "discId": "westside-war-horse",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP Ice",
+      "oldPrice": 250,
+      "newPrice": 184,
+      "pct": -26,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/war-horse-vip-ice",
+      "history": [
+        251,
+        250,
+        249,
+        249,
+        249,
+        250,
+        184
+      ]
+    },
+    {
+      "discId": "westside-swan-1",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "BT",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/bt-burst-swan-1-reborn-hard/",
+      "history": [
+        174,
+        174,
+        174,
+        174,
+        174,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "axiom-tempo",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Electron",
+      "oldPrice": 194,
+      "newPrice": 145,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/electron-tempo-medium/",
+      "history": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        194,
+        145
+      ]
+    },
+    {
+      "discId": "latitude-peak",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Zero Soft",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/peak-zero-soft",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "latitude-hope",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Zero Medium",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/hope-zero-medium",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "latitude-faith",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Zero Medium",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/faith-zero-medium",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "latitude-mercy",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Zero Medium",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/mercy-zero-medium",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "westside-world",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP",
+      "oldPrice": 212,
+      "newPrice": 160,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/world-vip",
+      "history": [
+        213,
+        212,
+        211,
+        211,
+        211,
+        212,
+        160
+      ]
+    },
+    {
+      "discId": "alfa-apollo",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Chrome Line",
+      "oldPrice": 224,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/chrome-line-apollo/",
+      "history": [
+        224,
+        224,
+        224,
+        224,
+        224,
+        224,
+        168
+      ]
+    },
+    {
+      "discId": "westside-swan-2",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "BT",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/bt-swan2-soft/",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "kastaplast-kaxe",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K3",
+      "oldPrice": 168,
+      "newPrice": 126,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k3-kaxe/",
+      "history": [
+        168,
+        168,
+        168,
+        168,
+        168,
+        168,
+        126
+      ]
+    },
+    {
+      "discId": "innova-hawkeye",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 223,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-hawkeye/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        168
+      ]
+    },
+    {
+      "discId": "dynamic-sergeant",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Fuzion",
+      "oldPrice": 223,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/fuzion-sergeant/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        168
+      ]
+    },
+    {
+      "discId": "innova-invictus",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 223,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-invictus/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        168
+      ]
+    },
+    {
+      "discId": "innova-savant",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 223,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-savant/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        168
+      ]
+    },
+    {
+      "discId": "discraft-venom",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Z Lite",
+      "oldPrice": 232,
+      "newPrice": 175,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/z-lite-venom/",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        175
+      ]
+    },
+    {
+      "discId": "mvp-octane",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 244,
+      "newPrice": 182,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-octane/",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        244,
+        182
+      ]
+    },
+    {
+      "discId": "innova-racer",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 223,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-racer/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        168
+      ]
+    },
+    {
+      "discId": "mvp-nitro",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 244,
+      "newPrice": 182,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-nitro/",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        244,
+        182
+      ]
+    },
+    {
+      "discId": "innova-viking",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/dx-viking/",
+      "history": [
+        174,
+        174,
+        174,
+        174,
+        174,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "dynamic-evader",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Lucid",
+      "oldPrice": 223,
+      "newPrice": 168,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/lucid-evader-first-run/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        168
+      ]
+    },
+    {
+      "discId": "dynamic-fugitive",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Supreme",
+      "oldPrice": 279,
+      "newPrice": 208,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/fugitive-supreme-first-run",
+      "history": [
+        225,
+        225,
+        225,
+        225,
+        225,
+        279,
+        208
+      ]
+    },
+    {
+      "discId": "latitude-spike",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Zero",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/zero-spike-medium/",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "dynamic-deputy",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Classic",
+      "oldPrice": 168,
+      "newPrice": 126,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/classic-deputy-blend/",
+      "history": [
+        168,
+        168,
+        168,
+        168,
+        168,
+        168,
+        126
+      ]
+    },
+    {
+      "discId": "prodigy-d2",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "500",
+      "oldPrice": 237,
+      "newPrice": 178,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/d2-500",
+      "history": [
+        236,
+        235,
+        235,
+        235,
+        235,
+        237,
+        178
+      ]
+    },
+    {
+      "discId": "westside-magic",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": null,
+      "oldPrice": 178,
+      "newPrice": 133,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/magic-ssss-m-aceshop-logo/",
+      "history": [
+        178,
+        178,
+        178,
+        178,
+        178,
+        178,
+        133
+      ]
+    },
+    {
+      "discId": "clash-fudge",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": null,
+      "oldPrice": 208,
+      "newPrice": 155,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/fudge-hardy",
+      "history": [
+        208,
+        208,
+        208,
+        208,
+        208,
+        208,
+        155
+      ]
+    },
+    {
+      "discId": "westside-shield",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "BT",
+      "oldPrice": 174,
+      "newPrice": 131,
+      "pct": -25,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/bt-shield-hard/",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        131
+      ]
+    },
+    {
+      "discId": "latitude-keystone",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Zero Hard",
+      "oldPrice": 173,
+      "newPrice": 131,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/keystone-zero-hard",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        173,
+        131
+      ]
+    },
+    {
+      "discId": "discmania-method",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Exo",
+      "oldPrice": 174,
+      "newPrice": 133,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/evolution-exo-method-hard/",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        133
+      ]
+    },
+    {
+      "discId": "kastaplast-malm",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 238,
+      "newPrice": 182,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-malm/",
+      "history": [
+        238,
+        238,
+        238,
+        238,
+        238,
+        238,
+        182
+      ]
+    },
+    {
+      "discId": "discraft-drive",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Z Lite",
+      "oldPrice": 238,
+      "newPrice": 182,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/z-lite-drive-paige-pierce/",
+      "history": [
+        238,
+        238,
+        238,
+        238,
+        238,
+        238,
+        182
+      ]
+    },
+    {
+      "discId": "innova-mystere",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 221,
+      "newPrice": 168,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-mystere/",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        168
+      ]
+    },
+    {
+      "discId": "mvp-energy",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 239,
+      "newPrice": 182,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-energy/",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        239,
+        182
+      ]
+    },
+    {
+      "discId": "clash-mint",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": null,
+      "oldPrice": 204,
+      "newPrice": 155,
+      "pct": -24,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/mint-softy",
+      "history": [
+        204,
+        204,
+        204,
+        204,
+        204,
+        204,
+        155
+      ]
+    },
+    {
+      "discId": "mvp-anode",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Electron",
+      "oldPrice": 190,
+      "newPrice": 147,
+      "pct": -23,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-electron-anode-soft/",
+      "history": [
+        190,
+        190,
+        190,
+        190,
+        190,
+        190,
+        147
+      ]
+    },
+    {
+      "discId": "discraft-malta",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Big Z",
+      "oldPrice": 244,
+      "newPrice": 189,
+      "pct": -23,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/big-z-malta/",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        244,
+        189
+      ]
+    },
+    {
+      "discId": "mvp-paradox",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 244,
+      "newPrice": 187,
+      "pct": -23,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-neutron-paradox/",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        244,
+        187
+      ]
+    },
+    {
+      "discId": "mvp-lift",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 216,
+      "newPrice": 166,
+      "pct": -23,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-neutron-lift/",
+      "history": [
+        217,
+        216,
+        215,
+        215,
+        215,
+        216,
+        166
+      ]
+    },
+    {
+      "discId": "discraft-swarm",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "ESP",
+      "oldPrice": 232,
+      "newPrice": 182,
+      "pct": -22,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/esp-swarm/",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        182
+      ]
+    },
+    {
+      "discId": "discraft-buzzz-os",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "ESP",
+      "oldPrice": 232,
+      "newPrice": 182,
+      "pct": -22,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/esp-buzzz-os-paige-pierce-signature-series/",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        182
+      ]
+    },
+    {
+      "discId": "kastaplast-lots",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 234,
+      "newPrice": 182,
+      "pct": -22,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-lots-glow-2023/",
+      "history": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        182
+      ]
+    },
+    {
+      "discId": "mvp-shift",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 241,
+      "newPrice": 189,
+      "pct": -22,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-cosmic-neutron-shift-special-edition-st-jude-fundraiser/",
+      "history": [
+        258,
+        258,
+        258,
+        258,
+        258,
+        241,
+        189
+      ]
+    },
+    {
+      "discId": "innova-power-disc",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Champion",
+      "oldPrice": 269,
+      "newPrice": 210,
+      "pct": -22,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/champion-power-disc-phantom-sword/",
+      "history": [
+        267,
+        267,
+        267,
+        267,
+        266,
+        269,
+        210
+      ]
+    },
+    {
+      "discId": "latitude-jade",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto",
+      "oldPrice": 215,
+      "newPrice": 168,
+      "pct": -22,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/opto-jade/",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        215,
+        168
+      ]
+    },
+    {
+      "discId": "mvp-glitch",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 229,
+      "newPrice": 182,
+      "pct": -21,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-glitch-soft/",
+      "history": [
+        229,
+        229,
+        229,
+        229,
+        229,
+        229,
+        182
+      ]
+    },
+    {
+      "discId": "innova-shark",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 165,
+      "newPrice": 131,
+      "pct": -21,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/dx-shark/",
+      "history": [
+        165,
+        165,
+        165,
+        165,
+        165,
+        165,
+        131
+      ]
+    },
+    {
+      "discId": "innova-xt-nova",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "XT",
+      "oldPrice": 213,
+      "newPrice": 168,
+      "pct": -21,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/xt-nova/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        168
+      ]
+    },
+    {
+      "discId": "latitude-amber",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto",
+      "oldPrice": 221,
+      "newPrice": 175,
+      "pct": -21,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/opto-amber/",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        175
+      ]
+    },
+    {
+      "discId": "innova-xero",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 131,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/dx-xero/",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        131
+      ]
+    },
+    {
+      "discId": "innova-dart",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 131,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/dx-dart/",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        131
+      ]
+    },
+    {
+      "discId": "innova-hydra",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "R-Pro",
+      "oldPrice": 193,
+      "newPrice": 154,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/r-pro-hydra/",
+      "history": [
+        193,
+        193,
+        192,
+        192,
+        192,
+        193,
+        154
+      ]
+    },
+    {
+      "discId": "innova-gator",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 131,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/dx-gator/",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        131
+      ]
+    },
+    {
+      "discId": "mvp-wave",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Cosmic Neutron",
+      "oldPrice": 227,
+      "newPrice": 182,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-cosmic-neutron-wave/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        182
+      ]
+    },
+    {
+      "discId": "discmania-rockstar",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Active Premium",
+      "oldPrice": 183,
+      "newPrice": 147,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/active-premium-rockstar/",
+      "history": [
+        184,
+        183,
+        183,
+        183,
+        183,
+        183,
+        147
+      ]
+    },
+    {
+      "discId": "innova-sync",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 131,
+      "pct": -20,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/dx-sync/",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        131
+      ]
+    },
+    {
+      "discId": "innova-pig",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "R-Pro",
+      "oldPrice": 190,
+      "newPrice": 154,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/r-pro-pig/",
+      "history": [
+        191,
+        190,
+        190,
+        190,
+        190,
+        190,
+        154
+      ]
+    },
+    {
+      "discId": "mvp-runway",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Cosmic Neutron",
+      "oldPrice": 213,
+      "newPrice": 173,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-cosmic-neutron-runway/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        173
+      ]
+    },
+    {
+      "discId": "mvp-flare",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 173,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-cosmic-neutron-flare/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        173
+      ]
+    },
+    {
+      "discId": "latitude-trident",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto",
+      "oldPrice": 215,
+      "newPrice": 175,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/opto-trident/",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        215,
+        175
+      ]
+    },
+    {
+      "discId": "discmania-fd1",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "S-Line",
+      "oldPrice": 242,
+      "newPrice": 196,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/s-line-fd1/",
+      "history": [
+        242,
+        242,
+        242,
+        242,
+        242,
+        242,
+        196
+      ]
+    },
+    {
+      "discId": "discmania-spore",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neo",
+      "oldPrice": 231,
+      "newPrice": 188,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/spore-neo-evolution",
+      "history": [
+        232,
+        231,
+        230,
+        230,
+        230,
+        231,
+        188
+      ]
+    },
+    {
+      "discId": "westside-gatekeeper",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP Ice",
+      "oldPrice": 221,
+      "newPrice": 179,
+      "pct": -19,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/gatekeeper-copy",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        179
+      ]
+    },
+    {
+      "discId": "mvp-alter",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": null,
+      "oldPrice": 212,
+      "newPrice": 174,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/alter-nerve-firm",
+      "history": [
+        213,
+        212,
+        211,
+        211,
+        211,
+        212,
+        174
+      ]
+    },
+    {
+      "discId": "mvp-nomad",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Electron",
+      "oldPrice": 179,
+      "newPrice": 147,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-electron-nomad-soft-james-conrad-edition/",
+      "history": [
+        188,
+        188,
+        188,
+        188,
+        188,
+        179,
+        147
+      ]
+    },
+    {
+      "discId": "axiom-hex",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Cosmic Neutron",
+      "oldPrice": 227,
+      "newPrice": 187,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axciom-cosmic-neutron-hex/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        187
+      ]
+    },
+    {
+      "discId": "discmania-md5",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "S-Line",
+      "oldPrice": 240,
+      "newPrice": 196,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/s-line-md5/",
+      "history": [
+        241,
+        240,
+        240,
+        240,
+        240,
+        240,
+        196
+      ]
+    },
+    {
+      "discId": "discmania-tactic",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Exo",
+      "oldPrice": 162,
+      "newPrice": 133,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/evolution-exo-tactic-hard/",
+      "history": [
+        162,
+        162,
+        161,
+        161,
+        161,
+        162,
+        133
+      ]
+    },
+    {
+      "discId": "mvp-turbulence",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 212,
+      "newPrice": 174,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/turbulence-neutron",
+      "history": [
+        213,
+        212,
+        211,
+        211,
+        211,
+        212,
+        174
+      ]
+    },
+    {
+      "discId": "innova-tl",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Champion",
+      "oldPrice": 225,
+      "newPrice": 184,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/tl-champion",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        225,
+        184
+      ]
+    },
+    {
+      "discId": "axiom-rhythm",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Cosmic Neutron",
+      "oldPrice": 227,
+      "newPrice": 187,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-cosmic-neutron-rhythm/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        187
+      ]
+    },
+    {
+      "discId": "discmania-fd3",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "S-Line",
+      "oldPrice": 240,
+      "newPrice": 196,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/s-line-fd3/",
+      "history": [
+        241,
+        240,
+        240,
+        240,
+        240,
+        240,
+        196
+      ]
+    },
+    {
+      "discId": "mvp-orbital",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Fission",
+      "oldPrice": 244,
+      "newPrice": 201,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-fission-orbital/",
+      "history": [
+        244,
+        244,
+        244,
+        244,
+        244,
+        244,
+        201
+      ]
+    },
+    {
+      "discId": "mvp-trace",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 203,
+      "newPrice": 166,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-neutron-trace/",
+      "history": [
+        203,
+        203,
+        203,
+        203,
+        203,
+        203,
+        166
+      ]
+    },
+    {
+      "discId": "prodigy-pa4",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "300",
+      "oldPrice": 205,
+      "newPrice": 169,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/pa-4-300",
+      "history": [
+        204,
+        203,
+        203,
+        203,
+        203,
+        205,
+        169
+      ]
+    },
+    {
+      "discId": "mvp-control",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 229,
+      "newPrice": 187,
+      "pct": -18,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-control-2/",
+      "history": [
+        229,
+        229,
+        229,
+        229,
+        229,
+        229,
+        187
+      ]
+    },
+    {
+      "discId": "kastaplast-reko-x",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "K3 Hard",
+      "oldPrice": 180,
+      "newPrice": 150,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/reko-x-k3-hard",
+      "history": [
+        180,
+        180,
+        180,
+        180,
+        180,
+        180,
+        150
+      ]
+    },
+    {
+      "discId": "innova-thunderbird",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/thunderbird-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-polecat",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/polecat-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "latitude-trust",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Clear",
+      "oldPrice": 251,
+      "newPrice": 208,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/trust-clear-royal",
+      "history": [
+        252,
+        251,
+        250,
+        250,
+        250,
+        251,
+        208
+      ]
+    },
+    {
+      "discId": "innova-roc",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/roc-dx-1",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "prodigy-mx-2",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "500",
+      "oldPrice": 255,
+      "newPrice": 212,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/mx-2-500",
+      "history": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        212
+      ]
+    },
+    {
+      "discId": "innova-alien",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/alien-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-jay",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/jay-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-caiman",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Star",
+      "oldPrice": 223,
+      "newPrice": 184,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/caiman-star",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        184
+      ]
+    },
+    {
+      "discId": "innova-manta",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/manta-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-panther",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Champion",
+      "oldPrice": 223,
+      "newPrice": 184,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/panther-champion-1",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        184
+      ]
+    },
+    {
+      "discId": "innova-eagle",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/eagle-dx-2",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-wraith",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/wraith-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-katana",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/katana-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-colossus",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Star",
+      "oldPrice": 223,
+      "newPrice": 184,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/colossus-star",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        184
+      ]
+    },
+    {
+      "discId": "innova-starfire",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/starfire-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-cheetah",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/cheetah-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "innova-vroc",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 164,
+      "newPrice": 136,
+      "pct": -17,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/vroc-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        164,
+        136
+      ]
+    },
+    {
+      "discId": "latitude-brave",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Royal Clear",
+      "oldPrice": 258,
+      "newPrice": 217,
+      "pct": -16,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/royal-clear-brave/",
+      "history": [
+        258,
+        258,
+        258,
+        258,
+        258,
+        258,
+        217
+      ]
+    },
+    {
+      "discId": "latitude-honor",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Royal Grand",
+      "oldPrice": 257,
+      "newPrice": 217,
+      "pct": -16,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/royal-grand-honor/",
+      "history": [
+        280,
+        279,
+        278,
+        278,
+        278,
+        257,
+        217
+      ]
+    },
+    {
+      "discId": "dynamic-enforcer",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Lucid",
+      "oldPrice": 225,
+      "newPrice": 189,
+      "pct": -16,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/lucid-enforcer-ricky-wysocki-sockibomb-stamp/",
+      "history": [
+        205,
+        205,
+        205,
+        205,
+        205,
+        225,
+        189
+      ]
+    },
+    {
+      "discId": "prodigy-fx-3",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "400",
+      "oldPrice": 248,
+      "newPrice": 208,
+      "pct": -16,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/fx-3-400",
+      "history": [
+        246,
+        246,
+        245,
+        245,
+        245,
+        248,
+        208
+      ]
+    },
+    {
+      "discId": "alfa-theios",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Chrome",
+      "oldPrice": 224,
+      "newPrice": 189,
+      "pct": -16,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/chrome-theios-eric-oakley-signature-series/",
+      "history": [
+        224,
+        224,
+        224,
+        224,
+        224,
+        224,
+        189
+      ]
+    },
+    {
+      "discId": "mvp-motion",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 182,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-motion/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        182
+      ]
+    },
+    {
+      "discId": "mvp-impulse",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 182,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-impulse/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        182
+      ]
+    },
+    {
+      "discId": "axiom-time-lapse",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 180,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-neutron-time-lapse-stock-retooled/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        180
+      ]
+    },
+    {
+      "discId": "mvp-photon",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 182,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-photon/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        182
+      ]
+    },
+    {
+      "discId": "innova-max",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Metal Flake Champion",
+      "oldPrice": 280,
+      "newPrice": 238,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/metal-flake-champion-max-james-proctor-2022/",
+      "history": [
+        278,
+        277,
+        277,
+        277,
+        277,
+        280,
+        238
+      ]
+    },
+    {
+      "discId": "discmania-magician",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Active",
+      "oldPrice": 126,
+      "newPrice": 107,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/fox-spirit-active",
+      "history": [
+        126,
+        126,
+        126,
+        126,
+        126,
+        126,
+        107
+      ]
+    },
+    {
+      "discId": "discmania-genius",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Active",
+      "oldPrice": 126,
+      "newPrice": 107,
+      "pct": -15,
+      "date": "2026-11-24",
+      "bucket": "last-week",
+      "url": "https://www.discexpress.se/products/sun-crow-active",
+      "history": [
+        126,
+        126,
+        126,
+        126,
+        126,
+        112,
+        107
+      ]
+    },
+    {
+      "discId": "latitude-core",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto Chameleon",
+      "oldPrice": 221,
+      "newPrice": 189,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/opto-chameleon-core/",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        189
+      ]
+    },
+    {
+      "discId": "discraft-banger-gt",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Putter Line Soft",
+      "oldPrice": 174,
+      "newPrice": 150,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/banger-gt-putter-line-soft",
+      "history": [
+        155,
+        155,
+        155,
+        155,
+        155,
+        174,
+        150
+      ]
+    },
+    {
+      "discId": "mvp-detour",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 217,
+      "newPrice": 187,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-detour/",
+      "history": [
+        217,
+        217,
+        217,
+        217,
+        217,
+        217,
+        187
+      ]
+    },
+    {
+      "discId": "innova-cro",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Star",
+      "oldPrice": 214,
+      "newPrice": 184,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/cro-star-pfn",
+      "history": [
+        214,
+        214,
+        214,
+        214,
+        214,
+        214,
+        184
+      ]
+    },
+    {
+      "discId": "discraft-sting",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 235,
+      "newPrice": 203,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/sting-z-line",
+      "history": [
+        236,
+        235,
+        234,
+        234,
+        234,
+        235,
+        203
+      ]
+    },
+    {
+      "discId": "mvp-signal",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Fission",
+      "oldPrice": 227,
+      "newPrice": 196,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/fission-signal/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        196
+      ]
+    },
+    {
+      "discId": "innova-valkyrie",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 159,
+      "newPrice": 136,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/valkyrie-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        159,
+        136
+      ]
+    },
+    {
+      "discId": "innova-beast",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 159,
+      "newPrice": 136,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/beast-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        159,
+        136
+      ]
+    },
+    {
+      "discId": "axiom-panic",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 212,
+      "newPrice": 182,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-neutron-panic/",
+      "history": [
+        213,
+        212,
+        211,
+        211,
+        211,
+        212,
+        182
+      ]
+    },
+    {
+      "discId": "latitude-culverin",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto-X",
+      "oldPrice": 221,
+      "newPrice": 189,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/opto-x-culverin/",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        221,
+        189
+      ]
+    },
+    {
+      "discId": "dynamic-raider",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Lucid",
+      "oldPrice": 221,
+      "newPrice": 189,
+      "pct": -14,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/lucid-raider-ricky-wysocki-sockibomb-stamp/",
+      "history": [
+        205,
+        205,
+        205,
+        205,
+        205,
+        221,
+        189
+      ]
+    },
+    {
+      "discId": "mvp-watt",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
+      "oldPrice": 199,
+      "newPrice": 174,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/watt-electron-medium-plc-white-rim",
+      "history": [
+        199,
+        199,
+        199,
+        199,
+        199,
+        199,
+        174
+      ]
+    },
+    {
+      "discId": "mvp-particle",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Particle Proton Soft",
+      "oldPrice": 255,
+      "newPrice": 222,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-particle-proton-soft-rhythm-otb-open-2026/",
+      "history": [
+        278,
+        299,
+        278,
+        278,
+        278,
+        255,
+        222
+      ]
+    },
+    {
+      "discId": "innova-gorgon",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 193,
+      "newPrice": 168,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-gorgon/",
+      "history": [
+        193,
+        193,
+        192,
+        192,
+        192,
+        193,
+        168
+      ]
+    },
+    {
+      "discId": "innova-charger",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 194,
+      "newPrice": 168,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-charger/",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        194,
+        168
+      ]
+    },
+    {
+      "discId": "innova-corvette",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 194,
+      "newPrice": 168,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-corvette/",
+      "history": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        194,
+        168
+      ]
+    },
+    {
+      "discId": "latitude-fire",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Royal Clear",
+      "oldPrice": 257,
+      "newPrice": 224,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/royal-clear-fire-anniken-k-steen-2026/",
+      "history": [
+        280,
+        279,
+        278,
+        278,
+        278,
+        257,
+        224
+      ]
+    },
+    {
+      "discId": "prodigy-mx-1",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "400",
+      "oldPrice": 240,
+      "newPrice": 208,
+      "pct": -13,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/mx-1-400",
+      "history": [
+        240,
+        240,
+        240,
+        240,
+        240,
+        240,
+        208
+      ]
+    },
+    {
+      "discId": "streamline-range",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 188,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/range-neutron-soft",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        188
+      ]
+    },
+    {
+      "discId": "discraft-fierce",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": null,
+      "oldPrice": 208,
+      "newPrice": 182,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/paige-pierce-fierce/",
+      "history": [
+        208,
+        208,
+        208,
+        208,
+        208,
+        208,
+        182
+      ]
+    },
+    {
+      "discId": "discraft-archer",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 232,
+      "newPrice": 203,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/archer-z-line",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        203
+      ]
+    },
+    {
+      "discId": "discraft-comet",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 232,
+      "newPrice": 203,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/comet-z-line",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        203
+      ]
+    },
+    {
+      "discId": "latitude-anchor",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Opto Glimmer",
+      "oldPrice": 215,
+      "newPrice": 189,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/opto-glimmer-anchor/",
+      "history": [
+        222,
+        221,
+        221,
+        221,
+        221,
+        215,
+        189
+      ]
+    },
+    {
+      "discId": "discraft-wasp",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 232,
+      "newPrice": 203,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/wasp-z-line",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        203
+      ]
+    },
+    {
+      "discId": "mvp-matrix",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
+      "oldPrice": 198,
+      "newPrice": 174,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/matrix-electron",
+      "history": [
+        198,
+        198,
+        198,
+        198,
+        198,
+        198,
+        174
+      ]
+    },
+    {
+      "discId": "innova-firebird",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "DX",
+      "oldPrice": 155,
+      "newPrice": 136,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/firebird-dx",
+      "history": [
+        165,
+        164,
+        164,
+        164,
+        164,
+        155,
+        136
+      ]
+    },
+    {
+      "discId": "mvp-ascend",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 188,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/ascend-neutron",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        188
+      ]
+    },
+    {
+      "discId": "innova-shryke",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 190,
+      "newPrice": 168,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-shryke/",
+      "history": [
+        191,
+        190,
+        190,
+        190,
+        190,
+        190,
+        168
+      ]
+    },
+    {
+      "discId": "discraft-thrasher",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Z Lite",
+      "oldPrice": 198,
+      "newPrice": 175,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/z-lite-thrasher/",
+      "history": [
+        198,
+        198,
+        198,
+        198,
+        198,
+        198,
+        175
+      ]
+    },
+    {
+      "discId": "mvp-engine",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 188,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/engine-neutron",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        188
+      ]
+    },
+    {
+      "discId": "discraft-nuke-os",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z Lite",
+      "oldPrice": 232,
+      "newPrice": 203,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/nuke-os-z-lite",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        203
+      ]
+    },
+    {
+      "discId": "discraft-machete",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 232,
+      "newPrice": 203,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/machete-z-line",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        203
+      ]
+    },
+    {
+      "discId": "mvp-echo",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 187,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-neutron-echo-silas-schultz-2026-world-champion/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        187
+      ]
+    },
+    {
+      "discId": "streamline-parachute",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 188,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/parachute-neutron-soft",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        188
+      ]
+    },
+    {
+      "discId": "discraft-mantis",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 232,
+      "newPrice": 203,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/mantis-z-line",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        232,
+        203
+      ]
+    },
+    {
+      "discId": "latitude-hunter",
+      "store": "hyzershop",
+      "storeName": "HyzerShop",
+      "plastic": null,
+      "oldPrice": 318,
+      "newPrice": 281,
+      "pct": -12,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://hyzershop.no/products/fx-3-snake-hunter",
+      "history": [
+        318,
+        318,
+        318,
+        318,
+        318,
+        318,
+        281
+      ]
+    },
+    {
+      "discId": "mvp-pilot",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron",
+      "oldPrice": 168,
+      "newPrice": 150,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/pilot-electron-cosmic-medium",
+      "history": [
+        168,
+        168,
+        168,
+        168,
+        168,
+        168,
+        150
+      ]
+    },
+    {
+      "discId": "discraft-challenger",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Putter Line Soft",
+      "oldPrice": 168,
+      "newPrice": 150,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/challenger-putter-line-soft",
+      "history": [
+        165,
+        165,
+        165,
+        165,
+        165,
+        168,
+        150
+      ]
+    },
+    {
+      "discId": "axiom-crave",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Fission",
+      "oldPrice": 227,
+      "newPrice": 201,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-fission-crave/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        201
+      ]
+    },
+    {
+      "discId": "mvp-tesla",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Eclipse",
+      "oldPrice": 227,
+      "newPrice": 201,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-eclipse-tesla/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        201
+      ]
+    },
+    {
+      "discId": "axiom-defy",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Eclipse",
+      "oldPrice": 212,
+      "newPrice": 189,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-eclipse-defy/",
+      "history": [
+        213,
+        212,
+        211,
+        211,
+        211,
+        212,
+        189
+      ]
+    },
+    {
+      "discId": "discraft-vulture",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 228,
+      "newPrice": 203,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/vulture-z-line",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        203
+      ]
+    },
+    {
+      "discId": "discmania-fd2",
+      "store": "krokhol",
+      "storeName": "Krokhol Disc Golf Shop",
+      "plastic": "C-Line",
+      "oldPrice": 280,
+      "newPrice": 249,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.krokholdgs.no/products/c-line-fd2-20th-anniversary-edition",
+      "history": [
+        280,
+        280,
+        280,
+        280,
+        280,
+        280,
+        249
+      ]
+    },
+    {
+      "discId": "mvp-pneuma",
+      "store": "hyzershop",
+      "storeName": "HyzerShop",
+      "plastic": null,
+      "oldPrice": 238,
+      "newPrice": 213,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://hyzershop.no/products/pneuma-thomas-gilbert",
+      "history": [
+        238,
+        238,
+        238,
+        238,
+        238,
+        238,
+        213
+      ]
+    },
+    {
+      "discId": "westside-voodoo",
+      "store": "hyzershop",
+      "storeName": "HyzerShop",
+      "plastic": null,
+      "oldPrice": 228,
+      "newPrice": 204,
+      "pct": -11,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://hyzershop.no/products/voodoo-1",
+      "history": [
+        228,
+        228,
+        228,
+        228,
+        228,
+        228,
+        204
+      ]
+    },
+    {
+      "discId": "dynamic-judge",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Classic Blend",
+      "oldPrice": 145,
+      "newPrice": 131,
+      "pct": -10,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/judge-classic-blend",
+      "history": [
+        145,
+        145,
+        145,
+        145,
+        145,
+        145,
+        131
+      ]
+    },
+    {
+      "discId": "mvp-entropy",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Electron Soft",
+      "oldPrice": 194,
+      "newPrice": 174,
+      "pct": -10,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/entropy-electron-soft",
+      "history": [
+        193,
+        193,
+        193,
+        193,
+        193,
+        194,
+        174
+      ]
+    },
+    {
+      "discId": "mvp-drift",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 203,
+      "newPrice": 182,
+      "pct": -10,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-cosmic-neutron-drift/",
+      "history": [
+        203,
+        203,
+        203,
+        203,
+        203,
+        203,
+        182
+      ]
+    },
+    {
+      "discId": "innova-xd",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Halo Nexus",
+      "oldPrice": 203,
+      "newPrice": 184,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/xd-halo-nexus-40th-anniversary",
+      "history": [
+        203,
+        203,
+        203,
+        203,
+        203,
+        203,
+        184
+      ]
+    },
+    {
+      "discId": "innova-aviarx3",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 184,
+      "newPrice": 168,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/jeremy-koling-signature-star-aviarx3/",
+      "history": [
+        184,
+        184,
+        184,
+        184,
+        184,
+        184,
+        168
+      ]
+    },
+    {
+      "discId": "innova-tl3",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 184,
+      "newPrice": 168,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-tl3/",
+      "history": [
+        184,
+        184,
+        184,
+        184,
+        184,
+        184,
+        168
+      ]
+    },
+    {
+      "discId": "mvp-uplink",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 205,
+      "newPrice": 187,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-uplink/",
+      "history": [
+        204,
+        203,
+        203,
+        203,
+        203,
+        205,
+        187
+      ]
+    },
+    {
+      "discId": "innova-teebird",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 184,
+      "newPrice": 168,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-teebird/",
+      "history": [
+        184,
+        184,
+        184,
+        184,
+        184,
+        184,
+        168
+      ]
+    },
+    {
+      "discId": "innova-orc",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Champion",
+      "oldPrice": 184,
+      "newPrice": 168,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/champion-orc/",
+      "history": [
+        184,
+        184,
+        184,
+        184,
+        184,
+        184,
+        168
+      ]
+    },
+    {
+      "discId": "discraft-sled",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Z",
+      "oldPrice": 224,
+      "newPrice": 203,
+      "pct": -9,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/sled-z",
+      "history": [
+        232,
+        232,
+        232,
+        232,
+        232,
+        224,
+        203
+      ]
+    },
+    {
+      "discId": "discraft-force",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "ESP",
+      "oldPrice": 198,
+      "newPrice": 182,
+      "pct": -8,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/esp-force-paul-mcbeth-signature-series/",
+      "history": [
+        198,
+        198,
+        198,
+        198,
+        198,
+        198,
+        182
+      ]
+    },
+    {
+      "discId": "mvp-vanish",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Fission",
+      "oldPrice": 213,
+      "newPrice": 196,
+      "pct": -8,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/axiom-fission-vanish/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        196
+      ]
+    },
+    {
+      "discId": "clash-popcorn",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Popcorn",
+      "oldPrice": 209,
+      "newPrice": 193,
+      "pct": -8,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/popcorn-steady",
+      "history": [
+        209,
+        209,
+        209,
+        209,
+        209,
+        209,
+        193
+      ]
+    },
+    {
+      "discId": "westside-sword",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Tournament",
+      "oldPrice": 209,
+      "newPrice": 193,
+      "pct": -8,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/sword-tournament-x",
+      "history": [
+        210,
+        209,
+        209,
+        209,
+        209,
+        209,
+        193
+      ]
+    },
+    {
+      "discId": "discmania-d-model-os",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": null,
+      "oldPrice": 194,
+      "newPrice": 179,
+      "pct": -8,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/d-model-os-ace-pro-flex",
+      "history": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        194,
+        179
+      ]
+    },
+    {
+      "discId": "discraft-magnet",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Putter Line Soft",
+      "oldPrice": 162,
+      "newPrice": 150,
+      "pct": -7,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/magnet-putter-line-soft",
+      "history": [
+        155,
+        155,
+        155,
+        155,
+        155,
+        162,
+        150
+      ]
+    },
+    {
+      "discId": "dynamic-truth",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Lucid",
+      "oldPrice": 173,
+      "newPrice": 161,
+      "pct": -7,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/lucid-emac-truth/",
+      "history": [
+        172,
+        172,
+        172,
+        172,
+        171,
+        173,
+        161
+      ]
+    },
+    {
+      "discId": "kastaplast-idog",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "K1",
+      "oldPrice": 234,
+      "newPrice": 217,
+      "pct": -7,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/idog-k1-moomin-hemulen",
+      "history": [
+        234,
+        234,
+        234,
+        234,
+        234,
+        234,
+        217
+      ]
+    },
+    {
+      "discId": "mvp-resistor",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Eclipse",
+      "oldPrice": 227,
+      "newPrice": 210,
+      "pct": -7,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-eclipse-resistor/",
+      "history": [
+        225,
+        225,
+        224,
+        224,
+        224,
+        227,
+        210
+      ]
+    },
+    {
+      "discId": "mvp-jet",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Neutron",
+      "oldPrice": 203,
+      "newPrice": 188,
+      "pct": -7,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/jet-neutron",
+      "history": [
+        203,
+        203,
+        203,
+        203,
+        203,
+        203,
+        188
+      ]
+    },
+    {
+      "discId": "kastaplast-reko",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 179,
+      "newPrice": 168,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-reko/",
+      "history": [
+        179,
+        179,
+        179,
+        179,
+        179,
+        179,
+        168
+      ]
+    },
+    {
+      "discId": "discmania-p2",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "P-Line",
+      "oldPrice": 174,
+      "newPrice": 164,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/p2-p-line-flex-1-originals",
+      "history": [
+        174,
+        174,
+        173,
+        173,
+        173,
+        174,
+        164
+      ]
+    },
+    {
+      "discId": "kastaplast-gote",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 178,
+      "newPrice": 168,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-gote/",
+      "history": [
+        178,
+        178,
+        178,
+        178,
+        178,
+        178,
+        168
+      ]
+    },
+    {
+      "discId": "kastaplast-svea",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "K1",
+      "oldPrice": 178,
+      "newPrice": 168,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/k1-svea/",
+      "history": [
+        178,
+        178,
+        178,
+        178,
+        178,
+        178,
+        168
+      ]
+    },
+    {
+      "discId": "mvp-servo",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Eclipse",
+      "oldPrice": 213,
+      "newPrice": 201,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-eclipse-servo/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        201
+      ]
+    },
+    {
+      "discId": "innova-leopard",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Champion",
+      "oldPrice": 179,
+      "newPrice": 168,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/champion-leopard/",
+      "history": [
+        179,
+        179,
+        179,
+        179,
+        179,
+        179,
+        168
+      ]
+    },
+    {
+      "discId": "mvp-terra",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 198,
+      "newPrice": 187,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-neutron-terra/",
+      "history": [
+        198,
+        198,
+        198,
+        198,
+        198,
+        198,
+        187
+      ]
+    },
+    {
+      "discId": "mvp-trail",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Proton",
+      "oldPrice": 254,
+      "newPrice": 238,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/mvp-particl-proton-trail-james-conrad-halloween-team-series/",
+      "history": [
+        254,
+        254,
+        254,
+        254,
+        254,
+        254,
+        238
+      ]
+    },
+    {
+      "discId": "innova-boss",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Star",
+      "oldPrice": 178,
+      "newPrice": 168,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/star-boss/",
+      "history": [
+        178,
+        178,
+        178,
+        178,
+        178,
+        178,
+        168
+      ]
+    },
+    {
+      "discId": "discmania-splice",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neo",
+      "oldPrice": 231,
+      "newPrice": 217,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/greatful-dead-neo-splice-steal-your-blood/",
+      "history": [
+        232,
+        231,
+        230,
+        230,
+        230,
+        231,
+        217
+      ]
+    },
+    {
+      "discId": "westside-maiden",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "VIP Air",
+      "oldPrice": 174,
+      "newPrice": 164,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/maiden-vip-air",
+      "history": [
+        174,
+        174,
+        174,
+        174,
+        174,
+        174,
+        164
+      ]
+    },
+    {
+      "discId": "streamline-boost",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Neutron",
+      "oldPrice": 213,
+      "newPrice": 201,
+      "pct": -6,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/sl-neutron-boost-eagel-mcmahon-team-series/",
+      "history": [
+        213,
+        213,
+        213,
+        213,
+        213,
+        213,
+        201
+      ]
+    },
+    {
+      "discId": "innova-toro",
+      "store": "discexpress",
+      "storeName": "Discexpress",
+      "plastic": "Star",
+      "oldPrice": 194,
+      "newPrice": 184,
+      "pct": -5,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://www.discexpress.se/products/toro-star-calvin-heimburg",
+      "history": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        194,
+        184
+      ]
+    },
+    {
+      "discId": "innova-tern",
+      "store": "aceshop",
+      "storeName": "Aceshop",
+      "plastic": "Pro",
+      "oldPrice": 155,
+      "newPrice": 147,
+      "pct": -5,
+      "date": "2026-11-24",
+      "bucket": "today",
+      "url": "https://aceshop.no/product/pro-tern/",
+      "history": [
+        194,
+        194,
+        194,
+        194,
+        194,
+        155,
+        147
+      ]
+    },
     {
       "discId": "latitude-sweep",
       "store": "discexpress",
@@ -15,7 +4614,7 @@
       "newPrice": 159,
       "pct": -43,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/sweep-grand-royal",
       "history": [
         278,
@@ -23,8 +4622,8 @@
         278,
         278,
         278,
-        278,
-        159
+        159,
+        160
       ]
     },
     {
@@ -36,16 +4635,16 @@
       "newPrice": 159,
       "pct": -43,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/rive-grand-royal",
       "history": [
-        280,
         280,
         279,
         278,
         278,
         278,
-        159
+        159,
+        160
       ]
     },
     {
@@ -57,16 +4656,16 @@
       "newPrice": 140,
       "pct": -42,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/md3-c-line-originals",
       "history": [
-        242,
         241,
         240,
         240,
         240,
         240,
-        140
+        140,
+        155
       ]
     },
     {
@@ -78,15 +4677,15 @@
       "newPrice": 155,
       "pct": -42,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/coalesce-ethos",
       "history": [
-        268,
         267,
         267,
         267,
         267,
         266,
+        155,
         155
       ]
     },
@@ -99,16 +4698,16 @@
       "newPrice": 155,
       "pct": -42,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/votum-ethos-soft",
       "history": [
-        271,
         270,
         269,
         268,
         268,
         268,
-        155
+        155,
+        184
       ]
     },
     {
@@ -120,15 +4719,15 @@
       "newPrice": 131,
       "pct": -41,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/saint-pro-opto-line",
       "history": [
-        223,
         222,
         221,
         221,
         221,
         221,
+        131,
         131
       ]
     },
@@ -141,16 +4740,16 @@
       "newPrice": 131,
       "pct": -41,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/fury-opto-line",
       "history": [
-        223,
         222,
         221,
         221,
         221,
         221,
-        131
+        131,
+        164
       ]
     },
     {
@@ -162,16 +4761,16 @@
       "newPrice": 135,
       "pct": -41,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/evolution-neo-enigma",
       "history": [
-        232,
         232,
         231,
         230,
         230,
         230,
-        135
+        135,
+        136
       ]
     },
     {
@@ -183,7 +4782,7 @@
       "newPrice": 135,
       "pct": -41,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/mutant-neo-evolution",
       "history": [
         228,
@@ -191,8 +4790,8 @@
         228,
         228,
         228,
-        228,
-        135
+        135,
+        136
       ]
     },
     {
@@ -204,7 +4803,7 @@
       "newPrice": 145,
       "pct": -40,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/dd3-s-line-originals-new",
       "history": [
         242,
@@ -212,7 +4811,7 @@
         242,
         242,
         242,
-        242,
+        145,
         145
       ]
     },
@@ -225,7 +4824,7 @@
       "newPrice": 140,
       "pct": -40,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/raptor-z-line",
       "history": [
         232,
@@ -233,8 +4832,8 @@
         232,
         232,
         232,
-        232,
-        140
+        140,
+        141
       ]
     },
     {
@@ -246,7 +4845,7 @@
       "newPrice": 140,
       "pct": -40,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/predator-big-z",
       "history": [
         232,
@@ -254,8 +4853,8 @@
         232,
         232,
         232,
-        232,
-        140
+        140,
+        141
       ]
     },
     {
@@ -267,7 +4866,7 @@
       "newPrice": 140,
       "pct": -40,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/surge-ss-z-line",
       "history": [
         232,
@@ -275,8 +4874,8 @@
         232,
         232,
         232,
-        232,
-        140
+        140,
+        141
       ]
     },
     {
@@ -288,7 +4887,7 @@
       "newPrice": 140,
       "pct": -40,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/nuke-ss-z-line",
       "history": [
         232,
@@ -296,8 +4895,8 @@
         232,
         232,
         232,
-        232,
-        140
+        140,
+        141
       ]
     },
     {
@@ -309,7 +4908,7 @@
       "newPrice": 140,
       "pct": -40,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/undertaker-big-z",
       "history": [
         232,
@@ -317,8 +4916,8 @@
         232,
         232,
         232,
-        232,
-        140
+        140,
+        141
       ]
     },
     {
@@ -330,7 +4929,7 @@
       "newPrice": 140,
       "pct": -39,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/crank-z-lite",
       "history": [
         228,
@@ -338,8 +4937,8 @@
         228,
         228,
         228,
-        228,
-        140
+        140,
+        141
       ]
     },
     {
@@ -351,15 +4950,15 @@
       "newPrice": 112,
       "pct": -39,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/astronaut-premium-active",
       "history": [
         184,
-        184,
         183,
         183,
         183,
         183,
+        112,
         112
       ]
     },
@@ -372,15 +4971,15 @@
       "newPrice": 121,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/sten-k4",
       "history": [
-        198,
         197,
         197,
         196,
         196,
         196,
+        121,
         121
       ]
     },
@@ -393,15 +4992,15 @@
       "newPrice": 107,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/sinus-zero-medium-1",
       "history": [
         174,
         174,
-        174,
         173,
         173,
         173,
+        107,
         107
       ]
     },
@@ -414,15 +5013,15 @@
       "newPrice": 107,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/notion-exo-soft",
       "history": [
         174,
         174,
-        174,
         173,
         173,
         173,
+        107,
         107
       ]
     },
@@ -435,15 +5034,15 @@
       "newPrice": 107,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/logic-exo-hard-evolution",
       "history": [
         174,
         174,
-        174,
         173,
         173,
         173,
+        107,
         107
       ]
     },
@@ -456,15 +5055,15 @@
       "newPrice": 102,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/rollo-dx",
       "history": [
         165,
-        165,
         164,
         164,
         164,
         164,
+        102,
         102
       ]
     },
@@ -477,7 +5076,7 @@
       "newPrice": 112,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/nord-k3-hard",
       "history": [
         180,
@@ -485,7 +5084,7 @@
         180,
         180,
         180,
-        180,
+        112,
         112
       ]
     },
@@ -498,7 +5097,7 @@
       "newPrice": 131,
       "pct": -38,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/justice-lucid",
       "history": [
         213,
@@ -506,7 +5105,7 @@
         213,
         213,
         213,
-        213,
+        131,
         131
       ]
     },
@@ -519,7 +5118,7 @@
       "newPrice": 112,
       "pct": -37,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/jarn-k3",
       "history": [
         178,
@@ -527,7 +5126,7 @@
         178,
         178,
         178,
-        178,
+        112,
         112
       ]
     },
@@ -540,7 +5139,7 @@
       "newPrice": 164,
       "pct": -37,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/malita-prototype-paul-mcbeth-collection",
       "history": [
         261,
@@ -548,7 +5147,7 @@
         261,
         261,
         261,
-        261,
+        164,
         164
       ]
     },
@@ -561,7 +5160,7 @@
       "newPrice": 169,
       "pct": -36,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/glacier-c-line-horizon-gannon-buhr",
       "history": [
         264,
@@ -569,7 +5168,7 @@
         264,
         264,
         264,
-        264,
+        169,
         169
       ]
     },
@@ -582,16 +5181,16 @@
       "newPrice": 159,
       "pct": -36,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/mighty-grand-royal",
       "history": [
-        253,
         252,
         251,
         250,
         250,
         250,
-        159
+        159,
+        160
       ]
     },
     {
@@ -603,7 +5202,7 @@
       "newPrice": 107,
       "pct": -36,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/roost",
       "history": [
         168,
@@ -611,7 +5210,7 @@
         168,
         168,
         168,
-        168,
+        107,
         107
       ]
     },
@@ -624,7 +5223,7 @@
       "newPrice": 107,
       "pct": -34,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/link-hard-exo",
       "history": [
         161,
@@ -632,7 +5231,7 @@
         161,
         161,
         161,
-        161,
+        107,
         107
       ]
     },
@@ -645,7 +5244,7 @@
       "newPrice": 155,
       "pct": -32,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/sol-esp",
       "history": [
         228,
@@ -653,7 +5252,7 @@
         228,
         228,
         228,
-        228,
+        155,
         155
       ]
     },
@@ -666,16 +5265,16 @@
       "newPrice": 183,
       "pct": -31,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/mana-nebula-aura",
       "history": [
-        268,
         267,
         267,
         267,
         267,
         266,
-        183
+        183,
+        231
       ]
     },
     {
@@ -687,16 +5286,16 @@
       "newPrice": 135,
       "pct": -30,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/fox-champion",
       "history": [
-        194,
         193,
         193,
         192,
         192,
         192,
-        135
+        135,
+        136
       ]
     },
     {
@@ -708,15 +5307,15 @@
       "newPrice": 164,
       "pct": -30,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/zeus-esp-paul-mcbeth",
       "history": [
-        237,
         236,
         235,
         234,
         234,
         234,
+        164,
         164
       ]
     },
@@ -729,15 +5328,15 @@
       "newPrice": 164,
       "pct": -30,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/hades-paul-mcbeth",
       "history": [
-        237,
         236,
         235,
         234,
         234,
         234,
+        164,
         164
       ]
     },
@@ -750,16 +5349,16 @@
       "newPrice": 140,
       "pct": -29,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/meteor-z-line",
       "history": [
-        232,
         198,
         198,
         198,
         198,
         198,
-        140
+        140,
+        141
       ]
     },
     {
@@ -771,7 +5370,7 @@
       "newPrice": 159,
       "pct": -29,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/roadrunner-halo-star",
       "history": [
         223,
@@ -779,8 +5378,8 @@
         223,
         223,
         223,
-        223,
-        159
+        159,
+        160
       ]
     },
     {
@@ -792,7 +5391,7 @@
       "newPrice": 164,
       "pct": -28,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/guld-k1-glow",
       "history": [
         228,
@@ -800,7 +5399,7 @@
         228,
         228,
         228,
-        228,
+        164,
         164
       ]
     },
@@ -813,7 +5412,7 @@
       "newPrice": 164,
       "pct": -28,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/vass-k1-glow",
       "history": [
         228,
@@ -821,7 +5420,7 @@
         228,
         228,
         228,
-        228,
+        164,
         164
       ]
     },
@@ -834,7 +5433,7 @@
       "newPrice": 135,
       "pct": -28,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/evolution-neo-instinct",
       "history": [
         188,
@@ -842,8 +5441,8 @@
         188,
         188,
         188,
-        188,
-        135
+        135,
+        136
       ]
     },
     {
@@ -855,15 +5454,15 @@
       "newPrice": 150,
       "pct": -27,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/p2x-c-line-glow-triple-stamp-discmania-challenge",
       "history": [
-        208,
         207,
         206,
         206,
         206,
         206,
+        150,
         150
       ]
     },
@@ -876,7 +5475,7 @@
       "newPrice": 135,
       "pct": -27,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/sidewinder-star-1",
       "history": [
         184,
@@ -884,8 +5483,8 @@
         184,
         184,
         184,
-        184,
-        135
+        135,
+        136
       ]
     },
     {
@@ -897,7 +5496,7 @@
       "newPrice": 107,
       "pct": -26,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/harp-bt-soft",
       "history": [
         145,
@@ -905,7 +5504,7 @@
         145,
         145,
         145,
-        145,
+        107,
         107
       ]
     },
@@ -918,37 +5517,16 @@
       "newPrice": 131,
       "pct": -23,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/compass-gold-line",
       "history": [
         172,
         172,
         172,
         172,
-        172,
         171,
+        131,
         131
-      ]
-    },
-    {
-      "discId": "discmania-laseri",
-      "store": "frisbeebutikken",
-      "storeName": "Frisbeebutikken",
-      "plastic": null,
-      "oldPrice": 230,
-      "newPrice": 179,
-      "pct": -22,
-      "date": "2026-11-23",
-      "bucket": "last-week",
-      "url": "https://frisbeebutikken.no/products/ultrium-laseri",
-      "history": [
-        230,
-        230,
-        230,
-        230,
-        230,
-        230,
-        179
       ]
     },
     {
@@ -960,7 +5538,7 @@
       "newPrice": 140,
       "pct": -21,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/cicada-z",
       "history": [
         178,
@@ -968,8 +5546,8 @@
         178,
         178,
         178,
-        178,
-        140
+        140,
+        141
       ]
     },
     {
@@ -981,7 +5559,7 @@
       "newPrice": 140,
       "pct": -20,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/nuke-z-ricky-wysocki-signature",
       "history": [
         174,
@@ -989,8 +5567,8 @@
         174,
         174,
         174,
-        174,
-        140
+        140,
+        141
       ]
     },
     {
@@ -1002,7 +5580,7 @@
       "newPrice": 155,
       "pct": -20,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/tern-champion-proto-glow",
       "history": [
         194,
@@ -1010,8 +5588,8 @@
         194,
         194,
         194,
-        194,
-        155
+        155,
+        147
       ]
     },
     {
@@ -1023,7 +5601,7 @@
       "newPrice": 179,
       "pct": -20,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://frisbeebutikken.no/products/ultrium-jokeri",
       "history": [
         223,
@@ -1031,7 +5609,7 @@
         223,
         223,
         223,
-        223,
+        179,
         179
       ]
     },
@@ -1044,16 +5622,16 @@
       "newPrice": 135,
       "pct": -18,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/wombat3-star",
       "history": [
         165,
-        165,
         164,
         164,
         164,
         164,
-        135
+        135,
+        136
       ]
     },
     {
@@ -1065,16 +5643,16 @@
       "newPrice": 135,
       "pct": -18,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/mamba-champion",
       "history": [
         165,
-        165,
         164,
         164,
         164,
         164,
-        135
+        135,
+        164
       ]
     },
     {
@@ -1086,16 +5664,16 @@
       "newPrice": 159,
       "pct": -17,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/savior-grand-royal",
       "history": [
-        194,
         193,
         193,
         192,
         192,
         192,
-        159
+        159,
+        160
       ]
     },
     {
@@ -1107,7 +5685,7 @@
       "newPrice": 194,
       "pct": -15,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://wearediscgolf.no/produkt/star-charger-bottom-stamp-u-dye-173-175g/",
       "history": [
         228,
@@ -1115,8 +5693,8 @@
         228,
         228,
         228,
-        228,
-        194
+        194,
+        168
       ]
     },
     {
@@ -1128,7 +5706,7 @@
       "newPrice": 194,
       "pct": -13,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://wearediscgolf.no/produkt/star-toro-bottom-stamp-u-dye-173-175g/",
       "history": [
         223,
@@ -1136,29 +5714,8 @@
         223,
         223,
         223,
-        223,
-        194
-      ]
-    },
-    {
-      "discId": "discmania-genius",
-      "store": "discexpress",
-      "storeName": "Discexpress",
-      "plastic": "Active",
-      "oldPrice": 126,
-      "newPrice": 112,
-      "pct": -11,
-      "date": "2026-11-23",
-      "bucket": "today",
-      "url": "https://www.discexpress.se/products/genius-premium-active",
-      "history": [
-        126,
-        126,
-        126,
-        126,
-        126,
-        126,
-        112
+        194,
+        184
       ]
     },
     {
@@ -1170,15 +5727,15 @@
       "newPrice": 131,
       "pct": -10,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/diamond-gold-line",
       "history": [
         146,
-        146,
         145,
         145,
         145,
         145,
+        131,
         131
       ]
     },
@@ -1191,7 +5748,7 @@
       "newPrice": 271,
       "pct": -10,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://arcticdisc.no/products/grand-orbit-glory",
       "history": [
         300,
@@ -1199,7 +5756,7 @@
         300,
         300,
         300,
-        300,
+        271,
         271
       ]
     },
@@ -1212,15 +5769,15 @@
       "newPrice": 174,
       "pct": -9,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/scorch-fuzed-z-flame",
       "history": [
-        194,
         193,
         193,
         192,
         192,
         192,
+        174,
         174
       ]
     },
@@ -1233,16 +5790,16 @@
       "newPrice": 255,
       "pct": -8,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://frisbeebutikken.no/products/particle-proton-paradox-mvp-circuit-challenge-2026",
       "history": [
-        278,
         278,
         299,
         278,
         278,
         278,
-        255
+        255,
+        222
       ]
     },
     {
@@ -1254,16 +5811,16 @@
       "newPrice": 257,
       "pct": -8,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://arcticdisc.no/products/grand-honor",
       "history": [
-        280,
         280,
         279,
         278,
         278,
         278,
-        257
+        257,
+        217
       ]
     },
     {
@@ -1275,15 +5832,15 @@
       "newPrice": 257,
       "pct": -8,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://arcticdisc.no/products/grand-strive",
       "history": [
-        280,
         280,
         279,
         278,
         278,
         278,
+        257,
         257
       ]
     },
@@ -1296,16 +5853,16 @@
       "newPrice": 257,
       "pct": -8,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://arcticdisc.no/products/clear-fire",
       "history": [
-        280,
         280,
         279,
         278,
         278,
         278,
-        257
+        257,
+        224
       ]
     },
     {
@@ -1317,7 +5874,7 @@
       "newPrice": 201,
       "pct": -8,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://frisbeebutikken.no/products/300-a5-ultra-soft",
       "history": [
         218,
@@ -1325,7 +5882,7 @@
         218,
         218,
         218,
-        218,
+        201,
         201
       ]
     },
@@ -1338,7 +5895,7 @@
       "newPrice": 241,
       "pct": -7,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://arcticdisc.no/products/cosmic-neutron-shift-st-jude-foundraiser",
       "history": [
         258,
@@ -1346,8 +5903,8 @@
         258,
         258,
         258,
-        258,
-        241
+        241,
+        189
       ]
     },
     {
@@ -1359,7 +5916,7 @@
       "newPrice": 155,
       "pct": -5,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/cinnamon-steady",
       "history": [
         164,
@@ -1367,7 +5924,7 @@
         164,
         164,
         164,
-        164,
+        155,
         155
       ]
     },
@@ -1380,7 +5937,7 @@
       "newPrice": 179,
       "pct": -5,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.krokholdgs.no/products/electron-nomad-james-conrad-edition-classic",
       "history": [
         188,
@@ -1388,8 +5945,8 @@
         188,
         188,
         188,
-        188,
-        179
+        179,
+        147
       ]
     },
     {
@@ -1401,7 +5958,7 @@
       "newPrice": 232,
       "pct": -5,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://frisbeebutikken.no/products/neutron-balance",
       "history": [
         244,
@@ -1409,7 +5966,7 @@
         244,
         244,
         244,
-        244,
+        232,
         232
       ]
     },
@@ -1422,81 +5979,18 @@
       "newPrice": 155,
       "pct": -5,
       "date": "2026-11-23",
-      "bucket": "today",
+      "bucket": "yesterday",
       "url": "https://www.discexpress.se/products/firebird-champion-proto-glow",
       "history": [
         165,
-        165,
         164,
         164,
         164,
         164,
-        155
-      ]
-    },
-    {
-      "discId": "discraft-meteor",
-      "store": "krokhol",
-      "storeName": "Krokhol Disc Golf Shop",
-      "plastic": "ESP",
-      "oldPrice": 232,
-      "newPrice": 198,
-      "pct": -15,
-      "date": "2026-11-12",
-      "bucket": "last-week",
-      "url": "https://www.krokholdgs.no/products/esp-recycled-meteor",
-      "history": [
-        232,
-        198,
-        198,
-        198,
-        198,
-        198,
-        140
-      ]
-    },
-    {
-      "discId": "discraft-force",
-      "store": "krokhol",
-      "storeName": "Krokhol Disc Golf Shop",
-      "plastic": "ESP",
-      "oldPrice": 232,
-      "newPrice": 198,
-      "pct": -15,
-      "date": "2026-11-12",
-      "bucket": "last-week",
-      "url": "https://www.krokholdgs.no/products/esp-recycled-force",
-      "history": [
-        232,
-        198,
-        198,
-        198,
-        198,
-        198,
-        198
-      ]
-    },
-    {
-      "discId": "discraft-thrasher",
-      "store": "krokhol",
-      "storeName": "Krokhol Disc Golf Shop",
-      "plastic": "ESP",
-      "oldPrice": 232,
-      "newPrice": 198,
-      "pct": -15,
-      "date": "2026-11-12",
-      "bucket": "last-week",
-      "url": "https://www.krokholdgs.no/products/esp-recycled-thrasher",
-      "history": [
-        232,
-        198,
-        198,
-        198,
-        198,
-        198,
-        198
+        155,
+        136
       ]
     }
   ],
-  "totalDrops": 71
+  "totalDrops": 285
 }
