@@ -6,6 +6,82 @@
   "endDate": "2026-11-29",
   "signals": [
     {
+      "discId": "kastaplast-tuff",
+      "name": "Tuff",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-release",
+      "plastic": "K1 Glow",
+      "edition": null,
+      "firstSeenMs": 1795581691304,
+      "price": 239,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 239,
+          "url": "https://www.krokholdgs.no/products/k1-soft-tuff"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-river",
+      "name": "River",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Moonshine",
+      "edition": null,
+      "firstSeenMs": 1795581691304,
+      "price": 274,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 274,
+          "url": "https://www.krokholdgs.no/products/opto-moonshine-glow-river"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-grace",
+      "name": "Grace",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Grand Orbit",
+      "edition": "Kristin Tattar",
+      "firstSeenMs": 1795581691304,
+      "price": 299,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 299,
+          "url": "https://www.krokholdgs.no/products/grand-orbit-grace-kristin-tattar-team-series-2023"
+        }
+      ]
+    },
+    {
+      "discId": "westside-warship",
+      "name": "Warship",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Moonshine",
+      "edition": null,
+      "firstSeenMs": 1795581691304,
+      "price": 274,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 274,
+          "url": "https://www.krokholdgs.no/products/elasto-moonshine-glow-warship"
+        }
+      ]
+    },
+    {
       "discId": "discmania-p2x",
       "name": "P2X",
       "brand": "Discmania",
@@ -151,6 +227,101 @@
       ]
     },
     {
+      "discId": "discraft-cigarra",
+      "name": "Cigarra",
+      "brand": "Discraft",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Z",
+      "edition": "Anthony Barela",
+      "firstSeenMs": 1795581655001,
+      "price": 255,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 255,
+          "url": "https://frisbeebutikken.no/products/z-cigarra-anthony-barela"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-servo",
+      "name": "Servo",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Eclipse",
+      "edition": null,
+      "firstSeenMs": 1795581655001,
+      "price": 273,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 273,
+          "url": "https://frisbeebutikken.no/products/eclipse-servo"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-falk",
+      "name": "Falk",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "K1 Glow",
+      "edition": null,
+      "firstSeenMs": 1795581655001,
+      "price": 264,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 264,
+          "url": "https://frisbeebutikken.no/products/k1-glow-falk"
+        }
+      ]
+    },
+    {
+      "discId": "mvp-vanish",
+      "name": "Vanish",
+      "brand": "MVP",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Eclipse",
+      "edition": null,
+      "firstSeenMs": 1795581655001,
+      "price": 273,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 273,
+          "url": "https://frisbeebutikken.no/products/eclipse-vanish"
+        }
+      ]
+    },
+    {
+      "discId": "innova-tern",
+      "name": "Tern",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Champion",
+      "edition": null,
+      "firstSeenMs": 1795581655001,
+      "price": 255,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 255,
+          "url": "https://frisbeebutikken.no/products/champion-proto-glow-tern"
+        }
+      ]
+    },
+    {
       "discId": "axiom-hex",
       "name": "Hex",
       "brand": "Axiom",
@@ -285,5 +456,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-24T09:30:11.695Z"
+  "generated": "2026-11-25T04:51:26.402Z"
 }
