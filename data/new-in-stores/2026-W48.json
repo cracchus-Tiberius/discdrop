@@ -6,16 +6,41 @@
   "endDate": "2026-11-29",
   "signals": [
     {
+      "discId": "latitude-sinus",
+      "name": "Sinus",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Zero Medium",
+      "edition": "Isaac Robinson",
+      "firstSeenMs": 1795684564487,
+      "price": 224,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 224,
+          "url": "https://wearediscgolf.no/produkt/zero-medium-moonshine-sinus-isaac-robinson/"
+        }
+      ]
+    },
+    {
       "discId": "kastaplast-tuff",
       "name": "Tuff",
       "brand": "Kastaplast",
       "image": "",
       "type": "new-release",
-      "plastic": "K1 Glow",
+      "plastic": "K1 Soft",
       "edition": null,
       "firstSeenMs": 1795581691304,
       "price": 239,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/k1-soft-tuff/"
+        },
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
@@ -93,6 +118,12 @@
       "price": 174,
       "stores": [
         {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 184,
+          "url": "https://wearediscgolf.no/produkt/d-line-p2x-flex-2-20th-anniversary/"
+        },
+        {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
           "price": 174,
@@ -111,6 +142,12 @@
       "firstSeenMs": 1795512021140,
       "price": 249,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/c-line-fd2-20th-anniversary/"
+        },
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
@@ -147,8 +184,14 @@
       "plastic": "C-Line Glow",
       "edition": "Casey White",
       "firstSeenMs": 1795426230477,
-      "price": 279,
+      "price": 254,
       "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/c-line-glow-md1-20th-anniversary/"
+        },
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
@@ -223,6 +266,82 @@
           "storeName": "Starframe",
           "price": 289,
           "url": "https://www.starframe.no/products/elasto-moonshine-underworld"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-stig",
+      "name": "Stig",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "K1 Grind",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 289,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 289,
+          "url": "https://www.starframe.no/products/k1-grind-stig-moomin-not-a-fan"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-vanguard",
+      "name": "Vanguard",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "C-Line Glow",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 319,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 319,
+          "url": "https://www.starframe.no/products/c-line-glow-horizon-vanguard-kyle-klein"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-impa",
+      "name": "Impa",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "K1 Grind",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 289,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 289,
+          "url": "https://www.starframe.no/products/k1-grind-impa-moomin-impa-fans"
+        }
+      ]
+    },
+    {
+      "discId": "discmania-fd",
+      "name": "FD",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "C-Line Glow",
+      "edition": null,
+      "firstSeenMs": 1795684564487,
+      "price": 254,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 254,
+          "url": "https://wearediscgolf.no/produkt/c-line-glow-fd-20th-anniversary/"
         }
       ]
     },
@@ -360,6 +479,49 @@
       ]
     },
     {
+      "discId": "discmania-essence",
+      "name": "Essence",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Q-Line",
+      "edition": null,
+      "firstSeenMs": 1795426259037,
+      "price": 289,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 305,
+          "url": "https://frisbeebutikken.no/products/q-line-essence"
+        },
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 309,
+          "url": "https://www.starframe.no/products/q-line-premier-essence"
+        },
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 294,
+          "url": "https://www.krokholdgs.no/products/q-line-premier-essence"
+        },
+        {
+          "store": "nydisk",
+          "storeName": "NyDisk",
+          "price": 324,
+          "url": "https://nydisk.no/products/discmania-q-line-premier-essence"
+        },
+        {
+          "store": "discexpress",
+          "storeName": "Discexpress",
+          "price": 289,
+          "url": "https://www.discexpress.se/products/essence-q-line-premier"
+        }
+      ]
+    },
+    {
       "discId": "latitude-savior",
       "name": "Savior",
       "brand": "Latitude 64",
@@ -436,6 +598,25 @@
       ]
     },
     {
+      "discId": "innova-sync",
+      "name": "Sync",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "R-Pro",
+      "edition": null,
+      "firstSeenMs": 1795426149147,
+      "price": 229,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 229,
+          "url": "https://frisbeebutikken.no/products/r-pro-proto-glow-sync"
+        }
+      ]
+    },
+    {
       "discId": "discraft-zone-os",
       "name": "Zone OS",
       "brand": "Discraft",
@@ -456,5 +637,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-25T04:51:26.402Z"
+  "generated": "2026-11-26T09:32:32.364Z"
 }

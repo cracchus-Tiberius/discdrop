@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-25T04:51:12.187Z",
+  "lastUpdated": "2026-11-26T09:32:17.740Z",
   "products": [
     {
       "store": "discsport",
@@ -501,7 +501,7 @@
     {
       "store": "wearediscgolf",
       "rawName": "Latitude 64 Playing Cards",
-      "price": 99,
+      "price": 74,
       "url": "https://wearediscgolf.no/produkt/latitude-64-playing-cards/",
       "inStock": true
     },
@@ -657,13 +657,6 @@
       "rawName": "Axiom Shuttle Backpack",
       "price": 649,
       "url": "https://wearediscgolf.no/produkt/axiom-shuttle-backpack/",
-      "inStock": true
-    },
-    {
-      "store": "wearediscgolf",
-      "rawName": "Guru Raster Backpack",
-      "price": 349,
-      "url": "https://wearediscgolf.no/produkt/guru-raster-backpack/",
       "inStock": true
     },
     {
@@ -2862,7 +2855,7 @@
       "rawName": "Halloween 2026 - Full Pakke",
       "price": 1299,
       "url": "https://kvamdgs.no/products/halloween-2026-full-pakke",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "kvamdgs",
@@ -6331,9 +6324,23 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "MVP Lunar Module - Kurvlys",
-      "price": 161,
-      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
+      "rawName": "Lux Vapor Function - Special Edition",
+      "price": 206,
+      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "ESP Hallux First Run",
+      "price": 224,
+      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
+      "price": 260,
+      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
       "inStock": true
     },
     {
@@ -6366,13 +6373,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "ESP Hallux First Run",
-      "price": 224,
-      "url": "https://frisbeebutikken.no/products/esp-hallux-first-run",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "K1 Grind Älva",
       "price": 197,
       "url": "https://frisbeebutikken.no/products/k1-grind-alva",
@@ -6380,23 +6380,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Kasta Set Moomin",
-      "price": 539,
-      "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Lux Vapor Function - Special Edition",
-      "price": 206,
-      "url": "https://frisbeebutikken.no/products/lux-vapor-function-special-edition",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "NERF Soft Flight Driver",
-      "price": 159,
-      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-driver",
+      "rawName": "NEO Function",
+      "price": 197,
+      "url": "https://frisbeebutikken.no/products/neo-function",
       "inStock": true
     },
     {
@@ -6408,9 +6394,9 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "NEO Function",
-      "price": 197,
-      "url": "https://frisbeebutikken.no/products/neo-function",
+      "rawName": "NERF Soft Flight Driver",
+      "price": 159,
+      "url": "https://frisbeebutikken.no/products/nerf-soft-flight-driver",
       "inStock": true
     },
     {
@@ -6429,55 +6415,6 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Premium MIDARi",
-      "price": 115,
-      "url": "https://frisbeebutikken.no/products/premium-midari",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
-      "price": 206,
-      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Special Blend Passion - Paige Pierce v2",
-      "price": 251,
-      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Titan",
-      "price": 130,
-      "url": "https://frisbeebutikken.no/products/ultrium-titan",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium LEGENDa",
-      "price": 130,
-      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium SLAIDi",
-      "price": 130,
-      "url": "https://frisbeebutikken.no/products/ultrium-slaidi",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
-      "rawName": "Ultrium Pyramid",
-      "price": 130,
-      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
-      "inStock": true
-    },
-    {
-      "store": "frisbeebutikken",
       "rawName": "Z Colorshift Fossil - Ricky Wysocki",
       "price": 224,
       "url": "https://frisbeebutikken.no/products/z-colorshift-fossil-ricky-wysocki",
@@ -6485,9 +6422,16 @@
     },
     {
       "store": "frisbeebutikken",
-      "rawName": "Z Jawbreaker Captain\\&#039;s Caliber - First Run",
-      "price": 260,
-      "url": "https://frisbeebutikken.no/products/z-jawbreaker-captains-caliber-first-run",
+      "rawName": "Kasta Set Moomin",
+      "price": 539,
+      "url": "https://frisbeebutikken.no/products/kasta-set-moomin",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Premium MIDARi",
+      "price": 115,
+      "url": "https://frisbeebutikken.no/products/premium-midari",
       "inStock": true
     },
     {
@@ -6499,9 +6443,51 @@
     },
     {
       "store": "frisbeebutikken",
+      "rawName": "Special Blend Passion - Paige Pierce v2",
+      "price": 251,
+      "url": "https://frisbeebutikken.no/products/special-blend-passion-paige-pierce-2",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
       "rawName": "Ultrium Amulet",
       "price": 130,
       "url": "https://frisbeebutikken.no/products/ultrium-amulet",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium LEGENDa",
+      "price": 130,
+      "url": "https://frisbeebutikken.no/products/ultrium-legenda",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Pyramid",
+      "price": 130,
+      "url": "https://frisbeebutikken.no/products/ultrium-pyramid",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Ultrium Titan",
+      "price": 130,
+      "url": "https://frisbeebutikken.no/products/ultrium-titan",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "MVP Lunar Module - Kurvlys",
+      "price": 161,
+      "url": "https://frisbeebutikken.no/products/mvp-lunar-module-kurvlys",
+      "inStock": true
+    },
+    {
+      "store": "frisbeebutikken",
+      "rawName": "Proton Cypher - MVP Circuit Challenge 2026",
+      "price": 206,
+      "url": "https://frisbeebutikken.no/products/proton-cypher-mvp-circuit-challenge-2026",
       "inStock": true
     },
     {
@@ -6744,16 +6730,9 @@
     },
     {
       "store": "starframe",
-      "rawName": "Opto Hex Raketen (Special Edition)",
-      "price": 199,
-      "url": "https://www.starframe.no/products/opto-hex-raketen-special-edition",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Zero Medium Caltrop (Special Edition)",
-      "price": 149,
-      "url": "https://www.starframe.no/products/zero-medium-caltrop-special-edition",
+      "rawName": "Lux Vapor Function (Special Edition)",
+      "price": 209,
+      "url": "https://www.starframe.no/products/lux-vapor-function-special-edition",
       "inStock": true
     },
     {
@@ -6765,44 +6744,9 @@
     },
     {
       "store": "starframe",
-      "rawName": "Fuzion Mutiny",
-      "price": 199,
-      "url": "https://www.starframe.no/products/fuzion-mutiny",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "NERF Soft Flight Driver",
-      "price": 199,
-      "url": "https://www.starframe.no/products/nerf-soft-flight-driver",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "NERF Soft Flight Midrange",
-      "price": 199,
-      "url": "https://www.starframe.no/products/nerf-soft-flight-midrange",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "NERF Soft Flight Putter",
-      "price": 199,
-      "url": "https://www.starframe.no/products/nerf-soft-flight-putter",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
       "rawName": "Color Glow D-Line Flex 1 Rainmaker",
       "price": 300,
       "url": "https://www.starframe.no/products/color-glow-d-line-flex-1-rainmaker",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "NERF Soft Flight Ultimate",
-      "price": 199,
-      "url": "https://www.starframe.no/products/nerf-soft-flight-ultimate",
       "inStock": true
     },
     {
@@ -6821,9 +6765,9 @@
     },
     {
       "store": "starframe",
-      "rawName": "Ti Big Z Hallux (Wysocki 2026 V2)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/ti-big-z-hallux-wysocki-2026-v2",
+      "rawName": "Opto Hex Raketen (Special Edition)",
+      "price": 199,
+      "url": "https://www.starframe.no/products/opto-hex-raketen-special-edition",
       "inStock": true
     },
     {
@@ -6835,9 +6779,23 @@
     },
     {
       "store": "starframe",
-      "rawName": "Latitude 64 Swift HEX Backpack",
-      "price": 499,
-      "url": "https://www.starframe.no/products/latitude-64-swift-hex-backpack",
+      "rawName": "Zero Medium Caltrop (Special Edition)",
+      "price": 149,
+      "url": "https://www.starframe.no/products/zero-medium-caltrop-special-edition",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Fuzion Mutiny",
+      "price": 199,
+      "url": "https://www.starframe.no/products/fuzion-mutiny",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "NERF Soft Flight Driver",
+      "price": 199,
+      "url": "https://www.starframe.no/products/nerf-soft-flight-driver",
       "inStock": true
     },
     {
@@ -6849,16 +6807,23 @@
     },
     {
       "store": "starframe",
-      "rawName": "K1 Hard Berg X (Braeden Sides Tour Series 2026)",
-      "price": 249,
-      "url": "https://www.starframe.no/products/k1-hard-berg-x-braeden-sides-tour-series-2026",
+      "rawName": "NERF Soft Flight Midrange",
+      "price": 199,
+      "url": "https://www.starframe.no/products/nerf-soft-flight-midrange",
       "inStock": true
     },
     {
       "store": "starframe",
-      "rawName": "Lucid Cavalry (First Run)",
-      "price": 209,
-      "url": "https://www.starframe.no/products/lucid-cavalry-first-run",
+      "rawName": "NERF Soft Flight Putter",
+      "price": 199,
+      "url": "https://www.starframe.no/products/nerf-soft-flight-putter",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "NERF Soft Flight Ultimate",
+      "price": 199,
+      "url": "https://www.starframe.no/products/nerf-soft-flight-ultimate",
       "inStock": true
     },
     {
@@ -6870,23 +6835,23 @@
     },
     {
       "store": "starframe",
-      "rawName": "Z Terminator (First Run)",
-      "price": 209,
-      "url": "https://www.starframe.no/products/z-terminator-first-run",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Z Jawbreaker Captains Caliber (Seppo Paju)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/z-jawbreaker-captains-caliber-seppo-paju",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
       "rawName": "Eminent Stiff Gain (First Run)",
       "price": 159,
       "url": "https://www.starframe.no/products/eminent-stiff-gain-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Ti Big Z Hallux (Wysocki 2026 V2)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/ti-big-z-hallux-wysocki-2026-v2",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Latitude 64 Swift HEX Backpack",
+      "price": 499,
+      "url": "https://www.starframe.no/products/latitude-64-swift-hex-backpack",
       "inStock": true
     },
     {
@@ -6905,9 +6870,79 @@
     },
     {
       "store": "starframe",
+      "rawName": "K1 Hard Berg X (Braeden Sides Tour Series 2026)",
+      "price": 249,
+      "url": "https://www.starframe.no/products/k1-hard-berg-x-braeden-sides-tour-series-2026",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Lucid Cavalry (First Run)",
+      "price": 209,
+      "url": "https://www.starframe.no/products/lucid-cavalry-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Major Line Skyway (Proto)",
+      "price": 219,
+      "url": "https://www.starframe.no/products/major-line-skyway-proto",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Z Terminator (First Run)",
+      "price": 209,
+      "url": "https://www.starframe.no/products/z-terminator-first-run",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Z Jawbreaker Captains Caliber (Seppo Paju)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/z-jawbreaker-captains-caliber-seppo-paju",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "G-Blend Dynasty",
+      "price": 199,
+      "url": "https://www.starframe.no/products/g-blend-dynasty",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Hard Malm (First Run Tour Series)",
+      "price": 239,
+      "url": "https://www.starframe.no/products/k1-hard-malm-first-run-tour-series",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Glow Nuance",
+      "price": 279,
+      "url": "https://www.starframe.no/products/glow-nuance",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Special Blend Raptor (Daniel Davidsson 2026)",
+      "price": 289,
+      "url": "https://www.starframe.no/products/special-blend-raptor-daniel-davidsson-2026",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Electron Firm Autopilot (Eagle McMahon)",
       "price": 249,
       "url": "https://www.starframe.no/products/electron-firm-autopilot-eagle-mcmahon",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Glow Älva 2024",
+      "price": 229,
+      "url": "https://www.starframe.no/products/k1-glow-alva-2024",
       "inStock": true
     },
     {
@@ -6940,13 +6975,6 @@
     },
     {
       "store": "starframe",
-      "rawName": "Major Line Skyway (Proto)",
-      "price": 219,
-      "url": "https://www.starframe.no/products/major-line-skyway-proto",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
       "rawName": "K1 Hard Glow Idog (Jesse Nieminen Tour Series 2026)",
       "price": 279,
       "url": "https://www.starframe.no/products/k1-hard-glow-idog-jesse-nieminen-tour-series-2026",
@@ -6968,6 +6996,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Color Glow Reach",
+      "price": 269,
+      "url": "https://www.starframe.no/products/color-glow-reach",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Rubber Canyon",
       "price": 179,
       "url": "https://www.starframe.no/products/rubber-canyon",
@@ -6982,16 +7017,9 @@
     },
     {
       "store": "starframe",
-      "rawName": "G-Blend Dynasty",
-      "price": 199,
-      "url": "https://www.starframe.no/products/g-blend-dynasty",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "K1 Hard Malm (First Run Tour Series)",
-      "price": 239,
-      "url": "https://www.starframe.no/products/k1-hard-malm-first-run-tour-series",
+      "rawName": "Premium Reach",
+      "price": 245,
+      "url": "https://www.starframe.no/products/premium-reach",
       "inStock": true
     },
     {
@@ -7017,62 +7045,6 @@
     },
     {
       "store": "starframe",
-      "rawName": "Glow Nuance",
-      "price": 279,
-      "url": "https://www.starframe.no/products/glow-nuance",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Parallel Persona",
-      "price": 269,
-      "url": "https://www.starframe.no/products/parallel-persona",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Shimmer Parallel Expanse",
-      "price": 269,
-      "url": "https://www.starframe.no/products/shimmer-parallel-expanse",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Special Blend Raptor (Daniel Davidsson 2026)",
-      "price": 289,
-      "url": "https://www.starframe.no/products/special-blend-raptor-daniel-davidsson-2026",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "K1 Glow Älva 2024",
-      "price": 229,
-      "url": "https://www.starframe.no/products/k1-glow-alva-2024",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Mellow (Prototype)",
-      "price": 219,
-      "url": "https://www.starframe.no/products/premium-mellow-prototype",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Color Glow Reach",
-      "price": 269,
-      "url": "https://www.starframe.no/products/color-glow-reach",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
-      "rawName": "Premium Reach",
-      "price": 245,
-      "url": "https://www.starframe.no/products/premium-reach",
-      "inStock": true
-    },
-    {
-      "store": "starframe",
       "rawName": "Parallel Requiem",
       "price": 269,
       "url": "https://www.starframe.no/products/parallel-requiem",
@@ -7094,9 +7066,23 @@
     },
     {
       "store": "starframe",
+      "rawName": "Parallel Persona",
+      "price": 269,
+      "url": "https://www.starframe.no/products/parallel-persona",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Premium Dune",
       "price": 255,
       "url": "https://www.starframe.no/products/premium-dune",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "Shimmer Parallel Expanse",
+      "price": 269,
+      "url": "https://www.starframe.no/products/shimmer-parallel-expanse",
       "inStock": true
     },
     {
@@ -7129,6 +7115,13 @@
     },
     {
       "store": "starframe",
+      "rawName": "Premium Mellow (Prototype)",
+      "price": 219,
+      "url": "https://www.starframe.no/products/premium-mellow-prototype",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
       "rawName": "Radiant Interval (Drew Gibson Tour Series)",
       "price": 289,
       "url": "https://www.starframe.no/products/radiant-interval-drew-gibson-tour-series",
@@ -7153,6 +7146,13 @@
       "rawName": "Radiant Rally",
       "price": 259,
       "url": "https://www.starframe.no/products/radiant-raly",
+      "inStock": true
+    },
+    {
+      "store": "starframe",
+      "rawName": "K1 Hard Älva (Clay Edwards 2025)",
+      "price": 229,
+      "url": "https://www.starframe.no/products/k1-hard-alva-clay-edwards-2025",
       "inStock": true
     },
     {
@@ -8609,7 +8609,7 @@
       "rawName": "Hexagon Base",
       "price": 257,
       "url": "https://www.discexpress.se/products/hexagon-base",
-      "inStock": false
+      "inStock": true
     },
     {
       "store": "discexpress",
@@ -9734,7 +9734,7 @@
     {
       "store": "discexpress",
       "rawName": "ZÜCA - Insert Bag, black (Compact Disc Golf)",
-      "price": 860,
+      "price": 430,
       "url": "https://www.discexpress.se/products/zuca-insert-bag-black-compact-disc-golf",
       "inStock": false
     },
@@ -9818,28 +9818,28 @@
     {
       "store": "discexpress",
       "rawName": "ZÜCA Accessory Pouch Anaconda",
-      "price": 190,
+      "price": 95,
       "url": "https://www.discexpress.se/products/zuca-accessory-pouch-camo",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Rack - Compact cart - Zuca",
-      "price": 411,
+      "price": 205,
       "url": "https://www.discexpress.se/products/rack-compac-cart-zuca",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Rack - All Terrain - Zuca",
-      "price": 525,
+      "price": 262,
       "url": "https://www.discexpress.se/products/rack-all-terrain-zuca",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Compact Disc Golf Cart",
-      "price": 3061,
+      "price": 2142,
       "url": "https://www.discexpress.se/products/zuca-compact-disc-golf-cart",
       "inStock": false
     },
@@ -10042,7 +10042,7 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart",
-      "price": 2870,
+      "price": 2009,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart",
       "inStock": false
     },
@@ -10175,49 +10175,49 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack LG Bag  (Only Insert Bag)",
-      "price": 1339,
+      "price": 937,
       "url": "https://www.discexpress.se/products/zuca-trekker-lg-bag",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Bag (Only Insert Bag)",
-      "price": 1147,
+      "price": 803,
       "url": "https://www.discexpress.se/products/zuca-trekker-bag",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart Fenders",
-      "price": 573,
+      "price": 286,
       "url": "https://www.discexpress.se/products/zuca-backpack-cart-fenders",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Tune up Kit, Backpack & Trekker Carts",
-      "price": 190,
+      "price": 95,
       "url": "https://www.discexpress.se/products/zuca-tune-up-kit-backpack-trekker-carts",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Tune up Kit, Backpack LG, Trekker LG, EZ & Transit Carts",
-      "price": 190,
+      "price": 95,
       "url": "https://www.discexpress.se/products/zuca-tune-up-kit-backpack-lg-trekker-lg-ez-transit-carts",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Tune up Kit, All-Terrain, Disc Golf & Compact Carts",
-      "price": 190,
+      "price": 95,
       "url": "https://www.discexpress.se/products/zuca-tune-up-kit-all-terrain-disc-golf-compact-carts",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Axle knob",
-      "price": 95,
+      "price": 47,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-axle-knob",
       "inStock": true
     },
@@ -10231,14 +10231,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - All-Terrain, Insert Bag and Rack",
-      "price": 4401,
+      "price": 3080,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-covert-insert-bag",
       "inStock": true
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - EZ Cart With Shelf",
-      "price": 2487,
+      "price": 1741,
       "url": "https://www.discexpress.se/products/zuca-ez-cart-with-shelf",
       "inStock": false
     },
@@ -10252,14 +10252,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Saddle Bag Set for All-Terrain",
-      "price": 765,
+      "price": 382,
       "url": "https://www.discexpress.se/products/saddle-bag-set",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Putter Pouch",
-      "price": 430,
+      "price": 214,
       "url": "https://www.discexpress.se/products/putter-pouch",
       "inStock": false
     },
@@ -10287,14 +10287,14 @@
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart LG",
-      "price": 3252,
+      "price": 2276,
       "url": "https://www.discexpress.se/products/backpack-cart-lg",
       "inStock": false
     },
     {
       "store": "discexpress",
       "rawName": "Zuca - Backpack Cart and Insert Bag",
-      "price": 4018,
+      "price": 2812,
       "url": "https://www.discexpress.se/products/zuca-all-terrain-backpack-cart-with-insert",
       "inStock": true
     },
@@ -15840,7 +15840,7 @@
       "rawName": "Handduk + Magnetfäste - PAKET",
       "price": 181,
       "url": "https://ugglansdiscgolf.se/products/handduk-magnetfaste-paket",
-      "inStock": true
+      "inStock": false
     },
     {
       "store": "ugglans",
@@ -16176,7 +16176,7 @@
       "rawName": "SIGR Odin",
       "price": 2678,
       "url": "https://ugglansdiscgolf.se/products/sigr-odin",
-      "inStock": false
+      "inStock": true
     },
     {
       "store": "ugglans",
