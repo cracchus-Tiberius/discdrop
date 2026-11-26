@@ -365,6 +365,11 @@ slik det ble gjort for latitude-* -> westside-*/dga-*/mvp-* den runden.
   18 of 19 stores stale every run; that was the signal. Unpin only after
   upgrading Playwright to a release that supports the newer image, as its own
   change — DiscShopen scrapes through Playwright.
+- "Install Playwright browsers" has a 15-min step timeout, not 5. The 5 was
+  set against a silent hang (2026-08-19), but on 2026-11-24 and 11-26 the
+  04:30 run hit it mid-download: --with-deps pulls from Ubuntu's apt mirror,
+  which ran at ~90 kB/s at that hour. A healthy install takes ~70 s. Each miss
+  left yesterday's prices up until the 09:00 catch-up rescued the day.
 - Run manually with: pnpm scrape:all (or pnpm scrape:nydisk / pnpm scrape:discshopen
   etc. for a single store)
 - Output: data/scraped-prices.json + data/unmatched-products.json
