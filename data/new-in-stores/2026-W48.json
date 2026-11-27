@@ -6,6 +6,25 @@
   "endDate": "2026-11-29",
   "signals": [
     {
+      "discId": "innova-teebird3",
+      "name": "Teebird3",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-release",
+      "plastic": "Proto Glow",
+      "edition": "Tour Series",
+      "firstSeenMs": 1795754523601,
+      "price": 339,
+      "stores": [
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 339,
+          "url": "https://www.krokholdgs.no/products/champion-proto-glow-teebird3-rainers-balodis-tour-series"
+        }
+      ]
+    },
+    {
       "discId": "latitude-sinus",
       "name": "Sinus",
       "brand": "Latitude 64",
@@ -21,31 +40,6 @@
           "storeName": "We Are Disc Golf",
           "price": 224,
           "url": "https://wearediscgolf.no/produkt/zero-medium-moonshine-sinus-isaac-robinson/"
-        }
-      ]
-    },
-    {
-      "discId": "kastaplast-tuff",
-      "name": "Tuff",
-      "brand": "Kastaplast",
-      "image": "",
-      "type": "new-release",
-      "plastic": "K1 Soft",
-      "edition": null,
-      "firstSeenMs": 1795581691304,
-      "price": 239,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 244,
-          "url": "https://wearediscgolf.no/produkt/k1-soft-tuff/"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 239,
-          "url": "https://www.krokholdgs.no/products/k1-soft-tuff"
         }
       ]
     },
@@ -107,31 +101,6 @@
       ]
     },
     {
-      "discId": "discmania-p2x",
-      "name": "P2X",
-      "brand": "Discmania",
-      "image": "",
-      "type": "new-release",
-      "plastic": "D-Line",
-      "edition": null,
-      "firstSeenMs": 1795512021140,
-      "price": 174,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 184,
-          "url": "https://wearediscgolf.no/produkt/d-line-p2x-flex-2-20th-anniversary/"
-        },
-        {
-          "store": "krokhol",
-          "storeName": "Krokhol Disc Golf Shop",
-          "price": 174,
-          "url": "https://www.krokholdgs.no/products/d-line-flex2-p2x-20th-anniversary-edition"
-        }
-      ]
-    },
-    {
       "discId": "discmania-fd2",
       "name": "FD2",
       "brand": "Discmania",
@@ -140,7 +109,7 @@
       "plastic": "C-Line",
       "edition": null,
       "firstSeenMs": 1795512021140,
-      "price": 249,
+      "price": 218,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -151,8 +120,39 @@
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
-          "price": 249,
+          "price": 218,
           "url": "https://www.krokholdgs.no/products/c-line-fd2-20th-anniversary-edition"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-tuff",
+      "name": "Tuff",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-release",
+      "plastic": "K1 Soft",
+      "edition": null,
+      "firstSeenMs": 1795426763812,
+      "price": 239,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 244,
+          "url": "https://wearediscgolf.no/produkt/k1-soft-tuff/"
+        },
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 239,
+          "url": "https://www.krokholdgs.no/products/k1-soft-tuff"
+        },
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 245,
+          "url": "https://ugglansdiscgolf.se/products/k1-soft-tuff"
         }
       ]
     },
@@ -184,7 +184,7 @@
       "plastic": "C-Line Glow",
       "edition": "Casey White",
       "firstSeenMs": 1795426230477,
-      "price": 254,
+      "price": 243,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -195,7 +195,7 @@
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
-          "price": 279,
+          "price": 243,
           "url": "https://www.krokholdgs.no/products/c-line-glow-md1-20th-anniversary-edition"
         },
         {
@@ -203,6 +203,12 @@
           "storeName": "NyDisk",
           "price": 354,
           "url": "https://nydisk.no/products/discmania-c-line-glow-md1-casey-white-exclusive"
+        },
+        {
+          "store": "ugglans",
+          "storeName": "Ugglans Discgolf",
+          "price": 274,
+          "url": "https://ugglansdiscgolf.se/products/c-line-glow-md1-20th-anniversary-edition"
         }
       ]
     },
@@ -270,6 +276,44 @@
       ]
     },
     {
+      "discId": "latitude-pure",
+      "name": "Pure",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Project Grip",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 209,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 209,
+          "url": "https://www.starframe.no/products/zero-medium-pure-skull"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-peak",
+      "name": "Peak",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Clear",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 329,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 329,
+          "url": "https://www.starframe.no/products/clear-moonshine-peak"
+        }
+      ]
+    },
+    {
       "discId": "kastaplast-stig",
       "name": "Stig",
       "brand": "Kastaplast",
@@ -323,6 +367,44 @@
           "storeName": "Starframe",
           "price": 289,
           "url": "https://www.starframe.no/products/k1-grind-impa-moomin-impa-fans"
+        }
+      ]
+    },
+    {
+      "discId": "latitude-mighty",
+      "name": "Mighty",
+      "brand": "Latitude 64",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Clear",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 329,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 329,
+          "url": "https://www.starframe.no/products/clear-moonshine-mighty"
+        }
+      ]
+    },
+    {
+      "discId": "kastaplast-gadd",
+      "name": "Gadd",
+      "brand": "Kastaplast",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "K1 Glow",
+      "edition": null,
+      "firstSeenMs": 1795684965182,
+      "price": 309,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 309,
+          "url": "https://www.starframe.no/products/k1-glow-gadd"
         }
       ]
     },
@@ -441,6 +523,31 @@
       ]
     },
     {
+      "discId": "discmania-p2x",
+      "name": "P2X",
+      "brand": "Discmania",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "D-Line",
+      "edition": null,
+      "firstSeenMs": 1795512021140,
+      "price": 174,
+      "stores": [
+        {
+          "store": "wearediscgolf",
+          "storeName": "We Are Disc Golf",
+          "price": 184,
+          "url": "https://wearediscgolf.no/produkt/d-line-p2x-flex-2-20th-anniversary/"
+        },
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 174,
+          "url": "https://www.krokholdgs.no/products/d-line-flex2-p2x-20th-anniversary-edition"
+        }
+      ]
+    },
+    {
       "discId": "axiom-hex",
       "name": "Hex",
       "brand": "Axiom",
@@ -456,25 +563,6 @@
           "storeName": "Frisbeebutikken",
           "price": 300,
           "url": "https://frisbeebutikken.no/products/total-eclipse-hex"
-        }
-      ]
-    },
-    {
-      "discId": "streamline-parachute",
-      "name": "Parachute",
-      "brand": "Streamline",
-      "image": "",
-      "type": "new-at-store",
-      "plastic": "Neutron",
-      "edition": null,
-      "firstSeenMs": 1795511586502,
-      "price": 244,
-      "stores": [
-        {
-          "store": "wearediscgolf",
-          "storeName": "We Are Disc Golf",
-          "price": 244,
-          "url": "https://wearediscgolf.no/produkt/neutron-soft-parachute-artist-series-scott-oswalt/"
         }
       ]
     },
@@ -537,6 +625,56 @@
           "storeName": "Starframe",
           "price": 209,
           "url": "https://www.starframe.no/products/royal-sense-savior"
+        }
+      ]
+    },
+    {
+      "discId": "westside-underworld",
+      "name": "Underworld",
+      "brand": "Westside Discs",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Tournament",
+      "edition": null,
+      "firstSeenMs": 1795426166418,
+      "price": 259,
+      "stores": [
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 259,
+          "url": "https://www.starframe.no/products/tournament-underworld-zen"
+        },
+        {
+          "store": "krokhol",
+          "storeName": "Krokhol Disc Golf Shop",
+          "price": 274,
+          "url": "https://www.krokholdgs.no/products/elasto-moonshine-glow-underworld"
+        }
+      ]
+    },
+    {
+      "discId": "innova-fox",
+      "name": "Fox",
+      "brand": "Innova",
+      "image": "",
+      "type": "new-at-store",
+      "plastic": "Halo Champion",
+      "edition": "Limited Edition",
+      "firstSeenMs": 1795426149147,
+      "price": 305,
+      "stores": [
+        {
+          "store": "frisbeebutikken",
+          "storeName": "Frisbeebutikken",
+          "price": 305,
+          "url": "https://frisbeebutikken.no/products/halo-champion-fox-limited-edition"
+        },
+        {
+          "store": "starframe",
+          "storeName": "Starframe",
+          "price": 309,
+          "url": "https://www.starframe.no/products/halo-champion-fox-limited-edition"
         }
       ]
     },
@@ -637,5 +775,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-26T09:32:32.364Z"
+  "generated": "2026-11-27T04:51:44.685Z"
 }
