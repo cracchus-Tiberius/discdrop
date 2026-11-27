@@ -365,14 +365,87 @@ async function fetchPage(url, referer, attempts = 2) {
 
 // ── Attempt 1: enhanced fetch headers ────────────────────────────────────────
 
-async function scrapeWithHeaders(store) {
+// A listing whose order shifts while it is being paginated loses products
+// without any error. Confirmed from the runner logs, Frisbeebutikken
+// 2026-11-16: all five pages came back full (98/94/96/99/83 = 470 rows), but
+// 39 of page 2's rows, 25 of page 3's and 47 of page 5's were products already
+// read on an earlier page, so only 359 distinct products came through. On
+// 11-15 and 11-23 the same five pages gave 473 and 472 rows, 472 distinct.
+// The count swung between ~305 and ~391 matched listings for weeks; across 25
+// snapshots, 303 of the 441 product URLs ever seen dropped out and came back
+// at least once. Dedup by URL made the duplicates invisible.
+//
+// Every page holds a fixed number of slots. So when a product moves into
+// pages already read, another moves out into pages not yet read, and that one
+// gets read twice. Within one pass, duplicate rows = products missed. That
+// makes a pass self-checking: a clean pass saw the whole listing, and one
+// with duplicates is paginated again with the results unioned, until a pass
+// comes back clean, adds nothing new, or MAX_LISTING_PASSES is spent.
+//
+// SHIFT_TOLERANCE covers a product the store genuinely lists twice. On the
+// good days above that was one row, every day.
+const MAX_LISTING_PASSES = 4;
+const SHIFT_TOLERANCE = 2;
+
+/**
+ * Runs loadPass() until the listing has been read completely. loadPass returns
+ * the rows of one full pagination pass in page order (duplicates included),
+ * or null to abort. Returns { products, passes, rows, shortfall } or null.
+ */
+async function collectAcrossPasses(loadPass, { maxPasses = MAX_LISTING_PASSES, tolerance = SHIFT_TOLERANCE, log = console.log } = {}) {
+  const union = new Map();
+  let maxRows = 0;
+  let pass = 0;
+  let lastShortfall = 0;
+
+  while (pass < maxPasses) {
+    pass++;
+    const rows = await loadPass(pass);
+    if (!rows) return null;
+
+    const inPass = new Set(rows.map((p) => p.productUrl));
+    let added = 0;
+    for (const p of rows) {
+      if (!union.has(p.productUrl)) { union.set(p.productUrl, p); added++; }
+    }
+    maxRows = Math.max(maxRows, rows.length);
+    lastShortfall = rows.length - inPass.size;
+
+    if (lastShortfall <= tolerance) {
+      if (pass > 1) log(`    ✓ Pass ${pass} read the listing cleanly (+${added} new, ${union.size} distinct in total)`);
+      break;
+    }
+    if (pass > 1 && added === 0) {
+      log(`    ✓ Pass ${pass} added nothing new — ${union.size} distinct products`);
+      break;
+    }
+    if (union.size >= maxRows - tolerance) {
+      log(`    ✓ ${union.size} distinct products across ${pass} passes covers the ${maxRows}-row listing`);
+      break;
+    }
+    if (pass < maxPasses) {
+      log(`    ⚠ Listing order shifted during pass ${pass}: ${rows.length} rows but only ${inPass.size} distinct — ` +
+        `about ${lastShortfall} products were skipped. Paginating again (${union.size} distinct so far)`);
+    } else {
+      log(`    ⚠ Listing order was still shifting after ${maxPasses} passes — keeping ${union.size} distinct ` +
+        `products (largest pass: ${maxRows} rows)`);
+    }
+  }
+
+  return { products: [...union.values()], passes: pass, rows: maxRows, shortfall: Math.max(0, maxRows - union.size) };
+}
+
+async function scrapeWithHeaders(store, deps) {
   console.log('  Attempt 1: enhanced fetch headers');
   const allProducts = [];
   const seenUrls = new Set();
 
   for (const categoryUrl of categoriesOf(store)) {
-    const ok = await scrapeCategoryWithHeaders(store, categoryUrl, allProducts, seenUrls);
-    if (!ok) return null;
+    const result = await scrapeCategoryWithHeaders(store, categoryUrl, deps);
+    if (!result) return null;
+    for (const p of result.products) {
+      if (!seenUrls.has(p.productUrl)) { seenUrls.add(p.productUrl); allProducts.push(p); }
+    }
   }
 
   if (allProducts.length === 0) {
@@ -384,24 +457,40 @@ async function scrapeWithHeaders(store) {
   return allProducts;
 }
 
-/** Returns false to abort attempt 1 and fall back to Playwright. */
-async function scrapeCategoryWithHeaders(store, categoryUrl, allProducts, seenUrls) {
+/**
+ * One category, read until complete (see collectAcrossPasses). Returns null to
+ * abort attempt 1 and fall back to Playwright. deps exists for the tests:
+ * { fetchPage, delay, log }.
+ */
+async function scrapeCategoryWithHeaders(store, categoryUrl, deps = {}) {
+  const get = deps.fetchPage || fetchPage;
+  const delay = deps.delay || randomDelay;
+  const log = deps.log || console.log;
+  return collectAcrossPasses(
+    (pass) => paginateOnce(store, categoryUrl, { get, delay, log, pass }),
+    { log },
+  );
+}
+
+/** One pagination pass over a category: its rows in page order, or null to abort. */
+async function paginateOnce(store, categoryUrl, { get, delay, log, pass }) {
   const firstUrl = store.pageUrl(1, categoryUrl);
-  console.log(`    ${store.key} p1: ${firstUrl}`);
+  const tag = pass > 1 ? ` (pass ${pass})` : '';
+  log(`    ${store.key} p1${tag}: ${firstUrl}`);
 
   let html;
   try {
-    html = await fetchPage(firstUrl, 'https://www.google.no/');
+    html = await get(firstUrl, 'https://www.google.no/');
   } catch (err) {
     console.warn(`    ⚠ ${err.message}`);
-    return false;
+    return null;
   }
 
   let { products: firstProducts, maxPage } = parseListing(html, store);
 
   if (isChallengePage(html, firstProducts.length)) {
-    console.log('    ✗ Bot protection detected — switching to Playwright');
-    return false;
+    log('    ✗ Bot protection detected — switching to Playwright');
+    return null;
   }
 
   // Confirmed in production 2026-08-18 (Frisbeebutikken): page 1 loaded fine
@@ -413,28 +502,26 @@ async function scrapeCategoryWithHeaders(store, categoryUrl, allProducts, seenUr
   // gets treated as "this is the whole catalog" and silently trips the >50%
   // drop guard in mergeStoreResults.
   if (maxPage === 1) {
-    await randomDelay(1000, 2000);
+    await delay(1000, 2000);
     let retryHtml;
     try {
-      retryHtml = await fetchPage(firstUrl, 'https://www.google.no/');
+      retryHtml = await get(firstUrl, 'https://www.google.no/');
     } catch {
       retryHtml = null;
     }
     if (retryHtml) {
       const retry = parseListing(retryHtml, store);
       if (retry.maxPage > maxPage) {
-        console.log(`    ⚠ Page 1 retry found ${retry.maxPage} pages (first attempt saw ${maxPage}) — using the higher count`);
-        html = retryHtml;
+        log(`    ⚠ Page 1 retry found ${retry.maxPage} pages (first attempt saw ${maxPage}) — using the higher count`);
         firstProducts = retry.products;
         maxPage = retry.maxPage;
       }
     }
   }
 
-  for (const p of firstProducts) {
-    if (!seenUrls.has(p.productUrl)) { seenUrls.add(p.productUrl); allProducts.push(p); }
-  }
-  console.log(`    → ${firstProducts.length} products (max page: ${maxPage})`);
+  const rows = [...firstProducts];
+  const seen = new Set(firstProducts.map((p) => p.productUrl));
+  log(`    → ${firstProducts.length} products (max page: ${maxPage})`);
 
   // A mid-pagination HTTP error or an unexpectedly empty page (before we've
   // reached the maxPage that page 1 itself reported) used to just `break` —
@@ -447,36 +534,40 @@ async function scrapeCategoryWithHeaders(store, categoryUrl, allProducts, seenUr
   // back empty before maxPage, or trips the challenge check now aborts attempt
   // 1 and falls back to Playwright.
   for (let page = 2; page <= maxPage; page++) {
-    await randomDelay(2000, 3000);
+    await delay(2000, 3000);
     const url = store.pageUrl(page, categoryUrl);
-    console.log(`    ${store.key} p${page}: ${url}`);
+    log(`    ${store.key} p${page}${tag}: ${url}`);
 
     try {
-      html = await fetchPage(url, categoryUrl);
+      html = await get(url, categoryUrl);
     } catch (err) {
-      console.warn(`    ⚠ Page ${page}/${maxPage} failed (${allProducts.length} products collected so far): ${err.message}`);
-      return false;
+      console.warn(`    ⚠ Page ${page}/${maxPage} failed (${seen.size} products collected so far): ${err.message}`);
+      return null;
     }
 
     const { products } = parseListing(html, store);
 
     if (isChallengePage(html, products.length)) {
-      console.log(`    ✗ Bot protection detected on page ${page}/${maxPage} (${allProducts.length} products collected so far) — switching to Playwright`);
-      return false;
+      log(`    ✗ Bot protection detected on page ${page}/${maxPage} (${seen.size} products collected so far) — switching to Playwright`);
+      return null;
     }
 
     if (products.length === 0) {
-      console.warn(`    ⚠ Page ${page}/${maxPage} returned 0 products, but page 1 reported ${maxPage} pages exist (${allProducts.length} products collected so far)`);
-      return false;
+      console.warn(`    ⚠ Page ${page}/${maxPage} returned 0 products, but page 1 reported ${maxPage} pages exist (${seen.size} products collected so far)`);
+      return null;
     }
 
+    // Repeats are logged, not hidden: they are the only sign that the order
+    // moved under us (see collectAcrossPasses).
+    let repeats = 0;
     for (const p of products) {
-      if (!seenUrls.has(p.productUrl)) { seenUrls.add(p.productUrl); allProducts.push(p); }
+      rows.push(p);
+      if (seen.has(p.productUrl)) repeats++; else seen.add(p.productUrl);
     }
-    console.log(`    → ${products.length} products (running total: ${allProducts.length})`);
+    log(`    → ${products.length} products (running total: ${seen.size}${repeats ? `, ${repeats} already seen on an earlier page` : ''})`);
   }
 
-  return true;
+  return rows;
 }
 
 // ── Attempt 2: Playwright headless browser ───────────────────────────────────
@@ -542,36 +633,42 @@ async function scrapeWithPlaywright(store) {
     }
 
     for (const categoryUrl of categoriesOf(store)) {
-      await page.goto(store.pageUrl(1, categoryUrl), { waitUntil: 'networkidle', timeout: 30000 });
-      await page.evaluate(NATURAL_SCROLL);
-      await sleep(1000);
+      // Same shifting-order check as attempt 1 — the browser reads the same
+      // listing, so it can skip products the same way.
+      const result = await collectAcrossPasses(async () => {
+        await page.goto(store.pageUrl(1, categoryUrl), { waitUntil: 'networkidle', timeout: 30000 });
+        await page.evaluate(NATURAL_SCROLL);
+        await sleep(1000);
 
-      const maxPage = await page.evaluate((selector) => {
-        let max = 1;
-        document.querySelectorAll(selector).forEach((a) => {
-          const m = (a.href || '').match(/[?&]page=(\d+)/);
-          if (m) max = Math.max(max, parseInt(m[1], 10));
-        });
-        return max;
-      }, paginationSelector);
+        const maxPage = await page.evaluate((selector) => {
+          let max = 1;
+          document.querySelectorAll(selector).forEach((a) => {
+            const m = (a.href || '').match(/[?&]page=(\d+)/);
+            if (m) max = Math.max(max, parseInt(m[1], 10));
+          });
+          return max;
+        }, paginationSelector);
 
-      for (let p = 1; p <= maxPage; p++) {
-        if (p > 1) {
-          await randomDelay(2000, 4000);
-          await page.goto(store.pageUrl(p, categoryUrl), { waitUntil: 'networkidle', timeout: 30000 });
-          await page.evaluate(NATURAL_SCROLL);
-          await sleep(1000);
-        }
-
-        const { products } = parseListing(await page.content(), store);
-
-        for (const prod of products) {
-          if (!seenUrls.has(prod.productUrl)) {
-            seenUrls.add(prod.productUrl);
-            allProducts.push(prod);
+        const rows = [];
+        for (let p = 1; p <= maxPage; p++) {
+          if (p > 1) {
+            await randomDelay(2000, 4000);
+            await page.goto(store.pageUrl(p, categoryUrl), { waitUntil: 'networkidle', timeout: 30000 });
+            await page.evaluate(NATURAL_SCROLL);
+            await sleep(1000);
           }
+          const { products } = parseListing(await page.content(), store);
+          rows.push(...products);
+          console.log(`    p${p}: ${products.length} products (${rows.length} rows this pass)`);
         }
-        console.log(`    p${p}: ${products.length} products (running total: ${allProducts.length})`);
+        return rows;
+      });
+
+      for (const prod of result.products) {
+        if (!seenUrls.has(prod.productUrl)) {
+          seenUrls.add(prod.productUrl);
+          allProducts.push(prod);
+        }
       }
     }
   } finally {
@@ -636,8 +733,12 @@ module.exports = {
   parseJsonLdItemList,
   parseListing,
   isChallengePage,
+  collectAcrossPasses,
+  scrapeCategoryWithHeaders,
   runMystoreScrape,
   runAsScript,
   DEFAULT_PAGINATION_SELECTOR,
   MIN_PRICE_NOK,
+  MAX_LISTING_PASSES,
+  SHIFT_TOLERANCE,
 };
