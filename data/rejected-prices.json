@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T04:51:44.968Z",
+  "generated": "2026-11-28T04:52:13.982Z",
   "bounds": {
     "min": 50,
     "max": 600
@@ -10,10 +10,10 @@
       "discId": "viking-odin",
       "discName": "Viking Discs Odin",
       "store": "hyzershop",
-      "price": 2379,
+      "price": 2799,
       "reason": "above-max",
       "url": "https://hyzershop.no/products/odin",
-      "lastScraped": "2026-11-27T04:35:03.018Z"
+      "lastScraped": "2026-11-28T04:34:50.922Z"
     },
     {
       "discId": "latitude-core",
@@ -22,7 +22,7 @@
       "price": 799,
       "reason": "above-max",
       "url": "https://golfdiscer.no/products/latitude-64-core-bag",
-      "lastScraped": "2026-11-27T04:42:30.208Z"
+      "lastScraped": "2026-11-28T04:42:09.415Z"
     },
     {
       "discId": "latitude-core",
@@ -31,16 +31,16 @@
       "price": 729,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/latitude-64-core/",
-      "lastScraped": "2026-11-27T04:42:32.534Z"
+      "lastScraped": "2026-11-28T04:42:12.209Z"
     },
     {
       "discId": "streamline-range",
       "discName": "Streamline Range",
       "store": "discexpress",
-      "price": 668,
+      "price": 667,
       "reason": "above-max",
       "url": "https://www.discexpress.se/products/range-finder-lite",
-      "lastScraped": "2026-11-27T04:43:09.425Z"
+      "lastScraped": "2026-11-28T04:42:49.741Z"
     },
     {
       "discId": "discraft-raptor",
@@ -49,7 +49,7 @@
       "price": 659,
       "reason": "above-max",
       "url": "https://www.frisbeesor.no/produkt/discraft-3-disk-forundringspakke-ink-athena-eller-cpt-raptor/",
-      "lastScraped": "2026-11-27T04:42:32.534Z"
+      "lastScraped": "2026-11-28T04:42:12.209Z"
     },
     {
       "discId": "innova-birdie",
@@ -58,7 +58,7 @@
       "price": 47,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/birdie-spray-natural-insect-repellent",
-      "lastScraped": "2026-11-27T04:43:09.425Z"
+      "lastScraped": "2026-11-28T04:42:49.741Z"
     },
     {
       "discId": "discmania-mentor",
@@ -67,7 +67,7 @@
       "price": 42,
       "reason": "below-min",
       "url": "https://www.discexpress.se/products/sea-serpent-active",
-      "lastScraped": "2026-11-27T04:43:09.425Z"
+      "lastScraped": "2026-11-28T04:42:49.741Z"
     }
   ]
 }

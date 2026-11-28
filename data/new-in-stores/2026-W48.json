@@ -109,7 +109,7 @@
       "plastic": "C-Line",
       "edition": null,
       "firstSeenMs": 1795512021140,
-      "price": 218,
+      "price": 249,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -120,7 +120,7 @@
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
-          "price": 218,
+          "price": 249,
           "url": "https://www.krokholdgs.no/products/c-line-fd2-20th-anniversary-edition"
         }
       ]
@@ -184,7 +184,7 @@
       "plastic": "C-Line Glow",
       "edition": "Casey White",
       "firstSeenMs": 1795426230477,
-      "price": 243,
+      "price": 254,
       "stores": [
         {
           "store": "wearediscgolf",
@@ -195,7 +195,7 @@
         {
           "store": "krokhol",
           "storeName": "Krokhol Disc Golf Shop",
-          "price": 243,
+          "price": 279,
           "url": "https://www.krokholdgs.no/products/c-line-glow-md1-20th-anniversary-edition"
         },
         {
@@ -207,7 +207,7 @@
         {
           "store": "ugglans",
           "storeName": "Ugglans Discgolf",
-          "price": 274,
+          "price": 273,
           "url": "https://ugglansdiscgolf.se/products/c-line-glow-md1-20th-anniversary-edition"
         }
       ]
@@ -575,14 +575,8 @@
       "plastic": "Q-Line",
       "edition": null,
       "firstSeenMs": 1795426259037,
-      "price": 289,
+      "price": 288,
       "stores": [
-        {
-          "store": "frisbeebutikken",
-          "storeName": "Frisbeebutikken",
-          "price": 305,
-          "url": "https://frisbeebutikken.no/products/q-line-essence"
-        },
         {
           "store": "starframe",
           "storeName": "Starframe",
@@ -604,7 +598,7 @@
         {
           "store": "discexpress",
           "storeName": "Discexpress",
-          "price": 289,
+          "price": 288,
           "url": "https://www.discexpress.se/products/essence-q-line-premier"
         }
       ]
@@ -775,5 +769,5 @@
     }
   ],
   "frozen": false,
-  "generated": "2026-11-27T04:51:44.685Z"
+  "generated": "2026-11-28T04:52:13.693Z"
 }
